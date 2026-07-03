@@ -3,24 +3,36 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Primary Blue - Exact shade from your image */
+  --primary-blue: #1E40AF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  /* Add primary color to Tailwind */
+  --color-primary: var(--primary-blue);
+  
+  --font-sans: var(--font-outfit);
+  --font-mono: var(--font-outfit);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary-blue: #143297; /* Keep same blue in dark mode */
   }
+}
+
+html {
+  font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
 }
