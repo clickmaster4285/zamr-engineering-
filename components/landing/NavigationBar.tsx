@@ -34,7 +34,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 z-50 h-[100px] w-full overflow-hidden transition-all duration-300 ${
-          scrolled ? "bg-white shadow-md" : "bg-transparent"
+          scrolled ? "bg-[var(--color-primary)] shadow-md" : "bg-transparent"
         }`}
       >
         <div className="relative mx-auto flex h-full w-full max-w-[1727px] items-center px-6 lg:px-[130px]">
@@ -58,7 +58,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors ${
                   scrolled
-                    ? "text-[var(--text-dark)] hover:text-[var(--color-primary)]"
+                    ? "text-white/80 hover:text-white"
                     : "text-[var(--text-light)] hover:text-white"
                 }`}
               >
@@ -72,7 +72,7 @@ export default function Navbar() {
             href="#contact"
             className={`ml-auto hidden items-center justify-center border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors lg:flex ${
               scrolled
-                ? "border-[var(--text-dark)] text-[var(--text-dark)] hover:bg-[var(--text-dark)] hover:text-white"
+                ? "border-white text-white hover:bg-white hover:text-[var(--color-primary)]"
                 : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
             }`}
             style={{ height: "50px" }}
@@ -86,9 +86,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen((open) => !open)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            className={`ml-auto transition-colors lg:hidden ${
-              scrolled ? "text-[var(--text-dark)]" : "text-white"
-            }`}
+            className={`ml-auto text-white transition-colors lg:hidden`}
           >
             {menuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -100,7 +98,7 @@ export default function Navbar() {
         <div
           className={`fixed top-[100px] left-0 z-40 flex w-full flex-col items-center gap-6 border-t px-6 py-8 lg:hidden ${
             scrolled
-              ? "bg-white border-gray-200"
+              ? "bg-[var(--color-primary)] border-white/20"
               : "bg-[var(--bg-hero)]/95 border-white/10"
           }`}
         >
@@ -111,7 +109,7 @@ export default function Navbar() {
               onClick={closeMenu}
               className={`whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors ${
                 scrolled
-                  ? "text-[var(--text-dark)] hover:text-[var(--color-primary)]"
+                  ? "text-white/80 hover:text-white"
                   : "text-white/90 hover:text-white"
               }`}
             >
@@ -123,7 +121,7 @@ export default function Navbar() {
             onClick={closeMenu}
             className={`whitespace-nowrap border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors ${
               scrolled
-                ? "border-[var(--text-dark)] text-[var(--text-dark)] hover:bg-[var(--text-dark)] hover:text-white"
+                ? "border-white text-white hover:bg-white hover:text-[var(--color-primary)]"
                 : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
             }`}
           >
