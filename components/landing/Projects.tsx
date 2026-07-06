@@ -111,7 +111,7 @@ function ProjectCard({
     >
       <div
         className={`relative w-full ${
-          isLarge ? "h-[484px] md:h-[652px]" : "h-[311px]"
+          isLarge ? "h-[484px] md:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
         }`}
       >
         <Image
@@ -165,12 +165,12 @@ export default function Projects() {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section className="w-screen bg-[var(--bg-light)] px-6 py-20 lg:p-[130px]">
-      <div className="mx-auto flex max-w-[1468px] flex-col gap-[60px]">
-        <div className="flex flex-col gap-[30px]">
+    <section className="w-screen bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
+      <div className="mx-auto flex max-w-[1468px] flex-col gap-10 lg:gap-[60px]">
+        <div className="flex flex-col gap-6 lg:gap-[30px]">
           {/* Title header — Figma Frame 1321319002 */}
-          <div className="flex items-start justify-between">
-            <div className="flex flex-col gap-[30px]">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+            <div className="flex flex-col gap-6 lg:gap-[30px]">
               <div className="flex items-center gap-4">
                 <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
                   03
@@ -180,20 +180,20 @@ export default function Projects() {
                   PROJECTS
                 </span>
               </div>
-              <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
+              <h2 className="text-3xl font-bold leading-tight text-[var(--text-dark)] sm:text-4xl md:text-[56px] md:leading-[71px]">
                 Featured Work
               </h2>
             </div>
             <Link
               href="#all-projects"
-              className="flex items-center gap-2 text-base font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity hover:opacity-70"
+              className="flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity hover:opacity-70 sm:text-base"
             >
               ALL PROJECTS <ArrowRight size={24} />
             </Link>
           </div>
 
           {/* Filter tabs */}
-          <div className="flex w-full gap-4">
+          <div className="flex w-full gap-3 overflow-x-auto pb-2 lg:gap-4">
             {filters.map((filter) => {
               const isActive = filter === activeFilter;
               const isAll = filter === "ALL";
@@ -202,11 +202,11 @@ export default function Projects() {
                   key={filter}
                   type="button"
                   onClick={() => setActiveFilter(filter)}
-                  className={`whitespace-nowrap border px-4 py-3 text-center text-sm tracking-[0.15em] transition-all duration-300 ${
+                  className={`whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm ${
                     isActive
                       ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
                       : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                  } ${isAll ? "w-20 flex-none" : "flex-1"}`}
+                  } ${isAll ? "w-20 flex-none" : "flex-1 min-w-[120px]"}`}
                 >
                   {filter}
                 </button>
@@ -216,13 +216,13 @@ export default function Projects() {
 
           {/* Project grid — Figma Frame 1321319008 */}
           {filteredProjects.length > 0 ? (
-            <div className="flex flex-col gap-[30px] md:flex-row">
+            <div className="flex flex-col gap-6 md:flex-row">
               {filteredProjects[0] && (
-                <div className="md:w-[817px]">
+                <div className="md:w-[55%]">
                   <ProjectCard project={filteredProjects[0]} isLarge={true} />
                 </div>
               )}
-              <div className="flex flex-col gap-[30px] md:w-[621px]">
+              <div className="flex flex-col gap-6 md:w-[45%]">
                 {filteredProjects.slice(1, 3).map((project) => (
                   <ProjectCard key={project.index} project={project} isLarge={false} />
                 ))}
@@ -235,11 +235,11 @@ export default function Projects() {
           )}
 
           {/* Client logos — Figma Frame 1321319031 */}
-          <div className="flex w-full flex-wrap items-center gap-[30px]">
+          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-[30px]">
             {clientLogos.map((logo) => (
               <div
                 key={logo.alt}
-                className="relative h-[86px] min-w-[150px] flex-1 overflow-hidden bg-[var(--bg-light)]"
+                className="relative h-[60px] overflow-hidden bg-[var(--bg-light)] sm:h-[86px]"
               >
                 <Image
                   src={logo.src}
