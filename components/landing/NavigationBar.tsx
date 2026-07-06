@@ -20,12 +20,21 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    const getHeroHeight = () => {
+      const hero = document.querySelector("section");
+      return hero ? hero.offsetHeight : window.innerHeight;
+    };
+
     const handleScroll = () => {
-      setScrolled(window.scrollY >= window.innerHeight);
+      setScrolled(window.scrollY >= getHeroHeight());
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
     handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
