@@ -7,7 +7,7 @@ import Structure  from "@/components/About/Structure";
 import Performance  from "@/components/About/Performance";
 import Footer  from "@/components/About/Footer";
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="w-full flex flex-col items-center">
       <Navbar />

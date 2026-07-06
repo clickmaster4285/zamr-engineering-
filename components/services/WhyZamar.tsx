@@ -1,10 +1,13 @@
+// components/WhyZamr.jsx
 "use client";
 
-interface Feature {
+import React from "react";
+
+type Feature = {
   number: string;
   title: string;
   description: string;
-}
+};
 
 const features: Feature[] = [
   {
@@ -33,49 +36,40 @@ const features: Feature[] = [
   },
 ];
 
-export default function WhyZamrSection() {
+export default function WhyZamr() {
   return (
-    <section className="w-full bg-[#F2F4F9] px-8 md:px-16 py-16">
-      {/* Label */}
-      <div className="flex items-center gap-3 mb-8">
-        <span className="text-xs font-bold tracking-[0.2em] text-[#1D4ED8]">02</span>
-        <span className="w-10 h-px bg-gray-400" />
-        <span className="text-xs font-bold tracking-[0.2em] text-gray-700">WHY ZAMR</span>
-      </div>
+    <section className="w-full bg-[#EDEEF1] px-6 py-16 sm:px-10 lg:px-30 lg:py-16">
+      <div className="w-auto">
+        <div className="mb-5 flex items-center gap-3">
+          <span className="text-sm tracking-[0.1em] font-bold text-[#405BAD]">02</span>
+          <span className="h-px w-12 bg-[#B7B7B7]" />
+          <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">WHY ZAMR</span>
+        </div>
 
-      {/* Headline */}
-      <h2 className="text-3xl md:text-5xl font-bold text-[#111827] mb-12 max-w-3xl">
-        What sets us apart from the competition.
-      </h2>
+        <h2 className="mb-10 text-[44px] font-bold leading-tight text-[#333333] sm:text-[50px]">
+          What sets us apart from the competition.
+        </h2>
 
-      {/* Feature grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {features.map((f) => (
-          <div
-            key={f.number}
-            className="bg-[#EBEEF5] rounded-md p-6
-              transition-all duration-200 ease-out cursor-pointer
-              hover:shadow-lg hover:-translate-y-1 hover:bg-[#E3E7F1]"
-          >
-            {/* Red dash */}
-            <div className="w-6 h-[3px] bg-[#C54A33] mb-4" />
-
-            {/* Number */}
-            <p className="text-[11px] font-semibold tracking-[0.15em] text-gray-400 mb-2">
-              {f.number}
-            </p>
-
-            {/* Title */}
-            <h3 className="text-lg font-bold text-[#111827] mb-3">
-              {f.title}
-            </h3>
-
-            {/* Description */}
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {f.description}
-            </p>
-          </div>
-        ))}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map((feature) => (
+            <div
+              key={feature.number}
+              className="group flex flex-col rounded-md border border-[#DDE0E4] bg-[#F0F1F3] p-6 shadow-sm transition-all duration-300 hover:shadow-md"
+            >
+              {/* Red line */}
+              <span className="mb-4 h-0.5 w-6 bg-[#D32F2F]" />
+              <span className="mb-2 text-[13px] font-semibold tracking-[0.05em] text-[#4C4C4C]">
+                {feature.number}
+              </span>
+              <h3 className="mb-3 text-[19px] font-bold text-[#333333] transition-colors group-hover:text-[#405BAD]">
+                {feature.title}
+              </h3>
+              <p className="text-[15px] leading-relaxed text-[#4C4C4C]">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

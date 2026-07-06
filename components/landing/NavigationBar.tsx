@@ -39,7 +39,7 @@ export default function Navbar() {
                 }`}
             >
                 <div className="flex w-full items-center justify-between px-10 lg:px-30 py-5 md:px-16">
-                    {/* Logo – left margin ml-12 as original */}
+                    {/* Logo */}
                     <Link href="/" className="flex items-center ">
                         <Image
                             src="/images/zamr-logo.png"
@@ -51,14 +51,16 @@ export default function Navbar() {
                         />
                     </Link>
 
-                    {/* Nav links – centered */}
+                    {/* Nav links – desktop */}
                     <nav className="hidden items-center gap-4 lg:flex">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.label}
                                 href={link.href}
-                                className={`text-sm tracking-[0.12em] transition-colors hover:text-gray-800 uppercase ${
-                                    scrolled ? "text-gray-700" : "text-[#B0B0B0]"
+                                className={`text-sm tracking-[0.12em] transition-colors uppercase ${
+                                    scrolled
+                                        ? "text-black hover:text-black"   // ✅ scrolled → black on hover
+                                        : "text-[#B0B0B0] hover:text-white"  // ✅ not scrolled → white on hover
                                 }`}
                             >
                                 {link.label}
@@ -66,7 +68,7 @@ export default function Navbar() {
                         ))}
                     </nav>
 
-                    {/* Contact button – right margin mr-12 as original */}
+                    {/* Contact button */}
                     <Link
                         href="#contact"
                         className={`hidden border px-6 py-2.5 text-[13px] tracking-[0.12em] transition-colors lg:inline-block uppercase ${
@@ -78,7 +80,7 @@ export default function Navbar() {
                         CONTACT
                     </Link>
 
-                    {/* Hamburger – appears on small screens */}
+                    {/* Hamburger */}
                     <button
                         type="button"
                         onClick={() => setMenuOpen((open) => !open)}
@@ -107,8 +109,10 @@ export default function Navbar() {
                             key={link.label}
                             href={link.href}
                             onClick={() => setMenuOpen(false)}
-                            className={`font-sans text-sm tracking-[0.12em] transition-colors hover:text-gray-200 uppercase ${
-                                scrolled ? "text-gray-700" : "text-white/90"
+                            className={`font-sans text-sm tracking-[0.12em] transition-colors uppercase ${
+                                scrolled
+                                    ? "text-gray-700 hover:text-black"
+                                    : "text-white/90 hover:text-white"
                             }`}
                         >
                             {link.label}

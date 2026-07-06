@@ -1,6 +1,7 @@
 // app/page.tsx
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Image from "next/image";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -400,20 +401,35 @@ export default function Structure() {
     <div
     className="w-full bg-white px-6 py-16 sm:px-10 lg:px-30 lg:py-16"
     >
-     
+     <div className="mb-5 flex items-center gap-3">
+          {/* Slightly bigger: 15px → 16px */}
+          <span className="text-sm tracking-[0.1em] font-bold text-[#405BAD]">03</span>
+          <span className="h-px w-12 bg-[#B7B7B7]" />
+          {/* Slightly bigger: 13px → 14px */}
+          <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">STRUCTURE</span>
+        </div>
 
       <div className="mt-6 flex items-start gap-8">
         <div className="w-56 shrink-0">
 
 
 
-         
+         <div className="mb-1">
+  <Image
+    src="/images/zamr-logo.png"
+    alt="ZAMR Engineering"
+    width={120}
+    height={45}
+    className="object-contain"
+  />
+</div>
+<p className="text-[#C54A33] text-xs font-semibold tracking-widest mb-6">ENGINEERING</p>
 
 
 
 
 
-
+          
           <h1 className="mt-6 text-[30px] font-semibold text-[#1a1a1a] leading-tight">
             Organizational<br />Structure
           </h1>
