@@ -41,9 +41,8 @@ const projects: Project[] = [
   },
 ];
 
-// ✅ FIX: Added missing descriptions for each project
 const projectDescriptions: Record<string, string> = {
-  "01": "Major bridge rehabilitation project spanning the metropolitan area, enhancing structural integrity and extending service life.",
+  "01": "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
   "02": "Large-scale renewable energy hub in the Hunter Valley region, integrating solar and wind infrastructure at utility scale.",
   "03": "Comprehensive infrastructure corridor connecting Western Sydney's key growth areas with transport and utility networks.",
 };
@@ -105,59 +104,51 @@ function ProjectCard({
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden rounded-sm transition-all duration-700 ease-out ${
+      className={`group relative overflow-hidden transition-all duration-700 ease-out ${
         inView
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-10 scale-95"
       }`}
     >
       <div
-  className={`relative w-full ${
-    isLarge ? "h-[484px] md:h-[564px]" : "h-[230px] md:h-[270px]"
-  }`}
->
-  <Image
-    src={project.image}
-    alt={project.title}
-    fill
-    sizes={isLarge ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 25vw, 100vw"}
-    className="object-cover transition-transform duration-700 group-hover:scale-105"
-  />
+        className={`relative w-full ${
+          isLarge ? "h-[484px] md:h-[652px]" : "h-[311px]"
+        }`}
+      >
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          sizes={isLarge ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 25vw, 100vw"}
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
 
-        {/* Base gradient — always visible so title/index stay readable */}
+        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/20" />
 
+        {/* Project index */}
         <span
-          className={`absolute left-6 top-6 font-bold text-white ${
-            isLarge ? "text-sm md:text-[56px]" : "text-[32px]"
+          className={`absolute left-6 top-6 font-extrabold tracking-[0.3em] text-white ${
+            isLarge ? "text-5xl md:text-[54px]" : "text-[34px]"
           }`}
         >
           {project.index}
         </span>
 
-        <span
-          className={`absolute bottom-6 right-6 font-medium tracking-[0.1em] text-white/70 ${
-            isLarge ? "text-sm" : "text-[12px]"
-          }`}
-        >
-          {/* {project.category} */}
-        </span>
-
-        {/* Bottom text block — title always visible, description fades in beneath it on hover */}
+        {/* Bottom text block */}
         <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 pt-14">
           <h3
-            className={`font-bold text-white ${
-              isLarge ? "text-sm md:text-[28px]" : "text-[18px]"
+            className={`font-semibold text-white ${
+              isLarge ? "text-base md:text-[28px]" : "text-[28px]"
             }`}
           >
             {project.title}
           </h3>
           <p
-            className={`max-h-0 overflow-hidden font-medium leading-relaxed text-white/85 opacity-0 transition-all duration-500 ease-out group-hover:max-h-24 group-hover:opacity-100 ${
-              isLarge ? "text-sm md:text-[18px]" : "text-[13px] md:text-[14px]"
+            className={`max-h-0 overflow-hidden font-normal leading-relaxed text-white/85 opacity-0 transition-all duration-500 ease-out group-hover:max-h-24 group-hover:opacity-100 ${
+              isLarge ? "text-base md:text-[16px]" : "text-[16px]"
             }`}
           >
-            {/* ✅ FIX: Now references the defined projectDescriptions */}
             {projectDescriptions[project.index]}
           </p>
         </div>
@@ -175,82 +166,89 @@ export default function Projects() {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section className="w-full bg-[#F6F8FC] px-6 py-16 sm:px-10 lg:px-30 lg:py-16">
-      <div className="">
-        <div className="mb-5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-bold tracking-[0.1em] text-[#405BAD]">03</span>
-            <span className="h-px w-12 bg-[#B7B7B7]" />
-            <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">PROJECTS</span>
+    <section className="w-full bg-[var(--bg-light)] px-6 py-20 lg:px-32 lg:py-20">
+      <div>
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <div className="mb-8 flex items-center gap-4">
+              <span className="text-base font-medium tracking-[0.2em] text-[var(--color-primary)]">
+                03
+              </span>
+              <span className="h-px w-24 bg-black" />
+              <span className="text-base font-medium tracking-[0.2em] text-[var(--text-dark)]">
+                PROJECTS
+              </span>
+            </div>
+            <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
+              Featured Work
+            </h2>
           </div>
           <Link
             href="#all-projects"
-            className="flex items-center gap-2 text-[11px] font-bold tracking-[0.15em] text-[#405BAD] transition-opacity hover:opacity-70"
+            className="flex items-center gap-2 text-base font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity hover:opacity-70"
           >
             ALL PROJECTS <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
 
-        <h2 className="mb-8 text-[36px] font-bold leading-tight text-[#333333] sm:text-[42px]">
-          Featured Work
-        </h2>
-
-        <div className="mb-8 flex w-full flex-wrap gap-3 lg:flex-nowrap lg:gap-2">
+        {/* Filter tabs */}
+        <div className="mb-10 flex w-full flex-wrap gap-3 lg:flex-nowrap lg:gap-2">
           {filters.map((filter) => {
             const isActive = filter === activeFilter;
             return (
-             <button
-  key={filter}
-  type="button"
-  onClick={() => setActiveFilter(filter)}
-  className={`rounded-[3px] border px-3 py-2 text-[12px] font-semibold transition-all duration-300 lg:px-4 ${
-    filter === "ALL"
-      ? "flex-none w-[80px] border-[#405BAD] bg-[#405BAD] text-white hover:bg-[#2544A1] hover:border-[#2544A1]" // ← adjust width here
-      : `flex-1 ${
-          isActive
-            ? "border-[#405BAD] bg-[#405BAD] text-white hover:bg-[#2544A1] hover:border-[#2544A1]"
-            : "border-[#405BAD]/50 bg-white text-[#405BAD] hover:border-[#405BAD] hover:bg-[#405BAD] hover:text-white"
-        }`
-  }`}
->
-  {filter}
-</button>
+              <button
+                key={filter}
+                type="button"
+                onClick={() => setActiveFilter(filter)}
+                className={`flex-none border px-6 py-4 text-sm font-medium tracking-[0.3em] transition-all duration-300 ${
+                  filter === "ALL"
+                    ? "w-[82px] border-[var(--color-primary)] bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)]"
+                    : `flex-1 ${
+                        isActive
+                          ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)]"
+                          : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                      }`
+                }`}
+              >
+                {filter}
+              </button>
             );
           })}
         </div>
 
+        {/* Project grid */}
         {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.4fr_1fr]">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.3fr_1fr]">
             {filteredProjects[0] && (
               <ProjectCard project={filteredProjects[0]} isLarge={true} />
             )}
-            <div className="grid grid-cols-1 gap-6">
+            <div className="flex flex-col gap-6">
               {filteredProjects.slice(1, 3).map((project) => (
                 <ProjectCard key={project.index} project={project} isLarge={false} />
               ))}
             </div>
           </div>
         ) : (
-          <div className="py-12 text-center text-[16px] text-[#4C4C4C]">
+          <div className="py-12 text-center text-lg text-[var(--text-muted)]">
             No projects found in this category.
           </div>
         )}
 
-        <div className="mt-16 overflow-hidden">
+        {/* Client logos */}
+        <div className="mt-20 overflow-hidden">
           <div className="flex w-max animate-infinite-scroll items-center gap-8">
             {doubledLogos.map((logo, index) => (
-             <div
-  key={`${logo.alt}-${index}`}
-  className="group relative h-14 w-36 flex-shrink-0 overflow-hidden"
->
-  <Image
-    src={logo.src}
-    alt={logo.alt}
-    fill
-    className="object-contain transition-transform duration-300 group-hover:scale-105"
-  />
-  <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-</div>
+              <div
+                key={`${logo.alt}-${index}`}
+                className="group relative h-[86px] w-[157px] flex-shrink-0 overflow-hidden bg-[var(--bg-light)]"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
             ))}
           </div>
         </div>

@@ -3,36 +3,77 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
-  /* Primary Blue - Exact shade from your image */
-  --primary-blue: #1E40AF;
+
+  /* ZAMR Design Tokens from Figma */
+  --color-primary: #1945A7;
+  --color-primary-hover: #153a8c;
+  --color-accent: #CE1A00;
+  --color-accent-light: #FA0000;
+
+  /* Backgrounds */
+  --bg-light: #F6F8FC;
+  --bg-light-alt: #F9FAFC;
+  --bg-hero: #050C1F;
+
+  /* Text Colors */
+  --text-dark: #333333;
+  --text-muted: #4C4C4C;
+  --text-light: #B0B0B0;
+  --text-contact: #2344A1;
+
+  /* Borders */
+  --border-light: #EAEAEA;
+  --border-input: rgba(34, 65, 158, 0.18);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
-  /* Add primary color to Tailwind */
-  --color-primary: var(--primary-blue);
-  
+
+  /* Primary colors */
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-accent: var(--color-accent);
+  --color-accent-light: var(--color-accent-light);
+
+  /* Backgrounds */
+  --color-bg-light: var(--bg-light);
+  --color-bg-light-alt: var(--bg-light-alt);
+  --color-bg-hero: var(--bg-hero);
+
+  /* Text */
+  --color-text-dark: var(--text-dark);
+  --color-text-muted: var(--text-muted);
+  --color-text-light: var(--text-light);
+  --color-text-contact: var(--text-contact);
+
+  /* Borders */
+  --color-border-light: var(--border-light);
+  --color-border-input: var(--border-input);
+
+  /* Fonts */
   --font-sans: var(--font-outfit);
   --font-mono: var(--font-outfit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary-blue: #143297; /* Keep same blue in dark mode */
-  }
-}
-
 html {
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: inherit;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-primary);
+  color: white;
 }

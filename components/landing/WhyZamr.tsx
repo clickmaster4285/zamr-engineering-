@@ -33,48 +33,45 @@ const points: Point[] = [
 
 export default function WhyZamr() {
   return (
-    <section className="w-full bg-white px-6 py-16 sm:px-10 lg:px-30 lg:py-16">
-      {/* Inner wrapper with ml-12 to align under the logo – now fixed */}
-      <div className="">
-        <div className="mb-5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {/* Increased: 15px → 17px */}
-            <span className="text-sm font-bold tracking-[0.1em] text-[#405BAD]">04</span>
-            <span className="h-px w-12 bg-[#B7B7B7]" />
-            {/* Increased: 13px → 15px */}
-            <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">
-              WHY ZAMR ENGINEERING
-            </span>
+    <section className="w-full bg-white px-6 py-20 lg:px-32 lg:py-20">
+      <div>
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <div className="mb-8 flex items-center gap-4">
+              <span className="text-base font-medium tracking-[0.2em] text-[var(--color-primary)]">
+                04
+              </span>
+              <span className="h-px w-24 bg-black" />
+              <span className="text-base font-medium tracking-[0.2em] text-[var(--text-dark)]">
+                WHY ZAMR ENGINEERING
+              </span>
+            </div>
+            <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
+              The difference is in how we build.
+            </h2>
           </div>
           <Link
             href="#learn-more"
-            className="flex items-center gap-2 text-[16px] font-semibold text-[#405BAD] transition-opacity hover:opacity-70"
+            className="flex items-center gap-2 text-base font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity hover:opacity-70"
           >
             Learn More <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
 
-        {/* Increased: 38/44 → 40/46 */}
-        <h2 className="mb-10 text-[40px] font-bold leading-tight text-[#333333] sm:text-[46px]">
-          The difference is in how we build.
-        </h2>
-
-        <div className="border-t border-[#EAEAEA]">
+        <div className="border-t border-[var(--border-light)]">
           {points.map((point) => (
             <div
               key={point.title}
-              // Matching Services row spacing: py-8, gap-4, px-6
-              className="group relative flex cursor-pointer flex-col gap-4 border-b border-[#EAEAEA] bg-transparent px-6 py-8 transition-all duration-300 hover:bg-[#F4F7FF] hover:shadow-md sm:flex-row sm:items-center sm:gap-16 sm:px-8"
+              className="group relative flex cursor-pointer flex-col gap-4 border-b border-[var(--border-light)] bg-transparent px-6 py-8 transition-all duration-300 hover:bg-[var(--bg-light-alt)] hover:shadow-sm sm:flex-row sm:items-center sm:gap-16 sm:px-10"
             >
-              <span className="absolute left-0 top-0 h-full w-[3px] bg-[#C54A33] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              {/* Left red accent border */}
+              <span className="absolute left-0 top-0 h-full w-[4px] bg-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              {/* Increased: 20px → 22px */}
-              <h3 className="w-full shrink-0 text-[22px] font-bold text-[#333333] transition-colors group-hover:text-[#405BAD] sm:w-[230px]">
+              <h3 className="w-full shrink-0 text-[28px] font-semibold leading-[35px] text-[var(--text-dark)] transition-colors group-hover:text-[var(--color-primary)] sm:w-[250px]">
                 {point.title}
               </h3>
 
-              {/* Increased: 16/17 → 18/19 */}
-              <p className="flex-1 text-[18px] leading-relaxed text-[#4C4C4C] transition-colors group-hover:text-[#1C1F26] md:text-[19px]">
+              <p className="flex-1 text-lg leading-[23px] text-[var(--text-dark)] transition-colors group-hover:text-[var(--text-dark)]">
                 {point.description}
               </p>
             </div>
