@@ -21,11 +21,11 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  { label: "Planning & Design", href: "#" },
-  { label: "Project Management", href: "#" },
-  { label: "Project Verification", href: "#" },
-  { label: "Buildings Services", href: "#" },
-  { label: "Others Services", href: "#" },
+  "Planning & Design",
+  "Project Management",
+  "Project Verification",
+  "Buildings Services",
+  "Others Services",
 ];
 
 export default function Footer() {
@@ -65,27 +65,27 @@ export default function Footer() {
               Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.
             </p>
             <div className="mt-6 flex items-center gap-4">
-              <a
-                href="#"
+              <button
+                type="button"
                 aria-label="LinkedIn"
                 className="flex h-10 w-10 items-center justify-center border border-white/25 text-white transition-colors hover:border-white hover:text-white"
               >
                 <FontAwesomeIcon icon={faLinkedin} width={18} height={18} />
-              </a>
-              <a
-                href="#"
+              </button>
+              <button
+                type="button"
                 aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center border border-white/25 text-white transition-colors hover:border-white hover:text-white"
               >
                 <FontAwesomeIcon icon={faFacebook} width={18} height={18} />
-              </a>
-              <a
-                href="#"
+              </button>
+              <button
+                type="button"
                 aria-label="Twitter"
                 className="flex h-10 w-10 items-center justify-center border border-white/25 text-white transition-colors hover:border-white hover:text-white"
               >
                 <FontAwesomeIcon icon={faTwitter} width={18} height={18} />
-              </a>
+              </button>
             </div>
           </div>
 
@@ -110,14 +110,11 @@ export default function Footer() {
           <div>
             <h3 className="mb-6 text-lg font-bold text-white">Services</h3>
             <ul className="space-y-3">
-              {serviceLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-base text-white/80 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
+              {serviceLinks.map((label) => (
+                <li key={label}>
+                  <span className="text-base text-white/80">
+                    {label}
+                  </span>
                 </li>
               ))}
             </ul>

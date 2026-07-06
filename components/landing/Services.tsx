@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 
 type Service = {
   index: string;
@@ -44,6 +45,8 @@ const services: Service[] = [
 const commonTags = ["STRUCTURAL", "Hydraulic", "GEOTECHNICAL"];
 
 export default function Services() {
+  const router = useRouter();
+
   return (
     <section className="w-full bg-white px-6 py-20 lg:px-32 lg:py-20">
       <div>
@@ -65,8 +68,8 @@ export default function Services() {
               key={service.index}
               className="group relative flex cursor-pointer flex-col gap-4 border-b border-[var(--border-light)] bg-transparent px-6 py-8 transition-all duration-300 hover:bg-[var(--bg-light-alt)] hover:shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:px-10"
             >
-              {/* Left red accent border */}
-              <span className="absolute left-0 top-0 h-full w-[4px] bg-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              {/* Left accent border — slides bottom-to-top on hover, top-to-bottom on unhover */}
+              <span className="absolute left-0 bottom-0 w-[2px] h-0 bg-[var(--color-accent)] transition-all duration-300 group-hover:h-full" />
 
               <span className="w-10 shrink-0 text-base font-medium tracking-[0.2em] text-[var(--text-dark)] transition-colors group-hover:text-[var(--color-primary)]">
                 {service.index}
@@ -94,13 +97,14 @@ export default function Services() {
             </div>
           ))}
         </div>
-        <a
-          href="#contact"
-          className="mt-8 inline-flex items-center gap-2 text-base font-medium tracking-[0.3em] text-[var(--color-primary)] transition-all hover:opacity-70 hover:gap-3"
+        <button
+          type="button"
+          onClick={() => router.push("/")}
+          className="mt-8 inline-flex cursor-pointer items-center gap-2 text-base font-medium tracking-[0.3em] text-[var(--color-primary)] transition-all hover:opacity-70 hover:gap-3"
         >
           REQUEST A CONSULTATION
           <span aria-hidden="true">&rarr;</span>
-        </a>
+        </button>
       </div>
     </section>
   );

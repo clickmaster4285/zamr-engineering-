@@ -76,27 +76,27 @@ export default function Contact() {
             </div>
 
             <div className="mt-8 flex items-center gap-6">
-              <a
-                href="#"
+              <button
+                type="button"
                 aria-label="Instagram"
                 className="flex h-7 w-7 items-center justify-center text-[var(--text-contact)] transition-all hover:opacity-70"
               >
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
-              </a>
-              <a
-                href="#"
+              </button>
+              <button
+                type="button"
                 aria-label="LinkedIn"
                 className="flex h-7 w-7 items-center justify-center text-[var(--text-contact)] transition-all hover:opacity-70"
               >
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
-              </a>
-              <a
-                href="#"
+              </button>
+              <button
+                type="button"
                 aria-label="Website"
                 className="flex h-7 w-7 items-center justify-center text-[var(--text-contact)] transition-all hover:opacity-70"
               >
                 <FontAwesomeIcon icon={faGlobe} size="lg" />
-              </a>
+              </button>
               <a
                 href="mailto:admin@zamrengineering.com.au"
                 aria-label="Email"

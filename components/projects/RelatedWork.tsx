@@ -37,13 +37,12 @@ export default function RelatedWork() {
             </h2>
           </div>
 
-          <a
-            href="#"
-            className="hidden items-center gap-2 text-xs font-bold tracking-[0.15em] text-[var(--color-primary)] transition-all hover:gap-3 hover:opacity-70 sm:flex"
+          <span
+            className="hidden items-center gap-2 text-xs font-bold tracking-[0.15em] text-[var(--color-primary)] sm:flex"
           >
             ALL PROJECTS
             <span aria-hidden="true">&rarr;</span>
-          </a>
+          </span>
         </div>
 
         {/* Project grid */}

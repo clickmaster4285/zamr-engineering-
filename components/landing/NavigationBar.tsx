@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -16,6 +17,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -76,9 +78,10 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Contact button – absolute right per Figma */}
-          <Link
-            href="#contact"
+          {/* Contact button */}
+          <button
+            type="button"
+            onClick={() => router.push("/")}
             className={`ml-auto hidden items-center justify-center border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors lg:flex ${
               scrolled
                 ? "border-white text-white hover:bg-white hover:text-primary"
@@ -87,7 +90,7 @@ export default function Navbar() {
             style={{ height: "50px" }}
           >
             CONTACT
-          </Link>
+          </button>
 
           {/* Hamburger – visible on mobile only */}
           <button
@@ -125,9 +128,12 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="#contact"
-            onClick={closeMenu}
+          <button
+            type="button"
+            onClick={() => {
+              closeMenu();
+              router.push("/");
+            }}
             className={`whitespace-nowrap border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors ${
               scrolled
                 ? "border-white text-white hover:bg-white hover:text-primary"
@@ -135,7 +141,7 @@ export default function Navbar() {
             }`}
           >
             CONTACT
-          </Link>
+          </button>
         </div>
       )}
     </>
