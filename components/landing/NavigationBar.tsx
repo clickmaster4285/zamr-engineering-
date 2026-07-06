@@ -33,8 +33,8 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-50 h-[100px] w-full overflow-hidden transition-all duration-300 ${
-          scrolled ? "bg-[var(--color-primary)] shadow-md" : "bg-transparent"
+        className={`fixed top-0 left-0 z-50 py-3 w-full overflow-hidden transition-all duration-300 ${
+          scrolled ? "bg-primary shadow-md" : "bg-transparent"
         }`}
       >
         <div className="relative mx-auto flex h-full w-full max-w-[1727px] items-center px-6 lg:px-[130px]">
