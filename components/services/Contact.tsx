@@ -30,33 +30,33 @@ export default function Contact() {
           <div>
             <div className="mb-6 flex items-center gap-3">
               {/* Updated to 06 */}
-              <span className="text-sm font-bold tracking-[0.1em] text-[#405BAD]">06</span>
+              <span className="text-sm font-bold tracking-[0.1em] text-[var(--color-primary)]">06</span>
               <span className="h-px w-12 bg-[#B7B7B7]" />
               {/* Updated label */}
               <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">ENQUIRE ABOUT THIS SERVICE</span>
             </div>
             {/* Updated heading */}
-            <h2 className="mb-10 text-sm font-bold leading-tight text-[#333333] sm:text-[50px]">
+            <h2 className="mb-10 text-sm font-bold leading-tight text-[var(--text-dark)] sm:text-[50px]">
               Start Your<br />Civil Engineering<br />Project
             </h2>
 
             {/* Descriptive text and contact details */}
             <div className="space-y-5 text-md text-[#4C4C4C]">
-              <p className="transition-colors hover:text-[#2544A1]">
+              <p>
                 Tell us about your project or challenge. Our engineering team will
                 review your enquiry and respond within 1-2 business days.
               </p>
-              <p className="transition-colors hover:text-[#2544A1]">
-                <span className="font-semibold text-[#405BAD]">Office:</span> Level 5, 123 Pitt Street, Sydney NSW 2000
+              <p>
+                <span className="font-semibold text-[var(--color-primary)]">Office:</span> Level 5, 123 Pitt Street, Sydney NSW 2000
               </p>
-              <p className="transition-colors hover:text-[#2544A1]">
-                <span className="font-semibold text-[#405BAD]">Phone:</span> +612 9000 0000
+              <p>
+                <span className="font-semibold text-[var(--color-primary)]">Phone:</span> +612 9000 0000
               </p>
-              <p className="transition-colors hover:text-[#2544A1]">
-                <span className="font-semibold text-[#405BAD]">Email:</span>{" "}
+              <p>
+                <span className="font-semibold text-[var(--color-primary)]">Email:</span>{" "}
                 <a
                   href="mailto:enquiries@zamrengineering.com.au"
-                  className="transition-all hover:underline hover:text-[#2544A1]"
+                  className="transition-all hover:underline"
                 >
                   enquiries@zamrengineering.com.au
                 </a>
@@ -78,7 +78,7 @@ export default function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="John Smith"
-                  className="w-full border-0 border-b border-[#D5D9E3] bg-transparent pb-2 text-sm text-[#333333] placeholder:text-[#B0B4BE] transition-colors focus:border-[#405BAD] focus:outline-none hover:border-[#405BAD]/50"
+                  className="w-full border-0 border-b border-[#D5D9E3] bg-transparent pb-2 text-sm text-[var(--text-dark)] placeholder:text-[#B0B4BE] transition-colors focus:border-[var(--color-primary)] focus:outline-none hover:border-[var(--color-primary)]/50"
                 />
               </div>
               <div>
@@ -90,7 +90,7 @@ export default function Contact() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="you@company.com.au"
-                  className="w-full border-0 border-b border-[#D5D9E3] bg-transparent pb-2 text-sm text-[#333333] placeholder:text-[#B0B4BE] transition-colors focus:border-[#405BAD] focus:outline-none hover:border-[#405BAD]/50"
+                  className="w-full border-0 border-b border-[#D5D9E3] bg-transparent pb-2 text-sm text-[var(--text-dark)] placeholder:text-[#B0B4BE] transition-colors focus:border-[var(--color-primary)] focus:outline-none hover:border-[var(--color-primary)]/50"
                 />
               </div>
             </div>
@@ -120,7 +120,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="mt-10 w-full bg-[#2544A1] py-4 text-sm font-bold tracking-[0.2em] text-white transition-all hover:bg-[#1c3480] hover:shadow-lg active:scale-95"
+              className="mt-10 w-full bg-[var(--color-primary)] py-4 text-sm font-bold tracking-[0.2em] text-white transition-all hover:bg-[var(--color-primary-hover)] hover:shadow-lg active:scale-95"
             >
               SUBMIT ENQUIRY
             </button>

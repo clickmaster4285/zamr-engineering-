@@ -24,7 +24,7 @@ export default function RelatedWork() {
         <div className="mb-10 flex items-end justify-between">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <span className="text-sm font-bold tracking-widest text-[#405BAD]">
+              <span className="text-sm font-bold tracking-widest text-[var(--color-primary)]">
                 05
               </span>
               <span className="h-px w-12 bg-gray-400" />
@@ -39,7 +39,7 @@ export default function RelatedWork() {
 
           <a
             href="#"
-            className="hidden items-center gap-2 text-xs font-bold tracking-[0.15em] text-[#405BAD] transition-all hover:gap-3 hover:opacity-70 sm:flex"
+            className="hidden items-center gap-2 text-xs font-bold tracking-[0.15em] text-[var(--color-primary)] transition-all hover:gap-3 hover:opacity-70 sm:flex"
           >
             ALL PROJECTS
             <span aria-hidden="true">&rarr;</span>

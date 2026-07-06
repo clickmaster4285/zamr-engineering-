@@ -17,7 +17,7 @@ export default function Deliverables() {
         {/* Left column */}
         <div>
           <div className="mb-5 flex items-center gap-3">
-            <span className="text-sm font-bold tracking-widest text-[#14213D]">
+            <span className="text-sm font-bold tracking-widest text-[var(--color-primary)]">
               04
             </span>
             <span className="h-px w-10 bg-gray-300" />
@@ -46,13 +46,13 @@ export default function Deliverables() {
                 i !== deliverables.length - 1 ? "border-b border-gray-100" : ""
               }`}
             >
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-[#C54A33]/50">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-[var(--color-secondary)]/50 text-[var(--color-secondary)]">
                 <svg
                   width="14"
                   height="14"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#C54A33"
+                  stroke="currentColor"
                   strokeWidth="1.8"
                 >
                   <circle cx="12" cy="12" r="9" />
@@ -63,7 +63,7 @@ export default function Deliverables() {
                   />
                 </svg>
               </span>
-              <span className="text-[17px] text-[#333333] md:text-[19px]">
+              <span className="text-[17px] text-[var(--text-dark)] md:text-[19px]">
                 {item}
               </span>
             </div>

@@ -39,16 +39,16 @@ export default function TechnicalCapabilities() {
         {/* Header */}
         <div className="mb-12">
           <div className="mb-4 flex items-center gap-3">
-            <span className="text-sm font-bold tracking-widest text-[#14213D]">
+            <span className="text-sm font-bold tracking-widest text-[var(--color-primary)]">
               02
             </span>
-            <span className="h-px w-12 bg-[#14213D]" />
+            <span className="h-px w-12 bg-[var(--color-primary)]" />
             <span className="text-sm font-semibold tracking-[0.25em] text-[#4C4C4C]">
               CAPABILITIES
             </span>
           </div>
 
-          <h2 className="text-[44px] font-bold leading-tight tracking-tight text-[#14213D] sm:text-[50px]">
+          <h2 className="text-[44px] font-bold leading-tight tracking-tight text-[var(--color-primary)] sm:text-[50px]">
             Technical Capabilities
           </h2>
         </div>
@@ -58,9 +58,9 @@ export default function TechnicalCapabilities() {
           {capabilities.map((item, index) => (
             <div
               key={index}
-              className="group rounded-xl border border-gray-100 bg-white p-8 transition-all duration-300 hover:border-[#294098]/30 hover:shadow-lg hover:shadow-[#294098]/10"
+              className="group rounded-xl border border-gray-100 bg-white p-8 transition-all duration-300 hover:border-[var(--color-primary)]/30 hover:shadow-lg hover:shadow-[var(--color-primary)]/10"
             >
-              <h3 className="mb-4 text-[23px] font-bold text-[#14213D] transition-colors group-hover:text-[#294098]">
+              <h3 className="mb-4 text-[23px] font-bold text-[var(--color-primary)] transition-colors group-hover:text-[var(--color-secondary)]">
                 {item.title}
               </h3>
               <p className="text-[17px] leading-relaxed text-gray-600 md:text-[19px]">

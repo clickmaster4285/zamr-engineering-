@@ -403,7 +403,7 @@ export default function Structure() {
     >
      <div className="mb-5 flex items-center gap-3">
           {/* Slightly bigger: 15px → 16px */}
-          <span className="text-sm tracking-[0.1em] font-bold text-[#405BAD]">03</span>
+          <span className="text-sm tracking-[0.1em] font-bold text-[var(--color-primary)]">03</span>
           <span className="h-px w-12 bg-[#B7B7B7]" />
           {/* Slightly bigger: 13px → 14px */}
           <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">STRUCTURE</span>
@@ -423,17 +423,17 @@ export default function Structure() {
     className="object-contain"
   />
 </div>
-<p className="text-[#C54A33] text-xs font-semibold tracking-widest mb-6">ENGINEERING</p>
+<p className="text-[var(--color-secondary)] text-xs font-semibold tracking-widest mb-6">ENGINEERING</p>
 
 
 
 
 
           
-          <h1 className="mt-6 text-[30px] font-semibold text-[#1a1a1a] leading-tight">
+          <h1 className="mt-6 text-[30px] font-semibold text-[var(--text-dark)] leading-tight">
             Organizational<br />Structure
           </h1>
-          <div className="mt-6 space-y-2 text-[13px] text-[#1a1a1a]">
+          <div className="mt-6 space-y-2 text-[13px] text-[var(--text-dark)]">
             <div className="flex items-center gap-2">
               <span className="h-3 w-3 rounded-full bg-[#3F6FB4]" /> Technical Team
             </div>

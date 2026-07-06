@@ -41,12 +41,12 @@ export default function WhyZamr() {
     <section className="w-full bg-[#EDEEF1] px-6 py-16 sm:px-10 lg:px-30 lg:py-16">
       <div className="w-auto">
         <div className="mb-5 flex items-center gap-3">
-          <span className="text-sm tracking-[0.1em] font-bold text-[#405BAD]">02</span>
+          <span className="text-sm tracking-[0.1em] font-bold text-[var(--color-primary)]">02</span>
           <span className="h-px w-12 bg-[#B7B7B7]" />
           <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">WHY ZAMR</span>
         </div>
 
-        <h2 className="mb-10 text-[44px] font-bold leading-tight text-[#333333] sm:text-[50px]">
+        <h2 className="mb-10 text-[44px] font-bold leading-tight text-[var(--text-dark)] sm:text-[50px]">
           What sets us apart from the competition.
         </h2>
 
@@ -57,11 +57,11 @@ export default function WhyZamr() {
               className="group flex flex-col rounded-md border border-[#DDE0E4] bg-[#F0F1F3] p-6 shadow-sm transition-all duration-300 hover:shadow-md"
             >
               {/* Red line */}
-              <span className="mb-4 h-0.5 w-6 bg-[#D32F2F]" />
+              <span className="mb-4 h-0.5 w-6 bg-[var(--color-secondary)]" />
               <span className="mb-2 text-[13px] font-semibold tracking-[0.05em] text-[#4C4C4C]">
                 {feature.number}
               </span>
-              <h3 className="mb-3 text-[19px] font-bold text-[#333333] transition-colors group-hover:text-[#405BAD]">
+              <h3 className="mb-3 text-[19px] font-bold text-[var(--text-dark)] transition-colors group-hover:text-[var(--color-primary)]">
                 {feature.title}
               </h3>
               <p className="text-[15px] leading-relaxed text-[#4C4C4C]">

@@ -39,7 +39,7 @@ export default function About() {
         {/* Left column */}
         <div>
           <div className="mb-6 flex items-center gap-3">
-            <span className="text-[14px] font-bold tracking-[0.05em] text-[#1E40AF]">
+            <span className="text-[14px] font-bold tracking-[0.05em] text-[var(--color-primary)]">
               01
             </span>
             <span className="h-px w-12 bg-black" />
@@ -53,8 +53,7 @@ export default function About() {
             Precision
             <br />
             <span className="relative inline-block">
-              &amp; Reliability
-              <span className="absolute -bottom-3 font-medium left-0.5 h-px w-48 bg-[#D32F2F]" />
+              &amp; Reliability                  <span className="absolute -bottom-3 font-medium left-0.5 h-px w-48 bg-[var(--color-secondary)]" />
             </span>
           </h2>
         </div>
@@ -98,7 +97,7 @@ export default function About() {
             {pillars.map((pillar, index) => (
               <div key={pillar.title}>
                 <div
-                  className={`text-3xl font-medium leading-none text-[#1E40AF]`}
+                  className={`text-3xl font-medium leading-none text-[var(--color-primary)]`}
                 >
                   {pillar.title}
                 </div>

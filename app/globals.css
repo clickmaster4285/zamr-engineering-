@@ -1,29 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.205 0 0);
 
-  /* ZAMR Design Tokens from Figma */
-  --color-primary: #1945A7;
-  --color-primary-hover: #153a8c;
-  --color-accent: #CE1A00;
-  --color-accent-light: #FA0000;
+  /* ZAMR Color Scheme — all colors stored here in oklch, referenced via var() everywhere */
+  --color-primary: oklch(0.254 0.07 266.5);
+  --color-primary-hover: oklch(0.226 0.061 265.4);
+  --color-secondary: oklch(0.696 0.102 78);
+  --color-secondary-light: oklch(0.785 0.091 75.7);
+
+  /* Compatibility — accent vars now point to secondary yellow */
+  --color-accent: var(--color-secondary);
+  --color-accent-light: var(--color-secondary-light);
 
   /* Backgrounds */
-  --bg-light: #F6F8FC;
-  --bg-light-alt: #F9FAFC;
-  --bg-hero: #050C1F;
+  --bg-light: oklch(0.979 0.006 264.4);
+  --bg-light-alt: oklch(0.985 0.003 264.4);
+  --bg-hero: oklch(0.159 0.042 264.8);
 
   /* Text Colors */
-  --text-dark: #333333;
-  --text-muted: #4C4C4C;
-  --text-light: #B0B0B0;
-  --text-contact: #2344A1;
+  --text-dark: oklch(0.321 0 0);
+  --text-muted: oklch(0.417 0 0);
+  --text-light: oklch(0.757 0 0);
+  --text-contact: oklch(0.254 0.07 266.5);
 
   /* Borders */
-  --border-light: #EAEAEA;
-  --border-input: rgba(34, 65, 158, 0.18);
+  --border-light: oklch(0.937 0 0);
+  --border-input: oklch(0.254 0.07 266.5 / 0.18);
 }
 
 @theme inline {
@@ -33,6 +37,8 @@
   /* Primary colors */
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-light: var(--color-secondary-light);
   --color-accent: var(--color-accent);
   --color-accent-light: var(--color-accent-light);
 
