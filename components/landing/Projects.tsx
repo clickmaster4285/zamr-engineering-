@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const filters = [
   "ALL",
@@ -57,8 +58,6 @@ const clientLogos = [
   { src: "/images/logo7.jpeg", alt: "Sydney Structural & Civil" },
   { src: "/images/logo8.jpeg", alt: "Brisbane Growth Development Agency" },
 ];
-
-const doubledLogos = [...clientLogos, ...clientLogos];
 
 function useInView(threshold = 0.15) {
   const [inView, setInView] = useState(false);
@@ -166,103 +165,92 @@ export default function Projects() {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section className="w-full bg-[var(--bg-light)] px-6 py-20 lg:px-32 lg:py-20">
-      <div>
-        <div className="mb-8 flex items-center justify-between">
-          <div>
-            <div className="mb-8 flex items-center gap-4">
-              <span className="text-base font-medium tracking-[0.2em] text-[var(--color-primary)]">
-                03
-              </span>
-              <span className="h-px w-24 bg-black" />
-              <span className="text-base font-medium tracking-[0.2em] text-[var(--text-dark)]">
-                PROJECTS
-              </span>
+    <section className="w-screen bg-[var(--bg-light)] px-6 py-20 lg:p-[130px]">
+      <div className="mx-auto flex max-w-[1468px] flex-col gap-[60px]">
+        <div className="flex flex-col gap-[30px]">
+          {/* Title header — Figma Frame 1321319002 */}
+          <div className="flex items-start justify-between">
+            <div className="flex flex-col gap-[30px]">
+              <div className="flex items-center gap-4">
+                <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
+                  03
+                </span>
+                <span className="h-px w-[104px] bg-black" />
+                <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+                  PROJECTS
+                </span>
+              </div>
+              <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
+                Featured Work
+              </h2>
             </div>
-            <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
-              Featured Work
-            </h2>
+            <Link
+              href="#all-projects"
+              className="flex items-center gap-2 text-base font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity hover:opacity-70"
+            >
+              ALL PROJECTS <ArrowRight size={24} />
+            </Link>
           </div>
-          <Link
-            href="#all-projects"
-            className="flex items-center gap-2 text-base font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity hover:opacity-70"
-          >
-            ALL PROJECTS <span aria-hidden="true">&rarr;</span>
-          </Link>
-        </div>
 
-        {/* Filter tabs */}
-        <div className="mb-10 flex w-full flex-wrap gap-3 lg:flex-nowrap lg:gap-2">
-          {filters.map((filter) => {
-            const isActive = filter === activeFilter;
-            return (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => setActiveFilter(filter)}
-                className={`flex-none border px-6 py-4 text-sm font-medium tracking-[0.3em] transition-all duration-300 ${
-                  filter === "ALL"
-                    ? "w-[82px] border-[var(--color-primary)] bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)]"
-                    : `flex-1 ${
-                        isActive
-                          ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] hover:border-[var(--color-primary-hover)]"
-                          : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                      }`
-                }`}
-              >
-                {filter}
-              </button>
-            );
-          })}
-        </div>
+          {/* Filter tabs*/}
+          <div className="flex w-full flex-wrap gap-5 lg:flex-nowrap">
+            {filters.map((filter) => {
+              const isActive = filter === activeFilter;
+              return (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setActiveFilter(filter)}
+                  className={`flex-none whitespace-nowrap border py-4 text-[11px] leading-[16px] font-normal tracking-[0.3em] transition-all duration-300 px-6.75 ${
+                    isActive
+                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                  }`}
+                >
+                  {filter}
+                </button>
+              );
+            })}
+          </div>
 
-        {/* Project grid */}
-        {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.3fr_1fr]">
-            {filteredProjects[0] && (
-              <ProjectCard project={filteredProjects[0]} isLarge={true} />
-            )}
-            <div className="flex flex-col gap-6">
-              {filteredProjects.slice(1, 3).map((project) => (
-                <ProjectCard key={project.index} project={project} isLarge={false} />
-              ))}
+          {/* Project grid — Figma Frame 1321319008 */}
+          {filteredProjects.length > 0 ? (
+            <div className="flex flex-col gap-[30px] md:flex-row">
+              {filteredProjects[0] && (
+                <div className="md:w-[817px]">
+                  <ProjectCard project={filteredProjects[0]} isLarge={true} />
+                </div>
+              )}
+              <div className="flex flex-col gap-[30px] md:w-[621px]">
+                {filteredProjects.slice(1, 3).map((project) => (
+                  <ProjectCard key={project.index} project={project} isLarge={false} />
+                ))}
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="py-12 text-center text-lg text-[var(--text-muted)]">
-            No projects found in this category.
-          </div>
-        )}
+          ) : (
+            <div className="py-12 text-center text-lg text-[var(--text-muted)]">
+              No projects found in this category.
+            </div>
+          )}
 
-        {/* Client logos */}
-        <div className="mt-20 overflow-hidden">
-          <div className="flex w-max animate-infinite-scroll items-center gap-8">
-            {doubledLogos.map((logo, index) => (
+          {/* Client logos — Figma Frame 1321319031 */}
+          <div className="flex w-full flex-wrap items-center gap-[30px]">
+            {clientLogos.map((logo) => (
               <div
-                key={`${logo.alt}-${index}`}
-                className="group relative h-[86px] w-[157px] flex-shrink-0 overflow-hidden bg-[var(--bg-light)]"
+                key={logo.alt}
+                className="relative h-[86px] min-w-[150px] flex-1 overflow-hidden bg-[var(--bg-light)]"
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
                   fill
-                  className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain p-4"
                 />
               </div>
             ))}
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes infinite-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-infinite-scroll {
-          animation: infinite-scroll 20s linear infinite;
-        }
-      `}</style>
     </section>
   );
 }

@@ -16,7 +16,7 @@ export default function Hero() {
       </video>
 
       {/* Dark overlay */}
-      <div className="pointer-events-none absolute inset-0 bg-[var(--bg-hero)]/85" />
+      <div className="pointer-events-none absolute inset-0 bg-[var(--bg-hero)]/25" />
 
       {/* Hero content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
