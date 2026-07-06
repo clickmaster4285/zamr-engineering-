@@ -21,7 +21,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
+      setScrolled(window.scrollY >= window.innerHeight);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
@@ -72,7 +72,7 @@ export default function Navbar() {
             href="#contact"
             className={`ml-auto hidden items-center justify-center border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors lg:flex ${
               scrolled
-                ? "border-white text-white hover:bg-white hover:text-[var(--color-primary)]"
+                ? "border-white text-white hover:bg-white hover:text-primary"
                 : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
             }`}
             style={{ height: "50px" }}
@@ -98,7 +98,7 @@ export default function Navbar() {
         <div
           className={`fixed top-[100px] left-0 z-40 flex w-full flex-col items-center gap-6 border-t px-6 py-8 lg:hidden ${
             scrolled
-              ? "bg-[var(--color-primary)] border-white/20"
+              ? "bg-primary border-white/20"
               : "bg-[var(--bg-hero)]/95 border-white/10"
           }`}
         >
@@ -121,7 +121,7 @@ export default function Navbar() {
             onClick={closeMenu}
             className={`whitespace-nowrap border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors ${
               scrolled
-                ? "border-white text-white hover:bg-white hover:text-[var(--color-primary)]"
+                ? "border-white text-white hover:bg-white hover:text-primary"
                 : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
             }`}
           >
