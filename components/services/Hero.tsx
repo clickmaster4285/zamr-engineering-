@@ -4,32 +4,28 @@ import Image from "next/image";
 
 export default function ServicesHero() {
   return (
-    <section className="relative w-full h-[420px] md:h-[480px] overflow-hidden">
-      {/* Background image */}
+    <section className="relative h-[400px] w-full overflow-hidden sm:h-[500px] lg:h-[700px]">
       <Image
-        src="/images/image5.jpeg" // replace with your actual image path
+        src="/images/image5.jpeg"
         alt="Engineers on site"
         fill
         priority
         className="object-cover"
       />
 
-      {/* Navy overlay */}
-      <div className="absolute inset-0 bg-[#050B1F]/70" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#050B1F]/90 via-[#050B1F]/30 to-transparent" />
+      {/* Navy overlay — rgba(7, 24, 61, 0.8) per Figma */}
+      <div className="absolute inset-0" style={{ backgroundColor: "rgba(7, 24, 61, 0.8)" }} />
 
-      {/* Content – now at the bottom */}
-      <div className="relative z-10 h-full flex flex-col justify-end px-8 md:px-16 pb-12 md:pb-16">
-        <div className="ml-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Our Services
-          </h1>
-          <p className="text-sm md:text-base text-gray-200 max-w-xl leading-relaxed">
-            Five specialist engineering disciplines. One integrated consultancy.
-            Delivering precision-led infrastructure outcomes across NSW, QLD,
-            and Victoria.
-          </p>
-        </div>
+      {/* Frame 1321319043 — content */}
+      <div className="absolute bottom-10 left-1/2 flex w-full max-w-[933px] -translate-x-1/2 flex-col gap-5 px-6 lg:bottom-[100px] lg:left-[130px] lg:translate-x-0 lg:px-0">
+        <h1 className="w-full text-[40px] font-bold leading-[48px] text-white sm:text-[50px] sm:leading-[60px] lg:text-[80px] lg:leading-[101px]">
+          Our Services
+        </h1>
+        <p className="w-full text-base font-medium leading-snug text-[#B0B0B0] sm:text-lg lg:text-[18px] lg:leading-[23px]">
+          Five specialist engineering disciplines. One integrated consultancy.
+          Delivering precision-led infrastructure outcomes across NSW, QLD, and
+          Victoria.
+        </p>
       </div>
     </section>
   );
