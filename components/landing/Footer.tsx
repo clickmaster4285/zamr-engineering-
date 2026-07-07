@@ -3,13 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faFacebook,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { faMapMarkerAlt, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const quickLinks = [
   { label: "About", href: "" },
@@ -65,27 +58,27 @@ export default function Footer() {
               Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.
             </p>
             <div className="mt-6 flex items-center gap-4">
-              <button
-                type="button"
+              <Link
+                href=""
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center border border-white/25 text-white transition-colors hover:border-white hover:text-white"
+                className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white"
               >
-                <FontAwesomeIcon icon={faLinkedin} width={18} height={18} />
-              </button>
-              <button
-                type="button"
+                <Image src="/icons/Linkdinsq.svg" alt="LinkedIn" width={40} height={40} />
+              </Link>
+              <Link
+                href=""
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center border border-white/25 text-white transition-colors hover:border-white hover:text-white"
+                className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white"
               >
-                <FontAwesomeIcon icon={faFacebook} width={18} height={18} />
-              </button>
-              <button
-                type="button"
+                <Image src="/icons/facebookSq.svg" alt="Facebook" width={40} height={40} />
+              </Link>
+              <Link
+                href=""
                 aria-label="Twitter"
-                className="flex h-10 w-10 items-center justify-center border border-white/25 text-white transition-colors hover:border-white hover:text-white"
+                className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white"
               >
-                <FontAwesomeIcon icon={faTwitter} width={18} height={18} />
-              </button>
+                <Image src="/icons/tweetersq.svg" alt="Twitter" width={40} height={40} />
+              </Link>
             </div>
           </div>
 
@@ -125,15 +118,15 @@ export default function Footer() {
             <h3 className="mb-6 text-lg font-bold text-white">Contact Info</h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-base text-white/80">
-                <FontAwesomeIcon icon={faMapMarkerAlt} className="shrink-0" width={20} height={20} />
+                <Image src="/icons/location.svg" alt="Location" width={20} height={20} />
                 Sydney, New South Wales Australia
               </li>
               <li className="flex items-center gap-3 text-base text-white/80">
-                <FontAwesomeIcon icon={faEnvelope} className="shrink-0" width={20} height={20} />
+                <Image src="/icons/gamilwhite.svg" alt="Email" width={20} height={20} />
                 info@zamreng.com.au
               </li>
               <li className="flex items-center gap-3 text-base text-white/80">
-                <FontAwesomeIcon icon={faPhone} className="shrink-0" width={20} height={20} />
+                <Image src="/icons/phonewhite.svg" alt="Phone" width={20} height={20} />
                 +61 2 3456 7890
               </li>
             </ul>
