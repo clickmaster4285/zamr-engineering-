@@ -44,8 +44,6 @@ const projects: Project[] = [
 
 const projectDescriptions: Record<string, string> = {
   "01": "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
-  "02": "Large-scale renewable energy hub in the Hunter Valley region, integrating solar and wind infrastructure at utility scale.",
-  "03": "Comprehensive infrastructure corridor connecting Western Sydney's key growth areas with transport and utility networks.",
 };
 
 const clientLogos = [
@@ -110,7 +108,7 @@ function ProjectCard({
       }`}
     >
       <div
-        className={`relative w-full ${
+        className={`relative w-full overflow-hidden ${
           isLarge ? "h-[484px] md:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
         }`}
       >
@@ -118,39 +116,52 @@ function ProjectCard({
           src={project.image}
           alt={project.title}
           fill
-          sizes={isLarge ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 25vw, 100vw"}
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes={isLarge ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 50vw, 100vw"}
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/20" />
+        {/* Gradient overlay — Figma spec */}
+        <div
+          className="absolute inset-0 transition-opacity duration-500"
+          style={{
+            background: isLarge
+              ? "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
+              : "linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%)",
+          }}
+        />
 
-        {/* Project index */}
+        {/* Project index — absolute left:50px top:50px */}
         <span
-          className={`absolute left-6 top-6 font-extrabold tracking-[0.3em] text-white ${
-            isLarge ? "text-5xl md:text-[54px]" : "text-[34px]"
+          className={`absolute left-[50px] top-[50px] font-[800] tracking-[0.3em] text-white ${
+            isLarge ? "text-[54px] leading-[68px]" : "text-[34px] leading-[43px]"
           }`}
         >
           {project.index}
         </span>
 
-        {/* Bottom text block */}
-        <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 pt-14">
-          <h3
-            className={`font-semibold text-white ${
-              isLarge ? "text-base md:text-[28px]" : "text-[28px]"
-            }`}
-          >
-            {project.title}
-          </h3>
-          <p
-            className={`max-h-0 overflow-hidden font-normal leading-relaxed text-white/85 opacity-0 transition-all duration-500 ease-out group-hover:max-h-24 group-hover:opacity-100 ${
-              isLarge ? "text-base md:text-[16px]" : "text-[16px]"
-            }`}
-          >
+        {/* Title — absolute left:50px; large card matches small position, moves up on hover */}
+        <h3
+          className={`absolute left-[50px] font-[600] text-white transition-all duration-500 ease-in-out ${
+            isLarge
+              ? "bottom-[80px] group-hover:bottom-[130px] text-[28px] leading-[35px]"
+              : "bottom-[80px] text-[28px] leading-[35px]"
+          }`}
+        >
+          {project.title}
+        </h3>
+
+        {/* Description — slides up from outside image bottom on hover */}
+        {isLarge ? (
+          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out bg-gradient-to-t from-black/60 to-transparent">
+            <p className="px-[50px] py-6 font-[400] text-[16px] leading-[20px] text-white max-w-[717px]">
+              {projectDescriptions[project.index]}
+            </p>
+          </div>
+        ) : (
+          <p className="absolute bottom-[50px] left-[50px] max-w-[500px] font-[400] text-[16px] leading-[20px] text-white">
             {projectDescriptions[project.index]}
           </p>
-        </div>
+        )}
       </div>
     </div>
   );
@@ -185,7 +196,7 @@ export default function Projects() {
               </h2>
             </div>
             <Link
-              href="#all-projects"
+              href="/projects"
               className="flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity hover:opacity-70 sm:text-base"
             >
               ALL PROJECTS <ArrowRight size={24} />
@@ -216,13 +227,13 @@ export default function Projects() {
 
           {/* Project grid — Figma Frame 1321319008 */}
           {filteredProjects.length > 0 ? (
-            <div className="flex flex-col gap-6 md:flex-row">
+            <div className="flex flex-col gap-[30px] md:flex-row md:items-center">
               {filteredProjects[0] && (
-                <div className="md:w-[55%]">
+                <div className="md:w-[817px]">
                   <ProjectCard project={filteredProjects[0]} isLarge={true} />
                 </div>
               )}
-              <div className="flex flex-col gap-6 md:w-[45%]">
+              <div className="flex flex-col gap-[30px] md:w-[621px]">
                 {filteredProjects.slice(1, 3).map((project) => (
                   <ProjectCard key={project.index} project={project} isLarge={false} />
                 ))}
@@ -235,11 +246,11 @@ export default function Projects() {
           )}
 
           {/* Client logos — Figma Frame 1321319031 */}
-          <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-[30px]">
+          <div className="flex flex-col gap-[30px] sm:flex-row sm:items-center">
             {clientLogos.map((logo) => (
               <div
                 key={logo.alt}
-                className="relative h-[60px] overflow-hidden bg-[var(--bg-light)] sm:h-[86px]"
+                className="relative h-[86px] flex-1 overflow-hidden bg-[var(--bg-light)]"
               >
                 <Image
                   src={logo.src}
