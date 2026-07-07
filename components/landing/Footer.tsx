@@ -36,12 +36,12 @@ export default function Footer() {
 
       <div className="pointer-events-none absolute inset-0" />
 
-      <div className="relative z-10 w-full p-[130px]">
-        <div className="mx-auto flex max-w-[1468px] flex-col gap-[30px]">
+      <div className="relative z-10 w-full px-6 py-12 lg:p-[130px]">
+        <div className="mx-auto flex max-w-[1468px] flex-col gap-8 lg:gap-[30px]">
           {/* Frame 60 — top row */}
-          <div className="flex flex-row items-start gap-[60px]">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-[60px]">
             {/* Frame 55 — Logo + Description + Social */}
-            <div className="flex w-[369px] flex-col items-start gap-[50px]">
+            <div className="flex w-full flex-col items-start gap-8 lg:w-[369px] lg:gap-[50px]">
               <Image
                 src="/images/zamr-logo.png"
                 alt="ZAMR Engineering"
@@ -56,34 +56,22 @@ export default function Footer() {
                   Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.
                 </p>
                 {/* Frame 53 — social icons */}
-                <div className=" flex items-center gap-4">
-              <Link
-                href=""
-                aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white"
-              >
-                <Image src="/icons/Linkdinsq.svg" alt="LinkedIn" width={40} height={40} />
-              </Link>
-              <Link
-                href=""
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white"
-              >
-                <Image src="/icons/facebookSq.svg" alt="Facebook" width={40} height={40} />
-              </Link>
-              <Link
-                href=""
-                aria-label="Twitter"
-                className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white"
-              >
-                <Image src="/icons/tweetersq.svg" alt="Twitter" width={40} height={40} />
-              </Link>
-            </div>
+                <div className="flex items-center gap-4">
+                  <Link href="" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white">
+                    <Image src="/icons/Linkdinsq.svg" alt="LinkedIn" width={40} height={40} />
+                  </Link>
+                  <Link href="" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white">
+                    <Image src="/icons/facebookSq.svg" alt="Facebook" width={40} height={40} />
+                  </Link>
+                  <Link href="" aria-label="Twitter" className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white">
+                    <Image src="/icons/tweetersq.svg" alt="Twitter" width={40} height={40} />
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Frame 56 — Quick Links + Services + Contact Info */}
-            <div className="flex flex-1 flex-row items-start gap-12">
+            <div className="flex w-full flex-col gap-8 lg:flex-1 lg:flex-row lg:items-start lg:gap-12">
               {/* Quick Links */}
               <div className="flex flex-1 flex-col gap-6">
                 <h3 className="text-lg font-bold leading-[23px] text-white">Quick Links</h3>
@@ -135,15 +123,15 @@ export default function Footer() {
           <div className="h-px w-full bg-white" />
 
           {/* Bottom row */}
-          <div className="flex flex-row items-center justify-between">
-            <p className="text-base leading-5 text-white">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+            <p className="text-sm leading-5 text-white sm:text-base">
               &copy; 2026 ZAMR Engineering. All rights reserved.
             </p>
             <div className="flex flex-row items-center gap-5">
-              <Link href="" className="text-base leading-5 text-right text-white transition-colors hover:text-white/80">
+              <Link href="" className="text-sm leading-5 text-right text-white transition-colors hover:text-white/80 sm:text-base">
                 Privacy Policy
               </Link>
-              <Link href="" className="text-base leading-5 text-right text-white transition-colors hover:text-white/80">
+              <Link href="" className="text-sm leading-5 text-right text-white transition-colors hover:text-white/80 sm:text-base">
                 Terms of Service
               </Link>
             </div>
