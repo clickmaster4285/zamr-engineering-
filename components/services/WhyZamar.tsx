@@ -68,7 +68,7 @@ export default function WhyZamr() {
           {features.map((feature) => (
             <div
               key={feature.number}
-              className="flex flex-1 flex-col border px-7 py-7"
+              className="flex flex-1 flex-col border px-5 py-6 lg:px-7 lg:py-7"
               style={{
                 background: "#EFF4FC",
                 borderColor: "rgba(34, 65, 158, 0.1)",
