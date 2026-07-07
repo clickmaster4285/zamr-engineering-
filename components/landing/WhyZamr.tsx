@@ -35,7 +35,7 @@ export default function WhyZamr() {
   return (
     <section className="w-full bg-white px-6 py-20 lg:px-32 lg:py-20">
       <div>
-        <div className="mb-8 flex items-center justify-between">
+        <div className="mb-[80px] flex items-center justify-between">
           <div>
             <div className="mb-8 flex items-center gap-4">
               <span className="text-base font-medium tracking-[0.2em] text-[var(--color-primary)]">
@@ -46,7 +46,7 @@ export default function WhyZamr() {
                 WHY ZAMR ENGINEERING
               </span>
             </div>
-            <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
+            <h2 className="text-[56px] font-bold   text-[var(--text-dark)]">
               The difference is in how we build.
             </h2>
           </div>
@@ -62,16 +62,18 @@ export default function WhyZamr() {
           {points.map((point) => (
             <div
               key={point.title}
-              className="group relative flex cursor-pointer flex-col gap-4 border-b border-[var(--border-light)] bg-transparent px-6 py-8 transition-all duration-300 hover:bg-[var(--bg-light-alt)] hover:shadow-sm sm:flex-row sm:items-center sm:gap-16 sm:px-10"
+              className="group relative flex items-center border-b border-[var(--border-light)] py-[42px] pl-[50px] pr-[50px]"
             >
-              {/* Left red accent border */}
-              <span className="absolute left-0 top-0 h-full w-[4px] bg-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              {/* Left red border */}
+              <span className="absolute left-0 top-0 h-full w-1 bg-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              <h3 className="w-full shrink-0 text-[28px] font-semibold leading-[35px] text-[var(--text-dark)] transition-colors group-hover:text-[var(--color-primary)] sm:w-[250px]">
+              {/* Title */}
+              <h3 className="w-[444px] shrink-0 text-[28px] font-semibold  text-[var(--text-dark)] group-hover:text-[var(--color-primary)]">
                 {point.title}
               </h3>
 
-              <p className="flex-1 text-lg leading-[23px] text-[var(--text-dark)] transition-colors group-hover:text-[var(--text-dark)]">
+              {/* Description */}
+              <p className=" text-lg  text-[var(--text-dark)]">
                 {point.description}
               </p>
             </div>
