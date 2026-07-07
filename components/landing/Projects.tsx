@@ -139,12 +139,12 @@ function ProjectCard({
           {project.index}
         </span>
 
-        {/* Title — absolute left:50px; large card matches small position, moves up on hover */}
+        {/* Title — absolute left:50px; Figma: bottom edge at 50px from container bottom */}
         <h3
           className={`absolute left-[50px] font-[600] text-white transition-all duration-500 ease-in-out ${
             isLarge
-              ? "bottom-[80px] group-hover:bottom-[130px] text-[28px] leading-[35px]"
-              : "bottom-[80px] text-[28px] leading-[35px]"
+              ? "bottom-[50px] group-hover:bottom-[100px] text-[28px] leading-[35px]"
+              : "bottom-[50px] text-[28px] leading-[35px]"
           }`}
         >
           {project.title}
