@@ -53,20 +53,25 @@ function StatItem({
 }) {
   const count = useCountUp(stat.value, shouldStart);
 
+  const alignClass = {
+    start: "sm:items-start",
+    center: "sm:items-center",
+    end: "sm:items-end",
+  }[stat.align];
+
   return (
     <div
-      className="flex flex-1 flex-col gap-[2px]"
-      style={{ alignItems: stat.align }}
+      className={`flex flex-1 flex-col items-center gap-[2px] ${alignClass}`}
     >
       <div className="flex flex-row items-start gap-2">
-        <span className="text-[72px] font-normal leading-[91px] text-white">
+        <span className="text-[48px] font-normal leading-[60px] text-white sm:text-[60px] sm:leading-[76px] lg:text-[72px] lg:leading-[91px]">
           {count}
         </span>
-        <span className="text-[42px] font-light leading-[50px] text-white">
+        <span className="text-[28px] font-light leading-[34px] text-white sm:text-[36px] sm:leading-[42px] lg:text-[42px] lg:leading-[50px]">
           {stat.suffix}
         </span>
       </div>
-      <span className="text-base font-light leading-5 text-white">
+      <span className="text-sm font-light leading-5 text-white lg:text-base">
         {stat.label}
       </span>
     </div>
@@ -98,22 +103,22 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[var(--bg-hero)] p-[130px]"
+      className="w-full bg-[var(--bg-hero)] px-6 py-16 lg:p-[130px]"
     >
       <div className="mx-auto flex max-w-[1468px] flex-col gap-[10px]">
         {/* Section label */}
         <div className="flex items-center gap-4">
-          <span className="text-base font-medium tracking-[3px] text-white">
+          <span className="text-sm font-medium tracking-[3px] text-white lg:text-base">
             02
           </span>
-          <span className="h-px w-[104px] bg-white" />
-          <span className="text-base font-medium tracking-[3px] uppercase text-white">
+          <span className="h-px w-12 bg-white sm:w-[104px]" />
+          <span className="text-sm font-medium tracking-[3px] uppercase text-white lg:text-base">
             STATS
           </span>
         </div>
 
         {/* Stats row */}
-        <div className="flex w-full flex-row items-center justify-between gap-x-[185px]">
+        <div className="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-x-[185px]">
           {stats.map((stat) => (
             <StatItem key={stat.label} stat={stat} shouldStart={inView} />
           ))}
