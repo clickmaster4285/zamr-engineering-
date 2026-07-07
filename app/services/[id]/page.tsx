@@ -2,12 +2,12 @@
 
 import { useParams } from "next/navigation";
 import { getServiceBySlug } from "@/mockData/services";
-import ProjectHero from "@/components/projects/ProjectHero";
-import Overview from "@/components/projects/Overview";
-import Capabilities from "@/components/projects/Capabilities";
-import Process from "@/components/projects/Process";
-import Deliverables from "@/components/projects/Deliverables";
-import RelatedWork from "@/components/projects/RelatedWork";
+import ProjectHero from "@/components/services/detail/ProjectHero";
+import Overview from "@/components/services/detail/Overview";
+import Capabilities from "@/components/services/detail/Capabilities";
+import Process from "@/components/services/detail/Process";
+import Deliverables from "@/components/services/detail/Deliverables";
+import RelatedWork from "@/components/services/detail/RelatedWork";
 import Contact from "@/components/services/Contact";
 
 export default function ServiceDetailPage() {
