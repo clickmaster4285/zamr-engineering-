@@ -30,7 +30,7 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-[var(--bg-hero)] text-white">
+    <footer className="relative w-full overflow-hidden  text-white">
       {/* Video background */}
       <video
         autoPlay
@@ -44,7 +44,7 @@ export default function Footer() {
       </video>
 
       {/* Dark overlay */}
-      <div className="pointer-events-none absolute inset-0 bg-[var(--bg-hero)]/85" />
+      <div className="pointer-events-none absolute inset-0 " />
 
       {/* Content container */}
       <div className="relative z-10 w-full px-6 pb-8 pt-20 lg:px-32">
