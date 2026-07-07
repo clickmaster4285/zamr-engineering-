@@ -79,7 +79,7 @@ export default function About() {
       ref={sectionRef}
       className="w-full bg-[var(--bg-light)] px-6 py-24 lg:px-32 lg:py-32"
     >
-      <div className="mx-auto grid grid-cols-1 gap-12 lg:grid-cols-[450px_1fr] lg:gap-32">
+      <div className="mx-auto grid grid-cols-1 gap-12 lg:grid-cols-[344px_1fr] lg:gap-32">
         {/* Left column */}
         <div>
           <div className="mb-8 flex items-center gap-4">
