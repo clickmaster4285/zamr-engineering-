@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
   number: string;
   heading: string;
@@ -35,10 +37,8 @@ export default function Deliverables({ number, heading, subtext, deliverables }:
               key={item}
               className="flex items-center gap-4 border-b border-[#EEF0F8] py-5"
             >
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center border border-[rgba(206,26,0,0.35)] bg-[rgba(206,26,0,0.06)]">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
-                  <path d="M20 6L9 17L4 12" stroke="#CE1A00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+              <span className="flex shrink-0 items-center justify-center ">
+                <Image src="/icons/tick.svg" alt="" width={20} height={22} />
               </span>
               <span className="text-[15px] leading-[18px] text-[#333333]">
                 {item}
