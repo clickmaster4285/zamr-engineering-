@@ -1,4 +1,3 @@
-// components/TechnicalCapabilities.jsx
 interface Props {
   number: string;
   heading: string;
@@ -7,34 +6,35 @@ interface Props {
 
 export default function TechnicalCapabilities({ number, heading, capabilities }: Props) {
   return (
-    <section className="w-full bg-white px-6 py-16 md:px-16">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-12">
-          <div className="mb-4 flex items-center gap-3">
-            <span className="text-sm font-bold tracking-widest text-[var(--color-primary)]">
+    <section className="w-full bg-[#F6F8FC] px-6 py-16 lg:p-[130px]">
+      <div className="mx-auto max-w-[1468px]">
+        <div className="flex w-[441px] max-w-full flex-col gap-7">
+          <div className="flex items-center gap-4">
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[#1945A7]">
               {number}
             </span>
-            <span className="h-px w-12 bg-[var(--color-primary)]" />
-            <span className="text-sm font-semibold tracking-[0.25em] text-[#4C4C4C]">
+            <span className="h-px w-[104px] bg-black" />
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[#333333]">
               CAPABILITIES
             </span>
           </div>
 
-          <h2 className="text-[44px] font-bold leading-tight tracking-tight text-[var(--color-primary)] sm:text-[50px]">
+          <h2 className="text-[44px] font-bold leading-[55px] text-[#090D15]">
             {heading}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-15 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((item, index) => (
             <div
               key={index}
-              className="group rounded-xl border border-gray-100 bg-white p-8 transition-all duration-300 hover:border-[var(--color-primary)]/30 hover:shadow-lg hover:shadow-[var(--color-primary)]/10"
+              className="flex flex-col gap-3 border border-[rgba(34,65,158,0.1)] bg-[#F6F8FC] p-7"
             >
-              <h3 className="mb-4 text-[23px] font-bold text-[var(--color-primary)] transition-colors group-hover:text-[var(--color-secondary)]">
+              <span className="h-[2px] w-0 bg-[#22419E]" />
+              <h3 className="text-[18px] font-semibold leading-[23px] text-[#090D15]">
                 {item.title}
               </h3>
-              <p className="text-[17px] leading-relaxed text-gray-600 md:text-[19px]">
+              <p className="text-[12px] leading-[14px] text-[#697281]">
                 {item.description}
               </p>
             </div>

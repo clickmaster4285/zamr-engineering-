@@ -20,7 +20,6 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
 
       <div className="absolute inset-0 bg-[#07183D]/80" />
 
-      {/* Mobile / Tablet: bottom-left positioning */}
       <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 sm:pb-12
                       lg:bottom-auto lg:left-[130px] lg:right-auto lg:w-[933px] lg:px-0 lg:pb-0
                       lg:top-1/2 lg:-translate-y-1/2 lg:translate-y-[94.5px]">

@@ -52,7 +52,7 @@ export default function ServiceDetailPage() {
         heading={service.relatedHeading}
         projects={service.relatedProjects}
       />
-      <Contact />
+      <Contact number="06" serviceTitle={service.title} />
     </main>
   );
 }

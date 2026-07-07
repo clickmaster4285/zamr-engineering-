@@ -1,4 +1,3 @@
-// components/Deliverables.jsx
 interface Props {
   number: string;
   heading: string;
@@ -8,54 +7,40 @@ interface Props {
 
 export default function Deliverables({ number, heading, subtext, deliverables }: Props) {
   return (
-    <section className="w-full bg-white px-6 py-16 md:px-30">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-2">
-        <div>
-          <div className="mb-5 flex items-center gap-3">
-            <span className="text-sm font-bold tracking-widest text-[var(--color-primary)]">
+    <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
+      <div className="mx-auto grid max-w-[1468px] grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-[60px]">
+        <div className="flex flex-col gap-[30px]">
+          <div className="flex items-center gap-4">
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[#1945A7]">
               {number}
             </span>
-            <span className="h-px w-10 bg-gray-300" />
-            <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">
+            <span className="h-px w-[104px] bg-black" />
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[#333333]">
               DELIVERABLES
             </span>
           </div>
 
-          <h2 className="text-5xl font-bold leading-tight tracking-tight text-gray-900">
+          <h2 className="text-[56px] font-bold leading-[71px] text-[#333333]">
             {heading}
           </h2>
 
-          <p className="max-w-md text-[17px] leading-relaxed text-gray-600 md:text-[19px]">
+          <p className="text-[18px] leading-[23px] text-[#333333]">
             {subtext}
           </p>
         </div>
 
-        <div>
+        <div className="flex flex-col">
           {deliverables.map((item, i) => (
             <div
               key={item}
-              className={`flex items-center gap-4 py-4 ${
-                i !== deliverables.length - 1 ? "border-b border-gray-100" : ""
-              }`}
+              className="flex items-center gap-4 border-b border-[#EEF0F8] py-5"
             >
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-[var(--color-secondary)]/50 text-[var(--color-secondary)]">
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                >
-                  <circle cx="12" cy="12" r="9" />
-                  <polyline
-                    points="8 12.5 10.5 15 16 9"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center border border-[rgba(206,26,0,0.35)] bg-[rgba(206,26,0,0.06)]">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 6L9 17L4 12" stroke="#CE1A00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
-              <span className="text-[17px] text-[var(--text-dark)] md:text-[19px]">
+              <span className="text-[15px] leading-[18px] text-[#333333]">
                 {item}
               </span>
             </div>

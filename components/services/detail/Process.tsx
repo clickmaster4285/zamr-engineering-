@@ -1,4 +1,3 @@
-// components/DeliveryProcess.jsx
 interface Props {
   number: string;
   heading: string;
@@ -7,37 +6,37 @@ interface Props {
 
 export default function DeliveryProcess({ number, heading, processSteps }: Props) {
   return (
-    <section className="w-full bg-[#0F172A] px-6 py-20 text-white md:px-30">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-16">
-          <div className="mb-4 flex items-center gap-3">
-            <span className="text-xs font-bold tracking-widest text-white/70">
+    <section className="w-full bg-[#07183D] px-6 py-16 text-white lg:p-[130px]">
+      <div className="mx-auto max-w-[1468px]">
+        <div className="flex w-[441px] max-w-full flex-col gap-7">
+          <div className="flex items-center gap-4">
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-white">
               {number}
             </span>
-            <span className="h-px w-10 bg-white/40" />
-            <span className="text-xs tracking-[0.25em] text-white/70">
+            <span className="h-px w-[104px] bg-white" />
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-white">
               PROCESS
             </span>
           </div>
 
-          <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
+          <h2 className="text-[44px] font-bold leading-[55px] text-white">
             {heading}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {processSteps.map((item, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-white/20 hover:bg-white/10"
+              className="flex flex-col gap-3 border-b border-l border-[rgba(255,255,255,0.08)] p-6"
             >
-              <div className="mb-6 text-5xl font-bold text-white/20 transition-colors group-hover:text-[#294098]">
+              <span className="text-[40px] font-black leading-[50px] text-[rgba(255,255,255,0.6)]">
                 {item.number}
-              </div>
-              <h3 className="mb-4 text-xl font-bold leading-tight text-white">
+              </span>
+              <h3 className="text-[18px] font-semibold leading-[23px] text-white">
                 {item.title}
               </h3>
-              <p className="text-[15px] leading-relaxed text-white/70">
+              <p className="text-[12px] leading-[15px] text-[#B3B3B3]">
                 {item.description}
               </p>
             </div>
