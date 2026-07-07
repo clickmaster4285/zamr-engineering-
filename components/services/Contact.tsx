@@ -50,19 +50,19 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
             </h2>
           </div>
 
-          <div className="flex w-full flex-col justify-end gap-5">
-            <p className="w-full text-[18px] leading-[23px] text-[#333333]">
+          <div className="flex w-full flex-col text-base justify-end gap-5">
+            <p className="w-full text-[18px] leading-[23px]">
               Tell us about your project or challenge. Our engineering team will
               review your enquiry and respond within 1&ndash;2 business days.
             </p>
-            <p className="w-full text-[18px] leading-[23px] text-[#2344A1]">
-              Office: Level 5, 123 Pitt Street, Sydney NSW 2000
+            <p className="w-full text-[18px] leading-[23px] ">
+              <span className="text-[#2B439B]">Office:</span>  Level 5, 123 Pitt Street, Sydney NSW 2000
             </p>
-            <p className="w-full text-[18px] leading-[23px] text-[#2344A1]">
-              Phone: +61 2 9000 0000
+            <p className="w-full text-[18px] leading-[23px] ">
+              <span className="text-[#2B439B]">Phone:</span> +61 2 9000 0000
             </p>
-            <p className="w-full text-[18px] leading-[23px] text-[#2344A1]">
-              Email: enquiries@zamrengineering.com.au
+            <p className="w-full text-[18px] leading-[23px] ">
+              <span className="text-[#2B439B]">Email:</span> enquiries@zamrengineering.com.au
             </p>
           </div>
         </div>
