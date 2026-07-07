@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const filters = [
   "ALL",
@@ -18,31 +19,35 @@ type Project = {
   title: string;
   category: string;
   image: string;
+  slug: string;
 };
 
 const projects: Project[] = [
   {
     index: "01",
-    title: "Metropolitan Bridge Rehabilitation",
-    category: "Urban Infrastructure",
-    image: "/images/image3.jpeg",
-  },
-  {
-    index: "02",
-    title: "Hunter Valley Renewable Energy Hub",
-    category: "Urban Infrastructure",
-    image: "/images/image2.jpeg",
-  },
-  {
-    index: "03",
     title: "Western Sydney Infrastructure Corridor",
     category: "Urban Infrastructure",
     image: "/images/image1.jpeg",
+    slug: "western-sydney-infrastructure-corridor",
+  },
+  {
+    index: "02",
+    title: "Metropolitan Bridge Rehabilitation",
+    category: "Urban Infrastructure",
+    image: "/images/image3.jpeg",
+    slug: "metropolitan-bridge-rehabilitation",
+  },
+  {
+    index: "03",
+    title: "Hunter Valley Renewable Energy Hub",
+    category: "Urban Infrastructure",
+    image: "/images/image2.jpeg",
+    slug: "hunter-valley-renewable-energy-hub",
   },
 ];
 
 const projectDescriptions: Record<string, string> = {
-  "01": "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
+  "01": "Western Sydney Infrastructure Corridor involved delivering comprehensive engineering support across the full corridor alignment, including bridge design, pavement engineering, and drainage solutions to transform connectivity in Western Sydney.",
 };
 
 const clientLogos = [
@@ -94,11 +99,13 @@ function ProjectCard({
 }) {
   const { ref, inView } = useInView();
   const description = projectDescriptions[project.index];
+  const router = useRouter();
 
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden transition-all duration-700 ease-out ${
+      onClick={() => router.push(`/project/${project.slug}`)}
+      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
         inView
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-10 scale-95"
