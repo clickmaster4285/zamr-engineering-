@@ -6,12 +6,13 @@ interface Stat {
   value: number;
   suffix: string;
   label: string;
+  align: "start" | "center" | "end";
 }
 
 const stats: Stat[] = [
-  { value: 150, suffix: "+", label: "PROJECTS DELIVERED" },
-  { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE" },
-  { value: 98, suffix: "%", label: "COMPLIANCE RATE" },
+  { value: 150, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
+  { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
+  { value: 98, suffix: "%", label: "COMPLIANCE RATE", align: "end" },
 ];
 
 function useCountUp(target: number, shouldStart: boolean, duration = 1500) {
@@ -46,35 +47,28 @@ function useCountUp(target: number, shouldStart: boolean, duration = 1500) {
 function StatItem({
   stat,
   shouldStart,
-  align = "center",
 }: {
   stat: Stat;
   shouldStart: boolean;
-  align?: "left" | "center" | "right";
 }) {
   const count = useCountUp(stat.value, shouldStart);
 
-  const alignmentClasses = {
-    left: "items-start text-left",
-    center: "items-center text-center",
-    right: "items-end text-right",
-  };
-
   return (
-    <div className={`flex flex-col ${alignmentClasses[align]}`}>
-      <div className={`flex ${align === "left" ? "justify-start" : align === "right" ? "justify-end" : "justify-center"} text-white`}>
-      <span className="text-6xl sm:text-7xl md:text-8xl font-light leading-none tracking-tight">
-  {count}
-</span>
-<span className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-none ml-1 mt-1">
-  {stat.suffix}
-</span>
+    <div
+      className="flex flex-1 flex-col gap-[2px]"
+      style={{ alignItems: stat.align }}
+    >
+      <div className="flex flex-row items-start gap-2">
+        <span className="text-[72px] font-normal leading-[91px] text-white">
+          {count}
+        </span>
+        <span className="text-[42px] font-light leading-[50px] text-white">
+          {stat.suffix}
+        </span>
       </div>
-      <p className={`mt-4 text-[11px] tracking-[0.2em] text-gray-400 uppercase font-semibold ${
-        align === "left" ? "text-left" : align === "right" ? "text-right" : "text-center"
-      }`}>
+      <span className="text-base font-light leading-5 text-white">
         {stat.label}
-      </p>
+      </span>
     </div>
   );
 }
@@ -104,35 +98,25 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[#0a0e1f] py-16"
+      className="w-full bg-[var(--bg-hero)] p-[130px]"
     >
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Label */}
-        <div className="flex items-center gap-3 mb-12">
-          <span className="text-xs font-bold tracking-[0.2em] text-white">
+      <div className="mx-auto flex max-w-[1468px] flex-col gap-[10px]">
+        {/* Section label */}
+        <div className="flex items-center gap-4">
+          <span className="text-base font-medium tracking-[3px] text-white">
             02
           </span>
-          <span className="w-10 h-px bg-gray-500" />
-          <span className="text-xs font-bold tracking-[0.2em] text-gray-300">
+          <span className="h-px w-[104px] bg-white" />
+          <span className="text-base font-medium tracking-[3px] uppercase text-white">
             STATS
           </span>
         </div>
 
-        {/* Stats grid – left, center, right alignment */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
-          {stats.map((stat, index) => {
-            let align: "left" | "center" | "right" = "center";
-            if (index === 0) align = "left";
-            else if (index === 2) align = "right";
-            return (
-              <StatItem
-                key={stat.label}
-                stat={stat}
-                shouldStart={inView}
-                align={align}
-              />
-            );
-          })}
+        {/* Stats row */}
+        <div className="flex w-full flex-row items-center justify-between gap-x-[185px]">
+          {stats.map((stat) => (
+            <StatItem key={stat.label} stat={stat} shouldStart={inView} />
+          ))}
         </div>
       </div>
     </section>
