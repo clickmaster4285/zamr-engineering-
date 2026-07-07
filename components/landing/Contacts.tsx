@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faGlobe, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -25,7 +23,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="w-full bg-[var(--bg-light)] px-6 py-20 lg:px-32 lg:py-20">
+    <section className="w-full bg-[var(--bg-light)] px-6 py-32.5 lg:px-32">
       <div>
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_1fr] lg:gap-32">
           {/* Left column – Contact info */}
@@ -75,34 +73,18 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="mt-8 flex items-center gap-6">
-              <button
-                type="button"
-                aria-label="Instagram"
-                className="flex h-7 w-7 items-center justify-center text-[var(--text-contact)] transition-all hover:opacity-70"
-              >
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
+            <div className="mt-[20px] flex items-center gap-6">
+              <button type="button" aria-label="Instagram" className="flex h-7 w-7 items-center justify-center transition-all hover:opacity-70">
+                <Image src="/icons/mynaui_instagram.svg" alt="Instagram" width={28} height={28} />
               </button>
-              <button
-                type="button"
-                aria-label="LinkedIn"
-                className="flex h-7 w-7 items-center justify-center text-[var(--text-contact)] transition-all hover:opacity-70"
-              >
-                <FontAwesomeIcon icon={faLinkedin} size="lg" />
+              <button type="button" aria-label="LinkedIn" className="flex h-7 w-7 items-center justify-center transition-all hover:opacity-70">
+                <Image src="/icons/mynaui_linkedin.svg" alt="LinkedIn" width={28} height={28} />
               </button>
-              <button
-                type="button"
-                aria-label="Website"
-                className="flex h-7 w-7 items-center justify-center text-[var(--text-contact)] transition-all hover:opacity-70"
-              >
-                <FontAwesomeIcon icon={faGlobe} size="lg" />
+              <button type="button" aria-label="Website" className="flex h-7 w-7 items-center justify-center transition-all hover:opacity-70">
+                <Image src="/icons/et_global.svg" alt="Website" width={28} height={28} />
               </button>
-              <a
-                href="mailto:admin@zamrengineering.com.au"
-                aria-label="Email"
-                className="flex h-7 w-7 items-center justify-center text-[var(--text-contact)] transition-all hover:opacity-70"
-              >
-                <FontAwesomeIcon icon={faEnvelope} size="lg" />
+              <a href="mailto:admin@zamrengineering.com.au" aria-label="Email" className="flex h-7 w-7 items-center justify-center transition-all hover:opacity-70">
+                <Image src="/icons/Vector.svg" alt="Email" width={25} height={19} />
               </a>
             </div>
           </div>
