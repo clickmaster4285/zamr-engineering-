@@ -5,12 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 const quickLinks = [
-  { label: "About", href: "" },
-  { label: "Projects", href: "" },
-  { label: "Case Studies", href: "" },
-  { label: "Insights", href: "" },
-  { label: "Careers", href: "" },
-  { label: "Contact", href: "" },
+  "About",
+  "Projects",
+  "Case Studies",
+  "Insights",
+  "Careers",
+  "Contact",
 ];
 
 const serviceLinks = [
@@ -23,8 +23,7 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden  text-white">
-      {/* Video background */}
+    <footer className="relative w-full overflow-hidden text-white">
       <video
         autoPlay
         loop
@@ -33,31 +32,31 @@ export default function Footer() {
         className="absolute inset-0 h-full w-full object-cover"
       >
         <source src="/videos/video1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
 
-      {/* Dark overlay */}
-      <div className="pointer-events-none absolute inset-0 " />
+      <div className="pointer-events-none absolute inset-0" />
 
-      {/* Content container */}
-      <div className="relative z-10 w-full px-6 pb-8 pt-20 lg:px-32">
-        <div className="grid w-full grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.8fr_0.8fr_1fr]">
-          {/* Logo + socials */}
-          <div>
-            <Link href="/" className="flex items-center">
+      <div className="relative z-10 w-full p-[130px]">
+        <div className="mx-auto flex max-w-[1468px] flex-col gap-[30px]">
+          {/* Frame 60 — top row */}
+          <div className="flex flex-row items-start gap-[60px]">
+            {/* Frame 55 — Logo + Description + Social */}
+            <div className="flex w-[369px] flex-col items-start gap-[50px]">
               <Image
                 src="/images/zamr-logo.png"
                 alt="ZAMR Engineering"
-                width={160}
-                height={70}
+                width={218}
+                height={124}
                 className="object-contain"
                 priority
               />
-            </Link>
-            <p className="mt-8 max-w-[334px] text-base leading-[29px] text-white/90">
-              Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.
-            </p>
-            <div className="mt-6 flex items-center gap-4">
+              {/* Frame 54 */}
+              <div className="flex w-full flex-col items-start gap-4">
+                <p className="max-w-[330px] text-base leading-[29px] text-white">
+                  Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.
+                </p>
+                {/* Frame 53 — social icons */}
+                <div className=" flex items-center gap-4">
               <Link
                 href=""
                 aria-label="LinkedIn"
@@ -80,80 +79,74 @@ export default function Footer() {
                 <Image src="/icons/tweetersq.svg" alt="Twitter" width={40} height={40} />
               </Link>
             </div>
+              </div>
+            </div>
+
+            {/* Frame 56 — Quick Links + Services + Contact Info */}
+            <div className="flex flex-1 flex-row items-start gap-12">
+              {/* Quick Links */}
+              <div className="flex flex-1 flex-col gap-6">
+                <h3 className="text-lg font-bold leading-[23px] text-white">Quick Links</h3>
+                <ul className="flex flex-col gap-3">
+                  {quickLinks.map((label) => (
+                    <li key={label}>
+                      <Link href="" className="text-base leading-6 text-white transition-colors hover:text-white/80">
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Services */}
+              <div className="flex flex-1 flex-col gap-6">
+                <h3 className="text-lg font-bold leading-[23px] text-white">Services</h3>
+                <ul className="flex flex-col gap-3">
+                  {serviceLinks.map((label) => (
+                    <li key={label}>
+                      <span className="text-base leading-6 text-white">{label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Contact Info */}
+              <div className="flex flex-1 flex-col gap-6">
+                <h3 className="text-lg font-bold leading-[23px] text-white">Contact Info</h3>
+                <ul className="flex flex-col gap-4">
+                  <li className="flex flex-row items-center gap-3">
+                    <Image src="/icons/location.svg" alt="Location" width={20} height={20} />
+                    <span className="text-base leading-[26px] text-white">Sydney, New South Wales Australia</span>
+                  </li>
+                  <li className="flex flex-row items-end gap-3">
+                    <Image src="/icons/gamilwhite.svg" alt="Email" width={20} height={20} />
+                    <span className="text-base leading-6 text-white">info@zamreng.com.au</span>
+                  </li>
+                  <li className="flex flex-row items-center gap-3">
+                    <Image src="/icons/phonewhite.svg" alt="Phone" width={20} height={20} />
+                    <span className="text-base leading-6 text-white">+61 2 3456 7890</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="mb-6 text-lg font-bold text-white">Quick Links</h3>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-base text-white/80 transition-colors hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Divider */}
+          <div className="h-px w-full bg-white" />
 
-          {/* Services */}
-          <div>
-            <h3 className="mb-6 text-lg font-bold text-white">Services</h3>
-            <ul className="space-y-3">
-              {serviceLinks.map((label) => (
-                <li key={label}>
-                  <span className="text-base text-white/80">
-                    {label}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="mb-6 text-lg font-bold text-white">Contact Info</h3>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-base text-white/80">
-                <Image src="/icons/location.svg" alt="Location" width={20} height={20} />
-                Sydney, New South Wales Australia
-              </li>
-              <li className="flex items-center gap-3 text-base text-white/80">
-                <Image src="/icons/gamilwhite.svg" alt="Email" width={20} height={20} />
-                info@zamreng.com.au
-              </li>
-              <li className="flex items-center gap-3 text-base text-white/80">
-                <Image src="/icons/phonewhite.svg" alt="Phone" width={20} height={20} />
-                +61 2 3456 7890
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="mt-14 h-px w-full bg-white" />
-
-        {/* Bottom row */}
-        <div className="mt-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-          <p className="text-base text-white/80">
-            &copy; 2026 ZAMR Engineering. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-            <Link
-              href=""
-              className="text-base text-white/80 transition-colors hover:text-white"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href=""
-              className="text-base text-white/80 transition-colors hover:text-white"
-            >
-              Terms of Service
-            </Link>
+          {/* Bottom row */}
+          <div className="flex flex-row items-center justify-between">
+            <p className="text-base leading-5 text-white">
+              &copy; 2026 ZAMR Engineering. All rights reserved.
+            </p>
+            <div className="flex flex-row items-center gap-5">
+              <Link href="" className="text-base leading-5 text-right text-white transition-colors hover:text-white/80">
+                Privacy Policy
+              </Link>
+              <Link href="" className="text-base leading-5 text-right text-white transition-colors hover:text-white/80">
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </div>
