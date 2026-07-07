@@ -238,7 +238,7 @@ export default function Projects() {
                 key={logo.alt}
                 className="relative h-[86px] flex-1 overflow-hidden bg-[var(--bg-light)]"
               >
-                <Image src={logo.src} alt={logo.alt} fill className="object-contain p-4" />
+                <Image src={logo.src} alt={logo.alt} fill className="object-contain " />
               </div>
             ))}
           </div>
