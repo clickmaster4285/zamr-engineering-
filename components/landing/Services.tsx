@@ -54,7 +54,7 @@ export default function Services() {
     <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-20">
       <div className="mx-auto max-w-[1468px]">
         {/* Frame 120 — header */}
-        <div className="flex w-[481px] flex-col gap-[30px]">
+        <div className="flex w-full flex-col gap-6 lg:w-[481px] lg:gap-[30px]">
           <div className="flex flex-row items-center gap-4">
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
               02
@@ -64,44 +64,44 @@ export default function Services() {
               SERVICES
             </span>
           </div>
-          <h2 className="text-[40px] font-bold leading-[50px] text-[#333333] sm:text-[48px] sm:leading-[60px] lg:text-[56px] lg:leading-[71px]">
+          <h2 className="text-[36px] font-bold leading-[44px] text-[#333333] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
             What We Engineer
           </h2>
         </div>
 
         {/* Frame 1321318998 — service rows */}
-        <div className="mt-[50px] flex flex-col border-t border-[#EAEAEA]">
+        <div className="mt-8 flex flex-col border-t border-[#EAEAEA] lg:mt-[50px]">
           {services.map((service, idx) => (
             <div
               key={service.index}
-              className="group relative flex h-[164px] cursor-pointer flex-row items-center border-b border-[#EAEAEA] bg-white px-[50px] transition-colors duration-300 hover:bg-[#F9FAFC]"
+              className="group relative flex cursor-pointer flex-col gap-3 border-b border-[#EAEAEA] bg-white px-6 py-6 transition-colors duration-300 hover:bg-[#F9FAFC] lg:h-[164px] lg:flex-row lg:items-center lg:px-[50px] lg:py-0"
             >
               {/* Accent border — slides up from bottom on hover */}
-              <span className="absolute left-0 bottom-0 w-[2px] h-0 bg-[var(--color-accent)] transition-all duration-300 group-hover:h-full" />
+              <span className="absolute left-0 bottom-0 w-[4px] h-0 bg-[#CE1A00] transition-all duration-300 group-hover:h-full" />
 
               {/* Index — left:50px */}
-              <span className="w-5 text-base font-medium tracking-[3px] text-[#333333]">
+              <span className="w-5 text-sm font-medium tracking-[3px] text-[#333333] lg:text-base">
                 {service.index}
               </span>
 
               {/* Title — left:170px */}
-              <h3 className="ml-[100px] w-[213px] text-[28px] font-semibold leading-[35px] text-[#333333]">
+              <h3 className="text-xl font-semibold leading-[26px] text-[#333333] lg:ml-[100px] lg:w-[213px] lg:text-[28px] lg:leading-[35px]">
                 {service.title}
               </h3>
 
               {/* Description — left:504px, flex-1 */}
-              <p className="ml-[121px] flex-1 max-w-[674px] text-lg leading-[23px] text-[#333333]">
+              <p className="text-sm leading-snug text-[#333333] lg:ml-[121px] lg:flex-1 lg:max-w-[674px] lg:text-lg lg:leading-[23px]">
                 {service.description}
               </p>
 
               {/* Tags — 2-row layout per Figma, visible on hover */}
-              <div className="ml-[26px] flex w-[224px] shrink-0 flex-col gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="flex flex-wrap items-center gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100 lg:ml-[26px] lg:w-[224px] lg:shrink-0 lg:flex-col lg:flex-nowrap lg:gap-2">
                 {tagRows.map((row, ri) => (
-                  <div key={ri} className="flex flex-row items-center gap-[6px]">
+                  <div key={ri} className="flex flex-row items-center gap-1.5 lg:gap-[6px]">
                     {row.map((tag) => (
                       <span
                         key={tag}
-                        className="border border-[#1945A7] px-[10px] py-2 text-xs font-medium tracking-[3px] text-[#1945A7]"
+                        className="border border-[#1945A7] px-[10px] py-2 text-[10px] font-medium tracking-[3px] text-[#1945A7] lg:text-xs"
                       >
                         {tag}
                       </span>
@@ -116,7 +116,7 @@ export default function Services() {
         {/* CTA */}
         <button
           type="button"
-          className="mt-[50px] inline-flex cursor-pointer items-center gap-2 text-base font-medium tracking-[3px] text-[#1945A7] transition-all"
+          className="mt-8 inline-flex cursor-pointer items-center gap-2 text-sm font-medium tracking-[3px] text-[#1945A7] transition-all lg:mt-[50px] lg:text-base"
         >
           REQUEST A CONSULTATION
           <svg
