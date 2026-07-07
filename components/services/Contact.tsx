@@ -55,14 +55,14 @@ export default function Contact() {
               Tell us about your project or challenge. Our engineering team will
               review your enquiry and respond within 1&ndash;2 business days.
             </p>
-            <p className="w-full text-[#333333] lg:text-[18px]">
-              <span className="text-[#2B439B]"> Office:</span> Level 5, 123 Pitt Street, Sydney NSW 2000
+            <p className="w-full text-base leading-snug text-[#2344A1] lg:text-[18px] lg:leading-[23px]">
+              Office: Level 5, 123 Pitt Street, Sydney NSW 2000
             </p>
-            <p className="w-full text-[#333333] lg:text-[18px]">
-              <span className="text-[#2B439B]">Phone:</span>  +61 2 9000 0000
+            <p className="w-full text-base leading-snug text-[#2344A1] lg:text-[18px] lg:leading-[23px]">
+              Phone: +61 2 9000 0000
             </p>
-            <p className="w-full text-[#333333] lg:text-[18px]">
-              <span className="text-[#2B439B]">  Email:</span> enquiries@zamrengineering.com.au
+            <p className="w-full text-base leading-snug text-[#2344A1] lg:text-[18px] lg:leading-[23px]">
+              Email: enquiries@zamrengineering.com.au
             </p>
           </div>
         </div>
