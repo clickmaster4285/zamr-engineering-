@@ -12,12 +12,12 @@ import {
 import { faMapMarkerAlt, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const quickLinks = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "Insights", href: "#insights" },
-  { label: "Careers", href: "#careers" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "" },
+  { label: "Projects", href: "" },
+  { label: "Case Studies", href: "" },
+  { label: "Insights", href: "" },
+  { label: "Careers", href: "" },
+  { label: "Contact", href: "" },
 ];
 
 const serviceLinks = [
@@ -150,13 +150,13 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href="#privacy"
+              href=""
               className="text-base text-white/80 transition-colors hover:text-white"
             >
               Privacy Policy
             </Link>
             <Link
-              href="#terms"
+              href=""
               className="text-base text-white/80 transition-colors hover:text-white"
             >
               Terms of Service

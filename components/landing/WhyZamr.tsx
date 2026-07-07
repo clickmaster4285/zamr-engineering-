@@ -51,7 +51,7 @@ export default function WhyZamr() {
             </h2>
           </div>
           <Link
-            href="#learn-more"
+            href=""
             className="flex items-center gap-2 text-base font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity hover:opacity-70"
           >
             Learn More <span aria-hidden="true">&rarr;</span>
