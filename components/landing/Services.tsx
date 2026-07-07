@@ -42,68 +42,104 @@ const services: Service[] = [
   },
 ];
 
-const commonTags = ["STRUCTURAL", "Hydraulic", "GEOTECHNICAL"];
+const tagRows = [
+  ["STRUCTURAL", "Hydraulic"],
+  ["GEOTECHNICAL"],
+];
 
 export default function Services() {
   const router = useRouter();
 
   return (
-    <section className="w-full bg-white px-6 py-20 lg:px-32 lg:py-20">
-      <div>
-        <div className="mb-8 flex items-center gap-4">
-          <span className="text-base font-medium tracking-[0.2em] text-[var(--color-primary)]">
-            02
-          </span>
-          <span className="h-px w-24 bg-black" />
-          <span className="text-base font-medium tracking-[0.2em] text-[var(--text-dark)]">
-            SERVICES
-          </span>
+    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-20">
+      <div className="mx-auto max-w-[1468px]">
+        {/* Frame 120 — header */}
+        <div className="flex w-[481px] flex-col gap-[30px]">
+          <div className="flex flex-row items-center gap-4">
+            <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
+              02
+            </span>
+            <span className="h-px w-12 bg-black sm:w-[104px]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[#333333] lg:text-base">
+              SERVICES
+            </span>
+          </div>
+          <h2 className="text-[40px] font-bold leading-[50px] text-[#333333] sm:text-[48px] sm:leading-[60px] lg:text-[56px] lg:leading-[71px]">
+            What We Engineer
+          </h2>
         </div>
-        <h2 className="mb-12 text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
-          What We Engineer
-        </h2>
-        <div className="border-t border-[var(--border-light)]">
-          {services.map((service) => (
+
+        {/* Frame 1321318998 — service rows */}
+        <div className="mt-[50px] flex flex-col border-t border-[#EAEAEA]">
+          {services.map((service, idx) => (
             <div
               key={service.index}
-              className="group relative flex cursor-pointer flex-col gap-4 border-b border-[var(--border-light)] bg-transparent px-6 py-8 transition-all duration-300 hover:bg-[var(--bg-light-alt)] hover:shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:px-10"
+              className="group relative flex h-[164px] cursor-pointer flex-row items-center border-b border-[#EAEAEA] bg-white px-[50px] transition-colors duration-300 hover:bg-[#F9FAFC]"
             >
-              {/* Left accent border — slides bottom-to-top on hover, top-to-bottom on unhover */}
+              {/* Accent border — slides up from bottom on hover */}
               <span className="absolute left-0 bottom-0 w-[2px] h-0 bg-[var(--color-accent)] transition-all duration-300 group-hover:h-full" />
 
-              <span className="w-10 shrink-0 text-base font-medium tracking-[0.2em] text-[var(--text-dark)] transition-colors group-hover:text-[var(--color-primary)]">
+              {/* Index — left:50px */}
+              <span className="w-5 text-base font-medium tracking-[3px] text-[#333333]">
                 {service.index}
               </span>
 
-              <h3 className="w-full shrink-0 text-[28px] font-semibold leading-[35px] text-[var(--text-dark)] transition-colors group-hover:text-[var(--color-primary)] sm:w-[250px]">
+              {/* Title — left:170px */}
+              <h3 className="ml-[100px] w-[213px] text-[28px] font-semibold leading-[35px] text-[#333333]">
                 {service.title}
               </h3>
 
-              <p className="flex-1 text-lg leading-[23px] text-[var(--text-dark)] transition-colors group-hover:text-[var(--text-dark)] md:text-lg">
+              {/* Description — left:504px, flex-1 */}
+              <p className="ml-[121px] flex-1 max-w-[674px] text-lg leading-[23px] text-[#333333]">
                 {service.description}
               </p>
 
-              {/* Tags */}
-              <div className="flex shrink-0 flex-wrap gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 sm:w-[200px] sm:justify-end">
-                {commonTags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="border border-[var(--color-primary)] px-2.5 py-2 text-xs font-medium tracking-[0.3em] text-[var(--color-primary)] transition-colors group-hover:bg-[var(--color-primary)]/10"
-                  >
-                    {tag}
-                  </span>
+              {/* Tags — 2-row layout per Figma, visible on hover */}
+              <div className="ml-[26px] flex w-[224px] shrink-0 flex-col gap-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                {tagRows.map((row, ri) => (
+                  <div key={ri} className="flex flex-row items-center gap-[6px]">
+                    {row.map((tag) => (
+                      <span
+                        key={tag}
+                        className="border border-[#1945A7] px-[10px] py-2 text-xs font-medium tracking-[3px] text-[#1945A7]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 ))}
               </div>
             </div>
           ))}
         </div>
+
+        {/* CTA */}
         <button
           type="button"
-          onClick={() => router.push("/")}
-          className="mt-8 inline-flex cursor-pointer items-center gap-2 text-base font-medium tracking-[0.3em] text-[var(--color-primary)] transition-all hover:opacity-70 hover:gap-3"
+          className="mt-[50px] inline-flex cursor-pointer items-center gap-2 text-base font-medium tracking-[3px] text-[#1945A7] transition-all"
         >
           REQUEST A CONSULTATION
-          <span aria-hidden="true">&rarr;</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12H19"
+              stroke="#1945A7"
+              strokeWidth="1.25"
+              strokeLinecap="round"
+            />
+            <path
+              d="M12 5L19 12L12 19"
+              stroke="#1945A7"
+              strokeWidth="1.25"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
         </button>
       </div>
     </section>
