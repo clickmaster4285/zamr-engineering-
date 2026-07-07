@@ -24,44 +24,23 @@ export default function TechnicalCapabilities({ number, heading, capabilities }:
           </h2>
         </div>
 
-        <div className="mt-15 flex flex-col gap-4">
-          {/* Row 1 */}
-          <div className="flex flex-row gap-4">
-            {capabilities.slice(0, 3).map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-1 flex-col  items-center border border-[rgba(34,65,158,0.1)] bg-[#F6F8FC] p-7 "
-              >
-                <div className="flex flex-col gap-3">
-                  <h3 className="text-[18px] font-semibold leading-[23px] text-[#090D15]">
-                    {item.title}
-                  </h3>
-                  <p className="text-[12px] leading-[14px] text-[#697281]">
-                    {item.description}
-                  </p>
-                </div>
+        <div className="mt-15 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {capabilities.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-start border border-[rgba(34,65,158,0.1)] bg-[#F6F8FC] p-7 lg:h-[123px]"
+            >
+              <span className="h-[2px] w-full shrink-0 bg-[#22419E]" />
+              <div className="mt-3 flex flex-col gap-3">
+                <h3 className="text-[18px] font-semibold leading-[23px] text-[#090D15]">
+                  {item.title}
+                </h3>
+                <p className="text-[12px] leading-[14px] text-[#697281]">
+                  {item.description}
+                </p>
               </div>
-            ))}
-          </div>
-          {/* Row 2 */}
-          <div className="flex flex-row gap-4">
-            {capabilities.slice(3, 6).map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-1 flex-col items-start border border-[rgba(34,65,158,0.1)] bg-[#F6F8FC] p-7 lg:h-[123px]"
-              >
-                <span className="h-[2px] w-full bg-[#22419E]" />
-                <div className="mt-3 flex flex-col gap-3">
-                  <h3 className="text-[18px] font-semibold leading-[23px] text-[#090D15]">
-                    {item.title}
-                  </h3>
-                  <p className="text-[12px] leading-[14px] text-[#697281]">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
