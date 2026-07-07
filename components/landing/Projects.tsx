@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -60,7 +59,6 @@ const clientLogos = [
 function useInView(threshold = 0.15) {
   const [inView, setInView] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
-
   const ref = useCallback(
     (node: HTMLElement | null) => {
       if (observerRef.current) {
@@ -81,11 +79,9 @@ function useInView(threshold = 0.15) {
     },
     [threshold]
   );
-
   useEffect(() => {
     return () => observerRef.current?.disconnect();
   }, []);
-
   return { ref, inView };
 }
 
@@ -97,6 +93,7 @@ function ProjectCard({
   isLarge?: boolean;
 }) {
   const { ref, inView } = useInView();
+  const description = projectDescriptions[project.index];
 
   return (
     <div
@@ -116,13 +113,13 @@ function ProjectCard({
           src={project.image}
           alt={project.title}
           fill
-          sizes={isLarge ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 50vw, 100vw"}
+          sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
 
         {/* Gradient overlay — Figma spec */}
         <div
-          className="absolute inset-0 transition-opacity duration-500"
+          className="absolute inset-0"
           style={{
             background: isLarge
               ? "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
@@ -130,37 +127,27 @@ function ProjectCard({
           }}
         />
 
-        {/* Project index — absolute left:50px top:50px */}
+        {/* Project index — top:50px left:50px */}
         <span
-          className={`absolute left-[50px] top-[50px] font-[800] tracking-[0.3em] text-white ${
+          className={`absolute left-[50px] top-[50px] font-[800] tracking-[0.06em] text-white ${
             isLarge ? "text-[54px] leading-[68px]" : "text-[34px] leading-[43px]"
           }`}
         >
           {project.index}
         </span>
 
-        {/* Title — absolute left:50px; Figma: bottom edge at 50px from container bottom */}
-        <h3
-          className={`absolute left-[50px] font-[600] text-white transition-all duration-500 ease-in-out ${
-            isLarge
-              ? "bottom-[50px] group-hover:bottom-[100px] text-[28px] leading-[35px]"
-              : "bottom-[50px] text-[28px] leading-[35px]"
-          }`}
-        >
+        {/* Title — fixed bottom-50px for all cards, stays aligned */}
+        <h3 className={`absolute left-[50px] bottom-[50px] font-semibold text-white text-[28px] leading-[35px] ${isLarge && " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"}  `}>
           {project.title}
         </h3>
 
-        {/* Description — slides up from outside image bottom on hover */}
-        {isLarge ? (
-          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out bg-gradient-to-t from-black/60 to-transparent">
-            <p className="px-[50px] py-6 font-[400] text-[16px] leading-[20px] text-white max-w-[717px]">
-              {projectDescriptions[project.index]}
+        {/* Description — large card only, slides up from below on hover */}
+        {isLarge && (
+          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-[50px] pb-[50px]">
+            <p className="max-w-[717px] text-[16px] leading-[20px] font-[400] text-white">
+              {description}
             </p>
           </div>
-        ) : (
-          <p className="absolute bottom-[50px] left-[50px] max-w-[500px] font-[400] text-[16px] leading-[20px] text-white">
-            {projectDescriptions[project.index]}
-          </p>
         )}
       </div>
     </div>
@@ -169,7 +156,6 @@ function ProjectCard({
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("ALL");
-
   const filteredProjects =
     activeFilter === "ALL"
       ? projects
@@ -179,7 +165,7 @@ export default function Projects() {
     <section className="w-screen bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
       <div className="mx-auto flex max-w-[1468px] flex-col gap-10 lg:gap-[60px]">
         <div className="flex flex-col gap-6 lg:gap-[30px]">
-          {/* Title header — Figma Frame 1321319002 */}
+          {/* Title header */}
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
             <div className="flex flex-col gap-6 lg:gap-[30px]">
               <div className="flex items-center gap-4">
@@ -225,12 +211,12 @@ export default function Projects() {
             })}
           </div>
 
-          {/* Project grid — Figma Frame 1321319008 */}
+          {/* Project grid */}
           {filteredProjects.length > 0 ? (
-            <div className="flex flex-col gap-[30px] md:flex-row md:items-center">
+            <div className="flex flex-col gap-[30px] md:flex-row md:items-stretch">
               {filteredProjects[0] && (
                 <div className="md:w-[817px]">
-                  <ProjectCard project={filteredProjects[0]} isLarge={true} />
+                  <ProjectCard project={filteredProjects[0]} isLarge />
                 </div>
               )}
               <div className="flex flex-col gap-[30px] md:w-[621px]">
@@ -245,19 +231,14 @@ export default function Projects() {
             </div>
           )}
 
-          {/* Client logos — Figma Frame 1321319031 */}
+          {/* Client logos */}
           <div className="flex flex-col gap-[30px] sm:flex-row sm:items-center">
             {clientLogos.map((logo) => (
               <div
                 key={logo.alt}
                 className="relative h-[86px] flex-1 overflow-hidden bg-[var(--bg-light)]"
               >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  fill
-                  className="object-contain p-4"
-                />
+                <Image src={logo.src} alt={logo.alt} fill className="object-contain p-4" />
               </div>
             ))}
           </div>
