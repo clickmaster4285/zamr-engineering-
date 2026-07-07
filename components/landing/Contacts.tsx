@@ -45,18 +45,18 @@ export default function Contact() {
               Exceptional.
             </h2>
 
-            <div className="space-y-5 text-lg text-[var(--text-contact)]">
+            <div className="space-y-5 text-lg text-[#333333]">
               <p>
-                Company Name: ZAMR Engineering Pty Ltd
+                <span className="text-[#2B439B]">Company Name: </span> ZAMR Engineering Pty Ltd
               </p>
               <p>
-                Address 1: 30 Smith Street Wentworthville NSW, 2145
+                <span className="text-[#2B439B]"> Address 1:</span> 30 Smith Street Wentworthville NSW, 2145
               </p>
               <p>
-                Address 2: L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150
+                <span className="text-[#2B439B]"> Address 2:</span> L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150
               </p>
               <p>
-                Email:{" "}
+               <span className="text-[#2B439B]">  Email:{" "}</span>
                 <a
                   href="mailto:admin@zamrengineering.com.au"
                   className="transition-all hover:underline"
@@ -65,7 +65,7 @@ export default function Contact() {
                 </a>
               </p>
               <p>
-                Email:{" "}
+                <span className="text-[#2B439B]"> Email:{" "}</span>
                 <a
                   href="mailto:khalid.javed@zamrengineering.com.au"
                   className="transition-all hover:underline"
