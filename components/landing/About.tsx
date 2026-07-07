@@ -65,12 +65,12 @@ export default function About() {
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[var(--bg-light)] p-[130px]"
+      className="w-full bg-[var(--bg-light)] px-6 py-16 lg:p-[130px]"
     >
       {/* Frame 1321318991 — inner row */}
-      <div className="mx-auto flex max-w-[1468px] flex-row items-start gap-[135px]">
+      <div className="mx-auto flex max-w-[1468px] flex-col items-start gap-10 lg:flex-row lg:gap-[135px]">
         {/* Frame 120 — left column */}
-        <div className="flex w-[344px] flex-col items-start gap-[30px]">
+        <div className="flex w-full flex-col items-start gap-6 lg:w-[344px] lg:gap-[30px]">
           {/* Frame 118 — section label */}
           <div className="flex flex-row items-center gap-4">
             <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
@@ -84,7 +84,7 @@ export default function About() {
 
           {/* Frame 119 — heading */}
           <div className="flex w-full flex-col items-start gap-[10px]">
-            <h2 className="w-[344px] text-[56px] font-bold leading-[71px] text-[#333333]">
+            <h2 className="w-full text-[40px] font-bold leading-[50px] text-[#333333] sm:text-[48px] sm:leading-[60px] lg:w-[344px] lg:text-[56px] lg:leading-[71px]">
               Built on
               <br />
               Precision
@@ -96,17 +96,17 @@ export default function About() {
         </div>
 
         {/* Frame 1321318990 — right column */}
-        <div className="flex w-[989px] flex-col gap-[30px]">
+        <div className="flex w-full flex-col gap-6 lg:w-[989px] lg:gap-[30px]">
           {/* Frame 1321318989 — paragraphs */}
           <div className="flex w-full flex-col gap-5">
-            <p className="w-full text-[20px] leading-[25px] text-[#333333]">
+            <p className="w-full text-base leading-relaxed text-[#333333] lg:text-[20px] lg:leading-[25px]">
               ZAMR Engineering is a Sydney-based civil engineering consultancy
               delivering precision-led infrastructure solutions across New
               South Wales and beyond. Founded on a commitment to technical
               excellence, we partner with government bodies, developers, and
               industry leaders to engineer infrastructure that endures.
             </p>
-            <p className="w-full text-[20px] leading-[25px] text-[#333333]">
+            <p className="w-full text-base leading-relaxed text-[#333333] lg:text-[20px] lg:leading-[25px]">
               Our approach integrates rigorous engineering methodology with
               forward-looking design thinking — producing outcomes that are
               structurally sound, environmentally considered, and technically
@@ -119,7 +119,7 @@ export default function About() {
           <div className="h-px w-full border-t border-[#333333]" />
 
           {/* Frame 1321318988 — stats row */}
-          <div className="flex w-full flex-row items-center justify-between gap-x-[185px]">
+          <div className="flex w-full flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-x-8 lg:gap-x-[185px]">
             {statsData.map((stat, index) => (
               <div
                 key={stat.label}
@@ -133,14 +133,14 @@ export default function About() {
                       index === 0 ? "145px" : index === 1 ? "97px" : "113px",
                   }}
                 >
-                  <span className="text-[72px] font-normal leading-[91px] text-[var(--color-primary)]">
+                  <span className="text-5xl font-normal leading-none text-[var(--color-primary)] sm:text-[72px] sm:leading-[91px]">
                     {currentValues[index]}
                   </span>
-                  <span className="text-[42px] font-light leading-[50px] text-[var(--color-primary)]">
+                  <span className="text-3xl font-light leading-none text-[var(--color-primary)] sm:text-[42px] sm:leading-[50px]">
                     {stat.suffix}
                   </span>
                 </div>
-                <span className="text-base font-light leading-5 text-[#333333]">
+                <span className="text-sm font-light leading-5 text-[#333333] sm:text-base">
                   {stat.label}
                 </span>
               </div>

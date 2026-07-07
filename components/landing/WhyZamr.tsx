@@ -33,26 +33,26 @@ const points: Point[] = [
 
 export default function WhyZamr() {
   return (
-    <section className="w-full bg-white px-6 py-20 lg:px-32 lg:py-20">
+    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-20">
       <div>
-        <div className="mb-[80px] flex items-center justify-between">
+        <div className="mb-10 flex flex-col gap-6 lg:mb-[80px] lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <div className="mb-8 flex items-center gap-4">
-              <span className="text-base font-medium tracking-[0.2em] text-[var(--color-primary)]">
+            <div className="mb-6 flex items-center gap-4 lg:mb-8">
+              <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
                 04
               </span>
-              <span className="h-px w-24 bg-black" />
-              <span className="text-base font-medium tracking-[0.2em] text-[var(--text-dark)]">
+              <span className="h-px w-[104px] bg-black" />
+              <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
                 WHY ZAMR ENGINEERING
               </span>
             </div>
-            <h2 className="text-[56px] font-bold   text-[var(--text-dark)]">
+            <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
               The difference is in how we build.
             </h2>
           </div>
           <Link
             href=""
-            className="flex items-center gap-2 text-base font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity hover:opacity-70"
+            className="flex items-center gap-2 text-sm font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity hover:opacity-70 lg:text-base"
           >
             Learn More <span aria-hidden="true">&rarr;</span>
           </Link>
@@ -62,18 +62,18 @@ export default function WhyZamr() {
           {points.map((point) => (
             <div
               key={point.title}
-              className="group relative flex items-center border-b border-[var(--border-light)] py-[42px] pl-[50px] pr-[50px]"
+              className="group relative flex flex-col gap-3 border-b border-[var(--border-light)] px-6 py-6 lg:flex-row lg:items-center lg:px-[50px] lg:py-[42px]"
             >
-              {/* Left red border */}
+              {/* Left accent border */}
               <span className="absolute left-0 top-0 h-full w-1 bg-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               {/* Title */}
-              <h3 className="w-[444px] shrink-0 text-[28px] font-semibold  text-[var(--text-dark)] group-hover:text-[var(--color-primary)]">
+              <h3 className="text-xl font-semibold text-[var(--text-dark)] group-hover:text-[var(--color-primary)] lg:w-[444px] lg:shrink-0 lg:text-[28px]">
                 {point.title}
               </h3>
 
               {/* Description */}
-              <p className=" text-lg  text-[var(--text-dark)]">
+              <p className="text-base text-[var(--text-dark)] lg:text-lg">
                 {point.description}
               </p>
             </div>
