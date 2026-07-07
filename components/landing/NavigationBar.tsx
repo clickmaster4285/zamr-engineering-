@@ -10,10 +10,10 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
-  { label: "Why ZAMR Engineering", href: "/why-zamr" },
-  { label: "Our Team", href: "/team" },
-  { label: "Trusted & Accredited", href: "/accredited" },
-  { label: "Engineering For Impact", href: "/impact" },
+  { label: "Why ZAMR Engineering", href: "" },
+  { label: "Our Team", href: "" },
+  { label: "Trusted & Accredited", href: "" },
+  { label: "Engineering For Impact", href: "" },
 ];
 
 export default function Navbar() {
@@ -39,17 +39,28 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-50 py-3 w-full overflow-hidden transition-all duration-300 ${
-          scrolled ? "bg-primary shadow-md" : "bg-transparent"
+        className={`fixed top-0 left-0 z-50 w-full transition-[background-color,box-shadow] duration-300 ${
+          scrolled ? "bg-white shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="relative mx-auto flex h-full w-full max-w-[1727px] items-center px-6 lg:px-[130px]">
-          {/* Logo – absolute left per Figma */}
+        <div className="relative mx-auto flex w-full max-w-[1727px] items-center px-6 h-[73px] lg:px-[130px] lg:h-[100px]">
+          {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
               src="/images/zamr-logo.png"
@@ -61,15 +72,15 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Nav links – centered in remaining space */}
+          {/* Nav links – centered */}
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors ${
+                className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 ${
                   scrolled
-                    ? "text-white/80 hover:text-white"
+                    ? "text-[var(--text-dark)] hover:text-[var(--color-primary)]"
                     : "text-[var(--text-light)] hover:text-white"
                 }`}
               >
@@ -82,9 +93,9 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => router.push("/")}
-            className={`ml-auto hidden items-center justify-center border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors lg:flex ${
+            className={`ml-auto hidden items-center justify-center border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors duration-300 lg:flex ${
               scrolled
-                ? "border-white text-white hover:bg-white hover:text-primary"
+                ? "border-[var(--text-dark)] text-[var(--text-dark)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)]"
                 : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
             }`}
             style={{ height: "50px" }}
@@ -92,58 +103,64 @@ export default function Navbar() {
             CONTACT
           </button>
 
-          {/* Hamburger – visible on mobile only */}
+          {/* Hamburger */}
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            className={`ml-auto text-white transition-colors lg:hidden`}
+            className={`ml-auto transition-colors duration-300 lg:hidden ${
+              scrolled ? "text-[var(--text-dark)]" : "text-white"
+            }`}
           >
             {menuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
-      </header>
 
-      {/* Mobile menu */}
-      {menuOpen && (
+        {/* Mobile menu — positioned directly below header via top-full */}
         <div
-          className={`fixed top-[100px] left-0 z-40 flex w-full flex-col items-center gap-6 border-t px-6 py-8 lg:hidden ${
+          className={`absolute left-0 w-full border-t px-6 py-8 transition-all duration-300 lg:hidden ${
+            menuOpen
+              ? "translate-y-0 opacity-100 pointer-events-auto"
+              : "-translate-y-2 opacity-0 pointer-events-none"
+          } ${
             scrolled
-              ? "bg-primary border-white/20"
+              ? "bg-white border-[var(--border-light)]"
               : "bg-[var(--bg-hero)]/95 border-white/10"
           }`}
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              onClick={closeMenu}
-              className={`whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors ${
+          <div className="flex flex-col items-center gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={closeMenu}
+                className={`whitespace-nowrap text-sm font-medium uppercase transition-colors duration-300 ${
+                  scrolled
+                    ? "text-[var(--text-dark)] hover:text-[var(--color-primary)]"
+                    : "text-white/90 hover:text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <button
+              type="button"
+              onClick={() => {
+                closeMenu();
+                router.push("/");
+              }}
+              className={`whitespace-nowrap border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors duration-300 ${
                 scrolled
-                  ? "text-white/80 hover:text-white"
-                  : "text-white/90 hover:text-white"
+                  ? "border-[var(--text-dark)] text-[var(--text-dark)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)]"
+                  : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
               }`}
             >
-              {link.label}
-            </Link>
-          ))}
-          <button
-            type="button"
-            onClick={() => {
-              closeMenu();
-              router.push("/");
-            }}
-            className={`whitespace-nowrap border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors ${
-              scrolled
-                ? "border-white text-white hover:bg-white hover:text-primary"
-                : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
-            }`}
-          >
-            CONTACT
-          </button>
+              CONTACT
+            </button>
+          </div>
         </div>
-      )}
+      </header>
     </>
   );
 }
