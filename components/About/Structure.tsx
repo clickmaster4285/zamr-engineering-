@@ -1,7 +1,6 @@
 "use client";
-
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 type TeamType = "technical" | "operational" | "external";
 
@@ -10,7 +9,6 @@ const COLORS: Record<TeamType, string> = {
   operational: "var(--color-blue-struct-ops)",
   external: "var(--color-blue-struct-ext)",
 };
-
 const LINE = "var(--color-blue-struct-line)";
 
 const legend = [
@@ -20,7 +18,6 @@ const legend = [
 ];
 
 // --- Figma absolute-position data ---
-
 interface BoxData {
   left: number; top: number; width: number; height: number;
   title: string; subtitle?: string; type: TeamType;
@@ -31,18 +28,15 @@ const md: BoxData = {
   left: 754, top: 267, width: 271.8, height: 112.25,
   title: "Managing Director", subtitle: "Khalid Javed", type: "operational",
 };
-
 const externalBoxes: BoxData[] = [
   { left: 1259.12, top: 175, width: 264, height: 87, title: "Quality Support", subtitle: "Insaf Khan", type: "external" },
   { left: 1259.12, top: 280, width: 264, height: 86, title: "Cost Estimating", subtitle: "Natesh Natraj", type: "external" },
   { left: 1259.12, top: 386, width: 264, height: 85, title: "Contract Administration", subtitle: "Franca Bucci", type: "external" },
 ];
-
 const dm: BoxData = {
   left: 293, top: 607, width: 261.37, height: 116.26,
   title: "Design Manager", subtitle: "Omar Faruqi", type: "technical",
 };
-
 const od: BoxData = {
   left: 1199.03, top: 606.3, width: 274.2, height: 116.26,
   title: "Operational Director", subtitle: "Khalid Javed", type: "operational",
@@ -51,7 +45,6 @@ const od: BoxData = {
 interface SubHeaderData {
   left: number; top: number; width: number; title: string; type: TeamType;
 }
-
 const subHeaders: SubHeaderData[] = [
   { left: 106, top: 782, width: 196.43, title: "Structure Design", type: "technical" },
   { left: 329, top: 782, width: 188.64, title: "Civil Design", type: "technical" },
@@ -61,13 +54,11 @@ const subHeaders: SubHeaderData[] = [
   { left: 1237.48, top: 787.98, width: 197.23, title: "Operation Safety", type: "operational" },
   { left: 1467, top: 786, width: 198.04, title: "Project Management", type: "operational" },
 ];
-
 const subH = 44.9;
 
 interface NameCardData {
   left: number; top: number; width: number; height: number; names: string[]; type: TeamType;
 }
-
 const nameCards: NameCardData[] = [
   { left: 98, top: 894, width: 211, height: 151, names: ["Kashif JKhan", "Yashwant Dyall", "Roland Ng"], type: "technical" },
   { left: 318, top: 894, width: 209, height: 151, names: ["Faraz Ahmed", "Thomas Chew", "Mark Shamoun"], type: "technical" },
@@ -81,14 +72,10 @@ const nameCards: NameCardData[] = [
 const subc = { left: 1099.38, top: 1111.84, width: 236.77, height: 61.25 };
 
 // --- Canvas dimensions (design size, in px) ---
-const DESIGN_WIDTH = 1728;
+const DESIGN_WIDTH = 1680;
 const DESIGN_HEIGHT = 1273;
 
-// Minimum scale before we let it scroll horizontally instead of shrinking further
-const MIN_SCALE = 0.32;
-
 // --- Helpers ---
-
 function cx(b: { left: number; width: number }) { return b.left + b.width / 2; }
 function cy(b: { top: number; height: number }) { return b.top + b.height / 2; }
 function bottom(b: { top: number; height: number }) { return b.top + b.height; }
@@ -97,7 +84,6 @@ function right(b: { left: number; width: number }) { return b.left + b.width; }
 function VM(x: number, y1: number, y2: number) {
   return `M${x},${y1} L${x},${y2}`;
 }
-
 function VHV(x1: number, y1: number, x2: number, y2: number, midY: number, r = 12) {
   if (Math.abs(x2 - x1) < 1) return `M${x1},${y1} L${x2},${y2}`;
   const dy1 = midY > y1 ? r : -r;
@@ -112,7 +98,6 @@ function VHV(x1: number, y1: number, x2: number, y2: number, midY: number, r = 1
     `L${x2},${y2}`,
   ].join(" ");
 }
-
 function HVH(x1: number, y1: number, x2: number, y2: number, midX: number, r = 12) {
   const dx1 = midX > x1 ? r : -r;
   const dy = y2 > y1 ? r : -r;
@@ -215,13 +200,13 @@ export default function Structure() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(1);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const el = wrapperRef.current;
     if (!el) return;
 
     const updateScale = (width: number) => {
       const raw = width / DESIGN_WIDTH;
-      setScale(Math.max(raw, MIN_SCALE));
+      setScale(raw);
     };
 
     updateScale(el.getBoundingClientRect().width);
@@ -249,161 +234,153 @@ export default function Structure() {
   const subCenters = subHeaders.map((s) => cx(s));
   const subBottoms = subHeaders.map((s) => s.top + subH);
   const nameTops = nameCards.map((n) => n.top);
-
   const rightBusY = 695;
 
   return (
-    <section className="relative w-full bg-white ">
-      <div className="">
-        {/* Scaling wrapper: reserves the correctly-scaled height so page layout doesn't jump */}
+    <section className="relative w-full bg-white overflow-hidden">
+      <div className="w-full">
+        {/* Scaling wrapper: reserves the correctly-scaled height so page layout doesn't jump.
+            overflow-hidden is unconditional now — the scaled inner div's layout box is still
+            DESIGN_WIDTH px wide even after transform: scale(), so overflow-x-auto on mobile
+            was creating a scrollable area ~3x the visible width with blank space. */}
         <div
           ref={wrapperRef}
-          className="relative w-full overflow-x-auto overflow-y-hidden"
+          className="relative w-full overflow-hidden"
           style={{ height: DESIGN_HEIGHT * scale }}
         >
           <div
             style={{
+              position: "relative",
               width: DESIGN_WIDTH,
               height: DESIGN_HEIGHT,
               transform: `scale(${scale})`,
               transformOrigin: "top left",
             }}
           >
-          {/* Frame 77 — left panel */}
-          <div
-            className="absolute flex flex-col items-start"
-            style={{ left: 130, top: 100, width: 470, gap: 50 }}
-          >
-            <div className="flex w-full flex-col items-start" style={{ gap: 20 }}>
-              <div className="flex flex-row items-center" style={{ gap: 16 }}>
-                <span
-                  className="font-medium leading-5 tracking-[3px]"
-                  style={{ fontSize: 16, color: "var(--color-primary)" }}
-                >
-                  03
-                </span>
-                <span className="h-px w-[104px] bg-[var(--text-dark)]" />
-                <span
-                  className="font-medium leading-5 tracking-[3px] uppercase"
-                  style={{ fontSize: 16, color: "var(--text-dark)" }}
-                >
-                  STRUCTURE
-                </span>
-              </div>
-
-              <h2
-                className="w-full font-bold leading-[55px]"
-                style={{ fontSize: 44, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
-              >
-                Organizational
-                <br />
-                Structure
-              </h2>
-
-              <Image
-                src="/images/zamr-logo.png"
-                alt="ZAMR Engineering"
-                width={154}
-                height={86}
-                className="object-contain"
-              />
-            </div>
-
-            <div className="flex flex-col items-start" style={{ gap: 16 }}>
-              {legend.map((item) => (
-                <div key={item.label} className="flex flex-row items-center" style={{ gap: 19 }}>
+            {/* Frame 77 — left panel */}
+            <div
+              className="absolute flex flex-col items-start"
+              style={{ left: 130, top: 100, width: 470, gap: 50 }}
+            >
+              <div className="flex w-full flex-col items-start" style={{ gap: 20 }}>
+                <div className="flex flex-row items-center" style={{ gap: 16 }}>
                   <span
-                    className="rounded-full"
-                    style={{ width: 28, height: 28, background: item.color }}
-                  />
-                  <span
-                    className="font-normal leading-[30px]"
-                    style={{ fontSize: 24, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
+                    className="font-medium leading-5 tracking-[3px]"
+                    style={{ fontSize: 16, color: "var(--color-primary)" }}
                   >
-                    {item.label}
+                    03
+                  </span>
+                  <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+                  <span
+                    className="font-medium leading-5 tracking-[3px] uppercase"
+                    style={{ fontSize: 16, color: "var(--text-dark)" }}
+                  >
+                    STRUCTURE
                   </span>
                 </div>
-              ))}
+                <h2
+                  className="w-full font-bold leading-[55px]"
+                  style={{ fontSize: 44, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
+                >
+                  Organizational
+                  <br />
+                  Structure
+                </h2>
+                <Image
+                  src="/images/zamr-logo.png"
+                  alt="ZAMR Engineering"
+                  width={154}
+                  height={86}
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex flex-col items-start" style={{ gap: 16 }}>
+                {legend.map((item) => (
+                  <div key={item.label} className="flex flex-row items-center" style={{ gap: 19 }}>
+                    <span
+                      className="rounded-full"
+                      style={{ width: 28, height: 28, background: item.color }}
+                    />
+                    <span
+                      className="font-normal leading-[30px]"
+                      style={{ fontSize: 24, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
+                    >
+                      {item.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Chart layer */}
-          <div className="absolute" style={{ left: 0, top: 0, width: DESIGN_WIDTH, height: DESIGN_HEIGHT }}>
-            <svg
-              className="absolute inset-0 pointer-events-none"
-              width={DESIGN_WIDTH}
-              height={DESIGN_HEIGHT}
-              fill="none"
-              stroke={LINE}
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              {extElbows.map((e, i) => (
-                <path key={`ext-${i}`} d={e.path} />
+            {/* Chart layer */}
+            <div className="absolute" style={{ left: 0, top: 0, width: DESIGN_WIDTH, height: DESIGN_HEIGHT }}>
+              <svg
+                className="absolute inset-0 pointer-events-none"
+                width={DESIGN_WIDTH}
+                height={DESIGN_HEIGHT}
+                fill="none"
+                stroke={LINE}
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                {extElbows.map((e, i) => (
+                  <path key={`ext-${i}`} d={e.path} />
+                ))}
+                <path d={VHV(mdB.x, mdB.y, dmT.x, dmT.y, 490)} />
+                <path d={VHV(mdB.x, mdB.y, odT.x, odT.y, 490)} />
+                {[0, 1, 2, 3].map((i) => (
+                  <path
+                    key={`dmc-${i}`}
+                    d={VHV(dmB.x, dmB.y, subCenters[i], subHeaders[i].top, 695)}
+                  />
+                ))}
+                {[4, 5, 6].map((i) => (
+                  <path
+                    key={`odc-${i}`}
+                    d={VHV(odB.x, odB.y, subCenters[i], subHeaders[i].top, rightBusY)}
+                  />
+                ))}
+                {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+                  <path key={`nc-${i}`} d={VM(subCenters[i], subBottoms[i], nameTops[i])} />
+                ))}
+                {[4, 5].map((i) => {
+                  const bx = subCenters[i];
+                  const by = bottom(nameCards[i]);
+                  return <path key={`sc-${i}`} d={VHV(bx, by, cx(subc), subc.top, 1060)} />;
+                })}
+              </svg>
+
+              <OrgBox box={md} />
+              {externalBoxes.map((e, i) => (
+                <OrgBox key={`ext-${i}`} box={e} />
               ))}
-
-              <path d={VHV(mdB.x, mdB.y, dmT.x, dmT.y, 490)} />
-              <path d={VHV(mdB.x, mdB.y, odT.x, odT.y, 490)} />
-
-              {[0, 1, 2, 3].map((i) => (
-                <path
-                  key={`dmc-${i}`}
-                  d={VHV(dmB.x, dmB.y, subCenters[i], subHeaders[i].top, 695)}
-                />
+              <OrgBox box={dm} />
+              <OrgBox box={od} />
+              {subHeaders.map((s, i) => (
+                <SubHeader key={`sh-${i}`} s={s} />
               ))}
-
-              {[4, 5, 6].map((i) => (
-                <path
-                  key={`odc-${i}`}
-                  d={VHV(odB.x, odB.y, subCenters[i], subHeaders[i].top, rightBusY)}
-                />
+              {nameCards.map((n, i) => (
+                <NameCard key={`nc-${i}`} card={n} />
               ))}
-
-              {[0, 1, 2, 3, 4, 5, 6].map((i) => (
-                <path key={`nc-${i}`} d={VM(subCenters[i], subBottoms[i], nameTops[i])} />
-              ))}
-
-              {[4, 5].map((i) => {
-                const bx = subCenters[i];
-                const by = bottom(nameCards[i]);
-                return <path key={`sc-${i}`} d={VHV(bx, by, cx(subc), subc.top, 1060)} />;
-              })}
-            </svg>
-
-            <OrgBox box={md} />
-            {externalBoxes.map((e, i) => (
-              <OrgBox key={`ext-${i}`} box={e} />
-            ))}
-            <OrgBox box={dm} />
-            <OrgBox box={od} />
-
-            {subHeaders.map((s, i) => (
-              <SubHeader key={`sh-${i}`} s={s} />
-            ))}
-
-            {nameCards.map((n, i) => (
-              <NameCard key={`nc-${i}`} card={n} />
-            ))}
-
-            <div
-              className="absolute flex items-center justify-center text-center overflow-hidden"
-              style={{
-                left: subc.left,
-                top: subc.top,
-                width: subc.width,
-                height: subc.height,
-                background: COLORS.external,
-                color: "white",
-              }}
-            >
-              <span className="font-medium leading-tight px-2" style={{ fontSize: 20, letterSpacing: "-0.019em" }}>
-                Subcontractors
-              </span>
+              <div
+                className="absolute flex items-center justify-center text-center overflow-hidden"
+                style={{
+                  left: subc.left,
+                  top: subc.top,
+                  width: subc.width,
+                  height: subc.height,
+                  background: COLORS.external,
+                  color: "white",
+                }}
+              >
+                <span className="font-medium leading-tight px-2" style={{ fontSize: 20, letterSpacing: "-0.019em" }}>
+                  Subcontractors
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );
