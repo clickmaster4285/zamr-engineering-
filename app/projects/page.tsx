@@ -310,10 +310,10 @@ export default function ProjectsPage() {
           </div>
 
           {/* Load More button */}
-          <div className="flex justify-center">
+          <div className="flex justify-end">
             <button
               type="button"
-              className="flex items-center justify-center bg-[#1945A7] text-white w-full sm:w-auto px-10 py-[14px] text-[14px] font-bold leading-[20px] tracking-[3px] uppercase transition-all hover:bg-[var(--color-primary-hover)] active:scale-95 sm:px-[100px] lg:px-[255px] lg:py-[14px] lg:text-[16px]"
+              className="bg-[#1945A7] text-white  w-[192px] py-[14px]  tracking-[3px]  text-[14px] font-bold  uppercase transition-all "
               onClick={() => setActiveFilter("ALL")}
             >
               Load More
