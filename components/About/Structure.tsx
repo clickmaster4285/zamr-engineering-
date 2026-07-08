@@ -132,7 +132,7 @@ function OrgBox({ box }: { box: BoxData }) {
   const isLarge = (box.fontSize ?? 24) >= 24;
   return (
     <div
-      className="absolute flex flex-col items-center justify-center text-center px-4"
+      className="absolute flex flex-col items-center justify-center text-center overflow-hidden"
       style={{
         left: box.left,
         top: box.top,
@@ -143,15 +143,15 @@ function OrgBox({ box }: { box: BoxData }) {
       }}
     >
       <div
-        className="font-bold leading-[150%]"
-        style={{ fontSize: box.fontSize ?? 24, letterSpacing: "-0.019em" }}
+        className="font-bold leading-tight px-2"
+        style={{ fontSize: isLarge ? 20 : 16, letterSpacing: "-0.019em" }}
       >
         {box.title}
       </div>
       {box.subtitle && (
         <div
-          className="font-bold leading-[150%]"
-          style={{ fontSize: box.subtitle ? (isLarge ? 16 : 14) : 0, letterSpacing: "-0.011em" }}
+          className="font-bold leading-tight px-2"
+          style={{ fontSize: isLarge ? 14 : 12, letterSpacing: "-0.011em" }}
         >
           {box.subtitle}
         </div>
@@ -163,7 +163,7 @@ function OrgBox({ box }: { box: BoxData }) {
 function SubHeader({ s }: { s: SubHeaderData }) {
   return (
     <div
-      className="absolute flex items-center justify-center text-center"
+      className="absolute flex items-center justify-center text-center overflow-hidden"
       style={{
         left: s.left,
         top: s.top,
@@ -174,8 +174,8 @@ function SubHeader({ s }: { s: SubHeaderData }) {
       }}
     >
       <span
-        className="font-medium leading-[150%]"
-        style={{ fontSize: 18, letterSpacing: "-0.019em" }}
+        className="font-medium leading-tight px-1"
+        style={{ fontSize: 14, letterSpacing: "-0.019em" }}
       >
         {s.title}
       </span>
@@ -186,7 +186,7 @@ function SubHeader({ s }: { s: SubHeaderData }) {
 function NameCard({ card }: { card: NameCardData }) {
   return (
     <div
-      className="absolute flex flex-col items-center justify-center text-center px-4"
+      className="absolute flex flex-col items-center justify-center text-center overflow-hidden"
       style={{
         left: card.left,
         top: card.top,
@@ -197,8 +197,8 @@ function NameCard({ card }: { card: NameCardData }) {
       }}
     >
       <div
-        className="font-medium leading-[150%]"
-        style={{ fontSize: 20, letterSpacing: "-0.019em" }}
+        className="font-medium leading-tight px-2"
+        style={{ fontSize: 16, letterSpacing: "-0.019em" }}
       >
         {card.names.map((n, i) => (
           <span key={i}>
@@ -253,21 +253,22 @@ export default function Structure() {
   const rightBusY = 695;
 
   return (
-    <section className="relative w-full bg-white">
-      {/* Scaling wrapper: reserves the correctly-scaled height so page layout doesn't jump */}
-      <div
-        ref={wrapperRef}
-        className="relative w-full overflow-x-auto overflow-y-hidden"
-        style={{ height: DESIGN_HEIGHT * scale }}
-      >
+    <section className="relative w-full bg-white ">
+      <div className="">
+        {/* Scaling wrapper: reserves the correctly-scaled height so page layout doesn't jump */}
         <div
-          style={{
-            width: DESIGN_WIDTH,
-            height: DESIGN_HEIGHT,
-            transform: `scale(${scale})`,
-            transformOrigin: "top left",
-          }}
+          ref={wrapperRef}
+          className="relative w-full overflow-x-auto overflow-y-hidden"
+          style={{ height: DESIGN_HEIGHT * scale }}
         >
+          <div
+            style={{
+              width: DESIGN_WIDTH,
+              height: DESIGN_HEIGHT,
+              transform: `scale(${scale})`,
+              transformOrigin: "top left",
+            }}
+          >
           {/* Frame 77 — left panel */}
           <div
             className="absolute flex flex-col items-start"
@@ -386,7 +387,7 @@ export default function Structure() {
             ))}
 
             <div
-              className="absolute flex items-center justify-center text-center"
+              className="absolute flex items-center justify-center text-center overflow-hidden"
               style={{
                 left: subc.left,
                 top: subc.top,
@@ -396,12 +397,13 @@ export default function Structure() {
                 color: "white",
               }}
             >
-              <span className="font-medium leading-[150%]" style={{ fontSize: 24, letterSpacing: "-0.019em" }}>
+              <span className="font-medium leading-tight px-2" style={{ fontSize: 20, letterSpacing: "-0.019em" }}>
                 Subcontractors
               </span>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

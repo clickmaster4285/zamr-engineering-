@@ -14,7 +14,7 @@ export default function AboutHero() {
       />
 
       {/* Overlay — rgba(7, 24, 61, 0.8) per Figma */}
-      <div className="absolute inset-0" style={{ backgroundColor: "color-mix(in srgb, var(--bg-hero) 80%, transparent)" }} />
+      <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
       {/* Frame 1321319043 — centered content */}
       <div className="absolute bottom-10 left-1/2 flex w-full max-w-[933px] -translate-x-1/2 flex-col gap-4 px-6 lg:bottom-[100px] lg:left-[130px] lg:translate-x-0 lg:px-0 lg:gap-5">

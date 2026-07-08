@@ -44,9 +44,7 @@ export default function About() {
           {/* Frame 119 — heading */}
           <div className="flex w-full flex-col items-start gap-[10px]">
             <h2 className="w-full text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[40px] sm:leading-[50px] lg:w-[352px] lg:text-[44px] lg:leading-[55px]">
-              Built on
-              <br />
-              Precision
+              Built on Precision
               <br />
               &amp; Reliability
             </h2>
