@@ -52,9 +52,9 @@ export interface ProjectData {
 
 export const projects: ProjectData[] = [
   {
-    slug: "western-sydney-infrastructure-corridor",
+    slug: "Metropolitan-Bridge-Rehabilitation",
     index: "01",
-    title: "Western Sydney Infrastructure Corridor",
+    title: "Metropolitan Bridge Rehabilitation",
     category: "Urban Infrastructure",
     shortDescription:
       "Delivering comprehensive engineering support for the Western Sydney Infrastructure Corridor, improving connectivity and supporting economic growth in the region.",
@@ -230,21 +230,21 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Projects",
     relatedProjects: [
-      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
+      { title: "Western Sydney Infrastructure Corridor", slug: "Metropolitan Bridge Rehabilitation", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
   },
   {
-    slug: "metropolitan-bridge-rehabilitation",
+    slug: "Western-Sydney-Infrastructure-Corridor",
     index: "03",
-    title: "Metropolitan Bridge Rehabilitation",
+    title: "Western Sydney Infrastructure Corridor",
     category: "Structural Engineering",
     shortDescription:
       "Comprehensive bridge rehabilitation program restoring structural integrity, improving safety, and extending the operational lifespan of critical metropolitan bridge infrastructure.",
 
-    heroTitle: "METROPOLITAN BRIDGE REHABILITATION",
-    heroImage: "/images/image6.jpeg",
+    heroTitle: "Western Sydney Infrastructure Corridor",
+    heroImage: "/images/image1.jpeg",
 
     stats: [
       { label: "CLIENT", value: "Transport for NSW" },
@@ -328,15 +328,15 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "urban-stormwater-management-system",
+    slug: "Hunter-Valley-Renewable-Energy-Hub",
     index: "04",
-    title: "Urban Stormwater Management System",
+    title: "Hunter Valley Renewable Energy Hub",
     category: "Water & Irrigation Systems",
     shortDescription:
       "Integrated stormwater management solution for a high-density urban precinct, combining flood mitigation, water quality treatment, and community amenity.",
 
-    heroTitle: "URBAN STORMWATER MANAGEMENT SYSTEM",
-    heroImage: "/images/image7.jpeg",
+    heroTitle: "Hunter Valley Renewable Energy Hub",
+    heroImage: "/images/image2.jpeg",
 
     stats: [
       { label: "CLIENT", value: "Sydney Water Corporation" },
@@ -420,15 +420,15 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "port-of-newcastle-infrastructure-upgrade",
+    slug: "Metropolitan-Bridge-Rehabilitation",
     index: "05",
-    title: "Port of Newcastle Infrastructure Upgrade",
+    title: "Metropolitan Bridge Rehabilitation",
     category: "Industrial Development",
     shortDescription:
       "Comprehensive civil and structural engineering for the Port of Newcastle upgrade, enhancing freight capacity and operational efficiency at Australia's largest port.",
 
-    heroTitle: "PORT OF NEWCASTLE INFRASTRUCTURE UPGRADE",
-    heroImage: "/images/image4.jpeg",
+    heroTitle: "Metropolitan Bridge Rehabilitation",
+    heroImage: "/images/image6.jpeg",
 
     stats: [
       { label: "CLIENT", value: "Port Authority of NSW" },
@@ -507,15 +507,15 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "pacific-highway-corridor-enhancement",
+    slug: "Urban-Stormwater-Management-System",
     index: "06",
-    title: "Pacific Highway Corridor Enhancement",
+    title: "Urban Stormwater Management System",
     category: "Transportation Projects",
     shortDescription:
       "Strategic corridor enhancement program along the Pacific Highway, delivering road safety improvements, capacity upgrades, and travel time reliability for this critical national freight route.",
 
-    heroTitle: "PACIFIC HIGHWAY CORRIDOR ENHANCEMENT",
-    heroImage: "/images/image5.jpeg",
+    heroTitle: "Urban Stormwater Management System",
+    heroImage: "/images/image7.jpeg",
 
     stats: [
       { label: "CLIENT", value: "Transport for NSW" },

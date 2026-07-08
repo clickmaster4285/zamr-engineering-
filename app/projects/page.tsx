@@ -135,6 +135,46 @@ function ProjectCard({
   );
 }
 
+function BottomCard({
+  project,
+}: {
+  project: (typeof projects)[number];
+}) {
+  const { ref, inView } = useInView();
+  const router = useRouter();
+
+  return (
+    <div
+      ref={ref}
+      onClick={() => router.push(`/project/${project.slug}`)}
+      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
+        inView
+          ? "opacity-100 translate-y-0 scale-100"
+          : "opacity-0 translate-y-10 scale-95"
+      }`}
+    >
+      <div className="relative w-full h-[280px] overflow-hidden sm:h-[320px] md:h-[340px]">
+        <Image
+          src={project.heroImage}
+          alt={project.title}
+          fill
+          sizes="(min-width: 768px) 478px, 100vw"
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+
+        <span className="absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[700] text-white text-[24px] leading-[30px] md:text-[30px] md:leading-[38px]">
+          {project.index}
+        </span>
+
+        <h3 className="absolute left-[30px] bottom-[30px] font-semibold text-white text-[16px] leading-[20px] md:left-[50px] md:top-[269px] md:bottom-auto md:text-[18px] md:leading-[23px]">
+          {project.title}
+        </h3>
+      </div>
+    </div>
+  );
+}
+
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("ALL");
   const filteredProjects =
@@ -243,18 +283,30 @@ export default function ProjectsPage() {
               })}
             </div>
 
-            {/* Project grid — same design as landing */}
-            <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:gap-[30px]">
-              {filteredProjects[0] && (
-                <div className="md:w-[817px]">
-                  <ProjectCard project={filteredProjects[0]} isLarge />
+            {/* Project grid — Figma Frame 1321319071 */}
+            <div className="flex flex-col gap-6 lg:gap-[30px]">
+              {/* Frame 1321319008 — Top row: large + 2 small */}
+              <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:gap-[30px]">
+                {filteredProjects[0] && (
+                  <div className="md:w-[817px]">
+                    <ProjectCard project={filteredProjects[0]} isLarge />
+                  </div>
+                )}
+                <div className="flex flex-col gap-6 md:w-[621px] md:gap-[30px]">
+                  {filteredProjects.slice(1, 3).map((project) => (
+                    <ProjectCard key={project.index} project={project} isLarge={false} />
+                  ))}
+                </div>
+              </div>
+
+              {/* Frame 1321319070 — Bottom row: 3 equal cards */}
+              {filteredProjects.length > 3 && (
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-[16px]">
+                  {filteredProjects.slice(3, 6).map((project) => (
+                    <BottomCard key={project.index} project={project} />
+                  ))}
                 </div>
               )}
-              <div className="flex flex-col gap-6 md:w-[621px] md:gap-[30px]">
-                {filteredProjects.slice(1, 3).map((project) => (
-                  <ProjectCard key={project.index} project={project} isLarge={false} />
-                ))}
-              </div>
             </div>
           </div>
 
