@@ -192,7 +192,7 @@ export default function ProjectsPage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[var(--bg-hero)]" />
+        <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
         <div className="absolute left-6 right-6 top-[100px] flex flex-col gap-5 sm:left-10 sm:right-10 sm:top-[130px] lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
           <h1 className="font-bold text-white text-[36px] leading-[42px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">

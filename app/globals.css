@@ -71,6 +71,7 @@
      ════════════════════════════════════════════ */
   --overlay-image-default: oklch(0 0 0 / 0.3);      /* black 30% — darkens images for text readability */
   --overlay-image-hover: oklch(0.254 0.07 266.5 / 0.5);  /* primary blue 50% — blue tint on hover */
+  --overlay-image-hero: oklch(0.254 0.07 266.5 / 0.8);  /* primary blue 50% — blue tint on hover */
 
   /* ════════════════════════════════════════════
      BORDERS

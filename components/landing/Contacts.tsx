@@ -45,16 +45,16 @@ export default function Contact() {
 
             <div className="space-y-5 text-lg text-[var(--text-dark)]">
               <p>
-                <span className="text-[var(--color-blue-label)]">Company Name: </span> ZAMR Engineering Pty Ltd
+                <span className="text-[var(--color-primary)]">Company Name: </span> ZAMR Engineering Pty Ltd
               </p>
               <p>
-                <span className="text-[var(--color-blue-label)]"> Address 1:</span> 30 Smith Street Wentworthville NSW, 2145
+                <span className="text-[var(--color-primary)]"> Address 1:</span> 30 Smith Street Wentworthville NSW, 2145
               </p>
               <p>
-                <span className="text-[var(--color-blue-label)]"> Address 2:</span> L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150
+                <span className="text-[var(--color-primary)]"> Address 2:</span> L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150
               </p>
               <p>
-               <span className="text-[var(--color-blue-label)]">  Email:{" "}</span>
+               <span className="text-[var(--color-primary)]">  Email:{" "}</span>
                 <a
                   href="mailto:admin@zamrengineering.com.au"
                   className="transition-all hover:underline"

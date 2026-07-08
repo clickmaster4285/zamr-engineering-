@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 type Point = {
   title: string;
@@ -35,9 +36,9 @@ export default function WhyZamr() {
   return (
     <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-20">
       <div>
-        <div className="mb-10 flex flex-col gap-6 lg:mb-[80px] lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <div className="mb-6 flex items-center gap-4 lg:mb-8">
+        <div className="mb-10 lg:mb-[80px]">
+          <div className="mb-6 flex items-center justify-between lg:mb-8">
+            <div className="flex items-center gap-4">
               <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
                 04
               </span>
@@ -46,16 +47,15 @@ export default function WhyZamr() {
                 WHY ZAMR ENGINEERING
               </span>
             </div>
-            <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
-              The difference is in how we build.
-            </h2>
+            <span
+              className="flex items-center gap-2 text-sm font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity  lg:text-base"
+            >
+              LEARN MORE <ArrowRight size={24} />
+            </span>
           </div>
-          <Link
-            href=""
-            className="flex items-center gap-2 text-sm font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity hover:opacity-70 lg:text-base"
-          >
-            Learn More <span aria-hidden="true">&rarr;</span>
-          </Link>
+          <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
+            The difference is in how we build.
+          </h2>
         </div>
 
         <div className="border-t border-[var(--border-light)]">
