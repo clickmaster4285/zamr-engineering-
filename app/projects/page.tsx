@@ -3,9 +3,15 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { Barlow } from "next/font/google";
 import { projects } from "@/mockData/projects";
 import Contact from "@/components/services/Contact";
+
+const barlow = Barlow({
+  weight: ["500", "700", "900"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const filters = [
   "ALL",
@@ -17,10 +23,10 @@ const filters = [
 ];
 
 const stats = [
-  { value: "$4.1 B+", label: "Total Project Value" },
-  { value: "80+", label: "Projects Completed" },
-  { value: "3", label: "States Operating" },
-  { value: "2009", label: "Delivering Since" },
+  { value: "$180M+", label: "TOTAL PROJECT VALUE DELIVERED" },
+  { value: "150+", label: "PROJECTS COMPLETED" },
+  { value: "3", label: "STATES OPERATING" },
+  { value: "2012", label: "DELIVERING SINCE" },
 ];
 
 function useInView(threshold = 0.15) {
@@ -74,7 +80,7 @@ function ProjectCard({
     >
       <div
         className={`relative w-full overflow-hidden ${
-          isLarge ? "h-[484px] md:h-[542px]" : "h-[200px] sm:h-[250px] md:h-[260px]"
+          isLarge ? "h-[320px] sm:h-[400px] md:h-[542px]" : "h-[200px] sm:h-[250px] md:h-[260px]"
         }`}
       >
         <Image
@@ -84,36 +90,32 @@ function ProjectCard({
           sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
-
         <div
           className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)",
-          }}
+          style={{ background: "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)" }}
         />
 
         <span
-          className={`absolute left-[50px] top-[50px] font-[800] tracking-[0.06em] text-white ${
-            isLarge ? "text-[54px] leading-[68px]" : "text-[34px] leading-[43px]"
+          className={`absolute left-[30px] top-[30px] font-[800] tracking-[0.06em] text-white md:left-[50px] md:top-[50px] ${
+            isLarge ? "text-[34px] leading-[43px] md:text-[54px] md:leading-[68px]" : "text-[28px] leading-[36px] md:text-[34px] md:leading-[43px]"
           }`}
         >
           {project.index}
         </span>
 
         <h3
-          className={`absolute left-[50px] bottom-[50px] font-semibold text-white ${
+          className={`absolute left-[30px] bottom-[30px] font-semibold text-white md:left-[50px] md:bottom-[50px] ${
             isLarge
-              ? "text-[28px] leading-[35px] group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"
-              : "text-[22px] leading-[28px]"
+              ? "text-[22px] leading-[28px] md:text-[28px] md:leading-[35px] md:group-hover:translate-y-[-70px] md:transition-transform md:duration-500 md:ease-in-out"
+              : "text-[18px] leading-[23px] md:text-[22px] md:leading-[28px]"
           }`}
         >
           {project.title}
         </h3>
 
         {isLarge && (
-          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-[50px] pb-[50px]">
-            <p className="max-w-[717px] text-[16px] leading-[20px] font-[400] text-white">
+          <div className="absolute bottom-0 left-0 right-0 translate-y-full px-[30px] pb-[30px] transition-transform duration-500 ease-in-out group-hover:translate-y-0 md:px-[50px] md:pb-[50px]">
+            <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white md:text-[16px] md:leading-[20px]">
               {project.shortDescription}
             </p>
           </div>
@@ -132,10 +134,10 @@ export default function ProjectsPage() {
 
   return (
     <main className="w-full flex flex-col items-center">
-      {/* Hero */}
-      <section className="relative w-full h-[500px] overflow-hidden sm:h-[600px] lg:h-[700px]">
+      {/* ──────── HERO ──────── */}
+      <section className="relative w-full h-[520px] overflow-hidden sm:h-[620px] lg:h-[700px]">
         <Image
-          src="/images/image1.jpeg"
+          src="/images/projectHero.svg"
           alt="Our Projects"
           fill
           priority
@@ -143,58 +145,67 @@ export default function ProjectsPage() {
         />
         <div className="absolute inset-0 bg-[#07183D]/80" />
 
-        <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 sm:pb-12 lg:bottom-auto lg:left-[130px] lg:right-auto lg:w-[933px] lg:px-0 lg:pb-0 lg:top-1/2 lg:-translate-y-1/2 lg:translate-y-[94.5px]">
-          <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5">
-            <h1 className="font-bold uppercase text-white text-[32px] leading-[38px] sm:text-[48px] sm:leading-[56px] lg:text-[80px] lg:leading-[101px]">
-              OUR PROJECTS
-            </h1>
-            <p className="font-medium text-[#B0B0B0] text-sm sm:text-base lg:text-lg lg:leading-[23px]">
-              Delivering engineering excellence across Australia
-            </p>
+        {/* Title + subtitle — Figma Frame 1321319043 */}
+        <div className="absolute left-6 right-6 top-[100px] flex flex-col gap-5 sm:left-10 sm:right-10 sm:top-[130px] lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
+          <h1 className="font-bold  text-white text-[36px] leading-[42px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
+            Our Projects
+          </h1>
+          <p className="font-medium text-[#B0B0B0] text-[15px] leading-[20px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
+            A portfolio of precision-engineered infrastructure — from arterial
+            road rehabilitations and renewable energy civil works to structural
+            bridge rehabilitation and independent project verification.
+          </p>
+        </div>
+
+        {/* Stats bar — Figma Frame 1321319069 */}
+        <div className="absolute bottom-0 left-0 right-0 lg:left-[130px] lg:right-auto lg:w-[1468px] lg:top-[525px] lg:bottom-auto">
+          <div className="flex flex-row items-stretch px-4 sm:px-6 lg:px-0">
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`flex flex-col justify-center items-start flex-1 min-w-0 ${
+                  i > 0 ? "border-l border-[rgba(255,255,255,0.37)]" : ""
+                } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
+              >
+                <span
+                  className={`${barlow.className} font-black text-white text-[18px] leading-[22px] sm:text-[24px] sm:leading-[28px] lg:text-[34px] lg:leading-[34px]`}
+                  style={{ letterSpacing: "-0.952px" }}
+                >
+                  {stat.value}
+                </span>
+                <span
+                  className={`${barlow.className} font-medium text-[rgba(255,255,255,0.32)] pt-[3px] sm:pt-1 lg:pt-[6px] text-[7px] leading-[9px] sm:text-[8px] sm:leading-[11px] lg:text-[9.5px] lg:leading-[14px]`}
+                  style={{ letterSpacing: "1.33px" }}
+                >
+                  {stat.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section className="w-full bg-[#07183D]">
-        <div className="mx-auto flex max-w-[1468px] flex-wrap items-stretch px-6 lg:px-[130px]">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-1 flex-col items-center justify-center gap-1 border-r border-[rgba(255,255,255,0.12)] px-4 py-6 last:border-r-0 min-w-[120px]"
-            >
-              <span className="text-[24px] font-black leading-[30px] text-white sm:text-[28px] lg:text-[32px] lg:leading-[40px]">
-                {stat.value}
-              </span>
-              <span className="text-[10px] font-semibold leading-[13px] tracking-[0.06em] text-[#B0B0B0] uppercase text-center">
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Filter + Projects Grid */}
-      <section className="w-full bg-[var(--bg-light)] px-6 py-16 lg:p-[130px]">
-        <div className="mx-auto flex max-w-[1468px] flex-col gap-10 lg:gap-[60px]">
+      {/* ──────── FILTER + PROJECTS GRID ──────── */}
+      <section className="w-full bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
+        <div className="mx-auto flex max-w-[1468px] flex-col gap-8 lg:gap-[60px]">
           {/* Title header */}
-          <div className="flex flex-col gap-6 lg:gap-[30px]">
+          <div className="flex flex-col gap-5 lg:gap-[30px]">
             <div className="flex items-center gap-4">
-              <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
-                ALL
+              <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] sm:text-base">
+                01
               </span>
               <span className="h-px w-[104px] bg-black" />
-              <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] sm:text-base">
                 PROJECTS
               </span>
             </div>
-            <h2 className="text-3xl font-bold leading-tight text-[var(--text-dark)] sm:text-4xl md:text-[56px] md:leading-[71px]">
+            <h2 className="text-[30px] font-bold leading-[38px] text-[var(--text-dark)] sm:text-[40px] sm:leading-[50px] md:text-[56px] md:leading-[71px]">
               Featured Work
             </h2>
           </div>
 
           {/* Filter pills */}
-          <div className="flex w-full gap-3 overflow-x-auto pb-2 lg:gap-4">
+          <div className="flex w-full gap-2 overflow-x-auto pb-2 sm:gap-3 lg:gap-4">
             {filters.map((filter) => {
               const isActive = filter === activeFilter;
               const isAll = filter === "ALL";
@@ -203,11 +214,11 @@ export default function ProjectsPage() {
                   key={filter}
                   type="button"
                   onClick={() => setActiveFilter(filter)}
-                  className={`whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm ${
+                  className={`whitespace-nowrap border px-3 py-2.5 text-center text-[10px] tracking-[0.15em] transition-all duration-300 sm:px-4 sm:py-3 sm:text-xs lg:text-sm ${
                     isActive
                       ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
                       : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                  } ${isAll ? "w-20 flex-none" : "flex-1 min-w-[120px]"}`}
+                  } ${isAll ? "w-16 flex-none sm:w-20" : "flex-1 min-w-[100px] sm:min-w-[120px]"}`}
                 >
                   {filter}
                 </button>
@@ -217,13 +228,13 @@ export default function ProjectsPage() {
 
           {/* Project grid */}
           {filteredProjects.length > 0 ? (
-            <div className="flex flex-col gap-[30px] md:flex-row md:items-stretch">
+            <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:gap-[30px]">
               {filteredProjects[0] && (
                 <div className="md:w-[817px]">
                   <ProjectCard project={filteredProjects[0]} isLarge />
                 </div>
               )}
-              <div className="flex flex-col gap-[30px] md:w-[621px]">
+              <div className="flex flex-col gap-6 md:w-[621px] md:gap-[30px]">
                 {filteredProjects.slice(1, 3).map((project) => (
                   <ProjectCard key={project.index} project={project} isLarge={false} />
                 ))}
@@ -237,27 +248,27 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* How We Deliver */}
-      <section className="w-full bg-[#07183D] px-6 py-16 text-white lg:p-[130px]">
+      {/* ──────── HOW WE DELIVER ──────── */}
+      <section className="w-full bg-[#07183D] px-4 py-12 text-white sm:px-6 lg:px-[130px] lg:py-[130px]">
         <div className="mx-auto max-w-[1468px]">
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-6 lg:gap-7">
             <div className="flex items-center gap-4">
-              <span className="text-[16px] font-medium leading-5 tracking-[3px] text-white">
+              <span className="text-[13px] font-medium leading-4 tracking-[3px] text-white sm:text-[14px] sm:leading-5 lg:text-[16px] lg:leading-5">
                 OUR PROCESS
               </span>
-              <span className="h-px w-[104px] bg-white" />
+              <span className="h-px w-[80px] bg-white sm:w-[104px]" />
             </div>
-            <h2 className="text-[44px] font-bold leading-[55px] text-white">
+            <h2 className="text-[30px] font-bold leading-[38px] text-white sm:text-[36px] sm:leading-[45px] lg:text-[44px] lg:leading-[55px]">
               How We Deliver
             </h2>
-            <p className="max-w-[720px] text-[17px] leading-[31px] text-[#B3B3B3]">
+            <p className="max-w-[720px] text-[14px] leading-[22px] text-[#B3B3B3] sm:text-[15px] sm:leading-[26px] lg:text-[17px] lg:leading-[31px]">
               Every project at ZAMR Engineering follows a proven delivery framework.
               From initial concept through to construction completion, we ensure
               quality, safety, and client satisfaction at every stage.
             </p>
           </div>
 
-          <div className="mt-15 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:mt-15 lg:grid-cols-4 lg:gap-6">
             {[
               {
                 number: "01",
@@ -282,15 +293,15 @@ export default function ProjectsPage() {
             ].map((item) => (
               <div
                 key={item.number}
-                className="flex flex-col gap-3 border border-[rgba(255,255,255,0.1)] p-6"
+                className="flex flex-col gap-2 border border-[rgba(255,255,255,0.1)] p-5 sm:gap-3 sm:p-6"
               >
-                <span className="text-[40px] font-black leading-[50px] text-[rgba(255,255,255,0.6)]">
+                <span className="text-[28px] font-black leading-[36px] text-[rgba(255,255,255,0.6)] sm:text-[34px] sm:leading-[42px] lg:text-[40px] lg:leading-[50px]">
                   {item.number}
                 </span>
-                <h3 className="text-[18px] font-semibold leading-[23px] text-white">
+                <h3 className="text-[16px] font-semibold leading-[20px] text-white sm:text-[17px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
                   {item.title}
                 </h3>
-                <p className="text-[12px] leading-[15px] text-[#B3B3B3]">
+                <p className="text-[11px] leading-[14px] text-[#B3B3B3] sm:text-[11.5px] sm:leading-[14.5px] lg:text-[12px] lg:leading-[15px]">
                   {item.desc}
                 </p>
               </div>
@@ -299,7 +310,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Contact */}
+      {/* ──────── CONTACT ──────── */}
       <Contact number="ENQUIRE" serviceTitle="Your Next" />
     </main>
   );

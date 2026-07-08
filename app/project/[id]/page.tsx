@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { getProjectBySlug } from "@/mockData/projects";
 import ProjectHero from "@/components/services/detail/ProjectHero";
+import StatsBar from "@/components/projects/detail/StatsBar";
 import Challenge from "@/components/projects/detail/Challenge";
 import Approach from "@/components/projects/detail/Approach";
 import Results from "@/components/projects/detail/Results";
@@ -29,6 +30,8 @@ export default function ProjectDetailPage() {
         title={project.heroTitle}
         subtitle={project.title}
       />
+
+      <StatsBar stats={project.stats} />
 
       <Challenge
         number={project.aboutNumber}
