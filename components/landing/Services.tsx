@@ -57,7 +57,7 @@ export default function Services() {
   const router = useRouter();
 
   return (
-    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-20">
+    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-32.5">
       <div className="">
         {/* Frame 120 — header */}
         <div className="flex w-full flex-col gap-6 lg:w-[481px] lg:gap-[30px]">
