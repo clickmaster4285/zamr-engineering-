@@ -117,8 +117,8 @@ export default function Navbar() {
               : "-translate-y-2 opacity-0 pointer-events-none"
           } ${
             scrolled
-              ? "bg-white border-[var(--border-light)]"
-              : "bg-[var(--bg-hero)]/95 border-white/10"
+              ? "bg-primary border-white/10"
+              : "bg-[var(--bg-hero)] border-white/10"
           }`}
         >
           <div className="flex flex-col items-center gap-6">
@@ -130,9 +130,7 @@ export default function Navbar() {
                 className={`whitespace-nowrap text-sm font-medium uppercase transition-colors duration-300 ${
                   pathname === link.href
                     ? "text-[var(--color-secondary)]"
-                    : scrolled
-                      ? "text-[var(--text-dark)] hover:text-[var(--color-secondary)]"
-                      : "text-white/90 hover:text-[var(--color-secondary)]"
+                    : "text-white hover:text-[var(--color-secondary)]"
                 }`}
               >
                 {link.label}
@@ -144,11 +142,7 @@ export default function Navbar() {
                 closeMenu();
                 router.push("/");
               }}
-              className={`whitespace-nowrap border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors duration-300 ${
-                scrolled
-                  ? "border-[var(--text-dark)] text-[var(--text-dark)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)]"
-                  : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
-              }`}
+              className="whitespace-nowrap border border-white px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] text-white transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)]"
             >
               CONTACT
             </button>
