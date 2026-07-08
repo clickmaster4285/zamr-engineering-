@@ -89,7 +89,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => router.push("/")}
-            className={`ml-auto hidden  items-center justify-center border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors duration-300 lg:flex text-white`}
+            className="ml-auto hidden items-center justify-center border border-white px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] text-white transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)] lg:flex"
             style={{ height: "50px" }}
           >
             CONTACT
