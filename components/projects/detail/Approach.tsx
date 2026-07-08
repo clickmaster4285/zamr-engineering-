@@ -12,7 +12,7 @@ interface Props {
 
 export default function Approach({ number, heading, steps }: Props) {
   return (
-    <section className="w-full bg-[#07183D] px-6 py-16 text-white lg:p-[130px]">
+    <section className="w-full bg-[var(--bg-hero)] px-6 py-16 text-white lg:p-[130px]">
       <div className="mx-auto max-w-[1468px]">
         <div className="flex flex-col gap-7">
           <div className="flex items-center gap-4">
@@ -34,15 +34,15 @@ export default function Approach({ number, heading, steps }: Props) {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex flex-col gap-3 border-b border-[rgba(255,255,255,0.08)] p-6 even:border-l even:md:border-l"
+              className="flex flex-col gap-3 border-b border-white/8 p-6 even:border-l even:md:border-l"
             >
-              <span className="text-[40px] font-black leading-[50px] text-[rgba(255,255,255,0.6)]">
+              <span className="text-[40px] font-black leading-[50px] text-white/60">
                 {step.number}
               </span>
               <h3 className="text-[18px] font-semibold leading-[23px] text-white">
                 {step.title}
               </h3>
-              <p className="text-[12px] leading-[15px] text-[#B3B3B3]">
+              <p className="text-[12px] leading-[15px] text-[var(--color-text-light-subtle)]">
                 {step.description}
               </p>
             </div>

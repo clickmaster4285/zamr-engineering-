@@ -6,12 +6,12 @@ import { useEffect, useRef, useState } from "react";
 type TeamType = "technical" | "operational" | "external";
 
 const COLORS: Record<TeamType, string> = {
-  technical: "#2C70B9",
-  operational: "#4CAFEA",
-  external: "#B7C5E4",
+  technical: "var(--color-blue-struct-tech)",
+  operational: "var(--color-blue-struct-ops)",
+  external: "var(--color-blue-struct-ext)",
 };
 
-const LINE = "#007CD9";
+const LINE = "var(--color-blue-struct-line)";
 
 const legend = [
   { label: "Technical Team", color: COLORS.technical },
@@ -139,7 +139,7 @@ function OrgBox({ box }: { box: BoxData }) {
         width: box.width,
         height: box.height,
         background: COLORS[box.type],
-        color: "#FFFFFF",
+        color: "white",
       }}
     >
       <div
@@ -170,7 +170,7 @@ function SubHeader({ s }: { s: SubHeaderData }) {
         width: s.width,
         height: subH,
         background: COLORS[s.type],
-        color: "#FFFFFF",
+        color: "white",
       }}
     >
       <span
@@ -193,7 +193,7 @@ function NameCard({ card }: { card: NameCardData }) {
         width: card.width,
         height: card.height,
         background: COLORS[card.type],
-        color: "#FFFFFF",
+        color: "white",
       }}
     >
       <div
@@ -281,10 +281,10 @@ export default function Structure() {
                 >
                   03
                 </span>
-                <span className="h-px w-[104px] bg-black" />
+                <span className="h-px w-[104px] bg-[var(--text-dark)]" />
                 <span
                   className="font-medium leading-5 tracking-[3px] uppercase"
-                  style={{ fontSize: 16, color: "#333333" }}
+                  style={{ fontSize: 16, color: "var(--text-dark)" }}
                 >
                   STRUCTURE
                 </span>
@@ -292,7 +292,7 @@ export default function Structure() {
 
               <h2
                 className="w-full font-bold leading-[55px]"
-                style={{ fontSize: 44, color: "#333333", fontFeatureSettings: "'liga' off" }}
+                style={{ fontSize: 44, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
               >
                 Organizational
                 <br />
@@ -317,7 +317,7 @@ export default function Structure() {
                   />
                   <span
                     className="font-normal leading-[30px]"
-                    style={{ fontSize: 24, color: "#333333", fontFeatureSettings: "'liga' off" }}
+                    style={{ fontSize: 24, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
                   >
                     {item.label}
                   </span>
@@ -393,7 +393,7 @@ export default function Structure() {
                 width: subc.width,
                 height: subc.height,
                 background: COLORS.external,
-                color: "#FFFFFF",
+                color: "white",
               }}
             >
               <span className="font-medium leading-[150%]" style={{ fontSize: 24, letterSpacing: "-0.019em" }}>

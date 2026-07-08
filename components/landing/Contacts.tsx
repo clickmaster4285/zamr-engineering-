@@ -32,7 +32,7 @@ export default function Contact() {
               <span className="text-base font-medium tracking-[0.2em] text-[var(--color-primary)]">
                 05
               </span>
-              <span className="h-px w-24 bg-black" />
+              <span className="h-px w-24 bg-[var(--text-dark)]" />
               <span className="text-base font-medium tracking-[0.2em] text-[var(--text-dark)]">
                 CONTACT
               </span>
@@ -43,18 +43,18 @@ export default function Contact() {
               Exceptional.
             </h2>
 
-            <div className="space-y-5 text-lg text-[#333333]">
+            <div className="space-y-5 text-lg text-[var(--text-dark)]">
               <p>
-                <span className="text-[#2B439B]">Company Name: </span> ZAMR Engineering Pty Ltd
+                <span className="text-[var(--color-blue-label)]">Company Name: </span> ZAMR Engineering Pty Ltd
               </p>
               <p>
-                <span className="text-[#2B439B]"> Address 1:</span> 30 Smith Street Wentworthville NSW, 2145
+                <span className="text-[var(--color-blue-label)]"> Address 1:</span> 30 Smith Street Wentworthville NSW, 2145
               </p>
               <p>
-                <span className="text-[#2B439B]"> Address 2:</span> L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150
+                <span className="text-[var(--color-blue-label)]"> Address 2:</span> L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150
               </p>
               <p>
-               <span className="text-[#2B439B]">  Email:{" "}</span>
+               <span className="text-[var(--color-blue-label)]">  Email:{" "}</span>
                 <a
                   href="mailto:admin@zamrengineering.com.au"
                   className="transition-all hover:underline"
@@ -63,7 +63,7 @@ export default function Contact() {
                 </a>
               </p>
               <p>
-                <span className="text-[#2B439B]"> Email:{" "}</span>
+                <span className="text-[var(--color-blue-label)]"> Email:{" "}</span>
                 <a
                   href="mailto:khalid.javed@zamrengineering.com.au"
                   className="transition-all hover:underline"
@@ -93,7 +93,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-7">
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
               <div>
-                <label htmlFor="name" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[#9AA3B0]">
+                <label htmlFor="name" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[var(--color-text-label)]">
                   NAME
                 </label>
                 <input
@@ -103,11 +103,11 @@ export default function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="John Smith"
-                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[#9AA3B0]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
+                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[#9AA3B0]">
+                <label htmlFor="email" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[var(--color-text-label)]">
                   EMAIL
                 </label>
                 <input
@@ -117,12 +117,12 @@ export default function Contact() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="you@company.com.au"
-                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[#9AA3B0]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
+                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="subject" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[#9AA3B0]">
+              <label htmlFor="subject" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[var(--color-text-label)]">
                 SUBJECT
               </label>
               <input
@@ -132,11 +132,11 @@ export default function Contact() {
                 value={form.subject}
                 onChange={handleChange}
                 placeholder="Project enquiry"
-                className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[#9AA3B0]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
+                className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
               />
             </div>
             <div>
-              <label htmlFor="message" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[#9AA3B0]">
+              <label htmlFor="message" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[var(--color-text-label)]">
                 MESSAGE
               </label>
               <textarea
@@ -146,7 +146,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Tell us about your project..."
-                className="w-full resize-none border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[#9AA3B0]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
+                className="w-full resize-none border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
               />
             </div>
             <button

@@ -6,7 +6,7 @@ interface Props {
 
 export default function DeliveryProcess({ number, heading, processSteps }: Props) {
   return (
-    <section className="w-full bg-[#07183D] px-6 py-16 text-white lg:p-[130px]">
+    <section className="w-full bg-[var(--bg-hero)] px-6 py-16 text-white lg:p-[130px]">
       <div className="mx-auto max-w-[1468px]">
         <div className="flex w-[441px] max-w-full flex-col gap-7">
           <div className="flex items-center gap-4">
@@ -28,15 +28,15 @@ export default function DeliveryProcess({ number, heading, processSteps }: Props
           {processSteps.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col gap-3 border-b border-l border-[rgba(255,255,255,0.08)] p-6"
+              className="flex flex-col gap-3 border-b border-l border-white/8 p-6"
             >
-              <span className="text-[40px] font-black leading-[50px] text-[rgba(255,255,255,0.6)]">
+              <span className="text-[40px] font-black leading-[50px] text-white/60">
                 {item.number}
               </span>
               <h3 className="text-[18px] font-semibold leading-[23px] text-white">
                 {item.title}
               </h3>
-              <p className="text-[12px] leading-[15px] text-[#B3B3B3]">
+              <p className="text-[12px] leading-[15px] text-[var(--color-text-light-subtle)]">
                 {item.description}
               </p>
             </div>

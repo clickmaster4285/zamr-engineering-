@@ -41,7 +41,7 @@ export default function WhyZamr() {
               <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
                 04
               </span>
-              <span className="h-px w-[104px] bg-black" />
+              <span className="h-px w-[104px] bg-[var(--text-dark)]" />
               <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
                 WHY ZAMR ENGINEERING
               </span>

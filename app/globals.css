@@ -6,30 +6,83 @@
 
 :root {
 
-  /* ZAMR Color Scheme — all colors stored here in oklch, referenced via var() everywhere */
+  /* ════════════════════════════════════════════
+     ZAMR Color Scheme — PRIMARY COLORS
+     ════════════════════════════════════════════
+     Blue   #132044  — Primary (buttons, headings, links, section numbers)
+     Yellow #c0954f  — Secondary accent (navbar hover/active)
+     White  #ffffff  — Background
+     All values in oklch for consistency.
+     ════════════════════════════════════════════ */
+
   --color-primary: oklch(0.254 0.07 266.5);
   --color-primary-hover: oklch(0.226 0.061 265.4);
   --color-secondary: oklch(0.696 0.102 78);
   --color-secondary-light: oklch(0.785 0.091 75.7);
 
-  /* Compatibility — accent vars now point to secondary yellow */
+  /* Accent aliases — point to yellow secondary */
   --color-accent: var(--color-secondary);
   --color-accent-light: var(--color-secondary-light);
 
-  /* Backgrounds */
+  /* ════════════════════════════════════════════
+     BLUE VARIANTS (derived from primary #132044)
+     ════════════════════════════════════════════ */
+  --color-blue-accent: oklch(0.296 0.101 268.4);    /* #1945A7 — section numbers, tags, metrics */
+  --color-blue-header: oklch(0.266 0.104 268.1);    /* #22419E — header bars, chart primary */
+  --color-blue-label: oklch(0.287 0.102 267.8);     /* #2B439B — contact info labels */
+  --color-chart-bar-1: oklch(0.408 0.157 268.2);    /* #3157CB */
+  --color-chart-bar-2: oklch(0.491 0.167 267.5);    /* #3E70DB */
+  --color-chart-bar-3: oklch(0.555 0.157 268.4);    /* #517BEB */
+  --color-chart-bar-4: oklch(0.61 0.127 266.8);     /* #6791EF */
+  --color-blue-struct-tech: oklch(0.48 0.115 261.5);  /* #2C70B9 - org chart technical */
+  --color-blue-struct-ops: oklch(0.675 0.115 246.7);  /* #4CAFEA - org chart operational */
+  --color-blue-struct-ext: oklch(0.782 0.045 259.7);  /* #B7C5E4 - org chart external */
+  --color-blue-struct-line: oklch(0.478 0.156 250.4); /* #007CD9 - org chart connector lines */
+
+  /* ════════════════════════════════════════════
+     BACKGROUNDS
+     ════════════════════════════════════════════ */
   --bg-light: oklch(0.979 0.006 264.4);
   --bg-light-alt: oklch(0.985 0.003 264.4);
   --bg-hero: oklch(0.159 0.042 264.8);
+  --bg-section: oklch(0.97 0.004 264.4);       /* #F6F8FC — section backgrounds */
+  --bg-card: oklch(0.956 0.005 264.4);          /* #EFF4FC — card backgrounds */
+  --bg-hover: oklch(0.976 0.002 264.4);         /* #F9FAFC — hover state */
 
-  /* Text Colors */
+  /* ════════════════════════════════════════════
+     TEXT COLORS
+     ════════════════════════════════════════════ */
   --text-dark: oklch(0.321 0 0);
   --text-muted: oklch(0.417 0 0);
   --text-light: oklch(0.757 0 0);
   --text-contact: oklch(0.254 0.07 266.5);
+  --text-heading: oklch(0.105 0.016 264.2);      /* #090D15 — very dark headings */
+  --text-paragraph: oklch(0.285 0.023 258.3);    /* #344153 — paragraph text */
+  --text-soft: oklch(0.487 0.022 258.3);         /* #697281 — muted body text */
+  --text-label: oklch(0.649 0.022 258.3);        /* #9AA3B0 — form labels */
+  --text-light-subtle: oklch(0.72 0 0);           /* #B3B3B3 — light text on dark */
 
-  /* Borders */
+  /* ════════════════════════════════════════════
+     IMAGE OVERLAYS (non-hero images)
+     ════════════════════════════════════════════
+     Usage:
+       Default:  bg-[var(--overlay-image-default)]
+       On hover: hover:bg-[var(--overlay-image-hover)]
+     ════════════════════════════════════════════ */
+  --overlay-image-default: oklch(0 0 0 / 0.3);      /* black 30% — darkens images for text readability */
+  --overlay-image-hover: oklch(0.254 0.07 266.5 / 0.5);  /* primary blue 50% — blue tint on hover */
+
+  /* ════════════════════════════════════════════
+     BORDERS
+     ════════════════════════════════════════════ */
   --border-light: oklch(0.937 0 0);
   --border-input: oklch(0.254 0.07 266.5 / 0.18);
+  --border-section: oklch(0.925 0 0);             /* #EAEAEA */
+  --border-table: oklch(0.951 0.004 264.4);       /* #EEF0F8 */
+
+  /* ════════════════════════════════════════════
+     SHADCN / DEFAULT VARS (unchanged)
+     ════════════════════════════════════════════ */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -68,7 +121,7 @@
   --color-background: oklch(1 0 0);
   --color-foreground: oklch(0.205 0 0);
 
-  /* Primary colors */
+  /* ═══ Primary colors ═══ */
   --color-primary: oklch(0.254 0.07 266.5);
   --color-primary-hover: oklch(0.226 0.061 265.4);
   --color-secondary: oklch(0.696 0.102 78);
@@ -76,22 +129,45 @@
   --color-accent: oklch(0.696 0.102 78);
   --color-accent-light: oklch(0.785 0.091 75.7);
 
-  /* Backgrounds */
+  /* ═══ Blue variants ═══ */
+  --color-blue-accent: oklch(0.296 0.101 268.4);
+  --color-blue-header: oklch(0.266 0.104 268.1);
+  --color-blue-label: oklch(0.287 0.102 267.8);
+  --color-chart-bar-1: oklch(0.408 0.157 268.2);
+  --color-chart-bar-2: oklch(0.491 0.167 267.5);
+  --color-chart-bar-3: oklch(0.555 0.157 268.4);
+  --color-chart-bar-4: oklch(0.61 0.127 266.8);
+  --color-blue-struct-tech: oklch(0.48 0.115 261.5);
+  --color-blue-struct-ops: oklch(0.675 0.115 246.7);
+  --color-blue-struct-ext: oklch(0.782 0.045 259.7);
+  --color-blue-struct-line: oklch(0.478 0.156 250.4);
+
+  /* ═══ Backgrounds ═══ */
   --color-bg-light: oklch(0.979 0.006 264.4);
   --color-bg-light-alt: oklch(0.985 0.003 264.4);
   --color-bg-hero: oklch(0.159 0.042 264.8);
+  --color-bg-section: oklch(0.97 0.004 264.4);
+  --color-bg-card: oklch(0.956 0.005 264.4);
+  --color-bg-hover: oklch(0.976 0.002 264.4);
 
-  /* Text */
+  /* ═══ Text ═══ */
   --color-text-dark: oklch(0.321 0 0);
   --color-text-muted: oklch(0.417 0 0);
   --color-text-light: oklch(0.757 0 0);
   --color-text-contact: oklch(0.254 0.07 266.5);
+  --color-text-heading: oklch(0.105 0.016 264.2);
+  --color-text-paragraph: oklch(0.285 0.023 258.3);
+  --color-text-soft: oklch(0.487 0.022 258.3);
+  --color-text-label: oklch(0.649 0.022 258.3);
+  --color-text-light-subtle: oklch(0.72 0 0);
 
-  /* Borders */
+  /* ═══ Borders ═══ */
   --color-border-light: oklch(0.937 0 0);
   --color-border-input: oklch(0.254 0.07 266.5 / 0.18);
+  --color-border-section: oklch(0.925 0 0);
+  --color-border-table: oklch(0.951 0.004 264.4);
 
-  /* Fonts */
+  /* ═══ Fonts ═══ */
   --font-sans: var(--font-sans);
   --font-mono: var(--font-outfit);
   --font-heading: var(--font-sans);

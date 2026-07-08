@@ -18,7 +18,7 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
         className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-[#07183D]/80" />
+      <div className="absolute inset-0 bg-[var(--bg-hero)]/80" />
 
       <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 sm:pb-12
                       lg:bottom-auto lg:left-[130px] lg:right-auto lg:w-[933px] lg:px-0 lg:pb-0
@@ -30,7 +30,7 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
                          lg:text-[80px] lg:leading-[101px]">
             {title}
           </h1>
-          <p className="font-medium text-[#B0B0B0]
+          <p className="font-medium text-[var(--color-text-light-subtle)]
                         text-sm
                         sm:text-base
                         lg:text-lg lg:leading-[23px]">

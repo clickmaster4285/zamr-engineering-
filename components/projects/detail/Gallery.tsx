@@ -12,16 +12,16 @@ export default function Gallery({ number, heading, images }: Props) {
       <div className="mx-auto max-w-[1468px]">
         <div className="flex flex-col gap-7">
           <div className="flex items-center gap-4">
-            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[#1945A7]">
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
               {number}
             </span>
-            <span className="h-px w-[104px] bg-black" />
-            <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[#333333]">
+            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-dark)]">
               GALLERY
             </span>
           </div>
 
-          <h2 className="text-[44px] font-bold leading-[55px] text-[#090D15]">
+          <h2 className="text-[44px] font-bold leading-[55px] text-[var(--text-heading)]">
             {heading}
           </h2>
         </div>

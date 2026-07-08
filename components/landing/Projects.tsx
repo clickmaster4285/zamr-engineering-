@@ -25,25 +25,25 @@ type Project = {
 const projects: Project[] = [
   {
     index: "01",
-    title: "Western Sydney Infrastructure Corridor",
-    category: "Urban Infrastructure",
-    image: "/images/image1.jpeg",
-    slug: "western-sydney-infrastructure-corridor",
-  },
-  {
-    index: "02",
     title: "Metropolitan Bridge Rehabilitation",
     category: "Urban Infrastructure",
     image: "/images/image3.jpeg",
     slug: "metropolitan-bridge-rehabilitation",
   },
   {
-    index: "03",
+    index: "02",
     title: "Hunter Valley Renewable Energy Hub",
     category: "Urban Infrastructure",
     image: "/images/image2.jpeg",
     slug: "hunter-valley-renewable-energy-hub",
   },
+  {
+    index: "03",
+    title: "Western Sydney Infrastructure Corridor",
+    category: "Urban Infrastructure",
+    image: "/images/image1.jpeg",
+    slug: "western-sydney-infrastructure-corridor",
+  }
 ];
 
 const projectDescriptions: Record<string, string> = {
@@ -124,14 +124,9 @@ function ProjectCard({
           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
 
-        {/* Gradient overlay — Figma spec */}
+        {/* Gradient overlay */}
         <div
-          className="absolute inset-0"
-          style={{
-            background: isLarge
-              ? "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
-              : "linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%)",
-          }}
+          className={`absolute inset-0  bg-[var(--overlay-image-default)] ${!isLarge && " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]"}`}  
         />
 
         {/* Project index — top:50px left:50px */}
@@ -179,7 +174,7 @@ export default function Projects() {
                 <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
                   03
                 </span>
-                <span className="h-px w-[104px] bg-black" />
+                <span className="h-px w-[104px] bg-[var(--bg-hero)]" />
                 <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
                   PROJECTS
                 </span>
@@ -190,7 +185,7 @@ export default function Projects() {
             </div>
             <Link
               href="/projects"
-              className="flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity hover:opacity-70 sm:text-base"
+              className="flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity  sm:text-base"
             >
               ALL PROJECTS <ArrowRight size={24} />
             </Link>

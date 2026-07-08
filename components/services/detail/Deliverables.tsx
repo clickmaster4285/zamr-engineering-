@@ -13,20 +13,20 @@ export default function Deliverables({ number, heading, subtext, deliverables }:
       <div className="mx-auto grid max-w-[1468px] grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-[60px]">
         <div className="flex flex-col gap-[30px]">
           <div className="flex items-center gap-4">
-            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[#1945A7]">
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
               {number}
             </span>
-            <span className="h-px w-[104px] bg-black" />
-            <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[#333333]">
+            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-dark)]">
               DELIVERABLES
             </span>
           </div>
 
-          <h2 className="text-[56px] font-bold leading-[71px] text-[#333333]">
+          <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
             {heading}
           </h2>
 
-          <p className="text-[18px] leading-[23px] text-[#333333]">
+          <p className="text-[18px] leading-[23px] text-[var(--text-dark)]">
             {subtext}
           </p>
         </div>
@@ -35,12 +35,12 @@ export default function Deliverables({ number, heading, subtext, deliverables }:
           {deliverables.map((item, i) => (
             <div
               key={item}
-              className="flex items-center gap-4 border-b border-[#EEF0F8] py-5"
+              className="flex items-center gap-4 border-b border-[var(--color-border-table)] py-5"
             >
               <span className="flex shrink-0 items-center justify-center ">
                 <Image src="/icons/tick.svg" alt="" width={20} height={22} />
               </span>
-              <span className="text-[15px] leading-[18px] text-[#333333]">
+              <span className="text-[15px] leading-[18px] text-[var(--text-dark)]">
                 {item}
               </span>
             </div>

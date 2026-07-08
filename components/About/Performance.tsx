@@ -31,11 +31,11 @@ interface StatDatum {
   value: string;
 }
 const revenueByService: ServiceDatum[] = [
-  { name: "Civil Engineering", value: 4.27, color: "#22419E" },
-  { name: "Road Infrastructure", value: 3.17, color: "#3157CB" },
-  { name: "Project Verification", value: 2.17, color: "#3E70DB" },
-  { name: "Renewable Energy", value: 1.18, color: "#517BEB" },
-  { name: "TfNSW Compliance", value: 0.68, color: "#6791EF" },
+  { name: "Civil Engineering", value: 4.27, color: "var(--color-blue-header)" },
+  { name: "Road Infrastructure", value: 3.17, color: "var(--color-chart-bar-1)" },
+  { name: "Project Verification", value: 2.17, color: "var(--color-chart-bar-2)" },
+  { name: "Renewable Energy", value: 1.18, color: "var(--color-chart-bar-3)" },
+  { name: "TfNSW Compliance", value: 0.68, color: "var(--color-chart-bar-4)" },
 ];
 const growthTrend: TrendDatum[] = [
   { year: "FY21", value: 5.0 },
@@ -60,12 +60,12 @@ export default function RevenuePerformanceSection() {
             <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
               04
             </span>
-            <span className="h-px w-[104px] bg-black" />
-            <span className="text-base font-medium tracking-[3px] uppercase text-[#333333]">
+            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+            <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
               PERFORMANCE
             </span>
           </div>
-          <h2 className="text-[32px] font-bold leading-[40px] text-[#333333] sm:text-[38px] sm:leading-[46px] lg:text-[44px] lg:leading-[55px]">
+          <h2 className="text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[38px] sm:leading-[46px] lg:text-[44px] lg:leading-[55px]">
             Revenue &amp; Performance
           </h2>
         </div>
@@ -74,7 +74,7 @@ export default function RevenuePerformanceSection() {
           {/* Left — bar chart */}
           <div className="flex w-full flex-1 flex-col">
             <p
-              className="text-[10px] font-bold leading-[15px] tracking-[1.8px] text-[#22419E]"
+              className="text-[10px] font-bold leading-[15px] tracking-[1.8px] text-[var(--color-blue-header)]"
               style={{ fontFamily: barlow.style.fontFamily }}
             >
               REVENUE BY SERVICE — FY2024 ($M)
@@ -90,7 +90,7 @@ export default function RevenuePerformanceSection() {
                   <CartesianGrid
                     horizontal={false}
                     vertical={true}
-                    stroke="rgba(34,65,158,0.08)"
+                    stroke="color-mix(in srgb, var(--color-primary) 8%, transparent)"
                     strokeDasharray="1 4"
                   />
                   <XAxis
@@ -100,10 +100,10 @@ export default function RevenuePerformanceSection() {
                     tickFormatter={(v) => `$${v}M`}
                     tick={{
                       fontSize: 10,
-                      fill: "#9AA3B0",
+                      fill: "var(--color-text-label)",
                       fontFamily: barlow.style.fontFamily,
                     }}
-                    axisLine={{ stroke: "rgba(34,65,158,0.08)" }}
+                    axisLine={{ stroke: "color-mix(in srgb, var(--color-primary) 8%, transparent)" }}
                     tickLine={false}
                   />
                   <YAxis
@@ -111,7 +111,7 @@ export default function RevenuePerformanceSection() {
                     dataKey="name"
                     tick={{
                       fontSize: 12,
-                      fill: "#344153",
+                      fill: "var(--text-paragraph)",
                       fontWeight: 700,
                       fontFamily: barlow.style.fontFamily,
                     }}
@@ -120,7 +120,7 @@ export default function RevenuePerformanceSection() {
                     width={110}
                   />
                   <Tooltip
-                    cursor={{ fill: "rgba(0,0,0,0.03)" }}
+                    cursor={{ fill: "color-mix(in srgb, black 3%, transparent)" }}
                     formatter={(value: unknown) => [
                       `$${Number(value).toFixed(1)}M`,
                       "Revenue",
@@ -143,7 +143,7 @@ export default function RevenuePerformanceSection() {
                     style={{ backgroundColor: s.color }}
                   />
                   <span
-                    className="text-[10px] leading-[15px] tracking-[0.6px] text-[#697281]"
+                    className="text-[10px] leading-[15px] tracking-[0.6px] text-[var(--color-text-soft)]"
                     style={{ fontFamily: barlow.style.fontFamily }}
                   >
                     {s.name}
@@ -155,7 +155,7 @@ export default function RevenuePerformanceSection() {
           {/* Right — area chart + stat boxes */}
           <div className="flex w-full flex-col lg:w-[548.5px] lg:shrink-0">
             <p
-              className="text-[10px] font-bold leading-[15px] tracking-[1.8px] text-[#22419E]"
+              className="text-[10px] font-bold leading-[15px] tracking-[1.8px] text-[var(--color-blue-header)]"
               style={{ fontFamily: barlow.style.fontFamily }}
             >
               REVENUE GROWTH — 4-YEAR TREND ($M)
@@ -170,29 +170,29 @@ export default function RevenuePerformanceSection() {
                     <linearGradient id="growthFill" x1="0" y1="0" x2="0" y2="1">
                       <stop
                         offset="0%"
-                        stopColor="#22419E"
+                        stopColor="var(--color-blue-header)"
                         stopOpacity={0.108}
                       />
                       <stop
                         offset="100%"
-                        stopColor="#22419E"
+                        stopColor="var(--color-blue-header)"
                         stopOpacity={0}
                       />
                     </linearGradient>
                   </defs>
                   <CartesianGrid
                     vertical={false}
-                    stroke="rgba(34,65,158,0.08)"
+                    stroke="color-mix(in srgb, var(--color-primary) 8%, transparent)"
                     strokeDasharray="1 4"
                   />
                   <XAxis
                     dataKey="year"
                     tick={{
                       fontSize: 10,
-                      fill: "#9AA3B0",
+                      fill: "var(--color-text-label)",
                       fontFamily: barlow.style.fontFamily,
                     }}
-                    axisLine={{ stroke: "rgba(34,65,158,0.08)" }}
+                    axisLine={{ stroke: "color-mix(in srgb, var(--color-primary) 8%, transparent)" }}
                     tickLine={false}
                   />
                   <YAxis
@@ -201,7 +201,7 @@ export default function RevenuePerformanceSection() {
                     tickFormatter={(v) => `$${v}M`}
                     tick={{
                       fontSize: 10,
-                      fill: "#9AA3B0",
+                      fill: "var(--color-text-label)",
                       fontFamily: barlow.style.fontFamily,
                     }}
                     axisLine={false}
@@ -217,12 +217,12 @@ export default function RevenuePerformanceSection() {
                   <Area
                     type="monotone"
                     dataKey="value"
-                    stroke="#22419E"
+                    stroke="var(--color-blue-header)"
                     strokeWidth={2}
                     fill="url(#growthFill)"
                     dot={{
                       r: 4,
-                      fill: "rgba(34,65,158,0.6)",
+                      fill: "color-mix(in srgb, var(--color-primary) 60%, transparent)",
                       strokeWidth: 0,
                     }}
                     activeDot={{ r: 6 }}
@@ -238,17 +238,17 @@ export default function RevenuePerformanceSection() {
                   className="flex flex-col items-start px-4 py-3"
                   style={{
                     background: "var(--bg-light)",
-                    border: "1px solid rgba(34,65,158,0.1)",
+                    border: "1px solid color-mix(in srgb, var(--color-primary) 10%, transparent)",
                   }}
                 >
                   <span
-                    className="text-[8.5px] leading-[13px] tracking-[1.275px] text-[#9AA3B0]"
+                    className="text-[8.5px] leading-[13px] tracking-[1.275px] text-[var(--color-text-label)]"
                     style={{ fontFamily: barlow.style.fontFamily }}
                   >
                     {s.label}
                   </span>
                   <span
-                    className="pt-[3px] text-[17px] font-extrabold leading-[26px] tracking-[-0.34px] text-[#22419E]"
+                    className="pt-[3px] text-[17px] font-extrabold leading-[26px] tracking-[-0.34px] text-[var(--color-blue-header)]"
                     style={{ fontFamily: barlow.style.fontFamily }}
                   >
                     {s.value}

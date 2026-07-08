@@ -32,16 +32,16 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
         <div className="flex w-full flex-col gap-[50px] lg:w-[555px]">
           <div className="flex w-full flex-col gap-[30px]">
             <div className="flex flex-row items-center gap-4">
-              <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[#1945A7]">
+              <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
                 {number}
               </span>
-              <span className="h-px w-[104px] bg-black" />
-              <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[#333333]">
+              <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+              <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-dark)]">
                 ENQUIRE ABOUT THIS SERVICE
               </span>
             </div>
 
-            <h2 className="w-full text-[32px] font-bold leading-[40px] text-[#333333] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
+            <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
               Start Your<br />
               {serviceTitle}<br />
               Project
@@ -54,13 +54,13 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
               review your enquiry and respond within 1&ndash;2 business days.
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-[#2B439B]">Office:</span>  Level 5, 123 Pitt Street, Sydney NSW 2000
+              <span className="text-[var(--color-blue-label)]">Office:</span>  Level 5, 123 Pitt Street, Sydney NSW 2000
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-[#2B439B]">Phone:</span> +61 2 9000 0000
+              <span className="text-[var(--color-blue-label)]">Phone:</span> +61 2 9000 0000
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-[#2B439B]">Email:</span> enquiries@zamrengineering.com.au
+              <span className="text-[var(--color-blue-label)]">Email:</span> enquiries@zamrengineering.com.au
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
             <div className="flex flex-1 flex-col gap-2">
               <label
                 htmlFor="name"
-                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[#9AA3B0]"
+                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--color-text-label)]"
               >
                 NAME
               </label>
@@ -84,14 +84,14 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
                 value={form.name}
                 onChange={handleChange}
                 placeholder="John Smith"
-                className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[#333333] placeholder-[rgba(105,114,129,0.5)] transition-colors focus:outline-none"
-                style={{ borderBottom: "1px solid rgba(34, 65, 158, 0.18)" }}
+                className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--color-text-soft)]/50 transition-colors focus:outline-none"
+                style={{ borderBottom: "1px solid var(--color-border-input)" }}
               />
             </div>
             <div className="flex flex-1 flex-col gap-2">
               <label
                 htmlFor="email"
-                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[#9AA3B0]"
+                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--color-text-label)]"
               >
                 EMAIL
               </label>
@@ -102,8 +102,8 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
                 value={form.email}
                 onChange={handleChange}
                 placeholder="you@company.com.au"
-                className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[#333333] placeholder-[rgba(105,114,129,0.5)] transition-colors focus:outline-none"
-                style={{ borderBottom: "1px solid rgba(34, 65, 158, 0.18)" }}
+                className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--color-text-soft)]/50 transition-colors focus:outline-none"
+                style={{ borderBottom: "1px solid var(--color-border-input)" }}
               />
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
           <div className="flex flex-col gap-2">
             <label
               htmlFor="subject"
-              className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[#9AA3B0]"
+              className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--color-text-label)]"
             >
               SUBJECT
             </label>
@@ -122,15 +122,15 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
               value={form.subject}
               onChange={handleChange}
               placeholder="Project enquiry"
-              className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[#333333] placeholder-[rgba(105,114,129,0.5)] transition-colors focus:outline-none"
-              style={{ borderBottom: "1px solid rgba(34, 65, 158, 0.18)" }}
+              className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--color-text-soft)]/50 transition-colors focus:outline-none"
+              style={{ borderBottom: "1px solid var(--color-border-input)" }}
             />
           </div>
 
           <div className="flex flex-col gap-2">
             <label
               htmlFor="message"
-              className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[#9AA3B0]"
+              className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--color-text-label)]"
             >
               PROJECT DETAILS
             </label>
@@ -141,14 +141,14 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
               value={form.message}
               onChange={handleChange}
               placeholder="Tell us about your project..."
-              className="w-full resize-none border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[#333333] placeholder-[rgba(105,114,129,0.5)] transition-colors focus:outline-none"
-              style={{ borderBottom: "1px solid rgba(34, 65, 158, 0.18)" }}
+              className="w-full resize-none border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--color-text-soft)]/50 transition-colors focus:outline-none"
+              style={{ borderBottom: "1px solid var(--color-border-input)" }}
             />
           </div>
 
           <button
             type="submit"
-            className="flex h-12 w-full items-center justify-center bg-[#1945A7] text-[16px] font-bold leading-5 tracking-[3px] text-white uppercase transition-all hover:bg-[var(--color-primary-hover)] active:scale-95"
+            className="flex h-12 w-full items-center justify-center bg-[var(--color-blue-accent)] text-[16px] font-bold leading-5 tracking-[3px] text-white uppercase transition-all hover:bg-[var(--color-primary-hover)] active:scale-95"
           >
             SUBMIT ENQUIRY
           </button>

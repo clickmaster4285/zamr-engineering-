@@ -35,15 +35,15 @@ export default function About() {
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
               01
             </span>
-            <span className="h-px w-12 bg-black sm:w-[104px]" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[#333333] lg:text-base">
+            <span className="h-px w-12 bg-[var(--text-dark)] sm:w-[104px]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">
               ABOUT US
             </span>
           </div>
 
           {/* Frame 119 — heading */}
           <div className="flex w-full flex-col items-start gap-[10px]">
-            <h2 className="w-full text-[36px] font-bold leading-[44px] text-[#333333] sm:text-[40px] sm:leading-[50px] lg:w-[352px] lg:text-[44px] lg:leading-[55px]">
+            <h2 className="w-full text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[40px] sm:leading-[50px] lg:w-[352px] lg:text-[44px] lg:leading-[55px]">
               Built on
               <br />
               Precision
@@ -58,7 +58,7 @@ export default function About() {
         <div className="flex w-full flex-col gap-6 lg:w-[989px] lg:gap-[30px]">
           {/* Frame 1321318989 — 3 paragraphs */}
           <div className="flex w-full flex-col gap-4 lg:gap-5">
-            <p className="w-full text-base leading-relaxed text-[#333333] lg:text-[20px] lg:leading-[25px]">
+            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
               ZAMR Engineering was founded in 2012 with a single conviction: that
               infrastructure should be engineered with uncompromising precision and
               long-term thinking. From a modest two-person consultancy, we have
@@ -66,7 +66,7 @@ export default function About() {
               firms, delivering over 150 projects across road, civil, energy, and
               compliance disciplines.
             </p>
-            <p className="w-full text-base leading-relaxed text-[#333333] lg:text-[20px] lg:leading-[25px]">
+            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
               Our team of 45 engineers, project managers, and compliance
               specialists operates across NSW, Queensland, and Victoria —
               partnering with government agencies, private developers, and
@@ -74,7 +74,7 @@ export default function About() {
               accreditations with TfNSW, Infrastructure NSW, and the Australian
               Institute of Engineers.
             </p>
-            <p className="w-full text-base leading-relaxed text-[#333333] lg:text-[20px] lg:leading-[25px]">
+            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
               We believe the best engineering is invisible — infrastructure that
               simply works, year after year, without incident. Every project we
               take on is guided by this philosophy: rigorous analysis, precise
@@ -83,7 +83,7 @@ export default function About() {
           </div>
 
           {/* Divider */}
-          <div className="h-px w-full border-t border-[#333333]" />
+          <div className="h-px w-full border-t border-[var(--text-dark)]" />
 
           {/* Frame 1321318988 — 3 pillars */}
           <div className="flex w-full flex-col gap-6 sm:flex-row sm:items-center sm:gap-[30px]">
@@ -95,7 +95,7 @@ export default function About() {
                 <h3 className="text-2xl font-normal leading-[30px] text-[var(--color-primary)] sm:text-[28px] sm:leading-[36px] lg:text-[32px] lg:leading-[40px]">
                   {pillar.title}
                 </h3>
-                <p className="text-sm font-light leading-5 text-[#333333] sm:text-base lg:text-[16px] lg:leading-[20px]">
+                <p className="text-sm font-light leading-5 text-[var(--text-dark)] sm:text-base lg:text-[16px] lg:leading-[20px]">
                   {pillar.description}
                 </p>
               </div>

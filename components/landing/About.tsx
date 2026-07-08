@@ -76,22 +76,22 @@ export default function About() {
             <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
               01
             </span>
-            <span className="h-px w-[104px] bg-black" />
-            <span className="text-base font-medium tracking-[3px] uppercase text-[#333333]">
+            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+            <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
               ABOUT US
             </span>
           </div>
 
           {/* Frame 119 — heading */}
           <div className="flex w-full flex-col items-start gap-[10px]">
-            <h2 className="w-full text-[40px] font-bold leading-[50px] text-[#333333] sm:text-[48px] sm:leading-[60px] lg:w-[344px] lg:text-[56px] lg:leading-[71px]">
+            <h2 className="w-full text-[40px] font-bold leading-[50px] text-[var(--text-dark)] sm:text-[48px] sm:leading-[60px] lg:w-[344px] lg:text-[56px] lg:leading-[71px]">
               Built on
               <br />
               Precision
               <br />
               &amp; Reliability
             </h2>
-            <span className="h-px w-[133px] border-t border-[var(--color-accent)]" />
+            <span className=" w-[133px] border-1 border-[var(--color-accent)]" />
           </div>
         </div>
 
@@ -99,14 +99,14 @@ export default function About() {
         <div className="flex w-full flex-col gap-6 lg:w-[989px] lg:gap-[30px]">
           {/* Frame 1321318989 — paragraphs */}
           <div className="flex w-full flex-col gap-5">
-            <p className="w-full text-base leading-relaxed text-[#333333] lg:text-[20px] lg:leading-[25px]">
+            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
               ZAMR Engineering is a Sydney-based civil engineering consultancy
               delivering precision-led infrastructure solutions across New
               South Wales and beyond. Founded on a commitment to technical
               excellence, we partner with government bodies, developers, and
               industry leaders to engineer infrastructure that endures.
             </p>
-            <p className="w-full text-base leading-relaxed text-[#333333] lg:text-[20px] lg:leading-[25px]">
+            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
               Our approach integrates rigorous engineering methodology with
               forward-looking design thinking — producing outcomes that are
               structurally sound, environmentally considered, and technically
@@ -116,7 +116,7 @@ export default function About() {
           </div>
 
           {/* Divider */}
-          <div className="h-px w-full border-t border-[#333333]" />
+          <div className="h-px w-full border-t border-[var(--text-dark)]" />
 
           {/* Frame 1321318988 — stats row */}
           <div className="flex w-full flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-x-8 lg:gap-x-[185px]">
@@ -140,7 +140,7 @@ export default function About() {
                     {stat.suffix}
                   </span>
                 </div>
-                <span className="text-sm font-light leading-5 text-[#333333] sm:text-base">
+                <span className="text-sm font-light leading-5 text-[var(--text-dark)] sm:text-base">
                   {stat.label}
                 </span>
               </div>

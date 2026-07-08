@@ -597,5 +597,5 @@ export const projects: ProjectData[] = [
 ];
 
 export function getProjectBySlug(slug: string): ProjectData | undefined {
-  return projects.find((p) => p.slug === slug);
+  return projects.find((p) => p.slug.toLocaleLowerCase() === slug.toLocaleLowerCase());
 }
