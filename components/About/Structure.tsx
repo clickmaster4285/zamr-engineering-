@@ -63,7 +63,7 @@ const nameCards: NameCardData[] = [
   { left: 98, top: 894, width: 211, height: 151, names: ["Kashif JKhan", "Yashwant Dyall", "Roland Ng"], type: "technical" },
   { left: 318, top: 894, width: 209, height: 151, names: ["Faraz Ahmed", "Thomas Chew", "Mark Shamoun"], type: "technical" },
   { left: 542, top: 894, width: 220, height: 151, names: ["Charles Waife", "Manhur Rahman", "Kirk Martinez"], type: "technical" },
-  { left: 791, top: 894, width: 197, height: 151, names: ["Moeen Rayyaan", "Saad Malik"], type: "technical" },
+  { left: 791, top: 894, width: 197, height: 151, names: ["Moeen","Rayyaan", "Saad Malik"], type: "technical" },
   { left: 1007, top: 894, width: 217, height: 151, names: ["Yashwant Dyall", "Janaka Bandara"], type: "operational" },
   { left: 1237, top: 894, width: 198, height: 151, names: ["Kah Yong Yan"], type: "operational" },
   { left: 1456, top: 894, width: 220, height: 151, names: ["Dante Vinces", "Arshad Mahmood", "Tanuj Kakkar"], type: "operational" },

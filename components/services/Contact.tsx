@@ -54,13 +54,13 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
               review your enquiry and respond within 1&ndash;2 business days.
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-[var(--color-blue-label)]">Office:</span>  Level 5, 123 Pitt Street, Sydney NSW 2000
+              <span className="text-primary">Office:</span>  Level 5, 123 Pitt Street, Sydney NSW 2000
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-[var(--color-blue-label)]">Phone:</span> +61 2 9000 0000
+              <span className="text-primary">Phone:</span> +61 2 9000 0000
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-[var(--color-blue-label)]">Email:</span> enquiries@zamrengineering.com.au
+              <span className="text-primary">Email:</span> enquiries@zamrengineering.com.au
             </p>
           </div>
         </div>
