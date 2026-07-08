@@ -192,7 +192,7 @@ export default function Projects() {
           </div>
 
           {/* Filter tabs */}
-          <div className="flex w-full gap-3 overflow-x-auto pb-2 lg:gap-4">
+          <div className="flex w-full flex-nowrap gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:overflow-visible lg:gap-4">
             {filters.map((filter) => {
               const isActive = filter === activeFilter;
               const isAll = filter === "ALL";
@@ -201,11 +201,11 @@ export default function Projects() {
                   key={filter}
                   type="button"
                   onClick={() => setActiveFilter(filter)}
-                  className={`whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm ${
+                  className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${
                     isActive
                       ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
                       : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                  } ${isAll ? "w-20 flex-none" : "flex-1 min-w-[120px]"}`}
+                  } ${isAll ? "w-20 lg:flex-none" : ""}`}
                 >
                   {filter}
                 </button>
