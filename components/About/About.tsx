@@ -27,7 +27,7 @@ export default function About() {
   return (
     <section className="w-full bg-[var(--bg-light)] px-6 py-16 lg:p-[130px]">
       {/* Frame 1321318991 — inner row */}
-      <div className="mx-auto flex max-w-[1476px] flex-col items-start gap-10 lg:flex-row lg:gap-[135px]">
+      <div className="flex flex-col items-start gap-10 lg:flex-row lg:gap-[135px]">
         {/* Frame 120 — left column */}
         <div className="flex w-full flex-col items-start gap-6 lg:w-[352px] lg:gap-[30px]">
           {/* Frame 118 — section label */}

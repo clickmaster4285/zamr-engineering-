@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 
 type Service = {
   index: string;
@@ -57,7 +58,7 @@ export default function Services() {
 
   return (
     <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-20">
-      <div className="mx-auto max-w-[1468px]">
+      <div className="">
         {/* Frame 120 — header */}
         <div className="flex w-full flex-col gap-6 lg:w-[481px] lg:gap-[30px]">
           <div className="flex flex-row items-center gap-4">
@@ -120,33 +121,15 @@ export default function Services() {
         </div>
 
         {/* CTA */}
-        <button
-          type="button"
-          className="mt-8 inline-flex  items-center gap-2 text-sm font-medium tracking-[3px] text-[var(--color-blue-accent)] transition-all lg:mt-[50px] lg:text-base"
-        >
-          REQUEST A CONSULTATION
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 12H19"
-              stroke="var(--color-blue-accent)"
-              strokeWidth="1.25"
-              strokeLinecap="round"
-            />
-            <path
-              d="M12 5L19 12L12 19"
-              stroke="var(--color-blue-accent)"
-              strokeWidth="1.25"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+        <div className="flex justify-start">
+  <button
+    type="button"
+    className="mt-8 inline-flex items-center gap-2 text-sm font-medium tracking-[3px] text-[var(--color-blue-accent)] transition-all lg:mt-[50px] lg:text-base"
+  >
+    REQUEST A CONSULTATION
+    <ArrowRight size={24} />
+  </button>
+</div>
       </div>
     </section>
   );

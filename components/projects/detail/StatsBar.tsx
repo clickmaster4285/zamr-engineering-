@@ -18,7 +18,7 @@ interface Props {
 export default function StatsBar({ stats }: Props) {
   return (
     <section className="w-full bg-[var(--bg-hero)]">
-      <div className="mx-auto flex max-w-[1468px] flex-wrap items-stretch px-6 lg:px-[130px]">
+      <div className="flex flex-wrap items-stretch px-6 lg:px-[130px]">
         {stats.map((stat, i) => (
           <div
             key={stat.label}

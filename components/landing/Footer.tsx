@@ -37,13 +37,13 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-0" />
 
       <div className="relative z-10 w-full px-6 py-12 lg:p-[130px]">
-        <div className="mx-auto flex max-w-[1468px] flex-col gap-8 lg:gap-[30px]">
+        <div className="flex flex-col gap-8 lg:gap-[30px]">
           {/* Frame 60 — top row */}
           <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-[60px]">
             {/* Frame 55 — Logo + Description + Social */}
             <div className="flex w-full flex-col items-start gap-8 lg:w-[369px] lg:gap-[50px]">
               <Image
-                src="/images/zamarlogo.png"
+                src="/images/zamarlogoTransparant.png"
                 alt="ZAMR Engineering"
                 width={250}
                 height={150}

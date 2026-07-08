@@ -28,7 +28,7 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
 
   return (
     <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
-      <div className="mx-auto flex max-w-[1468px] flex-col gap-12 lg:flex-row lg:items-center lg:gap-[231px]">
+      <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-[231px]">
         <div className="flex w-full flex-col gap-[50px] lg:w-[555px]">
           <div className="flex w-full flex-col gap-[30px]">
             <div className="flex flex-row items-center gap-4">

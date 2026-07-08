@@ -165,7 +165,7 @@ export default function Projects() {
 
   return (
     <section className="w-screen bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
-      <div className="mx-auto flex max-w-[1468px] flex-col gap-10 lg:gap-[60px]">
+      <div className="flex flex-col gap-10 lg:gap-[60px]">
         <div className="flex flex-col gap-6 lg:gap-[30px]">
           {/* Title header */}
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">

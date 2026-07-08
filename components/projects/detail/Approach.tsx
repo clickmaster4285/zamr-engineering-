@@ -13,7 +13,7 @@ interface Props {
 export default function Approach({ number, heading, steps }: Props) {
   return (
     <section className="w-full bg-[var(--bg-hero)] px-6 py-16 text-white lg:p-[130px]">
-      <div className="mx-auto max-w-[1468px]">
+      <div className="">
         <div className="flex flex-col gap-7">
           <div className="flex items-center gap-4">
             <span className="text-[16px] font-medium leading-5 tracking-[3px] text-white">

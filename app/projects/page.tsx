@@ -1,391 +1,415 @@
 "use client";
-
-import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { ArrowRight } from "lucide-react";
-import { Barlow } from "next/font/google";
-import { projects } from "@/mockData/projects";
-import Contact from "@/components/services/Contact";
+import { useLayoutEffect, useRef, useState } from "react";
 
-const barlow = Barlow({
-  weight: ["500", "700", "900"],
-  subsets: ["latin"],
-  display: "swap",
-});
+type TeamType = "technical" | "operational" | "external";
 
-const filters = [
-  "ALL",
-  "Urban Infrastructure",
-  "Structural Engineering",
-  "Transportation Projects",
-  "Water & Irrigation Systems",
-  "Industrial Development",
+const COLORS: Record<TeamType, string> = {
+  technical: "var(--color-blue-struct-tech)",
+  operational: "var(--color-blue-struct-ops)",
+  external: "var(--color-blue-struct-ext)",
+};
+const LINE = "var(--color-blue-struct-line)";
+
+const legend = [
+  { label: "Technical Team", color: COLORS.technical },
+  { label: "Operational Team", color: COLORS.operational },
+  { label: "External Team", color: COLORS.external },
 ];
 
-const stats = [
-  { value: "$180M+", label: "TOTAL PROJECT VALUE DELIVERED" },
-  { value: "150+", label: "PROJECTS COMPLETED" },
-  { value: "3", label: "STATES OPERATING" },
-  { value: "2012", label: "DELIVERING SINCE" },
-];
+// --- Figma absolute-position data ---
+interface BoxData {
+  left: number; top: number; width: number; height: number;
+  title: string; subtitle?: string; type: TeamType;
+  fontSize?: number; fontWeight?: number;
+}
 
-const projectDescriptions: Record<string, string> = {
-  "01": "Western Sydney Infrastructure Corridor involved delivering comprehensive engineering support across the full corridor alignment, including bridge design, pavement engineering, and drainage solutions to transform connectivity in Western Sydney.",
+const md: BoxData = {
+  left: 754, top: 267, width: 271.8, height: 112.25,
+  title: "Managing Director", subtitle: "Khalid Javed", type: "operational",
+};
+const externalBoxes: BoxData[] = [
+  { left: 1259.12, top: 175, width: 264, height: 87, title: "Quality Support", subtitle: "Insaf Khan", type: "external" },
+  { left: 1259.12, top: 280, width: 264, height: 86, title: "Cost Estimating", subtitle: "Natesh Natraj", type: "external" },
+  { left: 1259.12, top: 386, width: 264, height: 85, title: "Contract Administration", subtitle: "Franca Bucci", type: "external" },
+];
+const dm: BoxData = {
+  left: 293, top: 607, width: 261.37, height: 116.26,
+  title: "Design Manager", subtitle: "Omar Faruqi", type: "technical",
+};
+const od: BoxData = {
+  left: 1199.03, top: 606.3, width: 274.2, height: 116.26,
+  title: "Operational Director", subtitle: "Khalid Javed", type: "operational",
 };
 
-function useInView(threshold = 0.15) {
-  const [inView, setInView] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const ref = useCallback(
-    (node: HTMLElement | null) => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-        observerRef.current = null;
-      }
-      if (!node) return;
-      observerRef.current = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setInView(true);
-            observerRef.current?.disconnect();
-          }
-        },
-        { threshold }
-      );
-      observerRef.current.observe(node);
-    },
-    [threshold]
-  );
-  useEffect(() => {
-    return () => observerRef.current?.disconnect();
-  }, []);
-  return { ref, inView };
+interface SubHeaderData {
+  left: number; top: number; width: number; title: string; type: TeamType;
+}
+const subHeaders: SubHeaderData[] = [
+  { left: 106, top: 782, width: 196.43, title: "Structure Design", type: "technical" },
+  { left: 329, top: 782, width: 188.64, title: "Civil Design", type: "technical" },
+  { left: 554.54, top: 787.31, width: 196.43, title: "Traffic Management", type: "technical" },
+  // NOTE: "Assest Management" matches a typo present in the Figma source file.
+  // Change back to "Asset Management" if the typo should be corrected.
+  { left: 791.78, top: 787.98, width: 196.43, title: "Assest Management", type: "technical" },
+  { left: 1016.2, top: 787.98, width: 198.04, title: "Operational - Quality", type: "operational" },
+  { left: 1237.48, top: 787.98, width: 197.23, title: "Operation Safety", type: "operational" },
+  { left: 1467, top: 786, width: 198.04, title: "Project Management", type: "operational" },
+];
+const subH = 44.9;
+
+interface NameCardData {
+  left: number; top: number; width: number; height: number; names: string[]; type: TeamType;
+}
+const nameCards: NameCardData[] = [
+  { left: 98, top: 894, width: 211, height: 151, names: ["Kashif JKhan", "Yashwant Dyall", "Roland Ng"], type: "technical" },
+  { left: 318, top: 894, width: 209, height: 151, names: ["Faraz Ahmed", "Thomas Chew", "Mark Shamoun"], type: "technical" },
+  { left: 542, top: 894, width: 220, height: 151, names: ["Charles Waife", "Manhur Rahman", "Kirk Martinez"], type: "technical" },
+  // Fixed: this card is 3 separate name lines in Figma, not 2 combined ones.
+  { left: 791, top: 894, width: 197, height: 151, names: ["Moeen", "Rayyaan", "Saad Malik"], type: "technical" },
+  { left: 1007, top: 894, width: 217, height: 151, names: ["Yashwant Dyall", "Janaka Bandara"], type: "operational" },
+  { left: 1237, top: 894, width: 198, height: 151, names: ["Kah Yong Yan"], type: "operational" },
+  { left: 1456, top: 894, width: 220, height: 151, names: ["Dante Vinces", "Arshad Mahmood", "Tanuj Kakkar"], type: "operational" },
+];
+
+const subc = { left: 1099.38, top: 1111.84, width: 236.77, height: 61.25 };
+
+// --- Canvas dimensions (design size, in px) ---
+const DESIGN_WIDTH = 1680;
+const DESIGN_HEIGHT = 1273;
+
+// --- Helpers ---
+function cx(b: { left: number; width: number }) { return b.left + b.width / 2; }
+function cy(b: { top: number; height: number }) { return b.top + b.height / 2; }
+function bottom(b: { top: number; height: number }) { return b.top + b.height; }
+function right(b: { left: number; width: number }) { return b.left + b.width; }
+
+function VM(x: number, y1: number, y2: number) {
+  return `M${x},${y1} L${x},${y2}`;
+}
+function VHV(x1: number, y1: number, x2: number, y2: number, midY: number, r = 12) {
+  if (Math.abs(x2 - x1) < 1) return `M${x1},${y1} L${x2},${y2}`;
+  const dy1 = midY > y1 ? r : -r;
+  const dx = x2 > x1 ? r : -r;
+  const dy2 = y2 > midY ? r : -r;
+  return [
+    `M${x1},${y1}`,
+    `L${x1},${midY + dy1}`,
+    `Q${x1},${midY} ${x1 + dx},${midY}`,
+    `L${x2 - dx},${midY}`,
+    `Q${x2},${midY} ${x2},${midY + dy2}`,
+    `L${x2},${y2}`,
+  ].join(" ");
+}
+function HVH(x1: number, y1: number, x2: number, y2: number, midX: number, r = 12) {
+  const dx1 = midX > x1 ? r : -r;
+  const dy = y2 > y1 ? r : -r;
+  const dx2 = x2 > midX ? r : -r;
+  if (Math.abs(y2 - y1) < r * 2) return `M${x1},${y1} L${x2},${y2}`;
+  return [
+    `M${x1},${y1}`,
+    `L${midX + dx1},${y1}`,
+    `Q${midX},${y1} ${midX},${y1 + dy}`,
+    `L${midX},${y2 - dy}`,
+    `Q${midX},${y2} ${midX + dx2},${y2}`,
+    `L${x2},${y2}`,
+  ].join(" ");
 }
 
-function ProjectCard({
-  project,
-  isLarge = false,
-}: {
-  project: (typeof projects)[number];
-  isLarge?: boolean;
-}) {
-  const { ref, inView } = useInView();
-  const description = projectDescriptions[project.index];
-  const router = useRouter();
-
+function OrgBox({ box }: { box: BoxData }) {
+  const isLarge = (box.fontSize ?? 24) >= 24;
   return (
     <div
-      ref={ref}
-      onClick={() => router.push(`/project/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        inView
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-10 scale-95"
-      }`}
+      className="absolute flex flex-col items-center justify-center text-center overflow-hidden"
+      style={{
+        left: box.left,
+        top: box.top,
+        width: box.width,
+        height: box.height,
+        background: COLORS[box.type],
+        color: "white",
+      }}
     >
       <div
-        className={`relative w-full overflow-hidden ${
-          isLarge ? "h-[320px] sm:h-[400px] md:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
-        }`}
+        className="font-bold leading-tight px-2"
+        style={{ fontSize: isLarge ? 20 : 16, letterSpacing: "-0.019em" }}
       >
-        <Image
-          src={project.heroImage}
-          alt={project.title}
-          fill
-          sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
-        />
-
-        <div
-          className={`absolute inset-0 transition-colors duration-500 ease-in-out ${
-            isLarge
-              ? "bg-[var(--overlay-image-default)]"
-              : "bg-[var(--overlay-image-default)] transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]"
-          }`}
-        />
-
-        <span
-          className={`absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[800] tracking-[0.06em] text-white ${
-            isLarge ? "text-[34px] leading-[43px] md:text-[54px] md:leading-[68px]" : "text-[28px] leading-[36px] md:text-[34px] md:leading-[43px]"
-          }`}
-        >
-          {project.index}
-        </span>
-
-        <h3
-          className={`absolute left-[30px] bottom-[30px] md:left-[50px] md:bottom-[50px] font-semibold text-white text-[22px] leading-[28px] md:text-[28px] md:leading-[35px] ${
-            isLarge ? "md:group-hover:translate-y-[-70px] md:transition-transform md:duration-500 md:ease-in-out" : ""
-          }`}
-        >
-          {project.title}
-        </h3>
-
-        {isLarge && (
-          <div className="absolute bottom-0 left-0 right-0 translate-y-full px-[30px] pb-[30px] transition-transform duration-500 ease-in-out group-hover:translate-y-0 md:px-[50px] md:pb-[50px]">
-            <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white md:text-[16px] md:leading-[20px]">
-              {description}
-            </p>
-          </div>
-        )}
+        {box.title}
       </div>
+      {box.subtitle && (
+        <div
+          className="font-bold leading-tight px-2"
+          style={{ fontSize: isLarge ? 14 : 12, letterSpacing: "-0.011em" }}
+        >
+          {box.subtitle}
+        </div>
+      )}
     </div>
   );
 }
 
-function BottomCard({
-  project,
-}: {
-  project: (typeof projects)[number];
-}) {
-  const { ref, inView } = useInView();
-  const router = useRouter();
-
+function SubHeader({ s }: { s: SubHeaderData }) {
   return (
     <div
-      ref={ref}
-      onClick={() => router.push(`/project/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        inView
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-10 scale-95"
-      }`}
+      className="absolute flex items-center justify-center text-center overflow-hidden"
+      style={{
+        left: s.left,
+        top: s.top,
+        width: s.width,
+        height: subH,
+        background: COLORS[s.type],
+        color: "white",
+      }}
     >
-      <div className="relative w-full h-[280px] overflow-hidden sm:h-[320px] md:h-[340px]">
-        <Image
-          src={project.heroImage}
-          alt={project.title}
-          fill
-          sizes="(min-width: 768px) 478px, 100vw"
-          className="object-cover transition-transform duration-500 ease-in-out "
-        />
-        <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
+      <span
+        className="font-medium leading-tight px-1"
+        style={{ fontSize: 14, letterSpacing: "-0.019em" }}
+      >
+        {s.title}
+      </span>
+    </div>
+  );
+}
 
-        <span className="absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[700] text-white text-[24px] leading-[30px] md:text-[30px] md:leading-[38px]">
-          {project.index}
-        </span>
-
-        <h3 className="absolute left-[30px] bottom-[30px] font-semibold text-white text-[16px] leading-[20px] md:left-[50px] md:top-[269px] md:bottom-auto md:text-[18px] md:leading-[23px]">
-          {project.title}
-        </h3>
+function NameCard({ card }: { card: NameCardData }) {
+  return (
+    <div
+      className="absolute flex flex-col items-center justify-center text-center overflow-hidden"
+      style={{
+        left: card.left,
+        top: card.top,
+        width: card.width,
+        height: card.height,
+        background: COLORS[card.type],
+        color: "white",
+      }}
+    >
+      <div
+        className="font-medium leading-tight px-2"
+        style={{ fontSize: 16, letterSpacing: "-0.019em" }}
+      >
+        {card.names.map((n, i) => (
+          <span key={i}>
+            {n}
+            {i < card.names.length - 1 && <br />}
+          </span>
+        ))}
       </div>
     </div>
   );
 }
 
-export default function ProjectsPage() {
-  const [activeFilter, setActiveFilter] = useState("ALL");
-  const filteredProjects =
-    activeFilter === "ALL"
-      ? projects
-      : projects.filter((p) => p.category === activeFilter);
+export default function Structure() {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useLayoutEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+
+    const updateScale = (width: number) => {
+      const raw = width / DESIGN_WIDTH;
+      setScale(raw);
+    };
+
+    updateScale(el.getBoundingClientRect().width);
+
+    const ro = new ResizeObserver((entries) => {
+      updateScale(entries[0].contentRect.width);
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  // Center points for SVG connectors
+  const mdR = { x: right(md), y: cy(md) };
+  const mdB = { x: cx(md), y: bottom(md) };
+  const dmT = { x: cx(dm), y: dm.top };
+  const dmB = { x: cx(dm), y: bottom(dm) };
+  const odT = { x: cx(od), y: od.top };
+  const odB = { x: cx(od), y: bottom(od) };
+
+  const extElbows = externalBoxes.map((e) => {
+    const midX = (right(md) + e.left) / 2;
+    return { path: HVH(mdR.x, mdR.y, e.left, cy(e), midX), y2: cy(e) };
+  });
+
+  const subCenters = subHeaders.map((s) => cx(s));
+  const subBottoms = subHeaders.map((s) => s.top + subH);
+  const nameTops = nameCards.map((n) => n.top);
+  const rightBusY = 695;
 
   return (
-    <main className="w-full flex flex-col items-center">
-      {/* ──────── HERO ──────── */}
-      <section className="relative w-full h-[520px] overflow-hidden sm:h-[620px] lg:h-[700px]">
-        <Image
-          src="/images/projectHero.svg"
-          alt="Our Projects"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
-
-        <div className="absolute left-6 right-6 top-[100px] flex flex-col gap-5 sm:left-10 sm:right-10 sm:top-[130px] lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
-          <h1 className="font-bold text-white text-[36px] leading-[42px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
-            Our Projects
-          </h1>
-          <p className="font-medium text-[var(--color-text-light-subtle)] text-[15px] leading-[20px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
-            A portfolio of precision-engineered infrastructure — from arterial
-            road rehabilitations and renewable energy civil works to structural
-            bridge rehabilitation and independent project verification.
-          </p>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 lg:left-[130px] lg:right-auto lg:w-[1468px] lg:top-[525px] lg:bottom-auto">
-          <div className="flex flex-row items-stretch px-4 sm:px-6 lg:px-0">
-            {stats.map((stat, i) => (
-              <div
-                key={stat.label}
-                className={`flex flex-col justify-center items-start flex-1 min-w-0 ${
-                  i > 0 ? "border-l border-white/37" : ""
-                } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
-              >
-                <span
-                  className={`${barlow.className} font-black text-white text-[18px] leading-[22px] sm:text-[24px] sm:leading-[28px] lg:text-[34px] lg:leading-[34px]`}
-                  style={{ letterSpacing: "-0.952px" }}
-                >
-                  {stat.value}
-                </span>
-                <span
-                  className={`${barlow.className} font-medium text-white/32 pt-[3px] sm:pt-1 lg:pt-[6px] text-[7px] leading-[9px] sm:text-[8px] sm:leading-[11px] lg:text-[9.5px] lg:leading-[14px]`}
-                  style={{ letterSpacing: "1.33px" }}
-                >
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ──────── PROJECTS SECTION ──────── */}
-      <section className="w-full bg-[var(--bg-section)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
-        <div className="mx-auto flex max-w-[1468px] flex-col gap-8 lg:gap-[60px]">
-          <div className="flex flex-col gap-6 lg:gap-[30px]">
-            {/* Title row */}
-            <div className="flex flex-row justify-between gap-4">
-              <div className="flex flex-col gap-5 lg:gap-[30px]">
-                <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium tracking-[3px] text-[var(--color-blue-accent)] sm:text-base">
-                    01
-                  </span>
-                  <span className="h-px w-[80px] bg-[var(--text-dark)] sm:w-[104px]" />
-                  <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] sm:text-base">
-                    PROJECTS
-                  </span>
-                </div>
-                <h2 className="font-bold text-[var(--text-dark)] text-[30px] leading-[38px] sm:text-[40px] sm:leading-[50px] lg:text-[56px] lg:leading-[71px]">
-                  Featured Work
-                </h2>
-              </div>
-              <Link
-                href="/projects"
-                className="hidden items-center gap-2 text-[12px] font-bold leading-4 tracking-[1.68px] text-[var(--color-blue-accent)] lg:flex"
-              >
-                ALL PROJECTS <ArrowRight size={14} />
-              </Link>
-            </div>
-
-            {/* Filter pills */}
-            <div className="flex w-full gap-3 overflow-x-auto pb-2 lg:gap-[20px]">
-              {filters.map((filter) => {
-                const isActive = filter === activeFilter;
-                const isAll = filter === "ALL";
-                return (
-                  <button
-                    key={filter}
-                    type="button"
-                    onClick={() => setActiveFilter(filter)}
-                    className={`whitespace-nowrap text-center text-[10px] tracking-[3px] transition-all duration-300 sm:text-xs lg:text-sm lg:leading-[18px] ${
-                      isActive
-                        ? "bg-[var(--color-blue-accent)] text-white"
-                        : "border border-[var(--color-blue-accent)] bg-transparent text-[var(--color-blue-accent)] hover:bg-[var(--color-blue-accent)] hover:text-white"
-                    } ${isAll ? "w-[60px] sm:w-[70px] lg:w-[82px]" : "flex-1 min-w-[110px] sm:min-w-[140px] lg:w-[257px] lg:flex-none"} px-[16px] py-[14px] sm:px-[20px] sm:py-[15px] lg:px-[25px] lg:py-[16px]`}
-                  >
-                    {filter}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Project grid — Figma Frame 1321319071 */}
-            <div className="flex flex-col gap-6 lg:gap-[30px]">
-              {/* Frame 1321319008 — Top row: large + 2 small */}
-              <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:gap-[30px]">
-                {filteredProjects[0] && (
-                  <div className="md:w-[817px]">
-                    <ProjectCard project={filteredProjects[0]} isLarge />
-                  </div>
-                )}
-                <div className="flex flex-col gap-6 md:w-[621px] md:gap-[30px]">
-                  {filteredProjects.slice(1, 3).map((project) => (
-                    <ProjectCard key={project.index} project={project} isLarge={false} />
-                  ))}
-                </div>
-              </div>
-
-              {/* Frame 1321319070 — Bottom row: 3 equal cards */}
-              {filteredProjects.length > 3 && (
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-[16px]">
-                  {filteredProjects.slice(3, 6).map((project) => (
-                    <BottomCard key={project.index} project={project} />
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Load More button */}
-          <div className="flex justify-end">
-            <button
-              type="button"
-              className="bg-[var(--color-blue-accent)] text-white  w-[192px] py-[14px]  tracking-[3px]  text-[14px] font-bold  uppercase transition-all "
-              onClick={() => setActiveFilter("ALL")}
+    <section className="relative w-full bg-white overflow-hidden">
+      <div className="w-full">
+        {/* Scaling wrapper: reserves the correctly-scaled height so page layout doesn't jump.
+            overflow-hidden is unconditional — the scaled inner div's layout box is still
+            DESIGN_WIDTH px wide even after transform: scale(), so overflow-x-auto on mobile
+            was creating a scrollable area ~3x the visible width with blank space. */}
+        <div
+          ref={wrapperRef}
+          className="relative w-full overflow-hidden"
+          style={{ height: DESIGN_HEIGHT * scale }}
+        >
+          <div
+            style={{
+              position: "relative",
+              width: DESIGN_WIDTH,
+              height: DESIGN_HEIGHT,
+              transform: `scale(${scale})`,
+              transformOrigin: "top left",
+            }}
+          >
+            {/* Frame 77 — left panel */}
+            <div
+              className="absolute flex flex-col items-start"
+              style={{ left: 130, top: 100, width: 470, gap: 50 }}
             >
-              Load More
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ──────── HOW WE DELIVER ──────── */}
-      <section className="w-full bg-[var(--bg-hero)] px-4 py-12 text-white sm:px-6 lg:px-[130px] lg:py-[130px]">
-        <div className="mx-auto max-w-[1468px]">
-          <div className="flex flex-col gap-6 lg:gap-7">
-            <div className="flex items-center gap-4">
-              <span className="text-[13px] font-medium leading-4 tracking-[3px] text-white sm:text-[14px] sm:leading-5 lg:text-[16px] lg:leading-5">
-                OUR PROCESS
-              </span>
-              <span className="h-px w-[80px] bg-white sm:w-[104px]" />
-            </div>
-            <h2 className="text-[30px] font-bold leading-[38px] text-white sm:text-[36px] sm:leading-[45px] lg:text-[44px] lg:leading-[55px]">
-              How We Deliver
-            </h2>
-            <p className="max-w-[720px] text-[14px] leading-[22px] text-[var(--color-text-light-subtle)] sm:text-[15px] sm:leading-[26px] lg:text-[17px] lg:leading-[31px]">
-              Every project at ZAMR Engineering follows a proven delivery framework.
-              From initial concept through to construction completion, we ensure
-              quality, safety, and client satisfaction at every stage.
-            </p>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:mt-15 lg:grid-cols-4 lg:gap-6">
-            {[
-              {
-                number: "01",
-                title: "Discovery & Briefing",
-                desc: "We engage with your team to understand project goals, constraints, and success criteria before defining scope and program.",
-              },
-              {
-                number: "02",
-                title: "Design & Development",
-                desc: "Our engineers develop concept through to detailed design, iterating with stakeholders to refine and optimise the solution.",
-              },
-              {
-                number: "03",
-                title: "Approval & Procurement",
-                desc: "We manage authority submissions, stakeholder approvals, and procurement documentation to enable construction readiness.",
-              },
-              {
-                number: "04",
-                title: "Delivery & Handover",
-                desc: "On-site engineering support during construction, quality verification, and as-built documentation for seamless project handover.",
-              },
-            ].map((item) => (
-              <div
-                key={item.number}
-                className="flex flex-col gap-2 border border-white/10 p-5 sm:gap-3 sm:p-6"
-              >
-                <span className="text-[28px] font-black leading-[36px] text-white/60 sm:text-[34px] sm:leading-[42px] lg:text-[40px] lg:leading-[50px]">
-                  {item.number}
-                </span>
-                <h3 className="text-[16px] font-semibold leading-[20px] text-white sm:text-[17px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
-                  {item.title}
-                </h3>
-                <p className="text-[11px] leading-[14px] text-[var(--color-text-light-subtle)] sm:text-[11.5px] sm:leading-[14.5px] lg:text-[12px] lg:leading-[15px]">
-                  {item.desc}
-                </p>
+              <div className="flex w-full flex-col items-start" style={{ gap: 20 }}>
+                <div className="flex flex-row items-center" style={{ gap: 16 }}>
+                  <span
+                    className="font-medium leading-5 tracking-[3px]"
+                    style={{ fontSize: 16, color: "var(--color-primary)" }}
+                  >
+                    03
+                  </span>
+                  <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+                  <span
+                    className="font-medium leading-5 tracking-[3px] uppercase"
+                    style={{ fontSize: 16, color: "var(--text-dark)" }}
+                  >
+                    STRUCTURE
+                  </span>
+                </div>
+                <h2
+                  className="w-full font-bold leading-[55px]"
+                  style={{ fontSize: 44, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
+                >
+                  Organizational
+                  <br />
+                  Structure
+                </h2>
+                <Image
+                  src="/images/zamrlogoFilled1.jpeg"
+                  alt="ZAMR Engineering"
+                  width={154}
+                  height={86}
+                  className="object-contain"
+                />
               </div>
-            ))}
+              <div className="flex flex-col items-start" style={{ gap: 16 }}>
+                {legend.map((item) => (
+                  <div key={item.label} className="flex flex-row items-center" style={{ gap: 19 }}>
+                    <span
+                      className="rounded-full"
+                      style={{ width: 28, height: 28, background: item.color }}
+                    />
+                    <span
+                      className="font-normal leading-[30px]"
+                      style={{ fontSize: 24, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
+                    >
+                      {item.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Chart layer */}
+            <div className="absolute" style={{ left: 0, top: 0, width: DESIGN_WIDTH, height: DESIGN_HEIGHT }}>
+              <svg
+                className="absolute inset-0 pointer-events-none"
+                width={DESIGN_WIDTH}
+                height={DESIGN_HEIGHT}
+                fill="none"
+                stroke={LINE}
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <defs>
+                  {/* Arrowhead — only the top-level connectors (MD -> external boxes,
+                      MD -> Design Manager / Operational Director) carry arrowheads in
+                      the Figma design. All lower-level connectors stay plain lines. */}
+                  <marker
+                    id="orgArrow"
+                    markerWidth="8"
+                    markerHeight="8"
+                    refX="6"
+                    refY="4"
+                    orient="auto"
+                    markerUnits="userSpaceOnUse"
+                  >
+                    <path d="M0,0 L8,4 L0,8 Z" fill={LINE} stroke="none" />
+                  </marker>
+                </defs>
+
+                {/* MD -> external boxes (with arrowheads) */}
+                {extElbows.map((e, i) => (
+                  <path key={`ext-${i}`} d={e.path} markerEnd="url(#orgArrow)" />
+                ))}
+
+                {/* MD -> Design Manager / Operational Director (with arrowheads) */}
+                <path d={VHV(mdB.x, mdB.y, dmT.x, dmT.y, 490)} markerEnd="url(#orgArrow)" />
+                <path d={VHV(mdB.x, mdB.y, odT.x, odT.y, 490)} markerEnd="url(#orgArrow)" />
+
+                {/* Design Manager -> sub-headers (plain lines) */}
+                {[0, 1, 2, 3].map((i) => (
+                  <path
+                    key={`dmc-${i}`}
+                    d={VHV(dmB.x, dmB.y, subCenters[i], subHeaders[i].top, 695)}
+                  />
+                ))}
+                {/* Operational Director -> sub-headers (plain lines) */}
+                {[4, 5, 6].map((i) => (
+                  <path
+                    key={`odc-${i}`}
+                    d={VHV(odB.x, odB.y, subCenters[i], subHeaders[i].top, rightBusY)}
+                  />
+                ))}
+                {/* sub-headers -> name cards (plain lines) */}
+                {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+                  <path key={`nc-${i}`} d={VM(subCenters[i], subBottoms[i], nameTops[i])} />
+                ))}
+                {/* name cards -> subcontractors (plain lines) */}
+                {[4, 5].map((i) => {
+                  const bx = subCenters[i];
+                  const by = bottom(nameCards[i]);
+                  return <path key={`sc-${i}`} d={VHV(bx, by, cx(subc), subc.top, 1060)} />;
+                })}
+              </svg>
+
+              <OrgBox box={md} />
+              {externalBoxes.map((e, i) => (
+                <OrgBox key={`ext-${i}`} box={e} />
+              ))}
+              <OrgBox box={dm} />
+              <OrgBox box={od} />
+              {subHeaders.map((s, i) => (
+                <SubHeader key={`sh-${i}`} s={s} />
+              ))}
+              {nameCards.map((n, i) => (
+                <NameCard key={`nc-${i}`} card={n} />
+              ))}
+              <div
+                className="absolute flex items-center justify-center text-center overflow-hidden"
+                style={{
+                  left: subc.left,
+                  top: subc.top,
+                  width: subc.width,
+                  height: subc.height,
+                  background: COLORS.external,
+                  color: "white",
+                }}
+              >
+                <span className="font-medium leading-tight px-2" style={{ fontSize: 20, letterSpacing: "-0.019em" }}>
+                  Subcontractors
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* ──────── CONTACT ──────── */}
-      <Contact number="ENQUIRE" serviceTitle="Your Next" />
-    </main>
+      </div>
+    </section>
   );
 }

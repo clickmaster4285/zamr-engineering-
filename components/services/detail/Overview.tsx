@@ -8,7 +8,7 @@ interface Props {
 export default function CivilEngineeringOverview({ number, heading, paragraphs, serviceDetails }: Props) {
   return (
     <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
-      <div className="mx-auto grid max-w-[1468px] grid-cols-1 gap-12 lg:grid-cols-[1fr_436px] lg:gap-[60px]">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_436px] lg:gap-[60px]">
         <div className="flex flex-col">
           <div className="flex items-center gap-4">
             <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">

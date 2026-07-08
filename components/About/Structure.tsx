@@ -260,7 +260,7 @@ export default function Structure() {
             {/* Frame 77 — left panel */}
             <div
               className="absolute flex flex-col items-start"
-              style={{ left: 130, top: 100, width: 470, gap: 50 }}
+              style={{ left: 130, top: 100, width: 700, gap: 50 }}
             >
               <div className="flex w-full flex-col items-start" style={{ gap: 20 }}>
                 <div className="flex flex-row items-center" style={{ gap: 16 }}>
@@ -278,21 +278,20 @@ export default function Structure() {
                     STRUCTURE
                   </span>
                 </div>
+                 <Image
+                  src="/images/zamrlogoFilled1.jpeg"
+                  alt="ZAMR Engineering"
+                  width={300}
+                  height={150}
+                  className="object-contain"
+                />
                 <h2
                   className="w-full font-bold leading-[55px]"
                   style={{ fontSize: 44, color: "var(--text-dark)", fontFeatureSettings: "'liga' off" }}
                 >
-                  Organizational
-                  <br />
-                  Structure
+                  Organizational Structure
                 </h2>
-                <Image
-                  src="/images/zamr-logo.png"
-                  alt="ZAMR Engineering"
-                  width={154}
-                  height={86}
-                  className="object-contain"
-                />
+               
               </div>
               <div className="flex flex-col items-start" style={{ gap: 16 }}>
                 {legend.map((item) => (

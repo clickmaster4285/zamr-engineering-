@@ -52,7 +52,7 @@ const growthStats: StatDatum[] = [
 export default function RevenuePerformanceSection() {
   return (
     <section className="w-full bg-[var(--bg-light)] px-6 py-16 sm:px-10 md:px-16 lg:px-[80px] xl:p-[130px]">
-      <div className="mx-auto flex max-w-[1468px] flex-col gap-10 sm:gap-12 lg:gap-[60px]">
+      <div className="flex flex-col gap-10 sm:gap-12 lg:gap-[60px]">
         {/* Frame 120 — header */}
         <div className="flex w-full max-w-[489px] flex-col gap-5 sm:gap-[30px]">
           {/* Frame 118 — section label */}

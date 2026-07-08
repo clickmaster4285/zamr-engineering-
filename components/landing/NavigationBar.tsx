@@ -55,11 +55,11 @@ export default function Navbar() {
           scrolled ? "bg-primary shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="relative mx-auto flex w-full max-w-[1727px] items-center px-6 h-[73px] lg:px-[130px] lg:h-[100px]">
+        <div className="relative  flex w-full items-center px-6 h-[73px] lg:px-[130px] lg:h-[100px]">
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/zamarlogo.png"
+              src="/images/zamarlogoTransparant.png"
               alt="ZAMR Engineering"
               width={111}
               height={49}

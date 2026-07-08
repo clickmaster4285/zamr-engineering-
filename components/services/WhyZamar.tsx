@@ -45,7 +45,7 @@ const features: Feature[] = [
 export default function WhyZamr() {
   return (
     <section className="w-full bg-[var(--bg-section)] px-6 py-16 lg:p-[130px]">
-      <div className="mx-auto flex max-w-[1468px] flex-col gap-[60px]">
+      <div className="flex flex-col gap-[60px]">
         {/* Header */}
         <div className="flex flex-col gap-7">
           {/* Section label */}
