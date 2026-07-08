@@ -113,40 +113,40 @@ function ProjectCard({
     >
       <div
         className={`relative w-full overflow-hidden ${
-          isLarge ? "h-[484px] md:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
+          isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
         }`}
       >
         <Image
           src={project.image}
           alt={project.title}
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
 
         {/* Gradient overlay */}
         <div
-          className={`absolute inset-0  bg-[var(--overlay-image-default)] ${!isLarge && " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]"}`}  
+          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge && " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]"}`}  
         />
 
-        {/* Project index — top:50px left:50px */}
+        {/* Project index */}
         <span
-          className={`absolute left-[50px] top-[50px] font-[800] tracking-[0.06em] text-white ${
-            isLarge ? "text-[54px] leading-[68px]" : "text-[34px] leading-[43px]"
+          className={`absolute left-5 top-5 font-[800] tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${
+            isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
           }`}
         >
           {project.index}
         </span>
 
-        {/* Title — fixed bottom-50px for all cards, stays aligned */}
-        <h3 className={`absolute left-[50px] bottom-[50px] font-semibold text-white text-[28px] leading-[35px] ${isLarge && " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"}  `}>
+        {/* Title */}
+        <h3 className={`absolute left-5 bottom-5 font-semibold text-white text-[20px] leading-[26px] sm:left-8 sm:bottom-8 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px] ${isLarge && " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"}`}>
           {project.title}
         </h3>
 
         {/* Description — large card only, slides up from below on hover */}
         {isLarge && (
-          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-[50px] pb-[50px]">
-            <p className="max-w-[717px] text-[16px] leading-[20px] font-[400] text-white">
+          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-5 pb-5 sm:px-8 sm:pb-8 md:px-[50px] md:pb-[50px]">
+            <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white sm:text-[16px] sm:leading-[20px]">
               {description}
             </p>
           </div>
