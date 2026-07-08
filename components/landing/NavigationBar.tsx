@@ -63,7 +63,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logoZamr.jpeg"
+              src="/images/zamr-logo.png"
               alt="ZAMR Engineering"
               width={111}
               height={49}
