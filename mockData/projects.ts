@@ -419,6 +419,181 @@ export const projects: ProjectData[] = [
       { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
     ],
   },
+  {
+    slug: "port-of-newcastle-infrastructure-upgrade",
+    index: "05",
+    title: "Port of Newcastle Infrastructure Upgrade",
+    category: "Industrial Development",
+    shortDescription:
+      "Comprehensive civil and structural engineering for the Port of Newcastle upgrade, enhancing freight capacity and operational efficiency at Australia's largest port.",
+
+    heroTitle: "PORT OF NEWCASTLE INFRASTRUCTURE UPGRADE",
+    heroImage: "/images/image4.jpeg",
+
+    stats: [
+      { label: "CLIENT", value: "Port Authority of NSW" },
+      { label: "VALUE", value: "$420 Million" },
+      { label: "DURATION", value: "2020 – 2025" },
+      { label: "LOCATION", value: "Newcastle, NSW" },
+      { label: "SCOPE", value: "Maritime & Civil Infrastructure" },
+      { label: "TEAM", value: "14 Engineers" },
+    ],
+
+    aboutNumber: "01",
+    aboutHeading: "About the Project",
+    aboutDescription:
+      "A major infrastructure upgrade program at the Port of Newcastle, delivering enhanced freight handling capacity, improved road and rail connectivity, and upgraded wharf infrastructure.",
+    location: "Newcastle, NSW",
+    challengeParagraphs: [
+      "The working port environment required meticulous planning to maintain continuous port operations throughout construction, with no disruption to shipping schedules or freight movements.",
+      "Challenging ground conditions including reclaimed land and variable founded depths required innovative foundation solutions and careful construction sequencing.",
+    ],
+
+    approachNumber: "02",
+    approachHeading: "Our Approach",
+    approachSteps: [
+      {
+        number: "01",
+        title: "Operational Review & Planning",
+        description: "Detailed review of port operations to identify critical path activities and develop construction staging that minimised operational impact.",
+      },
+      {
+        number: "02",
+        title: "Geotechnical Investigation",
+        description: "Extensive geotechnical investigation of wharf and terminal areas to characterise ground conditions and inform foundation and pavement design.",
+      },
+      {
+        number: "03",
+        title: "Detailed Design & Documentation",
+        description: "Full detailed design of wharf upgrades, pavement rehabilitation, and road/rail interface improvements to meet port operational requirements.",
+      },
+      {
+        number: "04",
+        title: "Construction & Commissioning",
+        description: "On-site engineering support, quality verification, and commissioning of completed infrastructure for handover to port operations.",
+      },
+    ],
+
+    resultsNumber: "03",
+    resultsHeading: "Project Outcomes",
+    resultsMetrics: [
+      { value: "40%", label: "Capacity Increase" },
+      { value: "3.2 km", label: "Wharf Upgraded" },
+      { value: "1,200", label: "Daily Truck Movements" },
+      { value: "0", label: "Operational Disruptions" },
+    ],
+    achievements: [
+      "Delivered a 40% increase in freight handling capacity without any disruption to ongoing port operations.",
+      "Completed all wharf works within stringent tidal and operational windows, with zero schedule overruns.",
+      "Achieved an industry-leading safety record with over 80,000 hours worked without a lost-time incident.",
+    ],
+
+    galleryNumber: "04",
+    galleryHeading: "Project Gallery",
+    galleryImages: [
+      "/images/image1.jpeg",
+      "/images/image2.jpeg",
+      "/images/image3.jpeg",
+      "/images/image5.jpeg",
+      "/images/image6.jpeg",
+    ],
+
+    relatedNumber: "05",
+    relatedHeading: "Related Projects",
+    relatedProjects: [
+      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
+      { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
+    ],
+  },
+  {
+    slug: "pacific-highway-corridor-enhancement",
+    index: "06",
+    title: "Pacific Highway Corridor Enhancement",
+    category: "Transportation Projects",
+    shortDescription:
+      "Strategic corridor enhancement program along the Pacific Highway, delivering road safety improvements, capacity upgrades, and travel time reliability for this critical national freight route.",
+
+    heroTitle: "PACIFIC HIGHWAY CORRIDOR ENHANCEMENT",
+    heroImage: "/images/image5.jpeg",
+
+    stats: [
+      { label: "CLIENT", value: "Transport for NSW" },
+      { label: "VALUE", value: "$680 Million" },
+      { label: "DURATION", value: "2021 – 2027" },
+      { label: "LOCATION", value: "North Coast, NSW" },
+      { label: "SCOPE", value: "Road & Transport Infrastructure" },
+      { label: "TEAM", value: "20 Engineers" },
+    ],
+
+    aboutNumber: "01",
+    aboutHeading: "About the Project",
+    aboutDescription:
+      "A strategic corridor enhancement program delivering safety improvements, capacity upgrades, and travel time reliability along a 180 km section of the Pacific Highway — Australia's critical east coast freight route.",
+    location: "North Coast, NSW",
+    challengeParagraphs: [
+      "Delivering upgrades on a live highway carrying over 20,000 vehicles per day required meticulous traffic management and construction staging to minimise disruption while maintaining safety.",
+      "The corridor traverses environmentally sensitive areas including koala habitats and significant waterways, requiring careful environmental management and innovative mitigation measures.",
+    ],
+
+    approachNumber: "02",
+    approachHeading: "Our Approach",
+    approachSteps: [
+      {
+        number: "01",
+        title: "Corridor Assessment & Planning",
+        description: "Comprehensive assessment of the entire corridor to identify priority locations for safety and capacity improvements based on crash data and traffic modelling.",
+      },
+      {
+        number: "02",
+        title: "Environmental & Stakeholder Engagement",
+        description: "Close collaboration with environmental regulators, local communities, and stakeholders to develop solutions that balance transport outcomes with environmental stewardship.",
+      },
+      {
+        number: "03",
+        title: "Detailed Design & Approvals",
+        description: "Full detailed design of intersection upgrades, overtaking lanes, safety barriers, and wildlife crossings with concurrent environmental approval processes.",
+      },
+      {
+        number: "04",
+        title: "Construction Delivery",
+        description: "Phased construction delivery with comprehensive traffic management to maintain highway operations, supported by on-site engineering and quality assurance.",
+      },
+    ],
+
+    resultsNumber: "03",
+    resultsHeading: "Project Outcomes",
+    resultsMetrics: [
+      { value: "180 km", label: "Corridor Improved" },
+      { value: "35%", label: "Crash Reduction" },
+      { value: "12", label: "Intersections Upgraded" },
+      { value: "28", label: "Wildlife Crossings" },
+    ],
+    achievements: [
+      "Achieved a 35% reduction in crash frequency across the corridor within the first two years of completion.",
+      "Delivered 28 wildlife crossings including 12 canopy bridges, setting a new standard for ecological connectivity in road infrastructure.",
+      "Completed all works on time and within budget despite challenging environmental conditions and weather events.",
+      "Awarded the Engineers Australia Infrastructure Award for Excellence in Transport Infrastructure.",
+    ],
+
+    galleryNumber: "04",
+    galleryHeading: "Project Gallery",
+    galleryImages: [
+      "/images/image1.jpeg",
+      "/images/image2.jpeg",
+      "/images/image3.jpeg",
+      "/images/image4.jpeg",
+      "/images/image6.jpeg",
+    ],
+
+    relatedNumber: "05",
+    relatedHeading: "Related Projects",
+    relatedProjects: [
+      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
+      { title: "Port of Newcastle Infrastructure Upgrade", slug: "port-of-newcastle-infrastructure-upgrade", image: "/images/image4.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
+    ],
+  },
 ];
 
 export function getProjectBySlug(slug: string): ProjectData | undefined {

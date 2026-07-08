@@ -2,7 +2,9 @@
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 import { Barlow } from "next/font/google";
 import { projects } from "@/mockData/projects";
 import Contact from "@/components/services/Contact";
@@ -58,14 +60,42 @@ function useInView(threshold = 0.15) {
   return { ref, inView };
 }
 
-function ProjectCard({
+function useAnimatedInView(threshold = 0.1) {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const ref = useCallback(
+    (node: HTMLElement | null) => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+        observerRef.current = null;
+      }
+      if (!node) return;
+      if (hasAnimated) return;
+      observerRef.current = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setHasAnimated(true);
+            observerRef.current?.disconnect();
+          }
+        },
+        { threshold }
+      );
+      observerRef.current.observe(node);
+    },
+    [threshold, hasAnimated]
+  );
+  useEffect(() => {
+    return () => observerRef.current?.disconnect();
+  }, []);
+  return { ref, hasAnimated };
+}
+
+function LargeCard({
   project,
-  isLarge = false,
 }: {
   project: (typeof projects)[number];
-  isLarge?: boolean;
 }) {
-  const { ref, inView } = useInView();
+  const { ref, hasAnimated } = useAnimatedInView();
   const router = useRouter();
 
   return (
@@ -73,53 +103,128 @@ function ProjectCard({
       ref={ref}
       onClick={() => router.push(`/project/${project.slug}`)}
       className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        inView
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-10 scale-95"
+        hasAnimated
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
       }`}
     >
-      <div
-        className={`relative w-full overflow-hidden ${
-          isLarge ? "h-[320px] sm:h-[400px] md:h-[542px]" : "h-[200px] sm:h-[250px] md:h-[260px]"
-        }`}
-      >
+      <div className="relative w-full h-[400px] overflow-hidden sm:h-[520px] md:h-[652px]">
         <Image
           src={project.heroImage}
           alt={project.title}
           fill
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes="(min-width: 768px) 817px, 100vw"
           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)" }}
-        />
+        <div className="absolute inset-0 bg-black/50" />
 
         <span
-          className={`absolute left-[30px] top-[30px] font-[800] tracking-[0.06em] text-white md:left-[50px] md:top-[50px] ${
-            isLarge ? "text-[34px] leading-[43px] md:text-[54px] md:leading-[68px]" : "text-[28px] leading-[36px] md:text-[34px] md:leading-[43px]"
-          }`}
+          className="absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[800] tracking-[0.06em] text-white text-[34px] leading-[43px] md:text-[54px] md:leading-[68px]"
+          style={{ letterSpacing: "3px" }}
         >
           {project.index}
         </span>
 
         <h3
-          className={`absolute left-[30px] bottom-[30px] font-semibold text-white md:left-[50px] md:bottom-[50px] ${
-            isLarge
-              ? "text-[22px] leading-[28px] md:text-[28px] md:leading-[35px] md:group-hover:translate-y-[-70px] md:transition-transform md:duration-500 md:ease-in-out"
-              : "text-[18px] leading-[23px] md:text-[22px] md:leading-[28px]"
-          }`}
+          className="absolute left-[30px] bottom-[90px] font-semibold text-white text-[22px] leading-[28px] md:left-[50px] md:bottom-auto md:text-[28px] md:leading-[35px] md:top-1/2 md:translate-y-[calc(241px)] md:group-hover:translate-y-[calc(241px-40px)] md:transition-transform md:duration-500 md:ease-in-out"
         >
           {project.title}
         </h3>
 
-        {isLarge && (
-          <div className="absolute bottom-0 left-0 right-0 translate-y-full px-[30px] pb-[30px] transition-transform duration-500 ease-in-out group-hover:translate-y-0 md:px-[50px] md:pb-[50px]">
-            <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white md:text-[16px] md:leading-[20px]">
-              {project.shortDescription}
-            </p>
-          </div>
-        )}
+        <div className="absolute bottom-0 left-0 right-0 translate-y-full px-[30px] pb-[30px] transition-transform duration-500 ease-in-out group-hover:translate-y-0 md:px-[50px] md:pb-[50px]">
+          <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white md:text-[16px] md:leading-[20px]">
+            {project.shortDescription}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SmallCard({
+  project,
+}: {
+  project: (typeof projects)[number];
+}) {
+  const { ref, hasAnimated } = useAnimatedInView();
+  const router = useRouter();
+
+  return (
+    <div
+      ref={ref}
+      onClick={() => router.push(`/project/${project.slug}`)}
+      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
+        hasAnimated
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+      }`}
+    >
+      <div className="relative w-full h-[200px] overflow-hidden sm:h-[250px] md:h-[311px]">
+        <Image
+          src={project.heroImage}
+          alt={project.title}
+          fill
+          sizes="(min-width: 768px) 621px, 100vw"
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+
+        <span
+          className="absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[800] tracking-[0.06em] text-white text-[28px] leading-[36px] md:text-[34px] md:leading-[43px]"
+          style={{ letterSpacing: "3px" }}
+        >
+          {project.index}
+        </span>
+
+        <h3
+          className="absolute left-[30px] bottom-[30px] font-semibold text-white text-[18px] leading-[23px] md:left-[50px] md:bottom-auto md:text-[28px] md:leading-[35px] md:top-1/2 md:translate-y-[calc(88px-17.5px)]"
+        >
+          {project.title}
+        </h3>
+      </div>
+    </div>
+  );
+}
+
+function BottomCard({
+  project,
+}: {
+  project: (typeof projects)[number];
+}) {
+  const { ref, hasAnimated } = useAnimatedInView();
+  const router = useRouter();
+
+  return (
+    <div
+      ref={ref}
+      onClick={() => router.push(`/project/${project.slug}`)}
+      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
+        hasAnimated
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+      }`}
+    >
+      <div className="relative w-full h-[280px] overflow-hidden sm:h-[320px] md:h-[340px]">
+        <Image
+          src={project.heroImage}
+          alt={project.title}
+          fill
+          sizes="(min-width: 768px) 478px, 100vw"
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
+        />
+        <div className="absolute inset-0 bg-black/50" />
+
+        <span
+          className="absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[700] text-white text-[24px] leading-[30px] md:text-[30px] md:leading-[38px]"
+        >
+          {project.index}
+        </span>
+
+        <h3
+          className="absolute left-[30px] bottom-[30px] font-semibold text-white text-[16px] leading-[20px] md:left-[50px] md:top-[269px] md:bottom-auto md:text-[18px] md:leading-[23px]"
+        >
+          {project.title}
+        </h3>
       </div>
     </div>
   );
@@ -145,9 +250,8 @@ export default function ProjectsPage() {
         />
         <div className="absolute inset-0 bg-[#07183D]/80" />
 
-        {/* Title + subtitle — Figma Frame 1321319043 */}
         <div className="absolute left-6 right-6 top-[100px] flex flex-col gap-5 sm:left-10 sm:right-10 sm:top-[130px] lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
-          <h1 className="font-bold  text-white text-[36px] leading-[42px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
+          <h1 className="font-bold text-white text-[36px] leading-[42px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
             Our Projects
           </h1>
           <p className="font-medium text-[#B0B0B0] text-[15px] leading-[20px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
@@ -157,7 +261,6 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        {/* Stats bar — Figma Frame 1321319069 */}
         <div className="absolute bottom-0 left-0 right-0 lg:left-[130px] lg:right-auto lg:w-[1468px] lg:top-[525px] lg:bottom-auto">
           <div className="flex flex-row items-stretch px-4 sm:px-6 lg:px-0">
             {stats.map((stat, i) => (
@@ -185,66 +288,97 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* ──────── FILTER + PROJECTS GRID ──────── */}
-      <section className="w-full bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
+      {/* ──────── PROJECTS SECTION (Figma Frame 1321319009) ──────── */}
+      <section className="w-full bg-[#F6F8FC] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
         <div className="mx-auto flex max-w-[1468px] flex-col gap-8 lg:gap-[60px]">
-          {/* Title header */}
-          <div className="flex flex-col gap-5 lg:gap-[30px]">
-            <div className="flex items-center gap-4">
-              <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] sm:text-base">
-                01
-              </span>
-              <span className="h-px w-[104px] bg-black" />
-              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] sm:text-base">
-                PROJECTS
-              </span>
+          {/* Frame 1321319009 — Title + Filters + Cards */}
+          <div className="flex flex-col gap-6 lg:gap-[30px]">
+            {/* Frame 1321319002 — Title row */}
+            <div className="flex flex-row  justify-between gap-4 ">
+              <div className="flex flex-col gap-5 lg:gap-[30px]">
+                <div className="flex items-center gap-4">
+                  <span className="text-sm font-medium tracking-[3px] text-[#1945A7] sm:text-base">
+                    01
+                  </span>
+                  <span className="h-px w-[80px] bg-black sm:w-[104px]" />
+                  <span className="text-sm font-medium tracking-[3px] uppercase text-[#333333] sm:text-base">
+                    PROJECTS
+                  </span>
+                </div>
+                <h2 className="font-bold text-[#333333] text-[30px] leading-[38px] sm:text-[40px] sm:leading-[50px] lg:text-[56px] lg:leading-[71px]">
+                  Featured Work
+                </h2>
+              </div>
+              <Link
+                href="/projects"
+                className="hidden items-center gap-2 text-[12px] font-bold leading-4 tracking-[1.68px] text-[#1945A7] lg:flex"
+              >
+                ALL PROJECTS <ArrowRight size={14} />
+              </Link>
             </div>
-            <h2 className="text-[30px] font-bold leading-[38px] text-[var(--text-dark)] sm:text-[40px] sm:leading-[50px] md:text-[56px] md:leading-[71px]">
-              Featured Work
-            </h2>
-          </div>
 
-          {/* Filter pills */}
-          <div className="flex w-full gap-2 overflow-x-auto pb-2 sm:gap-3 lg:gap-4">
-            {filters.map((filter) => {
-              const isActive = filter === activeFilter;
-              const isAll = filter === "ALL";
-              return (
-                <button
-                  key={filter}
-                  type="button"
-                  onClick={() => setActiveFilter(filter)}
-                  className={`whitespace-nowrap border px-3 py-2.5 text-center text-[10px] tracking-[0.15em] transition-all duration-300 sm:px-4 sm:py-3 sm:text-xs lg:text-sm ${
-                    isActive
-                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                  } ${isAll ? "w-16 flex-none sm:w-20" : "flex-1 min-w-[100px] sm:min-w-[120px]"}`}
-                >
-                  {filter}
-                </button>
-              );
-            })}
-          </div>
+            {/* Frame 1321319022 — Filter pills */}
+            <div className="flex w-full gap-3 overflow-x-auto pb-2 lg:gap-[20px]">
+              {filters.map((filter) => {
+                const isActive = filter === activeFilter;
+                const isAll = filter === "ALL";
+                return (
+                  <button
+                    key={filter}
+                    type="button"
+                    onClick={() => setActiveFilter(filter)}
+                    className={`whitespace-nowrap text-center text-[10px] tracking-[3px] transition-all duration-300 sm:text-xs lg:text-sm lg:leading-[18px] ${
+                      isActive
+                        ? "bg-[#1945A7] text-white"
+                        : "border border-[#1945A7] bg-transparent text-[#1945A7] hover:bg-[#1945A7] hover:text-white"
+                    } ${isAll ? "w-[60px] sm:w-[70px] lg:w-[82px]" : "flex-1 min-w-[110px] sm:min-w-[140px] lg:w-[257px] lg:flex-none"} px-[16px] py-[14px] sm:px-[20px] sm:py-[15px] lg:px-[25px] lg:py-[16px]`}
+                  >
+                    {filter}
+                  </button>
+                );
+              })}
+            </div>
 
-          {/* Project grid */}
-          {filteredProjects.length > 0 ? (
-            <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:gap-[30px]">
-              {filteredProjects[0] && (
-                <div className="md:w-[817px]">
-                  <ProjectCard project={filteredProjects[0]} isLarge />
+            {/* Frame 1321319071 — Project cards */}
+            <div className="flex flex-col gap-6 lg:gap-[30px]">
+              {/* Frame 1321319008 — First row: large + 2 small */}
+              <div className="flex flex-col gap-6 md:flex-row md:gap-[30px]">
+                {filteredProjects[0] && (
+                  <div className="md:w-[817px]">
+                    <LargeCard project={filteredProjects[0]} />
+                  </div>
+                )}
+                <div className="flex flex-col gap-6 md:w-[621px] md:gap-[30px]">
+                  {filteredProjects.slice(1, 3).map((project) => (
+                    <SmallCard key={project.index} project={project} />
+                  ))}
+                </div>
+              </div>
+
+              {/* Frame 1321319070 — Bottom row: 3 equal cards */}
+              {filteredProjects.length > 3 && (
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-[16px]">
+                  {filteredProjects.slice(3, 6).map((project) => (
+                    <BottomCard key={project.index} project={project} />
+                  ))}
                 </div>
               )}
-              <div className="flex flex-col gap-6 md:w-[621px] md:gap-[30px]">
-                {filteredProjects.slice(1, 3).map((project) => (
-                  <ProjectCard key={project.index} project={project} isLarge={false} />
-                ))}
-              </div>
             </div>
-          ) : (
-            <div className="py-12 text-center text-lg text-[var(--text-muted)]">
-              No projects found in this category.
-            </div>
-          )}
+          </div>
+
+          {/* Load More button */}
+          <div className="flex justify-center">
+            <button
+              type="button"
+              className="flex items-center justify-center bg-[#1945A7] text-white w-full sm:w-auto px-10 py-[14px] text-[14px] font-bold leading-[20px] tracking-[3px] uppercase transition-all hover:bg-[var(--color-primary-hover)] active:scale-95 sm:px-[100px] lg:px-[255px] lg:py-[14px] lg:text-[16px]"
+              onClick={() => {
+                const nextCount = Math.min(filteredProjects.length, 6);
+                setActiveFilter("ALL");
+              }}
+            >
+              Load More
+            </button>
+          </div>
         </div>
       </section>
 
