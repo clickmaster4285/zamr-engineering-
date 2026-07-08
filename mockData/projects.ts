@@ -60,7 +60,7 @@ export const projects: ProjectData[] = [
       "Delivering comprehensive engineering support for the Western Sydney Infrastructure Corridor, improving connectivity and supporting economic growth in the region.",
 
     heroTitle: "WESTERN SYDNEY INFRASTRUCTURE CORRIDOR",
-    heroImage: "/images/image1.jpeg",
+    heroImage: "/images/image3.jpeg",
 
     stats: [
       { label: "CLIENT", value: "Transport for NSW" },
@@ -74,7 +74,7 @@ export const projects: ProjectData[] = [
     aboutNumber: "01",
     aboutHeading: "About the Project",
     aboutDescription:
-      "The Western Sydney Infrastructure Corridor is one of NSW's most significant transport investments, designed to transform connectivity across the Western Sydney region.",
+      "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
     location: "Western Sydney, NSW",
     challengeParagraphs: [
       "The project presented significant engineering challenges, including complex ground conditions across the corridor alignment, requiring innovative foundation solutions and extensive geotechnical investigation. The need to maintain existing transport operations during construction demanded meticulous staging and traffic management planning.",
@@ -144,100 +144,8 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "metropolitan-bridge-rehabilitation",
-    index: "02",
-    title: "Metropolitan Bridge Rehabilitation",
-    category: "Structural Engineering",
-    shortDescription:
-      "Comprehensive bridge rehabilitation program restoring structural integrity, improving safety, and extending the operational lifespan of critical metropolitan bridge infrastructure.",
-
-    heroTitle: "METROPOLITAN BRIDGE REHABILITATION",
-    heroImage: "/images/image6.jpeg",
-
-    stats: [
-      { label: "CLIENT", value: "Transport for NSW" },
-      { label: "VALUE", value: "$180 Million" },
-      { label: "DURATION", value: "2020 – 2025" },
-      { label: "LOCATION", value: "Sydney Metropolitan, NSW" },
-      { label: "SCOPE", value: "Structural Remediation" },
-      { label: "TEAM", value: "18 Engineers" },
-    ],
-
-    aboutNumber: "01",
-    aboutHeading: "About the Project",
-    aboutDescription:
-      "A comprehensive bridge rehabilitation program encompassing structural assessment, detailed design, and construction supervision for 12 critical bridge assets across the Sydney metropolitan area.",
-    location: "Sydney Metropolitan, NSW",
-    challengeParagraphs: [
-      "Many of the bridges were over 50 years old with limited as-built documentation, requiring extensive field investigation and non-destructive testing to establish existing conditions. The program had to be delivered without disrupting peak-hour traffic on some of Sydney's busiest transport corridors.",
-      "Structural deficiencies identified during initial inspections required innovative strengthening solutions that could be installed within tight weekend possession windows, demanding close coordination with traffic management and rail authorities.",
-    ],
-
-    approachNumber: "02",
-    approachHeading: "Our Approach",
-    approachSteps: [
-      {
-        number: "01",
-        title: "Condition Assessment",
-        description:
-          "Comprehensive visual inspection, non-destructive testing, and load rating analysis of all bridge assets to establish baseline condition and prioritise interventions.",
-      },
-      {
-        number: "02",
-        title: "Remedial Design Development",
-        description:
-          "Development of strengthening and remediation designs using advanced analysis techniques, including FRP wrapping, steel plate bonding, and bearing replacement solutions.",
-      },
-      {
-        number: "03",
-        title: "Traffic Management Integration",
-        description:
-          "Design of construction staging and traffic management plans to enable safe delivery of works within tight weekend and night-time possession windows.",
-      },
-      {
-        number: "04",
-        title: "Construction Supervision",
-        description:
-          "On-site engineering supervision during all remedial works, ensuring compliance with design intent and maintaining quality standards across all 12 bridge sites.",
-      },
-    ],
-
-    resultsNumber: "03",
-    resultsHeading: "Project Outcomes",
-    resultsMetrics: [
-      { value: "12", label: "Bridges Rehabilitated" },
-      { value: "50+", label: "Years Life Extended" },
-      { value: "0", label: "Traffic Disruptions" },
-      { value: "98%", label: "On-Time Delivery" },
-    ],
-    achievements: [
-      "All 12 bridges successfully rehabilitated and returned to service with a minimum 50-year design life extension.",
-      "Zero unplanned traffic disruptions during the entire construction program, despite working on some of Sydney's busiest corridors.",
-      "Achieved 98% on-time delivery across all possession windows, with no overruns on critical path activities.",
-      "Received commendation from TfNSW for innovative use of FRP strengthening technology, setting a benchmark for future programs.",
-    ],
-
-    galleryNumber: "04",
-    galleryHeading: "Project Gallery",
-    galleryImages: [
-      "/images/image3.jpeg",
-      "/images/image4.jpeg",
-      "/images/image5.jpeg",
-      "/images/image7.jpeg",
-      "/images/image1.jpeg",
-    ],
-
-    relatedNumber: "05",
-    relatedHeading: "Related Projects",
-    relatedProjects: [
-      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
-      { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
-      { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
-    ],
-  },
-  {
     slug: "hunter-valley-renewable-energy-hub",
-    index: "03",
+    index: "02",
     title: "Hunter Valley Renewable Energy Hub",
     category: "Urban Infrastructure",
     shortDescription:
@@ -324,6 +232,98 @@ export const projects: ProjectData[] = [
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
+      { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
+    ],
+  },
+  {
+    slug: "metropolitan-bridge-rehabilitation",
+    index: "03",
+    title: "Metropolitan Bridge Rehabilitation",
+    category: "Structural Engineering",
+    shortDescription:
+      "Comprehensive bridge rehabilitation program restoring structural integrity, improving safety, and extending the operational lifespan of critical metropolitan bridge infrastructure.",
+
+    heroTitle: "METROPOLITAN BRIDGE REHABILITATION",
+    heroImage: "/images/image6.jpeg",
+
+    stats: [
+      { label: "CLIENT", value: "Transport for NSW" },
+      { label: "VALUE", value: "$180 Million" },
+      { label: "DURATION", value: "2020 – 2025" },
+      { label: "LOCATION", value: "Sydney Metropolitan, NSW" },
+      { label: "SCOPE", value: "Structural Remediation" },
+      { label: "TEAM", value: "18 Engineers" },
+    ],
+
+    aboutNumber: "01",
+    aboutHeading: "About the Project",
+    aboutDescription:
+      "A comprehensive bridge rehabilitation program encompassing structural assessment, detailed design, and construction supervision for 12 critical bridge assets across the Sydney metropolitan area.",
+    location: "Sydney Metropolitan, NSW",
+    challengeParagraphs: [
+      "Many of the bridges were over 50 years old with limited as-built documentation, requiring extensive field investigation and non-destructive testing to establish existing conditions. The program had to be delivered without disrupting peak-hour traffic on some of Sydney's busiest transport corridors.",
+      "Structural deficiencies identified during initial inspections required innovative strengthening solutions that could be installed within tight weekend possession windows, demanding close coordination with traffic management and rail authorities.",
+    ],
+
+    approachNumber: "02",
+    approachHeading: "Our Approach",
+    approachSteps: [
+      {
+        number: "01",
+        title: "Condition Assessment",
+        description:
+          "Comprehensive visual inspection, non-destructive testing, and load rating analysis of all bridge assets to establish baseline condition and prioritise interventions.",
+      },
+      {
+        number: "02",
+        title: "Remedial Design Development",
+        description:
+          "Development of strengthening and remediation designs using advanced analysis techniques, including FRP wrapping, steel plate bonding, and bearing replacement solutions.",
+      },
+      {
+        number: "03",
+        title: "Traffic Management Integration",
+        description:
+          "Design of construction staging and traffic management plans to enable safe delivery of works within tight weekend and night-time possession windows.",
+      },
+      {
+        number: "04",
+        title: "Construction Supervision",
+        description:
+          "On-site engineering supervision during all remedial works, ensuring compliance with design intent and maintaining quality standards across all 12 bridge sites.",
+      },
+    ],
+
+    resultsNumber: "03",
+    resultsHeading: "Project Outcomes",
+    resultsMetrics: [
+      { value: "12", label: "Bridges Rehabilitated" },
+      { value: "50+", label: "Years Life Extended" },
+      { value: "0", label: "Traffic Disruptions" },
+      { value: "98%", label: "On-Time Delivery" },
+    ],
+    achievements: [
+      "All 12 bridges successfully rehabilitated and returned to service with a minimum 50-year design life extension.",
+      "Zero unplanned traffic disruptions during the entire construction program, despite working on some of Sydney's busiest corridors.",
+      "Achieved 98% on-time delivery across all possession windows, with no overruns on critical path activities.",
+      "Received commendation from TfNSW for innovative use of FRP strengthening technology, setting a benchmark for future programs.",
+    ],
+
+    galleryNumber: "04",
+    galleryHeading: "Project Gallery",
+    galleryImages: [
+      "/images/image3.jpeg",
+      "/images/image4.jpeg",
+      "/images/image5.jpeg",
+      "/images/image7.jpeg",
+      "/images/image1.jpeg",
+    ],
+
+    relatedNumber: "05",
+    relatedHeading: "Related Projects",
+    relatedProjects: [
+      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
+      { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
   },

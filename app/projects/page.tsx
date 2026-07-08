@@ -31,6 +31,10 @@ const stats = [
   { value: "2012", label: "DELIVERING SINCE" },
 ];
 
+const projectDescriptions: Record<string, string> = {
+  "01": "Western Sydney Infrastructure Corridor involved delivering comprehensive engineering support across the full corridor alignment, including bridge design, pavement engineering, and drainage solutions to transform connectivity in Western Sydney.",
+};
+
 function useInView(threshold = 0.15) {
   const [inView, setInView] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -60,42 +64,15 @@ function useInView(threshold = 0.15) {
   return { ref, inView };
 }
 
-function useAnimatedInView(threshold = 0.1) {
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const ref = useCallback(
-    (node: HTMLElement | null) => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-        observerRef.current = null;
-      }
-      if (!node) return;
-      if (hasAnimated) return;
-      observerRef.current = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setHasAnimated(true);
-            observerRef.current?.disconnect();
-          }
-        },
-        { threshold }
-      );
-      observerRef.current.observe(node);
-    },
-    [threshold, hasAnimated]
-  );
-  useEffect(() => {
-    return () => observerRef.current?.disconnect();
-  }, []);
-  return { ref, hasAnimated };
-}
-
-function LargeCard({
+function ProjectCard({
   project,
+  isLarge = false,
 }: {
   project: (typeof projects)[number];
+  isLarge?: boolean;
 }) {
-  const { ref, hasAnimated } = useAnimatedInView();
+  const { ref, inView } = useInView();
+  const description = projectDescriptions[project.index];
   const router = useRouter();
 
   return (
@@ -103,128 +80,56 @@ function LargeCard({
       ref={ref}
       onClick={() => router.push(`/project/${project.slug}`)}
       className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        hasAnimated
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-10"
+        inView
+          ? "opacity-100 translate-y-0 scale-100"
+          : "opacity-0 translate-y-10 scale-95"
       }`}
     >
-      <div className="relative w-full h-[400px] overflow-hidden sm:h-[520px] md:h-[652px]">
+      <div
+        className={`relative w-full overflow-hidden ${
+          isLarge ? "h-[320px] sm:h-[400px] md:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
+        }`}
+      >
         <Image
           src={project.heroImage}
           alt={project.title}
           fill
-          sizes="(min-width: 768px) 817px, 100vw"
+          sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
-        <div className="absolute inset-0 bg-black/50" />
+
+        <div
+          className="absolute inset-0"
+          style={{
+            background: isLarge
+              ? "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
+              : "linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%)",
+          }}
+        />
 
         <span
-          className="absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[800] tracking-[0.06em] text-white text-[34px] leading-[43px] md:text-[54px] md:leading-[68px]"
-          style={{ letterSpacing: "3px" }}
+          className={`absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[800] tracking-[0.06em] text-white ${
+            isLarge ? "text-[34px] leading-[43px] md:text-[54px] md:leading-[68px]" : "text-[28px] leading-[36px] md:text-[34px] md:leading-[43px]"
+          }`}
         >
           {project.index}
         </span>
 
         <h3
-          className="absolute left-[30px] bottom-[90px] font-semibold text-white text-[22px] leading-[28px] md:left-[50px] md:bottom-auto md:text-[28px] md:leading-[35px] md:top-1/2 md:translate-y-[calc(241px)] md:group-hover:translate-y-[calc(241px-40px)] md:transition-transform md:duration-500 md:ease-in-out"
+          className={`absolute left-[30px] bottom-[30px] md:left-[50px] md:bottom-[50px] font-semibold text-white text-[22px] leading-[28px] md:text-[28px] md:leading-[35px] ${
+            isLarge ? "md:group-hover:translate-y-[-70px] md:transition-transform md:duration-500 md:ease-in-out" : ""
+          }`}
         >
           {project.title}
         </h3>
 
-        <div className="absolute bottom-0 left-0 right-0 translate-y-full px-[30px] pb-[30px] transition-transform duration-500 ease-in-out group-hover:translate-y-0 md:px-[50px] md:pb-[50px]">
-          <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white md:text-[16px] md:leading-[20px]">
-            {project.shortDescription}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SmallCard({
-  project,
-}: {
-  project: (typeof projects)[number];
-}) {
-  const { ref, hasAnimated } = useAnimatedInView();
-  const router = useRouter();
-
-  return (
-    <div
-      ref={ref}
-      onClick={() => router.push(`/project/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        hasAnimated
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-10"
-      }`}
-    >
-      <div className="relative w-full h-[200px] overflow-hidden sm:h-[250px] md:h-[311px]">
-        <Image
-          src={project.heroImage}
-          alt={project.title}
-          fill
-          sizes="(min-width: 768px) 621px, 100vw"
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
-        />
-        <div className="absolute inset-0 bg-black/30" />
-
-        <span
-          className="absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[800] tracking-[0.06em] text-white text-[28px] leading-[36px] md:text-[34px] md:leading-[43px]"
-          style={{ letterSpacing: "3px" }}
-        >
-          {project.index}
-        </span>
-
-        <h3
-          className="absolute left-[30px] bottom-[30px] font-semibold text-white text-[18px] leading-[23px] md:left-[50px] md:bottom-auto md:text-[28px] md:leading-[35px] md:top-1/2 md:translate-y-[calc(88px-17.5px)]"
-        >
-          {project.title}
-        </h3>
-      </div>
-    </div>
-  );
-}
-
-function BottomCard({
-  project,
-}: {
-  project: (typeof projects)[number];
-}) {
-  const { ref, hasAnimated } = useAnimatedInView();
-  const router = useRouter();
-
-  return (
-    <div
-      ref={ref}
-      onClick={() => router.push(`/project/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        hasAnimated
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-10"
-      }`}
-    >
-      <div className="relative w-full h-[280px] overflow-hidden sm:h-[320px] md:h-[340px]">
-        <Image
-          src={project.heroImage}
-          alt={project.title}
-          fill
-          sizes="(min-width: 768px) 478px, 100vw"
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-
-        <span
-          className="absolute left-[30px] top-[30px] md:left-[50px] md:top-[50px] font-[700] text-white text-[24px] leading-[30px] md:text-[30px] md:leading-[38px]"
-        >
-          {project.index}
-        </span>
-
-        <h3
-          className="absolute left-[30px] bottom-[30px] font-semibold text-white text-[16px] leading-[20px] md:left-[50px] md:top-[269px] md:bottom-auto md:text-[18px] md:leading-[23px]"
-        >
-          {project.title}
-        </h3>
+        {isLarge && (
+          <div className="absolute bottom-0 left-0 right-0 translate-y-full px-[30px] pb-[30px] transition-transform duration-500 ease-in-out group-hover:translate-y-0 md:px-[50px] md:pb-[50px]">
+            <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white md:text-[16px] md:leading-[20px]">
+              {description}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -288,13 +193,12 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* ──────── PROJECTS SECTION (Figma Frame 1321319009) ──────── */}
+      {/* ──────── PROJECTS SECTION ──────── */}
       <section className="w-full bg-[#F6F8FC] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
         <div className="mx-auto flex max-w-[1468px] flex-col gap-8 lg:gap-[60px]">
-          {/* Frame 1321319009 — Title + Filters + Cards */}
           <div className="flex flex-col gap-6 lg:gap-[30px]">
-            {/* Frame 1321319002 — Title row */}
-            <div className="flex flex-row  justify-between gap-4 ">
+            {/* Title row */}
+            <div className="flex flex-row justify-between gap-4">
               <div className="flex flex-col gap-5 lg:gap-[30px]">
                 <div className="flex items-center gap-4">
                   <span className="text-sm font-medium tracking-[3px] text-[#1945A7] sm:text-base">
@@ -317,7 +221,7 @@ export default function ProjectsPage() {
               </Link>
             </div>
 
-            {/* Frame 1321319022 — Filter pills */}
+            {/* Filter pills */}
             <div className="flex w-full gap-3 overflow-x-auto pb-2 lg:gap-[20px]">
               {filters.map((filter) => {
                 const isActive = filter === activeFilter;
@@ -339,30 +243,18 @@ export default function ProjectsPage() {
               })}
             </div>
 
-            {/* Frame 1321319071 — Project cards */}
-            <div className="flex flex-col gap-6 lg:gap-[30px]">
-              {/* Frame 1321319008 — First row: large + 2 small */}
-              <div className="flex flex-col gap-6 md:flex-row md:gap-[30px]">
-                {filteredProjects[0] && (
-                  <div className="md:w-[817px]">
-                    <LargeCard project={filteredProjects[0]} />
-                  </div>
-                )}
-                <div className="flex flex-col gap-6 md:w-[621px] md:gap-[30px]">
-                  {filteredProjects.slice(1, 3).map((project) => (
-                    <SmallCard key={project.index} project={project} />
-                  ))}
-                </div>
-              </div>
-
-              {/* Frame 1321319070 — Bottom row: 3 equal cards */}
-              {filteredProjects.length > 3 && (
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-[16px]">
-                  {filteredProjects.slice(3, 6).map((project) => (
-                    <BottomCard key={project.index} project={project} />
-                  ))}
+            {/* Project grid — same design as landing */}
+            <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:gap-[30px]">
+              {filteredProjects[0] && (
+                <div className="md:w-[817px]">
+                  <ProjectCard project={filteredProjects[0]} isLarge />
                 </div>
               )}
+              <div className="flex flex-col gap-6 md:w-[621px] md:gap-[30px]">
+                {filteredProjects.slice(1, 3).map((project) => (
+                  <ProjectCard key={project.index} project={project} isLarge={false} />
+                ))}
+              </div>
             </div>
           </div>
 
@@ -371,10 +263,7 @@ export default function ProjectsPage() {
             <button
               type="button"
               className="flex items-center justify-center bg-[#1945A7] text-white w-full sm:w-auto px-10 py-[14px] text-[14px] font-bold leading-[20px] tracking-[3px] uppercase transition-all hover:bg-[var(--color-primary-hover)] active:scale-95 sm:px-[100px] lg:px-[255px] lg:py-[14px] lg:text-[16px]"
-              onClick={() => {
-                const nextCount = Math.min(filteredProjects.length, 6);
-                setActiveFilter("ALL");
-              }}
+              onClick={() => setActiveFilter("ALL")}
             >
               Load More
             </button>
