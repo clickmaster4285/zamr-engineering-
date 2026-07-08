@@ -34,26 +34,25 @@ const points: Point[] = [
 
 export default function WhyZamr() {
   return (
-    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-20">
+    <section className="w-full bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-[130px] lg:py-20">
       <div>
-        <div className="mb-10 lg:mb-[80px]">
-          <div className="mb-6 flex items-center justify-between lg:mb-8">
-            <div className="flex items-center gap-4">
-              <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
+        <div className="mb-8 sm:mb-10 lg:mb-[80px]">
+          <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:mb-6 lg:mb-8">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] sm:text-base">
                 04
               </span>
-              <span className="h-px w-[104px] bg-[var(--text-dark)]" />
-              <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+              <span className="hidden h-px w-16 sm:block sm:w-[104px] bg-[var(--text-dark)]" />
+              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] sm:text-base">
                 WHY ZAMR ENGINEERING
               </span>
             </div>
-            <span
-              className="flex items-center gap-2 text-sm font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity  lg:text-base"
-            >
-              LEARN MORE <ArrowRight size={24} />
+            <span className="flex items-center gap-2 text-xs font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity sm:text-sm lg:text-base">
+              LEARN MORE <ArrowRight size={20} className="lg:hidden" />
+              <ArrowRight size={24} className="hidden lg:block" />
             </span>
           </div>
-          <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
+          <h2 className="text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] md:text-[44px] md:leading-[52px] lg:text-[56px] lg:leading-[71px]">
             The difference is in how we build.
           </h2>
         </div>
@@ -62,18 +61,18 @@ export default function WhyZamr() {
           {points.map((point) => (
             <div
               key={point.title}
-              className="group relative flex flex-col gap-3 border-b border-[var(--border-light)] px-6 py-6 lg:flex-row lg:items-center lg:px-[50px] lg:py-[42px]"
+              className="group relative flex flex-col gap-2 border-b border-[var(--border-light)] px-4 py-5 sm:px-6 sm:py-6 lg:flex-row lg:items-center lg:px-[50px] lg:py-[42px]"
             >
               {/* Left accent border */}
               <span className="absolute left-0 top-0 h-full w-1 bg-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-[var(--text-dark)] group-hover:text-[var(--color-primary)] lg:w-[444px] lg:shrink-0 lg:text-[28px]">
+              <h3 className="text-lg font-semibold text-[var(--text-dark)] group-hover:text-[var(--color-primary)] sm:text-xl lg:w-[444px] lg:shrink-0 lg:text-[28px]">
                 {point.title}
               </h3>
 
               {/* Description */}
-              <p className="text-base text-[var(--text-dark)] lg:text-lg">
+              <p className="text-sm text-[var(--text-dark)] sm:text-base lg:text-lg">
                 {point.description}
               </p>
             </div>
