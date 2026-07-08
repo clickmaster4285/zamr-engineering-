@@ -43,10 +43,10 @@ export default function Footer() {
             {/* Frame 55 — Logo + Description + Social */}
             <div className="flex w-full flex-col items-start gap-8 lg:w-[369px] lg:gap-[50px]">
               <Image
-                src="/images/zamr-logo.png"
+                src="/images/zamarlogo.png"
                 alt="ZAMR Engineering"
-                width={218}
-                height={124}
+                width={250}
+                height={150}
                 className="object-contain"
                 priority
               />

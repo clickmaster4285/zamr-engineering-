@@ -56,14 +56,14 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 z-50 w-full transition-[background-color,box-shadow] duration-300 ${
-          scrolled ? "bg-white shadow-md" : "bg-transparent"
+          scrolled ? "bg-primary shadow-md" : "bg-transparent"
         }`}
       >
         <div className="relative mx-auto flex w-full max-w-[1727px] items-center px-6 h-[73px] lg:px-[130px] lg:h-[100px]">
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/zamr-logo.png"
+              src="/images/zamarlogo.png"
               alt="ZAMR Engineering"
               width={111}
               height={49}
@@ -78,11 +78,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 ${
-                  scrolled
-                    ? "text-[var(--text-dark)] hover:text-[var(--color-primary)]"
-                    : "text-[var(--text-light)] hover:text-white"
-                }`}
+                className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 text-white`}
               >
                 {link.label}
               </Link>
@@ -93,11 +89,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => router.push("/")}
-            className={`ml-auto hidden items-center justify-center border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors duration-300 lg:flex ${
-              scrolled
-                ? "border-[var(--text-dark)] text-[var(--text-dark)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)]"
-                : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
-            }`}
+            className={`ml-auto hidden  items-center justify-center border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors duration-300 lg:flex text-white`}
             style={{ height: "50px" }}
           >
             CONTACT
