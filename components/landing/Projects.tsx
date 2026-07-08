@@ -164,7 +164,7 @@ export default function Projects() {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section className="w-screen bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
+    <section className="w-full bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
       <div className="flex flex-col gap-10 lg:gap-[60px]">
         <div className="flex flex-col gap-6 lg:gap-[30px]">
           {/* Title header */}
@@ -215,13 +215,13 @@ export default function Projects() {
 
           {/* Project grid */}
           {filteredProjects.length > 0 ? (
-            <div className="flex flex-col gap-[30px] md:flex-row md:items-stretch">
+            <div className="flex flex-col gap-5 md:gap-[30px] md:flex-row md:items-stretch">
               {filteredProjects[0] && (
-                <div className="md:w-[817px]">
+                <div className="w-full md:w-[817px]">
                   <ProjectCard project={filteredProjects[0]} isLarge />
                 </div>
               )}
-              <div className="flex flex-col gap-[30px] md:w-[621px]">
+              <div className="flex w-full flex-col gap-5 md:gap-[30px] md:w-[621px]">
                 {filteredProjects.slice(1, 3).map((project) => (
                   <ProjectCard key={project.index} project={project} isLarge={false} />
                 ))}
@@ -234,13 +234,13 @@ export default function Projects() {
           )}
 
           {/* Client logos */}
-          <div className="flex flex-col gap-[30px] sm:flex-row sm:items-center">
+          <div className="grid grid-cols-4 gap-3 sm:grid-cols-4 md:grid-cols-8 md:gap-4">
             {clientLogos.map((logo) => (
               <div
                 key={logo.alt}
-                className="relative h-[86px] flex-1 overflow-hidden bg-[var(--bg-light)]"
+                className="relative h-[50px] overflow-hidden bg-[var(--bg-light)] sm:h-[70px] md:h-[86px]"
               >
-                <Image src={logo.src} alt={logo.alt} fill className="object-contain " />
+                <Image src={logo.src} alt={logo.alt} fill className="object-contain" />
               </div>
             ))}
           </div>
