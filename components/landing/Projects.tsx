@@ -1,8 +1,9 @@
 "use client";
-
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const filters = [
   "ALL",
@@ -18,6 +19,7 @@ type Project = {
   title: string;
   category: string;
   image: string;
+  slug: string;
 };
 
 const projects: Project[] = [
@@ -26,26 +28,26 @@ const projects: Project[] = [
     title: "Metropolitan Bridge Rehabilitation",
     category: "Urban Infrastructure",
     image: "/images/image3.jpeg",
+    slug: "metropolitan-bridge-rehabilitation",
   },
   {
     index: "02",
     title: "Hunter Valley Renewable Energy Hub",
     category: "Urban Infrastructure",
     image: "/images/image2.jpeg",
+    slug: "hunter-valley-renewable-energy-hub",
   },
   {
     index: "03",
     title: "Western Sydney Infrastructure Corridor",
     category: "Urban Infrastructure",
     image: "/images/image1.jpeg",
-  },
+    slug: "western-sydney-infrastructure-corridor",
+  }
 ];
 
-// ✅ FIX: Added missing descriptions for each project
 const projectDescriptions: Record<string, string> = {
-  "01": "Major bridge rehabilitation project spanning the metropolitan area, enhancing structural integrity and extending service life.",
-  "02": "Large-scale renewable energy hub in the Hunter Valley region, integrating solar and wind infrastructure at utility scale.",
-  "03": "Comprehensive infrastructure corridor connecting Western Sydney's key growth areas with transport and utility networks.",
+  "01": "Western Sydney Infrastructure Corridor involved delivering comprehensive engineering support across the full corridor alignment, including bridge design, pavement engineering, and drainage solutions to transform connectivity in Western Sydney.",
 };
 
 const clientLogos = [
@@ -59,12 +61,9 @@ const clientLogos = [
   { src: "/images/logo8.jpeg", alt: "Brisbane Growth Development Agency" },
 ];
 
-const doubledLogos = [...clientLogos, ...clientLogos];
-
 function useInView(threshold = 0.15) {
   const [inView, setInView] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
-
   const ref = useCallback(
     (node: HTMLElement | null) => {
       if (observerRef.current) {
@@ -85,11 +84,9 @@ function useInView(threshold = 0.15) {
     },
     [threshold]
   );
-
   useEffect(() => {
     return () => observerRef.current?.disconnect();
   }, []);
-
   return { ref, inView };
 }
 
@@ -101,66 +98,59 @@ function ProjectCard({
   isLarge?: boolean;
 }) {
   const { ref, inView } = useInView();
+  const description = projectDescriptions[project.index];
+  const router = useRouter();
 
   return (
     <div
       ref={ref}
-      className={`group relative overflow-hidden rounded-sm transition-all duration-700 ease-out ${
+      onClick={() => router.push(`/project/${project.slug}`)}
+      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
         inView
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-10 scale-95"
       }`}
     >
       <div
-  className={`relative w-full ${
-    isLarge ? "h-[484px] md:h-[564px]" : "h-[230px] md:h-[270px]"
-  }`}
->
-  <Image
-    src={project.image}
-    alt={project.title}
-    fill
-    sizes={isLarge ? "(min-width: 768px) 50vw, 100vw" : "(min-width: 768px) 25vw, 100vw"}
-    className="object-cover transition-transform duration-700 group-hover:scale-105"
-  />
+        className={`relative w-full overflow-hidden ${
+          isLarge ? "h-[484px] md:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
+        }`}
+      >
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
+        />
 
-        {/* Base gradient — always visible so title/index stay readable */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/20" />
+        {/* Gradient overlay */}
+        <div
+          className={`absolute inset-0  bg-[var(--overlay-image-default)] ${!isLarge && " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]"}`}  
+        />
 
+        {/* Project index — top:50px left:50px */}
         <span
-          className={`absolute left-6 top-6 font-bold text-white ${
-            isLarge ? "text-sm md:text-[56px]" : "text-[32px]"
+          className={`absolute left-[50px] top-[50px] font-[800] tracking-[0.06em] text-white ${
+            isLarge ? "text-[54px] leading-[68px]" : "text-[34px] leading-[43px]"
           }`}
         >
           {project.index}
         </span>
 
-        <span
-          className={`absolute bottom-6 right-6 font-medium tracking-[0.1em] text-white/70 ${
-            isLarge ? "text-sm" : "text-[12px]"
-          }`}
-        >
-          {/* {project.category} */}
-        </span>
+        {/* Title — fixed bottom-50px for all cards, stays aligned */}
+        <h3 className={`absolute left-[50px] bottom-[50px] font-semibold text-white text-[28px] leading-[35px] ${isLarge && " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"}  `}>
+          {project.title}
+        </h3>
 
-        {/* Bottom text block — title always visible, description fades in beneath it on hover */}
-        <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 pt-14">
-          <h3
-            className={`font-bold text-white ${
-              isLarge ? "text-sm md:text-[28px]" : "text-[18px]"
-            }`}
-          >
-            {project.title}
-          </h3>
-          <p
-            className={`max-h-0 overflow-hidden font-medium leading-relaxed text-white/85 opacity-0 transition-all duration-500 ease-out group-hover:max-h-24 group-hover:opacity-100 ${
-              isLarge ? "text-sm md:text-[18px]" : "text-[13px] md:text-[14px]"
-            }`}
-          >
-            {/* ✅ FIX: Now references the defined projectDescriptions */}
-            {projectDescriptions[project.index]}
-          </p>
-        </div>
+        {/* Description — large card only, slides up from below on hover */}
+        {isLarge && (
+          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-[50px] pb-[50px]">
+            <p className="max-w-[717px] text-[16px] leading-[20px] font-[400] text-white">
+              {description}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -168,103 +158,94 @@ function ProjectCard({
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("ALL");
-
   const filteredProjects =
     activeFilter === "ALL"
       ? projects
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <section className="w-full bg-[#F6F8FC] px-6 py-16 sm:px-10 lg:px-30 lg:py-16">
-      <div className="">
-        <div className="mb-5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-bold tracking-[0.1em] text-[#405BAD]">03</span>
-            <span className="h-px w-12 bg-[#B7B7B7]" />
-            <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">PROJECTS</span>
-          </div>
-          <Link
-            href="#all-projects"
-            className="flex items-center gap-2 text-[11px] font-bold tracking-[0.15em] text-[#405BAD] transition-opacity hover:opacity-70"
-          >
-            ALL PROJECTS <span aria-hidden="true">&rarr;</span>
-          </Link>
-        </div>
-
-        <h2 className="mb-8 text-[36px] font-bold leading-tight text-[#333333] sm:text-[42px]">
-          Featured Work
-        </h2>
-
-        <div className="mb-8 flex w-full flex-wrap gap-3 lg:flex-nowrap lg:gap-2">
-          {filters.map((filter) => {
-            const isActive = filter === activeFilter;
-            return (
-             <button
-  key={filter}
-  type="button"
-  onClick={() => setActiveFilter(filter)}
-  className={`rounded-[3px] border px-3 py-2 text-[12px] font-semibold transition-all duration-300 lg:px-4 ${
-    filter === "ALL"
-      ? "flex-none w-[80px] border-[#405BAD] bg-[#405BAD] text-white hover:bg-[#2544A1] hover:border-[#2544A1]" // ← adjust width here
-      : `flex-1 ${
-          isActive
-            ? "border-[#405BAD] bg-[#405BAD] text-white hover:bg-[#2544A1] hover:border-[#2544A1]"
-            : "border-[#405BAD]/50 bg-white text-[#405BAD] hover:border-[#405BAD] hover:bg-[#405BAD] hover:text-white"
-        }`
-  }`}
->
-  {filter}
-</button>
-            );
-          })}
-        </div>
-
-        {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.4fr_1fr]">
-            {filteredProjects[0] && (
-              <ProjectCard project={filteredProjects[0]} isLarge={true} />
-            )}
-            <div className="grid grid-cols-1 gap-6">
-              {filteredProjects.slice(1, 3).map((project) => (
-                <ProjectCard key={project.index} project={project} isLarge={false} />
-              ))}
+    <section className="w-screen bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
+      <div className="mx-auto flex max-w-[1468px] flex-col gap-10 lg:gap-[60px]">
+        <div className="flex flex-col gap-6 lg:gap-[30px]">
+          {/* Title header */}
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+            <div className="flex flex-col gap-6 lg:gap-[30px]">
+              <div className="flex items-center gap-4">
+                <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
+                  03
+                </span>
+                <span className="h-px w-[104px] bg-[var(--bg-hero)]" />
+                <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+                  PROJECTS
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold leading-tight text-[var(--text-dark)] sm:text-4xl md:text-[56px] md:leading-[71px]">
+                Featured Work
+              </h2>
             </div>
+            <Link
+              href="/projects"
+              className="flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity  sm:text-base"
+            >
+              ALL PROJECTS <ArrowRight size={24} />
+            </Link>
           </div>
-        ) : (
-          <div className="py-12 text-center text-[16px] text-[#4C4C4C]">
-            No projects found in this category.
-          </div>
-        )}
 
-        <div className="mt-16 overflow-hidden">
-          <div className="flex w-max animate-infinite-scroll items-center gap-8">
-            {doubledLogos.map((logo, index) => (
-             <div
-  key={`${logo.alt}-${index}`}
-  className="group relative h-14 w-36 flex-shrink-0 overflow-hidden"
->
-  <Image
-    src={logo.src}
-    alt={logo.alt}
-    fill
-    className="object-contain transition-transform duration-300 group-hover:scale-105"
-  />
-  <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-</div>
+          {/* Filter tabs */}
+          <div className="flex w-full gap-3 overflow-x-auto pb-2 lg:gap-4">
+            {filters.map((filter) => {
+              const isActive = filter === activeFilter;
+              const isAll = filter === "ALL";
+              return (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setActiveFilter(filter)}
+                  className={`whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm ${
+                    isActive
+                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                  } ${isAll ? "w-20 flex-none" : "flex-1 min-w-[120px]"}`}
+                >
+                  {filter}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Project grid */}
+          {filteredProjects.length > 0 ? (
+            <div className="flex flex-col gap-[30px] md:flex-row md:items-stretch">
+              {filteredProjects[0] && (
+                <div className="md:w-[817px]">
+                  <ProjectCard project={filteredProjects[0]} isLarge />
+                </div>
+              )}
+              <div className="flex flex-col gap-[30px] md:w-[621px]">
+                {filteredProjects.slice(1, 3).map((project) => (
+                  <ProjectCard key={project.index} project={project} isLarge={false} />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="py-12 text-center text-lg text-[var(--text-muted)]">
+              No projects found in this category.
+            </div>
+          )}
+
+          {/* Client logos */}
+          <div className="flex flex-col gap-[30px] sm:flex-row sm:items-center">
+            {clientLogos.map((logo) => (
+              <div
+                key={logo.alt}
+                className="relative h-[86px] flex-1 overflow-hidden bg-[var(--bg-light)]"
+              >
+                <Image src={logo.src} alt={logo.alt} fill className="object-contain " />
+              </div>
             ))}
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes infinite-scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-infinite-scroll {
-          animation: infinite-scroll 20s linear infinite;
-        }
-      `}</style>
     </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 type Point = {
   title: string;
@@ -33,48 +34,46 @@ const points: Point[] = [
 
 export default function WhyZamr() {
   return (
-    <section className="w-full bg-white px-6 py-16 sm:px-10 lg:px-30 lg:py-16">
-      {/* Inner wrapper with ml-12 to align under the logo – now fixed */}
-      <div className="">
-        <div className="mb-5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {/* Increased: 15px → 17px */}
-            <span className="text-sm font-bold tracking-[0.1em] text-[#405BAD]">04</span>
-            <span className="h-px w-12 bg-[#B7B7B7]" />
-            {/* Increased: 13px → 15px */}
-            <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">
-              WHY ZAMR ENGINEERING
+    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-20">
+      <div>
+        <div className="mb-10 lg:mb-[80px]">
+          <div className="mb-6 flex items-center justify-between lg:mb-8">
+            <div className="flex items-center gap-4">
+              <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
+                04
+              </span>
+              <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+              <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+                WHY ZAMR ENGINEERING
+              </span>
+            </div>
+            <span
+              className="flex items-center gap-2 text-sm font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity  lg:text-base"
+            >
+              LEARN MORE <ArrowRight size={24} />
             </span>
           </div>
-          <Link
-            href="#learn-more"
-            className="flex items-center gap-2 text-[16px] font-semibold text-[#405BAD] transition-opacity hover:opacity-70"
-          >
-            Learn More <span aria-hidden="true">&rarr;</span>
-          </Link>
+          <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
+            The difference is in how we build.
+          </h2>
         </div>
 
-        {/* Increased: 38/44 → 40/46 */}
-        <h2 className="mb-10 text-[40px] font-bold leading-tight text-[#333333] sm:text-[46px]">
-          The difference is in how we build.
-        </h2>
-
-        <div className="border-t border-[#EAEAEA]">
+        <div className="border-t border-[var(--border-light)]">
           {points.map((point) => (
             <div
               key={point.title}
-              // Matching Services row spacing: py-8, gap-4, px-6
-              className="group relative flex cursor-pointer flex-col gap-4 border-b border-[#EAEAEA] bg-transparent px-6 py-8 transition-all duration-300 hover:bg-[#F4F7FF] hover:shadow-md sm:flex-row sm:items-center sm:gap-16 sm:px-8"
+              className="group relative flex flex-col gap-3 border-b border-[var(--border-light)] px-6 py-6 lg:flex-row lg:items-center lg:px-[50px] lg:py-[42px]"
             >
-              <span className="absolute left-0 top-0 h-full w-[3px] bg-[#C54A33] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              {/* Left accent border */}
+              <span className="absolute left-0 top-0 h-full w-1 bg-[var(--color-accent)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              {/* Increased: 20px → 22px */}
-              <h3 className="w-full shrink-0 text-[22px] font-bold text-[#333333] transition-colors group-hover:text-[#405BAD] sm:w-[230px]">
+              {/* Title */}
+              <h3 className="text-xl font-semibold text-[var(--text-dark)] group-hover:text-[var(--color-primary)] lg:w-[444px] lg:shrink-0 lg:text-[28px]">
                 {point.title}
               </h3>
 
-              {/* Increased: 16/17 → 18/19 */}
-              <p className="flex-1 text-[18px] leading-relaxed text-[#4C4C4C] transition-colors group-hover:text-[#1C1F26] md:text-[19px]">
+              {/* Description */}
+              <p className="text-base text-[var(--text-dark)] lg:text-lg">
                 {point.description}
               </p>
             </div>

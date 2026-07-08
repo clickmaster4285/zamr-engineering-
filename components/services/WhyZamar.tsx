@@ -1,7 +1,13 @@
-// components/WhyZamr.jsx
 "use client";
 
+import { Barlow } from "next/font/google";
 import React from "react";
+
+const barlow = Barlow({
+  weight: ["700"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 type Feature = {
   number: string;
@@ -38,33 +44,63 @@ const features: Feature[] = [
 
 export default function WhyZamr() {
   return (
-    <section className="w-full bg-[#EDEEF1] px-6 py-16 sm:px-10 lg:px-30 lg:py-16">
-      <div className="w-auto">
-        <div className="mb-5 flex items-center gap-3">
-          <span className="text-sm tracking-[0.1em] font-bold text-[#405BAD]">02</span>
-          <span className="h-px w-12 bg-[#B7B7B7]" />
-          <span className="text-sm tracking-[0.25em] text-[#4C4C4C]">WHY ZAMR</span>
+    <section className="w-full bg-[var(--bg-section)] px-6 py-16 lg:p-[130px]">
+      <div className="mx-auto flex max-w-[1468px] flex-col gap-[60px]">
+        {/* Header */}
+        <div className="flex flex-col gap-7">
+          {/* Section label */}
+          <div className="flex flex-row items-center gap-4">
+            <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
+              02
+            </span>
+            <span className="h-px w-12 bg-[var(--text-dark)] sm:w-[104px]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">
+              WHY ZAMR
+            </span>
+          </div>
+          <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-heading)] sm:text-[40px] sm:leading-[50px] lg:text-[44px] lg:leading-[55px]">
+            What sets us apart from the competition.
+          </h2>
         </div>
 
-        <h2 className="mb-10 text-[44px] font-bold leading-tight text-[#333333] sm:text-[50px]">
-          What sets us apart from the competition.
-        </h2>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Cards row */}
+        <div className="flex flex-col gap-4 lg:flex-row lg:gap-4">
           {features.map((feature) => (
             <div
               key={feature.number}
-              className="group flex flex-col rounded-md border border-[#DDE0E4] bg-[#F0F1F3] p-6 shadow-sm transition-all duration-300 hover:shadow-md"
+              className="flex flex-1 flex-col border px-5 py-6 lg:px-7 lg:py-7"
+              style={{
+                background: "var(--bg-card)",
+                borderColor: "color-mix(in srgb, var(--color-primary) 10%, transparent)",
+              }}
             >
-              {/* Red line */}
-              <span className="mb-4 h-0.5 w-6 bg-[#D32F2F]" />
-              <span className="mb-2 text-[13px] font-semibold tracking-[0.05em] text-[#4C4C4C]">
+              {/* Red accent line */}
+              <span
+                className="h-[2px] w-6 shrink-0"
+                style={{ background: "var(--color-primary)" }}
+              />
+
+              {/* Number */}
+              <span
+                className="pt-6 text-[9px] font-bold leading-[14px] tracking-[1.8px]"
+                style={{
+                  fontFamily: barlow.style.fontFamily,
+                  color: "color-mix(in srgb, var(--color-primary) 45%, transparent)",
+                }}
+              >
                 {feature.number}
               </span>
-              <h3 className="mb-3 text-[19px] font-bold text-[#333333] transition-colors group-hover:text-[#405BAD]">
+
+              {/* Title */}
+              <h3 className="pt-[10px] text-[20px] font-medium leading-[25px] text-[var(--text-heading)]">
                 {feature.title}
               </h3>
-              <p className="text-[15px] leading-relaxed text-[#4C4C4C]">
+
+              {/* Description */}
+              <p
+                className="pt-[10px] text-[13.5px] leading-[23px]"
+                style={{ color: "var(--color-text-soft)" }}
+              >
                 {feature.description}
               </p>
             </div>

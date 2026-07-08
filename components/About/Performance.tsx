@@ -1,5 +1,5 @@
 "use client";
-
+import { Barlow } from "next/font/google";
 import {
   BarChart,
   Bar,
@@ -12,190 +12,250 @@ import {
   Area,
   Tooltip,
 } from "recharts";
-
-// ---- Types ----
+const barlow = Barlow({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  display: "swap",
+});
 interface ServiceDatum {
   name: string;
   value: number;
   color: string;
 }
-
 interface TrendDatum {
   year: string;
   value: number;
 }
-
 interface StatDatum {
   label: string;
   value: string;
 }
-
-// ---- Data ----
 const revenueByService: ServiceDatum[] = [
-  { name: "Civil Engineering", value: 9.2, color: "#1E3A8A" },
-  { name: "Road Infrastructure", value: 6.4, color: "#2E4FA3" },
-  { name: "Project Verification", value: 4.8, color: "#4A6BC0" },
-  { name: "Renewable Energy", value: 3.1, color: "#7C93D6" },
-  { name: "TfNSW Compliance", value: 1.8, color: "#AEBBE8" },
+  { name: "Civil Engineering", value: 4.27, color: "var(--color-blue-header)" },
+  { name: "Road Infrastructure", value: 3.17, color: "var(--color-chart-bar-1)" },
+  { name: "Project Verification", value: 2.17, color: "var(--color-chart-bar-2)" },
+  { name: "Renewable Energy", value: 1.18, color: "var(--color-chart-bar-3)" },
+  { name: "TfNSW Compliance", value: 0.68, color: "var(--color-chart-bar-4)" },
 ];
-
 const growthTrend: TrendDatum[] = [
-  { year: "FY21", value: 2.0 },
-  { year: "FY22", value: 5.4 },
-  { year: "FY23", value: 6.8 },
-  { year: "FY24", value: 7.6 },
+  { year: "FY21", value: 5.0 },
+  { year: "FY22", value: 7.0 },
+  { year: "FY23", value: 9.0 },
+  { year: "FY24", value: 11.0 },
 ];
-
 const growthStats: StatDatum[] = [
   { label: "FY22 GROWTH", value: "+23.5%" },
   { label: "FY23 GROWTH", value: "+20.2%" },
   { label: "FY24 GROWTH", value: "+9.9%" },
-  { label: "4YR CAGR", value: "+17.9%" },
+  { label: "CAGR (3Y)", value: "+17.9%" },
 ];
-
 export default function RevenuePerformanceSection() {
-  const maxValue = 10; // fixed axis max ($10M) to match reference gridlines
-
   return (
-    <section className="w-full bg-[#F7F8FC] px-8 md:px-30 py-16">
-      {/* Label */}
-      <div className="flex items-center gap-3 mb-8">
-        <span className="text-xs font-bold tracking-[0.2em] text-[#1D4ED8]">04</span>
-        <span className="w-10 h-px bg-gray-400" />
-        <span className="text-xs font-bold tracking-[0.2em] text-gray-700">PERFORMANCE</span>
-      </div>
-
-      {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mb-12">
-        Revenue &amp; Performance
-      </h2>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        {/* ---- Left: Horizontal Bar Chart ---- */}
-        <div>
-          <p className="text-xs font-bold tracking-[0.15em] text-gray-500 mb-6">
-            REVENUE BY SERVICE — FY2024 ($M)
-          </p>
-
-          <ResponsiveContainer width="100%" height={260}>
-            <BarChart
-              data={revenueByService}
-              layout="vertical"
-              margin={{ top: 0, right: 20, left: 0, bottom: 0 }}
-              barCategoryGap={18}
-            >
-              <CartesianGrid horizontal={false} stroke="#E5E7EB" />
-              <XAxis
-                type="number"
-                domain={[0, maxValue]}
-                ticks={[0, 2.5, 5, 7.5, 10]}
-                tickFormatter={(v) => `$${v}M`}
-                tick={{ fontSize: 11, fill: "#9CA3AF" }}
-                axisLine={{ stroke: "#E5E7EB" }}
-                tickLine={false}
-              />
-              <YAxis
-                type="category"
-                dataKey="name"
-                tick={{ fontSize: 12, fill: "#374151", fontWeight: 600 }}
-                axisLine={false}
-                tickLine={false}
-                width={150} // ← increased from 130 to 150 so labels fit on one line
-              />
-              <Tooltip
-                cursor={{ fill: "rgba(0,0,0,0.03)" }}
-                formatter={(value) => [`$${value}M`, "Revenue"]}
-                contentStyle={{
-                  borderRadius: 8,
-                  border: "1px solid #E5E7EB",
-                  fontSize: 12,
-                }}
-              />
-              <Bar dataKey="value" radius={[0, 4, 4, 0]} barSize={22}>
-                {revenueByService.map((entry) => (
-                  <Cell key={entry.name} fill={entry.color} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-
-          {/* Legend */}
-          <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
-            {revenueByService.map((s) => (
-              <div key={s.name} className="flex items-center gap-1.5">
-                <span
-                  className="w-2.5 h-2.5 rounded-sm"
-                  style={{ backgroundColor: s.color }}
-                />
-                <span className="text-[11px] text-gray-500">{s.name}</span>
-              </div>
-            ))}
+    <section className="w-full bg-[var(--bg-light)] px-6 py-16 sm:px-10 md:px-16 lg:px-[80px] xl:p-[130px]">
+      <div className="mx-auto flex max-w-[1468px] flex-col gap-10 sm:gap-12 lg:gap-[60px]">
+        {/* Frame 120 — header */}
+        <div className="flex w-full max-w-[489px] flex-col gap-5 sm:gap-[30px]">
+          {/* Frame 118 — section label */}
+          <div className="flex flex-row items-center gap-4">
+            <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
+              04
+            </span>
+            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+            <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+              PERFORMANCE
+            </span>
           </div>
+          <h2 className="text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[38px] sm:leading-[46px] lg:text-[44px] lg:leading-[55px]">
+            Revenue &amp; Performance
+          </h2>
         </div>
-
-        {/* ---- Right: Area/Line Chart + Stat Boxes ---- */}
-        <div>
-          <p className="text-xs font-bold tracking-[0.15em] text-[#1D4ED8] mb-6">
-            REVENUE GROWTH — 4-YEAR TREND ($M)
-          </p>
-
-          <ResponsiveContainer width="100%" height={220}>
-            <AreaChart data={growthTrend} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
-              <defs>
-                <linearGradient id="growthFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#1D4ED8" stopOpacity={0.18} />
-                  <stop offset="100%" stopColor="#1D4ED8" stopOpacity={0} />
-                </linearGradient>
-              </defs>
-              <CartesianGrid vertical={false} stroke="#E5E7EB" />
-              <XAxis
-                dataKey="year"
-                tick={{ fontSize: 11, fill: "#9CA3AF" }}
-                axisLine={{ stroke: "#E5E7EB" }}
-                tickLine={false}
-              />
-              <YAxis
-                tickFormatter={(v) => `$${v}M`}
-                tick={{ fontSize: 11, fill: "#9CA3AF" }}
-                axisLine={false}
-                tickLine={false}
-                width={40}
-              />
-              <Tooltip
-                formatter={(value) => [`$${value}M`, "Revenue"]}
-                contentStyle={{
-                  borderRadius: 8,
-                  border: "1px solid #E5E7EB",
-                  fontSize: 12,
-                }}
-              />
-              <Area
-                type="monotone"
-                dataKey="value"
-                stroke="#1D4ED8"
-                strokeWidth={2.5}
-                fill="url(#growthFill)"
-                dot={{ r: 4, fill: "#1D4ED8", strokeWidth: 0 }}
-                activeDot={{ r: 6 }}
-              />
-            </AreaChart>
-          </ResponsiveContainer>
-
-          {/* Stat boxes */}
-          <div className="grid grid-cols-2 gap-3 mt-6">
-            {growthStats.map((s) => (
-              <div
-                key={s.label}
-                className="bg-white border border-gray-200 rounded-md px-4 py-3
-                  transition-all duration-200 ease-out cursor-pointer
-                  hover:shadow-md hover:-translate-y-0.5"
-              >
-                <p className="text-[10px] font-semibold tracking-[0.1em] text-gray-400 mb-1">
-                  {s.label}
-                </p>
-                <p className="text-sm font-bold text-[#1D4ED8]">{s.value}</p>
-              </div>
-            ))}
+        {/* Frame 1321319046 — charts row */}
+        <div className="flex flex-col items-stretch gap-10 lg:flex-row lg:items-center lg:gap-[64px]">
+          {/* Left — bar chart */}
+          <div className="flex w-full flex-1 flex-col">
+            <p
+              className="text-[10px] font-bold leading-[15px] tracking-[1.8px] text-[var(--color-blue-header)]"
+              style={{ fontFamily: barlow.style.fontFamily }}
+            >
+              REVENUE BY SERVICE — FY2024 ($M)
+            </p>
+            <div className="w-full pt-6" style={{ height: 280 }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  data={revenueByService}
+                  layout="vertical"
+                  margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
+                  barCategoryGap={24}
+                >
+                  <CartesianGrid
+                    horizontal={false}
+                    vertical={true}
+                    stroke="color-mix(in srgb, var(--color-primary) 8%, transparent)"
+                    strokeDasharray="1 4"
+                  />
+                  <XAxis
+                    type="number"
+                    domain={[0, 5]}
+                    ticks={[0, 1, 2, 3, 4, 5]}
+                    tickFormatter={(v) => `$${v}M`}
+                    tick={{
+                      fontSize: 10,
+                      fill: "var(--color-text-label)",
+                      fontFamily: barlow.style.fontFamily,
+                    }}
+                    axisLine={{ stroke: "color-mix(in srgb, var(--color-primary) 8%, transparent)" }}
+                    tickLine={false}
+                  />
+                  <YAxis
+                    type="category"
+                    dataKey="name"
+                    tick={{
+                      fontSize: 12,
+                      fill: "var(--text-paragraph)",
+                      fontWeight: 700,
+                      fontFamily: barlow.style.fontFamily,
+                    }}
+                    axisLine={false}
+                    tickLine={false}
+                    width={110}
+                  />
+                  <Tooltip
+                    cursor={{ fill: "color-mix(in srgb, black 3%, transparent)" }}
+                    formatter={(value: unknown) => [
+                      `$${Number(value).toFixed(1)}M`,
+                      "Revenue",
+                    ]}
+                  />
+                  <Bar dataKey="value" radius={[0, 4, 4, 0]} barSize={22}>
+                    {revenueByService.map((entry) => (
+                      <Cell key={entry.name} fill={entry.color} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            {/* Legend */}
+            <div className="flex flex-row flex-wrap items-center gap-x-4 gap-y-2 pt-6">
+              {revenueByService.map((s) => (
+                <div key={s.name} className="flex flex-row items-center gap-2">
+                  <span
+                    className="h-2.5 w-2.5 shrink-0"
+                    style={{ backgroundColor: s.color }}
+                  />
+                  <span
+                    className="text-[10px] leading-[15px] tracking-[0.6px] text-[var(--color-text-soft)]"
+                    style={{ fontFamily: barlow.style.fontFamily }}
+                  >
+                    {s.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Right — area chart + stat boxes */}
+          <div className="flex w-full flex-col lg:w-[548.5px] lg:shrink-0">
+            <p
+              className="text-[10px] font-bold leading-[15px] tracking-[1.8px] text-[var(--color-blue-header)]"
+              style={{ fontFamily: barlow.style.fontFamily }}
+            >
+              REVENUE GROWTH — 4-YEAR TREND ($M)
+            </p>
+            <div className="w-full pt-6" style={{ height: 220 }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart
+                  data={growthTrend}
+                  margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+                >
+                  <defs>
+                    <linearGradient id="growthFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop
+                        offset="0%"
+                        stopColor="var(--color-blue-header)"
+                        stopOpacity={0.108}
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="var(--color-blue-header)"
+                        stopOpacity={0}
+                      />
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid
+                    vertical={false}
+                    stroke="color-mix(in srgb, var(--color-primary) 8%, transparent)"
+                    strokeDasharray="1 4"
+                  />
+                  <XAxis
+                    dataKey="year"
+                    tick={{
+                      fontSize: 10,
+                      fill: "var(--color-text-label)",
+                      fontFamily: barlow.style.fontFamily,
+                    }}
+                    axisLine={{ stroke: "color-mix(in srgb, var(--color-primary) 8%, transparent)" }}
+                    tickLine={false}
+                  />
+                  <YAxis
+                    domain={[5, 13]}
+                    ticks={[5, 7, 9, 11, 13]}
+                    tickFormatter={(v) => `$${v}M`}
+                    tick={{
+                      fontSize: 10,
+                      fill: "var(--color-text-label)",
+                      fontFamily: barlow.style.fontFamily,
+                    }}
+                    axisLine={false}
+                    tickLine={false}
+                    width={40}
+                  />
+                  <Tooltip
+                    formatter={(value: unknown) => [
+                      `$${value}M`,
+                      "Revenue",
+                    ]}
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="value"
+                    stroke="var(--color-blue-header)"
+                    strokeWidth={2}
+                    fill="url(#growthFill)"
+                    dot={{
+                      r: 4,
+                      fill: "color-mix(in srgb, var(--color-primary) 60%, transparent)",
+                      strokeWidth: 0,
+                    }}
+                    activeDot={{ r: 6 }}
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+            {/* Stat boxes */}
+            <div className="grid grid-cols-2 gap-3 pt-6">
+              {growthStats.map((s) => (
+                <div
+                  key={s.label}
+                  className="flex flex-col items-start px-4 py-3"
+                  style={{
+                    background: "var(--bg-light)",
+                    border: "1px solid color-mix(in srgb, var(--color-primary) 10%, transparent)",
+                  }}
+                >
+                  <span
+                    className="text-[8.5px] leading-[13px] tracking-[1.275px] text-[var(--color-text-label)]"
+                    style={{ fontFamily: barlow.style.fontFamily }}
+                  >
+                    {s.label}
+                  </span>
+                  <span
+                    className="pt-[3px] text-[17px] font-extrabold leading-[26px] tracking-[-0.34px] text-[var(--color-blue-header)]"
+                    style={{ fontFamily: barlow.style.fontFamily }}
+                  >
+                    {s.value}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
