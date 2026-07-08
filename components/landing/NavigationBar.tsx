@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -18,17 +18,13 @@ const navLinks = [
 
 export default function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const getHeroHeight = () => {
-      const hero = document.querySelector("section");
-      return hero ? hero.offsetHeight : window.innerHeight;
-    };
-
     const handleScroll = () => {
-      setScrolled(window.scrollY >= getHeroHeight());
+      setScrolled(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll);
@@ -78,7 +74,11 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 text-white`}
+                className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 ${
+                  pathname === link.href
+                    ? "text-[var(--color-secondary)]"
+                    : "text-white hover:text-[var(--color-secondary)]"
+                }`}
               >
                 {link.label}
               </Link>
@@ -128,9 +128,11 @@ export default function Navbar() {
                 href={link.href}
                 onClick={closeMenu}
                 className={`whitespace-nowrap text-sm font-medium uppercase transition-colors duration-300 ${
-                  scrolled
-                    ? "text-[var(--text-dark)] hover:text-[var(--color-primary)]"
-                    : "text-white/90 hover:text-white"
+                  pathname === link.href
+                    ? "text-[var(--color-secondary)]"
+                    : scrolled
+                      ? "text-[var(--text-dark)] hover:text-[var(--color-secondary)]"
+                      : "text-white/90 hover:text-[var(--color-secondary)]"
                 }`}
               >
                 {link.label}
