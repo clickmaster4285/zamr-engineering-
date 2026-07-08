@@ -99,12 +99,11 @@ function ProjectCard({
         />
 
         <div
-          className="absolute inset-0"
-          style={{
-            background: isLarge
-              ? "linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%)"
-              : "linear-gradient(0deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%)",
-          }}
+          className={`absolute inset-0 transition-colors duration-500 ease-in-out ${
+            isLarge
+              ? "bg-black/50"
+              : "bg-black/30 group-hover:bg-[#2544A180]/50"
+          }`}
         />
 
         <span
@@ -193,7 +192,7 @@ export default function ProjectsPage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-[#07183D]/80" />
+        <div className="absolute inset-0 bg-[#07183D]" />
 
         <div className="absolute left-6 right-6 top-[100px] flex flex-col gap-5 sm:left-10 sm:right-10 sm:top-[130px] lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
           <h1 className="font-bold text-white text-[36px] leading-[42px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
