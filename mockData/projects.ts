@@ -72,7 +72,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
     location: "Western Sydney, NSW",
@@ -164,7 +164,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "The Hunter Valley Renewable Energy Hub is a landmark clean energy precinct combining solar generation, wind energy, and battery storage to deliver reliable renewable energy to the NSW grid.",
     location: "Hunter Valley, NSW",
@@ -256,7 +256,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "The Great Western Highway corridor through Penrith had reached the end of its structural pavement life, carrying over 28,000 vehicles per day including heavy freight. Deteriorating ride quality, subsurface drainage failures, and insufficient lane widths had created compounding safety and economic costs for the region.",
     location: "Sydney Metropolitan, NSW",
@@ -348,7 +348,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "An integrated stormwater management system designed to mitigate flood risk, improve water quality, and create community amenity in a rapidly developing urban precinct in Western Sydney.",
     location: "Western Sydney, NSW",
@@ -440,7 +440,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "A major infrastructure upgrade program at the Port of Newcastle, delivering enhanced freight handling capacity, improved road and rail connectivity, and upgraded wharf infrastructure.",
     location: "Newcastle, NSW",
@@ -527,7 +527,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "A strategic corridor enhancement program delivering safety improvements, capacity upgrades, and travel time reliability along a 180 km section of the Pacific Highway — Australia's critical east coast freight route.",
     location: "North Coast, NSW",
