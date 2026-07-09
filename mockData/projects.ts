@@ -313,11 +313,10 @@ export const projects: ProjectData[] = [
     galleryNumber: "04",
     galleryHeading: "Project Gallery",
     galleryImages: [
-      "/images/image3.jpeg",
-      "/images/image4.jpeg",
-      "/images/image5.jpeg",
-      "/images/image7.jpeg",
       "/images/image1.jpeg",
+      "/images/image8.png",
+      "/images/image9.png",
+      "/images/image10.png",
     ],
 
     relatedNumber: "05",
