@@ -294,18 +294,20 @@ export const projects: ProjectData[] = [
     ],
 
     resultsNumber: "03",
-    resultsHeading: "Project Outcomes",
+    resultsHeading: "Results & Achievements",
     resultsMetrics: [
-      { value: "12", label: "Bridges Rehabilitated" },
-      { value: "50+", label: "Years Life Extended" },
-      { value: "0", label: "Traffic Disruptions" },
-      { value: "98%", label: "On-Time Delivery" },
+      { value: "8.2km", label: "CORRIDOR UPGRADED" },
+      { value: "98%", label: "ON-TIME DELIVERY" },
+      { value: "30yr", label: "DESIGN LIFE" },
+      { value: "ZERO", label: "LTI INCIDENTS " },
     ],
     achievements: [
-      "All 12 bridges successfully rehabilitated and returned to service with a minimum 50-year design life extension.",
-      "Zero unplanned traffic disruptions during the entire construction program, despite working on some of Sydney's busiest corridors.",
-      "Achieved 98% on-time delivery across all possession windows, with no overruns on critical path activities.",
-      "Received commendation from TfNSW for innovative use of FRP strengthening technology, setting a benchmark for future programs.",
+      "Full structural pavement rehabilitation across 7 distinct pavement zones.",
+      "Geometric improvements addressing 4 identified sight distance deficiencies.",
+      "Project delivered within budget and on the agreed program milestone dates",
+      "New subsurface drainage network eliminating root-cause failure mechanism.",
+      "Zero lost-time injury incidents across the full 18-month construction program",
+      "Client satisfaction rating of 9.4/10 on post-project TfNSW feedback survey"
     ],
 
     galleryNumber: "04",
