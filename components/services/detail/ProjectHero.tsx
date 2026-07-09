@@ -23,7 +23,7 @@ interface Props {
 export default function ProjectHero({ image = "/images/image5.jpeg", title, subtitle, stats }: Props) {
   return (
     <section className="relative w-full">
-      <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[700px] overflow-hidden">
+      <div className="relative w-full h-[500px] sm:h-[560px] lg:h-[700px] overflow-hidden">
         <Image
           src={image}
           alt={title}
@@ -34,10 +34,10 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
 
         <div className="absolute inset-0 bg-[var(--bg-hero)]/80" />
 
-        <div className="absolute bottom-24 left-0 right-0 px-6 sm:px-10
+        <div className="absolute bottom-28 left-0 right-0 px-6 sm:px-10
                         lg:bottom-auto lg:left-[130px] lg:right-auto lg:w-[933px] lg:px-0
-                        lg:top-1/2 lg:translate-y-[calc(-50%+33.5px)]">
-          <div className="flex flex-col gap-5 lg:gap-5">
+                        lg:top-[265px]">
+          <div className="flex flex-col gap-5">
             <h1 className="font-bold text-white
                            text-[32px] leading-[40px]
                            sm:text-[48px] sm:leading-[60px]
@@ -52,13 +52,18 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
             </p>
           </div>
         </div>
-        {stats && (
-          <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-[536px] w-[1468px] bg-[#08142A]">
+      </div>
+
+      {stats && (
+        <div className="w-full bg-[#08142A] mb-12">
+          {/* Desktop: 6 columns in a row */}
+          <div className="hidden lg:flex mx-auto max-w-[1468px]">
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex-1 flex flex-col justify-center px-5 py-6 min-h-[103px] ${i > 0 ? "border-l border-white/[0.07]" : ""
-                  }`}
+                className={`flex-1 flex flex-col justify-start px-5 py-6 min-h-[103px] ${
+                  i > 0 ? "border-l border-white/[0.07]" : ""
+                }`}
               >
                 <span className={`${barlow.className} font-semibold text-[12px] leading-[14px] text-white/30`}>
                   {stat.label}
@@ -69,17 +74,15 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
               </div>
             ))}
           </div>
-        )}
-      </div>
 
-      {stats && (
-        <div className="lg:hidden w-full bg-[#08142A]">
-          <div className="flex flex-wrap">
+          {/* Mobile: 3 columns, 2 rows */}
+          <div className="lg:hidden flex flex-wrap">
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex-1 min-w-[33.333%] flex flex-col justify-center px-5 py-6 min-h-[80px] ${i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
-                  } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
+                className={`flex-1 min-w-[33.333%] flex flex-col justify-start px-5 py-6 min-h-[80px] ${
+                  i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
+                } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
               >
                 <span className={`${barlow.className} font-semibold text-[10px] leading-[12px] text-white/30`}>
                   {stat.label}
