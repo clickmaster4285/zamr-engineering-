@@ -49,7 +49,7 @@ export default function RelatedWork({ number, heading, projects }: Props) {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
-              <h3 className="absolute bottom-12 left-[50px] text-[18px] font-semibold leading-[23px] text-white">
+              <h3 className="absolute bottom-12 left-8 text-[18px] font-semibold leading-[23px] text-white">
                 {project.title}
               </h3>
             </div>
