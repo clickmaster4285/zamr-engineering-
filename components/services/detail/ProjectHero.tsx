@@ -18,7 +18,7 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
         className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-[var(--bg-hero)]/80" />
+      <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
       <div className="absolute bottom-0 left-0 right-0 px-6 pb-10 sm:pb-12
                       lg:bottom-auto lg:left-[130px] lg:right-auto lg:w-[933px] lg:px-0 lg:pb-0

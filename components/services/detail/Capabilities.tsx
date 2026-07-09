@@ -30,8 +30,7 @@ export default function TechnicalCapabilities({ number, heading, capabilities }:
               key={index}
               className="flex flex-col items-start border border-[var(--color-primary)]/10 bg-[var(--bg-section)] p-7 lg:h-[123px]"
             >
-              <span className="h-[2px] w-full shrink-0 bg-[var(--color-blue-header)]" />
-              <div className="mt-3 flex flex-col gap-3">
+              <div className="flex flex-col gap-3">
                 <h3 className="text-[18px] font-semibold leading-[23px] text-[var(--text-heading)]">
                   {item.title}
                 </h3>
