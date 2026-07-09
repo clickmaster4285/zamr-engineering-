@@ -293,59 +293,50 @@ export default function ProjectsPage() {
       </section>
 
       {/* ──────── HOW WE DELIVER ──────── */}
-      <section className="w-full bg-[var(--bg-hero)] px-4 py-12 text-white sm:px-6 lg:px-[130px] lg:py-[130px]">
-        <div className="mx-auto max-w-[1468px]">
-          <div className="flex flex-col gap-6 lg:gap-7">
+      <section className="w-full bg-[var(--bg-hero)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
+        <div className="mx-auto flex max-w-[1468px] flex-col gap-7 lg:gap-[60px]">
+          <div className="flex flex-col gap-7 lg:gap-[28px]">
             <div className="flex items-center gap-4">
-              <span className="text-[13px] font-medium leading-4 tracking-[3px] text-white sm:text-[14px] sm:leading-5 lg:text-[16px] lg:leading-5">
-                OUR PROCESS
+              <span className="text-[16px] font-medium leading-5 tracking-[3px] text-white">
+                02
               </span>
-              <span className="h-px w-[80px] bg-white sm:w-[104px]" />
+              <span className="h-px w-[104px] bg-white" />
+              <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-white">
+                HOW WE DELIVER
+              </span>
             </div>
             <h2 className="text-[30px] font-bold leading-[38px] text-white sm:text-[36px] sm:leading-[45px] lg:text-[44px] lg:leading-[55px]">
-              How We Deliver
+              Every project, the same standard.
             </h2>
-            <p className="max-w-[720px] text-[14px] leading-[22px] text-[var(--color-text-light-subtle)] sm:text-[15px] sm:leading-[26px] lg:text-[17px] lg:leading-[31px]">
-              Every project at ZAMR Engineering follows a proven delivery framework.
-              From initial concept through to construction completion, we ensure
-              quality, safety, and client satisfaction at every stage.
-            </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:mt-15 lg:grid-cols-4 lg:gap-6">
+          <div className="grid grid-cols-1  md:grid-cols-2">
             {[
               {
-                number: "01",
-                title: "Discovery & Briefing",
-                desc: "We engage with your team to understand project goals, constraints, and success criteria before defining scope and program.",
+                title: "Senior-Led Teams",
+                desc: "Every project is led by a registered senior engineer — not delegated to juniors after sign-off.",
               },
               {
-                number: "02",
-                title: "Design & Development",
-                desc: "Our engineers develop concept through to detailed design, iterating with stakeholders to refine and optimise the solution.",
+                title: "Independent Review",
+                desc: "All deliverables pass internal peer review before issue. No exceptions.",
               },
               {
-                number: "03",
-                title: "Approval & Procurement",
-                desc: "We manage authority submissions, stakeholder approvals, and procurement documentation to enable construction readiness.",
+                title: "Full Lifecycle",
+                desc: "We can resource from feasibility through to as-built certification on a single appointment.",
               },
               {
-                number: "04",
-                title: "Delivery & Handover",
-                desc: "On-site engineering support during construction, quality verification, and as-built documentation for seamless project handover.",
+                title: "On-Program Delivery",
+                desc: "98% of our projects are delivered on the agreed program. We own our commitments.",
               },
             ].map((item) => (
               <div
-                key={item.number}
-                className="flex flex-col gap-2 border border-white/10 p-5 sm:gap-3 sm:p-6"
+                key={item.title}
+                className="flex flex-col gap-3 border-b border-l border-white/[0.08]  p-4 sm:p-6"
               >
-                <span className="text-[28px] font-black leading-[36px] text-white/60 sm:text-[34px] sm:leading-[42px] lg:text-[40px] lg:leading-[50px]">
-                  {item.number}
-                </span>
-                <h3 className="text-[16px] font-semibold leading-[20px] text-white sm:text-[17px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
+                <h3 className="text-[18px] font-semibold leading-[23px] text-white">
                   {item.title}
                 </h3>
-                <p className="text-[11px] leading-[14px] text-[var(--color-text-light-subtle)] sm:text-[11.5px] sm:leading-[14.5px] lg:text-[12px] lg:leading-[15px]">
+                <p className="text-[12px] leading-[15px] text-[var(--color-text-light-subtle)]">
                   {item.desc}
                 </p>
               </div>
