@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { getProjectBySlug } from "@/mockData/projects";
-import ProjectHero from "@/components/services/detail/ProjectHero";
+import ProjectHero from "@/components/projects/detail/ProjectHero";
 import Challenge from "@/components/projects/detail/Challenge";
 import Approach from "@/components/projects/detail/Approach";
 import Results from "@/components/projects/detail/Results";
