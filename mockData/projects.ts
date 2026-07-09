@@ -247,12 +247,12 @@ export const projects: ProjectData[] = [
     heroImage: "/images/image1.jpeg",
 
     stats: [
-      { label: "CLIENT", value: "Transport for NSW" },
-      { label: "VALUE", value: "$180 Million" },
-      { label: "DURATION", value: "2020 – 2025" },
-      { label: "LOCATION", value: "Sydney Metropolitan, NSW" },
-      { label: "SCOPE", value: "Structural Remediation" },
-      { label: "TEAM", value: "18 Engineers" },
+      { label: "CLIENT", value: "Transport for NSW / Penrith City Council" },
+      { label: "VALUE", value: "$47M" },
+      { label: "DURATION", value: "18 Months" },
+      { label: "LOCATION", value: "Western Sydney, NSW" },
+      { label: "SCOPE", value: "Pavement, Geometry & Drainage" },
+      { label: "TEAM", value: "14 Engineers" },
     ],
 
     aboutNumber: "01",
