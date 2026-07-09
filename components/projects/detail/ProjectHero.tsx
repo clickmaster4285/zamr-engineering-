@@ -35,7 +35,7 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
         />
 
         {/* Overlay — exact Figma: linear-gradient(0deg, rgba(7,24,61,0.8), rgba(7,24,61,0.8)) */}
-        <div className="absolute inset-0 bg-[var(--bg-hero)]/80" />
+        <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
         {/* Frame 1321319043 — title + subtitle */}
         {/* Figma: left:130px, top:calc(50% - 245px/2 + 33.5px) → 261px for 700px container */}

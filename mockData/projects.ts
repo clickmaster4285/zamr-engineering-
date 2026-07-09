@@ -258,11 +258,10 @@ export const projects: ProjectData[] = [
     aboutNumber: "01",
     aboutHeading: "About the Project",
     aboutDescription:
-      "A comprehensive bridge rehabilitation program encompassing structural assessment, detailed design, and construction supervision for 12 critical bridge assets across the Sydney metropolitan area.",
+      "The Great Western Highway corridor through Penrith had reached the end of its structural pavement life, carrying over 28,000 vehicles per day including heavy freight. Deteriorating ride quality, subsurface drainage failures, and insufficient lane widths had created compounding safety and economic costs for the region.",
     location: "Sydney Metropolitan, NSW",
     challengeParagraphs: [
-      "Many of the bridges were over 50 years old with limited as-built documentation, requiring extensive field investigation and non-destructive testing to establish existing conditions. The program had to be delivered without disrupting peak-hour traffic on some of Sydney's busiest transport corridors.",
-      "Structural deficiencies identified during initial inspections required innovative strengthening solutions that could be installed within tight weekend possession windows, demanding close coordination with traffic management and rail authorities.",
+      "ZAMR Engineering was engaged by Transport for NSW to deliver the full civil, pavement, and drainage design for an 8.2km rehabilitation — within a live traffic environment and an aggressive 18-month program. The project required staged construction sequencing, temporary traffic management design, and coordination with Endeavour Energy, Sydney Water, and NBN Co for utility protection."
     ],
 
     approachNumber: "02",
