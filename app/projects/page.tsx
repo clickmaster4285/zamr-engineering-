@@ -149,7 +149,7 @@ export default function ProjectsPage() {
   return (
     <main className="w-full flex flex-col items-center">
       {/* ──────── HERO ──────── */}
-      <section className="relative w-full h-[520px] overflow-hidden sm:h-[620px] lg:h-[700px]">
+      <section className="relative w-full h-[400px] overflow-hidden sm:h-[620px] lg:h-[700px]">
         <Image
           src="/images/projectHero.svg"
           alt="Our Projects"
@@ -159,18 +159,20 @@ export default function ProjectsPage() {
         />
         <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-        <div className="absolute left-6 right-6 top-[100px] flex flex-col gap-5 sm:left-10 sm:right-10 sm:top-[130px] lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
-          <h1 className="font-bold text-white text-[36px] leading-[42px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
-            Our Projects
-          </h1>
-          <p className="font-medium text-[var(--color-text-light-subtle)] text-[15px] leading-[20px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
-            A portfolio of precision-engineered infrastructure — from arterial
-            road rehabilitations and renewable energy civil works to structural
-            bridge rehabilitation and independent project verification.
-          </p>
+        <div className="absolute bottom-0 left-0 right-0 px-6 pb-24 sm:px-10 sm:top-[130px] sm:bottom-auto sm:pb-0 lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
+          <div className="flex flex-col gap-3 sm:gap-5">
+            <h1 className="font-bold text-white text-[32px] leading-[38px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
+              Our Projects
+            </h1>
+            <p className="font-medium text-[var(--color-text-light-subtle)] text-[14px] leading-[19px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
+              A portfolio of precision-engineered infrastructure — from arterial
+              road rehabilitations and renewable energy civil works to structural
+              bridge rehabilitation and independent project verification.
+            </p>
+          </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 lg:left-[130px] lg:right-auto lg:w-[1468px] lg:top-[525px] lg:bottom-auto">
+        <div className="absolute bottom-0 left-0 right-0 sm:bottom-auto sm:top-[525px] lg:left-[130px] lg:right-auto lg:w-[1468px]">
           <div className="flex flex-row items-stretch px-4 sm:px-6 lg:px-0">
             {stats.map((stat, i) => (
               <div
@@ -180,13 +182,13 @@ export default function ProjectsPage() {
                 } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
               >
                 <span
-                  className={`${barlow.className} font-black text-white text-[18px] leading-[22px] sm:text-[24px] sm:leading-[28px] lg:text-[34px] lg:leading-[34px]`}
+                  className={`${barlow.className} font-black text-white text-[16px] leading-[20px] sm:text-[24px] sm:leading-[28px] lg:text-[34px] lg:leading-[34px]`}
                   style={{ letterSpacing: "-0.952px" }}
                 >
                   {stat.value}
                 </span>
                 <span
-                  className={`${barlow.className} font-medium text-white/32 pt-[3px] sm:pt-1 lg:pt-[6px] text-[7px] leading-[9px] sm:text-[8px] sm:leading-[11px] lg:text-[9.5px] lg:leading-[14px]`}
+                  className={`${barlow.className} font-medium text-white/32 pt-[2px] sm:pt-1 lg:pt-[6px] text-[6px] leading-[8px] sm:text-[8px] sm:leading-[11px] lg:text-[9.5px] lg:leading-[14px]`}
                   style={{ letterSpacing: "1.33px" }}
                 >
                   {stat.label}
