@@ -46,9 +46,9 @@ export default function RelatedWork({ number, heading, projects }: Props) {
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-[var(--text-dark)]/50" />
+              <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
               <h3 className="absolute bottom-12 left-[50px] text-[18px] font-semibold leading-[23px] text-white">
                 {project.title}
               </h3>
