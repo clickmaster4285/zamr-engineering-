@@ -148,7 +148,7 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
 
           <button
             type="submit"
-            className="flex h-12 w-full items-center justify-center bg-[var(--color-blue-accent)] text-[16px] font-bold leading-5 tracking-[3px] text-white uppercase transition-all hover:bg-[var(--color-primary-hover)] active:scale-95"
+            className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base"
           >
             SUBMIT ENQUIRY
           </button>

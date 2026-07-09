@@ -151,7 +151,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="mt-2 w-full bg-[var(--color-primary)] py-4 text-sm font-bold tracking-[0.3em] text-white transition-all hover:bg-[var(--color-primary-hover)] active:scale-[0.98] sm:mt-4 sm:text-base"
+              className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base"
             >
               SUBMIT ENQUIRY
             </button>

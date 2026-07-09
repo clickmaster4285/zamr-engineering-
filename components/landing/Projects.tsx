@@ -148,11 +148,14 @@ export default function Projects() {
               </h2>
             </div>
             <Link
-              href="/projects"
-              className="flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity  sm:text-base"
-            >
-              ALL PROJECTS <ArrowRight size={24} />
-            </Link>
+  href="/projects"
+  className="group flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-all duration-300 hover:text-[var(--color-secondary)] sm:text-base"
+>
+  ALL PROJECTS
+  <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+    <ArrowRight size={24} />
+  </span>
+</Link>
           </div>
 
           {/* Filter tabs */}

@@ -121,13 +121,15 @@ export default function Services() {
         </div>
 
         {/* CTA */}
-        <div className="flex justify-start">
+        <div className="flex justify-end">
   <button
     type="button"
-    className="mt-8 inline-flex items-center gap-2 text-sm font-medium tracking-[3px] text-[var(--color-blue-accent)] transition-all lg:mt-[50px] lg:text-base"
+    className="group mt-8 inline-flex cursor-pointer items-center gap-2 text-sm font-medium tracking-[3px] text-[var(--color-blue-accent)] transition-all duration-300 hover:text-[var(--color-secondary)] lg:mt-[50px] lg:text-base"
   >
     REQUEST A CONSULTATION
-    <ArrowRight size={24} />
+    <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+      <ArrowRight size={24} />
+    </span>
   </button>
 </div>
       </div>

@@ -1,5 +1,6 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-
+import Link from "next/link";
 interface Props {
   number: string;
   heading: string;
@@ -27,13 +28,15 @@ export default function RelatedWork({ number, heading, projects }: Props) {
             </h2>
           </div>
 
-          <button className="hidden items-center gap-2 text-[12px] font-bold leading-4 tracking-[1.68px] text-[var(--color-blue-header)] sm:flex">
-            ALL PROJECTS
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-[var(--color-blue-header)]">
-              <path d="M5 12H19" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-              <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+          <Link
+            href="/projects"
+            className="group flex items-center gap-2 text-[12px]  tracking-[2px] uppercase text-[var(--color-primary)] transition-all duration-300 hover:text-[var(--color-secondary)] "
+          >
+            <span className="font-bold">ALL PROJECTS</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-[5px] ">
+              <ArrowRight size={24} />
+            </span>
+          </Link>
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -47,10 +47,12 @@ export default function WhyZamr() {
                 WHY ZAMR ENGINEERING
               </span>
             </div>
-            <span className="flex items-center gap-2 text-xs font-medium tracking-[0.3em] text-[var(--color-primary)] transition-opacity sm:text-sm lg:text-base">
-              LEARN MORE <ArrowRight size={20} className="lg:hidden" />
-              <ArrowRight size={24} className="hidden lg:block" />
-            </span>
+           <span className="group flex cursor-pointer items-center gap-2 text-xs font-medium tracking-[0.3em] text-[var(--color-primary)] transition-all duration-300 hover:text-[var(--color-secondary)] sm:text-sm lg:text-base">
+  LEARN MORE
+  <span className="hidden transition-transform duration-300 group-hover:translate-x-[5px] lg:block">
+    <ArrowRight size={24} />
+  </span>
+</span>
           </div>
           <h2 className="text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] md:text-[44px] md:leading-[52px] lg:text-[56px] lg:leading-[71px]">
             The difference is in how we build.

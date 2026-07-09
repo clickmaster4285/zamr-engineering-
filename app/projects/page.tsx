@@ -274,14 +274,13 @@ export default function ProjectsPage() {
 
           {/* Load More button — always shown, disabled when all loaded */}
           <div className="flex justify-end">
-            <button
-              type="button"
-              disabled={!hasMore}
-              className={`w-[192px] py-[14px] tracking-[3px] text-[14px] font-bold uppercase transition-all bg-[var(--color-primary)] text-white`} 
-            >
-              Load More
-            </button>
-          </div>
+  <button
+    type="button"
+    className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
+  >
+    Load More
+  </button>
+</div>
         </div>
       </section>
 
@@ -450,11 +449,11 @@ export default function ProjectsPage() {
             </div>
 
             <button
-              type="submit"
-              className="flex h-[48px] w-full items-center justify-center bg-[var(--color-blue-accent)] text-[16px] font-bold leading-5 tracking-[3px] text-white uppercase transition-all hover:bg-[var(--color-primary-hover)] active:scale-95"
-            >
-              SUBMIT ENQUIRY
-            </button>
+            type="submit"
+            className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base"
+          >
+            SUBMIT ENQUIRY
+          </button>
           </form>
         </div>
       </section>
