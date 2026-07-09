@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { Barlow } from "next/font/google";
 import { projects } from "@/mockData/projects";
-import Contact from "@/components/services/Contact";
 
 const barlow = Barlow({
   weight: ["500", "700", "900"],
@@ -219,12 +218,6 @@ export default function ProjectsPage() {
                   Featured Work
                 </h2>
               </div>
-              <Link
-                href="/projects"
-                className="flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-opacity sm:text-base"
-              >
-                ALL PROJECTS <ArrowRight size={24} />
-              </Link>
             </div>
 
             {/* Filter pills — matching landing page style */}
@@ -346,7 +339,125 @@ export default function ProjectsPage() {
       </section>
 
       {/* ──────── CONTACT ──────── */}
-      <Contact number="ENQUIRE" serviceTitle="Your Next" />
+      <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
+        <div className="mx-auto flex max-w-[1468px] flex-col gap-12 lg:flex-row lg:items-start lg:gap-[231px]">
+          {/* Left — info */}
+          <div className="flex w-full flex-col gap-[30px] lg:w-[555px]">
+            <div className="flex flex-col gap-[30px]">
+              <div className="flex items-center gap-4">
+                <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
+                  03
+                </span>
+                <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+                <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-dark)]">
+                  HOW WE DELIVER
+                </span>
+              </div>
+              <h2 className="text-[36px] font-bold leading-[45px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
+                Start Your Project
+              </h2>
+            </div>
+
+            <div className="flex flex-col justify-end gap-5">
+              <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
+                Tell us about your infrastructure challenge. We&apos;ll match you with the
+                right engineering specialist and respond within 1&ndash;2 business days.
+              </p>
+              <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
+                <span className="text-[var(--color-blue-label)]">Office:</span>{" "}
+                Level 5, 123 Pitt Street, Sydney NSW 2000
+              </p>
+              <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
+                <span className="text-[var(--color-blue-label)]">Phone:</span>{" "}
+                +61 2 9000 0000
+              </p>
+              <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
+                <span className="text-[var(--color-blue-label)]">Email:</span>{" "}
+                enquiries@zamrengineering.com.au
+              </p>
+            </div>
+          </div>
+
+          {/* Right — form */}
+          <form className="flex w-full flex-col gap-7 lg:w-[682px]">
+            <div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="name"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                >
+                  NAME
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="John Smith"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="email"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                >
+                  EMAIL
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@company.com.au"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="subject"
+                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+              >
+                SUBJECT
+              </label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="Project enquiry"
+                className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                style={{ borderBottom: "1px solid var(--border-input)" }}
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="projectDetails"
+                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+              >
+                PROJECT DETAILS
+              </label>
+              <textarea
+                id="projectDetails"
+                name="projectDetails"
+                rows={4}
+                placeholder="Tell us about your project..."
+                className="w-full resize-none border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                style={{ borderBottom: "1px solid var(--border-input)" }}
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="flex h-[48px] w-full items-center justify-center bg-[var(--color-blue-accent)] text-[16px] font-bold leading-5 tracking-[3px] text-white uppercase transition-all hover:bg-[var(--color-primary-hover)] active:scale-95"
+            >
+              SUBMIT ENQUIRY
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
   );
 }

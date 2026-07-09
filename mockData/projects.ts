@@ -57,7 +57,7 @@ export const projects: ProjectData[] = [
     title: "Metropolitan Bridge Rehabilitation",
     category: "Urban Infrastructure",
     shortDescription:
-      "Delivering comprehensive engineering support for the Western Sydney Infrastructure Corridor, improving connectivity and supporting economic growth in the region.",
+      "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
 
     heroTitle: "WESTERN SYDNEY INFRASTRUCTURE CORRIDOR",
     heroImage: "/images/image3.jpeg",

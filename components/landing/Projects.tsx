@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { projects } from "@/mockData/projects";
 
 const filters = [
   "ALL",
@@ -13,42 +14,6 @@ const filters = [
   "Water & Irrigation Systems",
   "Industrial Development",
 ];
-
-type Project = {
-  index: string;
-  title: string;
-  category: string;
-  image: string;
-  slug: string;
-};
-
-const projects: Project[] = [
-  {
-    index: "01",
-    title: "Metropolitan Bridge Rehabilitation",
-    category: "Urban Infrastructure",
-    image: "/images/image3.jpeg",
-    slug: "metropolitan-bridge-rehabilitation",
-  },
-  {
-    index: "02",
-    title: "Hunter Valley Renewable Energy Hub",
-    category: "Urban Infrastructure",
-    image: "/images/image2.jpeg",
-    slug: "hunter-valley-renewable-energy-hub",
-  },
-  {
-    index: "03",
-    title: "Western Sydney Infrastructure Corridor",
-    category: "Urban Infrastructure",
-    image: "/images/image1.jpeg",
-    slug: "western-sydney-infrastructure-corridor",
-  }
-];
-
-const projectDescriptions: Record<string, string> = {
-  "01": "Western Sydney Infrastructure Corridor involved delivering comprehensive engineering support across the full corridor alignment, including bridge design, pavement engineering, and drainage solutions to transform connectivity in Western Sydney.",
-};
 
 const clientLogos = [
   { src: "/images/logo1.jpeg", alt: "Transport for NSW" },
@@ -94,11 +59,10 @@ function ProjectCard({
   project,
   isLarge = false,
 }: {
-  project: Project;
+  project: (typeof projects)[number];
   isLarge?: boolean;
 }) {
   const { ref, inView } = useInView();
-  const description = projectDescriptions[project.index];
   const router = useRouter();
 
   return (
@@ -117,7 +81,7 @@ function ProjectCard({
         }`}
       >
         <Image
-          src={project.image}
+          src={project.heroImage}
           alt={project.title}
           fill
           sizes="(min-width: 1024px) 50vw, 100vw"
@@ -147,7 +111,7 @@ function ProjectCard({
         {isLarge && (
           <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-5 pb-5 sm:px-8 sm:pb-8 md:px-[50px] md:pb-[50px]">
             <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white sm:text-[16px] sm:leading-[20px]">
-              {description}
+              {project.shortDescription}
             </p>
           </div>
         )}
