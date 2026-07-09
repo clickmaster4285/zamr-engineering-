@@ -42,9 +42,7 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
             </div>
 
             <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
-              Start Your<br />
-              {serviceTitle}<br />
-              Project
+              Have a project like this one?
             </h2>
           </div>
 
