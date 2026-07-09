@@ -52,15 +52,13 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
             </p>
           </div>
         </div>
-
         {stats && (
           <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 top-[536px] w-[1468px] bg-[#08142A]">
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex-1 flex flex-col justify-center px-5 py-6 min-h-[103px] ${
-                  i > 0 ? "border-l border-white/[0.07]" : ""
-                }`}
+                className={`flex-1 flex flex-col justify-center px-5 py-6 min-h-[103px] ${i > 0 ? "border-l border-white/[0.07]" : ""
+                  }`}
               >
                 <span className={`${barlow.className} font-semibold text-[12px] leading-[14px] text-white/30`}>
                   {stat.label}
@@ -80,9 +78,8 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex-1 min-w-[33.333%] flex flex-col justify-center px-5 py-6 min-h-[80px] ${
-                  i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
-                } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
+                className={`flex-1 min-w-[33.333%] flex flex-col justify-center px-5 py-6 min-h-[80px] ${i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
+                  } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
               >
                 <span className={`${barlow.className} font-semibold text-[10px] leading-[12px] text-white/30`}>
                   {stat.label}

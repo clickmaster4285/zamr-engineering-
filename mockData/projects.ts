@@ -59,7 +59,7 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
 
-    heroTitle: "WESTERN SYDNEY INFRASTRUCTURE CORRIDOR",
+    heroTitle: "Metropolitan Bridge Rehabilitation",
     heroImage: "/images/image3.jpeg",
 
     stats: [
@@ -151,7 +151,7 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Engineering the clean energy transition in the Hunter Valley with comprehensive civil design and construction support for a large-scale renewable energy precinct.",
 
-    heroTitle: "HUNTER VALLEY RENEWABLE ENERGY HUB",
+    heroTitle: "Hunter Valley Renewable Energy Hub",
     heroImage: "/images/image2.jpeg",
 
     stats: [
@@ -241,7 +241,7 @@ export const projects: ProjectData[] = [
     title: "Western Sydney Infrastructure Corridor",
     category: "Structural Engineering",
     shortDescription:
-      "Comprehensive bridge rehabilitation program restoring structural integrity, improving safety, and extending the operational lifespan of critical metropolitan bridge infrastructure.",
+      "Rebuilding a critical arterial corridor without stopping a city.",
 
     heroTitle: "Western Sydney Infrastructure Corridor",
     heroImage: "/images/image1.jpeg",

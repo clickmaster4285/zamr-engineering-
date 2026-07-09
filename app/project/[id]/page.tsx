@@ -27,7 +27,7 @@ export default function ProjectDetailPage() {
       <ProjectHero
         image={project.heroImage}
         title={project.heroTitle}
-        subtitle={project.title}
+        subtitle={project.shortDescription}
         stats={project.stats}
       />
 
