@@ -82,7 +82,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -174,7 +174,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -265,31 +265,31 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
-        title: "Condition Assessment",
+        title: "Pavement Investigation & Structural Analysis",
         description:
-          "Comprehensive visual inspection, non-destructive testing, and load rating analysis of all bridge assets to establish baseline condition and prioritise interventions.",
+          "A comprehensive pavement investigation program was conducted including FWD deflection surveys, DCP testing, and laboratory CBR analysis of subgrade materials. CIRCLY mechanistic-empirical analysis determined residual structural capacity and informed the rehabilitation treatment selection across seven distinct pavement zones.",
       },
       {
         number: "02",
-        title: "Remedial Design Development",
+        title: "Geometric & Drainage Design",
         description:
-          "Development of strengthening and remediation designs using advanced analysis techniques, including FRP wrapping, steel plate bonding, and bearing replacement solutions.",
+          "The existing horizontal and vertical alignment was reassessed against Austroads Guide to Road Design criteria. Where required, geometric improvements were incorporated to address sight distance deficiencies and substandard superelevation transitions. A new kerb and gutter and subsurface drainage network was designed to address the root-cause of premature pavement failure.",
       },
       {
         number: "03",
-        title: "Traffic Management Integration",
+        title: "Traffic Management & Staging",
         description:
-          "Design of construction staging and traffic management plans to enable safe delivery of works within tight weekend and night-time possession windows.",
+          "A detailed Construction Traffic Management Plan was prepared in coordination with TfNSW Network Operations. Six construction stages were sequenced to maintain two traffic lanes in each direction throughout, with independent road safety audits conducted at each staging transition point.",
       },
       {
         number: "04",
-        title: "Construction Supervision",
+        title: "Authority Coordination & Certification",
         description:
-          "On-site engineering supervision during all remedial works, ensuring compliance with design intent and maintaining quality standards across all 12 bridge sites.",
+          "All utility authority agreements, RMS concurrences, and local council approvals were managed by ZAMR Engineering. Our team acted as the Principal Certifier for the structural pavement works and issued the final Certificate of Completion to Transport for NSW.",
       },
     ],
 
@@ -357,7 +357,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -449,7 +449,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -536,7 +536,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
