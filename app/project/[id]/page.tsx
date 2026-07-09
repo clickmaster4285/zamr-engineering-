@@ -64,6 +64,7 @@ export default function ProjectDetailPage() {
         projects={project.relatedProjects.map((p) => ({
           title: p.title,
           image: p.image,
+          slug: p.slug,
         }))}
       />
 

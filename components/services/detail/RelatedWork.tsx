@@ -1,13 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 interface Props {
   number: string;
   heading: string;
-  projects: { title: string; image: string }[];
+  projects: { title: string; image: string; slug: string }[];
 }
 
 export default function RelatedWork({ number, heading, projects }: Props) {
+  const router = useRouter();
   return (
     <section className="w-full bg-[var(--bg-section)] px-6 py-16 lg:p-[130px]">
       <div className="">
@@ -43,6 +46,7 @@ export default function RelatedWork({ number, heading, projects }: Props) {
           {projects.map((project) => (
             <div
               key={project.title}
+              onClick={() => router.push(`/project/${project.slug}`)}
               className="group relative h-[340px] w-full cursor-pointer overflow-hidden"
             >
               <Image
