@@ -10,7 +10,7 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
-  { label: "Why ZAMR Engineering", href: "" },
+  { label: "Why ZAMR Engineering", href: "/why-zamr-engineering" },
   { label: "Our Team", href: "" },
   { label: "Trusted & Accredited", href: "" },
   { label: "Engineering For Impact", href: "" },
