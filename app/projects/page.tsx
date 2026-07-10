@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { Barlow } from "next/font/google";
-import { projects } from "@/mockData/projects";
+import { projects, projectFilters, projectsHeroStats, projectsHowWeDeliver, projectsContactInfo } from "@/mockData/projects";
 
 const barlow = Barlow({
   weight: ["500", "700", "900"],
@@ -14,21 +14,7 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const filters = [
-  "ALL",
-  "Urban Infrastructure",
-  "Structural Engineering",
-  "Transportation Projects",
-  "Water & Irrigation Systems",
-  "Industrial Development",
-];
 
-const stats = [
-  { value: "$180M+", label: "TOTAL PROJECT VALUE DELIVERED" },
-  { value: "150+", label: "PROJECTS COMPLETED" },
-  { value: "3", label: "STATES OPERATING" },
-  { value: "2012", label: "DELIVERING SINCE" },
-];
 
 const INITIAL_COUNT = 6;
 const LOAD_MORE_COUNT = 3;
@@ -173,7 +159,7 @@ export default function ProjectsPage() {
 
         <div className="absolute bottom-0 left-0 right-0 sm:bottom-auto sm:top-[525px] lg:left-[130px] lg:right-auto lg:w-[1468px]">
           <div className="flex flex-row items-stretch px-4 sm:px-6 lg:px-0">
-            {stats.map((stat, i) => (
+            {projectsHeroStats.map((stat, i) => (
               <div
                 key={stat.label}
                 className={`flex flex-col justify-center items-start flex-1 min-w-0 ${
@@ -222,7 +208,7 @@ export default function ProjectsPage() {
 
             {/* Filter pills — matching landing page style */}
             <div className="flex w-full flex-nowrap gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:overflow-visible lg:gap-4">
-              {filters.map((filter) => {
+              {projectFilters.map((filter) => {
                 const isActive = filter === activeFilter;
                 const isAll = filter === "ALL";
                 return (
@@ -303,24 +289,7 @@ export default function ProjectsPage() {
           </div>
 
           <div className="grid grid-cols-1  md:grid-cols-2">
-            {[
-              {
-                title: "Senior-Led Teams",
-                desc: "Every project is led by a registered senior engineer — not delegated to juniors after sign-off.",
-              },
-              {
-                title: "Independent Review",
-                desc: "All deliverables pass internal peer review before issue. No exceptions.",
-              },
-              {
-                title: "Full Lifecycle",
-                desc: "We can resource from feasibility through to as-built certification on a single appointment.",
-              },
-              {
-                title: "On-Program Delivery",
-                desc: "98% of our projects are delivered on the agreed program. We own our commitments.",
-              },
-            ].map((item) => (
+            {projectsHowWeDeliver.map((item) => (
               <div
                 key={item.title}
                 className="flex flex-col gap-3 border-b border-l border-white/[0.08]  p-4 sm:p-6"
@@ -329,7 +298,7 @@ export default function ProjectsPage() {
                   {item.title}
                 </h3>
                 <p className="text-[12px] leading-[15px] text-[var(--color-text-light-subtle)]">
-                  {item.desc}
+                  {item.description}
                 </p>
               </div>
             ))}
@@ -364,15 +333,15 @@ export default function ProjectsPage() {
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
                 <span className="text-[var(--color-blue-label)]">Office:</span>{" "}
-                Level 5, 123 Pitt Street, Sydney NSW 2000
+                {projectsContactInfo.address}
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
                 <span className="text-[var(--color-blue-label)]">Phone:</span>{" "}
-                +61 2 9000 0000
+                {projectsContactInfo.phone}
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
                 <span className="text-[var(--color-blue-label)]">Email:</span>{" "}
-                enquiries@zamrengineering.com.au
+                {projectsContactInfo.email}
               </p>
             </div>
           </div>

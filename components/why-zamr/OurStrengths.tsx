@@ -1,15 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-const strengths = [
-  "Experienced Engineering Team",
-  "Integrated Management Systems",
-  "Quality Assurance",
-  "Project Verification",
-  "Client-Focused Approach",
-  "Regulatory Compliance",
-];
+import { ourStrengths } from "@/mockData/why-zamr";
 
 export default function OurStrengths() {
   return (
@@ -46,7 +38,7 @@ export default function OurStrengths() {
 
             {/* Frame 1321319073 — checklist */}
             <div className="flex w-full flex-col items-start gap-4">
-              {strengths.map((item) => (
+              {ourStrengths.map((item) => (
                 <div
                   key={item}
                   className="flex w-full flex-row items-center gap-3"

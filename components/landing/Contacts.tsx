@@ -2,6 +2,7 @@
 
 import React, { useState, ChangeEvent } from "react";
 import Image from "next/image";
+import { contactInfo } from "@/mockData/landing";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -45,47 +46,40 @@ export default function Contact() {
 
             <div className="space-y-4 text-sm text-[var(--text-dark)] sm:space-y-5 sm:text-base lg:text-lg">
               <p>
-                <span className="text-[var(--color-primary)]">Company Name: </span> ZAMR Engineering Pty Ltd
+                <span className="text-[var(--color-primary)]">Company Name: </span> {contactInfo.companyName}
               </p>
               <p>
-                <span className="text-[var(--color-primary)]"> Address 1:</span> 30 Smith Street Wentworthville NSW, 2145
+                <span className="text-[var(--color-primary)]"> Address 1:</span> {contactInfo.address1}
               </p>
               <p>
-                <span className="text-[var(--color-primary)]"> Address 2:</span> L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150
+                <span className="text-[var(--color-primary)]"> Address 2:</span> {contactInfo.address2}
               </p>
-              <p>
-               <span className="text-[var(--color-primary)]">  Email:{" "}</span>
-                <a
-                  href="mailto:admin@zamrengineering.com.au"
-                  className="break-all transition-all hover:underline sm:break-normal"
-                >
-                  admin@zamrengineering.com.au
-                </a>
-              </p>
-              <p>
-                <span className="text-[var(--color-blue-label)]"> Email:{" "}</span>
-                <a
-                  href="mailto:khalid.javed@zamrengineering.com.au"
-                  className="break-all transition-all hover:underline sm:break-normal"
-                >
-                  khalid.javed@zamrengineering.com.au
-                </a>
-              </p>
+              {contactInfo.emails.map((email, i) => (
+                <p key={i}>
+                  <span className={i === 0 ? "text-[var(--color-primary)]" : "text-[var(--color-blue-label)]"}>
+                    {email.label}:{" "}
+                  </span>
+                  <a
+                    href={`mailto:${email.address}`}
+                    className="break-all transition-all hover:underline sm:break-normal"
+                  >
+                    {email.address}
+                  </a>
+                </p>
+              ))}
             </div>
 
             <div className="mt-5 flex items-center gap-5 sm:mt-[20px] sm:gap-6">
-              <button type="button" aria-label="Instagram" className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7">
-                <Image src="/icons/mynaui_instagram.svg" alt="Instagram" width={28} height={28} />
-              </button>
-              <button type="button" aria-label="LinkedIn" className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7">
-                <Image src="/icons/mynaui_linkedin.svg" alt="LinkedIn" width={28} height={28} />
-              </button>
-              <button type="button" aria-label="Website" className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7">
-                <Image src="/icons/et_global.svg" alt="Website" width={28} height={28} />
-              </button>
-              <a href="mailto:admin@zamrengineering.com.au" aria-label="Email" className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7">
-                <Image src="/icons/Vector.svg" alt="Email" width={25} height={19} />
-              </a>
+              {contactInfo.socialLinks.map((link, i) => (
+                <a
+                  key={i}
+                  href={link.href || undefined}
+                  aria-label={link.alt}
+                  className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7"
+                >
+                  <Image src={link.src} alt={link.alt} width={28} height={28} />
+                </a>
+              ))}
             </div>
           </div>
 

@@ -3,34 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-type Point = {
-  title: string;
-  description: string;
-};
-
-const points: Point[] = [
-  {
-    title: "Safety first",
-    description:
-      "An EMR consistently below industry average — because every worker goes home.",
-  },
-  {
-    title: "Self-perform strength",
-    description:
-      "In-house concrete, steel, and interiors crews give us schedule and quality control others can't match.",
-  },
-  {
-    title: "Built sustainably",
-    description:
-      "LEED, WELL, and net-zero expertise woven into every phase of design and construction.",
-  },
-  {
-    title: "Owner-aligned",
-    description:
-      "Transparent budgets, open-book contracts, and one team accountable from day one to handover.",
-  },
-];
+import { whyZamrPoints } from "@/mockData/landing";
 
 export default function WhyZamr() {
   return (
@@ -60,7 +33,7 @@ export default function WhyZamr() {
         </div>
 
         <div className="border-t border-[var(--border-light)]">
-          {points.map((point) => (
+          {whyZamrPoints.map((point) => (
             <div
               key={point.title}
               className="group relative flex flex-col gap-2 border-b border-[var(--border-light)] px-4 py-5 sm:px-6 sm:py-6 lg:flex-row lg:items-center lg:px-[50px] lg:py-[42px]"

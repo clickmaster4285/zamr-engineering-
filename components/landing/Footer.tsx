@@ -3,23 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-const quickLinks = [
-  "About",
-  "Projects",
-  "Case Studies",
-  "Insights",
-  "Careers",
-  "Contact",
-];
-
-const serviceLinks = [
-  "Planning & Design",
-  "Project Management",
-  "Project Verification",
-  "Buildings Services",
-  "Others Services",
-];
+import { footerQuickLinks, footerServiceLinks, footerContactInfo, footerDescription } from "@/mockData/landing";
 
 export default function Footer() {
   return (
@@ -53,7 +37,7 @@ export default function Footer() {
               {/* Frame 54 */}
               <div className="flex w-full flex-col items-start gap-4">
                 <p className="max-w-[330px] text-base leading-[29px] text-white">
-                  Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.
+                  {footerDescription}
                 </p>
                 {/* Frame 53 — social icons */}
                 <div className="flex items-center gap-4">
@@ -76,7 +60,7 @@ export default function Footer() {
               <div className="flex flex-1 flex-col gap-6">
                 <h3 className="text-lg font-bold leading-[23px] text-white">Quick Links</h3>
                 <ul className="flex flex-col gap-3">
-                  {quickLinks.map((label) => (
+                  {footerQuickLinks.map((label) => (
                     <li key={label}>
                       <Link href="" className="text-base leading-6 text-white transition-colors hover:text-white/80">
                         {label}
@@ -90,7 +74,7 @@ export default function Footer() {
               <div className="flex flex-1 flex-col gap-6">
                 <h3 className="text-lg font-bold leading-[23px] text-white">Services</h3>
                 <ul className="flex flex-col gap-3">
-                  {serviceLinks.map((label) => (
+                  {footerServiceLinks.map((label) => (
                     <li key={label}>
                       <span className="text-base leading-6 text-white">{label}</span>
                     </li>
@@ -104,15 +88,15 @@ export default function Footer() {
                 <ul className="flex flex-col gap-4">
                   <li className="flex flex-row items-center gap-3">
                     <Image src="/icons/location.svg" alt="Location" width={20} height={20} />
-                    <span className="text-base leading-[26px] text-white">Sydney, New South Wales Australia</span>
+                    <span className="text-base leading-[26px] text-white">{footerContactInfo.location}</span>
                   </li>
                   <li className="flex flex-row items-end gap-3">
                     <Image src="/icons/gamilwhite.svg" alt="Email" width={20} height={20} />
-                    <span className="text-base leading-6 text-white">info@zamreng.com.au</span>
+                    <span className="text-base leading-6 text-white">{footerContactInfo.email}</span>
                   </li>
                   <li className="flex flex-row items-center gap-3">
                     <Image src="/icons/phonewhite.svg" alt="Phone" width={20} height={20} />
-                    <span className="text-base leading-6 text-white">+61 2 3456 7890</span>
+                    <span className="text-base leading-6 text-white">{footerContactInfo.phone}</span>
                   </li>
                 </ul>
               </div>

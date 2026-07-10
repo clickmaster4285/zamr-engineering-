@@ -1,43 +1,6 @@
 "use client";
 
-interface ProcessItem {
-  number: string;
-  title: string;
-  description: string;
-}
-
-const processItems: ProcessItem[] = [
-  {
-    number: "01",
-    title: "Civil Engineering",
-    description:
-      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
-  },
-  {
-    number: "02",
-    title: "Design & Documentation",
-    description:
-      "We deliver detailed design and documentation that meets regulatory requirements and client specifications, ensuring every project is built on a solid foundation.",
-  },
-  {
-    number: "03",
-    title: "Project Verification",
-    description:
-      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
-  },
-  {
-    number: "04",
-    title: "Deliver",
-    description:
-      "Execute with quality, compliance, and efficiency.",
-  },
-  {
-    number: "05",
-    title: "Support",
-    description:
-      "Provide ongoing technical support and value.",
-  },
-];
+import { processItems } from "@/mockData/why-zamr";
 
 export default function Process() {
   return (

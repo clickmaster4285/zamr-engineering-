@@ -1,19 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-
-interface Stat {
-  value: number;
-  suffix: string;
-  label: string;
-  align: "start" | "center" | "end";
-}
-
-const stats: Stat[] = [
-  { value: 150, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
-  { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
-  { value: 98, suffix: "%", label: "COMPLIANCE RATE", align: "end" },
-];
+import { stats, type StatItem } from "@/mockData/about";
 
 function useCountUp(target: number, shouldStart: boolean, duration = 1500) {
   const [count, setCount] = useState(0);
@@ -48,7 +36,7 @@ function StatItem({
   stat,
   shouldStart,
 }: {
-  stat: Stat;
+  stat: StatItem;
   shouldStart: boolean;
 }) {
   const count = useCountUp(stat.value, shouldStart);

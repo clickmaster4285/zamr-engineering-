@@ -1,37 +1,6 @@
 "use client";
 
-interface RowItem {
-  title: string;
-  description: string;
-}
-
-const rows: RowItem[] = [
-  {
-    title: "Engineering Expertise",
-    description:
-      "Experienced professionals delivering practical engineering solutions across complex infrastructure projects.",
-  },
-  {
-    title: "Quality Focus",
-    description:
-      "Every project follows structured quality management processes to ensure consistent and reliable outcomes.",
-  },
-  {
-    title: "Client Collaboration",
-    description:
-      "We work closely with our clients to understand project objectives and deliver tailored engineering solutions.",
-  },
-  {
-    title: "Reliable Delivery",
-    description:
-      "Committed to meeting deadlines while maintaining technical excellence and project quality.",
-  },
-  {
-    title: "Sustainable Solutions",
-    description:
-      "Designing engineering solutions that support long-term performance, efficiency, and responsible development.",
-  },
-];
+import { howWeWorkRows } from "@/mockData/why-zamr";
 
 export default function HowWeWork() {
   return (
@@ -58,7 +27,7 @@ export default function HowWeWork() {
 
         {/* Frame 1321318994 — rows */}
         <div className="flex w-full flex-col items-start">
-          {rows.map((row, index) => (
+          {howWeWorkRows.map((row, index) => (
             <div
               key={row.title}
               className="group relative flex w-full flex-col gap-2 border-t border-[var(--border-section)] px-4 py-6 sm:flex-row sm:items-center sm:gap-0 sm:px-6 sm:py-8 lg:h-[120px] lg:px-[50px] lg:py-0"

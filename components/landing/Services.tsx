@@ -3,55 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-
-type Service = {
-  index: string;
-  title: string;
-  description: string;
-};
-
-const services: (Service & { slug: string })[] = [
-  {
-    index: "01",
-    slug: "civil-engineering",
-    title: "Civil Engineering",
-    description:
-      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
-  },
-  {
-    index: "02",
-    slug: "project-verification",
-    title: "Project Verification",
-    description:
-      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
-  },
-  {
-    index: "03",
-    slug: "road-infrastructure",
-    title: "Road Infrastructure",
-    description:
-      "Advanced pavement engineering, geometric road design, and integrated traffic systems for future-ready transport networks across New South Wales and beyond.",
-  },
-  {
-    index: "04",
-    slug: "renewable-energy-infrastructure",
-    title: "Renewable Energy Infrastructure",
-    description:
-      "Engineering the clean energy transition — solar farm civil works, wind turbine foundations, and hybrid energy infrastructure at utility scale.",
-  },
-  {
-    index: "05",
-    slug: "tfnsw-compliance",
-    title: "TfNSW Compliance",
-    description:
-      "Specialist advisory and compliance consulting precisely aligned with Transport for NSW regulatory standards, technical specifications, and certification frameworks.",
-  },
-];
-
-const tagRows = [
-  ["STRUCTURAL", "Hydraulic"],
-  ["GEOTECHNICAL"],
-];
+import { servicesPreview, serviceTagRows } from "@/mockData/landing";
 
 export default function Services() {
   const router = useRouter();
@@ -77,7 +29,7 @@ export default function Services() {
 
         {/* Frame 1321318998 — service rows */}
         <div className="mt-8 flex flex-col border-t border-[var(--border-section)] lg:mt-[50px]">
-          {services.map((service, idx) => (
+          {servicesPreview.map((service, idx) => (
             <div
               key={service.index}
               onClick={() => router.push(`/services/${service.slug}`)}
@@ -103,7 +55,7 @@ export default function Services() {
 
               {/* Tags — 2-row layout per Figma, visible on hover */}
               <div className="flex flex-wrap gap-2 opacity-100 transition-opacity duration-300 group-hover:opacity-100 lg:ml-[26px] lg:w-[224px] lg:shrink-0 lg:flex-col lg:flex-nowrap lg:gap-2 lg:opacity-0 lg:group-hover:opacity-100">
-                {tagRows.map((row, ri) => (
+                {serviceTagRows.map((row, ri) => (
                   <div key={ri} className="flex flex-row items-center gap-1.5 lg:gap-[6px]">
                     {row.map((tag) => (
                       <span

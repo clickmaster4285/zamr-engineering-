@@ -1,18 +1,6 @@
 "use client";
 
-interface StatItem {
-  value: string;
-  suffix?: string;
-  label: string;
-  align: "start" | "center" | "end";
-}
-
-const stats: StatItem[] = [
-  { value: "12", suffix: "+", label: "YEARS OF EXPERIENCE", align: "start" },
-  { value: "5", label: "ENGINEERING DISCIPLINES", align: "center" },
-  { value: "150", suffix: "+", label: "PROJECTS DELIVERED", align: "center" },
-  { value: "98", suffix: "%", label: "CLIENT SATISFACTION", align: "end" },
-];
+import { trackRecordStats } from "@/mockData/why-zamr";
 
 export default function TrackRecord() {
   return (
@@ -31,7 +19,7 @@ export default function TrackRecord() {
 
         {/* Stats row */}
         <div className="flex w-full flex-col items-start gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-[185px]">
-          {stats.map((stat) => {
+          {trackRecordStats.map((stat) => {
             const alignClass = {
               start: "items-start",
               center: "items-center",

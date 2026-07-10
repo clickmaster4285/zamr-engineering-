@@ -1,14 +1,6 @@
 "use client";
 
-interface CommitmentCard {
-  title: string;
-}
-
-const cards: CommitmentCard[] = [
-  { title: "Quality" },
-  { title: "Integrity" },
-  { title: "Excellence" },
-];
+import { commitmentCards } from "@/mockData/why-zamr";
 
 export default function Commitment() {
   return (
@@ -36,7 +28,7 @@ export default function Commitment() {
 
         {/* Frame 1321319062 — cards row */}
         <div className="flex w-full flex-col items-stretch lg:flex-row">
-          {cards.map((card) => (
+          {commitmentCards.map((card) => (
             <div
               key={card.title}
               className="flex w-full flex-col items-start border-0 border-b border-l-0 border-white/[0.08] p-6 lg:w-[489.33px] lg:flex-1 lg:border-b lg:border-l"

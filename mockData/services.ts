@@ -343,3 +343,51 @@ export const services: ServiceData[] = [
 export function getServiceBySlug(slug: string): ServiceData | undefined {
   return services.find((s) => s.slug === slug);
 }
+
+// --- Services Page Static Data ---
+
+export interface ServicesHeroContent {
+  title: string;
+  subtitle: string;
+  image: string;
+}
+
+export const servicesHero: ServicesHeroContent = {
+  title: "Our Services",
+  subtitle:
+    "Five specialist engineering disciplines. One integrated consultancy. Delivering precision-led infrastructure outcomes across NSW, QLD, and Victoria.",
+  image: "/images/image5.jpeg",
+};
+
+export interface WhyZamrFeature {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export const whyZamrFeatures: WhyZamrFeature[] = [
+  {
+    number: "01",
+    title: "Technical Excellence",
+    description:
+      "Every deliverable is produced by experienced, accredited engineers and subjected to rigorous internal review before issue. No shortcuts. No junior-only teams.",
+  },
+  {
+    number: "02",
+    title: "Independence & Integrity",
+    description:
+      "Our verification and compliance practices operate with complete independence from design. We report what we find — not what clients want to hear.",
+  },
+  {
+    number: "03",
+    title: "Government Expertise",
+    description:
+      "Deep experience working within TfNSW, RMS, and Infrastructure NSW frameworks. We know the standards, the approval processes, and the people.",
+  },
+  {
+    number: "04",
+    title: "End-to-End Delivery",
+    description:
+      "From initial feasibility to as-built certification, we can resource the full project lifecycle — eliminating the gaps between consultant handovers.",
+  },
+];

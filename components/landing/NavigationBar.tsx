@@ -5,16 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "Why ZAMR Engineering", href: "/why-zamr-engineering" },
-  { label: "Our Team", href: "" },
-  { label: "Trusted & Accredited", href: "" },
-  { label: "Engineering For Impact", href: "" },
-];
+import { navLinks } from "@/mockData/landing";
 
 export default function Navbar() {
   const router = useRouter();

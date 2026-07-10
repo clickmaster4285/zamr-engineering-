@@ -1,23 +1,11 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-
-type Stat = {
-  value: number;
-  suffix: string;
-  label: string;
-  align: "start" | "center" | "end";
-};
-
-const statsData: Stat[] = [
-  { value: 150, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
-  { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
-  { value: 98, suffix: "%", label: "COMPLIANCE RATE", align: "end" },
-];
+import { aboutStats, aboutParagraphs } from "@/mockData/landing";
 
 export default function About() {
   const [currentValues, setCurrentValues] = useState<number[]>(
-    statsData.map(() => 0)
+    aboutStats.map(() => 0)
   );
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -41,7 +29,7 @@ export default function About() {
   }, [hasAnimated]);
 
   const startAnimation = () => {
-    const targets = statsData.map((s) => s.value);
+    const targets = aboutStats.map((s) => s.value);
     const duration = 2000;
     startTimeRef.current = performance.now();
     const animate = (currentTime: number) => {
@@ -99,20 +87,11 @@ export default function About() {
         <div className="flex w-full flex-col gap-6 lg:w-[989px] lg:gap-[30px]">
           {/* Frame 1321318989 — paragraphs */}
           <div className="flex w-full flex-col gap-5">
-            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
-              ZAMR Engineering is a Sydney-based civil engineering consultancy
-              delivering precision-led infrastructure solutions across New
-              South Wales and beyond. Founded on a commitment to technical
-              excellence, we partner with government bodies, developers, and
-              industry leaders to engineer infrastructure that endures.
-            </p>
-            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
-              Our approach integrates rigorous engineering methodology with
-              forward-looking design thinking — producing outcomes that are
-              structurally sound, environmentally considered, and technically
-              innovative. Every project is an opportunity to advance what
-              infrastructure can achieve.
-            </p>
+            {aboutParagraphs.map((p, i) => (
+              <p key={i} className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
+                {p}
+              </p>
+            ))}
           </div>
 
           {/* Divider */}
@@ -120,7 +99,7 @@ export default function About() {
 
           {/* Frame 1321318988 — stats row */}
           <div className="flex w-full flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-x-8 lg:gap-x-[185px]">
-            {statsData.map((stat, index) => (
+            {aboutStats.map((stat, index) => (
               <div
                 key={stat.label}
                 className="flex flex-1 flex-col gap-[2px]"

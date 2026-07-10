@@ -1,27 +1,6 @@
 "use client";
 
-type Pillar = {
-  title: string;
-  description: string;
-};
-
-const pillars: Pillar[] = [
-  {
-    title: "Precision",
-    description:
-      "Every calculation, every specification, every deliverable held to the highest standard.",
-  },
-  {
-    title: "Integrity",
-    description:
-      "Transparent reporting and independent verification on every engagement.",
-  },
-  {
-    title: "Innovation",
-    description:
-      "Forward-looking design thinking applied to proven engineering principles.",
-  },
-];
+import { pillars, aboutParagraphs } from "@/mockData/about";
 
 export default function About() {
   return (
@@ -56,28 +35,11 @@ export default function About() {
         <div className="flex w-full flex-col gap-6 lg:w-[989px] lg:gap-[30px]">
           {/* Frame 1321318989 — 3 paragraphs */}
           <div className="flex w-full flex-col gap-4 lg:gap-5">
-            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
-              ZAMR Engineering was founded in 2012 with a single conviction: that
-              infrastructure should be engineered with uncompromising precision and
-              long-term thinking. From a modest two-person consultancy, we have
-              grown into one of New South Wales&rsquo; most trusted civil engineering
-              firms, delivering over 150 projects across road, civil, energy, and
-              compliance disciplines.
-            </p>
-            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
-              Our team of 45 engineers, project managers, and compliance
-              specialists operates across NSW, Queensland, and Victoria —
-              partnering with government agencies, private developers, and
-              infrastructure funds to deliver outcomes that endure. We hold
-              accreditations with TfNSW, Infrastructure NSW, and the Australian
-              Institute of Engineers.
-            </p>
-            <p className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
-              We believe the best engineering is invisible — infrastructure that
-              simply works, year after year, without incident. Every project we
-              take on is guided by this philosophy: rigorous analysis, precise
-              design, and disciplined delivery.
-            </p>
+            {aboutParagraphs.map((p, i) => (
+              <p key={i} className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
+                {p}
+              </p>
+            ))}
           </div>
 
           {/* Divider */}
