@@ -59,18 +59,14 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
               {subtitle}
             </p>
           </div>
-        </div>
-
-        {/* Frame 1321319076 — stats bar */}
-        {/* Figma: absolute, left:calc(50% - 1468px/2), top:536px, 1468×103px, bg:#08142A */}
-        {stats && (
-          <div className="absolute left-0 right-0 bottom-0 lg:bottom-auto lg:left-1/2 lg:-translate-x-1/2 lg:w-[82vw] lg:top-140 bg-[#08142A]">
+          {stats && (
+          <div className="mt-[30px] lg:w-[82vw] lg:top-140 bg-[#08142A]">
             {/* Desktop: 6 equal columns */}
             <div className="hidden lg:flex">
               {stats.map((stat, i) => (
                 <div
                   key={stat.label}
-                  className={`flex flex-1 flex-col justify-start px-5 py-6 min-h-[103px] ${
+                  className={`flex flex-1 flex-col justify-center px-5 py-6 min-h-[103px] ${
                     i > 0 ? "border-l border-white/[0.07]" : ""
                   }`}
                 >
@@ -106,6 +102,11 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
             </div>
           </div>
         )}
+        </div>
+
+        {/* Frame 1321319076 — stats bar */}
+        {/* Figma: absolute, left:calc(50% - 1468px/2), top:536px, 1468×103px, bg:#08142A */}
+        
       </div>
     </section>
   );

@@ -158,7 +158,7 @@ export default function ProjectsPage() {
         />
         <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-        <div className="absolute bottom-0 left-0 right-0 px-6 pb-24 sm:px-10 sm:top-[130px] sm:bottom-auto sm:pb-0 lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
+        <div className="absolute bottom-0 left-0 right-0 px-6 lg:px-0 pb-24  sm:top-[130px] sm:bottom-auto sm:pb-0 lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
           <div className="flex flex-col gap-3 sm:gap-5">
             <h1 className="font-bold text-white text-[32px] leading-[38px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
               Our Projects
