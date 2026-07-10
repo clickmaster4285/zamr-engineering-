@@ -208,7 +208,7 @@ export default function Projects() {
                   key={`${logo.alt}-${i}`}
                   className="relative mx-3 h-[50px] w-[140px] flex-none sm:h-[70px] sm:w-[180px] md:mx-4 md:h-[86px] md:w-[220px]"
                 >
-                  <Image src={logo.src} alt={logo.alt} fill className="object-contain" />
+                  <Image src={logo.src} alt={logo.alt} fill sizes="220px" className="object-contain" />
                 </div>
               ))}
             </div>
