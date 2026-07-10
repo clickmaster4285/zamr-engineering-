@@ -105,7 +105,7 @@ export default function StatsSection() {
       ref={sectionRef}
       className="w-full bg-[var(--bg-hero)] px-6 py-16 lg:p-[130px]"
     >
-      <div className="mx-auto flex max-w-[1468px] flex-col gap-[10px]">
+      <div className="flex flex-col gap-[10px]">
         {/* Section label */}
         <div className="flex items-center gap-4">
           <span className="text-sm font-medium tracking-[3px] text-white lg:text-base">
@@ -118,7 +118,7 @@ export default function StatsSection() {
         </div>
 
         {/* Stats row */}
-        <div className="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-x-[185px]">
+        <div className="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-x-[185px] mt-[60px]">
           {stats.map((stat) => (
             <StatItem key={stat.label} stat={stat} shouldStart={inView} />
           ))}

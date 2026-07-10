@@ -23,27 +23,27 @@ export default function Contact() {
   };
 
   return (
-    <section className="w-full bg-[var(--bg-light)] px-6 py-32.5 lg:px-32">
+    <section className="w-full bg-[var(--bg-light)] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-32 lg:py-32.5">
       <div>
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_1fr] lg:gap-32">
+        <div className="grid grid-cols-1 gap-12 sm:gap-16 lg:grid-cols-[1fr_1fr] lg:gap-32">
           {/* Left column – Contact info */}
           <div>
-            <div className="mb-8 flex items-center gap-4">
-              <span className="text-base font-medium tracking-[0.2em] text-[var(--color-primary)]">
+            <div className="mb-6 flex flex-wrap items-center gap-3 sm:mb-8 sm:gap-4">
+              <span className="text-sm font-medium tracking-[0.2em] text-[var(--color-primary)] sm:text-base">
                 05
               </span>
-              <span className="h-px w-24 bg-[var(--text-dark)]" />
-              <span className="text-base font-medium tracking-[0.2em] text-[var(--text-dark)]">
+              <span className="hidden h-px w-16 sm:block sm:w-24 bg-[var(--text-dark)]" />
+              <span className="text-sm font-medium tracking-[0.2em] text-[var(--text-dark)] sm:text-base">
                 CONTACT
               </span>
             </div>
-            <h2 className="mb-12 text-[56px] font-bold leading-[71px] text-[var(--text-dark)]">
+            <h2 className="mb-8 text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:mb-12 sm:text-[36px] sm:leading-[44px] md:text-[44px] md:leading-[52px] lg:text-[56px] lg:leading-[71px]">
               Let&apos;s Build Something
-              <br />
-              Exceptional.
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>Exceptional.
             </h2>
 
-            <div className="space-y-5 text-lg text-[var(--text-dark)]">
+            <div className="space-y-4 text-sm text-[var(--text-dark)] sm:space-y-5 sm:text-base lg:text-lg">
               <p>
                 <span className="text-[var(--color-primary)]">Company Name: </span> ZAMR Engineering Pty Ltd
               </p>
@@ -57,7 +57,7 @@ export default function Contact() {
                <span className="text-[var(--color-primary)]">  Email:{" "}</span>
                 <a
                   href="mailto:admin@zamrengineering.com.au"
-                  className="transition-all hover:underline"
+                  className="break-all transition-all hover:underline sm:break-normal"
                 >
                   admin@zamrengineering.com.au
                 </a>
@@ -66,34 +66,34 @@ export default function Contact() {
                 <span className="text-[var(--color-blue-label)]"> Email:{" "}</span>
                 <a
                   href="mailto:khalid.javed@zamrengineering.com.au"
-                  className="transition-all hover:underline"
+                  className="break-all transition-all hover:underline sm:break-normal"
                 >
                   khalid.javed@zamrengineering.com.au
                 </a>
               </p>
             </div>
 
-            <div className="mt-[20px] flex items-center gap-6">
-              <button type="button" aria-label="Instagram" className="flex h-7 w-7 items-center justify-center transition-all hover:opacity-70">
+            <div className="mt-5 flex items-center gap-5 sm:mt-[20px] sm:gap-6">
+              <button type="button" aria-label="Instagram" className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7">
                 <Image src="/icons/mynaui_instagram.svg" alt="Instagram" width={28} height={28} />
               </button>
-              <button type="button" aria-label="LinkedIn" className="flex h-7 w-7 items-center justify-center transition-all hover:opacity-70">
+              <button type="button" aria-label="LinkedIn" className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7">
                 <Image src="/icons/mynaui_linkedin.svg" alt="LinkedIn" width={28} height={28} />
               </button>
-              <button type="button" aria-label="Website" className="flex h-7 w-7 items-center justify-center transition-all hover:opacity-70">
+              <button type="button" aria-label="Website" className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7">
                 <Image src="/icons/et_global.svg" alt="Website" width={28} height={28} />
               </button>
-              <a href="mailto:admin@zamrengineering.com.au" aria-label="Email" className="flex h-7 w-7 items-center justify-center transition-all hover:opacity-70">
+              <a href="mailto:admin@zamrengineering.com.au" aria-label="Email" className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7">
                 <Image src="/icons/Vector.svg" alt="Email" width={25} height={19} />
               </a>
             </div>
           </div>
 
           {/* Right column – Form */}
-          <form onSubmit={handleSubmit} className="flex flex-col gap-7">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6 sm:gap-7">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
               <div>
-                <label htmlFor="name" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[var(--color-text-label)]">
+                <label htmlFor="name" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
                   NAME
                 </label>
                 <input
@@ -107,7 +107,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[var(--color-text-label)]">
+                <label htmlFor="email" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
                   EMAIL
                 </label>
                 <input
@@ -122,7 +122,7 @@ export default function Contact() {
               </div>
             </div>
             <div>
-              <label htmlFor="subject" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[var(--color-text-label)]">
+              <label htmlFor="subject" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
                 SUBJECT
               </label>
               <input
@@ -136,7 +136,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="message" className="mb-2 block text-xs font-bold tracking-[0.3em] text-[var(--color-text-label)]">
+              <label htmlFor="message" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
                 MESSAGE
               </label>
               <textarea
@@ -151,7 +151,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="mt-4 w-full bg-[var(--color-primary)] py-4 text-base font-bold tracking-[0.3em] text-white transition-all hover:bg-[var(--color-primary-hover)] active:scale-[0.98]"
+              className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base"
             >
               SUBMIT ENQUIRY
             </button>

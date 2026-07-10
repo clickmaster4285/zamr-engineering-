@@ -21,7 +21,15 @@ export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+const isActive = (href: string) => {
+  if (!href) return false;
 
+  // Home page
+  if (href === "/") return pathname === "/";
+
+  // Matches /about and /about/anything
+  return pathname === href || pathname.startsWith(`${href}/`);
+};
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
@@ -55,11 +63,11 @@ export default function Navbar() {
           scrolled ? "bg-primary shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="relative mx-auto flex w-full max-w-[1727px] items-center px-6 h-[73px] lg:px-[130px] lg:h-[100px]">
+        <div className="relative  flex w-full items-center px-6 h-[73px] lg:px-[130px] lg:h-[100px]">
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/zamarlogo.png"
+              src="/images/zamarlogoTransparant.png"
               alt="ZAMR Engineering"
               width={111}
               height={49}
@@ -69,21 +77,21 @@ export default function Navbar() {
           </Link>
 
           {/* Nav links – centered */}
-          <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 ${
-                  pathname === link.href
-                    ? "text-[var(--color-secondary)]"
-                    : "text-white hover:text-[var(--color-secondary)]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+<nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex">
+  {navLinks.map((link) => (
+    <Link
+      key={link.label}
+      href={link.href}
+      className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 ${
+        isActive(link.href)
+          ? "text-[var(--color-secondary)]"
+          : "text-white hover:text-[var(--color-secondary)]"
+      }`}
+    >
+      {link.label}
+    </Link>
+  ))}
+</nav>
 
           {/* Contact button */}
           <button
@@ -117,38 +125,32 @@ export default function Navbar() {
               : "-translate-y-2 opacity-0 pointer-events-none"
           } ${
             scrolled
-              ? "bg-white border-[var(--border-light)]"
-              : "bg-[var(--bg-hero)]/95 border-white/10"
+              ? "bg-primary border-white/10"
+              : "bg-[var(--bg-hero)] border-white/10"
           }`}
         >
           <div className="flex flex-col items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={closeMenu}
-                className={`whitespace-nowrap text-sm font-medium uppercase transition-colors duration-300 ${
-                  pathname === link.href
-                    ? "text-[var(--color-secondary)]"
-                    : scrolled
-                      ? "text-[var(--text-dark)] hover:text-[var(--color-secondary)]"
-                      : "text-white/90 hover:text-[var(--color-secondary)]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          {navLinks.map((link) => (
+  <Link
+    key={link.label}
+    href={link.href}
+    onClick={closeMenu}
+    className={`whitespace-nowrap text-sm font-medium uppercase transition-colors duration-300 ${
+      isActive(link.href)
+        ? "text-[var(--color-secondary)]"
+        : "text-white hover:text-[var(--color-secondary)]"
+    }`}
+  >
+    {link.label}
+  </Link>
+))}
             <button
               type="button"
               onClick={() => {
                 closeMenu();
                 router.push("/");
               }}
-              className={`whitespace-nowrap border px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] transition-colors duration-300 ${
-                scrolled
-                  ? "border-[var(--text-dark)] text-[var(--text-dark)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)]"
-                  : "border-white text-white hover:bg-white hover:text-[var(--bg-hero)]"
-              }`}
+              className="whitespace-nowrap border border-white px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] text-white transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)]"
             >
               CONTACT
             </button>

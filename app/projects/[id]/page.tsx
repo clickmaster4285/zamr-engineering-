@@ -2,14 +2,13 @@
 
 import { useParams } from "next/navigation";
 import { getProjectBySlug } from "@/mockData/projects";
-import ProjectHero from "@/components/services/detail/ProjectHero";
-import StatsBar from "@/components/projects/detail/StatsBar";
+import ProjectHero from "@/components/projects/detail/ProjectHero";
 import Challenge from "@/components/projects/detail/Challenge";
 import Approach from "@/components/projects/detail/Approach";
 import Results from "@/components/projects/detail/Results";
 import Gallery from "@/components/projects/detail/Gallery";
 import RelatedWork from "@/components/services/detail/RelatedWork";
-import Contact from "@/components/services/Contact";
+import Contact from "@/components/projects/detail/Contact";
 
 export default function ProjectDetailPage() {
   const params = useParams();
@@ -28,10 +27,9 @@ export default function ProjectDetailPage() {
       <ProjectHero
         image={project.heroImage}
         title={project.heroTitle}
-        subtitle={project.title}
+        subtitle={project.shortDescription}
+        stats={project.stats}
       />
-
-      <StatsBar stats={project.stats} />
 
       <Challenge
         number={project.aboutNumber}
@@ -66,6 +64,7 @@ export default function ProjectDetailPage() {
         projects={project.relatedProjects.map((p) => ({
           title: p.title,
           image: p.image,
+          slug: p.slug,
         }))}
       />
 

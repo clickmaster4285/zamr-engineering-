@@ -57,9 +57,9 @@ export const projects: ProjectData[] = [
     title: "Metropolitan Bridge Rehabilitation",
     category: "Urban Infrastructure",
     shortDescription:
-      "Delivering comprehensive engineering support for the Western Sydney Infrastructure Corridor, improving connectivity and supporting economic growth in the region.",
+      "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
 
-    heroTitle: "WESTERN SYDNEY INFRASTRUCTURE CORRIDOR",
+    heroTitle: "Metropolitan Bridge Rehabilitation",
     heroImage: "/images/image3.jpeg",
 
     stats: [
@@ -72,7 +72,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
     location: "Western Sydney, NSW",
@@ -82,7 +82,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -136,7 +136,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
       { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
@@ -151,7 +151,7 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Engineering the clean energy transition in the Hunter Valley with comprehensive civil design and construction support for a large-scale renewable energy precinct.",
 
-    heroTitle: "HUNTER VALLEY RENEWABLE ENERGY HUB",
+    heroTitle: "Hunter Valley Renewable Energy Hub",
     heroImage: "/images/image2.jpeg",
 
     stats: [
@@ -164,7 +164,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "The Hunter Valley Renewable Energy Hub is a landmark clean energy precinct combining solar generation, wind energy, and battery storage to deliver reliable renewable energy to the NSW grid.",
     location: "Hunter Valley, NSW",
@@ -174,7 +174,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -228,7 +228,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "Metropolitan Bridge Rehabilitation", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
@@ -241,89 +241,89 @@ export const projects: ProjectData[] = [
     title: "Western Sydney Infrastructure Corridor",
     category: "Structural Engineering",
     shortDescription:
-      "Comprehensive bridge rehabilitation program restoring structural integrity, improving safety, and extending the operational lifespan of critical metropolitan bridge infrastructure.",
+      "Rebuilding a critical arterial corridor without stopping a city.",
 
     heroTitle: "Western Sydney Infrastructure Corridor",
     heroImage: "/images/image1.jpeg",
 
     stats: [
-      { label: "CLIENT", value: "Transport for NSW" },
-      { label: "VALUE", value: "$180 Million" },
-      { label: "DURATION", value: "2020 – 2025" },
-      { label: "LOCATION", value: "Sydney Metropolitan, NSW" },
-      { label: "SCOPE", value: "Structural Remediation" },
-      { label: "TEAM", value: "18 Engineers" },
+      { label: "CLIENT", value: "Transport for NSW / Penrith City Council" },
+      { label: "VALUE", value: "$47M" },
+      { label: "DURATION", value: "18 Months" },
+      { label: "LOCATION", value: "Western Sydney, NSW" },
+      { label: "SCOPE", value: "Pavement, Geometry & Drainage" },
+      { label: "TEAM", value: "14 Engineers" },
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
-      "A comprehensive bridge rehabilitation program encompassing structural assessment, detailed design, and construction supervision for 12 critical bridge assets across the Sydney metropolitan area.",
+      "The Great Western Highway corridor through Penrith had reached the end of its structural pavement life, carrying over 28,000 vehicles per day including heavy freight. Deteriorating ride quality, subsurface drainage failures, and insufficient lane widths had created compounding safety and economic costs for the region.",
     location: "Sydney Metropolitan, NSW",
     challengeParagraphs: [
-      "Many of the bridges were over 50 years old with limited as-built documentation, requiring extensive field investigation and non-destructive testing to establish existing conditions. The program had to be delivered without disrupting peak-hour traffic on some of Sydney's busiest transport corridors.",
-      "Structural deficiencies identified during initial inspections required innovative strengthening solutions that could be installed within tight weekend possession windows, demanding close coordination with traffic management and rail authorities.",
+      "ZAMR Engineering was engaged by Transport for NSW to deliver the full civil, pavement, and drainage design for an 8.2km rehabilitation — within a live traffic environment and an aggressive 18-month program. The project required staged construction sequencing, temporary traffic management design, and coordination with Endeavour Energy, Sydney Water, and NBN Co for utility protection."
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
-        title: "Condition Assessment",
+        title: "Pavement Investigation & Structural Analysis",
         description:
-          "Comprehensive visual inspection, non-destructive testing, and load rating analysis of all bridge assets to establish baseline condition and prioritise interventions.",
+          "A comprehensive pavement investigation program was conducted including FWD deflection surveys, DCP testing, and laboratory CBR analysis of subgrade materials. CIRCLY mechanistic-empirical analysis determined residual structural capacity and informed the rehabilitation treatment selection across seven distinct pavement zones.",
       },
       {
         number: "02",
-        title: "Remedial Design Development",
+        title: "Geometric & Drainage Design",
         description:
-          "Development of strengthening and remediation designs using advanced analysis techniques, including FRP wrapping, steel plate bonding, and bearing replacement solutions.",
+          "The existing horizontal and vertical alignment was reassessed against Austroads Guide to Road Design criteria. Where required, geometric improvements were incorporated to address sight distance deficiencies and substandard superelevation transitions. A new kerb and gutter and subsurface drainage network was designed to address the root-cause of premature pavement failure.",
       },
       {
         number: "03",
-        title: "Traffic Management Integration",
+        title: "Traffic Management & Staging",
         description:
-          "Design of construction staging and traffic management plans to enable safe delivery of works within tight weekend and night-time possession windows.",
+          "A detailed Construction Traffic Management Plan was prepared in coordination with TfNSW Network Operations. Six construction stages were sequenced to maintain two traffic lanes in each direction throughout, with independent road safety audits conducted at each staging transition point.",
       },
       {
         number: "04",
-        title: "Construction Supervision",
+        title: "Authority Coordination & Certification",
         description:
-          "On-site engineering supervision during all remedial works, ensuring compliance with design intent and maintaining quality standards across all 12 bridge sites.",
+          "All utility authority agreements, RMS concurrences, and local council approvals were managed by ZAMR Engineering. Our team acted as the Principal Certifier for the structural pavement works and issued the final Certificate of Completion to Transport for NSW.",
       },
     ],
 
     resultsNumber: "03",
-    resultsHeading: "Project Outcomes",
+    resultsHeading: "Results & Achievements",
     resultsMetrics: [
-      { value: "12", label: "Bridges Rehabilitated" },
-      { value: "50+", label: "Years Life Extended" },
-      { value: "0", label: "Traffic Disruptions" },
-      { value: "98%", label: "On-Time Delivery" },
+      { value: "8.2km", label: "CORRIDOR UPGRADED" },
+      { value: "98%", label: "ON-TIME DELIVERY" },
+      { value: "30yr", label: "DESIGN LIFE" },
+      { value: "ZERO", label: "LTI INCIDENTS " },
     ],
     achievements: [
-      "All 12 bridges successfully rehabilitated and returned to service with a minimum 50-year design life extension.",
-      "Zero unplanned traffic disruptions during the entire construction program, despite working on some of Sydney's busiest corridors.",
-      "Achieved 98% on-time delivery across all possession windows, with no overruns on critical path activities.",
-      "Received commendation from TfNSW for innovative use of FRP strengthening technology, setting a benchmark for future programs.",
+      "Full structural pavement rehabilitation across 7 distinct pavement zones.",
+      "Geometric improvements addressing 4 identified sight distance deficiencies.",
+      "Project delivered within budget and on the agreed program milestone dates",
+      "New subsurface drainage network eliminating root-cause failure mechanism.",
+      "Zero lost-time injury incidents across the full 18-month construction program",
+      "Client satisfaction rating of 9.4/10 on post-project TfNSW feedback survey"
     ],
 
     galleryNumber: "04",
     galleryHeading: "Project Gallery",
     galleryImages: [
-      "/images/image3.jpeg",
-      "/images/image4.jpeg",
-      "/images/image5.jpeg",
-      "/images/image7.jpeg",
       "/images/image1.jpeg",
+      "/images/image8.png",
+      "/images/image9.png",
+      "/images/image10.png",
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
   },
@@ -348,7 +348,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "An integrated stormwater management system designed to mitigate flood risk, improve water quality, and create community amenity in a rapidly developing urban precinct in Western Sydney.",
     location: "Western Sydney, NSW",
@@ -358,7 +358,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -412,7 +412,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
@@ -440,7 +440,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "A major infrastructure upgrade program at the Port of Newcastle, delivering enhanced freight handling capacity, improved road and rail connectivity, and upgraded wharf infrastructure.",
     location: "Newcastle, NSW",
@@ -450,7 +450,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -499,7 +499,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
@@ -527,7 +527,7 @@ export const projects: ProjectData[] = [
     ],
 
     aboutNumber: "01",
-    aboutHeading: "About the Project",
+    aboutHeading: "What needed to be solved.",
     aboutDescription:
       "A strategic corridor enhancement program delivering safety improvements, capacity upgrades, and travel time reliability along a 180 km section of the Pacific Highway — Australia's critical east coast freight route.",
     location: "North Coast, NSW",
@@ -537,7 +537,7 @@ export const projects: ProjectData[] = [
     ],
 
     approachNumber: "02",
-    approachHeading: "Our Approach",
+    approachHeading: "How We Delivered It",
     approachSteps: [
       {
         number: "01",
@@ -587,7 +587,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Port of Newcastle Infrastructure Upgrade", slug: "port-of-newcastle-infrastructure-upgrade", image: "/images/image4.jpeg" },

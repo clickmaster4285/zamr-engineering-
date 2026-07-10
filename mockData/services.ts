@@ -22,7 +22,7 @@ export interface ServiceData {
   deliverables: string[];
   relatedNumber: string;
   relatedHeading: string;
-  relatedProjects: { title: string; image: string }[];
+  relatedProjects: { title: string; image: string; slug: string }[];
 }
 
 export const services: ServiceData[] = [
@@ -85,9 +85,9 @@ export const services: ServiceData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Hunter Valley Renewable Energy Hub", image: "/images/image2.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", image: "/images/image6.jpeg" },
-      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg" },
+      { title: "Hunter Valley Renewable Energy Hub", image: "/images/image2.jpeg", slug: "hunter-valley-renewable-energy-hub" },
+      { title: "Metropolitan Bridge Rehabilitation", image: "/images/image6.jpeg", slug: "metropolitan-bridge-rehabilitation" },
+      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
     ],
   },
   {
@@ -148,8 +148,8 @@ export const services: ServiceData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Western Sydney Infrastructure Plan", image: "/images/image6.jpeg" },
-      { title: "Pacific Highway Upgrade Verification", image: "/images/image5.jpeg" },
+      { title: "Western Sydney Infrastructure Plan", image: "/images/image6.jpeg", slug: "western-sydney-infrastructure-corridor" },
+      { title: "Pacific Highway Upgrade Verification", image: "/images/image5.jpeg", slug: "pacific-highway-upgrade-verification" },
     ],
   },
   {
@@ -210,8 +210,8 @@ export const services: ServiceData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Newell Highway Upgrade", image: "/images/image7.jpeg" },
-      { title: "Regional Road Safety Program", image: "/images/image5.jpeg" },
+      { title: "Newell Highway Upgrade", image: "/images/image7.jpeg", slug: "newell-highway-upgrade" },
+      { title: "Regional Road Safety Program", image: "/images/image5.jpeg", slug: "regional-road-safety-program" },
     ],
   },
   {
@@ -272,8 +272,8 @@ export const services: ServiceData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Solar Farm Civil Works", image: "/images/image2.jpeg" },
-      { title: "Wind Farm Foundation Package", image: "/images/image6.jpeg" },
+      { title: "Solar Farm Civil Works", image: "/images/image2.jpeg", slug: "solar-farm-civil-works" },
+      { title: "Wind Farm Foundation Package", image: "/images/image6.jpeg", slug: "wind-farm-foundation-package" },
     ],
   },
   {
@@ -334,8 +334,8 @@ export const services: ServiceData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "TfNSW Compliance Framework Review", image: "/images/image5.jpeg" },
-      { title: "Road Asset Compliance Audit", image: "/images/image7.jpeg" },
+      { title: "TfNSW Compliance Framework Review", image: "/images/image5.jpeg", slug: "tfnsw-compliance-framework-review" },
+      { title: "Road Asset Compliance Audit", image: "/images/image7.jpeg", slug: "road-asset-compliance-audit" },
     ],
   },
 ];

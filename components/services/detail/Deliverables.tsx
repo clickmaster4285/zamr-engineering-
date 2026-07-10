@@ -10,7 +10,7 @@ interface Props {
 export default function Deliverables({ number, heading, subtext, deliverables }: Props) {
   return (
     <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
-      <div className="mx-auto grid max-w-[1468px] grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-[60px]">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-[60px]">
         <div className="flex flex-col gap-[30px]">
           <div className="flex items-center gap-4">
             <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
