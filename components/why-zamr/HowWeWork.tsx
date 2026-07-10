@@ -30,13 +30,10 @@ export default function HowWeWork() {
           {howWeWorkRows.map((row, index) => (
             <div
               key={row.title}
-              className="group relative flex w-full flex-col gap-2 border-t border-[var(--border-section)] px-4 py-6 sm:flex-row sm:items-center sm:gap-0 sm:px-6 sm:py-8 lg:h-[120px] lg:px-[50px] lg:py-0"
-              style={{
-                background: index === 0 ? "var(--bg-hover)" : "white",
-              }}
+              className="group relative flex w-full flex-col gap-2 border-t border-[var(--border-section)] px-4 py-6 sm:flex-row sm:items-center sm:gap-0 sm:px-6 sm:py-8 lg:h-[120px] lg:px-[50px] lg:py-0 transition-colors duration-300 hover:bg-[var(--bg-hover)] bg-white"
             >
-              {/* Left red accent bar — turns secondary (yellow) on hover */}
-              <span className="absolute left-0 top-0 h-full w-[4px] bg-[#CE1A00] transition-colors duration-300 group-hover:bg-[var(--color-secondary)]" />
+              {/* Accent border — slides up from bottom on hover (matches Services.tsx pattern) */}
+              <span className="absolute left-0 bottom-0 w-[4px] h-0 bg-[var(--color-secondary)] transition-all duration-300 group-hover:h-full" />
 
               {/* Title */}
               <h3 className="w-full text-xl font-semibold leading-[28px] text-[var(--text-dark)] sm:w-[150px] sm:shrink-0 sm:pl-[96px] lg:w-[150px] lg:pl-[120px] lg:text-[28px] lg:leading-[35px]">

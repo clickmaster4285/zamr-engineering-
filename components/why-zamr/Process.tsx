@@ -30,13 +30,9 @@ export default function Process() {
           {processItems.map((item, index) => (
             <div
               key={item.number}
-              className="group relative flex w-full flex-col gap-2 border-t border-[var(--border-section)] px-4 py-6 sm:flex-row sm:items-center sm:gap-0 sm:px-6 sm:py-8 lg:h-[164px] lg:px-[50px] lg:py-0"
-              style={{
-                background: index === 0 ? "var(--bg-hover)" : "white",
-              }}
-            >
-              {/* Left red accent bar — turns secondary (yellow) on hover */}
-              <span className="absolute left-0 top-0 h-full w-[4px] bg-[#CE1A00] transition-colors duration-300 group-hover:bg-[var(--color-secondary)]" />
+              className="group relative flex w-full flex-col gap-2 border-t border-[var(--border-section)] px-4 py-6 sm:flex-row sm:items-center sm:gap-0 sm:px-6 sm:py-8 lg:h-[164px] lg:px-[50px] lg:py-0 transition-colors duration-300 hover:bg-[var(--bg-hover)] bg-white">
+              {/* Accent border — slides up from bottom on hover (matches Services.tsx pattern) */}
+              <span className="absolute left-0 bottom-0 w-[4px] h-0 bg-[var(--color-secondary)] transition-all duration-300 group-hover:h-full" />
 
               {/* Number — left:50px in Figma */}
               <span className="w-[22px] shrink-0 text-sm font-medium tracking-[3px] text-[var(--text-dark)] sm:w-[23px] lg:text-base">
