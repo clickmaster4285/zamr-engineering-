@@ -54,9 +54,9 @@ export default function RelatedWork({ number, heading, projects }: Props) {
                 alt={project.title}
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-[var(--overlay-image-default)] transition-colors duration-500 group-hover:bg-[var(--overlay-image-hover)]" />
+              <div className="absolute inset-0 bg-[var(--overlay-image-default)] transition-colors duration-500 " />
               <h3 className="absolute bottom-6 left-6 text-sm font-semibold leading-snug text-white sm:bottom-8 sm:left-8 sm:text-lg lg:text-[18px] lg:leading-[23px]">
                 {project.title}
               </h3>

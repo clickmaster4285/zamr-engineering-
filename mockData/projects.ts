@@ -136,7 +136,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
       { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
@@ -228,7 +228,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "Metropolitan Bridge Rehabilitation", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
@@ -320,7 +320,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
@@ -412,7 +412,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
@@ -499,7 +499,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
@@ -587,7 +587,7 @@ export const projects: ProjectData[] = [
     ],
 
     relatedNumber: "05",
-    relatedHeading: "Related Projects",
+    relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Port of Newcastle Infrastructure Upgrade", slug: "port-of-newcastle-infrastructure-upgrade", image: "/images/image4.jpeg" },
