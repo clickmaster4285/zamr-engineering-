@@ -18,7 +18,7 @@ export default function WhyZamrHero() {
 
       <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-      <div className="absolute bottom-[60px] left-1/2 flex w-full max-w-[1468px] -translate-x-1/2 flex-col gap-[20px] px-6 lg:bottom-[100px] lg:left-[130px] lg:translate-x-0 lg:px-0">
+      <div className="absolute bottom-[60px] left-1/2 flex w-full max-w-[1468px] -translate-x-1/2 flex-col gap-[20px] px-6 lg:left-[130px] lg:translate-x-0 lg:px-0">
         <h1 className="w-full text-[40px] font-bold leading-[48px] text-white sm:text-[50px] sm:leading-[60px] lg:text-[80px] lg:leading-[101px]">
           {title.split("\n").map((line, i) => (
             <span key={i}>
