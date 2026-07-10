@@ -200,16 +200,18 @@ export default function Projects() {
             </div>
           )}
 
-          {/* Client logos */}
-          <div className="grid grid-cols-4 gap-3 sm:grid-cols-4 md:grid-cols-8 md:gap-4">
-            {clientLogos.map((logo) => (
-              <div
-                key={logo.alt}
-                className="relative h-[50px] overflow-hidden bg-[var(--bg-light)] sm:h-[70px] md:h-[86px]"
-              >
-                <Image src={logo.src} alt={logo.alt} fill className="object-contain" />
-              </div>
-            ))}
+          {/* Client logos — infinite scrolling marquee */}
+          <div className="group/logo relative w-full overflow-hidden">
+            <div className="flex w-fit animate-marquee group-hover/logo:[animation-play-state:paused]">
+              {[...clientLogos, ...clientLogos].map((logo, i) => (
+                <div
+                  key={`${logo.alt}-${i}`}
+                  className="relative mx-3 h-[50px] w-[140px] flex-none sm:h-[70px] sm:w-[180px] md:mx-4 md:h-[86px] md:w-[220px]"
+                >
+                  <Image src={logo.src} alt={logo.alt} fill className="object-contain" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
