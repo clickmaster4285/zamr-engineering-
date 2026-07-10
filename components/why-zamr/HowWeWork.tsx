@@ -36,12 +36,12 @@ export default function HowWeWork() {
               <span className="absolute left-0 bottom-0 w-[4px] h-0 bg-[var(--color-secondary)] transition-all duration-300 group-hover:h-full" />
 
               {/* Title */}
-              <h3 className="w-full text-xl font-semibold leading-[28px] text-[var(--text-dark)] sm:w-[150px] sm:shrink-0 sm:pl-[96px] lg:w-[150px] lg:pl-[120px] lg:text-[28px] lg:leading-[35px]">
+              <h3 className="w-full text-xl font-semibold leading-[28px] text-[var(--text-dark)] sm:w-[150px] sm:shrink-0 lg:w-[279px] lg:text-[28px] lg:leading-[35px]">
                 {row.title}
               </h3>
 
               {/* Description */}
-              <p className="w-full text-sm leading-5 text-[var(--text-dark)] sm:pl-6 sm:text-base lg:pl-[244px] lg:text-[18px] lg:leading-[23px]">
+              <p className="w-full text-sm leading-5 text-[var(--text-dark)] sm:pl-6 sm:text-base lg:pl-[115px] lg:text-[18px] lg:leading-[23px]">
                 {row.description}
               </p>
             </div>

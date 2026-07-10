@@ -30,6 +30,11 @@ export const howWeWorkRows: HowWeWorkRow[] = [
       "Every project follows structured quality management processes to ensure consistent and reliable outcomes.",
   },
   {
+    title: "Safety Commitment",
+    description:
+      "Safety is integrated into every stage of planning, design, and project delivery. ",
+  },
+  {
     title: "Client Collaboration",
     description:
       "We work closely with our clients to understand project objectives and deliver tailored engineering solutions.",
@@ -87,30 +92,24 @@ export interface ProcessItem {
 export const processItems: ProcessItem[] = [
   {
     number: "01",
-    title: "Civil Engineering",
+    title: "Understand",
     description:
-      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
+      "Project consultation and requirements gathering.",
   },
   {
     number: "02",
-    title: "Design & Documentation",
+    title: "Plan",
     description:
-      "We deliver detailed design and documentation that meets regulatory requirements and client specifications, ensuring every project is built on a solid foundation.",
+      "Develop practical engineering strategies.",
   },
   {
     number: "03",
-    title: "Project Verification",
-    description:
-      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
-  },
-  {
-    number: "04",
     title: "Deliver",
     description:
       "Execute with quality, compliance, and efficiency.",
   },
   {
-    number: "05",
+    number: "04",
     title: "Support",
     description:
       "Provide ongoing technical support and value.",
