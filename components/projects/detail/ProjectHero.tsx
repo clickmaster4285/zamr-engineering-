@@ -1,31 +1,26 @@
 "use client";
-
 import Image from "next/image";
 import { Barlow } from "next/font/google";
-
 const barlow = Barlow({
   weight: ["600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
-
 interface StatItem {
   label: string;
   value: string;
 }
-
 interface Props {
   image?: string;
   title: string;
   subtitle: string;
   stats?: StatItem[];
 }
-
 export default function ProjectHero({ image = "/images/image5.jpeg", title, subtitle, stats }: Props) {
   return (
     <section className="relative w-full">
       {/* Figma: 1728 × 700px hero with overlay rgba(7, 24, 61, 0.8) */}
-      <div className="relative w-full h-[500px] sm:h-[560px] lg:h-[700px] overflow-hidden">
+      <div className="relative w-full min-h-[500px] sm:min-h-[560px] lg:h-[700px] overflow-hidden flex flex-col">
         <Image
           src={image}
           alt={title}
@@ -33,19 +28,18 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
           priority
           className="object-cover"
         />
-
-        {/* Overlay — exact Figma: linear-gradient(0deg, rgba(7,24,61,0.8), rgba(7,24,61,0.8)) */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-        {/* Frame 1321319043 — title + subtitle */}
-        {/* Figma: left:130px, top:calc(50% - 245px/2 + 33.5px) → 261px for 700px container */}
-        <div
-          className="absolute bottom-28 left-0 right-0 px-6 sm:px-10
-                        lg:bottom-auto lg:left-[130px] lg:right-auto lg:w-[933px] lg:px-0
-                        lg:top-[261px]"
-        >
-          {/* Figma: gap: 20px between title and subtitle */}
-          <div className="flex flex-col gap-5">
+        {/* Mobile/tablet: normal flow flex column so title + stats never overlap.
+            Desktop (lg+): switches back to the exact Figma absolute positions. */}
+        <div className="relative z-10 flex flex-col flex-1 lg:block">
+          {/* Title + subtitle */}
+          <div
+            className="flex-1 flex flex-col justify-center gap-5 px-6 py-14 sm:px-10
+                       lg:absolute lg:flex-none lg:justify-start lg:gap-5 lg:py-0
+                       lg:left-[130px] lg:top-[261px] lg:w-[933px] lg:px-0"
+          >
             <h1 className="font-bold text-white
                            text-[32px] leading-[40px]
                            sm:text-[48px] sm:leading-[60px]
@@ -59,54 +53,49 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
               {subtitle}
             </p>
           </div>
+
           {stats && (
-          <div className="mt-[30px] lg:w-[82vw] lg:top-140 bg-[#08142A]">
-            {/* Desktop: 6 equal columns */}
-            <div className="hidden lg:flex">
-              {stats.map((stat, i) => (
-                <div
-                  key={stat.label}
-                  className={`flex flex-1 flex-col justify-center px-5 py-6 min-h-[103px] ${
-                    i > 0 ? "border-l border-white/[0.07]" : ""
-                  }`}
-                >
-                  {/* Figma: Barlow 600, 12px/14px, rgba(255,255,255,0.3) */}
-                  <span className={`${barlow.className} font-semibold text-[12px] leading-[14px] text-white/30`}>
-                    {stat.label}
-                  </span>
-                  {/* Figma: Barlow 700, 14px/17px, rgba(255,255,255,0.82), padding-top:7px */}
-                  <span className={`${barlow.className} font-bold text-[14px] leading-[17px] text-white/82 pt-[7px]`}>
-                    {stat.value}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <div className="bg-[#08142A] lg:absolute lg:w-[82vw] lg:left-[130px] lg:top-140 lg:bg-[#08142A]">
+              {/* Desktop: 6 equal columns */}
+              <div className="hidden lg:flex">
+                {stats.map((stat, i) => (
+                  <div
+                    key={stat.label}
+                    className={`flex flex-1 flex-col justify-center px-5 py-6 min-h-[103px] ${
+                      i > 0 ? "border-l border-white/[0.07]" : ""
+                    }`}
+                  >
+                    <span className={`${barlow.className} font-semibold text-[12px] leading-[14px] text-white/30`}>
+                      {stat.label}
+                    </span>
+                    <span className={`${barlow.className} font-bold text-[14px] leading-[17px] text-white/82 pt-[7px]`}>
+                      {stat.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
 
-            {/* Mobile: 3 columns, 2 rows */}
-            <div className="lg:hidden flex flex-wrap">
-              {stats.map((stat, i) => (
-                <div
-                  key={stat.label}
-                  className={`flex-1 min-w-[33.333%] flex flex-col justify-start px-5 py-6 min-h-[80px] ${
-                    i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
-                  } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
-                >
-                  <span className={`${barlow.className} font-semibold text-[10px] leading-[12px] text-white/30`}>
-                    {stat.label}
-                  </span>
-                  <span className={`${barlow.className} font-bold text-[12px] leading-[15px] text-white/82 pt-1`}>
-                    {stat.value}
-                  </span>
-                </div>
-              ))}
+              {/* Mobile/tablet: solid 3-column grid, wraps into rows automatically */}
+              <div className="grid grid-cols-3 lg:hidden">
+                {stats.map((stat, i) => (
+                  <div
+                    key={stat.label}
+                    className={`flex flex-col justify-center px-3 py-4 min-h-[76px] ${
+                      i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
+                    } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
+                  >
+                    <span className={`${barlow.className} font-semibold text-[10px] leading-[12px] text-white/30`}>
+                      {stat.label}
+                    </span>
+                    <span className={`${barlow.className} font-bold text-[12px] leading-[15px] text-white/82 pt-1`}>
+                      {stat.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
         </div>
-
-        {/* Frame 1321319076 — stats bar */}
-        {/* Figma: absolute, left:calc(50% - 1468px/2), top:536px, 1468×103px, bg:#08142A */}
-        
       </div>
     </section>
   );
