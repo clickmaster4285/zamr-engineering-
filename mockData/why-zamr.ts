@@ -60,6 +60,8 @@ export const ourStrengths: string[] = [
   "Regulatory Compliance",
 ];
 
+export const ourStrengthsImage = "/images/image11.png";
+
 export interface CommitmentCard {
   title: string;
   description: string;

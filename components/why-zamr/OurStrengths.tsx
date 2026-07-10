@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ourStrengths } from "@/mockData/why-zamr";
+import { ourStrengths, ourStrengthsImage } from "@/mockData/why-zamr";
 
 export default function OurStrengths() {
   return (
@@ -72,7 +72,7 @@ export default function OurStrengths() {
         {/* Right column — image */}
         <div className="relative h-[350px] w-full overflow-hidden lg:h-[478px] lg:w-[649px]">
           <Image
-            src="/images/image11.png"
+            src={ourStrengthsImage}
             alt="Engineers reviewing plans on construction site"
             fill
             className="object-cover"
