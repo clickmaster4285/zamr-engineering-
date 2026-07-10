@@ -21,7 +21,15 @@ export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+const isActive = (href: string) => {
+  if (!href) return false;
 
+  // Home page
+  if (href === "/") return pathname === "/";
+
+  // Matches /about and /about/anything
+  return pathname === href || pathname.startsWith(`${href}/`);
+};
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
@@ -69,21 +77,21 @@ export default function Navbar() {
           </Link>
 
           {/* Nav links – centered */}
-          <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 ${
-                  pathname === link.href
-                    ? "text-[var(--color-secondary)]"
-                    : "text-white hover:text-[var(--color-secondary)]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+<nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex">
+  {navLinks.map((link) => (
+    <Link
+      key={link.label}
+      href={link.href}
+      className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 ${
+        isActive(link.href)
+          ? "text-[var(--color-secondary)]"
+          : "text-white hover:text-[var(--color-secondary)]"
+      }`}
+    >
+      {link.label}
+    </Link>
+  ))}
+</nav>
 
           {/* Contact button */}
           <button
@@ -122,20 +130,20 @@ export default function Navbar() {
           }`}
         >
           <div className="flex flex-col items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={closeMenu}
-                className={`whitespace-nowrap text-sm font-medium uppercase transition-colors duration-300 ${
-                  pathname === link.href
-                    ? "text-[var(--color-secondary)]"
-                    : "text-white hover:text-[var(--color-secondary)]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          {navLinks.map((link) => (
+  <Link
+    key={link.label}
+    href={link.href}
+    onClick={closeMenu}
+    className={`whitespace-nowrap text-sm font-medium uppercase transition-colors duration-300 ${
+      isActive(link.href)
+        ? "text-[var(--color-secondary)]"
+        : "text-white hover:text-[var(--color-secondary)]"
+    }`}
+  >
+    {link.label}
+  </Link>
+))}
             <button
               type="button"
               onClick={() => {

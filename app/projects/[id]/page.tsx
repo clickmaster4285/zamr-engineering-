@@ -8,7 +8,7 @@ import Approach from "@/components/projects/detail/Approach";
 import Results from "@/components/projects/detail/Results";
 import Gallery from "@/components/projects/detail/Gallery";
 import RelatedWork from "@/components/services/detail/RelatedWork";
-import Contact from "@/components/services/Contact";
+import Contact from "@/components/projects/detail/Contact";
 
 export default function ProjectDetailPage() {
   const params = useParams();

@@ -77,7 +77,7 @@ function ProjectCard({
   return (
     <div
       ref={ref}
-      onClick={() => router.push(`/project/${project.slug}`)}
+      onClick={() => router.push(`/projects/${project.slug}`)}
       className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
         inView
           ? "opacity-100 translate-y-0 scale-100"

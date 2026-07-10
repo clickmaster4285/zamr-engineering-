@@ -118,7 +118,7 @@ export default function StatsSection() {
         </div>
 
         {/* Stats row */}
-        <div className="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-x-[185px]">
+        <div className="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-x-[185px] mt-[60px]">
           {stats.map((stat) => (
             <StatItem key={stat.label} stat={stat} shouldStart={inView} />
           ))}
