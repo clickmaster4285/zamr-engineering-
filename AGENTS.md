@@ -26,8 +26,10 @@ zamr-engineering/
 │       └── page.tsx              # Why ZAMR page
 │   ├── our-teams/
 │   │   └── page.tsx              # Our Teams page
-│   └── trusted-accredited/
-│       └── page.tsx              # Trusted & Accredited page
+│   ├── trusted-accredited/
+│   │   └── page.tsx              # Trusted & Accredited page
+│   └── engineering-impact/
+│       └── page.tsx              # Engineering For Impact page
 ├── components/
 │   ├── ui/                       # Shared UI primitives
 │   │   └── button.tsx
@@ -80,14 +82,24 @@ zamr-engineering/
 │   │   ├── EngineeringTeams.tsx
 │   │   ├── Collaboration.tsx
 │   │   └── Careers.tsx
-│   └── trusted-accredited/       # Trusted & Accredited page sections
+│   ├── trusted-accredited/       # Trusted & Accredited page sections
+│   │   ├── Hero.tsx
+│   │   ├── IndustryCertifications.tsx
+│   │   ├── Compliance.tsx
+│   │   ├── AccreditationMatters.tsx
+│   │   ├── Journey.tsx
+│   │   ├── TrustedIndustries.tsx
+│   │   ├── Contact.tsx
+│   │   └── CTASection.tsx
+│   └── engineering-impact/       # Engineering For Impact page sections
 │       ├── Hero.tsx
-│       ├── IndustryCertifications.tsx
-│       ├── Compliance.tsx
-│       ├── AccreditationMatters.tsx
-│       ├── Journey.tsx
-│       ├── TrustedIndustries.tsx
-│       ├── Contact.tsx
+│       ├── ImpactAreas.tsx
+│       ├── AreasOfImpact.tsx
+│       ├── WhyItMatters.tsx
+│       ├── OurApproach.tsx
+│       ├── OurImpact.tsx
+│       ├── FeaturedProjects.tsx
+│       ├── TrackRecord.tsx
 │       └── CTASection.tsx
 ├── mockData/                     # 🔥 All static data (NO hardcoded data in components)
 │   ├── landing.ts                # Landing page: hero, aboutStats, servicesPreview, navLinks, footer
@@ -204,6 +216,7 @@ All static/page data lives in `mockData/` files. Components import and use data 
 | `mockData/why-zamr.ts` | heroContent, howWeWorkRows, ourStrengths, commitmentCards, processItems, trackRecordStats, ctaContent | All `components/why-zamr/*` |
 | `mockData/our-teams.ts` | heroContent, leadershipTeam, engineeringTeams, collaborationContent, careersContent | All `components/our-teams/*` |
 | `mockData/trusted-accredited.ts` | heroContent, certifications, complianceContent, accreditationItems, journeyMilestones, industryItems, trustedContactContent, ctaContent, formFields | All `components/trusted-accredited/*` |
+| `mockData/engineering-impact.ts` | heroContent, impactAreas, areasOfImpact, whyItMatters, approachSteps, ourImpact, featuredProjects, trackRecord, ctaContent | All `components/engineering-impact/*` |
 
 ---
 

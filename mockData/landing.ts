@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
   { label: "Why ZAMR Engineering", href: "/why-zamr-engineering" },
   { label: "Our Team", href: "/our-teams" },
   { label: "Trusted & Accredited", href: "/trusted-accredited" },
-  { label: "Engineering For Impact", href: "" },
+  { label: "Engineering For Impact", href: "/engineering-impact" },
 ];
 
 export interface HeroContent {
