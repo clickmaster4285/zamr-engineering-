@@ -26,7 +26,7 @@ export default function RelatedWork({ number, heading, projects }: Props) {
               </span>
             </div>
 
-            <h2 className="text-xl font-bold leading-tight text-[var(--text-heading)] sm:text-2xl lg:text-4xl lg:leading-[71px]">
+            <h2 className="text-xl font-bold leading-tight text-[var(--text-dark)] sm:text-2xl lg:text-4xl lg:leading-[71px]">
               {heading}
             </h2>
           </div>

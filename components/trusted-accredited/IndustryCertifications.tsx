@@ -12,13 +12,13 @@ export default function IndustryCertifications() {
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
               01
             </span>
-            <span className="h-px w-[104px] bg-[var(--text-heading)]" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-heading)] lg:text-base">
+            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">
               Industry Certifications
             </span>
           </div>
 
-          <h2 className="max-w-[454px] text-[36px] font-bold leading-[44px] text-[var(--text-heading)] sm:text-[44px] sm:leading-[55px]">
+          <h2 className="max-w-[454px] text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px]">
             Industry Certifications
           </h2>
         </div>

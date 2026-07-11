@@ -18,13 +18,13 @@ export default function Compliance() {
               <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
                 {sectionNumber}
               </span>
-              <span className="hidden h-px w-[104px] bg-[var(--text-heading)] sm:block" />
-              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-heading)] lg:text-base">
+              <span className="hidden h-px w-[104px] bg-[var(--text-dark)] sm:block" />
+              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">
                 {sectionLabel}
               </span>
             </div>
 
-            <h2 className="w-full text-[28px] font-bold leading-[36px] text-[var(--text-heading)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px] lg:max-w-[555px]">
+            <h2 className="w-full text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px] lg:max-w-[555px]">
               {heading}
             </h2>
           </div>

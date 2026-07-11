@@ -36,8 +36,8 @@ export default function TrustedContact() {
               <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
                 {sectionNumber}
               </span>
-              <span className="hidden h-px w-[104px] bg-[var(--text-heading)] sm:block" />
-              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-heading)] lg:text-base">
+              <span className="hidden h-px w-[104px] bg-[var(--text-dark)] sm:block" />
+              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">
                 {sectionLabel}
               </span>
             </div>

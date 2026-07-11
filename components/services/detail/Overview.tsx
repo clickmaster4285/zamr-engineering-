@@ -22,7 +22,7 @@ export default function CivilEngineeringOverview({ number, heading, paragraphs, 
             </span>
           </div>
 
-          <h2 className="pt-7 text-[44px] font-bold leading-[55px] text-[var(--text-heading)]">
+          <h2 className="pt-7 text-[44px] font-bold leading-[55px] text-[var(--text-dark)]">
             {heading}
           </h2>
 
@@ -58,7 +58,7 @@ export default function CivilEngineeringOverview({ number, heading, paragraphs, 
               <span className="text-[9.5px] font-semibold leading-[14px] tracking-[1.33px] text-[var(--color-text-label)]">
                 {item.label}
               </span>
-              <span className="text-right text-[12.5px] font-bold leading-[19px] tracking-[-0.0625px] text-[var(--text-heading)]">
+              <span className="text-right text-[12.5px] font-bold leading-[19px] tracking-[-0.0625px] text-[var(--text-dark)]">
                 {item.value}
               </span>
             </div>

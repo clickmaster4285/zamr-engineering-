@@ -26,7 +26,7 @@ export default function WhyZamr() {
               WHY ZAMR
             </span>
           </div>
-          <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-heading)] sm:text-[40px] sm:leading-[50px] lg:text-[44px] lg:leading-[55px]">
+          <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[40px] sm:leading-[50px] lg:text-[44px] lg:leading-[55px]">
             What sets us apart from the competition.
           </h2>
         </div>
@@ -60,7 +60,7 @@ export default function WhyZamr() {
               </span>
 
               {/* Title */}
-              <h3 className="pt-[10px] text-[20px] font-medium leading-[25px] text-[var(--text-heading)]">
+              <h3 className="pt-[10px] text-[20px] font-medium leading-[25px] text-[var(--text-dark)]">
                 {feature.title}
               </h3>
 
