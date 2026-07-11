@@ -108,7 +108,8 @@ zamr-engineering/
 │   ├── projects.ts               # Project detail data + projectFilters + projectsHeroStats + howWeDeliver
 │   ├── why-zamr.ts               # Why ZAMR page: hero, howWeWork, strengths, commitment, process, cta
 │   ├── our-teams.ts              # Our Teams page: hero, leadership, engineering teams, collaboration, careers
-│   └── trusted-accredited.ts     # Trusted & Accredited page: hero, certifications, compliance, accreditation, journey, industries, contact
+│   ├── trusted-accredited.ts     # Trusted & Accredited page: hero, certifications, compliance, accreditation, journey, industries, contact, cta, formFields
+│   └── engineering-impact.ts     # Engineering For Impact page: hero, impactAreas, areasOfImpact, whyItMatters, approachSteps, ourImpact, featuredProjects, trackRecord, cta
 ├── lib/
 │   └── utils.ts                  # Utility helpers (cn, etc.)
 ├── public/
