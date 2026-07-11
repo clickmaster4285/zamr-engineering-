@@ -135,5 +135,5 @@ export const careersContent: CareersContent = {
   description:
     "We're always looking for passionate engineers and industry professionals who share our commitment to quality, innovation, and excellence.",
   primaryButton: { label: "View Careers", href: "" },
-  secondaryButton: { label: "Contact Us", href: "/contact" },
+  secondaryButton: { label: "Contact Us", href: "" },
 };
