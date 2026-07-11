@@ -1,57 +1,7 @@
 "use client";
 
+import { Award, ShieldCheck } from "lucide-react";
 import { accreditationItems } from "@/mockData/trusted-accredited";
-
-function Icon({ type }: { type: "award" | "shield-check" }) {
-  if (type === "award") {
-    return (
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z"
-          stroke="white"
-          strokeWidth="2"
-        />
-        <path
-          d="M8.21 13.89L7 23L12 20L17 23L15.79 13.89"
-          stroke="white"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg
-      width="32"
-      height="32"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M9 12L11 14L15 10"
-        stroke="white"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 export default function AccreditationMatters() {
   return (
@@ -83,7 +33,11 @@ export default function AccreditationMatters() {
                 index % 2 === 0 ? "lg:border-l-0" : ""
               } p-6`}
             >
-              <Icon type={item.icon} />
+              {item.icon === "award" ? (
+                <Award size={32} strokeWidth={1.5} className="text-white" />
+              ) : (
+                <ShieldCheck size={32} strokeWidth={1.5} className="text-white" />
+              )}
 
               <h3 className="text-[20px] font-semibold leading-[30px] text-white sm:text-[24px]">
                 {item.title}

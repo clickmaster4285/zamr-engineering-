@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Check } from "lucide-react";
 import { complianceContent } from "@/mockData/trusted-accredited";
 
 export default function Compliance() {
@@ -43,22 +44,11 @@ export default function Compliance() {
                   className="flex flex-row items-center gap-3"
                 >
                   {/* Check icon */}
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0"
-                  >
-                    <path
-                      d="M3.33334 10.8333L7.5 15L16.6667 5"
-                      stroke="var(--color-primary)"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  <Check
+                    size={20}
+                    strokeWidth={2}
+                    className="shrink-0 text-[var(--color-primary)]"
+                  />
                   <span className="text-sm font-medium leading-[23px] text-[var(--text-paragraph)] sm:text-base lg:text-lg">
                     {item.label}
                   </span>
