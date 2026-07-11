@@ -12,10 +12,10 @@ export default function FeaturedProjects() {
         <div className="flex w-full flex-col gap-7">
           <div className="flex flex-row items-center gap-4">
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">06</span>
-            <span className="h-px w-[104px] bg-black" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[#333333] lg:text-base">Projects</span>
+            <span className="h-px w-12 bg-[var(--text-heading)] sm:w-[104px]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-heading)] lg:text-base">Projects</span>
           </div>
-          <h2 className="w-full text-[36px] font-bold leading-[44px] text-[#090D15] sm:text-[44px] sm:leading-[55px]">
+          <h2 className="w-full text-[36px] font-bold leading-[44px] text-[var(--text-heading)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
             Projects That Reflect Our Commitment
           </h2>
         </div>
@@ -26,16 +26,16 @@ export default function FeaturedProjects() {
             <Link
               key={project.title}
               href={project.href}
-              className="group relative h-[280px] w-full overflow-hidden bg-[#090D15] sm:h-[320px] lg:h-[340px]"
+              className="group relative h-[250px] w-full overflow-hidden bg-[var(--text-heading)] sm:h-[320px] lg:h-[340px]"
             >
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
-              <h3 className="absolute bottom-[50px] left-[50px] text-lg font-semibold leading-[23px] text-white">
+              <div className="absolute inset-0 bg-[var(--overlay-image-default)] transition-colors duration-300 group-hover:bg-[var(--overlay-image-hover)]" />
+              <h3 className="absolute bottom-6 left-6 text-base font-semibold leading-[23px] text-white sm:bottom-10 sm:left-10 sm:text-lg lg:bottom-[50px] lg:left-[50px] lg:text-xl">
                 {project.title}
               </h3>
             </Link>
