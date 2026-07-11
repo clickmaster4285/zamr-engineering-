@@ -11,7 +11,7 @@ export const navLinks: NavLink[] = [
   { label: "Projects", href: "/projects" },
   { label: "Why ZAMR Engineering", href: "/why-zamr-engineering" },
   { label: "Our Team", href: "/our-teams" },
-  { label: "Trusted & Accredited", href: "" },
+  { label: "Trusted & Accredited", href: "/trusted-accredited" },
   { label: "Engineering For Impact", href: "" },
 ];
 
