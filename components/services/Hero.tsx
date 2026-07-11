@@ -1,12 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import { servicesHero } from "@/mockData/services";
 
 export default function ServicesHero() {
+  const { title, subtitle, image } = servicesHero;
+
   return (
     <section className="relative h-[400px] w-full overflow-hidden sm:h-[500px] lg:h-[700px]">
       <Image
-        src="/images/image5.jpeg"
+        src={image}
         alt="Engineers on site"
         fill
         priority
@@ -15,15 +18,12 @@ export default function ServicesHero() {
 
       <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-      {/* Frame 1321319043 — content */}
       <div className="absolute bottom-10 left-1/2 flex w-full max-w-[933px] -translate-x-1/2 flex-col gap-5 px-6 lg:bottom-[100px] lg:left-[130px] lg:translate-x-0 lg:px-0">
         <h1 className="w-full text-[40px] font-bold leading-[48px] text-white sm:text-[50px] sm:leading-[60px] lg:text-[80px] lg:leading-[101px]">
-          Our Services
+          {title}
         </h1>
         <p className="w-full text-base font-medium leading-snug text-[var(--color-text-light-subtle)] sm:text-lg lg:text-[18px] lg:leading-[23px]">
-          Five specialist engineering disciplines. One integrated consultancy.
-          Delivering precision-led infrastructure outcomes across NSW, QLD, and
-          Victoria.
+          {subtitle}
         </p>
       </div>
     </section>

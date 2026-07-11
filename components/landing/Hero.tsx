@@ -1,6 +1,10 @@
 "use client";
 
+import { heroContent } from "@/mockData/landing";
+
 export default function Hero() {
+  const { location, headline, videoSrc } = heroContent;
+
   return (
     <section className="relative isolate min-h-screen w-full overflow-hidden bg-[var(--bg-hero)] text-white">
       {/* Video background */}
@@ -11,7 +15,7 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/video1.mp4" type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -21,12 +25,15 @@ export default function Hero() {
       {/* Hero content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <p className="mb-6 text-sm font-normal tracking-[0.3em] text-white">
-          SYDNEY &middot; NSW &middot; AUSTRALIA
+          {location}
         </p>
         <h1 className="max-w-6xl text-5xl font-bold leading-[1.15] tracking-tight sm:text-7xl md:text-[80px] md:leading-[101px]">
-          Engineering Infrastructure
-          <br />
-          for the Future
+          {headline.split("\n").map((line, i) => (
+            <span key={i}>
+              {line}
+              {i < headline.split("\n").length - 1 && <br />}
+            </span>
+          ))}
         </h1>
       </div>
     </section>

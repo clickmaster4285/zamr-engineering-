@@ -12,43 +12,13 @@ import {
   Area,
   Tooltip,
 } from "recharts";
+import { revenueByService, growthTrend, growthStats } from "@/mockData/about";
+
 const barlow = Barlow({
   weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
 });
-interface ServiceDatum {
-  name: string;
-  value: number;
-  color: string;
-}
-interface TrendDatum {
-  year: string;
-  value: number;
-}
-interface StatDatum {
-  label: string;
-  value: string;
-}
-const revenueByService: ServiceDatum[] = [
-  { name: "Civil Engineering", value: 4.27, color: "var(--color-blue-header)" },
-  { name: "Road Infrastructure", value: 3.17, color: "var(--color-chart-bar-1)" },
-  { name: "Project Verification", value: 2.17, color: "var(--color-chart-bar-2)" },
-  { name: "Renewable Energy", value: 1.18, color: "var(--color-chart-bar-3)" },
-  { name: "TfNSW Compliance", value: 0.68, color: "var(--color-chart-bar-4)" },
-];
-const growthTrend: TrendDatum[] = [
-  { year: "FY21", value: 5.0 },
-  { year: "FY22", value: 7.0 },
-  { year: "FY23", value: 9.0 },
-  { year: "FY24", value: 11.0 },
-];
-const growthStats: StatDatum[] = [
-  { label: "FY22 GROWTH", value: "+23.5%" },
-  { label: "FY23 GROWTH", value: "+20.2%" },
-  { label: "FY24 GROWTH", value: "+9.9%" },
-  { label: "CAGR (3Y)", value: "+17.9%" },
-];
 export default function RevenuePerformanceSection() {
   return (
     <section className="w-full bg-[var(--bg-light)] px-6 py-16 sm:px-10 md:px-16 lg:px-[80px] xl:p-[130px]">

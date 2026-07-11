@@ -2,45 +2,13 @@
 
 import { Barlow } from "next/font/google";
 import React from "react";
+import { whyZamrFeatures } from "@/mockData/services";
 
 const barlow = Barlow({
   weight: ["700"],
   subsets: ["latin"],
   display: "swap",
 });
-
-type Feature = {
-  number: string;
-  title: string;
-  description: string;
-};
-
-const features: Feature[] = [
-  {
-    number: "01",
-    title: "Technical Excellence",
-    description:
-      "Every deliverable is produced by experienced, accredited engineers and subjected to rigorous internal review before issue. No shortcuts. No junior-only teams.",
-  },
-  {
-    number: "02",
-    title: "Independence & Integrity",
-    description:
-      "Our verification and compliance practices operate with complete independence from design. We report what we find — not what clients want to hear.",
-  },
-  {
-    number: "03",
-    title: "Government Expertise",
-    description:
-      "Deep experience working within TfNSW, RMS, and Infrastructure NSW frameworks. We know the standards, the approval processes, and the people.",
-  },
-  {
-    number: "04",
-    title: "End-to-End Delivery",
-    description:
-      "From initial feasibility to as-built certification, we can resource the full project lifecycle — eliminating the gaps between consultant handovers.",
-  },
-];
 
 export default function WhyZamr() {
   return (
@@ -65,7 +33,7 @@ export default function WhyZamr() {
 
         {/* Cards row */}
         <div className="flex flex-col gap-4 lg:flex-row lg:gap-4">
-          {features.map((feature) => (
+          {whyZamrFeatures.map((feature) => (
             <div
               key={feature.number}
               className="flex flex-1 flex-col border px-5 py-6 lg:px-7 lg:py-7"

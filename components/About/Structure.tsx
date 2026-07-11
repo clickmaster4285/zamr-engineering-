@@ -1,79 +1,23 @@
 "use client";
 import Image from "next/image";
 import { useLayoutEffect, useRef, useState } from "react";
+import {
+  orgChartColors as COLORS,
+  orgChartLineColor as LINE,
+  orgChartLegend,
+  orgChartMd as md,
+  orgChartExternalBoxes as externalBoxes,
+  orgChartDm as dm,
+  orgChartOd as od,
+  orgChartSubHeaders as subHeaders,
+  orgChartSubH as subH,
+  orgChartNameCards as nameCards,
+  orgChartSubc as subc,
+  orgChartDesignWidth as DESIGN_WIDTH,
+  orgChartDesignHeight as DESIGN_HEIGHT,
+} from "@/mockData/about";
 
-type TeamType = "technical" | "operational" | "external";
-
-const COLORS: Record<TeamType, string> = {
-  technical: "var(--color-blue-struct-tech)",
-  operational: "var(--color-blue-struct-ops)",
-  external: "var(--color-blue-struct-ext)",
-};
-const LINE = "var(--color-blue-struct-line)";
-
-const legend = [
-  { label: "Technical Team", color: COLORS.technical },
-  { label: "Operational Team", color: COLORS.operational },
-  { label: "External Team", color: COLORS.external },
-];
-
-// --- Figma absolute-position data ---
-interface BoxData {
-  left: number; top: number; width: number; height: number;
-  title: string; subtitle?: string; type: TeamType;
-  fontSize?: number; fontWeight?: number;
-}
-
-const md: BoxData = {
-  left: 754, top: 267, width: 271.8, height: 112.25,
-  title: "Managing Director", subtitle: "Khalid Javed", type: "operational",
-};
-const externalBoxes: BoxData[] = [
-  { left: 1259.12, top: 175, width: 264, height: 87, title: "Quality Support", subtitle: "Insaf Khan", type: "external" },
-  { left: 1259.12, top: 280, width: 264, height: 86, title: "Cost Estimating", subtitle: "Natesh Natraj", type: "external" },
-  { left: 1259.12, top: 386, width: 264, height: 85, title: "Contract Administration", subtitle: "Franca Bucci", type: "external" },
-];
-const dm: BoxData = {
-  left: 293, top: 607, width: 261.37, height: 116.26,
-  title: "Design Manager", subtitle: "Omar Faruqi", type: "technical",
-};
-const od: BoxData = {
-  left: 1199.03, top: 606.3, width: 274.2, height: 116.26,
-  title: "Operational Director", subtitle: "Khalid Javed", type: "operational",
-};
-
-interface SubHeaderData {
-  left: number; top: number; width: number; title: string; type: TeamType;
-}
-const subHeaders: SubHeaderData[] = [
-  { left: 106, top: 782, width: 196.43, title: "Structure Design", type: "technical" },
-  { left: 329, top: 782, width: 188.64, title: "Civil Design", type: "technical" },
-  { left: 554.54, top: 787.31, width: 196.43, title: "Traffic Management", type: "technical" },
-  { left: 791.78, top: 787.98, width: 196.43, title: "Asset Management", type: "technical" },
-  { left: 1016.2, top: 787.98, width: 198.04, title: "Operational - Quality", type: "operational" },
-  { left: 1237.48, top: 787.98, width: 197.23, title: "Operation Safety", type: "operational" },
-  { left: 1467, top: 786, width: 198.04, title: "Project Management", type: "operational" },
-];
-const subH = 44.9;
-
-interface NameCardData {
-  left: number; top: number; width: number; height: number; names: string[]; type: TeamType;
-}
-const nameCards: NameCardData[] = [
-  { left: 98, top: 894, width: 211, height: 151, names: ["Kashif JKhan", "Yashwant Dyall", "Roland Ng"], type: "technical" },
-  { left: 318, top: 894, width: 209, height: 151, names: ["Faraz Ahmed", "Thomas Chew", "Mark Shamoun"], type: "technical" },
-  { left: 542, top: 894, width: 220, height: 151, names: ["Charles Waife", "Manhur Rahman", "Kirk Martinez"], type: "technical" },
-  { left: 791, top: 894, width: 197, height: 151, names: ["Moeen","Rayyaan", "Saad Malik"], type: "technical" },
-  { left: 1007, top: 894, width: 217, height: 151, names: ["Yashwant Dyall", "Janaka Bandara"], type: "operational" },
-  { left: 1237, top: 894, width: 198, height: 151, names: ["Kah Yong Yan"], type: "operational" },
-  { left: 1456, top: 894, width: 220, height: 151, names: ["Dante Vinces", "Arshad Mahmood", "Tanuj Kakkar"], type: "operational" },
-];
-
-const subc = { left: 1099.38, top: 1111.84, width: 236.77, height: 61.25 };
-
-// --- Canvas dimensions (design size, in px) ---
-const DESIGN_WIDTH = 1680;
-const DESIGN_HEIGHT = 1273;
+import type { BoxData, SubHeaderData, NameCardData, TeamType } from "@/mockData/about";
 
 // --- Helpers ---
 function cx(b: { left: number; width: number }) { return b.left + b.width / 2; }
@@ -294,7 +238,7 @@ export default function Structure() {
                
               </div>
               <div className="flex flex-col items-start" style={{ gap: 16 }}>
-                {legend.map((item) => (
+                {orgChartLegend.map((item) => (
                   <div key={item.label} className="flex flex-row items-center" style={{ gap: 19 }}>
                     <span
                       className="rounded-full"

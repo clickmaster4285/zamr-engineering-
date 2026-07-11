@@ -599,3 +599,66 @@ export const projects: ProjectData[] = [
 export function getProjectBySlug(slug: string): ProjectData | undefined {
   return projects.find((p) => p.slug.toLocaleLowerCase() === slug.toLocaleLowerCase());
 }
+
+// --- Projects Listing Page Static Data ---
+
+export const projectFilters: string[] = [
+  "ALL",
+  "Urban Infrastructure",
+  "Structural Engineering",
+  "Transportation Projects",
+  "Water & Irrigation Systems",
+  "Industrial Development",
+];
+
+export interface HeroStat {
+  value: string;
+  label: string;
+}
+
+export const projectsHeroStats: HeroStat[] = [
+  { value: "$180M+", label: "TOTAL PROJECT VALUE DELIVERED" },
+  { value: "150+", label: "PROJECTS COMPLETED" },
+  { value: "3", label: "STATES OPERATING" },
+  { value: "2012", label: "DELIVERING SINCE" },
+];
+
+export interface HowWeDeliverItem {
+  title: string;
+  description: string;
+}
+
+export const projectsHowWeDeliver: HowWeDeliverItem[] = [
+  {
+    title: "Senior-Led Teams",
+    description:
+      "Every project is led by a registered senior engineer — not delegated to juniors after sign-off.",
+  },
+  {
+    title: "Independent Review",
+    description:
+      "All deliverables pass internal peer review before issue. No exceptions.",
+  },
+  {
+    title: "Full Lifecycle",
+    description:
+      "We can resource from feasibility through to as-built certification on a single appointment.",
+  },
+  {
+    title: "On-Program Delivery",
+    description:
+      "98% of our projects are delivered on the agreed program. We own our commitments.",
+  },
+];
+
+export interface ProjectsContactInfo {
+  address: string;
+  phone: string;
+  email: string;
+}
+
+export const projectsContactInfo: ProjectsContactInfo = {
+  address: "Level 5, 123 Pitt Street, Sydney NSW 2000",
+  phone: "+61 2 9000 0000",
+  email: "enquiries@zamrengineering.com.au",
+};

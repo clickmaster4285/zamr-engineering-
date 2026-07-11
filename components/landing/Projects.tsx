@@ -5,26 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { projects } from "@/mockData/projects";
-
-const filters = [
-  "ALL",
-  "Urban Infrastructure",
-  "Structural Engineering",
-  "Transportation Projects",
-  "Water & Irrigation Systems",
-  "Industrial Development",
-];
-
-const clientLogos = [
-  { src: "/images/logo1.jpeg", alt: "Transport for NSW" },
-  { src: "/images/logo2.jpeg", alt: "VIDA" },
-  { src: "/images/logo3.jpeg", alt: "Queensland Government" },
-  { src: "/images/logo4.jpeg", alt: "The National Roads & Motorists' Association" },
-  { src: "/images/logo5.jpeg", alt: "Ausbuild" },
-  { src: "/images/logo6.jpeg", alt: "Melbourne Civil Works" },
-  { src: "/images/logo7.jpeg", alt: "Sydney Structural & Civil" },
-  { src: "/images/logo8.jpeg", alt: "Brisbane Growth Development Agency" },
-];
+import { projectFilters, clientLogos } from "@/mockData/landing";
 
 function useInView(threshold = 0.15) {
   const [inView, setInView] = useState(false);
@@ -160,7 +141,7 @@ export default function Projects() {
 
           {/* Filter tabs */}
           <div className="flex w-full flex-nowrap gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:overflow-visible lg:gap-4">
-            {filters.map((filter) => {
+            {projectFilters.map((filter) => {
               const isActive = filter === activeFilter;
               const isAll = filter === "ALL";
               return (
