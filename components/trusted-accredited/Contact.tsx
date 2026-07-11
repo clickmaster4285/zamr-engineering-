@@ -1,102 +1,84 @@
 "use client";
 
+import Image from "next/image";
 import { trustedContactContent } from "@/mockData/trusted-accredited";
 
-function SocialIcon({ type }: { type: string }) {
-  const className = "h-7 w-7";
-  if (type === "instagram") {
-    return (
-      <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="2" width="20" height="20" rx="5" stroke="#2344A1" strokeWidth="1.75" />
-        <circle cx="12" cy="12" r="5" stroke="#2344A1" strokeWidth="1.75" />
-        <circle cx="17.5" cy="6.5" r="1.5" fill="#2344A1" />
-      </svg>
-    );
-  }
-  if (type === "linkedin") {
-    return (
-      <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="2" width="20" height="20" rx="5" stroke="#2344A1" strokeWidth="1.75" />
-        <path d="M8 11V16" stroke="#2344A1" strokeWidth="1.75" strokeLinecap="round" />
-        <path d="M8 8V8.01" stroke="#2344A1" strokeWidth="1.75" strokeLinecap="round" />
-        <path d="M12 16V13" stroke="#2344A1" strokeWidth="1.75" strokeLinecap="round" />
-        <path d="M16 16V13C16 11.3431 14.6569 10 13 10C11.3431 10 10 11.3431 10 13" stroke="#2344A1" strokeWidth="1.75" strokeLinecap="round" />
-      </svg>
-    );
-  }
-  if (type === "global") {
-    return (
-      <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="10" fill="#2344A1" />
-      </svg>
-    );
-  }
-  if (type === "email") {
-    return (
-      <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="4" width="20" height="16" rx="2" fill="#2344A1" />
-        <path d="M22 6L12 13L2 6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    );
-  }
-  return null;
+const iconMap: Record<string, string> = {
+  instagram: "/icons/mynaui_instagram.svg",
+  linkedin: "/icons/mynaui_linkedin.svg",
+  global: "/icons/et_global.svg",
+  email: "/icons/Vector.svg",
+};
+
+function splitKeyValue(text: string): { key: string; value: string } {
+  const colonIndex = text.indexOf(": ");
+  if (colonIndex === -1) return { key: "", value: text };
+  return {
+    key: text.substring(0, colonIndex + 1),
+    value: text.substring(colonIndex + 2),
+  };
 }
 
 export default function TrustedContact() {
   const { sectionNumber, sectionLabel, heading, companyName, address1, address2, emails, socialLinks } =
     trustedContactContent;
 
+  const contactLines = [companyName, address1, address2];
+
   return (
-    <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
+    <section className="w-full bg-white px-6 py-16 sm:px-10 sm:py-20 lg:p-[130px]">
       <div className="flex w-full flex-col items-start gap-12 lg:flex-row lg:items-center lg:gap-[231px]">
         {/* Left column — Contact info */}
-        <div className="flex w-full flex-col items-start gap-[50px] lg:w-[555px]">
+        <div className="flex w-full flex-col items-start gap-10 lg:w-[600px] lg:gap-[50px]">
           {/* Header */}
           <div className="flex w-full flex-col items-start gap-6 sm:gap-8 lg:gap-[30px]">
             <div className="flex flex-row items-center gap-3 sm:gap-4">
               <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
                 {sectionNumber}
               </span>
-              <span className="h-px w-[104px] bg-black" />
-              <span className="text-sm font-medium tracking-[3px] uppercase text-[#333333] lg:text-base">
+              <span className="hidden h-px w-[104px] bg-[var(--text-heading)] sm:block" />
+              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-heading)] lg:text-base">
                 {sectionLabel}
               </span>
             </div>
 
-            <h2 className="w-full text-[28px] font-bold leading-[36px] text-[#333333] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px]">
+            <h2 className="w-full text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px]">
               {heading}
             </h2>
           </div>
 
           {/* Contact details */}
-          <div className="flex w-full flex-col items-start gap-5">
-            <p className="w-full text-sm leading-[23px] text-[#2344A1] sm:text-base lg:text-lg">
-              {companyName}
-            </p>
-            <p className="w-full text-sm leading-[23px] text-[#2344A1] sm:text-base lg:text-lg">
-              {address1}
-            </p>
-            <p className="w-full text-sm leading-[23px] text-[#2344A1] sm:text-base lg:text-lg">
-              {address2}
-            </p>
+          <div className="flex w-full flex-col items-start gap-4">
+            {contactLines.map((line) => {
+              const { key, value } = splitKeyValue(line);
+              return (
+                <p key={line} className="w-full text-sm leading-[23px] sm:text-base lg:text-[18px] lg:leading-[25px]">
+                  <span className="font-medium text-[var(--color-blue-label)]">{key} </span>
+                  <span className="text-[var(--text-dark)]">{value}</span>
+                </p>
+              );
+            })}
             {emails.map((email) => (
-              <p
-                key={email.address}
-                className="w-full text-sm leading-[23px] text-[#2344A1] sm:text-base lg:text-lg"
-              >
-                {email.label}: {email.address}
+              <p key={email.address} className="w-full text-sm leading-[23px] sm:text-base lg:text-[18px] lg:leading-[25px]">
+                <span className="font-medium text-[var(--color-blue-label)]">{email.label}: </span>
+                <span className="text-[var(--text-dark)]">{email.address}</span>
               </p>
             ))}
 
             {/* Social links */}
-            <div className="flex flex-row items-center gap-6">
+            <div className="flex flex-row items-center gap-6 pt-2">
               {socialLinks.map((link) => (
                 <a
                   key={link.icon}
                   href={link.href}
                   className="transition-opacity hover:opacity-80"
                 >
-                  <SocialIcon type={link.icon} />
+                  <Image
+                    src={iconMap[link.icon] || ""}
+                    alt={link.icon}
+                    width={28}
+                    height={28}
+                  />
                 </a>
               ))}
             </div>
@@ -108,55 +90,55 @@ export default function TrustedContact() {
           {/* Name & Email row */}
           <div className="flex w-full flex-col gap-7 sm:flex-row sm:gap-6">
             <div className="flex w-full flex-col gap-2 sm:w-[calc(50%-12px)]">
-              <label className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[#9AA3B0] uppercase">
+              <label className="text-xs font-bold tracking-[3px] text-[var(--text-label)] uppercase">
                 NAME
               </label>
               <input
                 type="text"
                 placeholder="John Smith"
-                className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-[12px] font-normal leading-[15px] text-[var(--text-paragraph)] outline-none placeholder:text-[rgba(105,114,129,0.5)]"
+                className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
               />
             </div>
             <div className="flex w-full flex-col gap-2 sm:w-[calc(50%-12px)]">
-              <label className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[#9AA3B0] uppercase">
+              <label className="text-xs font-bold tracking-[3px] text-[var(--text-label)] uppercase">
                 EMAIL
               </label>
               <input
                 type="email"
                 placeholder="you@company.com.au"
-                className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-[12px] font-normal leading-[15px] text-[var(--text-paragraph)] outline-none placeholder:text-[rgba(105,114,129,0.5)]"
+                className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
               />
             </div>
           </div>
 
           {/* Subject */}
           <div className="flex w-full flex-col gap-2">
-            <label className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[#9AA3B0] uppercase">
+            <label className="text-xs font-bold tracking-[3px] text-[var(--text-label)] uppercase">
               SUBJECT
             </label>
             <input
               type="text"
               placeholder="Project enquiry"
-              className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-[12px] font-normal leading-[15px] text-[var(--text-paragraph)] outline-none placeholder:text-[rgba(105,114,129,0.5)]"
+              className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
             />
           </div>
 
           {/* Message */}
           <div className="flex w-full flex-col gap-2">
-            <label className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[#9AA3B0] uppercase">
+            <label className="text-xs font-bold tracking-[3px] text-[var(--text-label)] uppercase">
               MESSAGE
             </label>
             <textarea
               placeholder="Tell us about your project..."
               rows={5}
-              className="w-full resize-none border-0 border-b border-[var(--border-input)] py-[10px] text-[12px] font-normal leading-[15px] text-[var(--text-paragraph)] outline-none placeholder:text-[rgba(105,114,129,0.5)]"
+              className="w-full resize-none border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
             />
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="flex w-full items-center justify-center bg-[var(--color-primary)] px-8 py-[14px] text-sm font-bold tracking-[3px] text-white transition-colors hover:bg-[var(--color-primary-hover)] sm:text-base sm:px-[255px]"
+            className="flex w-full items-center justify-center bg-[var(--color-primary)] px-8 py-[14px] text-sm font-bold tracking-[3px] text-white transition-colors hover:bg-[var(--color-primary-hover)] sm:text-base"
           >
             SUBMIT ENQUIRY
           </button>
