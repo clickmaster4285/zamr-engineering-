@@ -13,12 +13,12 @@ export default function ImpactAreas() {
               01
             </span>
             <span className="h-px w-[104px] bg-black" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[#333333] lg:text-base">
+            <span className="text-sm font-medium tracking-[3px] uppercase  lg:text-base">
               Industry Certifications
             </span>
           </div>
 
-          <h2 className="max-w-[454px] text-[36px] font-bold leading-[44px] text-[#090D15] sm:text-[44px] sm:leading-[55px]">
+          <h2 className="max-w-[454px] text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px]">
             Industry Certifications
           </h2>
         </div>

@@ -24,22 +24,22 @@ export const impactAreas: ImpactArea[] = [
   {
     title: "Safer Infrastructure",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Engineering solutions that prioritize structural integrity and public safety.",
   },
   {
     title: "Better Communities",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Supporting infrastructure that connects people and enhances everyday life.",
   },
   {
     title: "Sustainable Development",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Designing with long-term environmental and operational responsibility in mind.",
   },
   {
     title: "Reliable Delivery",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Providing dependable engineering services that help projects succeed from planning to completion.",
   },
 ];
 
@@ -69,7 +69,7 @@ export const areasOfImpactContent: AreasOfImpactContent = {
     { label: "Engineering Verification" },
     { label: "Infrastructure Planning" },
   ],
-  image: "/images/image6.jpeg",
+  image: "/images/engineering-impact/image2.png",
 };
 
 // ─── Why It Matters (03 — dark blue 2×2 grid) ─────────────────────────
@@ -85,25 +85,25 @@ export const whyItMattersItems: WhyItMattersItem[] = [
     icon: "award",
     title: "Quality",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Consistent engineering standards applied on every project we deliver.",
   },
   {
     icon: "shield-check",
     title: "Safety",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Workplace safety embedded into every stage of design and delivery.",
   },
   {
     icon: "shield-check",
     title: "Compliance",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Aligned with Australian regulations and international management standards.",
   },
   {
     icon: "award",
     title: "Confidence",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Independently recognised systems that give clients full peace of mind.",
   },
 ];
 
@@ -149,17 +149,17 @@ export const ourImpactItems: OurImpactItem[] = [
   {
     title: "Innovation",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established. We engage with your project team to define scope, constraints, and objectives.",
+      "Applying modern engineering practices to solve complex challenges and drive better outcomes for clients and communities.",
   },
   {
     title: "Quality",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Maintaining the highest standards across every stage of project delivery, from initial design through to completion.",
   },
   {
     title: "Collaboration",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Working closely with clients, stakeholders, and project teams to achieve successful and lasting outcomes.",
   },
 ];
 
@@ -174,17 +174,17 @@ export interface FeaturedProject {
 export const featuredProjects: FeaturedProject[] = [
   {
     title: "Hunter Valley Renewable Energy Hub",
-    image: "/images/projects/project1.jpeg",
+    image: "/images/image2.jpeg",
     href: "/projects/hunter-valley-renewable-energy-hub",
   },
   {
     title: "Metropolitan Bridge Rehabilitation",
-    image: "/images/projects/project2.jpeg",
+    image: "/images/image10.png",
     href: "/projects/metropolitan-bridge-rehabilitation",
   },
   {
     title: "Urban Stormwater Management System",
-    image: "/images/projects/project3.jpeg",
+    image: "/images/image7.jpeg",
     href: "/projects/urban-stormwater-management-system",
   },
 ];
@@ -218,6 +218,6 @@ export const ctaContent: CTAContent = {
   heading: "Let's Build Infrastructure That\nMakes a Difference",
   description:
     "Partner with ZAMR Engineering to deliver engineering solutions that create lasting value, improve performance, and support sustainable growth.",
-  primaryButton: { label: "Start Your Project", href: "/contact" },
-  secondaryButton: { label: "Contact Our Team", href: "/contact" },
+  primaryButton: { label: "Start Your Project", href: "" },
+  secondaryButton: { label: "Contact Our Team", href: "" },
 };

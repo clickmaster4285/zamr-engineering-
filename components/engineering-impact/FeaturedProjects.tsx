@@ -32,9 +32,9 @@ export default function FeaturedProjects() {
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
               <h3 className="absolute bottom-[50px] left-[50px] text-lg font-semibold leading-[23px] text-white">
                 {project.title}
               </h3>

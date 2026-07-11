@@ -9,7 +9,7 @@ export default function AreasOfImpact() {
 
   return (
     <section className="w-full bg-[#F6F8FC] px-6 py-16 sm:px-10 sm:py-20 lg:p-[130px]">
-      <div className="flex w-full flex-col items-start gap-12 lg:flex-row lg:items-center lg:gap-[264px]">
+      <div className="flex w-full flex-col items-start gap-12 lg:flex-row lg:justify-between lg:items-center ">
         {/* Left column */}
         <div className="flex w-full flex-col items-start gap-[50px] lg:w-[555px]">
           {/* Header */}
@@ -24,7 +24,7 @@ export default function AreasOfImpact() {
               </span>
             </div>
 
-            <h2 className="w-full text-[28px] font-bold leading-[36px] text-[#333333] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px] lg:max-w-[555px]">
+            <h2 className=" text-[28px] font-bold leading-[36px] text-[#333333] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px] ">
               {heading}
             </h2>
           </div>
