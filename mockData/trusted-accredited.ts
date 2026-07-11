@@ -90,25 +90,25 @@ export const accreditationItems: AccreditationItem[] = [
     icon: "award",
     title: "Quality",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Consistent engineering standards applied on every project we deliver. ",
   },
   {
     icon: "shield-check",
     title: "Safety",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Workplace safety embedded into every stage of design and delivery.",
   },
   {
     icon: "shield-check",
     title: "Compliance",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Aligned with Australian regulations and international management standards.",
   },
   {
     icon: "award",
     title: "Confidence",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Independently recognised systems that give clients full peace of mind.",
   },
 ];
 
