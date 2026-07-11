@@ -208,7 +208,7 @@ export const ctaContent: CTAContent = {
   heading: "Partner with a Team You Can Trust",
   description:
     "Whether you're planning new infrastructure, managing complex engineering challenges, or seeking reliable technical expertise, ZAMR Engineering is ready to support your next project.",
-  primaryButton: { label: "Get In Touch", href: "/contact" },
+  primaryButton: { label: "Get In Touch", href: "" },
   secondaryButton: { label: "Explore Services", href: "/services" },
 };
 

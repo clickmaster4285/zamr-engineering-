@@ -19,19 +19,20 @@ export default function CTASection() {
 
         {/* Buttons */}
         <div className="flex flex-row items-center justify-center gap-4">
-          <Link
-            href={ctaContent.primaryButton.href}
-            className="flex items-center justify-center bg-[var(--color-primary)] px-8 py-4 text-sm font-semibold uppercase text-white transition-colors hover:bg-[var(--color-primary-hover)] sm:px-[32px]"
-          >
-            {ctaContent.primaryButton.label}
-          </Link>
-          <Link
-            href={ctaContent.secondaryButton.href}
-            className="flex items-center justify-center border border-[var(--color-primary)] px-8 py-4 text-sm font-semibold uppercase text-[var(--color-primary)] transition-colors hover:bg-[var(--color-primary)] hover:text-white sm:px-[32px]"
-          >
-            {ctaContent.secondaryButton.label}
-          </Link>
-        </div>
+  <Link
+    href={ctaContent.primaryButton.href}
+    className="flex items-center justify-center border border-[var(--color-primary)] bg-[var(--color-primary)] px-8 py-4 text-sm font-semibold uppercase text-white transition-all duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)] active:scale-[0.98] sm:px-[32px]"
+  >
+    {ctaContent.primaryButton.label}
+  </Link>
+
+  <Link
+    href={ctaContent.secondaryButton.href}
+    className="flex items-center justify-center border border-[var(--color-primary)] bg-[var(--bg-light)] px-8 py-4 text-sm font-semibold uppercase text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] sm:px-[32px]"
+  >
+    {ctaContent.secondaryButton.label}
+  </Link>
+</div>
       </div>
     </section>
   );
