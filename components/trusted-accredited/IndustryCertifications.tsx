@@ -32,7 +32,7 @@ export default function IndustryCertifications() {
             >
               {/* Title row with badge */}
               <div className="flex w-full flex-row items-center justify-between">
-                <h3 className="text-[22px] font-semibold leading-[130%] text-[var(--text-base)] sm:text-[28px]">
+                <h3 className="text-[22px] font-semibold leading-[130%] text-[var(--text-dark)] sm:text-[28px]">
                   {cert.name}
                 </h3>
                 <span className="flex items-center rounded bg-[var(--bg-card)] px-[10px] py-[4px] text-xs font-semibold text-[var(--color-primary)]">
