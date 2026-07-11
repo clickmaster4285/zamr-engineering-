@@ -75,7 +75,7 @@ export default function AccreditationMatters() {
         </div>
 
         {/* Accreditation items — 2x2 grid */}
-        <div className="grid w-full grid-cols-1 sm:grid-cols-2">
+        <div className="grid w-full grid-cols-1 sm:grid-cols-2 border-0 border-l border-[rgba(255,255,255,0.08)]">
           {accreditationItems.map((item, index) => (
             <div
               key={item.title}

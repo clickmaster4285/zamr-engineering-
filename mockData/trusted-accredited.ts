@@ -62,7 +62,7 @@ export interface ComplianceContent {
 
 export const complianceContent: ComplianceContent = {
   sectionNumber: "02",
-  sectionLabel: "BUILT AROUND COMPLIANCE",
+  sectionLabel: "COMPLIANCE",
   heading: "Built Around Compliance",
   description:
     "Navigating regulatory landscapes requires a partner with deep technical knowledge and a commitment to standards. We integrate TfNSW and Australian standards into every phase of project verification.",
@@ -74,7 +74,7 @@ export const complianceContent: ComplianceContent = {
     { label: "Continuous Improvement" },
     { label: "Client Satisfaction" },
   ],
-  image: "/images/image6.jpeg",
+  image: "/images/engineering-impact/image1.png",
 };
 
 // ─── Why Accreditation Matters ─────────────────────────────────────────
