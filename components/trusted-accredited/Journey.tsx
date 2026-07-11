@@ -7,7 +7,7 @@ export default function Journey() {
     <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-32.5">
       <div>
         {/* Header */}
-        <div className="flex w-full flex-col gap-6 lg:w-[481px] lg:gap-[30px]">
+        <div className="flex w-full flex-col gap-6 lg:gap-[30px]">
           <div className="flex flex-row items-center gap-4">
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
               04
@@ -23,27 +23,27 @@ export default function Journey() {
         </div>
 
         {/* Timeline milestones */}
-        <div className="mt-8 flex flex-col border-t border-[var(--border-section)] lg:mt-[50px]">
+        <div className="mt-8 flex flex-col border-t border-[var(--border-section)] lg:mt-20">
           {journeyMilestones.map((milestone) => (
             <div
               key={milestone.year}
-              className="group relative flex cursor-pointer flex-col gap-3 border-b border-[var(--border-section)] bg-white px-6 py-6 transition-colors duration-300 hover:bg-[var(--bg-hover)] active:bg-[var(--bg-hover)] sm:px-10 sm:py-8 lg:flex-row lg:items-center lg:h-[164px] lg:py-0 lg:px-[50px]"
+              className="group relative flex cursor-pointer flex-col gap-3 border-b border-[var(--border-section)] bg-white px-6 py-6 transition-colors duration-300 hover:bg-[var(--bg-hover)] active:bg-[var(--bg-hover)] lg:h-[164px] lg:flex-row lg:items-center lg:px-[50px] lg:py-0"
             >
-              {/* Accent bar — slides up from bottom on hover */}
-              <span className="absolute left-0 bottom-0 h-0 w-[4px] bg-[var(--color-secondary)] transition-all duration-300 group-hover:h-full group-active:h-full" />
+              {/* Accent border */}
+              <span className="absolute bottom-0 left-0 h-0 w-[4px] bg-[var(--color-secondary)] transition-all duration-300 group-hover:h-full group-active:h-full" />
 
               {/* Year */}
-              <span className="w-[50px] text-sm font-medium tracking-[3px] text-[var(--text-dark)] sm:w-[60px] lg:w-[80px] lg:text-base">
+              <span className="w-20 text-sm font-medium tracking-[3px] text-[var(--text-dark)] lg:text-base">
                 {milestone.year}
               </span>
 
               {/* Title */}
-              <h3 className="text-lg font-semibold leading-[23px] text-[var(--text-dark)] sm:text-[22px] sm:leading-[28px] lg:ml-[100px] lg:min-w-[224px] lg:text-[28px] lg:leading-[35px]">
+              <h3 className="text-xl font-semibold leading-[26px] text-[var(--text-dark)] lg:ml-[40px] lg:w-[320px] lg:text-[28px] lg:leading-[35px]">
                 {milestone.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-2 block w-full text-sm leading-[23px] text-[var(--text-paragraph)] sm:text-base lg:mt-0 lg:ml-[110px] lg:flex-1 lg:text-[18px]">
+              <p className="text-sm leading-snug text-[var(--text-dark)] lg:ml-[40px] lg:flex-1 lg:max-w-[674px] lg:text-lg lg:leading-[23px]">
                 {milestone.description}
               </p>
             </div>
