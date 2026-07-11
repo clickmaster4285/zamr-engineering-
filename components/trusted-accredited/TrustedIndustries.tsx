@@ -4,7 +4,7 @@ import { industryItems } from "@/mockData/trusted-accredited";
 
 export default function TrustedIndustries() {
   return (
-    <section className="w-full bg-[#07183D] px-6 py-16 lg:p-[130px]">
+    <section className="w-full bg-[var(--bg-hero)] px-6 py-16 lg:p-[130px]">
       <div className="flex w-full flex-col gap-[60px]">
         {/* Header */}
         <div className="flex w-full flex-col gap-7">
@@ -34,7 +34,7 @@ export default function TrustedIndustries() {
             return (
               <div
                 key={industry.name}
-                className={`flex flex-col items-start justify-center p-6 border-b border-[rgba(255,255,255,0.08)] lg:border-l lg:border-[rgba(255,255,255,0.08)] ${
+                className={`flex flex-col items-start justify-center p-6 border-b border-[var(--border-dark)] lg:border-l lg:border-[var(--border-dark)] ${
                   isFirstCol ? "lg:border-l-0" : ""
                 } ${!isLastRow ? "" : "lg:border-b-0"}`}
               >

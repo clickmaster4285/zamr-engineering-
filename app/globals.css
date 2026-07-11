@@ -80,6 +80,7 @@
   --border-input: oklch(0.254 0.07 266.5 / 0.18);
   --border-section: oklch(0.925 0 0);             /* #EAEAEA */
   --border-table: oklch(0.951 0.004 264.4);       /* #EEF0F8 */
+  --border-dark: oklch(1 0 0 / 0.08);             /* white 8% — for dark backgrounds */
 
   /* ════════════════════════════════════════════
      SHADCN / DEFAULT VARS (unchanged)
@@ -167,6 +168,7 @@
   --color-border-input: oklch(0.254 0.07 266.5 / 0.18);
   --color-border-section: oklch(0.925 0 0);
   --color-border-table: oklch(0.951 0.004 264.4);
+  --color-border-dark: oklch(1 0 0 / 0.08);
 
   /* ═══ Fonts ═══ */
   --font-sans: var(--font-sans);
