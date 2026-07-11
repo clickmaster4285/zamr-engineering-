@@ -7,7 +7,7 @@ export interface HeroContent {
 }
 
 export const heroContent: HeroContent = {
-  title: "Certified Standards. Trusted Engineering.\nProven Results.",
+  title: "Certified Standards. Trusted Engineering. Proven Results.",
   subtitle:
     "At ZAMR Engineering, quality, safety, and compliance are at the core of everything we do. Our accredited management systems and industry-recognised certifications demonstrate our commitment to delivering engineering services with professionalism, consistency, and integrity.",
   image: "/images/image5.jpeg",
