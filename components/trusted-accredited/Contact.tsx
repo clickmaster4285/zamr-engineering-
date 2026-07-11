@@ -138,7 +138,7 @@ export default function TrustedContact() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="flex w-full items-center justify-center bg-[var(--color-primary)] px-8 py-[14px] text-sm font-bold tracking-[3px] text-white transition-colors hover:bg-[var(--color-primary-hover)] sm:text-base"
+            className="flex w-full cursor-pointer items-center justify-center border border-[var(--color-primary)] bg-[var(--bg-light)] px-8 py-[14px] text-sm font-bold tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] sm:text-base"
           >
             SUBMIT ENQUIRY
           </button>
