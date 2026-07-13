@@ -8,12 +8,12 @@ export default function Careers() {
     <section className="flex w-full flex-col items-center justify-center bg-white px-6 py-16 lg:p-[130px]">
       <div className="flex w-full max-w-[728px] flex-col items-center gap-[30px]">
         {/* Heading */}
-        <h2 className="w-full text-[36px] font-bold leading-[44px] text-center text-[#333333] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
+        <h2 className="w-full text-[36px] font-bold leading-[44px] text-center text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
           {careersContent.heading}
         </h2>
 
         {/* Description */}
-        <p className="w-full text-base leading-[23px] text-center text-[#333333] lg:text-lg">
+        <p className="w-full text-base leading-[23px] text-center text-[var(--text-dark)] lg:text-lg">
           {careersContent.description}
         </p>
 

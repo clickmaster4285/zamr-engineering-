@@ -4,7 +4,7 @@ import { trackRecordStats } from "@/mockData/engineering-impact";
 
 export default function TrackRecord() {
   return (
-    <section className="w-full bg-[#07183D] px-6 py-16 lg:p-[130px]">
+    <section className="w-full bg-[var(--bg-hero)] px-6 py-16 lg:p-[130px]">
       <div className="flex w-full flex-col gap-[60px]">
         {/* Section label */}
         <div className="flex flex-row items-center gap-4">

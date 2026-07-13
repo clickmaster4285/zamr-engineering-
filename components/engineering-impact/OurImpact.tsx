@@ -4,7 +4,7 @@ import { ourImpactItems } from "@/mockData/engineering-impact";
 
 export default function OurImpact() {
   return (
-    <section className="w-full bg-[#07183D] px-6 py-16 lg:p-[130px]">
+    <section className="w-full bg-[var(--bg-hero)] px-6 py-16 lg:p-[130px]">
       <div className="flex w-full flex-col gap-[60px]">
         {/* Header */}
         <div className="flex w-full flex-col gap-7">
@@ -23,12 +23,12 @@ export default function OurImpact() {
           {ourImpactItems.map((item, index) => (
             <div
               key={item.title}
-              className={`flex flex-col items-start gap-3 p-6 sm:border-l sm:border-[rgba(255,255,255,0.08)] ${
+              className={`flex flex-col items-start gap-3 p-6 sm:border-l sm:border-[var(--border-dark)] ${
                 index === 0 ? "sm:border-l-0" : ""
               }`}
             >
               <h3 className="text-[20px] font-semibold leading-[30px] text-white sm:text-[24px]">{item.title}</h3>
-              <p className="w-full text-sm leading-[20px] text-[#B3B3B3] sm:text-base">{item.description}</p>
+              <p className="w-full text-sm leading-[20px] text-[var(--text-light-subtle)] sm:text-base">{item.description}</p>
             </div>
           ))}
         </div>

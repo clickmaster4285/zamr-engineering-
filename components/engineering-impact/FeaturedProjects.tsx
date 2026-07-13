@@ -13,9 +13,9 @@ export default function FeaturedProjects() {
           <div className="flex flex-row items-center gap-4">
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">06</span>
             <span className="h-px w-12 bg-[var(--text-heading)] sm:w-[104px]" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-heading)] lg:text-base">Projects</span>
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">Projects</span>
           </div>
-          <h2 className="w-full text-[36px] font-bold leading-[44px] text-[var(--text-heading)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
+          <h2 className="w-full text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
             Projects That Reflect Our Commitment
           </h2>
         </div>

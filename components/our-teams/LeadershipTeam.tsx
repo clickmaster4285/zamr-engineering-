@@ -14,14 +14,14 @@ export default function LeadershipTeam() {
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
               01
             </span>
-            <span className="h-px w-[104px] bg-black" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[#333333] lg:text-base">
+            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">
               LEADERSHIP TEAM
             </span>
           </div>
 
           {/* Heading */}
-          <h2 className="w-full text-[36px] font-bold leading-[44px] text-[#090D15] sm:text-[44px] sm:leading-[55px]">
+          <h2 className="w-full text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px]">
             Meet the Experienced Professionals
           </h2>
         </div>
@@ -31,7 +31,7 @@ export default function LeadershipTeam() {
           {leadershipTeam.map((member) => (
             <div
               key={member.name}
-              className="flex w-full flex-col gap-4 border-b border-[#E5E7EB] pb-5"
+              className="flex w-full flex-col gap-4 border-b border-[var(--border-light)] pb-5"
             >
               {/* Headshot */}
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-gray-100">
@@ -45,13 +45,13 @@ export default function LeadershipTeam() {
 
               {/* Info */}
               <div className="flex flex-col gap-1">
-                <h3 className="w-full text-lg font-bold leading-[23px] text-[#333333]">
+                <h3 className="w-full text-lg font-bold leading-[23px] text-[var(--text-dark)]">
                   {member.name}
                 </h3>
                 <p className="w-full text-sm font-medium leading-[18px] text-[var(--color-primary)]">
                   {member.role}
                 </p>
-                <p className="w-full text-[13px] font-normal leading-4 text-[#787878]">
+                <p className="w-full text-[13px] font-normal leading-4 text-[var(--text-soft)]">
                   {member.department}
                 </p>
               </div>

@@ -215,7 +215,7 @@ export interface CTAContent {
 }
 
 export const ctaContent: CTAContent = {
-  heading: "Let's Build Infrastructure That\nMakes a Difference",
+  heading: "Let's Build Infrastructure That Makes a Difference",
   description:
     "Partner with ZAMR Engineering to deliver engineering solutions that create lasting value, improve performance, and support sustainable growth.",
   primaryButton: { label: "Start Your Project", href: "" },

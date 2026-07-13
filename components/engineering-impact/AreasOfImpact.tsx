@@ -9,7 +9,7 @@ export default function AreasOfImpact() {
     areasOfImpactContent;
 
   return (
-    <section className="w-full bg-[#F6F8FC] px-6 py-16 sm:px-10 sm:py-20 lg:p-[130px]">
+    <section className="w-full bg-[var(--bg-section)] px-6 py-16 sm:px-10 sm:py-20 lg:p-[130px]">
       <div className="flex w-full flex-col items-start gap-12 lg:flex-row lg:justify-between lg:items-center ">
         {/* Left column */}
         <div className="flex w-full flex-col items-start gap-[50px] lg:w-[555px]">
@@ -19,20 +19,20 @@ export default function AreasOfImpact() {
               <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
                 {sectionNumber}
               </span>
-              <span className="hidden h-px w-[104px] bg-black sm:block" />
-              <span className="text-sm font-medium tracking-[3px] uppercase text-[#333333] lg:text-base">
+              <span className="hidden h-px w-[104px] bg-[var(--text-dark)] sm:block" />
+              <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">
                 {sectionLabel}
               </span>
             </div>
 
-            <h2 className=" text-[28px] font-bold leading-[36px] text-[#333333] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px] ">
+            <h2 className=" text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px] ">
               {heading}
             </h2>
           </div>
 
           {/* Description + values */}
           <div className="flex w-full flex-col items-start gap-5">
-            <p className="w-full text-sm leading-relaxed text-[#333333] sm:text-base lg:text-[18px] lg:leading-[23px] lg:max-w-[555px]">
+            <p className="w-full text-sm leading-relaxed text-[var(--text-dark)] sm:text-base lg:text-[18px] lg:leading-[23px] lg:max-w-[555px]">
               {description}
             </p>
 
@@ -48,7 +48,7 @@ export default function AreasOfImpact() {
                     strokeWidth={2}
                     className="shrink-0 text-[var(--color-primary)]"
                   />
-                  <span className="text-sm font-medium leading-[23px] text-[#333333] sm:text-base lg:text-lg">
+                  <span className="text-sm font-medium leading-[23px] text-[var(--text-dark)] sm:text-base lg:text-lg">
                     {item.label}
                   </span>
                 </div>

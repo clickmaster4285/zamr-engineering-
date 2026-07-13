@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { footerQuickLinks, footerServiceLinks, footerContactInfo, footerDescription } from "@/mockData/landing";
+import { footerQuickLinks, footerServiceLinks, footerContactInfo, footerDescription, logoImage } from "@/mockData/landing";
 
 export default function Footer() {
   return (
@@ -27,7 +27,7 @@ export default function Footer() {
             {/* Frame 55 — Logo + Description + Social */}
             <div className="flex w-full flex-col items-start gap-8 lg:w-[369px] lg:gap-[50px]">
               <Image
-                src="/images/zamarlogoTransparant.png"
+                src={logoImage}
                 alt="ZAMR Engineering"
                 width={250}
                 height={150}

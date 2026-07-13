@@ -205,5 +205,7 @@ export const footerContactInfo: FooterContactInfo = {
   phone: "+61 2 3456 7890",
 };
 
+export const logoImage = "/images/zamarlogoTransparant.png";
+
 export const footerDescription: string =
   "Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.";

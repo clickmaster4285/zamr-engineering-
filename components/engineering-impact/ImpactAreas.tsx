@@ -12,7 +12,7 @@ export default function ImpactAreas() {
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
               01
             </span>
-            <span className="h-px w-[104px] bg-black" />
+            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
             <span className="text-sm font-medium tracking-[3px] uppercase  lg:text-base">
               Industry Certifications
             </span>
@@ -28,12 +28,12 @@ export default function ImpactAreas() {
           {impactAreas.map((area) => (
             <div
               key={area.title}
-              className="flex flex-col items-start gap-3 border-b border-[rgba(51,51,51,0.08)] p-6"
+              className="flex flex-col items-start gap-3 border-b border-[var(--border-section)] p-6"
             >
-              <h3 className="text-[20px] font-semibold leading-[30px] text-[#333333] sm:text-[24px]">
+              <h3 className="text-[20px] font-semibold leading-[30px] text-[var(--text-dark)] sm:text-[24px]">
                 {area.title}
               </h3>
-              <p className="w-full text-sm leading-[20px] text-[#333333] sm:text-base">
+              <p className="w-full text-sm leading-[20px] text-[var(--text-dark)] sm:text-base">
                 {area.description}
               </p>
             </div>

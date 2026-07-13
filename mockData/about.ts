@@ -6,6 +6,8 @@ export interface HeroContent {
   image: string;
 }
 
+export const logoFilledImage = "/images/zamrlogoFilled1.jpeg";
+
 export const heroContent: HeroContent = {
   title: "About ZAMR Engineering",
   subtitle:

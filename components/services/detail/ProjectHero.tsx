@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { defaultHeroImage } from "@/mockData/services";
 
 interface Props {
   image?: string;
@@ -7,7 +8,7 @@ interface Props {
   subtitle: string;
 }
 
-export default function ProjectHero({ image = "/images/image5.jpeg", title, subtitle }: Props) {
+export default function ProjectHero({ image = defaultHeroImage, title, subtitle }: Props) {
   return (
     <section className="relative w-full h-[400px] overflow-hidden sm:h-[500px] lg:h-[700px]">
       <Image

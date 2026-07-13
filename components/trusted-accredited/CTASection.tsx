@@ -8,7 +8,7 @@ export default function CTASection() {
     <section className="flex w-full flex-col items-center justify-center bg-[var(--bg-section)] px-6 py-16 sm:px-10 sm:py-20 lg:p-[130px]">
       <div className="flex w-full max-w-[728px] flex-col items-center gap-8 sm:gap-10 lg:gap-[30px]">
         {/* Heading */}
-        <h2 className="w-full text-[28px] font-bold leading-[36px] text-center text-[var(--text-heading)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px]">
+        <h2 className="w-full text-[28px] font-bold leading-[36px] text-center text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px]">
           {ctaContent.heading}
         </h2>
 
