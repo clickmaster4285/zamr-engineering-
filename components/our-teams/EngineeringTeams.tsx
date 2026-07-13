@@ -26,7 +26,7 @@ export default function EngineeringTeams() {
         </div>
 
         {/* Teams grid — 2 rows of 4 */}
-        <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-l border-[var(--border-dark)]">
           {engineeringTeams.map((team, index) => (
             <div
               key={team.title}
