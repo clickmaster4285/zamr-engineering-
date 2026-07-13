@@ -11,8 +11,8 @@ export const navLinks: NavLink[] = [
   { label: "Projects", href: "/projects" },
   { label: "Why ZAMR Engineering", href: "/why-zamr-engineering" },
   { label: "Our Team", href: "/our-teams" },
-  { label: "Trusted & Accredited", href: "" },
-  { label: "Engineering For Impact", href: "" },
+  { label: "Trusted & Accredited", href: "/trusted-accredited" },
+  { label: "Engineering For Impact", href: "/engineering-impact" },
 ];
 
 export interface HeroContent {
@@ -205,5 +205,7 @@ export const footerContactInfo: FooterContactInfo = {
   phone: "+61 2 3456 7890",
 };
 
+export const logoImage = "/images/zamarlogoTransparant.png";
+
 export const footerDescription: string =
-  "Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.";
+  "Specialist civil engineering consultancy delivering precision and compliance in infrastructure projects across Australia.";

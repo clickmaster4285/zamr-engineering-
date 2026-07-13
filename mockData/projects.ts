@@ -657,6 +657,8 @@ export interface ProjectsContactInfo {
   email: string;
 }
 
+export const defaultHeroImage = "/images/image5.jpeg";
+
 export const projectsContactInfo: ProjectsContactInfo = {
   address: "Level 5, 123 Pitt Street, Sydney NSW 2000",
   phone: "+61 2 9000 0000",

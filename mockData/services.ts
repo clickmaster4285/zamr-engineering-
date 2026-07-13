@@ -365,6 +365,8 @@ export interface WhyZamrFeature {
   description: string;
 }
 
+export const defaultHeroImage = "/images/image5.jpeg";
+
 export const whyZamrFeatures: WhyZamrFeature[] = [
   {
     number: "01",

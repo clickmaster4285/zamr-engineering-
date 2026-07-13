@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "@/mockData/landing";
+import { navLinks, logoImage } from "@/mockData/landing";
 
 export default function Navbar() {
   const router = useRouter();
@@ -58,7 +58,7 @@ const isActive = (href: string) => {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/zamarlogoTransparant.png"
+              src={logoImage}
               alt="ZAMR Engineering"
               width={111}
               height={49}

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Barlow } from "next/font/google";
+import { defaultHeroImage } from "@/mockData/projects";
 const barlow = Barlow({
   weight: ["600", "700"],
   subsets: ["latin"],
@@ -16,7 +17,7 @@ interface Props {
   subtitle: string;
   stats?: StatItem[];
 }
-export default function ProjectHero({ image = "/images/image5.jpeg", title, subtitle, stats }: Props) {
+export default function ProjectHero({ image = defaultHeroImage, title, subtitle, stats }: Props) {
   return (
     <section className="relative w-full">
       {/* Figma: 1728 × 700px hero with overlay rgba(7, 24, 61, 0.8) */}
@@ -55,7 +56,7 @@ export default function ProjectHero({ image = "/images/image5.jpeg", title, subt
           </div>
 
           {stats && (
-            <div className="bg-[#08142A] lg:absolute lg:w-[82vw] lg:left-[130px] lg:top-140 lg:bg-[#08142A]">
+            <div className="bg-[var(--bg-hero)] lg:absolute lg:w-[82vw] lg:left-[130px] lg:top-140 lg:bg-[var(--bg-hero)]">
               {/* Desktop: 6 equal columns */}
               <div className="hidden lg:flex">
                 {stats.map((stat, i) => (

@@ -39,9 +39,7 @@ export default function Commitment() {
                   {card.title}
                 </h3>
                 <p className="w-full text-sm leading-5 text-[var(--text-light-subtle)] sm:text-base lg:text-[16px] lg:leading-[20px]">
-                  We engage with your project team to define scope,
-                  deliverables, and milestones with precision. Every output is
-                  reviewed, verified, and delivered to the highest standard.
+                   {card.description}
                 </p>
               </div>
             </div>

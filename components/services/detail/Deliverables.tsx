@@ -16,13 +16,13 @@ export default function Deliverables({ number, heading, subtext, deliverables }:
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-blue-accent)] lg:text-base">
               {number}
             </span>
-            <span className="hidden h-px w-[104px] bg-[var(--text-heading)] sm:block" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-heading)] lg:text-base">
+            <span className="hidden h-px w-[104px] bg-[var(--text-dark)] sm:block" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">
               DELIVERABLES
             </span>
           </div>
 
-          <h2 className="text-[28px] font-bold leading-[36px] text-[var(--text-heading)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px]">
+          <h2 className="text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px]">
             {heading}
           </h2>
 

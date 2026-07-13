@@ -39,7 +39,7 @@ export default function Gallery({ number, heading, images }: Props) {
             {/* Row 1: Large left (flex-[2]) + Small right (flex-[1]), 400px tall */}
             {galleryImages[0] && galleryImages[1] && (
               <div className="flex flex-col gap-3 lg:flex-row lg:gap-[12px]">
-                <div className="relative w-full h-[280px] overflow-hidden bg-[#090D15] lg:h-[400px] lg:flex-[2]">
+                <div className="relative w-full h-[280px] overflow-hidden bg-[var(--text-heading)] lg:h-[400px] lg:flex-[2]">
                   <Image
                     src={galleryImages[0]}
                     alt="Gallery image 1"
@@ -55,7 +55,7 @@ export default function Gallery({ number, heading, images }: Props) {
                     }}
                   />
                 </div>
-                <div className="relative w-full h-[280px] overflow-hidden bg-[#090D15] lg:h-[400px] lg:flex-[1]">
+                <div className="relative w-full h-[280px] overflow-hidden bg-[var(--text-heading)] lg:h-[400px] lg:flex-[1]">
                   <Image
                     src={galleryImages[1]}
                     alt="Gallery image 2"
@@ -76,7 +76,7 @@ export default function Gallery({ number, heading, images }: Props) {
             {/* Row 2: Small left (flex-[1]) + Large right (flex-[2]), 320px tall */}
             {galleryImages[2] && galleryImages[3] && (
               <div className="flex flex-col gap-3 lg:flex-row lg:gap-[12px]">
-                <div className="relative w-full h-[240px] overflow-hidden bg-[#090D15] lg:h-[320px] lg:flex-[1]">
+                <div className="relative w-full h-[240px] overflow-hidden bg-[var(--text-heading)] lg:h-[320px] lg:flex-[1]">
                   <Image
                     src={galleryImages[2]}
                     alt="Gallery image 3"
@@ -91,7 +91,7 @@ export default function Gallery({ number, heading, images }: Props) {
                     }}
                   />
                 </div>
-                <div className="relative w-full h-[240px] overflow-hidden bg-[#090D15] lg:h-[320px] lg:flex-[2]">
+                <div className="relative w-full h-[240px] overflow-hidden bg-[var(--text-heading)] lg:h-[320px] lg:flex-[2]">
                   <Image
                     src={galleryImages[3]}
                     alt="Gallery image 4"

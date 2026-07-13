@@ -19,7 +19,7 @@ export default function TechnicalCapabilities({ number, heading, capabilities }:
             </span>
           </div>
 
-          <h2 className="text-[44px] font-bold leading-[55px] text-[var(--text-heading)]">
+          <h2 className="text-[44px] font-bold leading-[55px] text-[var(--text-dark)]">
             {heading}
           </h2>
         </div>
@@ -31,7 +31,7 @@ export default function TechnicalCapabilities({ number, heading, capabilities }:
               className="flex flex-col items-start border border-[var(--color-primary)]/10 bg-[var(--bg-section)] p-7 lg:h-[123px]"
             >
               <div className="flex flex-col gap-3">
-                <h3 className="text-[18px] font-semibold leading-[23px] text-[var(--text-heading)]">
+                <h3 className="text-[18px] font-semibold leading-[23px] text-[var(--text-dark)]">
                   {item.title}
                 </h3>
                 <p className="text-[12px] leading-[14px] text-[var(--color-text-soft)]">

@@ -71,17 +71,17 @@ export const commitmentCards: CommitmentCard[] = [
   {
     title: "Quality",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Delivering work that consistently meets the highest engineering standards.",
   },
   {
     title: "Integrity",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Building strong relationships through honesty, accountability, and professionalism.",
   },
   {
     title: "Excellence",
     description:
-      "We engage with your project team to define scope, deliverables, and milestones with precision. Every output is reviewed, verified, and delivered to the highest standard.",
+      "Continuously improving processes to achieve outstanding project outcomes.",
   },
 ];
 

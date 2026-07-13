@@ -15,9 +15,11 @@ import {
   orgChartSubc as subc,
   orgChartDesignWidth as DESIGN_WIDTH,
   orgChartDesignHeight as DESIGN_HEIGHT,
+  logoFilledImage,
 } from "@/mockData/about";
 
 import type { BoxData, SubHeaderData, NameCardData, TeamType } from "@/mockData/about";
+
 
 // --- Helpers ---
 function cx(b: { left: number; width: number }) { return b.left + b.width / 2; }
@@ -223,7 +225,7 @@ export default function Structure() {
                   </span>
                 </div>
                  <Image
-                  src="/images/zamrlogoFilled1.jpeg"
+                  src={logoFilledImage}
                   alt="ZAMR Engineering"
                   width={300}
                   height={150}
