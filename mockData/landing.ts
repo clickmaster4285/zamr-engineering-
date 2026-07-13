@@ -208,4 +208,4 @@ export const footerContactInfo: FooterContactInfo = {
 export const logoImage = "/images/zamarlogoTransparant.png";
 
 export const footerDescription: string =
-  "Specialist civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales.";
+  "Specialist civil engineering consultancy delivering precision and compliance in infrastructure projects across Australia.";
