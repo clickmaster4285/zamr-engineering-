@@ -44,7 +44,7 @@
      ════════════════════════════════════════════ */
   --bg-light: oklch(0.979 0.006 264.4);
   --bg-light-alt: oklch(0.985 0.003 264.4);
-  --bg-hero: oklch(0.159 0.042 264.8);
+  --bg-hero: oklch(0.246 0.076 267.5);
   --bg-section: oklch(0.97 0.004 264.4);       /* #F6F8FC — section backgrounds */
   --bg-card: oklch(0.956 0.005 264.4);          /* #EFF4FC — card backgrounds */
   --bg-hover: oklch(0.976 0.002 264.4);         /* #F9FAFC — hover state */
