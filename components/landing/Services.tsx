@@ -44,12 +44,12 @@ export default function Services() {
               </span>
 
               {/* Title — left:170px */}
-              <h3 className="text-xl font-semibold leading-[26px] text-[var(--text-dark)] lg:ml-[100px] lg:w-[213px] lg:text-[28px] lg:leading-[35px]">
+              <h3 className="text-xl font-semibold leading-[26px] text-[var(--text-dark)] lg:ml-[100px] lg:w-[250px] lg:text-[28px] lg:leading-[35px]">
                 {service.title}
               </h3>
 
               {/* Description — left:504px, flex-1 */}
-              <p className="text-sm leading-snug text-[var(--text-dark)] lg:ml-[121px] lg:flex-1 lg:max-w-[674px] lg:text-lg lg:leading-[23px]">
+              <p className="text-sm leading-snug text-[var(--text-dark)] lg:ml-[50px] lg:flex-1 lg:max-w-[674px] lg:text-lg lg:leading-[23px]">
                 {service.description}
               </p>
 
