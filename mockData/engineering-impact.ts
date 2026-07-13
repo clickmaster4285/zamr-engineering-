@@ -200,9 +200,9 @@ export interface TrackRecordStat {
 
 export const trackRecordStats: TrackRecordStat[] = [
   { value: "12", suffix: "+", label: "YEARS OF EXPERIENCE", align: "start" },
-  { value: "05", suffix: "", label: "ENGINEERING DISCIPLINES", align: "center" },
-  { value: "150", suffix: "+", label: "PROJECTS DELIVERED", align: "center" },
-  { value: "98", suffix: "%", label: "CLIENT SATISFACTION", align: "end" },
+  { value: "05", suffix: "", label: "ENGINEERING DISCIPLINES", align: "start" },
+  { value: "150", suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
+  { value: "98", suffix: "%", label: "CLIENT SATISFACTION", align: "start" },
 ];
 
 // ─── CTA Section ──────────────────────────────────────────────────────

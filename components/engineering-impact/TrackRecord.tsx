@@ -16,17 +16,11 @@ export default function TrackRecord() {
         </div>
 
         {/* Stats row */}
-        <div className="grid w-full grid-cols-2 gap-8 sm:grid-cols-4">
+        <div className="flex w-full flex-wrap justify-between gap-x-8 gap-y-10">
           {trackRecordStats.map((stat) => (
             <div
               key={stat.label}
-              className={`flex flex-col items-start gap-1 ${
-                stat.align === "center"
-                  ? "sm:items-center"
-                  : stat.align === "end"
-                    ? "sm:items-end"
-                    : "sm:items-start"
-              } items-start`}
+              className="flex flex-col items-start gap-1"
             >
               <div className="flex flex-row items-start gap-2">
                 <span className="text-[48px] font-normal leading-[60px] text-white sm:text-[60px] sm:leading-[76px] lg:text-[72px] lg:leading-[91px]">
@@ -38,15 +32,7 @@ export default function TrackRecord() {
                   </span>
                 )}
               </div>
-              <span
-                className={`text-xs font-light leading-[20px] text-white sm:text-sm lg:text-base ${
-                  stat.align === "center"
-                    ? "sm:text-center"
-                    : stat.align === "end"
-                      ? "sm:text-right"
-                      : "sm:text-left"
-                } text-left`}
-              >
+              <span className="text-left text-xs font-light leading-[20px] text-white sm:text-sm lg:text-base">
                 {stat.label}
               </span>
             </div>
