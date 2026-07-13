@@ -16,7 +16,7 @@ export default function TrackRecord() {
         </div>
 
         {/* Stats row */}
-        <div className="flex w-full flex-wrap justify-between gap-x-8 gap-y-10">
+        <div className="grid w-full grid-cols-2 gap-x-8 gap-y-10 sm:flex sm:flex-wrap sm:justify-between">
           {trackRecordStats.map((stat) => (
             <div
               key={stat.label}
