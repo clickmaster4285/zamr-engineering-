@@ -169,20 +169,20 @@ export const contactInfo: ContactInfo = {
   ],
   phone: "",
   socialLinks: [
-    { src: "/icons/mynaui_instagram.svg", alt: "Instagram", href: "" },
-    { src: "/icons/mynaui_linkedin.svg", alt: "LinkedIn", href: "" },
-    { src: "/icons/et_global.svg", alt: "Website", href: "" },
+    { src: "/icons/mynaui_instagram.svg", alt: "Instagram", href: "https://www.instagram.com/zamr_engineering?igsh=cW1hZ2pzdXNwanZk" },
+    { src: "/icons/mynaui_linkedin.svg", alt: "LinkedIn", href: "https://www.linkedin.com/company/zamr-engineering/" },
+    { src: "/icons/et_global.svg", alt: "Website", href: "https://zamrengineering.com.au/" },
     { src: "/icons/Vector.svg", alt: "Email", href: "mailto:admin@zamrengineering.com.au" },
   ],
 };
 
-export const footerQuickLinks: string[] = [
-  "About",
-  "Projects",
-  "Case Studies",
-  "Insights",
-  "Careers",
-  "Contact",
+export const footerQuickLinks: { label: string; href: string }[] = [
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Why ZAMR Engineering", href: "/why-zamr-engineering" },
+  { label: "Our Team", href: "/our-teams" },
+  { label: "Trusted & Accredited", href: "/trusted-accredited" },
+  { label: "Engineering For Impact", href: "/engineering-impact" },
 ];
 
 export const footerServiceLinks: string[] = [
