@@ -60,10 +60,10 @@ export default function Footer() {
               <div className="flex flex-1 flex-col gap-6">
                 <h3 className="text-lg font-bold leading-[23px] text-white">Quick Links</h3>
                 <ul className="flex flex-col gap-3">
-                  {footerQuickLinks.map((label) => (
-                    <li key={label}>
-                      <Link href="" className="text-base leading-6 text-white transition-colors hover:text-white/80">
-                        {label}
+                  {footerQuickLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-base leading-6 text-white transition-colors hover:text-white/80">
+                        {link.label}
                       </Link>
                     </li>
                   ))}

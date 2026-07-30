@@ -176,13 +176,13 @@ export const contactInfo: ContactInfo = {
   ],
 };
 
-export const footerQuickLinks: string[] = [
-  "About",
-  "Projects",
-  "Why ZAMR Engineering",
-  "Our Team",
-  "Trusted & Accredited",
-  "Engineering For Impact",
+export const footerQuickLinks: { label: string; href: string }[] = [
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Why ZAMR Engineering", href: "/why-zamr-engineering" },
+  { label: "Our Team", href: "/our-teams" },
+  { label: "Trusted & Accredited", href: "/trusted-accredited" },
+  { label: "Engineering For Impact", href: "/engineering-impact" },
 ];
 
 export const footerServiceLinks: string[] = [
