@@ -179,10 +179,10 @@ export const contactInfo: ContactInfo = {
 export const footerQuickLinks: string[] = [
   "About",
   "Projects",
-  "Case Studies",
-  "Insights",
-  "Careers",
-  "Contact",
+  "Why ZAMR Engineering",
+  "Our Team",
+  "Trusted & Accredited",
+  "Engineering For Impact",
 ];
 
 export const footerServiceLinks: string[] = [
