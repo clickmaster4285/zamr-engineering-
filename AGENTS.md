@@ -210,7 +210,7 @@ All static/page data lives in `mockData/` files. Components import and use data 
 
 | File | Contents | Used By |
 |------|----------|---------|
-| `mockData/landing.ts` | heroContent, aboutStats, aboutParagraphs, servicesPreview, serviceTagRows, projectFilters, clientLogos, whyZamrPoints, contactInfo, navLinks, footerQuickLinks, footerServiceLinks, footerContactInfo | All `components/landing/*` + NavigationBar + Footer |
+| `mockData/landing.ts` | heroContent, aboutStats, aboutParagraphs, servicesPreview, serviceTagRows, projectFilters, clientLogos, whyZamrPoints, contactInfo, navLinks, footerQuickLinks (`{ label, href }[]`), footerServiceLinks, footerContactInfo | All `components/landing/*` + NavigationBar + Footer |
 | `mockData/about.ts` | heroContent, pillars, aboutParagraphs, stats, orgChart data (COLORS, boxes, subHeaders, nameCards), performance data (revenueByService, growthTrend, growthStats) | All `components/About/*` |
 | `mockData/services.ts` | ServiceData (detail), servicesHero, whyZamrFeatures + getServiceBySlug() | `components/services/*`, `app/services/[id]/page.tsx` |
 | `mockData/projects.ts` | ProjectData (detail), projectFilters, projectsHeroStats, projectsHowWeDeliver, projectsContactInfo + getProjectBySlug() | `components/projects/detail/*`, `app/projects/page.tsx`, `app/projects/[id]/page.tsx` |
