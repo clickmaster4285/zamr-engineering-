@@ -40,7 +40,7 @@ export default function Footer() {
                   {footerDescription}
                 </p>
                 {/* Frame 53 — social icons */}
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <Link href="" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white">
                     <Image src="/icons/Linkdinsq.svg" alt="LinkedIn" width={40} height={40} />
                   </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
                   <Link href="" aria-label="Twitter" className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white">
                     <Image src="/icons/tweetersq.svg" alt="Twitter" width={40} height={40} />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
 
