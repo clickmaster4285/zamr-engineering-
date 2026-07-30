@@ -75,6 +75,7 @@ export default function Contact() {
                   key={i}
                   href={link.href || undefined}
                   aria-label={link.alt}
+                  target={"_blank"}
                   className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7"
                 >
                   <Image src={link.src} alt={link.alt} width={28} height={28} />

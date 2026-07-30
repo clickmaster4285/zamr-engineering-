@@ -169,9 +169,9 @@ export const contactInfo: ContactInfo = {
   ],
   phone: "",
   socialLinks: [
-    { src: "/icons/mynaui_instagram.svg", alt: "Instagram", href: "" },
-    { src: "/icons/mynaui_linkedin.svg", alt: "LinkedIn", href: "" },
-    { src: "/icons/et_global.svg", alt: "Website", href: "" },
+    { src: "/icons/mynaui_instagram.svg", alt: "Instagram", href: "https://www.instagram.com/zamr_engineering?igsh=cW1hZ2pzdXNwanZk" },
+    { src: "/icons/mynaui_linkedin.svg", alt: "LinkedIn", href: "https://www.linkedin.com/company/zamr-engineering/" },
+    { src: "/icons/et_global.svg", alt: "Website", href: "https://zamrengineering.com.au/" },
     { src: "/icons/Vector.svg", alt: "Email", href: "mailto:admin@zamrengineering.com.au" },
   ],
 };
