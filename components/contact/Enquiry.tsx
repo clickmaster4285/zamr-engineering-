@@ -114,7 +114,7 @@ export default function Enquiry() {
                     htmlFor={field.name}
                     className="text-[12px] font-bold leading-[15px] tracking-[3px] text-[var(--text-dark)]"
                   >
-                    {field.label.toUpperCase()}
+                    {field.label}
                   </label>
                   {field.type === "textarea" ? (
                     <textarea
@@ -151,7 +151,7 @@ export default function Enquiry() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="flex w-full cursor-pointer items-center justify-center bg-[var(--color-contact-accent)] px-8 py-[14px] text-[16px] font-bold leading-5 tracking-[3px] uppercase text-white transition-colors duration-300 hover:bg-[var(--color-contact-dark)] disabled:cursor-not-allowed disabled:opacity-60"
+            className="flex w-full bg-[var(--bg-light)] hover:bg-[var(--color-primary)] border border-[var(--color-primary)] text-[var(--color-primary)] hover:text-white cursor-pointer items-center justify-center px-8 py-[14px] text-[16px] font-bold leading-5 tracking-[3px] uppercase  transition-colors duration-300 disabled:cursor-not-allowed disabled:opacity-60 hover"
           >
             {status === "sending" ? "SENDING…" : submitLabel}
           </button>
