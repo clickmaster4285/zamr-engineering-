@@ -60,9 +60,10 @@ export default function Enquiry() {
             {details.map((detail) => (
               <p
                 key={detail.label + detail.value}
-                className="w-full text-[18px] leading-[23px] text-[var(--color-contact-blue)]"
+                className="w-full text-[18px] leading-[23px] text-[var(--text-dark)]"
               >
-                <span className="font-normal">{detail.label} </span>
+                <span className="text-[var(--color-primary)]">{detail.label}</span>
+                <span className="px-1"/>
                 {detail.label.toLowerCase().includes("email") ? (
                   <a
                     href={`mailto:${detail.value}`}
@@ -76,7 +77,7 @@ export default function Enquiry() {
               </p>
             ))}
 
-            <div className="flex items-center gap-6 pt-2">
+            <div className="flex items-center gap-6">
               {socialLinks.map((link) => (
                 <a
                   key={link.alt}
