@@ -16,7 +16,7 @@ export default function HowWeHelp() {
           </p>
         </div>
 
-        <div className="grid w-full grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-[64px]">
+        <div className="grid w-full grid-cols-1 gap-x-6 lg:gap-y-10 sm:grid-cols-2 lg:grid-cols-4 ">
           {items.map((item) => (
             <div key={item} className="flex items-center gap-4">
               <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10">
