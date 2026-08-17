@@ -7,6 +7,11 @@ export interface ContactFormData {
   email: string;
   subject: string;
   message: string;
+  // Optional fields used by the /contact page form
+  designation?: string;
+  company?: string;
+  website?: string;
+  phone?: string;
 }
 
 export type ContactStatus = "idle" | "sending" | "success" | "error";
@@ -16,6 +21,10 @@ const INITIAL_FORM: ContactFormData = {
   email: "",
   subject: "",
   message: "",
+  designation: "",
+  company: "",
+  website: "",
+  phone: "",
 };
 
 export const CONTACT_STATUS_MESSAGES: Record<"success" | "error", string> = {

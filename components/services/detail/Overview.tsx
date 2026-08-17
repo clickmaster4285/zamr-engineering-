@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 interface Props {
@@ -65,14 +66,15 @@ export default function CivilEngineeringOverview({ number, heading, paragraphs, 
           ))}
 
           <div className="border-t border-[var(--color-primary)]/10 px-6 py-4">
-  <button
+  <Link
+    href="/contact"
     className="group flex w-full cursor-pointer items-center justify-center gap-2 border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[10px] font-bold tracking-[2px] uppercase text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] "
   >
     GET IN TOUCH
     <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
       <ArrowRight size={13} />
     </span>
-  </button>
+  </Link>
 </div>
         </div>
       </div>

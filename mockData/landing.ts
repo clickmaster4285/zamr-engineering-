@@ -183,6 +183,7 @@ export const footerQuickLinks: { label: string; href: string }[] = [
   { label: "Our Team", href: "/our-teams" },
   { label: "Trusted & Accredited", href: "/trusted-accredited" },
   { label: "Engineering For Impact", href: "/engineering-impact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const footerServiceLinks: string[] = [

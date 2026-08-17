@@ -15,6 +15,8 @@ zamr-engineering/
 │   ├── api/
 │   │   └── contact/
 │   │       └── route.ts          # POST endpoint — sends contact form emails via nodemailer
+│   ├── contact/
+│   │   └── page.tsx              # Contact page (Hero + Enquiry + HowWeHelp + FindUs)
 │   ├── about/
 │   │   └── page.tsx              # About page
 │   ├── services/
@@ -51,6 +53,11 @@ zamr-engineering/
 │   │   ├── Stat.tsx
 │   │   ├── Structure.tsx
 │   │   └── Performance.tsx
+│   ├── contact/                  # Contact page sections
+│   │   ├── Hero.tsx
+│   │   ├── Enquiry.tsx           # Contact form (wired to useContactEnquiry + /api/contact)
+│   │   ├── HowWeHelp.tsx         # Dark navy checkmark grid
+│   │   └── FindUs.tsx            # Office details + dark Google Maps embed
 │   ├── services/                 # Services listing page sections
 │   │   ├── Hero.tsx
 │   │   ├── WhyZamar.tsx
@@ -112,7 +119,8 @@ zamr-engineering/
 │   ├── why-zamr.ts               # Why ZAMR page: hero, howWeWork, strengths, commitment, process, cta
 │   ├── our-teams.ts              # Our Teams page: hero, leadership, engineering teams, collaboration, careers
 │   ├── trusted-accredited.ts     # Trusted & Accredited page: hero, certifications, compliance, accreditation, journey, industries, contact, cta, formFields
-│   └── engineering-impact.ts     # Engineering For Impact page: hero, impactAreas, areasOfImpact, whyItMatters, approachSteps, ourImpact, featuredProjects, trackRecord, cta
+│   ├── engineering-impact.ts     # Engineering For Impact page: hero, impactAreas, areasOfImpact, whyItMatters, approachSteps, ourImpact, featuredProjects, trackRecord, cta
+│   └── contact.ts                # Contact page: hero, enquiryContent (form fields), helpContent, findUsContent
 ├── lib/
 │   ├── utils.ts                  # Utility helpers (cn, etc.)
 │   └── useContactEnquiry.ts      # Shared contact form hook (state + submit → POST /api/contact)
@@ -190,6 +198,9 @@ zamr-engineering/
 | `--text-light-subtle` | oklch(0.72 0 0) | Light text on dark (#B3B3B3) |
 | `--color-success` | oklch(0.52 0.14 152) | Form success feedback messages |
 | `--color-error` | oklch(0.55 0.19 27) | Form error feedback messages |
+| `--color-contact-accent` | oklch(0.426 0.163 263) (#1945A7) | Contact page submit button, section numbers, icon strokes |
+| `--color-contact-blue` | oklch(0.422 0.154 265) (#2344A1) | Contact page detail lines, social icon strokes |
+| `--color-contact-dark` | oklch(0.221 0.075 264) (#07183D) | Contact page dark navy sections (How Can We Help, map bg) |
 
 ### Image Overlays
 
@@ -224,6 +235,7 @@ All static/page data lives in `mockData/` files. Components import and use data 
 | `mockData/our-teams.ts` | heroContent, leadershipTeam, engineeringTeams, collaborationContent, careersContent | All `components/our-teams/*` |
 | `mockData/trusted-accredited.ts` | heroContent, certifications, complianceContent, accreditationItems, journeyMilestones, industryItems, trustedContactContent, ctaContent, formFields | All `components/trusted-accredited/*` |
 | `mockData/engineering-impact.ts` | heroContent, impactAreas, areasOfImpact, whyItMatters, approachSteps, ourImpact, featuredProjects, trackRecord, ctaContent | All `components/engineering-impact/*` |
+| `mockData/contact.ts` | heroContent, enquiryContent (details, socialLinks, form fields, submitLabel), helpContent, findUsContent | All `components/contact/*`, `app/contact/page.tsx` |
 
 ---
 
@@ -281,6 +293,18 @@ All 5 contact forms (landing `Contacts.tsx`, `services/Contact.tsx`, `projects/d
 - Emails are sent `from: "Zamar_Eng" <software.clickmasters@gmail.com>` with `replyTo` set to the visitor's email
 - `CONTACT_STATUS_MESSAGES` lives in the hook file (form logic — the one deliberate exception to the mockData-only rule, since it is shared app logic, not page content)
 - Form status feedback colors use `var(--color-success)` / `var(--color-error)` tokens
+
+### The /contact page
+- Route: `app/contact/page.tsx` → `ContactHero` → `Enquiry` → `HowWeHelp` → `FindUs` (global Navbar/Footer wrap it)
+- The Enquiry form has 8 fields (Name, Designation, Company Name, Company Website, Business Email, Business Phone Number, Subject, Message). Only `name`, `email`, `subject`, `message` are required; the optional fields (`designation`, `company`, `website`, `phone`) are included in the email body when filled
+- The dark checkmark grid and map section use `--color-contact-dark`; the submit button uses `--color-contact-accent`
+- Hero image lives in `mockData/contact.ts` (`heroContent.image`) — swap there when the final asset arrives
+
+### Contact link routing (all point to `/contact`)
+- Navbar CONTACT button (desktop + mobile) → `router.push("/contact")` in `components/landing/NavigationBar.tsx`
+- CTA buttons from mockData: `trusted-accredited.ts` (Get In Touch), `our-teams.ts` (Contact Us), `engineering-impact.ts` (Start Your Project / Contact Our Team), `why-zamr.ts` (Get In Touch)
+- Services detail `GET IN TOUCH` (components/services/detail/Overview.tsx) → `Link href="/contact"`
+- Footer Quick Links includes a `Contact` entry (mockData/landing.ts `footerQuickLinks`)
 
 ---
 

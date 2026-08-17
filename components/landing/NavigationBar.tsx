@@ -87,7 +87,7 @@ const isActive = (href: string) => {
           {/* Contact button */}
           <button
             type="button"
-            onClick={() => router.push("/")}
+            onClick={() => router.push("/contact")}
             className="ml-auto hidden items-center justify-center border border-white px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] text-white transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)] lg:flex"
             style={{ height: "50px" }}
           >
@@ -139,7 +139,7 @@ const isActive = (href: string) => {
               type="button"
               onClick={() => {
                 closeMenu();
-                router.push("/");
+                router.push("/contact");
               }}
               className="whitespace-nowrap border border-white px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] text-white transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)]"
             >

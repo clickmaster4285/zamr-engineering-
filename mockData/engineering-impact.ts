@@ -218,6 +218,6 @@ export const ctaContent: CTAContent = {
   heading: "Let's Build Infrastructure That Makes a Difference",
   description:
     "Partner with ZAMR Engineering to deliver engineering solutions that create lasting value, improve performance, and support sustainable growth.",
-  primaryButton: { label: "Start Your Project", href: "" },
-  secondaryButton: { label: "Contact Our Team", href: "" },
+  primaryButton: { label: "Start Your Project", href: "/contact" },
+  secondaryButton: { label: "Contact Our Team", href: "/contact" },
 };
