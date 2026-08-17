@@ -65,6 +65,13 @@
   --color-error: oklch(0.55 0.19 27);              /* form error feedback */
 
   /* ════════════════════════════════════════════
+     CONTACT PAGE (Figma design)
+     ════════════════════════════════════════════ */
+  --color-contact-accent: oklch(0.426 0.163 263); /* #1945A7 — submit button, section numbers, icon strokes */
+  --color-contact-blue: oklch(0.422 0.154 265);   /* #2344A1 — contact detail lines, social icon strokes */
+  --color-contact-dark: oklch(0.221 0.075 264);   /* #07183D — dark navy sections (How Can We Help / map) */
+
+  /* ════════════════════════════════════════════
      IMAGE OVERLAYS (non-hero images)
      ════════════════════════════════════════════
      Usage:

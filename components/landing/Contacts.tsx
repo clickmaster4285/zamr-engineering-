@@ -8,7 +8,7 @@ import {
 } from "@/lib/useContactEnquiry";
 
 export default function Contact() {
-  const { form, handleChange, handleSubmit, status } = useContactEnquiry();
+  const { form, handleChange, handleSubmit, status, errors } = useContactEnquiry();
 
   return (
     <section className="w-full bg-[var(--bg-light)] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-32 lg:py-32.5">
@@ -87,6 +87,9 @@ export default function Contact() {
                   placeholder="John Smith"
                   className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
                 />
+                {errors.name && (
+                  <p className="mt-1 text-xs text-[var(--color-error)]">{errors.name}</p>
+                )}
               </div>
               <div>
                 <label htmlFor="email" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
@@ -101,6 +104,9 @@ export default function Contact() {
                   placeholder="you@company.com.au"
                   className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
                 />
+                {errors.email && (
+                  <p className="mt-1 text-xs text-[var(--color-error)]">{errors.email}</p>
+                )}
               </div>
             </div>
             <div>
@@ -116,6 +122,9 @@ export default function Contact() {
                 placeholder="Project enquiry"
                 className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
               />
+              {errors.subject && (
+                <p className="mt-1 text-xs text-[var(--color-error)]">{errors.subject}</p>
+              )}
             </div>
             <div>
               <label htmlFor="message" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
@@ -130,6 +139,9 @@ export default function Contact() {
                 placeholder="Tell us about your project..."
                 className="w-full resize-none border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
               />
+              {errors.message && (
+                <p className="mt-1 text-xs text-[var(--color-error)]">{errors.message}</p>
+              )}
             </div>
             {status === "success" && (
               <p className="text-sm text-[var(--color-success)]">

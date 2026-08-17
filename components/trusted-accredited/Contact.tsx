@@ -26,7 +26,7 @@ function splitKeyValue(text: string): { key: string; value: string } {
 export default function TrustedContact() {
   const { sectionNumber, sectionLabel, heading, companyName, address1, address2, emails, socialLinks } =
     trustedContactContent;
-  const { form, handleChange, handleSubmit, status } = useContactEnquiry();
+  const { form, handleChange, handleSubmit, status, errors } = useContactEnquiry();
 
   const contactLines = [companyName, address1, address2];
 
@@ -106,6 +106,9 @@ export default function TrustedContact() {
                 placeholder="John Smith"
                 className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
               />
+              {errors.name && (
+                <p className="text-xs text-[var(--color-error)]">{errors.name}</p>
+              )}
             </div>
             <div className="flex w-full flex-col gap-2 sm:w-[calc(50%-12px)]">
               <label className="text-xs font-bold tracking-[3px] text-[var(--text-label)] uppercase">
@@ -119,6 +122,9 @@ export default function TrustedContact() {
                 placeholder="you@company.com.au"
                 className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
               />
+              {errors.email && (
+                <p className="text-xs text-[var(--color-error)]">{errors.email}</p>
+              )}
             </div>
           </div>
 
@@ -135,6 +141,9 @@ export default function TrustedContact() {
               placeholder="Project enquiry"
               className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
             />
+            {errors.subject && (
+              <p className="text-xs text-[var(--color-error)]">{errors.subject}</p>
+            )}
           </div>
 
           {/* Message */}
@@ -150,6 +159,9 @@ export default function TrustedContact() {
               rows={5}
               className="w-full resize-none border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
             />
+            {errors.message && (
+              <p className="text-xs text-[var(--color-error)]">{errors.message}</p>
+            )}
           </div>
 
           {/* Status message */}
