@@ -7,6 +7,10 @@ import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { Barlow } from "next/font/google";
 import { projects, projectFilters, projectsHeroStats, projectsHowWeDeliver, projectsContactInfo } from "@/mockData/projects";
+import {
+  useContactEnquiry,
+  CONTACT_STATUS_MESSAGES,
+} from "@/lib/useContactEnquiry";
 
 const barlow = Barlow({
   weight: ["500", "700", "900"],
@@ -112,6 +116,7 @@ function ProjectCard({
 }
 
 export default function ProjectsPage() {
+  const { form, handleChange, handleSubmit, status } = useContactEnquiry();
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
   const filteredProjects =
@@ -347,7 +352,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* Right — form */}
-          <form className="flex w-full flex-col gap-7 lg:w-[682px]">
+          <form onSubmit={handleSubmit} className="flex w-full flex-col gap-7 lg:w-[682px]">
             <div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
               <div className="flex flex-1 flex-col gap-2">
                 <label
@@ -360,6 +365,8 @@ export default function ProjectsPage() {
                   id="name"
                   name="name"
                   type="text"
+                  value={form.name}
+                  onChange={handleChange}
                   placeholder="John Smith"
                   className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                   style={{ borderBottom: "1px solid var(--border-input)" }}
@@ -376,6 +383,8 @@ export default function ProjectsPage() {
                   id="email"
                   name="email"
                   type="email"
+                  value={form.email}
+                  onChange={handleChange}
                   placeholder="you@company.com.au"
                   className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                   style={{ borderBottom: "1px solid var(--border-input)" }}
@@ -394,6 +403,8 @@ export default function ProjectsPage() {
                 id="subject"
                 name="subject"
                 type="text"
+                value={form.subject}
+                onChange={handleChange}
                 placeholder="Project enquiry"
                 className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                 style={{ borderBottom: "1px solid var(--border-input)" }}
@@ -402,26 +413,39 @@ export default function ProjectsPage() {
 
             <div className="flex flex-col gap-2">
               <label
-                htmlFor="projectDetails"
+                htmlFor="message"
                 className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
               >
                 PROJECT DETAILS
               </label>
               <textarea
-                id="projectDetails"
-                name="projectDetails"
+                id="message"
+                name="message"
                 rows={4}
+                value={form.message}
+                onChange={handleChange}
                 placeholder="Tell us about your project..."
                 className="w-full resize-none border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                 style={{ borderBottom: "1px solid var(--border-input)" }}
               />
             </div>
 
+            {status === "success" && (
+              <p className="text-sm text-[var(--color-success)]">
+                {CONTACT_STATUS_MESSAGES.success}
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-[var(--color-error)]">
+                {CONTACT_STATUS_MESSAGES.error}
+              </p>
+            )}
             <button
             type="submit"
-            className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base"
+            disabled={status === "sending"}
+            className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
           >
-            SUBMIT ENQUIRY
+            {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
           </button>
           </form>
         </div>

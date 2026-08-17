@@ -61,6 +61,8 @@
   --text-soft: oklch(0.487 0.022 258.3);         /* #697281 — muted body text */
   --text-label: oklch(0.649 0.022 258.3);        /* #9AA3B0 — form labels */
   --text-light-subtle: oklch(0.72 0 0);           /* #B3B3B3 — light text on dark */
+  --color-success: oklch(0.52 0.14 152);           /* form success feedback */
+  --color-error: oklch(0.55 0.19 27);              /* form error feedback */
 
   /* ════════════════════════════════════════════
      IMAGE OVERLAYS (non-hero images)

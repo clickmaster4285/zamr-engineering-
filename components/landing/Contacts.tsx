@@ -1,27 +1,14 @@
 "use client";
 
-import React, { useState, ChangeEvent } from "react";
 import Image from "next/image";
 import { contactInfo } from "@/mockData/landing";
+import {
+  useContactEnquiry,
+  CONTACT_STATUS_MESSAGES,
+} from "@/lib/useContactEnquiry";
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Enquiry submitted:", form);
-  };
+  const { form, handleChange, handleSubmit, status } = useContactEnquiry();
 
   return (
     <section className="w-full bg-[var(--bg-light)] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-32 lg:py-32.5">
@@ -144,11 +131,22 @@ export default function Contact() {
                 className="w-full resize-none border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
               />
             </div>
+            {status === "success" && (
+              <p className="text-sm text-[var(--color-success)]">
+                {CONTACT_STATUS_MESSAGES.success}
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-sm text-[var(--color-error)]">
+                {CONTACT_STATUS_MESSAGES.error}
+              </p>
+            )}
             <button
               type="submit"
-              className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base"
+              disabled={status === "sending"}
+              className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
             >
-              SUBMIT ENQUIRY
+              {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
             </button>
           </form>
         </div>

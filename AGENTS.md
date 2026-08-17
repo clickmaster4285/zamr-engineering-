@@ -12,6 +12,9 @@ zamr-engineering/
 │   ├── layout.tsx                # Root layout (Outfit font, NavigationBar + Footer)
 │   ├── page.tsx                  # Landing / Home page
 │   ├── globals.css               # Global styles + all CSS custom properties
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts          # POST endpoint — sends contact form emails via nodemailer
 │   ├── about/
 │   │   └── page.tsx              # About page
 │   ├── services/
@@ -111,7 +114,8 @@ zamr-engineering/
 │   ├── trusted-accredited.ts     # Trusted & Accredited page: hero, certifications, compliance, accreditation, journey, industries, contact, cta, formFields
 │   └── engineering-impact.ts     # Engineering For Impact page: hero, impactAreas, areasOfImpact, whyItMatters, approachSteps, ourImpact, featuredProjects, trackRecord, cta
 ├── lib/
-│   └── utils.ts                  # Utility helpers (cn, etc.)
+│   ├── utils.ts                  # Utility helpers (cn, etc.)
+│   └── useContactEnquiry.ts      # Shared contact form hook (state + submit → POST /api/contact)
 ├── public/
 │   ├── images/                   # Static images
 │   ├── videos/                   # Background videos
@@ -184,6 +188,8 @@ zamr-engineering/
 | `--text-soft` | oklch(0.487 0.022 258.3) | Muted/meta text (#697281) |
 | `--text-label` | oklch(0.649 0.022 258.3) | Form labels (#9AA3B0) |
 | `--text-light-subtle` | oklch(0.72 0 0) | Light text on dark (#B3B3B3) |
+| `--color-success` | oklch(0.52 0.14 152) | Form success feedback messages |
+| `--color-error` | oklch(0.55 0.19 27) | Form error feedback messages |
 
 ### Image Overlays
 
@@ -246,6 +252,35 @@ The accent bar in `components/landing/Services.tsx` shows the correct hover patt
 - Yellow color: `bg-[var(--color-secondary)]`
 - Positioned on the left edge: `absolute left-0 bottom-0`
 - Smooth transition: `transition-all duration-300`
+
+---
+
+## 📧 Contact Form & Email Sending
+
+All 5 contact forms (landing `Contacts.tsx`, `services/Contact.tsx`, `projects/detail/Contact.tsx`, `trusted-accredited/Contact.tsx`, projects page inline form) submit to a single POST endpoint.
+
+### Flow
+1. Form component calls the shared `useContactEnquiry()` hook (`lib/useContactEnquiry.ts`)
+2. Hook tracks `{ name, email, subject, message }`, submits via `fetch` → `POST /api/contact`
+3. `app/api/contact/route.ts` sends the email with **nodemailer** over Gmail SMTP
+4. Hook exposes `status: "idle" | "sending" | "success" | "error"` — components render `CONTACT_STATUS_MESSAGES` feedback + disable the submit button while sending
+
+### Environment Variables (`.env` — gitignored, never commit)
+
+| Variable | Purpose |
+|----------|---------|
+| `SMTP_HOST` | SMTP server (`smtp.gmail.com`) |
+| `SMTP_PORT` | SMTP port (`587`, STARTTLS) |
+| `SMTP_USER` | Sender email (`software.clickmasters@gmail.com`) |
+| `SMTP_PASS` | Gmail **App Password** (not the account password) |
+| `SMTP_FROM_NAME` | Sender display name (`Zamar_Eng`) |
+| `CONTACT_TO_EMAIL` | Recipient inbox (`umerkhayam1717@gmail.com`) |
+
+### Rules
+- The API route must stay on the Node.js runtime (`export const runtime = "nodejs"` — nodemailer is not Edge-compatible)
+- Emails are sent `from: "Zamar_Eng" <software.clickmasters@gmail.com>` with `replyTo` set to the visitor's email
+- `CONTACT_STATUS_MESSAGES` lives in the hook file (form logic — the one deliberate exception to the mockData-only rule, since it is shared app logic, not page content)
+- Form status feedback colors use `var(--color-success)` / `var(--color-error)` tokens
 
 ---
 
