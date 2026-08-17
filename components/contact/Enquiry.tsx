@@ -31,7 +31,7 @@ function buildRows(fields: EnquiryFormField[]): EnquiryFormField[][] {
 }
 
 export default function Enquiry() {
-  const { form, handleChange, handleSubmit, status } = useContactEnquiry();
+  const { form, handleChange, handleSubmit, status, errors } = useContactEnquiry();
   const { sectionNumber, sectionLabel, heading, details, socialLinks, fields, submitLabel } =
     enquiryContent;
   const rows = buildRows(fields);
@@ -135,6 +135,11 @@ export default function Enquiry() {
                       placeholder={field.placeholder}
                       className="w-full border-0 border-b border-[var(--border-input)] bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] outline-none placeholder:text-[var(--text-soft)]/50 transition-colors focus:border-[var(--color-contact-accent)]"
                     />
+                  )}
+                  {errors[field.name] && (
+                    <p className="text-[12px] leading-[15px] text-[var(--color-error)]">
+                      {errors[field.name]}
+                    </p>
                   )}
                 </div>
               ))}
