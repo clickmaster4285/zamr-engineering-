@@ -2,6 +2,10 @@
 
 import Image from "next/image";
 import { trustedContactContent } from "@/mockData/trusted-accredited";
+import {
+  useContactEnquiry,
+  CONTACT_STATUS_MESSAGES,
+} from "@/lib/useContactEnquiry";
 
 const iconMap: Record<string, string> = {
   instagram: "/icons/mynaui_instagram.svg",
@@ -22,6 +26,7 @@ function splitKeyValue(text: string): { key: string; value: string } {
 export default function TrustedContact() {
   const { sectionNumber, sectionLabel, heading, companyName, address1, address2, emails, socialLinks } =
     trustedContactContent;
+  const { form, handleChange, handleSubmit, status } = useContactEnquiry();
 
   const contactLines = [companyName, address1, address2];
 
@@ -86,7 +91,7 @@ export default function TrustedContact() {
         </div>
 
         {/* Right column — Form */}
-        <div className="flex w-full flex-col gap-7 lg:w-[682px]">
+        <form onSubmit={handleSubmit} className="flex w-full flex-col gap-7 lg:w-[682px]">
           {/* Name & Email row */}
           <div className="flex w-full flex-col gap-7 sm:flex-row sm:gap-6">
             <div className="flex w-full flex-col gap-2 sm:w-[calc(50%-12px)]">
@@ -95,6 +100,9 @@ export default function TrustedContact() {
               </label>
               <input
                 type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
                 placeholder="John Smith"
                 className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
               />
@@ -105,6 +113,9 @@ export default function TrustedContact() {
               </label>
               <input
                 type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 placeholder="you@company.com.au"
                 className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
               />
@@ -118,6 +129,9 @@ export default function TrustedContact() {
             </label>
             <input
               type="text"
+              name="subject"
+              value={form.subject}
+              onChange={handleChange}
               placeholder="Project enquiry"
               className="w-full border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
             />
@@ -129,20 +143,36 @@ export default function TrustedContact() {
               MESSAGE
             </label>
             <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
               placeholder="Tell us about your project..."
               rows={5}
               className="w-full resize-none border-0 border-b border-[var(--border-input)] py-[10px] text-xs text-[var(--text-paragraph)] outline-none placeholder:text-[var(--text-label)]"
             />
           </div>
 
+          {/* Status message */}
+          {status === "success" && (
+            <p className="text-sm text-[var(--color-success)]">
+              {CONTACT_STATUS_MESSAGES.success}
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-sm text-[var(--color-error)]">
+              {CONTACT_STATUS_MESSAGES.error}
+            </p>
+          )}
+
           {/* Submit Button */}
           <button
             type="submit"
-            className="flex w-full cursor-pointer items-center justify-center border border-[var(--color-primary)] bg-[var(--bg-light)] px-8 py-[14px] text-sm font-bold tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] sm:text-base"
+            disabled={status === "sending"}
+            className="flex w-full cursor-pointer items-center justify-center border border-[var(--color-primary)] bg-[var(--bg-light)] px-8 py-[14px] text-sm font-bold tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 sm:text-base"
           >
-            SUBMIT ENQUIRY
+            {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
           </button>
-        </div>
+        </form>
       </div>
     </section>
   );
