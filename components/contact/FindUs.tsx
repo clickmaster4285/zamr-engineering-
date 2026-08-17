@@ -9,7 +9,7 @@ export default function FindUs() {
 
   return (
     <section className="w-full bg-[var(--bg-section)] px-6 py-16 sm:px-10 sm:py-20 lg:p-[130px]">
-      <div className="flex w-full flex-col items-center justify-between gap-12 lg:flex-row lg:items-center lg:gap-[231px]">
+      <div className="flex w-full flex-col items-center justify-between gap-12 lg:flex-row lg:items-center ">
         {/* Left — office details */}
         <div className="flex w-full flex-col items-start gap-[30px] lg:flex-1">
           <div className="flex w-full flex-col items-start gap-5">
