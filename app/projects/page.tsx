@@ -116,7 +116,7 @@ function ProjectCard({
 }
 
 export default function ProjectsPage() {
-  const { form, handleChange, handleSubmit, status } = useContactEnquiry();
+  const { form, handleChange, handleSubmit, status, errors } = useContactEnquiry();
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
   const filteredProjects =
@@ -371,6 +371,9 @@ export default function ProjectsPage() {
                   className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                   style={{ borderBottom: "1px solid var(--border-input)" }}
                 />
+                {errors.name && (
+                  <p className="text-[12px] leading-[15px] text-[var(--color-error)]">{errors.name}</p>
+                )}
               </div>
               <div className="flex flex-1 flex-col gap-2">
                 <label
@@ -389,6 +392,9 @@ export default function ProjectsPage() {
                   className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                   style={{ borderBottom: "1px solid var(--border-input)" }}
                 />
+                {errors.email && (
+                  <p className="text-[12px] leading-[15px] text-[var(--color-error)]">{errors.email}</p>
+                )}
               </div>
             </div>
 
@@ -409,6 +415,9 @@ export default function ProjectsPage() {
                 className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                 style={{ borderBottom: "1px solid var(--border-input)" }}
               />
+              {errors.subject && (
+                <p className="text-[12px] leading-[15px] text-[var(--color-error)]">{errors.subject}</p>
+              )}
             </div>
 
             <div className="flex flex-col gap-2">
@@ -428,6 +437,9 @@ export default function ProjectsPage() {
                 className="w-full resize-none border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                 style={{ borderBottom: "1px solid var(--border-input)" }}
               />
+              {errors.message && (
+                <p className="text-[12px] leading-[15px] text-[var(--color-error)]">{errors.message}</p>
+              )}
             </div>
 
             {status === "success" && (
