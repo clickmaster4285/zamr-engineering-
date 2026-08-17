@@ -40,7 +40,7 @@ export default function Enquiry() {
     <section className="w-full bg-[var(--bg-section)] px-6 py-16 sm:px-10 sm:py-20 lg:p-[130px]">
       <div className="flex w-full flex-col items-start gap-12 lg:flex-row lg:items-start lg:gap-[231px]">
         {/* Left column — details */}
-        <div className="flex w-full flex-col items-start gap-[50px] lg:w-[555px]">
+        <div className="flex w-full flex-col items-start gap-[50px] lg:w-[600px]">
           <div className="flex w-full flex-col items-start gap-[30px]">
             <div className="flex items-center gap-4">
               <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-contact-accent)]">
@@ -51,7 +51,6 @@ export default function Enquiry() {
                 {sectionLabel}
               </span>
             </div>
-
             <h2 className="w-full text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px]">
               {heading}
             </h2>
