@@ -2,12 +2,17 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { projects as allProjects } from "@/mockData/projects";
 
 interface Props {
   number: string;
   heading: string;
   projects: { title: string; image: string; slug: string }[];
 }
+
+const availableProjectSlugs = new Set(
+  allProjects.map((p) => p.slug.toLocaleLowerCase())
+);
 
 export default function RelatedWork({ number, heading, projects }: Props) {
   const router = useRouter();
@@ -43,11 +48,19 @@ export default function RelatedWork({ number, heading, projects }: Props) {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
+          {projects.map((project) => {
+            const isAvailable = availableProjectSlugs.has(
+              project.slug.toLocaleLowerCase()
+            );
+            return (
             <div
               key={project.title}
-              onClick={() => router.push(`/projects/${project.slug}`)}
-              className="group relative h-[250px] w-full cursor-pointer overflow-hidden sm:h-[300px] lg:h-[340px]"
+              onClick={() => {
+                if (isAvailable) router.push(`/projects/${project.slug}`);
+              }}
+              className={`group relative h-[250px] w-full overflow-hidden sm:h-[300px] lg:h-[340px] ${
+                isAvailable ? "cursor-pointer" : "cursor-default"
+              }`}
             >
               <Image
                 src={project.image}
@@ -61,7 +74,8 @@ export default function RelatedWork({ number, heading, projects }: Props) {
                 {project.title}
               </h3>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
