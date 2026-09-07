@@ -1,25 +1,26 @@
-/* Our Services */
+/* OVERVIEW */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 130px 129px;
+padding: 130px;
 gap: 10px;
 
 width: 1728px;
-height: 1003px;
+height: 1232px;
 
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
 
 /* Inside auto layout */
 flex: none;
-order: 1;
+order: 2;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319117 */
+/* Frame 1321319060 */
 
 /* Auto layout */
 display: flex;
@@ -28,28 +29,27 @@ align-items: flex-start;
 padding: 0px;
 gap: 60px;
 
-width: 1470px;
-height: 743px;
+width: 1468px;
+height: 972px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321318999 */
+/* Frame 1321319050 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-gap: 30px;
+gap: 28px;
 
-width: 1470px;
-height: 121px;
+width: 1468px;
+height: 223px;
 
 
 /* Inside auto layout */
@@ -68,7 +68,7 @@ align-items: center;
 padding: 0px;
 gap: 16px;
 
-width: 250px;
+width: 265px;
 height: 20px;
 
 
@@ -78,9 +78,9 @@ order: 0;
 flex-grow: 0;
 
 
-/* 01 */
+/* 02 */
 
-width: 20px;
+width: 23px;
 height: 20px;
 
 font-family: 'Outfit';
@@ -114,9 +114,9 @@ order: 1;
 flex-grow: 0;
 
 
-/* SERVICES */
+/* WHY ZAMR */
 
-width: 94px;
+width: 106px;
 height: 20px;
 
 font-family: 'Outfit';
@@ -137,111 +137,7 @@ order: 2;
 flex-grow: 0;
 
 
-/* Our Full Capabilities */
-
-width: 523px;
-height: 71px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 56px;
-line-height: 71px;
-/* identical to box height */
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 1321319116 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
-
-width: 1470px;
-height: 562px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319114 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 31px;
-
-width: 1470px;
-height: 266px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319102 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 10px;
-
-width: 469px;
-height: 266px;
-
-background: #F9FAFC;
-background: color(display-p3 0.976 0.980 0.988);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319113 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
-
-width: 409px;
-height: 171px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319112 */
+/* heading-block */
 
 /* Auto layout */
 display: flex;
@@ -250,414 +146,305 @@ align-items: flex-start;
 padding: 0px;
 gap: 12px;
 
-width: 269px;
-height: 67px;
+width: 1468px;
+height: 95px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* The ZAMR Difference */
+
+width: 1468px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 55px;
+
+color: #090D15;
+color: color(display-p3 0.039 0.051 0.078);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Built on experience. Focused on the future. */
+
+width: 1468px;
+height: 28px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We combine senior engineering judgement, independent technical assurance and practical delivery experience with the agility and technology-driven approach of a modern consultancy. The result is engineering advice that is clear, responsive and focused on outcomes. */
+
+width: 1468px;
+height: 52px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* or 162% */
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* cards */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 1468px;
+height: 689px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* row-1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 1468px;
+height: 216px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 28px;
+
+width: 726px;
+height: 216px;
+
+background: #EFF4FC;
+background: color(display-p3 0.941 0.957 0.984);
+border: 1px solid rgba(34, 65, 158, 0.101961);
+border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.101961);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Container */
+
+width: 24px;
+height: 2px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px 0px 0px;
+
+width: 670px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
 /* 01 */
 
-width: 269px;
-height: 20px;
+width: 11px;
+height: 14px;
 
-font-family: 'Outfit';
+font-family: 'Barlow';
 font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
+font-weight: 700;
+font-size: 9px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.8px;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: rgba(34, 65, 158, 0.45098);
+color: color(display-p3 0.161 0.251 0.596 / 0.45098);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Engineering & Design */
-
-width: 269px;
-height: 35px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-display: flex;
-align-items: center;
-text-decoration-line: underline;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319111 */
+/* Heading 3 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 20px;
+padding: 10px 0px 0px;
 
-width: 409px;
-height: 74px;
+width: 670px;
+height: 40px;
 
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319109 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 409px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319103 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 47px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Civil */
-
-width: 23px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319104 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 78px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Structural */
-
-width: 54px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319105 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 124px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
 
 /* Inside auto layout */
 flex: none;
 order: 2;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* Transport & Traffic */
+/* Experience Where It Matters */
 
-width: 100px;
-height: 15px;
+width: 670px;
+height: 14px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
+font-weight: 400;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+letter-spacing: 0.05em;
+text-transform: uppercase;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319106 */
+/* Senior-Led Engineering */
+
+width: 670px;
+height: 25px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+
+color: #090D15;
+color: color(display-p3 0.039 0.051 0.078);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Paragraph */
 
 /* Auto layout */
 display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px 0px 0px;
 
-width: 65px;
-height: 27px;
+width: 670px;
+height: 80px;
 
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
 
 /* Inside auto layout */
 flex: none;
 order: 3;
-flex-grow: 0;
-
-
-/* Bridges */
-
-width: 41px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319110 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 180px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 1321319107 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 75px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Drainage */
-
-width: 51px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319108 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 95px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Geotechnical */
-
-width: 71px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319103 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 10px;
-
-width: 469px;
-height: 266px;
-
-background: #F9FAFC;
-background: color(display-p3 0.976 0.980 0.988);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319113 */
+/* Our projects are supported by experienced engineering professionals who understand not only design, but how infrastructure is approved, constructed, verified, operated and maintained. That lifecycle perspective helps us identify issues early, make sound decisions and develop practical solutions that work beyond the drawing board. */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
+width: 670px;
+height: 70px;
 
-width: 409px;
-height: 206px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 13.5px;
+line-height: 23px;
+/* or 172% */
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
@@ -667,39 +454,122 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319112 */
+/* Container */
+
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 12px;
+padding: 28px;
 
-width: 269px;
-height: 102px;
+width: 726px;
+height: 216px;
 
+background: #EFF4FC;
+background: color(display-p3 0.941 0.957 0.984);
+border: 1px solid rgba(34, 65, 158, 0.101961);
+border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.101961);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Container */
+
+width: 24px;
+height: 2px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px 0px 0px;
+
+width: 670px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
 /* 02 */
 
-width: 269px;
-height: 20px;
+width: 12px;
+height: 14px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 700;
+font-size: 9px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.8px;
+
+color: rgba(34, 65, 158, 0.45098);
+color: color(display-p3 0.161 0.251 0.596 / 0.45098);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Heading 3 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px 0px 0px;
+
+width: 670px;
+height: 40px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Confidence Through Independence */
+
+width: 670px;
+height: 14px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
+font-weight: 400;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+letter-spacing: 0.05em;
+text-transform: uppercase;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
@@ -709,22 +579,81 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Project & Program Management */
+/* Technical Assurance with Integrity */
 
-width: 269px;
+width: 670px;
+height: 25px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+
+color: #090D15;
+color: color(display-p3 0.039 0.051 0.078);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Paragraph */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px 0px 0px;
+
+width: 670px;
+height: 80px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Our verification and compliance practices operate  */
+
+width: 670px;
 height: 70px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-display: flex;
-align-items: center;
-text-decoration-line: underline;
+font-weight: 400;
+font-size: 13.5px;
+line-height: 23px;
+/* or 172% */
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* row-2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 1468px;
+height: 248px;
 
 
 /* Inside auto layout */
@@ -734,61 +663,38 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319111 */
+/* Container */
+
+box-sizing: border-box;
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 20px;
+padding: 28px;
 
-width: 409px;
-height: 74px;
+width: 726px;
+height: 248px;
 
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319109 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 409px;
-height: 27px;
-
+background: #EFF4FC;
+background: color(display-p3 0.941 0.957 0.984);
+border: 1px solid rgba(34, 65, 158, 0.1);
+border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.1);
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 align-self: stretch;
-flex-grow: 0;
+flex-grow: 1;
 
 
-/* Frame 1321319103 */
+/* Container */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
+width: 24px;
+height: 2px;
 
-width: 137px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
 
 /* Inside auto layout */
 flex: none;
@@ -796,293 +702,40 @@ order: 0;
 flex-grow: 0;
 
 
-/* Project Management */
-
-width: 113px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319104 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 146px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Contract Management */
-
-width: 122px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319110 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 321px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 1321319106 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 94px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Procurement */
-
-width: 70px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319107 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 89px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Commercial */
-
-width: 65px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319108 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 118px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Delivery Advisory */
-
-width: 94px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319104 */
+/* Text */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 30px;
-gap: 10px;
+padding: 24px 0px 0px;
 
-width: 469px;
-height: 266px;
+width: 670px;
+height: 38px;
 
-background: #F9FAFC;
-background: color(display-p3 0.976 0.980 0.988);
 
 /* Inside auto layout */
 flex: none;
-order: 2;
+order: 1;
 align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319113 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
-
-width: 409px;
-height: 206px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319112 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 269px;
-height: 102px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
 flex-grow: 0;
 
 
 /* 03 */
 
-width: 269px;
-height: 20px;
+width: 670px;
+height: 14px;
 
-font-family: 'Outfit';
+font-family: 'Barlow';
 font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
+font-weight: 700;
+font-size: 9px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.8px;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: rgba(34, 65, 158, 0.45);
+color: color(display-p3 0.161 0.251 0.596 / 0.45);
 
 
 /* Inside auto layout */
@@ -1092,376 +745,41 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Project Verification & Assurance */
-
-width: 269px;
-height: 70px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-display: flex;
-align-items: center;
-text-decoration-line: underline;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319111 */
+/* Heading 3 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 20px;
+padding: 10px 0px 0px;
 
-width: 409px;
-height: 74px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319109 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 393px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319103 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 93px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* TfNSW WAD */
-
-width: 69px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319104 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 159px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Independent Verification */
-
-width: 135px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319111 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 121px;
-height: 27px;
+width: 670px;
+height: 49px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 2;
-flex-grow: 0;
-
-
-/* Frame 1321319106 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 121px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Quality Assurance */
-
-width: 97px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319110 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 292px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 1321319106 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 125px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Design Verification */
-
-width: 101px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319107 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 157px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Construction Verification */
-
-width: 133px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319115 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 31px;
-
-width: 1470px;
-height: 266px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319102 */
+/* We Understand the Delivery Environment */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 10px;
+width: 670px;
+height: 14px;
 
-width: 469px;
-height: 266px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+letter-spacing: 0.05em;
+text-transform: uppercase;
 
-background: #F9FAFC;
-background: color(display-p3 0.976 0.980 0.988);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319113 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
-
-width: 409px;
-height: 206px;
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
@@ -1471,39 +789,143 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319112 */
+/* Government, Authority & Infrastructure Expertise */
+
+width: 670px;
+height: 25px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+
+color: #090D15;
+color: color(display-p3 0.039 0.051 0.078);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Paragraph */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 12px;
+padding: 10px 0px 0px;
 
-width: 269px;
-height: 102px;
+width: 670px;
+height: 80px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Deep experience working within TfNSW, RMS, and Inf */
+
+width: 670px;
+height: 70px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 13.5px;
+line-height: 23px;
+/* or 172% */
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 28px;
+
+width: 726px;
+height: 248px;
+
+background: #EFF4FC;
+background: color(display-p3 0.941 0.957 0.984);
+border: 1px solid rgba(34, 65, 158, 0.1);
+border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.1);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Container */
+
+width: 24px;
+height: 2px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px 0px 0px;
+
+width: 670px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
 /* 04 */
 
-width: 269px;
-height: 20px;
+width: 670px;
+height: 14px;
 
-font-family: 'Outfit';
+font-family: 'Barlow';
 font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
+font-weight: 700;
+font-size: 9px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.8px;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: rgba(34, 65, 158, 0.45);
+color: color(display-p3 0.161 0.251 0.596 / 0.45);
 
 
 /* Inside auto layout */
@@ -1513,338 +935,41 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Asset Management & Inspection */
-
-width: 269px;
-height: 70px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-display: flex;
-align-items: center;
-text-decoration-line: underline;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319111 */
+/* Heading 3 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 20px;
+padding: 10px 0px 0px;
 
-width: 409px;
-height: 74px;
+width: 670px;
+height: 49px;
 
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319109 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 409px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319103 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 122px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Bridge Inspections */
-
-width: 98px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319104 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 140px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Structural Inspections */
-
-width: 116px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319105 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 121px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
 
 /* Inside auto layout */
 flex: none;
 order: 2;
-flex-grow: 0;
-
-
-/* Lifecycle Planning */
-
-width: 97px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319110 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 280px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 1321319107 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 142px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Condition Assessment */
-
-width: 118px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319108 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 128px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Asset Management */
-
-width: 104px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319103 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 10px;
-
-width: 469px;
-height: 266px;
-
-background: #F9FAFC;
-background: color(display-p3 0.976 0.980 0.988);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319113 */
+/* More Than a Consultant */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
+width: 670px;
+height: 14px;
 
-width: 409px;
-height: 206px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+letter-spacing: 0.05em;
+text-transform: uppercase;
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
@@ -1854,447 +979,182 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319112 */
+/* Integrated From Vision to Completion */
+
+width: 670px;
+height: 25px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+
+color: #090D15;
+color: color(display-p3 0.039 0.051 0.078);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Paragraph */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 12px;
+padding: 10px 0px 0px;
 
-width: 269px;
-height: 102px;
+width: 670px;
+height: 103px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* From initial feasibility to as-built certification */
+
+width: 670px;
+height: 93px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 13.5px;
+line-height: 23px;
+/* or 172% */
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* row-3 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 1468px;
+height: 193px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 28px;
+
+width: 1468px;
+height: 193px;
+
+background: #EFF4FC;
+background: color(display-p3 0.941 0.957 0.984);
+border: 1px solid rgba(34, 65, 158, 0.101961);
+border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.101961);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Container */
+
+width: 24px;
+height: 2px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px 0px 0px;
+
+width: 1412px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
 /* 05 */
 
-width: 269px;
-height: 20px;
+width: 12px;
+height: 14px;
 
-font-family: 'Outfit';
+font-family: 'Barlow';
 font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
+font-weight: 700;
+font-size: 9px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.8px;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: rgba(34, 65, 158, 0.45098);
+color: color(display-p3 0.161 0.251 0.596 / 0.45098);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Buildings & Property Engineering */
-
-width: 269px;
-height: 70px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-display: flex;
-align-items: center;
-text-decoration-line: underline;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319111 */
+/* Heading 3 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 20px;
+padding: 10px 0px 0px;
 
-width: 409px;
-height: 74px;
+width: 1412px;
+height: 40px;
 
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319109 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 409px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319103 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 78px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Structural */
-
-width: 54px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319104 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 47px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Civil */
-
-width: 23px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319105 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 89px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Stormwater */
-
-width: 65px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319106 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 92px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* Certification */
-
-width: 68px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319110 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 333px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 1321319106 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 84px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Inspections */
-
-width: 60px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319107 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 90px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Dilapidation */
-
-width: 66px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319108 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 139px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Construction Support */
-
-width: 115px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319104 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 10px;
-
-width: 469px;
-height: 266px;
-
-background: #F9FAFC;
-background: color(display-p3 0.976 0.980 0.988);
 
 /* Inside auto layout */
 flex: none;
@@ -2303,17 +1163,22 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319113 */
+/* Agile by Design. Future Focused. */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
+width: 1412px;
+height: 14px;
 
-width: 409px;
-height: 206px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+letter-spacing: 0.05em;
+text-transform: uppercase;
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
@@ -2323,64 +1188,19 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319112 */
+/* Technology-Enabled, Client-Focused Delivery */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 269px;
-height: 102px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 06 */
-
-width: 269px;
-height: 20px;
+width: 1412px;
+height: 25px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
+font-size: 20px;
+line-height: 25px;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Construction & Project Delivery */
-
-width: 269px;
-height: 70px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-display: flex;
-align-items: center;
-text-decoration-line: underline;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #090D15;
+color: color(display-p3 0.039 0.051 0.078);
 
 
 /* Inside auto layout */
@@ -2390,355 +1210,43 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319111 */
+/* Paragraph */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-gap: 20px;
+padding: 10px 0px 0px;
 
-width: 409px;
-height: 74px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319109 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 319px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319103 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 83px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Civil Works */
-
-width: 59px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319104 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 58px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Roads */
-
-width: 34px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319111 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 75px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Frame 1321319106 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 75px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Drainage */
-
-width: 51px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319112 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 73px;
-height: 27px;
+width: 1412px;
+height: 57px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 3;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319106 */
+/* Our focused core team, supported by an established network of specialist professionals, allows us to assemble the right expertise around each assignment while maintaining senior involvement and accountability. We continue to integrate digital engineering, data and AI-enabled workflows to improve efficiency, collaboration and the quality of our engineering outcomes. */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 73px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Concrete */
-
-width: 49px;
-height: 15px;
+width: 1412px;
+height: 47px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
+font-weight: 400;
+font-size: 13.5px;
+line-height: 23px;
+/* or 172% */
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319110 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-width: 181px;
-height: 27px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 1321319106 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 80px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Structures */
-
-width: 56px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319107 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 6px 12px;
-gap: 10px;
-
-width: 91px;
-height: 27px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Site Delivery */
-
-width: 67px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
+align-self: stretch;
 flex-grow: 0;

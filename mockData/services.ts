@@ -429,35 +429,64 @@ export const servicesCapabilitiesSection = {
 
 export interface WhyZamrFeature {
   number: string;
+  eyebrow: string;
   title: string;
   description: string;
 }
 
+export interface WhyZamrSection {
+  sectionNumber: string;
+  sectionLabel: string;
+  heading: string;
+  subtitle: string;
+  intro: string;
+  features: WhyZamrFeature[];
+}
+
 export const defaultHeroImage = "/images/image5.jpeg";
 
-export const whyZamrFeatures: WhyZamrFeature[] = [
-  {
-    number: "01",
-    title: "Technical Excellence",
-    description:
-      "Every deliverable is produced by experienced, accredited engineers and subjected to rigorous internal review before issue. No shortcuts. No junior-only teams.",
-  },
-  {
-    number: "02",
-    title: "Independence & Integrity",
-    description:
-      "Our verification and compliance practices operate with complete independence from design. We report what we find — not what clients want to hear.",
-  },
-  {
-    number: "03",
-    title: "Government Expertise",
-    description:
-      "Deep experience working within TfNSW, RMS, and Infrastructure NSW frameworks. We know the standards, the approval processes, and the people.",
-  },
-  {
-    number: "04",
-    title: "End-to-End Delivery",
-    description:
-      "From initial feasibility to as-built certification, we can resource the full project lifecycle — eliminating the gaps between consultant handovers.",
-  },
-];
+export const whyZamrSection: WhyZamrSection = {
+  sectionNumber: "02",
+  sectionLabel: "WHY ZAMR",
+  heading: "The ZAMR Difference",
+  subtitle: "Built on experience. Focused on the future.",
+  intro:
+    "We combine senior engineering judgement, independent technical assurance and practical delivery experience with the agility and technology-driven approach of a modern consultancy. The result is engineering advice that is clear, responsive and focused on outcomes.",
+  features: [
+    {
+      number: "01",
+      eyebrow: "EXPERIENCE WHERE IT MATTERS",
+      title: "Senior-Led Engineering",
+      description:
+        "Our projects are supported by experienced engineering professionals who understand not only design, but how infrastructure is approved, constructed, verified, operated and maintained. That lifecycle perspective helps us identify issues early, make sound decisions and develop practical solutions that work beyond the drawing board.",
+    },
+    {
+      number: "02",
+      eyebrow: "CONFIDENCE THROUGH INDEPENDENCE",
+      title: "Technical Assurance with Integrity",
+      description:
+        "Independence, professional judgement and technical integrity underpin our verification, certification and assurance services. We assess projects objectively against applicable requirements, identify risks clearly and provide clients and stakeholders with the confidence to make informed decisions.",
+    },
+    {
+      number: "03",
+      eyebrow: "WE UNDERSTAND THE DELIVERY ENVIRONMENT",
+      title: "Government, Authority & Infrastructure Expertise",
+      description:
+        "Our experience spans government agencies, councils, developers, contractors and infrastructure owners. We understand the standards, specifications, approval pathways, interfaces and delivery pressures that shape real projects — particularly within transport and public infrastructure environments.",
+    },
+    {
+      number: "04",
+      eyebrow: "MORE THAN A CONSULTANT",
+      title: "Integrated From Vision to Completion",
+      description:
+        "Our capability extends from planning, investigations and engineering design through project management, verification, construction support, inspection and asset management. Clients can engage ZAMR for a specialist assignment or bring us into the wider delivery team — reducing interfaces and maintaining continuity across the project lifecycle.",
+    },
+    {
+      number: "05",
+      eyebrow: "AGILE BY DESIGN. FUTURE FOCUSED.",
+      title: "Technology-Enabled, Client-Focused Delivery",
+      description:
+        "Our focused core team, supported by an established network of specialist professionals, allows us to assemble the right expertise around each assignment while maintaining senior involvement and accountability. We continue to integrate digital engineering, data and AI-enabled workflows to improve efficiency, collaboration and the quality of our engineering outcomes.",
+    },
+  ],
+};
