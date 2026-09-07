@@ -8,7 +8,7 @@ interface Props {
   subtitle: string;
 }
 
-export default function ProjectHero({ image = defaultHeroImage, title, subtitle }: Props) {
+export default function ServicesHero({ image = defaultHeroImage, title, subtitle }: Props) {
   return (
     <section className="relative w-full h-[400px] overflow-hidden sm:h-[500px] lg:h-[700px]">
       <Image
