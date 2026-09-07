@@ -37,9 +37,11 @@ export interface StatItem {
 }
 
 export const stats: StatItem[] = [
-  { value: 150, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
-  { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
-  { value: 98, suffix: "%", label: "COMPLIANCE RATE", align: "end" },
+  { value: 10, suffix: "+", label: "Local Councils", align: "start" },
+  { value: 15, suffix: "+", label: "Government Agencies & Authorities", align: "center" },
+  { value: 99, suffix: "%", label: "Client Satisfaction", align: "center" },
+  { value: 50, suffix: "+", label: "Private Developers & Contractors", align: "center" },
+  { value: 100, suffix: "+", label: "Major Infrastructure Packages Supported", align: "end" },
 ];
 
 // --- Organizational Structure Data ---
