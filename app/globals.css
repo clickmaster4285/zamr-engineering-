@@ -171,7 +171,7 @@
   --color-text-paragraph: oklch(0.285 0.023 258.3);
   --color-text-soft: oklch(0.487 0.022 258.3);
   --color-text-label: oklch(0.649 0.022 258.3);
-  --color-text-light-subtle: oklch(0.72 0 0);
+  --color-text-light-subtle: oklch(0.757 0 89.9);
 
   /* ═══ Borders ═══ */
   --color-border-light: oklch(0.937 0 0);
