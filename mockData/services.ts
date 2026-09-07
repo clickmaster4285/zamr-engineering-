@@ -34,7 +34,7 @@ export const services: ServiceData[] = [
       "Integrated engineering and design services across civil, structural, transport and infrastructure projects — from early investigations through detailed design and construction support.",
     tags: [["Civil", "Structural", "Transport & Traffic", "Bridges"], ["Drainage", "Geotechnical"]],
     heroTitle: "ENGINEERING & DESIGN",
-    heroSubtitle: "Practical, buildable, value-focused engineering.",
+    heroSubtitle: "ZAMR Engineering provides integrated engineering and design services across civil, structural, transport and infrastructure projects. From early investigations and concept development through detailed design and construction support, we deliver practical, buildable and value-focused solutions tailored to project requirements.",
     overviewNumber: "01",
     overviewHeading: "What is Engineering & Design?",
     overviewParagraphs: [
@@ -98,7 +98,7 @@ export const services: ServiceData[] = [
       "Senior-led project and program management across the infrastructure lifecycle — from project development and procurement through design, construction and close-out.",
     tags: [["Project Management", "Contract Management"], ["Procurement", "Commercial", "Delivery Advisory"]],
     heroTitle: "PROJECT & PROGRAM MANAGEMENT",
-    heroSubtitle: "Effective governance. Commercial control. Successful outcomes.",
+    heroSubtitle: "ZAMR Engineering provides project and program management services across the infrastructure lifecycle, from project development and procurement through design, construction and close-out. Our senior-led approach focuses on effective governance, commercial control, stakeholder coordination and successful project outcomes.",
     overviewNumber: "01",
     overviewHeading: "What is Project & Program Management?",
     overviewParagraphs: [
