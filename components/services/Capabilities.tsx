@@ -1,9 +1,9 @@
 "use client";
 
-import { servicesCapabilitiesContent } from "@/mockData/services";
+import { services, servicesCapabilitiesSection } from "@/mockData/services";
 
 export default function Capabilities() {
-  const { sectionNumber, sectionLabel, heading, cards } = servicesCapabilitiesContent;
+  const { sectionNumber, sectionLabel, heading } = servicesCapabilitiesSection;
 
   return (
     <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-[130px]">
@@ -29,25 +29,25 @@ export default function Capabilities() {
 
         {/* Capability cards grid — Frame 1321319114 + 1321319115 */}
         <div className="grid w-full grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-[31px] lg:gap-y-[30px]">
-          {cards.map((card) => (
+          {services.map((service) => (
             <div
-              key={card.number}
+              key={service.slug}
               className="flex flex-col gap-[30px] p-[30px]"
               style={{ background: "var(--bg-hover)" }}
             >
               {/* Number + title — Frame 1321319112 */}
               <div className="flex flex-col items-start gap-3">
                 <span className="text-base font-medium tracking-[3px] text-[var(--text-dark)]">
-                  {card.number}
+                  {service.index}
                 </span>
-                <h3 className="text-[28px] font-semibold leading-[35px] cursor-pointer hover:underline text-[var(--text-dark)] hover:text-primary ">
-                  {card.title}
+                <h3 className="text-[28px] font-semibold leading-[35px] cursor-pointer hover:underline text-[var(--text-dark)] hover:text-primary">
+                  {service.title}
                 </h3>
               </div>
 
               {/* Tag rows — Frame 1321319111 */}
               <div className="flex flex-col gap-[20px]">
-                {card.tagRows.map((row, ri) => (
+                {service.tags.map((row, ri) => (
                   <div key={ri} className="flex flex-wrap items-center gap-[10px]">
                     {row.map((tag) => (
                       <span

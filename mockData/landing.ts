@@ -1,4 +1,4 @@
-// mockData/landing.ts — All static data for the landing page
+﻿// mockData/landing.ts â€” All static data for the landing page
 
 export interface NavLink {
   label: string;
@@ -23,7 +23,7 @@ export interface HeroContent {
 }
 
 export const heroContent: HeroContent = {
-  location: "SYDNEY · NSW · AUSTRALIA",
+  location: "SYDNEY Â· NSW Â· AUSTRALIA",
   headline: "Engineering Infrastructure\nfor the Future",
   tagline: "",
   videoSrc: "/videos/video1.mp4",
@@ -44,7 +44,7 @@ export const aboutStats: StatItem[] = [
 
 export const aboutParagraphs: string[] = [
   "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales and beyond. Founded on a commitment to technical excellence, we partner with government bodies, developers, and industry leaders to engineer infrastructure that endures.",
-  "Our approach integrates rigorous engineering methodology with forward-looking design thinking — producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
+  "Our approach integrates rigorous engineering methodology with forward-looking design thinking â€” producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
 ];
 
 export interface ServicePreviewItem {
@@ -57,38 +57,45 @@ export interface ServicePreviewItem {
 export const servicesPreview: ServicePreviewItem[] = [
   {
     index: "01",
-    slug: "civil-engineering",
-    title: "Civil Engineering",
+    slug: "engineering-and-design",
+    title: "Engineering & Design",
     description:
-      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
+      "Integrated engineering and design services across civil, structural, transport and infrastructure projects â€” from early investigations through detailed design and construction support.",
   },
   {
     index: "02",
-    slug: "project-verification",
-    title: "Project Verification",
+    slug: "project-and-program-management",
+    title: "Project & Program Management",
     description:
-      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
+      "Senior-led project and program management across the infrastructure lifecycle â€” from project development and procurement through design, construction and close-out.",
   },
   {
     index: "03",
-    slug: "road-infrastructure",
-    title: "Road Infrastructure",
+    slug: "project-verification-and-assurance",
+    title: "Project Verification & Assurance",
     description:
-      "Advanced pavement engineering, geometric road design, and integrated traffic systems for future-ready transport networks across New South Wales and beyond.",
+      "Independent project verification and technical assurance for transport and infrastructure â€” with particular expertise in TfNSW developer-delivered works.",
   },
   {
     index: "04",
-    slug: "renewable-energy-infrastructure",
-    title: "Renewable Energy Infrastructure",
+    slug: "asset-management-and-inspection",
+    title: "Asset Management & Inspection",
     description:
-      "Engineering the clean energy transition — solar farm civil works, wind turbine foundations, and hybrid energy infrastructure at utility scale.",
+      "Asset management, inspection and condition assessment services that help infrastructure owners manage risk and optimise maintenance and renewal investment.",
   },
   {
     index: "05",
-    slug: "tfnsw-compliance",
-    title: "TfNSW Compliance",
+    slug: "buildings-and-property-engineering",
+    title: "Buildings & Property Engineering",
     description:
-      "Specialist advisory and compliance consulting precisely aligned with Transport for NSW regulatory standards, technical specifications, and certification frameworks.",
+      "Multidisciplinary engineering for residential, commercial, industrial and community buildings â€” from feasibility and design through approvals, inspection and certification.",
+  },
+  {
+    index: "06",
+    slug: "construction-and-project-delivery",
+    title: "Construction & Project Delivery",
+    description:
+      "Engineering-led construction and project delivery for civil and infrastructure works â€” combining technical understanding with practical construction management.",
   },
 ];
 
@@ -131,7 +138,7 @@ export const whyZamrPoints: WhyZamrPoint[] = [
   {
     title: "Safety first",
     description:
-      "An EMR consistently below industry average — because every worker goes home.",
+      "An EMR consistently below industry average â€” because every worker goes home.",
   },
   {
     title: "Self-perform strength",
