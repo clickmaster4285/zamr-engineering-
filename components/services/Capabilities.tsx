@@ -22,7 +22,7 @@ export default function Capabilities() {
           </div>
 
           {/* Heading */}
-          <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[40px] sm:leading-[50px] lg:text-[56px] lg:leading-[71px]">
+          <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-heading)] sm:text-[40px] sm:leading-[50px] lg:text-[56px] lg:leading-[71px]">
             {heading}
           </h2>
         </div>

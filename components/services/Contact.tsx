@@ -28,24 +28,23 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
               </span>
             </div>
 
-            <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
+            <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-heading)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
               Start Your <br/> {serviceTitle} <br/> Project
             </h2>
           </div>
 
           <div className="flex w-full flex-col text-base justify-end gap-5">
             <p className="w-full text-[18px] leading-[23px]">
-              Tell us about your project or challenge. Our engineering team will
-              review your enquiry and respond within 1&ndash;2 business days.
+              Tell us about your project or challenge. Our engineering team will review your enquiry and respond within 1–2 business days.
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-primary">Office:</span>  Level 5, 123 Pitt Street, Sydney NSW 2000
+              <span className="text-primary">Office:</span>  Office: L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150, 30 Smith Street, Wentworthville, NSW 2145
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-primary">Phone:</span> +61 2 9000 0000
+              <span className="text-primary">Phone:</span> 02 9688 5322
             </p>
             <p className="w-full text-[18px] leading-[23px] ">
-              <span className="text-primary">Email:</span> enquiries@zamrengineering.com.au
+              <span className="text-primary">Email:</span>  admin@zamrengineering.com.au
             </p>
           </div>
         </div>
