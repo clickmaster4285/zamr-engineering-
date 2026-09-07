@@ -355,7 +355,7 @@ export interface ServicesHeroContent {
 export const servicesHero: ServicesHeroContent = {
   title: "Our Services",
   subtitle:
-    "Five specialist engineering disciplines. One integrated consultancy. Delivering precision-led infrastructure outcomes across NSW, QLD, and Victoria.",
+    "Specialist engineering services delivering practical, compliant, and buildable infrastructure solutions across New South Wales.",
   image: "/images/image5.jpeg",
 };
 
