@@ -208,3 +208,43 @@ export const growthStats: GrowthStat[] = [
   { label: "FY24 GROWTH", value: "+9.9%" },
   { label: "CAGR (3Y)", value: "+17.9%" },
 ];
+
+// --- Key Directors / Organizational Team ---
+export interface KeyDirector {
+  name: string;
+  role: string;
+  department: string;
+  headshot: string;
+}
+
+export const keyDirectorsContent = {
+  sectionNumber: "03",
+  sectionLabel: "KEY DIRECTORS",
+  heading: "Organizational Team",
+  directors: [
+    {
+      name: "Omar Faruqi",
+      role: "Design Manager",
+      department: "Planning & Design",
+      headshot: "/images/team/image1.png",
+    },
+    {
+      name: "Khalid Javed",
+      role: "Managing Director",
+      department: "Leadership",
+      headshot: "/images/team/image2.png",
+    },
+    {
+      name: "Yashwant Dyall",
+      role: "Quality Manager",
+      department: "Operational Quality",
+      headshot: "/images/team/image3.png",
+    },
+    {
+      name: "Sara Mitchell",
+      role: "Senior Civil Engineer",
+      department: "Civil Engineering",
+      headshot: "/images/team/image4.png",
+    },
+  ] satisfies KeyDirector[],
+};

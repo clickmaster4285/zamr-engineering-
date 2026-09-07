@@ -2,7 +2,7 @@
 import AboutHero from "@/components/About/Hero";
 import About  from "@/components/About/About";
 import Stat  from "@/components/About/Stat";
-import Structure  from "@/components/About/Structure";
+import KeyDirectors  from "@/components/About/KeyDirectors";
 import Performance  from "@/components/About/Performance";
 
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
       <AboutHero />
       <About />
       <Stat />
-      <Structure />
+      <KeyDirectors />
       <Performance />
     </main>
   );
