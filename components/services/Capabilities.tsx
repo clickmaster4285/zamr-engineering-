@@ -40,7 +40,7 @@ export default function Capabilities() {
                 <span className="text-base font-medium tracking-[3px] text-[var(--text-dark)]">
                   {card.number}
                 </span>
-                <h3 className="text-[28px] font-semibold leading-[35px] underline text-[var(--text-dark)]">
+                <h3 className="text-[28px] font-semibold leading-[35px] cursor-pointer hover:underline text-[var(--text-dark)] hover:text-primary ">
                   {card.title}
                 </h3>
               </div>
