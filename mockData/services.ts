@@ -445,6 +445,50 @@ export interface WhyZamrSection {
 
 export const defaultHeroImage = "/images/image5.jpeg";
 
+export interface MethodologyStep {
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface MethodologySection {
+  sectionNumber: string;
+  sectionLabel: string;
+  heading: string;
+  subtitle: string;
+  steps: MethodologyStep[];
+}
+
+export const methodologySection: MethodologySection = {
+  sectionNumber: "03",
+  sectionLabel: "METHODOLOGY",
+  heading: "From Planning to Delivery",
+  subtitle:
+    "Supporting projects through every stage with practical engineering expertise and disciplined project delivery.",
+  steps: [
+    {
+      number: "01",
+      title: "Understand",
+      description: "Project requirements and challenges",
+    },
+    {
+      number: "02",
+      title: "Develop",
+      description: "Engineering and delivery solutions",
+    },
+    {
+      number: "03",
+      title: "Deliver",
+      description: "Quality-focused project execution",
+    },
+    {
+      number: "04",
+      title: "Support",
+      description: "Verification, improvement, and ongoing support",
+    },
+  ],
+};
+
 export const whyZamrSection: WhyZamrSection = {
   sectionNumber: "02",
   sectionLabel: "WHY ZAMR",

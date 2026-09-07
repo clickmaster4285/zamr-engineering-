@@ -1,55 +1,36 @@
-/* OVERVIEW */
+/* Our Approach Section */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 130px;
-gap: 10px;
+padding: 120px;
+gap: 80px;
 
 width: 1728px;
-height: 1232px;
+height: 589px;
 
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
 
 /* Inside auto layout */
 flex: none;
-order: 2;
+order: 3;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319060 */
+/* Section Header */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-gap: 60px;
+gap: 16px;
 
-width: 1468px;
-height: 972px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319050 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 28px;
-
-width: 1468px;
-height: 223px;
+width: 1488px;
+height: 141px;
 
 
 /* Inside auto layout */
@@ -68,7 +49,7 @@ align-items: center;
 padding: 0px;
 gap: 16px;
 
-width: 265px;
+width: 314px;
 height: 20px;
 
 
@@ -78,7 +59,7 @@ order: 0;
 flex-grow: 0;
 
 
-/* 02 */
+/* 03 */
 
 width: 23px;
 height: 20px;
@@ -114,9 +95,9 @@ order: 1;
 flex-grow: 0;
 
 
-/* WHY ZAMR */
+/* METHODOLOGY */
 
-width: 106px;
+width: 155px;
 height: 20px;
 
 font-family: 'Outfit';
@@ -137,62 +118,19 @@ order: 2;
 flex-grow: 0;
 
 
-/* heading-block */
+/* From Planning to Delivery */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 1468px;
-height: 95px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* The ZAMR Difference */
-
-width: 1468px;
-height: 55px;
+width: 1488px;
+height: 60px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 700;
-font-size: 44px;
-line-height: 55px;
+font-size: 48px;
+line-height: 60px;
 
-color: #090D15;
-color: color(display-p3 0.039 0.051 0.078);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Built on experience. Focused on the future. */
-
-width: 1468px;
-height: 28px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 28px;
-/* identical to box height, or 156% */
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
+color: #1C2938;
+color: color(display-p3 0.122 0.161 0.216);
 
 
 /* Inside auto layout */
@@ -202,20 +140,20 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* We combine senior engineering judgement, independent technical assurance and practical delivery experience with the agility and technology-driven approach of a modern consultancy. The result is engineering advice that is clear, responsive and focused on outcomes. */
+/* Supporting projects through every stage with practical engineering expertise and disciplined project delivery. */
 
-width: 1468px;
-height: 52px;
+width: 1488px;
+height: 29px;
 
-font-family: 'Outfit';
+font-family: 'IBM Plex Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
-line-height: 26px;
-/* or 162% */
+font-size: 18px;
+line-height: 160%;
+/* identical to box height, or 29px */
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
 
 
 /* Inside auto layout */
@@ -225,119 +163,100 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* cards */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
-
-width: 1468px;
-height: 689px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* row-1 */
+/* Steps Tracker */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
 align-items: flex-start;
 padding: 0px;
-gap: 16px;
+gap: 40px;
 
-width: 1468px;
-height: 216px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 28px;
-
-width: 726px;
-height: 216px;
-
-background: #EFF4FC;
-background: color(display-p3 0.941 0.957 0.984);
-border: 1px solid rgba(34, 65, 158, 0.101961);
-border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.101961);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Container */
-
-width: 24px;
-height: 2px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 0px 0px;
-
-width: 670px;
-height: 38px;
+width: 1488px;
+height: 128px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
 align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 342px;
+height: 128px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 342px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 48px;
+height: 48px;
+
+background: #1945A7;
+background: color(display-p3 0.145 0.267 0.631);
+border-radius: 24px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 0;
 
 
 /* 01 */
 
-width: 11px;
-height: 14px;
+width: 17px;
+height: 20px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
 font-weight: 700;
-font-size: 9px;
-line-height: 14px;
-/* identical to box height, or 150% */
-letter-spacing: 1.8px;
+font-size: 16px;
+line-height: 20px;
 
-color: rgba(34, 65, 158, 0.45098);
-color: color(display-p3 0.161 0.251 0.596 / 0.45098);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
@@ -346,102 +265,74 @@ order: 0;
 flex-grow: 0;
 
 
-/* Heading 3 */
+/* Line */
+
+box-sizing: border-box;
+
+width: 278px;
+height: 0px;
+
+border: 2px solid #1945A7;
+border: 2px solid color(display-p3 0.145 0.267 0.631);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 10px 0px 0px;
+padding: 0px;
+gap: 8px;
 
-width: 670px;
-height: 40px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Experience Where It Matters */
-
-width: 670px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-letter-spacing: 0.05em;
-text-transform: uppercase;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
+width: 342px;
+height: 56px;
 
 
 /* Inside auto layout */
 flex: none;
-order: 0;
+order: 1;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Senior-Led Engineering */
+/* Understand */
 
-width: 670px;
+width: 108px;
 height: 25px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 font-size: 20px;
 line-height: 25px;
 
-color: #090D15;
-color: color(display-p3 0.039 0.051 0.078);
+color: #1C2938;
+color: color(display-p3 0.122 0.161 0.216);
 
 
 /* Inside auto layout */
 flex: none;
-order: 1;
-align-self: stretch;
+order: 0;
 flex-grow: 0;
 
 
-/* Paragraph */
+/* Project requirements and challenges */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 10px 0px 0px;
+width: 342px;
+height: 23px;
 
-width: 670px;
-height: 80px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Our projects are supported by experienced engineering professionals who understand not only design, but how infrastructure is approved, constructed, verified, operated and maintained. That lifecycle perspective helps us identify issues early, make sound decisions and develop practical solutions that work beyond the drawing board. */
-
-width: 670px;
-height: 70px;
-
-font-family: 'Outfit';
+font-family: 'IBM Plex Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 13.5px;
-line-height: 23px;
-/* or 172% */
+font-size: 15px;
+line-height: 150%;
+/* identical to box height, or 22px */
 
 color: #697281;
 color: color(display-p3 0.420 0.447 0.502);
@@ -449,84 +340,85 @@ color: color(display-p3 0.420 0.447 0.502);
 
 /* Inside auto layout */
 flex: none;
-order: 0;
+order: 1;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Container */
-
-box-sizing: border-box;
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 28px;
+padding: 0px;
+gap: 24px;
 
-width: 726px;
-height: 216px;
+width: 342px;
+height: 128px;
 
-background: #EFF4FC;
-background: color(display-p3 0.941 0.957 0.984);
-border: 1px solid rgba(34, 65, 158, 0.101961);
-border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.101961);
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 1;
 
 
-/* Container */
+/* Frame */
 
-width: 24px;
-height: 2px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
 
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
+width: 342px;
+height: 48px;
+
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* Text */
+/* Frame */
 
 /* Auto layout */
 display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 0px 0px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
 
-width: 670px;
-height: 38px;
+width: 48px;
+height: 48px;
 
+background: #1945A7;
+background: color(display-p3 0.145 0.267 0.631);
+border-radius: 24px;
 
 /* Inside auto layout */
 flex: none;
-order: 1;
-align-self: stretch;
+order: 0;
 flex-grow: 0;
 
 
 /* 02 */
 
-width: 12px;
-height: 14px;
+width: 20px;
+height: 20px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
 font-weight: 700;
-font-size: 9px;
-line-height: 14px;
-/* identical to box height, or 150% */
-letter-spacing: 1.8px;
+font-size: 16px;
+line-height: 20px;
 
-color: rgba(34, 65, 158, 0.45098);
-color: color(display-p3 0.161 0.251 0.596 / 0.45098);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
@@ -535,273 +427,195 @@ order: 0;
 flex-grow: 0;
 
 
-/* Heading 3 */
+/* Line */
+
+box-sizing: border-box;
+
+width: 278px;
+height: 0px;
+
+border: 2px solid #1945A7;
+border: 2px solid color(display-p3 0.145 0.267 0.631);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 10px 0px 0px;
+padding: 0px;
+gap: 8px;
 
-width: 670px;
-height: 40px;
+width: 342px;
+height: 56px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Develop */
+
+width: 75px;
+height: 25px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #1C2938;
+color: color(display-p3 0.122 0.161 0.216);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Engineering and delivery solutions */
+
+width: 342px;
+height: 23px;
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 150%;
+/* identical to box height, or 22px */
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 342px;
+height: 128px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 2;
-align-self: stretch;
-flex-grow: 0;
+flex-grow: 1;
 
 
-/* Confidence Through Independence */
-
-width: 670px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-letter-spacing: 0.05em;
-text-transform: uppercase;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Technical Assurance with Integrity */
-
-width: 670px;
-height: 25px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 25px;
-
-color: #090D15;
-color: color(display-p3 0.039 0.051 0.078);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 10px 0px 0px;
-
-width: 670px;
-height: 80px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Our verification and compliance practices operate  */
-
-width: 670px;
-height: 70px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 13.5px;
-line-height: 23px;
-/* or 172% */
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* row-2 */
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
-align-items: flex-start;
+align-items: center;
 padding: 0px;
 gap: 16px;
 
-width: 1468px;
-height: 248px;
+width: 342px;
+height: 48px;
 
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 28px;
-
-width: 726px;
-height: 248px;
-
-background: #EFF4FC;
-background: color(display-p3 0.941 0.957 0.984);
-border: 1px solid rgba(34, 65, 158, 0.1);
-border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.1);
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 align-self: stretch;
-flex-grow: 1;
+flex-grow: 0;
 
 
-/* Container */
+/* Frame */
 
-width: 24px;
-height: 2px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
 
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
+width: 48px;
+height: 48px;
+
+background: #1945A7;
+background: color(display-p3 0.145 0.267 0.631);
+border-radius: 24px;
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-flex-grow: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 0px 0px;
-
-width: 670px;
-height: 38px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
 /* 03 */
 
-width: 670px;
-height: 14px;
+width: 20px;
+height: 20px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
 font-weight: 700;
-font-size: 9px;
-line-height: 14px;
-/* identical to box height, or 150% */
-letter-spacing: 1.8px;
+font-size: 16px;
+line-height: 20px;
 
-color: rgba(34, 65, 158, 0.45);
-color: color(display-p3 0.161 0.251 0.596 / 0.45);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Heading 3 */
+/* Line */
+
+box-sizing: border-box;
+
+width: 278px;
+height: 0px;
+
+border: 2px solid #1945A7;
+border: 2px solid color(display-p3 0.145 0.267 0.631);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 10px 0px 0px;
+padding: 0px;
+gap: 8px;
 
-width: 670px;
-height: 49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We Understand the Delivery Environment */
-
-width: 670px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-letter-spacing: 0.05em;
-text-transform: uppercase;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Government, Authority & Infrastructure Expertise */
-
-width: 670px;
-height: 25px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 25px;
-
-color: #090D15;
-color: color(display-p3 0.039 0.051 0.078);
+width: 342px;
+height: 56px;
 
 
 /* Inside auto layout */
@@ -811,307 +625,143 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Paragraph */
+/* Deliver */
+
+width: 66px;
+height: 25px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #1C2938;
+color: color(display-p3 0.122 0.161 0.216);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Quality-focused project execution */
+
+width: 342px;
+height: 23px;
+
+font-family: 'IBM Plex Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 150%;
+/* identical to box height, or 22px */
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 10px 0px 0px;
+padding: 0px;
+gap: 24px;
 
-width: 670px;
-height: 80px;
+width: 342px;
+height: 128px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Deep experience working within TfNSW, RMS, and Inf */
-
-width: 670px;
-height: 70px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 13.5px;
-line-height: 23px;
-/* or 172% */
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 28px;
-
-width: 726px;
-height: 248px;
-
-background: #EFF4FC;
-background: color(display-p3 0.941 0.957 0.984);
-border: 1px solid rgba(34, 65, 158, 0.1);
-border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.1);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
 flex-grow: 1;
 
 
-/* Container */
+/* Frame */
 
-width: 24px;
-height: 2px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
 
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
+width: 342px;
+height: 48px;
+
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* Text */
+/* Frame */
 
 /* Auto layout */
 display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 0px 0px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
 
-width: 670px;
-height: 38px;
+width: 48px;
+height: 48px;
 
+background: #1945A7;
+background: color(display-p3 0.145 0.267 0.631);
+border-radius: 24px;
 
 /* Inside auto layout */
 flex: none;
-order: 1;
-align-self: stretch;
+order: 0;
 flex-grow: 0;
 
 
 /* 04 */
 
-width: 670px;
-height: 14px;
+width: 21px;
+height: 20px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
 font-weight: 700;
-font-size: 9px;
-line-height: 14px;
-/* identical to box height, or 150% */
-letter-spacing: 1.8px;
+font-size: 16px;
+line-height: 20px;
 
-color: rgba(34, 65, 158, 0.45);
-color: color(display-p3 0.161 0.251 0.596 / 0.45);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Heading 3 */
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: flex-start;
-padding: 10px 0px 0px;
-
-width: 670px;
-height: 49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* More Than a Consultant */
-
-width: 670px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-letter-spacing: 0.05em;
-text-transform: uppercase;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Integrated From Vision to Completion */
-
-width: 670px;
-height: 25px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 25px;
-
-color: #090D15;
-color: color(display-p3 0.039 0.051 0.078);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 10px 0px 0px;
-
-width: 670px;
-height: 103px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* From initial feasibility to as-built certification */
-
-width: 670px;
-height: 93px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 13.5px;
-line-height: 23px;
-/* or 172% */
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* row-3 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
 align-items: flex-start;
 padding: 0px;
-gap: 16px;
+gap: 8px;
 
-width: 1468px;
-height: 193px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 28px;
-
-width: 1468px;
-height: 193px;
-
-background: #EFF4FC;
-background: color(display-p3 0.941 0.957 0.984);
-border: 1px solid rgba(34, 65, 158, 0.101961);
-border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.101961);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Container */
-
-width: 24px;
-height: 2px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 0px 0px;
-
-width: 1412px;
-height: 38px;
+width: 342px;
+height: 56px;
 
 
 /* Inside auto layout */
@@ -1121,125 +771,38 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* 05 */
+/* Support */
 
-width: 12px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 9px;
-line-height: 14px;
-/* identical to box height, or 150% */
-letter-spacing: 1.8px;
-
-color: rgba(34, 65, 158, 0.45098);
-color: color(display-p3 0.161 0.251 0.596 / 0.45098);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Heading 3 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 10px 0px 0px;
-
-width: 1412px;
-height: 40px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Agile by Design. Future Focused. */
-
-width: 1412px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-letter-spacing: 0.05em;
-text-transform: uppercase;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Technology-Enabled, Client-Focused Delivery */
-
-width: 1412px;
+width: 74px;
 height: 25px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 font-size: 20px;
 line-height: 25px;
 
-color: #090D15;
-color: color(display-p3 0.039 0.051 0.078);
+color: #1C2938;
+color: color(display-p3 0.122 0.161 0.216);
 
 
 /* Inside auto layout */
 flex: none;
-order: 1;
-align-self: stretch;
+order: 0;
 flex-grow: 0;
 
 
-/* Paragraph */
+/* Verification, improvement, and ongoing support */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 10px 0px 0px;
+width: 342px;
+height: 23px;
 
-width: 1412px;
-height: 57px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Our focused core team, supported by an established network of specialist professionals, allows us to assemble the right expertise around each assignment while maintaining senior involvement and accountability. We continue to integrate digital engineering, data and AI-enabled workflows to improve efficiency, collaboration and the quality of our engineering outcomes. */
-
-width: 1412px;
-height: 47px;
-
-font-family: 'Outfit';
+font-family: 'IBM Plex Sans';
 font-style: normal;
 font-weight: 400;
-font-size: 13.5px;
-line-height: 23px;
-/* or 172% */
+font-size: 15px;
+line-height: 150%;
+/* identical to box height, or 22px */
 
 color: #697281;
 color: color(display-p3 0.420 0.447 0.502);
@@ -1247,6 +810,6 @@ color: color(display-p3 0.420 0.447 0.502);
 
 /* Inside auto layout */
 flex: none;
-order: 0;
+order: 1;
 align-self: stretch;
 flex-grow: 0;

@@ -1,6 +1,7 @@
 import ServicesHero from "@/components/services/Hero";
 import Capabilities  from "@/components/services/Capabilities";
 import WhyZamr from "@/components/services/WhyZamar";
+import Methodology from "@/components/services/Methodology";
 import Contact from "@/components/services/Contact";
 
 export default function Page() {
@@ -9,6 +10,7 @@ export default function Page() {
       <ServicesHero />
       <Capabilities />
       <WhyZamr />
+      <Methodology />
       <Contact />
     </main>
   );
