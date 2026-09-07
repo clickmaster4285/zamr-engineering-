@@ -3,7 +3,7 @@ import AboutHero from "@/components/About/Hero";
 import About  from "@/components/About/About";
 import Stat  from "@/components/About/Stat";
 import KeyDirectors  from "@/components/About/KeyDirectors";
-import Performance  from "@/components/About/Performance";
+import AboutUs04  from "@/components/About/AboutUs04";
 
 export default function Page() {
   return (
@@ -12,7 +12,7 @@ export default function Page() {
       <About />
       <Stat />
       <KeyDirectors />
-      <Performance />
+      <AboutUs04 />
     </main>
   );
 }

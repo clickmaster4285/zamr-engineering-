@@ -248,3 +248,20 @@ export const keyDirectorsContent = {
     },
   ] satisfies KeyDirector[],
 };
+
+// --- About US 04 ---
+export const aboutUs04Content = {
+  sectionNumber: "04",
+  sectionLabel: "About Us",
+  heading: "The Founder's Story Behind the Name ZAMR",
+  image: "/images/image11.png",
+  imageAlt: "ZAMR engineers reviewing project plans on an active construction site",
+  paragraphs: [
+    "Ours begins with family, is strengthened by purpose, and continues through a commitment to engineering excellence.",
+    "The name ZAMR was deliberately chosen based on two complementary foundations that continue to define who we are today.",
+    "Firstly, ZAMR is formed from the initials of our four children, reflecting the family values, integrity, and long-term commitment to building something that will endure for generations.",
+    "Secondly, the name ZAMR carries an established linguistic association with strength and a clear, confident voice. These attributes resonated strongly with the type of engineering consultancy we aspired to build - one known for technical excellence, sound judgement, and decisive outcomes; one that values long-term relationships, and consistently delivers practical, outcome-focused solutions.",
+    "Together, these two inspirations gave the name ZAMR both a deeply personal meaning and a professional identity. Today, it reflects our commitment to engineering excellence, trusted partnerships, continuous innovation, and creating lasting value for our clients and the communities we serve.",
+    "The name ZAMR represents not only where we came from, but also where we are going—built on experience, focused on the future, and committed to delivering engineering solutions that make a lasting impact.",
+  ],
+};
