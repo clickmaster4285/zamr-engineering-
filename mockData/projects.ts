@@ -48,6 +48,10 @@ export interface ProjectData {
   relatedNumber: string;
   relatedHeading: string;
   relatedProjects: { title: string; slug: string; image: string }[];
+
+  // Project cards displayed in the Refer Projects section on the services
+  // detail page. Edit these directly on the relevant project entry.
+  referProjects: { title: string; image: string; slug: string }[];
 }
 
 export const projects: ProjectData[] = [
@@ -142,6 +146,11 @@ export const projects: ProjectData[] = [
       { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
+    referProjects: [
+      { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
+      { title: "Mamre Road and Abbotts Road, Kemps Creek", image: "/images/image6.jpeg", slug: "mamre-road-and-abbotts-road-kemps-creek" },
+      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
+    ],
   },
   {
     slug: "hunter-valley-renewable-energy-hub",
@@ -233,6 +242,11 @@ export const projects: ProjectData[] = [
       { title: "Western Sydney Infrastructure Corridor", slug: "Metropolitan Bridge Rehabilitation", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
+    ],
+    referProjects: [
+      { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
+      { title: "Mamre Road and Abbotts Road, Kemps Creek", image: "/images/image6.jpeg", slug: "mamre-road-and-abbotts-road-kemps-creek" },
+      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
     ],
   },
   {
@@ -326,6 +340,11 @@ export const projects: ProjectData[] = [
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
+    referProjects: [
+      { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
+      { title: "Mamre Road and Abbotts Road, Kemps Creek", image: "/images/image6.jpeg", slug: "mamre-road-and-abbotts-road-kemps-creek" },
+      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
+    ],
   },
   {
     slug: "Hunter-Valley-Renewable-Energy-Hub",
@@ -418,6 +437,11 @@ export const projects: ProjectData[] = [
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
       { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
     ],
+    referProjects: [
+      { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
+      { title: "Mamre Road and Abbotts Road, Kemps Creek", image: "/images/image6.jpeg", slug: "mamre-road-and-abbotts-road-kemps-creek" },
+      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
+    ],
   },
   {
     slug: "Metropolitan-Bridge-Rehabilitation",
@@ -504,6 +528,11 @@ export const projects: ProjectData[] = [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
+    ],
+    referProjects: [
+      { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
+      { title: "Mamre Road and Abbotts Road, Kemps Creek", image: "/images/image6.jpeg", slug: "mamre-road-and-abbotts-road-kemps-creek" },
+      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
     ],
   },
   {
@@ -592,6 +621,11 @@ export const projects: ProjectData[] = [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Port of Newcastle Infrastructure Upgrade", slug: "port-of-newcastle-infrastructure-upgrade", image: "/images/image4.jpeg" },
       { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
+    ],
+    referProjects: [
+      { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
+      { title: "Mamre Road and Abbotts Road, Kemps Creek", image: "/images/image6.jpeg", slug: "mamre-road-and-abbotts-road-kemps-creek" },
+      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
     ],
   },
 ];

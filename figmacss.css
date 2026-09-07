@@ -1,42 +1,81 @@
-/* Capabilities Grid Section */
+/* OVERVIEW */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 80px 155px 100px;
-gap: 48px;
+padding: 130px;
+gap: 10px;
 
 width: 1728px;
-height: 1040px;
+height: 763px;
 
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
 
 /* Inside auto layout */
 flex: none;
-order: 1;
+order: 2;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Section Header */
+/* Frame 1321319068 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-gap: 12px;
+gap: 60px;
 
-width: 1418px;
-height: 87px;
+width: 1468px;
+height: 503px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321319066 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 903px;
+
+width: 1468px;
+height: 103px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319050 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 28px;
+
+width: 441px;
+height: 103px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 0;
 
 
@@ -49,7 +88,7 @@ align-items: center;
 padding: 0px;
 gap: 16px;
 
-width: 354px;
+width: 257px;
 height: 20px;
 
 
@@ -59,7 +98,7 @@ order: 0;
 flex-grow: 0;
 
 
-/* 01 */
+/* 02 */
 
 width: 23px;
 height: 20px;
@@ -95,9 +134,9 @@ order: 1;
 flex-grow: 0;
 
 
-/* Core Capabilities */
+/* PROJECTS */
 
-width: 195px;
+width: 98px;
 height: 20px;
 
 font-family: 'Outfit';
@@ -118,14 +157,14 @@ order: 2;
 flex-grow: 0;
 
 
-/* Technical Excellence & Delivery Focus */
+/* Refer Capability Statement */
 
-width: 1418px;
+width: 556px;
 height: 55px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
+font-weight: 700;
 font-size: 44px;
 line-height: 55px;
 
@@ -136,21 +175,99 @@ color: color(display-p3 0.200 0.200 0.200);
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Grid Rows */
+/* Button */
 
 /* Auto layout */
 display: flex;
-flex-direction: column;
-align-items: flex-start;
+flex-direction: row;
+align-items: center;
 padding: 0px;
-gap: 30px;
+gap: 8px;
 
-width: 1418px;
-height: 725px;
+width: 134px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ALL PROJECTS */
+
+width: 102px;
+height: 16px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 131% */
+text-align: center;
+letter-spacing: 1.68px;
+
+color: #22419E;
+color: color(display-p3 0.161 0.251 0.596);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 50%;
+bottom: 50%;
+
+border: 1.25px solid #1945A7;
+border: 1.25px solid color(display-p3 0.145 0.267 0.631);
+
+
+/* Vector */
+
+position: absolute;
+left: 50%;
+right: 20.83%;
+top: 20.83%;
+bottom: 20.83%;
+
+border: 1.25px solid #1945A7;
+border: 1.25px solid color(display-p3 0.145 0.267 0.631);
+
+
+/* Frame 1321319071 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 1468px;
+height: 340px;
 
 
 /* Inside auto layout */
@@ -160,44 +277,13 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Grid Row 1 */
+/* ProjectCard */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
+width: 478.67px;
+height: 340px;
 
-width: 1418px;
-height: 331px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Sub-Service Card */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 24px;
-
-width: 452.67px;
-height: 331px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border: 1px solid #E1E8F1;
-border: 1px solid color(display-p3 0.886 0.910 0.941);
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
 
 /* Inside auto layout */
 flex: none;
@@ -205,104 +291,45 @@ order: 0;
 flex-grow: 1;
 
 
-/* Civil Engineering */
+/* Image (Hunter Valley Renewable Energy Hub) */
 
-width: 392.67px;
-height: 28px;
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(image.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.2), color(display-p3 0.000 0.000 0.000 / 0.2)), url(image.jpg);
+
+
+/* Loftus Street, Riverstone Intersection Upgrade */
+
+position: absolute;
+width: 377px;
+height: 23px;
+left: 50px;
+top: 269px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 22px;
-line-height: 28px;
+font-size: 18px;
+line-height: 23px;
 /* identical to box height */
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
 
+/* ProjectCard */
 
-/* Bullet Points List */
+width: 478.67px;
+height: 340px;
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 219px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Road and intersection design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
 
 /* Inside auto layout */
 flex: none;
@@ -310,2844 +337,79 @@ order: 1;
 flex-grow: 1;
 
 
-/* Bullet Item */
+/* Image (Metropolitan Bridge Rehabilitation) */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0.33px;
+top: 0px;
 
-width: 392.67px;
-height: 21px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(image.jpg);
 
 
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
+/* Mamre Road and Abbotts Road, Kemps Creek */
 
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Earthworks and site grading */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Stormwater and drainage design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Culverts and cross-drainage structures */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Pavement design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Utilities coordination */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Shared paths and active transport infrastructure */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Sub-Service Card */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 24px;
-
-width: 452.67px;
-height: 331px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border: 1px solid #E1E8F1;
-border: 1px solid color(display-p3 0.886 0.910 0.941);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Structural Engineering */
-
-width: 392.67px;
-height: 28px;
+position: absolute;
+width: 369px;
+height: 23px;
+left: 50.33px;
+top: 269px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 22px;
-line-height: 28px;
+font-size: 18px;
+line-height: 23px;
 /* identical to box height */
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
 
+/* ProjectCard */
 
-/* Bullet Points List */
+width: 478.67px;
+height: 340px;
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 219px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Structural analysis and design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Retaining walls */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
 
 /* Inside auto layout */
 flex: none;
 order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Foundations */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
 flex-grow: 1;
 
 
-/* Bullet Item */
+/* Image (Urban Stormwater Management System) */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
+position: absolute;
+width: 479px;
+height: 340px;
+left: -0.33px;
+top: 0px;
 
-width: 392.67px;
-height: 21px;
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(image.jpg);
 
 
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
+/* Urban Stormwater Management System */
 
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Culverts and drainage structures */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Temporary works */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Protection slabs */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Structural assessment and strengthening */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Sub-Service Card */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 24px;
-
-width: 452.67px;
-height: 331px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border: 1px solid #E1E8F1;
-border: 1px solid color(display-p3 0.886 0.910 0.941);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 1;
-
-
-/* Transport & Traffic Engineering */
-
-width: 392.67px;
-height: 28px;
+position: absolute;
+width: 329px;
+height: 23px;
+left: 49.67px;
+top: 269px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 22px;
-line-height: 28px;
+font-size: 18px;
+line-height: 23px;
 /* identical to box height */
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Points List */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 219px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Intersection and road network improvements */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Traffic impact assessments */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Traffic signal design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* SIDRA and network modelling */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Traffic management planning */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Traffic control plans */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Road safety engineering */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Grid Row 2 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
-
-width: 1418px;
-height: 364px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Sub-Service Card */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 24px;
-
-width: 452.67px;
-height: 364px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border: 1px solid #E1E8F1;
-border: 1px solid color(display-p3 0.886 0.910 0.941);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Bridge Engineering */
-
-width: 392.67px;
-height: 28px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 22px;
-line-height: 28px;
-/* identical to box height */
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Points List */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 186px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Concept and detailed bridge design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Structural analysis */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Foundation design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Load assessment */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Rehabilitation and strengthening design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Constructability and design reviews */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Sub-Service Card */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 24px;
-
-width: 452.67px;
-height: 364px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border: 1px solid #E1E8F1;
-border: 1px solid color(display-p3 0.886 0.910 0.941);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Drainage & Water */
-
-width: 392.67px;
-height: 28px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 22px;
-line-height: 28px;
-/* identical to box height */
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Points List */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 186px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Hydrologic and hydraulic assessment */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Stormwater drainage */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Pipe and culvert systems */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Scour protection */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Flood mitigation */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Drainage rehabilitation */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Sub-Service Card */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 30px;
-gap: 24px;
-
-width: 452.67px;
-height: 364px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border: 1px solid #E1E8F1;
-border: 1px solid color(display-p3 0.886 0.910 0.941);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Engineering Advisory & Investigations */
-
-width: 392.67px;
-height: 28px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 22px;
-line-height: 28px;
-/* identical to box height */
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Points List */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 252px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Business cases */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Engineering investigations */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Options assessment */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Technical feasibility */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Project planning and scoping */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Safety in Design */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Constructability reviews */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Bullet Item */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 392.67px;
-height: 21px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 7;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Bullet Square */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 6px;
-height: 6px;
-
-background: #333333;
-background: color(display-p3 0.200 0.200 0.200);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Value engineering */
-
-width: 374.67px;
-height: 21px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 140%;
-/* identical to box height, or 21px */
-
-color: #666666;
-color: color(display-p3 0.400 0.400 0.400);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;

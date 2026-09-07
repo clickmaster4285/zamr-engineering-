@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { getServiceBySlug } from "@/mockData/services";
 import ServicesHero from "@/components/services/detail/ServicesHero";
 import Capabilities from "@/components/services/detail/Capabilities";
+import ReferProjects from "@/components/services/detail/ReferProjects";
 import Contact from "@/components/services/Contact";
 
 export default function ServiceDetailPage() {
@@ -26,6 +27,7 @@ export default function ServiceDetailPage() {
         heading="Technical Excellence & Delivery Focus"
         capabilities={service.capabilities}
       />
+      <ReferProjects />
       <Contact number="03" serviceTitle={service.title} />
     </main>
   );
