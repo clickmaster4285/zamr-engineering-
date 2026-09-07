@@ -50,21 +50,16 @@ export default function Capabilities() {
 
               {/* Tag rows */}
               <div className="flex flex-col gap-[20px]">
-                {service.tags.map((row, ri) => (
-                  <div
-                    key={ri}
-                    className="flex flex-wrap items-center gap-[10px]"
-                  >
-                    {row.map((tag) => (
-                      <span
-                        key={tag}
-                        className="bg-white px-3 py-1.5 text-[12px] font-medium leading-[15px] text-[var(--text-dark)]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                ))}
+                <div className="flex flex-wrap items-center gap-[10px]">
+                  {service.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="bg-white px-3 py-1.5 text-[12px] font-medium leading-[15px] text-[var(--text-dark)]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

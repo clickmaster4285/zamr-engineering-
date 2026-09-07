@@ -35,7 +35,7 @@ export default function ProjectHero({ image = defaultHeroImage, title, subtitle 
                         text-sm
                         sm:text-base
                         lg:text-lg lg:leading-[23px]">
-            &ldquo;{subtitle}&rdquo;
+            {subtitle}
           </p>
         </div>
       </div>

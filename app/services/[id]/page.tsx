@@ -5,9 +5,6 @@ import { getServiceBySlug } from "@/mockData/services";
 import ProjectHero from "@/components/services/detail/ProjectHero";
 import Overview from "@/components/services/detail/Overview";
 import Capabilities from "@/components/services/detail/Capabilities";
-import Process from "@/components/services/detail/Process";
-import Deliverables from "@/components/services/detail/Deliverables";
-import RelatedWork from "@/components/services/detail/RelatedWork";
 import Contact from "@/components/services/Contact";
 
 export default function ServiceDetailPage() {
@@ -24,35 +21,18 @@ export default function ServiceDetailPage() {
 
   return (
     <main className="w-full flex flex-col items-center">
-      <ProjectHero title={service.heroTitle} subtitle={service.heroSubtitle} />
+      <ProjectHero title={service.title} subtitle={service.description} />
       <Overview
-        number={service.overviewNumber}
-        heading={service.overviewHeading}
-        paragraphs={service.overviewParagraphs}
-        serviceDetails={service.serviceDetails}
+        number="01"
+        heading={`What is ${service.title}?`}
+        description={service.description}
       />
       <Capabilities
-        number={service.capabilitiesNumber}
-        heading={service.capabilitiesHeading}
+        number="02"
+        heading="Capabilities"
         capabilities={service.capabilities}
       />
-      <Process
-        number={service.processNumber}
-        heading={service.processHeading}
-        processSteps={service.processSteps}
-      />
-      <Deliverables
-        number={service.deliverablesNumber}
-        heading={service.deliverablesHeading}
-        subtext={service.deliverablesSubtext}
-        deliverables={service.deliverables}
-      />
-      <RelatedWork
-        number={service.relatedNumber}
-        heading={service.relatedHeading}
-        projects={service.relatedProjects}
-      />
-      <Contact number="06" serviceTitle={service.title} />
+      <Contact number="03" serviceTitle={service.title} />
     </main>
   );
 }
