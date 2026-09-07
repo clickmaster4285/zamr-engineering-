@@ -105,7 +105,7 @@ function FeatureCard({
       {/* Red accent line */}
       <span
         className="block h-[2px] w-6 shrink-0"
-        style={{ background: "var(--color-primary)" }}
+        style={{ background: "var(--color-alert-accent-line)" }}
       />
 
       {/* Number */}
