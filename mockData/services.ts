@@ -359,6 +359,69 @@ export const servicesHero: ServicesHeroContent = {
   image: "/images/image5.jpeg",
 };
 
+// --- Services Capabilities (Our Full Capabilities grid) ---
+export interface CapabilityCard {
+  number: string;
+  title: string;
+  tagRows: string[][];
+}
+
+export const servicesCapabilitiesContent = {
+  sectionNumber: "01",
+  sectionLabel: "SERVICES",
+  heading: "Our Full Capabilities",
+  cards: [
+    {
+      number: "01",
+      title: "Engineering & Design",
+      tagRows: [
+        ["Civil", "Structural", "Transport & Traffic", "Bridges"],
+        ["Drainage", "Geotechnical"],
+      ],
+    },
+    {
+      number: "02",
+      title: "Project & Program Management",
+      tagRows: [
+        ["Project Management", "Contract Management"],
+        ["Procurement", "Commercial"],
+      ],
+    },
+    {
+      number: "03",
+      title: "Project Verification & Assurance",
+      tagRows: [
+        ["Independent Verification", "Quality Assurance"],
+        ["Design Verification", "Construction Verification"],
+      ],
+    },
+    {
+      number: "04",
+      title: "Asset Management & Inspection",
+      tagRows: [
+        ["Bridge Inspections", "Structural Inspections", "Lifecycle Planning"],
+        ["Condition Assessment"],
+      ],
+    },
+    {
+      number: "05",
+      title: "Buildings & Property Engineering",
+      tagRows: [
+        ["Structural", "Civil", "Stormwater", "Certification"],
+        ["Inspections", "Dilapidation", "Construction Support"],
+      ],
+    },
+    {
+      number: "06",
+      title: "Construction & Project Delivery",
+      tagRows: [
+        ["Civil Works", "Roads", "Drainage", "Concrete"],
+        ["Structures", "Site Delivery"],
+      ],
+    },
+  ] satisfies CapabilityCard[],
+};
+
 export interface WhyZamrFeature {
   number: string;
   title: string;
