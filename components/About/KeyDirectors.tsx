@@ -23,7 +23,7 @@ export default function KeyDirectors() {
           </div>
 
           {/* Heading */}
-          <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[38px] sm:leading-[46px] lg:text-[44px] lg:leading-[55px]">
+          <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-heading)] sm:text-[38px] sm:leading-[46px] lg:text-[44px] lg:leading-[55px]">
             {heading}
           </h2>
         </div>
@@ -47,7 +47,7 @@ export default function KeyDirectors() {
 
               {/* Frame — name / role / department */}
               <div className="flex flex-col gap-1">
-                <h3 className="w-full text-lg font-bold leading-[23px] text-[var(--text-dark)]">
+                <h3 className="w-full text-lg font-bold leading-[23px] text-[var(--text-heading)]">
                   {director.name}
                 </h3>
                 <p className="w-full text-sm font-medium leading-[18px] text-[var(--color-contact-accent)]">

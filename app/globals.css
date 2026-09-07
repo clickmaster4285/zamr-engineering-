@@ -53,11 +53,11 @@
   /* ════════════════════════════════════════════
      TEXT COLORS
      ════════════════════════════════════════════ */
-  --text-dark: oklch(0.321 0 0);
+  --text-dark: oklch(0.321 0 0);                /* #333333 */
   --text-muted: oklch(0.417 0 0);
   --text-light: oklch(0.757 0 0);
   --text-contact: oklch(0.254 0.07 266.5);
-  --text-heading: oklch(0.2801 0 0);      /* #090D15 — very dark headings */
+  --text-heading: oklch(0.321 0 0);          /* #333333 — very dark headings */
   --text-paragraph: oklch(0.285 0.023 258.3);    /* #344153 — paragraph text */
   --text-soft: oklch(0.487 0.022 258.3);         /* #697281 — muted body text */
   --text-label: oklch(0.649 0.022 258.3);        /* #9AA3B0 — form labels */
@@ -163,11 +163,11 @@
   --color-bg-hover: oklch(0.976 0.002 264.4);
 
   /* ═══ Text ═══ */
-  --color-text-dark: oklch(0.321 0 0);
+  --color-text-dark: oklch(0.321 0 0);            /* #333333 */
   --color-text-muted: oklch(0.417 0 0);
   --color-text-light: oklch(0.757 0 0);
   --color-text-contact: oklch(0.254 0.07 266.5);
-  --color-text-heading: oklch(0.2801 0 0);
+  --color-text-heading: oklch(0.321 0 0);          /* #333333 */
   --color-text-paragraph: oklch(0.285 0.023 258.3);
   --color-text-soft: oklch(0.487 0.022 258.3);
   --color-text-label: oklch(0.649 0.022 258.3);
