@@ -265,3 +265,9 @@ export const aboutUs04Content = {
     "The name ZAMR represents not only where we came from, but also where we are going—built on experience, focused on the future, and committed to delivering engineering solutions that make a lasting impact.",
   ],
 };
+
+// --- About Video (footer video poster) ---
+export const aboutVideoContent = {
+  posterImage: "/aboutusfootervideo.png",
+  posterAlt: "ZAMR Engineering about and footer video",
+};
