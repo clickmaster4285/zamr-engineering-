@@ -23,7 +23,7 @@ export default function ServiceDetailPage() {
       <ServicesHero title={service.title} subtitle={service.description} />
       <Capabilities
         number="01"
-        heading="Core Capabilities"
+        heading="Technical Excellence & Delivery Focus"
         capabilities={service.capabilities}
       />
       <Contact number="03" serviceTitle={service.title} />
