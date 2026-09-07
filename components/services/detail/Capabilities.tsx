@@ -11,7 +11,7 @@ interface Props {
 
 export default function TechnicalCapabilities({ number, heading, capabilities }: Props) {
   return (
-    <section className="w-full bg-[var(--bg-section)] px-6 py-16 lg:p-[130px]">
+    <section className="w-full bg-[var(--bg-section)] px-6 py-16 lg:px-[130px] lg:pt-20 lg:pb-25">
       <div>
         <div className="flex w-[441px] max-w-full flex-col gap-[28px]">
           <div className="flex items-center gap-4">
