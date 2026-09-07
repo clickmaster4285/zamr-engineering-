@@ -20,28 +20,13 @@ export interface Pillar {
   description: string;
 }
 
-export const pillars: Pillar[] = [
-  {
-    title: "Precision",
-    description:
-      "Every calculation, every specification, every deliverable held to the highest standard.",
-  },
-  {
-    title: "Integrity",
-    description:
-      "Transparent reporting and independent verification on every engagement.",
-  },
-  {
-    title: "Innovation",
-    description:
-      "Forward-looking design thinking applied to proven engineering principles.",
-  },
-];
-
 export const aboutParagraphs: string[] = [
-  "ZAMR Engineering was founded in 2012 with a single conviction: that infrastructure should be engineered with uncompromising precision and long-term thinking. From a modest two-person consultancy, we have grown into one of New South Wales' most trusted civil engineering firms, delivering over 150 projects across road, civil, energy, and compliance disciplines.",
-  "Our team of 45 engineers, project managers, and compliance specialists operates across NSW, Queensland, and Victoria — partnering with government agencies, private developers, and infrastructure funds to deliver outcomes that endure. We hold accreditations with TfNSW, Infrastructure NSW, and the Australian Institute of Engineers.",
-  "We believe the best engineering is invisible — infrastructure that simply works, year after year, without incident. Every project we take on is guided by this philosophy: rigorous analysis, precise design, and disciplined delivery.",
+  "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering practical, high-quality infrastructure solutions across New South Wales. We work with government agencies, councils, developers, contractors, and private clients to provide civil engineering, project verification, Transport for NSW compliance, project management, and technical advisory services",
+  "Our approach combines sound engineering principles with practical construction experience to deliver infrastructure that is safe, compliant, buildable, and designed for long-term performance. From concept through to construction, we focus on reducing project risk, improving constructability, and ensuring every solution meets the required technical and regulatory standards.",
+  "At ZAMR Engineering, we believe successful engineering is measured not only by technical excellence but by the confidence it gives our clients. Every project is delivered with precision, integrity, and a commitment to achieving practical outcomes that stand the test of time.",
+];
+export const aboutDividerParagraphs: string[] = [
+  "Our approach integrates rigorous engineering methodology with forward-looking design thinking — producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
 ];
 
 export interface StatItem {

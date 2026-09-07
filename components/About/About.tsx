@@ -1,6 +1,6 @@
 "use client";
 
-import { pillars, aboutParagraphs } from "@/mockData/about";
+import { aboutParagraphs,aboutDividerParagraphs } from "@/mockData/about";
 
 export default function About() {
   return (
@@ -45,20 +45,12 @@ export default function About() {
           {/* Divider */}
           <div className="h-px w-full border-t border-[var(--text-dark)]" />
 
-          {/* Frame 1321318988 — 3 pillars */}
-          <div className="flex w-full flex-col gap-6 sm:flex-row sm:items-center sm:gap-[30px]">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="flex flex-1 flex-col gap-[2px]"
-              >
-                <h3 className="text-2xl font-normal leading-[30px] text-[var(--color-primary)] sm:text-[28px] sm:leading-[36px] lg:text-[32px] lg:leading-[40px]">
-                  {pillar.title}
-                </h3>
-                <p className="text-sm font-light leading-5 text-[var(--text-dark)] sm:text-base lg:text-[16px] lg:leading-[20px]">
-                  {pillar.description}
-                </p>
-              </div>
+          {/* Frame 1321318988 — 1 paragraphs */}
+          <div className="flex w-full flex-col gap-4 lg:gap-5">
+            {aboutDividerParagraphs.map((p, i) => (
+              <p key={i} className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
+                {p}
+              </p>
             ))}
           </div>
         </div>
