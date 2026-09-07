@@ -1,10 +1,10 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { services, servicesCapabilitiesSection } from "@/mockData/services";
 
 export default function Capabilities() {
   const { sectionNumber, sectionLabel, heading } = servicesCapabilitiesSection;
-
+  const router = useRouter();
   return (
     <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-[130px]">
       <div className="flex w-full flex-col gap-[60px]">
@@ -32,23 +32,29 @@ export default function Capabilities() {
           {services.map((service) => (
             <div
               key={service.slug}
-              className="flex flex-col gap-[30px] p-[30px]"
+              onClick={() => router.push(`/services/${service.slug}`)}
+              className="group flex cursor-pointer flex-col gap-[30px] p-[30px]"
               style={{ background: "var(--bg-hover)" }}
             >
-              {/* Number + title — Frame 1321319112 */}
+              {/* Number + title */}
               <div className="flex flex-col items-start gap-3">
                 <span className="text-base font-medium tracking-[3px] text-[var(--text-dark)]">
                   {service.index}
                 </span>
-                <h3 className="text-[28px] font-semibold leading-[35px] cursor-pointer hover:underline text-[var(--text-dark)] hover:text-primary">
+
+                <h3 className=" text-[28px] font-semibold  leading-[35px] text-[var(--text-dark)]   transition-colors                duration-200   group-hover:text-primary group-hover:underline   "
+                >
                   {service.title}
                 </h3>
               </div>
 
-              {/* Tag rows — Frame 1321319111 */}
+              {/* Tag rows */}
               <div className="flex flex-col gap-[20px]">
                 {service.tags.map((row, ri) => (
-                  <div key={ri} className="flex flex-wrap items-center gap-[10px]">
+                  <div
+                    key={ri}
+                    className="flex flex-wrap items-center gap-[10px]"
+                  >
                     {row.map((tag) => (
                       <span
                         key={tag}
