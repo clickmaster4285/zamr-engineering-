@@ -20,8 +20,8 @@ interface Props {
 
 export default function ReferProjects({ projectSlug }: Props) {
   const project =
-    getProjectBySlug(projectSlug ?? "Metropolitan-Bridge-Rehabilitation") ??
-    getProjectBySlug("hunter-valley-renewable-energy-hub");
+    getProjectBySlug(projectSlug ?? "great-western-highway-upgrade—kelso-to-raglan") ??
+    getProjectBySlug("jonica-rd-australia-double-storey-dwelling-&-studio");
 
   const number = "02";
   const label = "PROJECTS";

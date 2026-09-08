@@ -56,9 +56,9 @@ export interface ProjectData {
 
 export const projects: ProjectData[] = [
   {
-    slug: "Metropolitan-Bridge-Rehabilitation",
+    slug: "great-western-highway-upgrade—kelso-to-raglan",
     index: "01",
-    title: "Metropolitan Bridge Rehabilitation",
+    title: "Great Western Highway Upgrade — Kelso to Raglan",
     category: "Urban Infrastructure",
     shortDescription:
       "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
@@ -142,8 +142,8 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
-      { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
+      { title: "Hunter Valley Renewable Energy Hub", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
     referProjects: [
@@ -153,14 +153,14 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "hunter-valley-renewable-energy-hub",
+    slug: "jonica-rd-australia-double-storey-dwelling-&-studio",
     index: "02",
-    title: "Hunter Valley Renewable Energy Hub",
+    title: "Jonica Rd Austral Double Storey Dwelling & Studio",
     category: "Urban Infrastructure",
     shortDescription:
       "Engineering the clean energy transition in the Hunter Valley with comprehensive civil design and construction support for a large-scale renewable energy precinct.",
 
-    heroTitle: "Hunter Valley Renewable Energy Hub",
+    heroTitle: "Jonica Rd Austral Double Storey Dwelling & Studio",
     heroImage: "/images/image2.jpeg",
 
     stats: [
@@ -240,7 +240,7 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "Metropolitan Bridge Rehabilitation", image: "/images/image1.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
     referProjects: [
@@ -250,14 +250,14 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "Western-Sydney-Infrastructure-Corridor",
+    slug: "Kurrajong-rd-,-prestons-staged-improvement-strategic-design",
     index: "03",
-    title: "Western Sydney Infrastructure Corridor",
+    title: "kurrajong Rd, Prestons- Staged Improvement Strategic Design",
     category: "Structural Engineering",
     shortDescription:
       "Rebuilding a critical arterial corridor without stopping a city.",
 
-    heroTitle: "Western Sydney Infrastructure Corridor",
+    heroTitle: "kurrajong Rd, Prestons- Staged Improvement Strategic Design",
     heroImage: "/images/image1.jpeg",
 
     stats: [
@@ -336,8 +336,8 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
+      { title: "Hunter Valley Renewable Energy Hub", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
     referProjects: [
@@ -347,14 +347,14 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "Hunter-Valley-Renewable-Energy-Hub",
+    slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first",
     index: "04",
-    title: "Hunter Valley Renewable Energy Hub",
+    title: "BMD Bridge Inspection- TBA, can used another project first",
     category: "Water & Irrigation Systems",
     shortDescription:
       "Integrated stormwater management solution for a high-density urban precinct, combining flood mitigation, water quality treatment, and community amenity.",
 
-    heroTitle: "Hunter Valley Renewable Energy Hub",
+    heroTitle: "BMD Bridge Inspection- TBA, can used another project first",
     heroImage: "/images/image2.jpeg",
 
     stats: [
@@ -434,8 +434,8 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
-      { title: "Hunter Valley Renewable Energy Hub", slug: "hunter-valley-renewable-energy-hub", image: "/images/image2.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
+      { title: "Hunter Valley Renewable Energy Hub", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -444,14 +444,14 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "Metropolitan-Bridge-Rehabilitation",
+    slug: "kelso-to-raglan-general-concrete-paving-works",
     index: "05",
-    title: "Metropolitan Bridge Rehabilitation",
+    title: "Kelso to Raglan General Concrete Paving Works",
     category: "Industrial Development",
     shortDescription:
       "Comprehensive civil and structural engineering for the Port of Newcastle upgrade, enhancing freight capacity and operational efficiency at Australia's largest port.",
 
-    heroTitle: "Metropolitan Bridge Rehabilitation",
+    heroTitle: "Kelso to Raglan General Concrete Paving Works",
     heroImage: "/images/image6.jpeg",
 
     stats: [
@@ -526,7 +526,7 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
       { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
     ],
     referProjects: [
@@ -536,14 +536,14 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "Urban-Stormwater-Management-System",
+    slug: "may-street-bridge-over-mulwaree-river-goulburn",
     index: "06",
-    title: "Urban Stormwater Management System",
+    title: ".	May Street Bridge over Mulwaree River, Goulburn",
     category: "Transportation Projects",
     shortDescription:
       "Strategic corridor enhancement program along the Pacific Highway, delivering road safety improvements, capacity upgrades, and travel time reliability for this critical national freight route.",
 
-    heroTitle: "Urban Stormwater Management System",
+    heroTitle: ".	May Street Bridge over Mulwaree River, Goulburn",
     heroImage: "/images/image7.jpeg",
 
     stats: [
@@ -620,7 +620,7 @@ export const projects: ProjectData[] = [
     relatedProjects: [
       { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
       { title: "Port of Newcastle Infrastructure Upgrade", slug: "port-of-newcastle-infrastructure-upgrade", image: "/images/image4.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "metropolitan-bridge-rehabilitation", image: "/images/image6.jpeg" },
+      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -638,11 +638,13 @@ export function getProjectBySlug(slug: string): ProjectData | undefined {
 
 export const projectFilters: string[] = [
   "ALL",
-  "Urban Infrastructure",
-  "Structural Engineering",
-  "Transportation Projects",
-  "Water & Irrigation Systems",
-  "Industrial Development",
+  "Project Verification",
+  "Buildings",
+  "Civil Design",
+  "Asset Management",
+  "Civil Works",
+  "Bridge Works",
+  "Project Management",
 ];
 
 export interface HeroStat {
