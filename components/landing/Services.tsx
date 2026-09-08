@@ -53,21 +53,40 @@ export default function Services() {
                 {service.description}
               </p>
 
-              {/* Tags — 2-row layout per Figma, visible on hover */}
-              <div className="flex flex-wrap gap-2 opacity-100 transition-opacity duration-300 group-hover:opacity-100 lg:ml-[26px] lg:w-[224px] lg:shrink-0 lg:flex-col lg:flex-nowrap lg:gap-2 lg:opacity-0 lg:group-hover:opacity-100">
-                {serviceTagRows.map((row, ri) => (
-                  <div key={ri} className="flex flex-row items-center gap-1.5 lg:gap-[6px]">
-                    {row.map((tag) => (
-                      <span
-                        key={tag}
-                        className="border border-[var(--color-blue-accent)] px-[10px] py-2 text-[10px] font-medium tracking-[3px] text-[var(--color-blue-accent)] lg:text-xs"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                ))}
-              </div>
+{/* Tags — Figma style, visible on hover */}
+<div
+  className="
+    flex flex-wrap items-start gap-[10px]
+    opacity-100 transition-opacity duration-300
+    group-hover:opacity-100
+    lg:ml-[26px] lg:w-[344px] lg:shrink-0
+    lg:opacity-0 lg:group-hover:opacity-100
+  "
+>
+  {serviceTagRows.map((row, ri) => (
+    <div
+      key={ri}
+      className="flex flex-wrap items-center gap-[10px]"
+    >
+      {row.map((tag) => (
+        <span
+          key={tag}
+          className="
+            inline-flex items-center
+            bg-white
+            px-[12px] py-[7px]
+            text-[12px] font-normal
+            leading-none
+            tracking-normal
+            text-[#222]
+          "
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+  ))}
+</div>
             </div>
           ))}
         </div>

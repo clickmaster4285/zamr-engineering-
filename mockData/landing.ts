@@ -153,8 +153,7 @@ export const servicesPreview: ServicePreviewItem[] = [
 ];
 
 export const serviceTagRows: string[][] = [
-  ["STRUCTURAL", "Hydraulic"],
-  ["GEOTECHNICAL"],
+  ["Civil "],["Structural "],  ["Transport & Traffic"],["Civil "],["Bridges"],  ["Drainage "],["Geotechnical "],
 ];
 
 export const projectFilters: string[] = [
