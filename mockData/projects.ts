@@ -63,7 +63,7 @@ export const projects: ProjectData[] = [
     shortDescription:
       "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
 
-    heroTitle: "Metropolitan Bridge Rehabilitation",
+    heroTitle: "Great Western Highway Upgrade — Kelso to Raglan",
     heroImage: "/images/image3.jpeg",
 
     stats: [
