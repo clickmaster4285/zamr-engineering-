@@ -701,24 +701,24 @@ export interface HowWeDeliverItem {
 
 export const projectsHowWeDeliver: HowWeDeliverItem[] = [
   {
-    title: "Senior-Led Teams",
+    title: "Senior-Led Delivery",
     description:
-      "Every project is led by a registered senior engineer — not delegated to juniors after sign-off.",
+      "Every commission is directed by experienced Chartered and Registered Professional Engineers, ensuring senior technical oversight from project commencement through to completion.",
   },
   {
-    title: "Independent Review",
+    title: "Independent Quality Review",
     description:
-      "All deliverables pass internal peer review before issue. No exceptions.",
+      "All deliverables undergo rigorous internal peer review before issue, providing an additional level of technical assurance and quality control.",
   },
   {
-    title: "Full Lifecycle",
+    title: "End-to-End Capability",
     description:
-      "We can resource from feasibility through to as-built certification on a single appointment.",
+      "From feasibility studies and concept design through detailed engineering, construction support, project verification, and final certification, we provide seamless delivery under a single engagement.",
   },
   {
-    title: "On-Program Delivery",
+    title: "Reliable Delivery",
     description:
-      "98% of our projects are delivered on the agreed program. We own our commitments.",
+      "With 98% of projects delivered in accordance with the agreed programme, we are committed to meeting deadlines without compromising quality, safety, or technical excellence.",
   },
 ];
 
