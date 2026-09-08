@@ -654,7 +654,7 @@ export const projectsHeroStats: HeroStat[] = [
   { value: "$180M+", label: "TOTAL PROJECT VALUE DELIVERED" },
   { value: "150+", label: "PROJECTS COMPLETED" },
   { value: "3", label: "STATES OPERATING" },
-  { value: "2012", label: "DELIVERING SINCE" },
+  { value: "2018", label: "DELIVERING SINCE" },
 ];
 
 export interface HowWeDeliverItem {

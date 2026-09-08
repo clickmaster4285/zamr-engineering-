@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import  { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowRight } from "lucide-react";
 import { Barlow } from "next/font/google";
 import { projects, projectFilters, projectsHeroStats, projectsHowWeDeliver, projectsContactInfo } from "@/mockData/projects";
 import {
@@ -149,15 +147,16 @@ export default function ProjectsPage() {
         />
         <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-        <div className="absolute bottom-0 left-0 right-0  lg:px-0 pb-24  sm:top-[130px] sm:bottom-auto sm:pb-0 lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
-          <div className="flex flex-col gap-3 sm:gap-5 px-6">
+        <div className="absolute bottom-0 left-0 right-0 pb-24 sm:top-[130px] sm:bottom-auto sm:pb-0 lg:left-[130px] lg:right-auto lg:top-[286.5px] lg:w-[933px]">
+          <div className="flex flex-col gap-3 px-6 sm:gap-5 lg:px-0">
             <h1 className="font-bold text-white text-[32px] leading-[38px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
               Our Projects
             </h1>
             <p className="font-medium text-[var(--color-text-light-subtle)] text-[14px] leading-[19px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
-              A portfolio of precision-engineered infrastructure — from arterial
-              road rehabilitations and renewable energy civil works to structural
-              bridge rehabilitation and independent project verification.
+              From complex transport upgrades to structural rehabilitation, civil engineering, and independent project verification, ZAMR Engineering has delivered practical, high-quality engineering solutions across Australia.
+            </p>
+            <p className="font-medium text-[var(--color-text-light-subtle)] text-[14px] leading-[19px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
+              Every project reflects the same commitment to technical excellence, collaboration, and long-term asset performance
             </p>
           </div>
         </div>

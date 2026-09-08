@@ -1,0 +1,1124 @@
+/* Hero */
+
+width: 1728px;
+height: 700px;
+
+background: linear-gradient(0deg, rgba(7, 24, 61, 0.8), rgba(7, 24, 61, 0.8)), url(image.png);
+background: linear-gradient(0deg, color(display-p3 0.043 0.094 0.231 / 0.8), color(display-p3 0.043 0.094 0.231 / 0.8)), url(image.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Header */
+
+position: absolute;
+width: 1727px;
+height: 100px;
+left: calc(50% - 1727px/2 + 0.5px);
+top: 0px;
+
+
+
+/* Frame 114 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 24px;
+
+position: absolute;
+width: 907px;
+height: 18px;
+left: calc(50% - 907px/2);
+top: calc(50% - 18px/2 + 0.5px);
+
+
+
+/* ABOUT */
+
+width: 48px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #B0B0B0;
+color: color(display-p3 0.690 0.690 0.690);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SERVICES */
+
+width: 64px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #B0B0B0;
+color: color(display-p3 0.690 0.690 0.690);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* PROJECTS */
+
+width: 71px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Why ZAMR Engineering */
+
+width: 170px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #B0B0B0;
+color: color(display-p3 0.690 0.690 0.690);
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Our Team */
+
+width: 71px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #B0B0B0;
+color: color(display-p3 0.690 0.690 0.690);
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Trusted & Accredited */
+
+width: 162px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #B0B0B0;
+color: color(display-p3 0.690 0.690 0.690);
+
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Engineering For Impact */
+
+width: 177px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #B0B0B0;
+color: color(display-p3 0.690 0.690 0.690);
+
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Frame 115 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+position: absolute;
+width: 133px;
+height: 50px;
+left: 1464px;
+top: calc(50% - 50px/2 + 0.5px);
+
+border: 1px solid #FFFFFF;
+border: 1px solid color(display-p3 1.000 1.000 1.000);
+
+
+/* CONTACT */
+
+width: 83px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ZAMR  */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 4.9px;
+
+position: absolute;
+width: 111px;
+height: 49px;
+left: 130px;
+top: calc(50% - 49px/2 + 0.5px);
+
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 2.88px;
+
+width: 111px;
+height: 31.13px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* z */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 5.75474px;
+gap: 9.59px;
+
+width: 25.37px;
+height: 30.69px;
+
+background: #1945A7;
+background: color(display-p3 0.145 0.267 0.631);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Z */
+
+width: 13.43px;
+height: 19.18px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* a */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 5.75474px;
+gap: 9.59px;
+
+width: 25.37px;
+height: 31.13px;
+
+background: #1945A7;
+background: color(display-p3 0.145 0.267 0.631);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* A */
+
+width: 13.84px;
+height: 19.6px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* m */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 5.75474px;
+gap: 9.59px;
+
+width: 25.37px;
+height: 31.13px;
+
+background: #1945A7;
+background: color(display-p3 0.145 0.267 0.631);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* M */
+
+width: 13.84px;
+height: 17.29px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+border: 0.479561px solid #FA0000;
+border: 0.479561px solid color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* r */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 5.75474px;
+gap: 9.59px;
+
+width: 25.37px;
+height: 31.13px;
+
+background: #1945A7;
+background: color(display-p3 0.145 0.267 0.631);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* R */
+
+width: 13.43px;
+height: 19.18px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 85 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 2.44px;
+
+width: 111.28px;
+height: 13.28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 7.6px;
+height: 13.06px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 10.3px;
+height: 13.23px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 11.54px;
+height: 13.28px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 1.16px;
+height: 13.09px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 10.32px;
+height: 13.18px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 7.44px;
+height: 13.09px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 7.38px;
+height: 13.05px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 8.36px;
+height: 13.18px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 7;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 1.11px;
+height: 13.11px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 8;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 10.32px;
+height: 13.12px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 9;
+flex-grow: 0;
+
+
+/* Vector */
+
+width: 11.38px;
+height: 13.26px;
+
+background: #FA0000;
+background: color(display-p3 0.898 0.059 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 10;
+flex-grow: 0;
+
+
+/* Frame 1321319043 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+position: absolute;
+width: 933px;
+height: 210px;
+left: 130px;
+top: calc(50% - 210px/2 + 41.5px);
+
+
+
+/* Our Projects */
+
+width: 933px;
+height: 101px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 80px;
+line-height: 101px;
+/* identical to box height */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* From complex transport upgrades to structural rehabilitation, civil engineering, and independent project verification, ZAMR Engineering has delivered practical, high-quality engineering solutions across Australia. */
+
+width: 933px;
+height: 46px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 23px;
+
+color: #B0B0B0;
+color: color(display-p3 0.690 0.690 0.690);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Every project reflects the same commitment to technical excellence, collaboration, and long-term asset performance */
+
+width: 933px;
+height: 23px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+color: #B0B0B0;
+color: color(display-p3 0.690 0.690 0.690);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319069 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 1468px;
+height: 115px;
+left: 130px;
+top: 525px;
+
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 30px;
+
+width: 367px;
+height: 115px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 307px;
+height: 34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* $180M+ */
+
+width: 106px;
+height: 34px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 900;
+font-size: 34px;
+line-height: 34px;
+/* identical to box height, or 100% */
+letter-spacing: -0.952px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px 0px 0px;
+
+width: 303.5px;
+height: 21px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* TOTAL PROJECT VALUE DELIVERED */
+
+width: 304px;
+height: 15px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 9.5px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.33px;
+
+color: rgba(255, 255, 255, 0.32);
+color: color(display-p3 1.000 1.000 1.000 / 0.32);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 30px;
+
+width: 367px;
+height: 115px;
+
+border-left: 1px solid rgba(255, 255, 255, 0.37);
+border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.37);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 306px;
+height: 34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 150+ */
+
+width: 64px;
+height: 34px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 900;
+font-size: 34px;
+line-height: 34px;
+/* identical to box height, or 100% */
+letter-spacing: -0.952px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px 0px 0px;
+
+width: 302.5px;
+height: 21px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* PROJECTS COMPLETED */
+
+width: 303px;
+height: 15px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 9.5px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.33px;
+
+color: rgba(255, 255, 255, 0.32);
+color: color(display-p3 1.000 1.000 1.000 / 0.32);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 30px;
+
+width: 367px;
+height: 115px;
+
+border-left: 1px solid rgba(255, 255, 255, 0.37);
+border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.37);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 306px;
+height: 34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 3 */
+
+width: 19px;
+height: 34px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 900;
+font-size: 34px;
+line-height: 34px;
+/* identical to box height, or 100% */
+letter-spacing: -0.952px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px 0px 0px;
+
+width: 302.5px;
+height: 21px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* STATES OPERATING */
+
+width: 303px;
+height: 15px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 9.5px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.33px;
+
+color: rgba(255, 255, 255, 0.32);
+color: color(display-p3 1.000 1.000 1.000 / 0.32);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 30px;
+
+width: 367px;
+height: 115px;
+
+border-left: 1px solid rgba(255, 255, 255, 0.37);
+border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.37);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 306px;
+height: 34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 2018 */
+
+width: 68px;
+height: 34px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 900;
+font-size: 34px;
+line-height: 34px;
+/* identical to box height, or 100% */
+letter-spacing: -0.952px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 6px 0px 0px;
+
+width: 302.5px;
+height: 21px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* DELIVERING SINCE */
+
+width: 303px;
+height: 15px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 500;
+font-size: 9.5px;
+line-height: 14px;
+/* identical to box height, or 150% */
+letter-spacing: 1.33px;
+
+color: rgba(255, 255, 255, 0.32);
+color: color(display-p3 1.000 1.000 1.000 / 0.32);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
