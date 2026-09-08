@@ -28,7 +28,7 @@ export default function ServiceDetailPage() {
         capabilities={service.capabilities}
       />
       <ReferProjects />
-      <Contact number="03" serviceTitle={service.title} />
+      <Contact number="03" serviceTitle={service.capabilities[0].title} />
     </main>
   );
 }
