@@ -54,6 +54,59 @@ export interface ServicePreviewItem {
   description: string;
 }
 
+export interface ProjectsFeaturedWork {
+  slug: string;
+  index: string;
+  title: string;
+  category: string;
+  shortDescription: string;
+  heroTitle: string;
+  featuredImage: string;
+  featuredImagewithhover: string;
+}
+
+export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
+  {
+    slug: "solarfarm-intersection-upgrade-at-643-mitchell-highway-orange",
+    index: "01",
+    title: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange ",
+    category: "Urban Infrastructure",
+    shortDescription:
+      "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
+
+    heroTitle: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange",
+    
+    featuredImage: "/images/image12.png",
+    featuredImagewithhover: "/images/image3.jpeg",
+  },
+  {
+    slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection",
+    index: "01",
+    title: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection ",
+    category: "Urban Infrastructure",
+    shortDescription:
+      "Signalised intersection upgrade at Grantham Farm improving traffic flow, safety, and connectivity for the surrounding road network.",
+    heroTitle: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection",
+    
+    featuredImage: "/images/image13.png",
+    featuredImagewithhover: "/images/image2.jpeg",
+
+  },
+  {
+    slug: "mr536-mamre-road-&-abbotts Rd-kemps-creek",
+    index: "01",
+    title: "MR536 Mamre Road & Abbotts Rd Kemps Creek ",
+    category: "Urban Infrastructure",
+    shortDescription:
+      "Road infrastructure upgrade improving intersection geometry, drainage, and overall road safety at the Mamre Road and Abbotts Road connection.",
+    heroTitle: "MR536 Mamre Road & Abbotts Rd Kemps Creek",
+    
+    featuredImage: "/images/image14.png",
+    featuredImagewithhover: "/images/image1.jpeg",
+
+  },
+];
+
 export const servicesPreview: ServicePreviewItem[] = [
   {
     index: "01",
