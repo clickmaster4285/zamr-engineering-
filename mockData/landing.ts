@@ -159,11 +159,13 @@ export const serviceTagRows: string[][] = [
 
 export const projectFilters: string[] = [
   "ALL",
-  "Urban Infrastructure",
-  "Structural Engineering",
-  "Transportation Projects",
-  "Water & Irrigation Systems",
-  "Industrial Development",
+  "Project Verification",
+  "Buildings",
+  "Civil Design",
+  "Asset Management",
+  "Civil Works",
+  "Bridge Works",
+  "Project Management",
 ];
 
 export interface ClientLogo {

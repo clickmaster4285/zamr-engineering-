@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { clientLogos, projectsFeaturedWork } from "@/mockData/landing";
+import { projectFilters, clientLogos, projectsFeaturedWork } from "@/mockData/landing";
 
 function useInView(threshold = 0.15) {
   const [inView, setInView] = useState(false);
@@ -49,16 +49,14 @@ function ProjectCard({
     <div
       ref={ref}
       onClick={() => router.push(`/projects/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        inView
+      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-10 scale-95"
-      }`}
+        }`}
     >
       <div
-        className={`relative w-full overflow-hidden ${
-          isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
-        }`}
+        className={`relative w-full overflow-hidden ${isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
+          }`}
       >
         <Image
           src={project.featuredImage}
@@ -86,9 +84,8 @@ function ProjectCard({
 
         {/* Project index */}
         <span
-          className={`absolute left-5 top-5 font-[800] tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${
-            isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
-          }`}
+          className={`absolute left-5 top-5 font-[800] tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
+            }`}
         >
           {project.index}
         </span>
@@ -112,6 +109,12 @@ function ProjectCard({
 }
 
 export default function Projects() {
+  const [activeFilter, setActiveFilter] = useState("ALL");
+  const filteredProjects =
+    activeFilter === "ALL"
+      ? projectsFeaturedWork
+      : projectsFeaturedWork.filter((p) => p.category === activeFilter);
+
   return (
     <section className="w-full bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
       <div className="flex flex-col gap-10 lg:gap-[60px]">
@@ -133,33 +136,54 @@ export default function Projects() {
               </h2>
             </div>
             <Link
-  href="/projects"
-  className="group flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-all duration-300 hover:text-[var(--color-secondary)] sm:text-base"
->
-  ALL PROJECTS
-  <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
-    <ArrowRight size={24} />
-  </span>
-</Link>
+              href="/projects"
+              className="group flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-all duration-300 hover:text-[var(--color-secondary)] sm:text-base"
+            >
+              ALL PROJECTS
+              <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+                <ArrowRight size={24} />
+              </span>
+            </Link>
+          </div>
+
+          {/* Filter tabs */}
+          <div className="flex w-full flex-nowrap gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:overflow-visible lg:gap-4">
+            {projectFilters.map((filter) => {
+              const isActive = filter === activeFilter;
+              const isAll = filter === "ALL";
+              return (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setActiveFilter(filter)}
+                  className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${isActive
+                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                    } ${isAll ? "w-20 lg:flex-none" : ""}`}
+                >
+                  {filter}
+                </button>
+              );
+            })}
           </div>
 
           {/* Project grid */}
-          {projectsFeaturedWork.length > 0 ? (
+          {filteredProjects.length > 0 ? (
             <div className="flex flex-col gap-5 md:gap-[30px] md:flex-row md:items-stretch">
-              {projectsFeaturedWork[0] && (
+              {filteredProjects[0] && (
                 <div className="w-full md:w-[817px]">
-                  <ProjectCard project={projectsFeaturedWork[0]} isLarge />
+                  <ProjectCard project={filteredProjects[0]} isLarge />
                 </div>
               )}
               <div className="flex w-full flex-col gap-5 md:gap-[30px] md:w-[621px]">
-                {projectsFeaturedWork.slice(1, 3).map((project) => (
+                {filteredProjects.slice(1, 3).map((project) => (
                   <ProjectCard key={project.slug} project={project} isLarge={false} />
                 ))}
               </div>
             </div>
           ) : (
             <div className="py-12 text-center text-lg text-[var(--text-muted)]">
-              No projects found.
+              No projects found in this category.
             </div>
           )}
 
