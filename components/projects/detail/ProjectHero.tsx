@@ -39,7 +39,7 @@ export default function ProjectHero({ image = defaultHeroImage, title, subtitle,
           <div
             className="flex-1 flex flex-col justify-center gap-5 px-6 py-14 sm:px-10
                        lg:absolute lg:flex-none lg:justify-start lg:gap-5 lg:py-0
-                       lg:left-[130px] lg:top-[261px] lg:w-[933px] lg:px-0"
+                       lg:left-[130px] lg:top-[261px] lg:w-[1100px] lg:px-0"
           >
             <h1 className="font-bold text-white
                            text-[32px] leading-[40px]
