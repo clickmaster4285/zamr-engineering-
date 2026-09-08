@@ -142,9 +142,9 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
-      { title: "Hunter Valley Renewable Energy Hub", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
-      { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
+      { title: "Jonica Rd Austral Double Storey Dwelling & Studio", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
+      { title: "Kurrajong Rd, Prestons- Staged Improvement Strategic Design", slug: "Kurrajong-rd-,-prestons-staged-improvement-strategic-design", image: "/images/image1.jpeg" },
+      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image2.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -239,9 +239,9 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Western Sydney Infrastructure Corridor", slug: "Metropolitan Bridge Rehabilitation", image: "/images/image1.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
-      { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
+      { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
+      { title: "Kurrajong Rd, Prestons- Staged Improvement Strategic Design", slug: "Kurrajong-rd-,-prestons-staged-improvement-strategic-design", image: "/images/image6.jpeg" },
+      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image7.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -336,9 +336,9 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Hunter Valley Renewable Energy Hub", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
-      { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
+      { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
+      { title: "Jonica Rd Austral Double Storey Dwelling & Studio", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
+      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image7.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -433,9 +433,9 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
-      { title: "Hunter Valley Renewable Energy Hub", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
+      { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
+      { title: "Jonica Rd Austral Double Storey Dwelling & Studio", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
+      { title: "Kelso to Raglan General Concrete Paving Works", slug: "kelso-to-raglan-general-concrete-paving-works", image: "/images/image7.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -525,9 +525,9 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
-      { title: "Urban Stormwater Management System", slug: "urban-stormwater-management-system", image: "/images/image7.jpeg" },
+      { title: "Jonica Rd Austral Double Storey Dwelling & Studio", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image1.jpeg" },
+      { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
+      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image7.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -618,9 +618,9 @@ export const projects: ProjectData[] = [
     relatedNumber: "05",
     relatedHeading: "Related Work",
     relatedProjects: [
-      { title: "Western Sydney Infrastructure Corridor", slug: "western-sydney-infrastructure-corridor", image: "/images/image1.jpeg" },
-      { title: "Port of Newcastle Infrastructure Upgrade", slug: "port-of-newcastle-infrastructure-upgrade", image: "/images/image4.jpeg" },
-      { title: "Metropolitan Bridge Rehabilitation", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
+      { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
+      { title: "Jonica Rd Austral Double Storey Dwelling & Studio", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
+      { title: "Kelso to Raglan General Concrete Paving Works", slug: "kelso-to-raglan-general-concrete-paving-works", image: "/images/image7.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -631,7 +631,8 @@ export const projects: ProjectData[] = [
 ];
 
 export function getProjectBySlug(slug: string): ProjectData | undefined {
-  return projects.find((p) => p.slug.toLocaleLowerCase() === slug.toLocaleLowerCase());
+  const normalizedSlug = slug.toLocaleLowerCase().replace(/[-—]/g, "-");
+  return projects.find((p) => p.slug.toLocaleLowerCase().replace(/[-—]/g, "-") === normalizedSlug);
 }
 
 // --- Projects Listing Page Static Data ---
