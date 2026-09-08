@@ -74,6 +74,10 @@ function ProjectCard({
           sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover opacity-0 transition-all duration-500 ease-in-out group-hover:scale-135 group-hover:opacity-100"
         />
+        {/* Default overlay color overlay */}
+        <div
+          className={`absolute inset-0 bg-[var(--overlay-image-default)]`}
+        />
 
         {/* Gradient overlay */}
         <div
@@ -90,7 +94,7 @@ function ProjectCard({
         </span>
 
         {/* Title */}
-        <h3 className={`absolute left-5 bottom-5 font-semibold text-white text-[20px] leading-[26px] sm:left-8 sm:bottom-8 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px] ${isLarge ? " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out" : ""}`}>
+        <h3 className={`absolute left-5 bottom-5 font-semibold text-white text-[20px] leading-[26px] sm:left-8 sm:right-8 sm:bottom-8 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px] ${isLarge ? " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out" : ""}`}>
           {project.title}
         </h3>
 
