@@ -1,4 +1,4 @@
-﻿// mockData/landing.ts â€” All static data for the landing page
+﻿// mockData/landing.ts  All static data for the landing page
 
 export interface NavLink {
   label: string;
@@ -23,7 +23,7 @@ export interface HeroContent {
 }
 
 export const heroContent: HeroContent = {
-  location: "SYDNEY Â· NSW Â· AUSTRALIA",
+  location: "SYDNEY · NSW · AUSTRALIA",
   headline: "Engineering Infrastructure\nfor the Future",
   tagline: "",
   videoSrc: "/videos/video1.mp4",
@@ -44,7 +44,7 @@ export const aboutStats: StatItem[] = [
 
 export const aboutParagraphs: string[] = [
   "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales and beyond. Founded on a commitment to technical excellence, we partner with government bodies, developers, and industry leaders to engineer infrastructure that endures.",
-  "Our approach integrates rigorous engineering methodology with forward-looking design thinking â€” producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
+  "Our approach integrates rigorous engineering methodology with forward-looking design thinking  producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
 ];
 
 export interface ServicePreviewItem {
@@ -60,21 +60,21 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "engineering-and-design",
     title: "Engineering & Design",
     description:
-      "Integrated engineering and design services across civil, structural, transport and infrastructure projects â€” from early investigations through detailed design and construction support.",
+      "Integrated engineering and design services across civil, structural, transport and infrastructure projects from early investigations through detailed design and construction support.",
   },
   {
     index: "02",
     slug: "project-and-program-management",
     title: "Project & Program Management",
     description:
-      "Senior-led project and program management across the infrastructure lifecycle â€” from project development and procurement through design, construction and close-out.",
+      "Senior-led project and program management across the infrastructure lifecycle  from project development and procurement through design, construction and close-out.",
   },
   {
     index: "03",
     slug: "project-verification-and-assurance",
     title: "Project Verification & Assurance",
     description:
-      "Independent project verification and technical assurance for transport and infrastructure â€” with particular expertise in TfNSW developer-delivered works.",
+      "Independent project verification and technical assurance for transport and infrastructure  with particular expertise in TfNSW developer-delivered works.",
   },
   {
     index: "04",
@@ -88,14 +88,14 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "buildings-and-property-engineering",
     title: "Buildings & Property Engineering",
     description:
-      "Multidisciplinary engineering for residential, commercial, industrial and community buildings â€” from feasibility and design through approvals, inspection and certification.",
+      "Multidisciplinary engineering for residential, commercial, industrial and community buildings  from feasibility and design through approvals, inspection and certification.",
   },
   {
     index: "06",
     slug: "construction-and-project-delivery",
     title: "Construction & Project Delivery",
     description:
-      "Engineering-led construction and project delivery for civil and infrastructure works â€” combining technical understanding with practical construction management.",
+      "Engineering-led construction and project delivery for civil and infrastructure works  combining technical understanding with practical construction management.",
   },
 ];
 
@@ -138,7 +138,7 @@ export const whyZamrPoints: WhyZamrPoint[] = [
   {
     title: "Safety first",
     description:
-      "An EMR consistently below industry average â€” because every worker goes home.",
+      "An EMR consistently below industry average  because every worker goes home.",
   },
   {
     title: "Self-perform strength",
