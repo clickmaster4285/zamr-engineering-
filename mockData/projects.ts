@@ -630,10 +630,44 @@ export const projects: ProjectData[] = [
   },
 ];
 
-export function getProjectBySlug(slug: string): ProjectData | undefined {
-  const normalizedSlug = slug.toLocaleLowerCase().replace(/[-—]/g, "-");
-  return projects.find((p) => p.slug.toLocaleLowerCase().replace(/[-—]/g, "-") === normalizedSlug);
+/**
+ * Normalizes a project slug (or URL param) so lookups are resilient to
+ * URL-encoding, case differences and special characters like commas,
+ * ampersands, em dashes and dots that appear in project titles.
+ */
+export function normalizeSlug(slug: string): string {
+  let decoded = slug;
+  try {
+    decoded = decodeURIComponent(slug);
+  } catch {
+    decoded = slug;
+  }
+  return decoded
+    .toLocaleLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
+
+export function getProjectBySlug(slug: string): ProjectData | undefined {
+  const normalizedSlug = normalizeSlug(slug);
+  return projects.find((p) => normalizeSlug(p.slug) === normalizedSlug);
+}
+
+/**
+ * Maps the filter pill labels shown on the Projects page to the project
+ * `category` values they should display. A filter matches a project when any
+ * of its categories is listed (all comparisons are case-insensitive).
+ */
+export const projectFilterCategoryMap: Record<string, string[]> = {
+  all: [],
+  "project verification": ["Project Verification", "Structural Engineering"],
+  buildings: ["Buildings", "Urban Infrastructure"],
+  "civil design": ["Civil Design", "Urban Infrastructure", "Structural Engineering"],
+  "asset management": ["Asset Management", "Transportation Projects"],
+  "civil works": ["Civil Works", "Industrial Development"],
+  "bridge works": ["Bridge Works", "Water & Irrigation Systems", "Transportation Projects"],
+  "project management": ["Project Management", "Transportation Projects"],
+};
 
 // --- Projects Listing Page Static Data ---
 

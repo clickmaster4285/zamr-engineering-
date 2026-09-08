@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { projects as allProjects } from "@/mockData/projects";
+import { projects as allProjects, normalizeSlug } from "@/mockData/projects";
 
 interface Props {
   number: string;
@@ -10,9 +10,7 @@ interface Props {
   projects: { title: string; image: string; slug: string }[];
 }
 
-const availableProjectSlugs = new Set(
-  allProjects.map((p) => p.slug.toLocaleLowerCase())
-);
+const availableProjectSlugs = new Set(allProjects.map((p) => normalizeSlug(p.slug)));
 
 export default function RelatedWork({ number, heading, projects }: Props) {
   const router = useRouter();
@@ -50,7 +48,7 @@ export default function RelatedWork({ number, heading, projects }: Props) {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => {
             const isAvailable = availableProjectSlugs.has(
-              project.slug.toLocaleLowerCase()
+              normalizeSlug(project.slug)
             );
             return (
             <div

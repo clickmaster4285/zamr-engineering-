@@ -4,7 +4,14 @@ import  { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Barlow } from "next/font/google";
-import { projects, projectFilters, projectsHeroStats, projectsHowWeDeliver, projectsContactInfo } from "@/mockData/projects";
+import {
+  projects,
+  projectFilters,
+  projectFilterCategoryMap,
+  projectsHeroStats,
+  projectsHowWeDeliver,
+  projectsContactInfo,
+} from "@/mockData/projects";
 import {
   useContactEnquiry,
   CONTACT_STATUS_MESSAGES,
@@ -120,7 +127,12 @@ export default function ProjectsPage() {
   const filteredProjects =
     activeFilter === "ALL"
       ? projects
-      : projects.filter((p) => p.category === activeFilter);
+      : projects.filter((p) => {
+          const categories = projectFilterCategoryMap[activeFilter.toLowerCase()];
+          return categories?.some(
+            (c) => c.toLowerCase() === p.category.toLowerCase()
+          );
+        });
 
   const displayedProjects = filteredProjects.slice(0, visibleCount);
   const hasMore = visibleCount < filteredProjects.length;
@@ -266,6 +278,8 @@ export default function ProjectsPage() {
           <div className="flex justify-end">
   <button
     type="button"
+    onClick={handleLoadMore}
+    disabled={!hasMore}
     className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
   >
     Load More
@@ -454,7 +468,7 @@ export default function ProjectsPage() {
             <button
             type="submit"
             disabled={status === "sending"}
-            className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
+            className="mt-2 w-full border border-[var(--color-primary)] bg-[var(--bg-light)] py-4 text-sm font-bold tracking-[0.3em] text-[var(--color-primary)] transition-all hover:bg-[var(--color-primary)] hover:text-white sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
           >
             {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
           </button>
