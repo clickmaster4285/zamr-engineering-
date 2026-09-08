@@ -48,7 +48,6 @@ function ProjectCard({
   return (
     <div
       ref={ref}
-      onClick={() => router.push(`/projects/${project.slug}`)}
       className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-10 scale-95"
@@ -155,7 +154,6 @@ export default function Projects() {
                 <button
                   key={filter}
                   type="button"
-                  onClick={() => setActiveFilter(filter)}
                   className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${isActive
                       ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
                       : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"

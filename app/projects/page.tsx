@@ -1,6 +1,6 @@
 "use client";
 
-import  { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Barlow } from "next/font/google";
@@ -72,17 +72,14 @@ function ProjectCard({
   return (
     <div
       ref={ref}
-      onClick={() => router.push(`/projects/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        inView
+      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-10 scale-95"
-      }`}
+        }`}
     >
       <div
-        className={`relative w-full overflow-hidden ${
-          isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
-        }`}
+        className={`relative w-full overflow-hidden ${isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
+          }`}
       >
         <Image
           src={project.heroImage}
@@ -93,13 +90,12 @@ function ProjectCard({
         />
 
         <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge && !noHover ? " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]":"bg-[var(--overlay-image-default)]"}`}
+          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge && !noHover ? " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]" : "bg-[var(--overlay-image-default)]"}`}
         />
 
         <span
-          className={`absolute left-5 top-5 font-[800] tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${
-            isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
-          }`}
+          className={`absolute left-5 top-5 font-[800] tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
+            }`}
         >
           {project.index}
         </span>
@@ -128,11 +124,11 @@ export default function ProjectsPage() {
     activeFilter === "ALL"
       ? projects
       : projects.filter((p) => {
-          const categories = projectFilterCategoryMap[activeFilter.toLowerCase()];
-          return categories?.some(
-            (c) => c.toLowerCase() === p.category.toLowerCase()
-          );
-        });
+        const categories = projectFilterCategoryMap[activeFilter.toLowerCase()];
+        return categories?.some(
+          (c) => c.toLowerCase() === p.category.toLowerCase()
+        );
+      });
 
   const displayedProjects = filteredProjects.slice(0, visibleCount);
   const hasMore = visibleCount < filteredProjects.length;
@@ -178,9 +174,8 @@ export default function ProjectsPage() {
             {projectsHeroStats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex flex-col justify-center items-start flex-1 min-w-0 ${
-                  i > 0 ? "border-l border-white/37" : ""
-                } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
+                className={`flex flex-col justify-center items-start flex-1 min-w-0 ${i > 0 ? "border-l border-white/37" : ""
+                  } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
               >
                 <span
                   className={`${barlow.className} font-black text-white text-[16px] leading-[20px] sm:text-[24px] sm:leading-[28px] lg:text-[34px] lg:leading-[34px]`}
@@ -232,11 +227,10 @@ export default function ProjectsPage() {
                     key={filter}
                     type="button"
                     onClick={() => handleFilterChange(filter)}
-                    className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${
-                      isActive
+                    className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${isActive
                         ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
                         : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                    } ${isAll ? "w-20 lg:flex-none" : ""}`}
+                      } ${isAll ? "w-20 lg:flex-none" : ""}`}
                   >
                     {filter}
                   </button>
@@ -276,15 +270,13 @@ export default function ProjectsPage() {
 
           {/* Load More button — always shown, disabled when all loaded */}
           <div className="flex justify-end">
-  <button
-    type="button"
-    onClick={handleLoadMore}
-    disabled={!hasMore}
-    className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
-  >
-    Load More
-  </button>
-</div>
+            <button
+              type="button"
+              className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
+            >
+              Load Mores
+            </button>
+          </div>
         </div>
       </section>
 
@@ -465,12 +457,12 @@ export default function ProjectsPage() {
               </p>
             )}
             <button
-            type="submit"
-            disabled={status === "sending"}
-            className="mt-2 w-full border border-[var(--color-primary)] bg-[var(--bg-light)] py-4 text-sm font-bold tracking-[0.3em] text-[var(--color-primary)] transition-all hover:bg-[var(--color-primary)] hover:text-white sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
-          </button>
+              type="submit"
+              disabled={status === "sending"}
+              className="mt-2 w-full border border-[var(--color-primary)] bg-[var(--bg-light)] py-4 text-sm font-bold tracking-[0.3em] text-[var(--color-primary)] transition-all hover:bg-[var(--color-primary)] hover:text-white sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
+            </button>
           </form>
         </div>
       </section>
