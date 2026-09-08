@@ -731,7 +731,7 @@ export interface ProjectsContactInfo {
 export const defaultHeroImage = "/images/image5.jpeg";
 
 export const projectsContactInfo: ProjectsContactInfo = {
-  address: "Level 5, 123 Pitt Street, Sydney NSW 2000",
-  phone: "+61 2 9000 0000",
-  email: "enquiries@zamrengineering.com.au",
+  address: "L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150, 30 Smith Street, Wentworthville, NSW 2145",
+  phone: "02 9688 5322",
+  email: "admin@zamrengineering.com.au",
 };

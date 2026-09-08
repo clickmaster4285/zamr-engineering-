@@ -346,8 +346,7 @@ export default function ProjectsPage() {
 
             <div className="flex flex-col justify-end gap-5">
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
-                Tell us about your infrastructure challenge. We&apos;ll match you with the
-                right engineering specialist and respond within 1&ndash;2 business days.
+                Tell us about your project or challenge. Our engineering team will review your enquiry and respond within 1–2 business days.
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
                 <span className="text-[var(--color-blue-label)]">Office:</span>{" "}
