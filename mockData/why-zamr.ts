@@ -9,7 +9,7 @@ export interface HeroContent {
 export const heroContent: HeroContent = {
   title: "Engineering Confidence Through\nExperience, Quality & Precision",
   subtitle:
-    "Choosing the right engineering partner is critical to every project's success. At ZAMR Engineering, we combine technical expertise, industry knowledge, and practical solutions to deliver reliable outcomes that exceed expectations.",
+    "At ZAMR Engineering, we provide practical engineering solutions backed by industry experience, technical expertise, and a commitment to quality. From infrastructure delivery to independent verification, we work alongside our clients to solve complex challenges and deliver reliable project outcomes.",
   image: "/images/image5.jpeg",
 };
 
