@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Barlow } from "next/font/google";
 import { getProjectBySlug } from "@/mockData/projects";
 
@@ -19,6 +20,7 @@ interface Props {
 }
 
 export default function ReferProjects({ projectSlug }: Props) {
+  const router = useRouter();
   const project =
     getProjectBySlug(projectSlug ?? "great-western-highway-upgrade—kelso-to-raglan") ??
     getProjectBySlug("jonica-rd-australia-double-storey-dwelling-&-studio");
@@ -74,7 +76,8 @@ export default function ReferProjects({ projectSlug }: Props) {
           {cards.map((project) => (
             <div
               key={project.slug}
-              className="group relative h-[260px] w-full overflow-hidden sm:h-[300px] lg:h-[340px]"
+              onClick={() => router.push(`/projects/${project.slug}`)}
+              className="group relative h-[260px] w-full cursor-pointer overflow-hidden sm:h-[300px] lg:h-[340px]"
               style={{ background: "var(--text-heading)" }}
             >
               <Image
