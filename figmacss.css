@@ -1,10 +1,56 @@
-/* Hero */
+/* OVERVIEW */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 130px;
+gap: 10px;
 
 width: 1728px;
-height: 732px;
+height: 554px;
 
-background: linear-gradient(0deg, rgba(7, 24, 61, 0.8), rgba(7, 24, 61, 0.8)), url(image.jpg);
-background: linear-gradient(0deg, color(display-p3 0.043 0.094 0.231 / 0.8), color(display-p3 0.043 0.094 0.231 / 0.8)), url(image.jpg);
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319060 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 60px;
+
+width: 1468px;
+height: 294px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321319050 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 28px;
+
+width: 1468px;
+height: 103px;
+
 
 /* Inside auto layout */
 flex: none;
@@ -13,49 +59,17 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Header */
-
-position: absolute;
-width: 1727px;
-height: 100px;
-left: calc(50% - 1727px/2 + 0.5px);
-top: 0px;
-
-
-
-/* Frame 114 */
+/* Frame 118 */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
-justify-content: center;
 align-items: center;
 padding: 0px;
-gap: 24px;
+gap: 16px;
 
-position: absolute;
-width: 907px;
-height: 18px;
-left: calc(50% - 907px/2);
-top: calc(50% - 18px/2 + 0.5px);
-
-
-
-/* ABOUT */
-
-width: 48px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
+width: 344px;
+height: 20px;
 
 
 /* Inside auto layout */
@@ -64,22 +78,35 @@ order: 0;
 flex-grow: 0;
 
 
-/* SERVICES */
+/* 02 */
 
-width: 64px;
-height: 18px;
+width: 23px;
+height: 20px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
 
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
 
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 104px;
+height: 0px;
+
+border: 1px solid #333333;
+border: 1px solid color(display-p3 0.200 0.200 0.200);
 
 /* Inside auto layout */
 flex: none;
@@ -87,290 +114,22 @@ order: 1;
 flex-grow: 0;
 
 
-/* PROJECTS */
+/* Our Commitment */
 
-width: 71px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Why ZAMR Engineering */
-
-width: 170px;
-height: 18px;
+width: 185px;
+height: 20px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* Our Team */
-
-width: 71px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-
-
-/* Trusted & Accredited */
-
-width: 162px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-flex-grow: 0;
-
-
-/* Engineering For Impact */
-
-width: 177px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
-
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-flex-grow: 0;
-
-
-/* Frame 115 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 16px 25px;
-gap: 10px;
-
-position: absolute;
-width: 133px;
-height: 50px;
-left: 1464px;
-top: calc(50% - 50px/2 + 0.5px);
-
-border: 1px solid #FFFFFF;
-border: 1px solid color(display-p3 1.000 1.000 1.000);
-
-
-/* CONTACT */
-
-width: 83px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-align: center;
+font-size: 16px;
+line-height: 20px;
 letter-spacing: 3px;
 text-transform: uppercase;
 
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
 
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* ZAMR  */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 4.9px;
-
-position: absolute;
-width: 111px;
-height: 49px;
-left: 130px;
-top: calc(50% - 49px/2 + 0.5px);
-
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 2.88px;
-
-width: 111px;
-height: 31.13px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* z */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 5.75474px;
-gap: 9.59px;
-
-width: 25.37px;
-height: 30.69px;
-
-background: #1945A7;
-background: color(display-p3 0.145 0.267 0.631);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Z */
-
-width: 13.43px;
-height: 19.18px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* a */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 5.75474px;
-gap: 9.59px;
-
-width: 25.37px;
-height: 31.13px;
-
-background: #1945A7;
-background: color(display-p3 0.145 0.267 0.631);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* A */
-
-width: 13.84px;
-height: 19.6px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* m */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 5.75474px;
-gap: 9.59px;
-
-width: 25.37px;
-height: 31.13px;
-
-background: #1945A7;
-background: color(display-p3 0.145 0.267 0.631);
 
 /* Inside auto layout */
 flex: none;
@@ -378,294 +137,28 @@ order: 2;
 flex-grow: 0;
 
 
-/* M */
+/* Our Commitment to Every Client */
 
-width: 13.84px;
-height: 17.29px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border: 0.479561px solid #FA0000;
-border: 0.479561px solid color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* r */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 5.75474px;
-gap: 9.59px;
-
-width: 25.37px;
-height: 31.13px;
-
-background: #1945A7;
-background: color(display-p3 0.145 0.267 0.631);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* R */
-
-width: 13.43px;
-height: 19.18px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 85 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 2.44px;
-
-width: 111.28px;
-height: 13.28px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 7.6px;
-height: 13.06px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 10.3px;
-height: 13.23px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 11.54px;
-height: 13.28px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 1.16px;
-height: 13.09px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 10.32px;
-height: 13.18px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 7.44px;
-height: 13.09px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 7.38px;
-height: 13.05px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 8.36px;
-height: 13.18px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 7;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 1.11px;
-height: 13.11px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 8;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 10.32px;
-height: 13.12px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 9;
-flex-grow: 0;
-
-
-/* Vector */
-
-width: 11.38px;
-height: 13.26px;
-
-background: #FA0000;
-background: color(display-p3 0.898 0.059 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 10;
-flex-grow: 0;
-
-
-/* Frame 1321319043 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 20px;
-
-position: absolute;
-width: 1037px;
-height: 245px;
-left: 130px;
-top: calc(50% - 245px/2 + 34px);
-
-
-
-/* Great Western Highway Upgrade — Kelso to Raglan */
-
-width: 1037px;
-height: 202px;
+width: 657px;
+height: 55px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 700;
-font-size: 80px;
-line-height: 101px;
+font-size: 44px;
+line-height: 55px;
 
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Rebuilding a critical arterial corridor without stopping a city. */
-
-width: 1037px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319076 */
+/* Frame 1321319062 */
 
 /* Auto layout */
 display: flex;
@@ -673,690 +166,14 @@ flex-direction: row;
 align-items: center;
 padding: 0px;
 
-position: absolute;
 width: 1468px;
-height: 147px;
-left: calc(50% - 1468px/2);
-top: 536px;
-
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-gap: 6px;
-
-width: 293.6px;
-height: 147px;
+height: 131px;
 
 
 /* Inside auto layout */
 flex: none;
-order: 0;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 253.6px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
+order: 1;
 align-self: stretch;
-flex-grow: 0;
-
-
-/* CLIENT */
-
-width: 40px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* image 17 [Vectorized] */
-
-width: 207px;
-height: 79px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 20.62%;
-right: 66.76%;
-top: 58.4%;
-bottom: 15.63%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.18%;
-right: 87.98%;
-top: 58.43%;
-bottom: 15.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.06%;
-right: 76.38%;
-top: 16.6%;
-bottom: 49.37%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.22%;
-right: 82.87%;
-top: 16.62%;
-bottom: 49.48%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 79.03%;
-right: 7.71%;
-top: 72.71%;
-bottom: 3.45%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.81%;
-right: 86.97%;
-top: 9.37%;
-bottom: 50.5%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 21.91%;
-right: 72.01%;
-top: 9.4%;
-bottom: 50.49%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 12.61%;
-right: 79.49%;
-top: 57.96%;
-bottom: 14.93%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 74.88%;
-right: 18.14%;
-top: 44.74%;
-bottom: 31.73%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 82.58%;
-right: 10.31%;
-top: 44.59%;
-bottom: 36.67%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 47.26%;
-right: 45.63%;
-top: 78.11%;
-bottom: 3.16%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 63.35%;
-right: 28.83%;
-top: 72.74%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 14.21%;
-right: 79.38%;
-top: 2.16%;
-bottom: 69.15%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 24.25%;
-right: 65.99%;
-top: 31.3%;
-bottom: 50.56%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.89%;
-right: 89.35%;
-top: 31.38%;
-bottom: 50.53%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 54.31%;
-right: 39.54%;
-top: 44.87%;
-bottom: 36.85%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 72.07%;
-right: 21.03%;
-top: 72.47%;
-bottom: 3.37%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 61.72%;
-right: 32.18%;
-top: 44.76%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 38.55%;
-right: 60.73%;
-top: 9.61%;
-bottom: 3.11%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 43.13%;
-right: 49.62%;
-top: 39.23%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 68.5%;
-right: 26.12%;
-top: 44.81%;
-bottom: 36.91%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 43.11%;
-right: 52.73%;
-top: 71.68%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 94.91%;
-right: 0.88%;
-top: 40.28%;
-bottom: 36.93%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 55.28%;
-right: 40.73%;
-top: 78.27%;
-bottom: 3.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 50.36%;
-right: 45.68%;
-top: 44.7%;
-bottom: 37.14%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 90.73%;
-right: 5.31%;
-top: 44.72%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.3%;
-right: 93.5%;
-top: 20.87%;
-bottom: 67.79%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 28.42%;
-right: 67.44%;
-top: 20.84%;
-bottom: 68.01%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 19.77%;
-right: 76.36%;
-top: 3.96%;
-bottom: 83.07%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.15%;
-right: 84.98%;
-top: 3.94%;
-bottom: 83.22%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.78%;
-right: 83.13%;
-top: 50.86%;
-bottom: 45.04%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 18.29%;
-right: 72%;
-top: 50.83%;
-bottom: 45.08%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 5.11%;
-right: 91.7%;
-top: 88.1%;
-bottom: 3.49%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 14.38%;
-right: 83.02%;
-top: 88.24%;
-bottom: 3.59%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 20.54%;
-right: 76.44%;
-top: 88.11%;
-bottom: 3.59%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.32%;
-right: 79.98%;
-top: 88.13%;
-bottom: 3.51%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 26.79%;
-right: 70.52%;
-top: 88.14%;
-bottom: 3.51%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 1.91%;
-right: 95.16%;
-top: 88.05%;
-bottom: 3.53%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 24.02%;
-right: 73.65%;
-top: 88.23%;
-bottom: 3.58%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.6%;
-right: 86.07%;
-top: 88.27%;
-bottom: 3.59%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 8.23%;
-right: 88.82%;
-top: 88.14%;
-bottom: 3.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 29.91%;
-right: 67.58%;
-top: 88.26%;
-bottom: 3.56%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 293.6px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 252.6px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* VALUE */
-
-width: 36px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 193.33px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* $ 45 Million */
-
-width: 70px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
 flex-grow: 0;
 
 
@@ -1368,30 +185,212 @@ box-sizing: border-box;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 24px 20px;
+padding: 24px;
 
-width: 293.6px;
-height: 87px;
+width: 489.33px;
+height: 131px;
 
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #EAEAEA;
+border-color: color(display-p3 0.918 0.918 0.918);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 440.33px;
+height: 82px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Quality */
+
+width: 440.33px;
+height: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 30px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 440.33px;
+height: 40px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+
+width: 489.33px;
+height: 131px;
+
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #EAEAEA;
+border-color: color(display-p3 0.918 0.918 0.918);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 440.33px;
+height: 82px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Integrity */
+
+width: 440.33px;
+height: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 30px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 440.33px;
+height: 40px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+
+width: 489.33px;
+height: 131px;
+
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: #EAEAEA;
+border-color: color(display-p3 0.918 0.918 0.918);
 
 /* Inside auto layout */
 flex: none;
 order: 2;
+align-self: stretch;
 flex-grow: 1;
 
 
-/* Paragraph */
+/* Frame 1321319061 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
+gap: 12px;
 
-width: 252.6px;
-height: 14px;
+width: 440.33px;
+height: 82px;
 
 
 /* Inside auto layout */
@@ -1401,99 +400,19 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* DURATION */
+/* Innovation */
 
-width: 56px;
-height: 14px;
+width: 440.33px;
+height: 30px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 12px;
-line-height: 14px;
+font-size: 24px;
+line-height: 30px;
 
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 193.33px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* March 2022- March 2025 */
-
-width: 153px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 293.6px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 252.6px;
-height: 14px;
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
 
 
 /* Inside auto layout */
@@ -1503,164 +422,23 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* LOCATION */
+/* We engage with your project team to define scope,  */
 
-width: 54px;
-height: 14px;
+width: 440.33px;
+height: 40px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
 
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 193.34px;
-height: 25px;
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-flex-grow: 0;
-
-
-/* Bathurst, NSW */
-
-width: 91px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 293.6px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 252.6px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
 align-self: stretch;
-flex-grow: 0;
-
-
-/* SCOPE */
-
-width: 37px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 193.33px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Civil Works */
-
-width: 69px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
 flex-grow: 0;

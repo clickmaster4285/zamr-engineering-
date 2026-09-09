@@ -4,24 +4,24 @@ import { commitmentCards } from "@/mockData/why-zamr";
 
 export default function Commitment() {
   return (
-    <section className="w-full bg-[var(--bg-hero)] px-6 py-16 lg:p-[130px]">
+    <section className="w-full bg-[var(--bg-section)] px-6 py-16 lg:p-[130px] text-[var(--text-dark)]">
       {/* Frame 1321319060 — inner */}
       <div className="flex flex-col items-start gap-10 lg:gap-[60px]">
         {/* Frame 1321319050 — header */}
         <div className="flex w-full flex-col items-start gap-6 lg:gap-[28px]">
           {/* Frame 118 — section label */}
           <div className="flex flex-row items-center gap-4">
-            <span className="text-sm font-medium tracking-[3px] text-white lg:text-base">
+            <span className="text-sm font-medium tracking-[3px]  lg:text-base">
               03
             </span>
-            <span className="h-px w-12 bg-white sm:w-[104px]" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-white lg:text-base">
+            <span className="h-px w-12 bg-[var(--text-dark)] sm:w-[104px]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase  lg:text-base">
               Our Commitment
             </span>
           </div>
 
           {/* Heading */}
-          <h2 className="w-full text-[32px] font-bold leading-[40px] text-white sm:text-[38px] sm:leading-[46px] lg:text-[44px] lg:leading-[55px]">
+          <h2 className="w-full text-[32px] font-bold leading-[40px]  sm:text-[38px] sm:leading-[46px] lg:text-[44px] lg:leading-[55px]">
             Our Commitment to Every Client
           </h2>
         </div>
@@ -31,11 +31,11 @@ export default function Commitment() {
           {commitmentCards.map((card) => (
             <div
               key={card.title}
-              className="flex w-full flex-col items-start border-0 border-b border-l-0 border-white/[0.08] p-6 lg:w-[489.33px] lg:flex-1 lg:border-b lg:border-l"
+              className="flex w-full flex-col items-start border-0 border-b border-l-0 border-[var(--text-light-subtle)]/20 p-6 lg:w-[489.33px] lg:flex-1 lg:border-b lg:border-l"
             >
               {/* Frame 1321319061 */}
               <div className="flex w-full flex-col items-start gap-3 self-stretch">
-                <h3 className="w-full text-xl font-semibold leading-[30px] text-white sm:text-2xl lg:text-[24px]">
+                <h3 className="w-full text-xl font-semibold leading-[30px]  sm:text-2xl lg:text-[24px]">
                   {card.title}
                 </h3>
                 <p className="w-full text-sm leading-5 text-[var(--text-light-subtle)] sm:text-base lg:text-[16px] lg:leading-[20px]">
