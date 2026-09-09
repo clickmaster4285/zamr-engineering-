@@ -52,6 +52,7 @@ export interface ServicePreviewItem {
   slug: string;
   title: string;
   description: string;
+  tags: string[];
 }
 
 export interface ProjectsFeaturedWork {
@@ -198,9 +199,7 @@ export const servicesPreview: ServicePreviewItem[] = [
   },
 ];
 
-export const serviceTagRows: string[][] = [
-  ["Civil "],["Structural "],  ["Transport & Traffic"],["Civil "],["Bridges"],  ["Drainage "],["Geotechnical "],
-];
+
 
 export const projectFilters: string[] = [
   "ALL",

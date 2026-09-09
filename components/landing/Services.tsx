@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
-import { servicesPreview, serviceTagRows } from "@/mockData/landing";
+import { servicesPreview } from "@/mockData/landing";
 
 export default function Services() {
   const router = useRouter();
@@ -63,28 +63,21 @@ export default function Services() {
     lg:opacity-0 lg:group-hover:opacity-100
   "
 >
-  {serviceTagRows.map((row, ri) => (
-    <div
-      key={ri}
-      className="flex flex-wrap items-center gap-[10px]"
+  {service.tags.map((tag) => (
+    <span
+      key={tag}
+      className="
+        inline-flex items-center
+        bg-white
+        px-[12px] py-[7px]
+        text-[12px] font-normal
+        leading-none
+        tracking-normal
+        text-[#222]
+      "
     >
-      {row.map((tag) => (
-        <span
-          key={tag}
-          className="
-            inline-flex items-center
-            bg-white
-            px-[12px] py-[7px]
-            text-[12px] font-normal
-            leading-none
-            tracking-normal
-            text-[#222]
-          "
-        >
-          {tag}
-        </span>
-      ))}
-    </div>
+      {tag}
+    </span>
   ))}
 </div>
             </div>
