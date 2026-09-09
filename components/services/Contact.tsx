@@ -16,7 +16,7 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
   return (
     <section className="w-full bg-white px-6 py-16 lg:p-[130px]" style={{ background: "var(--bg-section)" }}>
       <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-[231px]">
-        <div className="flex w-full flex-col gap-[50px] lg:w-[755px]">
+        <div className="flex w-full flex-col gap-[50px] lg:w-[600px]">
           <div className="flex w-full flex-col gap-[30px]">
             <div className="flex flex-row items-center gap-4">
               <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">

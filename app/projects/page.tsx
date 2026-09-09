@@ -74,8 +74,8 @@ function ProjectCard({
       ref={ref}
       onClick={() => router.push(`/projects/${project.slug}`)}
       className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-10 scale-95"
+        ? "opacity-100 translate-y-0 scale-100"
+        : "opacity-0 translate-y-10 scale-95"
         }`}
     >
       <div
@@ -229,8 +229,8 @@ export default function ProjectsPage() {
                     type="button"
                     onClick={() => handleFilterChange(filter)}
                     className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${isActive
-                        ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                        : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
                       } ${isAll ? "w-20 lg:flex-none" : ""}`}
                   >
                     {filter}
@@ -321,7 +321,7 @@ export default function ProjectsPage() {
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
         <div className="mx-auto flex max-w-[1468px] flex-col gap-12 lg:flex-row lg:items-start lg:gap-[231px]">
           {/* Left — info */}
-          <div className="flex w-full flex-col gap-[30px] lg:w-[755px]">
+          <div className="flex w-full flex-col gap-[30px] lg:w-[600px]">
             <div className="flex flex-col gap-[30px]">
               <div className="flex items-center gap-4">
                 <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
@@ -407,9 +407,9 @@ export default function ProjectsPage() {
                   style={{ borderBottom: "1px solid var(--border-input)" }}
                 />
               </div>
-             
+
             </div>
-<div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
+            <div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
               <div className="flex flex-1 flex-col gap-2">
                 <label
                   htmlFor="company"
@@ -448,7 +448,7 @@ export default function ProjectsPage() {
               </div>
             </div>
             <div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
-               <div className="flex flex-1 flex-col gap-2">
+              <div className="flex flex-1 flex-col gap-2">
                 <label
                   htmlFor="email"
                   className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
@@ -489,7 +489,7 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            
+
 
             <div className="flex flex-col gap-2">
               <label
