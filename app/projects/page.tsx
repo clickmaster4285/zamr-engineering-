@@ -371,7 +371,7 @@ export default function ProjectsPage() {
               <div className="flex flex-1 flex-col gap-2">
                 <label
                   htmlFor="name"
-                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
                 >
                   NAME
                 </label>
@@ -391,10 +391,69 @@ export default function ProjectsPage() {
               </div>
               <div className="flex flex-1 flex-col gap-2">
                 <label
-                  htmlFor="email"
-                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                  htmlFor="designation"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
                 >
-                  EMAIL
+                  DESIGNATION
+                </label>
+                <input
+                  id="designation"
+                  name="designation"
+                  type="text"
+                  value={form.designation}
+                  onChange={handleChange}
+                  placeholder="Designation"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
+             
+            </div>
+<div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="company"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
+                >
+                  COMPANY NAME
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Company Name"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="website"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
+                >
+                  COMPANY WEBSITE
+                </label>
+                <input
+                  id="website"
+                  name="website"
+                  type="url"
+                  value={form.website}
+                  onChange={handleChange}
+                  placeholder="Website  URL"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
+               <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="email"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
+                >
+                  BUSINESS EMAIL
                 </label>
                 <input
                   id="email"
@@ -402,7 +461,7 @@ export default function ProjectsPage() {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="you@company.com.au"
+                  placeholder="Business Email"
                   className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                   style={{ borderBottom: "1px solid var(--border-input)" }}
                 />
@@ -410,12 +469,32 @@ export default function ProjectsPage() {
                   <p className="text-[12px] leading-[15px] text-[var(--color-error)]">{errors.email}</p>
                 )}
               </div>
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="phone"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
+                >
+                  BUSINESS PHONE NUMBER
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Business Phone Number"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
             </div>
+
+            
 
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="subject"
-                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
               >
                 SUBJECT
               </label>
@@ -425,7 +504,7 @@ export default function ProjectsPage() {
                 type="text"
                 value={form.subject}
                 onChange={handleChange}
-                placeholder="Project enquiry"
+                placeholder="Subject"
                 className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                 style={{ borderBottom: "1px solid var(--border-input)" }}
               />
@@ -437,9 +516,9 @@ export default function ProjectsPage() {
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="message"
-                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
               >
-                PROJECT DETAILS
+                Message
               </label>
               <textarea
                 id="message"
