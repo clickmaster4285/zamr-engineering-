@@ -235,24 +235,24 @@ export interface WhyZamrPoint {
 
 export const whyZamrPoints: WhyZamrPoint[] = [
   {
-    title: "Safety first",
+    title: "Technical Excellence",
     description:
-      "An EMR consistently below industry average  because every worker goes home.",
+      "Delivering precise engineering solutions backed by rigorous analysis, industry standards, and a commitment to quality outcomes.",
   },
   {
-    title: "Self-perform strength",
+    title: "TfNSW Specialists",
     description:
-      "In-house concrete, steel, and interiors crews give us schedule and quality control others can't match.",
+      "Extensive experience delivering projects in accordance with Transport for NSW standards and specifications.",
   },
   {
-    title: "Built sustainably",
+    title: "Practical Delivery Focus",
     description:
-      "LEED, WELL, and net-zero expertise woven into every phase of design and construction.",
+      "Combining engineering expertise with construction knowledge to develop solutions that are safe, efficient, and buildable.",
   },
   {
-    title: "Owner-aligned",
+    title: "Client-Aligned Approach",
     description:
-      "Transparent budgets, open-book contracts, and one team accountable from day one to handover.",
+      "Working collaboratively with government, developers, and contractors to deliver transparent advice and successful project outcomes from concept to completion.",
   },
 ];
 
