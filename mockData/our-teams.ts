@@ -56,42 +56,42 @@ export const engineeringTeams: EngineeringTeam[] = [
   {
     title: "Planning & Design",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Front-end feasibility and geometric design for urban environments.",
   },
   {
     title: "Civil Engineering",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Comprehensive solutions for pavement, earthworks, and utilities.",
   },
   {
     title: "Structural Engineering",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Advanced analysis for commercial and public infrastructure.",
   },
   {
     title: "Bridge Engineering",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Specialist rehabilitation and lifecycle asset management.",
   },
   {
     title: "Traffic Engineering",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Integrated systems for smarter, safer road networks.",
   },
   {
     title: "Asset Management",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Data-led strategies for maintaining utility-scale infrastructure.",
   },
   {
     title: "Project Management",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "End-to-end accountability from planning to final handover.",
   },
   {
     title: "Operational Quality",
     description:
-      "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established.",
+      "Rigorous verification and compliance auditing processes.",
   },
 ];
 
