@@ -53,13 +53,13 @@ export default function Services() {
                 {service.description}
               </p>
 
-{/* Tags — Figma style, visible on hover */}
+{/* Tags — visible on mobile, hover-reveal on desktop */}
 <div
   className="
     flex flex-wrap items-start gap-[10px]
-    opacity-100 transition-opacity duration-300
-    group-hover:opacity-100
-    lg:ml-[26px] lg:w-[344px] lg:shrink-0
+    transition-opacity duration-300
+    ml-[37px] mt-1
+    lg:ml-[26px] lg:w-[344px] lg:shrink-0 lg:mt-0
     lg:opacity-0 lg:group-hover:opacity-100
   "
 >
