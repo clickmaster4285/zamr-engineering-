@@ -15,6 +15,7 @@
      All values in oklch for consistency.
      ════════════════════════════════════════════ */
 
+  --color-alert-accent-line: oklch(0.5284 0.1808 32.74);
   --color-primary: oklch(0.254 0.07 266.5);
   --color-primary-hover: oklch(0.226 0.061 265.4);
   --color-secondary: oklch(0.696 0.102 78);
@@ -45,18 +46,19 @@
   --bg-light: oklch(0.979 0.006 264.4);
   --bg-light-alt: oklch(0.985 0.003 264.4);
   --bg-hero: oklch(0.246 0.076 267.5);
-  --bg-section: oklch(0.97 0.004 264.4);       /* #F6F8FC — section backgrounds */
+  --bg-section: oklch(0.9764 0.0063 254.21);       /* #F6F8FC — section backgrounds */
   --bg-card: oklch(0.956 0.005 264.4);          /* #EFF4FC — card backgrounds */
   --bg-hover: oklch(0.976 0.002 264.4);         /* #F9FAFC — hover state */
-
+  
+  --bg-project-detail-stats: oklch(0.1947 0.0427 264.49);          /* dark blue for project detial stats background */
   /* ════════════════════════════════════════════
      TEXT COLORS
      ════════════════════════════════════════════ */
-  --text-dark: oklch(0.321 0 0);
+  --text-dark: oklch(0.321 0 0);                /* #333333 */
   --text-muted: oklch(0.417 0 0);
   --text-light: oklch(0.757 0 0);
   --text-contact: oklch(0.254 0.07 266.5);
-  --text-heading: oklch(0.105 0.016 264.2);      /* #090D15 — very dark headings */
+  --text-heading: oklch(0.321 0 0);          /* #333333 — very dark headings */
   --text-paragraph: oklch(0.285 0.023 258.3);    /* #344153 — paragraph text */
   --text-soft: oklch(0.487 0.022 258.3);         /* #697281 — muted body text */
   --text-label: oklch(0.649 0.022 258.3);        /* #9AA3B0 — form labels */
@@ -80,7 +82,7 @@
      ════════════════════════════════════════════ */
   --overlay-image-default: oklch(0 0 0 / 0.3);      /* black 30% — darkens images for text readability */
   --overlay-image-hover: oklch(0.254 0.07 266.5 / 0.5);  /* primary blue 50% — blue tint on hover */
-  --overlay-image-hero: oklch(0.254 0.07 266.5 / 0.8);  /* primary blue 50% — blue tint on hover */
+  --overlay-image-hero: oklch(0.222 0.07 265.6 / 0.8);  /* primary blue 80% — blue tint on hero */
 
   /* ════════════════════════════════════════════
      BORDERS
@@ -157,20 +159,20 @@
   --color-bg-light: oklch(0.979 0.006 264.4);
   --color-bg-light-alt: oklch(0.985 0.003 264.4);
   --color-bg-hero: oklch(0.159 0.042 264.8);
-  --color-bg-section: oklch(0.97 0.004 264.4);
+  --color-bg-section: oklch(0.9764 0.0063 254.21);
   --color-bg-card: oklch(0.956 0.005 264.4);
   --color-bg-hover: oklch(0.976 0.002 264.4);
 
   /* ═══ Text ═══ */
-  --color-text-dark: oklch(0.321 0 0);
+  --color-text-dark: oklch(0.321 0 0);            /* #333333 */
   --color-text-muted: oklch(0.417 0 0);
   --color-text-light: oklch(0.757 0 0);
   --color-text-contact: oklch(0.254 0.07 266.5);
-  --color-text-heading: oklch(0.105 0.016 264.2);
+  --color-text-heading: oklch(0.321 0 0);          /* #333333 */
   --color-text-paragraph: oklch(0.285 0.023 258.3);
   --color-text-soft: oklch(0.487 0.022 258.3);
   --color-text-label: oklch(0.649 0.022 258.3);
-  --color-text-light-subtle: oklch(0.72 0 0);
+  --color-text-light-subtle: oklch(0.757 0 89.9);
 
   /* ═══ Borders ═══ */
   --color-border-light: oklch(0.937 0 0);

@@ -1,350 +1,877 @@
+export interface ServiceCapability {
+  title: string;
+  items: string[];
+}
+
 export interface ServiceData {
   slug: string;
   index: string;
   title: string;
-  shortDescription: string;
-  tags: string[][];
-  heroTitle: string;
-  heroSubtitle: string;
-  overviewNumber: string;
-  overviewHeading: string;
-  overviewParagraphs: string[];
-  serviceDetails: { label: string; value: string }[];
-  capabilitiesNumber: string;
-  capabilitiesHeading: string;
-  capabilities: { title: string; description: string }[];
-  processNumber: string;
-  processHeading: string;
-  processSteps: { number: string; title: string; description: string }[];
-  deliverablesNumber: string;
-  deliverablesHeading: string;
-  deliverablesSubtext: string;
-  deliverables: string[];
-  relatedNumber: string;
-  relatedHeading: string;
-  relatedProjects: { title: string; image: string; slug: string }[];
+  description: string;
+  tags: string[];
+  capabilities: ServiceCapability[];
+}
+
+export interface SpecialistExpertise {
+  slug: string;
+  index: string;
+  title: string;
+  description: string;
+  capabilities: ServiceCapability[];
 }
 
 export const services: ServiceData[] = [
   {
-    slug: "civil-engineering",
+    slug: "engineering-and-design",
     index: "01",
-    title: "Civil Engineering",
-    shortDescription:
-      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
-    tags: [["STRUCTURAL", "Hydraulic"], ["GEOTECHNICAL"]],
-    heroTitle: "CIVIL ENGINEERING",
-    heroSubtitle: "Structurally sound. Technically precise. Built to last.",
-    overviewNumber: "01",
-    overviewHeading: "What is Civil Engineering?",
-    overviewParagraphs: [
-      "ZAMR Engineering's civil engineering practice delivers end-to-end solutions for some of New South Wales' most technically demanding infrastructure projects. Our multidisciplinary team combines structural, hydraulic, and geotechnical expertise to produce designs that are rigorously analysed, code-compliant, and engineered for long service life.",
-      "From concept feasibility through to construction certification, we provide a seamless design and verification service. We regularly act as the Engineer of Record on complex urban developments, government infrastructure programs, and greenfield industrial sites — carrying full PI insurance and maintaining accreditations with Engineers Australia and Infrastructure NSW.",
+    title: "Engineering & Design",
+    description:
+      "ZAMR Engineering provides integrated engineering and design services across civil, structural, transport and infrastructure projects. From early investigations and concept development through detailed design and construction support, we deliver practical, buildable and value-focused solutions tailored to project requirements.",
+    tags: [
+      "Civil",
+      "Structural",
+      "Transport & Traffic",
+      "Bridges",
+      "Drainage",
+      "Geotechnical",
     ],
-    serviceDetails: [
-      { label: "SERVICE AREA", value: "NSW · QLD · VIC" },
-      { label: "TEAM SIZE", value: "18 Engineers" },
-      { label: "ACCREDITATION", value: "Engineers Australia RPEQ" },
-      { label: "TYPICAL DURATION", value: "3 – 24 months" },
-      { label: "PROJECT SCALE", value: "$500K – $200M+" },
-      { label: "SECTOR", value: "Government · Private · Industrial" },
-    ],
-    capabilitiesNumber: "02",
-    capabilitiesHeading: "Technical Capabilities",
     capabilities: [
-      { title: "Structural Analysis & Design", description: "RC, steel, and composite structural systems for bridges, retaining walls, culverts, and building substructures." },
-      { title: "Hydraulic Engineering", description: "Stormwater drainage, flood modelling, waterway crossings, and detention basin design to Australian Standards." },
-      { title: "Geotechnical Assessment", description: "Foundation design, slope stability analysis, earthwork specifications, and interpretation of geotechnical investigation data." },
-      { title: "Civil Construction Documentation", description: "Complete construction drawing packages, specifications, BOQ, and engineer's estimates for tender and procurement." },
-      { title: "Site Supervision & Inspection", description: "Hold-point inspections, construction phase engineering, RFI responses, and as-built certification." },
-      { title: "Feasibility & Concept Design", description: "Early-stage technical feasibility, optioneering, and preliminary engineering to support planning and investment decisions." },
-    ],
-    processNumber: "03",
-    processHeading: "Our Delivery Process",
-    processSteps: [
-      { number: "01", title: "Project Briefing & Scope Definition", description: "We engage with your project team to define scope, constraints, and objectives. A tailored project brief and preliminary program are established." },
-      { number: "02", title: "Site Investigation & Data Gathering", description: "Geotechnical, survey, and utility data are collected and reviewed. Site conditions are assessed against the design requirements." },
-      { number: "03", title: "Concept & Preliminary Design", description: "Multiple design options are developed and evaluated. A preferred option is selected based on cost, constructability, and technical performance." },
-      { number: "04", title: "Detailed Design & Documentation", description: "Full engineering calculations, construction drawings, specifications, and BOQ are produced to the required regulatory standard." },
-      { number: "05", title: "Authority & Compliance Approvals", description: "We manage all design-phase authority submissions, RMS, council, and EPA concurrences, and provide Principal Certifier engagement as required." },
-      { number: "06", title: "Construction Support & As-Built", description: "Our engineers provide RFI responses, hold-point inspections, and as-built certification to close out the project." },
-    ],
-    deliverablesNumber: "04",
-    deliverablesHeading: "What You Receive",
-    deliverablesSubtext: "Every engagement is scoped to your project requirements. Below is a representative set of deliverables for a full-scope Civil Engineering engagement.",
-    deliverables: [
-      "Engineering design reports and calculations",
-      "Construction drawings (all disciplines)",
-      "Technical specifications and material schedules",
-      "Bill of Quantities and engineer's estimate",
-      "Authority submission packages",
-      "Construction inspection and hold-point sign-off",
-      "As-built drawings and certification letters",
-      "Design verification statements (DVS)",
-    ],
-    relatedNumber: "05",
-    relatedHeading: "Related Work",
-    relatedProjects: [
-      { title: "Hunter Valley Renewable Energy Hub", image: "/images/image2.jpeg", slug: "hunter-valley-renewable-energy-hub" },
-      { title: "Metropolitan Bridge Rehabilitation", image: "/images/image6.jpeg", slug: "metropolitan-bridge-rehabilitation" },
-      { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
+      {
+        title: "Civil Engineering",
+        items: [
+          "Road and intersection design",
+          "Earthworks and site grading",
+          "Stormwater and drainage design",
+          "Culverts and cross-drainage structures",
+          "Pavement design",
+          "Utilities coordination",
+          "Shared paths and active transport infrastructure",
+        ],
+      },
+      {
+        title: "Structural Engineering",
+        items: [
+          "Structural analysis and design",
+          "Retaining walls",
+          "Foundations",
+          "Culverts and drainage structures",
+          "Temporary works",
+          "Protection slabs",
+          "Structural assessment and strengthening",
+        ],
+      },
+      {
+        title: "Transport & Traffic Engineering",
+        items: [
+          "Intersection and road network improvements",
+          "Traffic impact assessments",
+          "Traffic signal design",
+          "SIDRA and network modelling",
+          "Traffic management planning",
+          "Traffic control plans",
+          "Road safety engineering",
+        ],
+      },
+      {
+        title: "Bridge Engineering",
+        items: [
+          "Concept and detailed bridge design",
+          "Structural analysis",
+          "Foundation design",
+          "Load assessment",
+          "Rehabilitation and strengthening design",
+          "Constructability and design reviews",
+        ],
+      },
+      {
+        title: "Drainage & Water",
+        items: [
+          "Hydrologic and hydraulic assessment",
+          "Stormwater drainage",
+          "Pipe and culvert systems",
+          "Scour protection",
+          "Flood mitigation",
+          "Drainage rehabilitation",
+        ],
+      },
+      {
+        title: "Engineering Advisory & Investigations",
+        items: [
+          "Business cases",
+          "Engineering investigations",
+          "Options assessment",
+          "Technical feasibility",
+          "Project planning and scoping",
+          "Safety in Design",
+          "Constructability reviews",
+          "Value engineering",
+        ],
+      },
     ],
   },
   {
-    slug: "project-verification",
+    slug: "project-and-program-management",
     index: "02",
-    title: "Project Verification",
-    shortDescription:
-      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
-    tags: [["COMPLIANCE", "AUDIT"], ["RISK"]],
-    heroTitle: "PROJECT VERIFICATION",
-    heroSubtitle: "Independent assurance. Complete confidence.",
-    overviewNumber: "01",
-    overviewHeading: "What is Project Verification?",
-    overviewParagraphs: [
-      "ZAMR Engineering provides independent technical verification and compliance review services across the full infrastructure lifecycle. Our team of accredited engineers and auditors delivers objective assessments that give clients, financiers, and regulators complete confidence in project outcomes.",
-      "We operate with full independence from design teams, ensuring our findings are impartial, evidence-based, and actionable. Our verification methodology aligns with the Infrastructure NSW Assurance Framework and TfNSW verification requirements.",
+    title: "Project & Program Management",
+    description:
+      "ZAMR Engineering provides project and program management services across the infrastructure lifecycle, from project development and procurement through design, construction and close-out. Our senior-led approach focuses on effective governance, commercial control, stakeholder coordination and successful project outcomes.",
+    tags: [
+      "Project Management",
+      "Contract Management",
+      "Procurement",
+      "Commercial",
+      "Delivery Advisory",
     ],
-    serviceDetails: [
-      { label: "SERVICE AREA", value: "NSW · QLD · VIC" },
-      { label: "TEAM SIZE", value: "12 Specialists" },
-      { label: "ACCREDITATION", value: "TfNSW Accredited" },
-      { label: "TYPICAL DURATION", value: "2 – 12 months" },
-      { label: "PROJECT SCALE", value: "$100K – $50M+" },
-      { label: "SECTOR", value: "Government · Private" },
-    ],
-    capabilitiesNumber: "02",
-    capabilitiesHeading: "Verification Capabilities",
     capabilities: [
-      { title: "Design Verification", description: "Independent review of engineering designs against codes, standards, and project specifications." },
-      { title: "Compliance Auditing", description: "Systematic audit of project documentation against TfNSW, RMS, and regulatory requirements." },
-      { title: "Risk Assessment", description: "Identification and evaluation of technical, program, and commercial risks across the project lifecycle." },
-      { title: "Quality Assurance", description: "Review of quality management systems, hold-point records, and inspection and test plans." },
-      { title: "Independent Certifier Services", description: "Independent certification of project milestones, completion stages, and handover documentation." },
-      { title: "Due Diligence Reviews", description: "Technical due diligence for infrastructure investments, acquisitions, and project financing." },
-    ],
-    processNumber: "03",
-    processHeading: "Our Verification Process",
-    processSteps: [
-      { number: "01", title: "Scope Definition", description: "We work with you to define the verification scope, standards, and acceptance criteria." },
-      { number: "02", title: "Document Review", description: "All relevant design documents, specifications, and records are reviewed against requirements." },
-      { number: "03", title: "Site Inspection", description: "On-site inspections verify that construction aligns with approved designs and specifications." },
-      { number: "04", title: "Findings & Reporting", description: "A comprehensive verification report is produced, detailing findings, non-conformances, and recommendations." },
-      { number: "05", title: "Close-Out Verification", description: "We verify that all identified issues have been resolved and closed out to the required standard." },
-      { number: "06", title: "Certificate Issuance", description: "A final verification certificate is issued, providing formal assurance of compliance." },
-    ],
-    deliverablesNumber: "04",
-    deliverablesHeading: "Verification Deliverables",
-    deliverablesSubtext: "Our verification engagements are scoped to your specific project requirements and assurance framework.",
-    deliverables: [
-      "Verification scope and methodology report",
-      "Design review and compliance checklists",
-      "Site inspection reports and photographs",
-      "Non-conformance and observation registers",
-      "Progressive verification statements",
-      "Final verification certificate",
-      "Close-out report",
-    ],
-    relatedNumber: "05",
-    relatedHeading: "Related Work",
-    relatedProjects: [
-      { title: "Western Sydney Infrastructure Plan", image: "/images/image6.jpeg", slug: "western-sydney-infrastructure-corridor" },
-      { title: "Pacific Highway Upgrade Verification", image: "/images/image5.jpeg", slug: "pacific-highway-upgrade-verification" },
+      {
+        title: "Project Management",
+        items: [
+          "Scope definition and project planning",
+          "Programming and scheduling",
+          "Budget and cost management",
+          "Risk and opportunity management",
+          "Team coordination",
+          "Quality management",
+          "Reporting and governance",
+        ],
+      },
+      {
+        title: "Program Management",
+        items: [
+          "Strategic program planning",
+          "Multi-project coordination",
+          "Resource management",
+          "Program controls",
+          "Stakeholder engagement",
+          "Performance monitoring",
+        ],
+      },
+      {
+        title: "Contract & Commercial Management",
+        items: [
+          "Contract administration",
+          "Change and variation management",
+          "Claims assessment",
+          "Documentation control",
+          "Performance monitoring",
+          "Commercial reviews",
+          "Dispute support",
+        ],
+      },
+      {
+        title: "Procurement & Tendering",
+        items: [
+          "Procurement strategies",
+          "Tender documentation",
+          "Specifications",
+          "Tender evaluation support",
+          "Contractor engagement",
+          "Estimating and pricing",
+          "Delivery methodology",
+          "Risk and opportunity assessment",
+        ],
+      },
+      {
+        title: "Stakeholder & Interface Management",
+        items: [
+          "Government and authority interfaces",
+          "Utilities coordination",
+          "Client and contractor coordination",
+          "Community and stakeholder engagement",
+          "Design and construction interfaces",
+          "Issue resolution",
+        ],
+      },
+      {
+        title: "Project Controls",
+        items: [
+          "Programme development",
+          "Cost tracking",
+          "Progress monitoring",
+          "Risk registers",
+          "Forecasting",
+          "Reporting dashboards",
+          "Project governance",
+        ],
+      },
     ],
   },
   {
-    slug: "road-infrastructure",
+    slug: "project-verification-and-assurance",
     index: "03",
-    title: "Road Infrastructure",
-    shortDescription:
-      "Advanced pavement engineering, geometric road design, and integrated traffic systems for future-ready transport networks across New South Wales and beyond.",
-    tags: [["PAVEMENT"], ["TRAFFIC"], ["GEOMETRIC"]],
-    heroTitle: "ROAD INFRASTRUCTURE",
-    heroSubtitle: "Connecting communities. Driving progress.",
-    overviewNumber: "01",
-    overviewHeading: "What We Deliver in Road Infrastructure?",
-    overviewParagraphs: [
-      "ZAMR Engineering's road infrastructure team brings deep expertise in pavement engineering, geometric road design, and traffic systems. We deliver projects that improve safety, capacity, and durability for regional and urban transport networks.",
-      "Our engineers have extensive experience working with TfNSW, local councils, and private developers on projects ranging from minor intersection upgrades to major highway corridors.",
+    title: "Project Verification & Assurance",
+    description:
+      "ZAMR Engineering provides independent Project Verification and technical assurance services for transport and infrastructure projects, with particular expertise in TfNSW developer-delivered works. We provide independent oversight across design and construction to confirm compliance, quality and technical integrity.",
+    tags: [
+      "TfNSW WAD",
+      "Independent Verification",
+      "Design Verification",
+      "Construction Verification",
+      "Quality Assurance",
     ],
-    serviceDetails: [
-      { label: "SERVICE AREA", value: "NSW · QLD" },
-      { label: "TEAM SIZE", value: "15 Engineers" },
-      { label: "ACCREDITATION", value: "TfNSW Prequalified" },
-      { label: "TYPICAL DURATION", value: "6 – 36 months" },
-      { label: "PROJECT SCALE", value: "$1M – $500M+" },
-      { label: "SECTOR", value: "Government" },
-    ],
-    capabilitiesNumber: "02",
-    capabilitiesHeading: "Road Capabilities",
     capabilities: [
-      { title: "Pavement Design", description: "Flexible and rigid pavement design to Austroads and TfNSW standards, including pavement rehabilitation and overlays." },
-      { title: "Geometric Road Design", description: "Horizontal and vertical alignment design, intersection layouts, roundabouts, and cross-section development." },
-      { title: "Traffic Engineering", description: "Traffic modelling, impact assessments, speed zone reviews, and intersection performance analysis." },
-      { title: "Drainage Design", description: "Road drainage, culvert design, stormwater management, and water sensitive urban design." },
-      { title: "Road Safety Audits", description: "Independent road safety audits at all stages — feasibility, design, pre-opening, and existing road." },
-      { title: "Construction Support", description: "Site supervision, pavement monitoring, and construction phase engineering for road projects." },
-    ],
-    processNumber: "03",
-    processHeading: "Our Road Delivery Process",
-    processSteps: [
-      { number: "01", title: "Route Selection & Feasibility", description: "Assessment of corridor options, constraints, and feasibility to identify the preferred route." },
-      { number: "02", title: "Survey & Site Data", description: "Detailed survey, geotechnical investigation, and utility location to inform design." },
-      { number: "03", title: "Concept Design", description: "Development of concept alignment, cross-sections, and intersection layouts for stakeholder review." },
-      { number: "04", title: "Detailed Design", description: "Full detailed design including pavement, drainage, traffic facilities, and landscaping." },
-      { number: "05", title: "Authority Approvals", description: "Management of TfNSW, council, and RMS approvals, including Road Occupancy Licences." },
-      { number: "06", title: "Construction & Handover", description: "Construction support, quality assurance, and as-built documentation for project handover." },
-    ],
-    deliverablesNumber: "04",
-    deliverablesHeading: "Road Infrastructure Deliverables",
-    deliverablesSubtext: "Each road project is tailored to client requirements, but typically includes the following key deliverables.",
-    deliverables: [
-      "Geometric alignment design drawings",
-      "Pavement design report and cross-sections",
-      "Drainage design and hydrology report",
-      "Traffic impact assessment",
-      "Road safety audit reports",
-      "Construction specifications and BOQ",
-      "As-built documentation and certification",
-    ],
-    relatedNumber: "05",
-    relatedHeading: "Related Work",
-    relatedProjects: [
-      { title: "Newell Highway Upgrade", image: "/images/image7.jpeg", slug: "newell-highway-upgrade" },
-      { title: "Regional Road Safety Program", image: "/images/image5.jpeg", slug: "regional-road-safety-program" },
+      {
+        title: "TfNSW WAD Project Verification",
+        items: [
+          "Independent Project Verifier services",
+          "WAD requirements",
+          "Design verification",
+          "Construction verification",
+          "Monthly certification",
+          "Compliance monitoring",
+          "Project close-out support",
+        ],
+      },
+      {
+        title: "Design Verification",
+        items: [
+          "Design compliance review",
+          "Standards and specification compliance",
+          "Technical accuracy review",
+          "Constructability assessment",
+          "Safety and risk review",
+          "Interface review",
+          "Design certification",
+        ],
+      },
+      {
+        title: "Construction Verification",
+        items: [
+          "Compliance with approved design",
+          "Site inspections",
+          "Hold point reviews",
+          "Materials verification",
+          "Construction quality monitoring",
+          "Environmental and safety compliance",
+          "Records and documentation review",
+        ],
+      },
+      {
+        title: "Traffic Control Signal Verification",
+        items: [
+          "Signal design compliance",
+          "Intersection safety assessment",
+          "Phasing and timing review",
+          "Capacity and traffic-flow assessment",
+          "Utility interface review",
+          "Integration with existing infrastructure",
+        ],
+      },
+      {
+        title: "Quality Assurance",
+        items: [
+          "Inspection and Test Plan reviews",
+          "Hold point verification",
+          "Non-conformance management",
+          "Requests for Information",
+          "Materials quality",
+          "Technical documentation",
+          "Quality system oversight",
+        ],
+      },
+      {
+        title: "Independent Technical Review",
+        items: [
+          "Proof engineering",
+          "Peer review",
+          "Technical due diligence",
+          "Constructability review",
+          "Compliance assessment",
+          "Risk-based technical review",
+        ],
+      },
     ],
   },
   {
-    slug: "renewable-energy-infrastructure",
+    slug: "asset-management-and-inspection",
     index: "04",
-    title: "Renewable Energy Infrastructure",
-    shortDescription:
-      "Engineering the clean energy transition — solar farm civil works, wind turbine foundations, and hybrid energy infrastructure at utility scale.",
-    tags: [["SOLAR"], ["WIND"], ["BATTERY"]],
-    heroTitle: "RENEWABLE ENERGY",
-    heroSubtitle: "Powering the clean energy transition.",
-    overviewNumber: "01",
-    overviewHeading: "What We Do in Renewable Energy?",
-    overviewParagraphs: [
-      "ZAMR Engineering is at the forefront of the clean energy transition, delivering civil engineering solutions for solar farms, wind energy projects, and battery storage facilities across Australia.",
-      "Our team provides end-to-end civil engineering support — from feasibility studies and site selection through to detailed design, construction support, and grid connection certification.",
+    title: "Asset Management & Inspection",
+    description:
+      "ZAMR Engineering provides asset management, inspection and condition assessment services to help infrastructure owners understand asset condition, manage risk and optimise maintenance and renewal investment across the asset lifecycle.",
+    tags: [
+      "Bridge Inspections",
+      "Structural Inspections",
+      "Condition Assessment",
+      "Asset Management",
+      "Lifecycle Planning",
     ],
-    serviceDetails: [
-      { label: "SERVICE AREA", value: "NSW · QLD · VIC" },
-      { label: "TEAM SIZE", value: "10 Engineers" },
-      { label: "ACCREDITATION", value: "Clean Energy Council" },
-      { label: "TYPICAL DURATION", value: "6 – 24 months" },
-      { label: "PROJECT SCALE", value: "$5M – $500M+" },
-      { label: "SECTOR", value: "Private · Government" },
-    ],
-    capabilitiesNumber: "02",
-    capabilitiesHeading: "Energy Capabilities",
     capabilities: [
-      { title: "Solar Farm Civil Design", description: "Site grading, access roads, stormwater management, and foundation design for solar PV arrays." },
-      { title: "Wind Turbine Foundations", description: "Design of reinforced concrete turbine foundations, including geotechnical integration and fatigue analysis." },
-      { title: "Battery Storage Facilities", description: "Civil and structural design for BESS compounds, including slab design, containment, and fire access." },
-      { title: "Grid Connection Infrastructure", description: "Design of substation platforms, transmission line access, and switchyard civil works." },
-      { title: "Environmental Compliance", description: "Erosion and sediment control, stormwater management plans, and environmental monitoring during construction." },
-      { title: "Construction Support", description: "Site engineering, quality verification, and as-built documentation for renewable energy projects." },
-    ],
-    processNumber: "03",
-    processHeading: "Our Energy Delivery Process",
-    processSteps: [
-      { number: "01", title: "Feasibility & Site Selection", description: "Technical feasibility assessment, site constraints analysis, and preliminary yield optimisation." },
-      { number: "02", title: "Concept & Layout Design", description: "Development of site layout, access strategy, and preliminary civil design for approval." },
-      { number: "03", title: "Detailed Civil Design", description: "Complete civil design including grading, drainage, roads, and foundation packages." },
-      { number: "04", title: "Construction Documentation", description: "Detailed drawings, specifications, and BOQ for procurement and construction." },
-      { number: "05", title: "Construction Engineering", description: "On-site engineering support, RFI responses, and quality verification during construction." },
-      { number: "06", title: "Commissioning & Handover", description: "As-built documentation, certification, and handover to operations team." },
-    ],
-    deliverablesNumber: "04",
-    deliverablesHeading: "Energy Project Deliverables",
-    deliverablesSubtext: "Deliverables are scoped to each project phase, from feasibility through to construction and handover.",
-    deliverables: [
-      "Feasibility study and site assessment report",
-      "Civil design drawings and specifications",
-      "Drainage and stormwater management plans",
-      "Foundation design packages",
-      "Construction quality verification reports",
-      "As-built drawings and certification",
-      "Operations and maintenance manuals",
-    ],
-    relatedNumber: "05",
-    relatedHeading: "Related Work",
-    relatedProjects: [
-      { title: "Solar Farm Civil Works", image: "/images/image2.jpeg", slug: "solar-farm-civil-works" },
-      { title: "Wind Farm Foundation Package", image: "/images/image6.jpeg", slug: "wind-farm-foundation-package" },
+      {
+        title: "Asset Inspections",
+        items: [
+          "Bridge inspections",
+          "Road infrastructure inspections",
+          "Structural inspections",
+          "Drainage and culvert inspections",
+          "Building and civil asset inspections",
+          "Photographic and digital records",
+        ],
+      },
+      {
+        title: "Condition Assessment",
+        items: [
+          "Visual inspection",
+          "Defect identification",
+          "Condition rating",
+          "Structural assessment",
+          "Deterioration analysis",
+          "Risk identification",
+          "Maintenance prioritisation",
+        ],
+      },
+      {
+        title: "Asset Management",
+        items: [
+          "Asset registers and inventories",
+          "Lifecycle planning",
+          "Risk assessment",
+          "Performance monitoring",
+          "Maintenance strategies",
+          "Cost optimisation",
+          "Renewal prioritisation",
+        ],
+      },
+      {
+        title: "Bridge Asset Management",
+        items: [
+          "Level 2 and Level 3 inspections",
+          "Structural condition assessment",
+          "Defect mapping",
+          "Load assessment support",
+          "Rehabilitation planning",
+          "Maintenance strategies",
+          "Portfolio-level reviews",
+        ],
+      },
+      {
+        title: "Road & Civil Assets",
+        items: [
+          "Pavements",
+          "Drainage",
+          "Culverts",
+          "Retaining structures",
+          "Road furniture",
+          "Safety barriers",
+          "Shared paths and associated infrastructure",
+        ],
+      },
+      {
+        title: "Digital Asset Support",
+        items: [
+          "Drone-assisted inspections",
+          "Photographic asset records",
+          "BIM/digital asset information",
+          "Condition databases",
+          "Defect registers",
+          "Digital reporting",
+        ],
+      },
     ],
   },
   {
-    slug: "tfnsw-compliance",
+    slug: "buildings-and-property-engineering",
     index: "05",
-    title: "TfNSW Compliance",
-    shortDescription:
-      "Specialist advisory and compliance consulting precisely aligned with Transport for NSW regulatory standards, technical specifications, and certification frameworks.",
-    tags: [["TfNSW"], ["RMS"], ["AUDIT"]],
-    heroTitle: "TfNSW COMPLIANCE",
-    heroSubtitle: "Meeting every standard. Exceeding every expectation.",
-    overviewNumber: "01",
-    overviewHeading: "What is TfNSW Compliance?",
-    overviewParagraphs: [
-      "ZAMR Engineering provides specialist TfNSW compliance consulting services. Our deep understanding of Transport for NSW standards, specifications, and approval processes ensures your project meets every regulatory requirement efficiently.",
-      "Our team includes former TfNSW engineers and accredited auditors who bring firsthand knowledge of the approvals landscape. We help clients navigate the complexity of TfNSW compliance — from prequalification through to project certification.",
+    title: "Buildings & Property Engineering",
+    description:
+      "ZAMR Engineering provides multidisciplinary engineering services for residential, commercial, industrial and community buildings. We support clients from feasibility and design through approvals, construction, inspection, certification and asset maintenance.",
+    tags: [
+      "Structural",
+      "Civil",
+      "Stormwater",
+      "Certification",
+      "Inspections",
+      "Dilapidation",
+      "Construction Support",
     ],
-    serviceDetails: [
-      { label: "SERVICE AREA", value: "NSW" },
-      { label: "TEAM SIZE", value: "8 Specialists" },
-      { label: "ACCREDITATION", value: "TfNSW Accredited" },
-      { label: "TYPICAL DURATION", value: "1 – 18 months" },
-      { label: "PROJECT SCALE", value: "$50K – $20M+" },
-      { label: "SECTOR", value: "Government" },
-    ],
-    capabilitiesNumber: "02",
-    capabilitiesHeading: "Compliance Capabilities",
     capabilities: [
-      { title: "TfNSW Prequalification Support", description: "Assistance with TfNSW prequalification applications, scheme management, and ongoing compliance." },
-      { title: "Specification Compliance Reviews", description: "Detailed review of design and construction documentation against TfNSW technical specifications." },
-      { title: "Audit & Assurance Services", description: "Independent auditing of project delivery against TfNSW Quality and Assurance frameworks." },
-      { title: "Approvals Management", description: "End-to-end management of TfNSW and RMS approvals, including Road Occupancy Licences and permits." },
-      { title: "Safety in Design Reviews", description: "Facilitation of Safety in Design workshops and documentation in accordance with TfNSW requirements." },
-      { title: "Training & Capability Building", description: "Tailored training programs to build TfNSW compliance capability within client organisations." },
+      {
+        title: "Structural Engineering",
+        items: [
+          "Structural design",
+          "Foundations",
+          "Load-bearing elements",
+          "Retaining walls",
+          "Structural alterations",
+          "Strengthening and remediation",
+          "Structural assessments",
+        ],
+      },
+      {
+        title: "Civil & Stormwater",
+        items: [
+          "Site grading",
+          "Stormwater drainage",
+          "Driveways and pavements",
+          "Retaining structures",
+          "External works",
+          "Service coordination",
+        ],
+      },
+      {
+        title: "Building Inspection & Assessment",
+        items: [
+          "Structural inspections",
+          "Condition assessments",
+          "Defect investigations",
+          "Existing-building assessments",
+          "Construction inspections",
+          "Compliance inspections",
+        ],
+      },
+      {
+        title: "Certification & Engineering Advice",
+        items: [
+          "Structural certification",
+          "Engineering certificates",
+          "Design compliance checks",
+          "Milestone inspections",
+          "Temporary works certification",
+          "Technical reports",
+        ],
+      },
+      {
+        title: "Dilapidation Surveys",
+        items: [
+          "Pre-construction surveys",
+          "Post-construction surveys",
+          "Photographic documentation",
+          "Defect records",
+          "Structural observations",
+          "Comparative assessments",
+        ],
+      },
+      {
+        title: "Construction & Development Support",
+        items: [
+          "Design coordination",
+          "Construction supervision",
+          "Contractor coordination",
+          "Quality assurance",
+          "Progress monitoring",
+          "Technical support",
+        ],
+      },
     ],
-    processNumber: "03",
-    processHeading: "Our Compliance Process",
-    processSteps: [
-      { number: "01", title: "Gap Analysis", description: "Assessment of current compliance status against TfNSW requirements and identification of gaps." },
-      { number: "02", title: "Compliance Plan", description: "Development of a tailored compliance plan with milestones, responsibilities, and deliverables." },
-      { number: "03", title: "Documentation Review", description: "Systematic review of all project documentation against TfNSW specifications and standards." },
-      { number: "04", title: "Audit & Inspection", description: "On-site audits and inspections to verify compliance with approved documentation and standards." },
-      { number: "05", title: "Reporting & Remediation", description: "Compliance reports with findings, non-conformances, and recommended remediation actions." },
-      { number: "06", title: "Certification & Close-Out", description: "Final compliance certification and close-out reporting for project completion." },
+  },
+  {
+    slug: "construction-and-project-delivery",
+    index: "06",
+    title: "Construction & Project Delivery",
+    description:
+      "ZAMR Engineering provides engineering-led construction and project delivery services for civil and infrastructure works. Our involvement combines technical understanding with practical construction management to deliver safe, compliant and buildable outcomes.",
+    tags: [
+      "Civil Works",
+      "Roads",
+      "Drainage",
+      "Concrete",
+      "Structures",
+      "Site Delivery",
     ],
-    deliverablesNumber: "04",
-    deliverablesHeading: "Compliance Deliverables",
-    deliverablesSubtext: "Our compliance engagements are structured to provide clear, actionable outputs at every stage.",
-    deliverables: [
-      "Compliance gap analysis report",
-      "Compliance management plan",
-      "Specification compliance matrices",
-      "Audit reports and findings registers",
-      "Remediation action plans",
-      "Compliance certification statements",
-      "Training materials and workshop records",
-    ],
-    relatedNumber: "05",
-    relatedHeading: "Related Work",
-    relatedProjects: [
-      { title: "TfNSW Compliance Framework Review", image: "/images/image5.jpeg", slug: "tfnsw-compliance-framework-review" },
-      { title: "Road Asset Compliance Audit", image: "/images/image7.jpeg", slug: "road-asset-compliance-audit" },
+    capabilities: [
+      {
+        title: "Road Works",
+        items: [
+          "Earthworks and excavation",
+          "Subbase and base construction",
+          "Pavement rehabilitation",
+          "Asphalt works",
+          "Line marking",
+          "Signage",
+          "Traffic management",
+        ],
+      },
+      {
+        title: "Drainage Works",
+        items: [
+          "Excavation and trenching",
+          "Pipe installation",
+          "Culverts",
+          "Pits and headwalls",
+          "Foundation treatment",
+          "Scour protection",
+          "Stormwater rehabilitation",
+        ],
+      },
+      {
+        title: "Structural & Bridge Works",
+        items: [
+          "Foundations",
+          "Concrete structures",
+          "Bridge components",
+          "Temporary works",
+          "Expansion joints",
+          "Deck and structural repairs",
+          "Rehabilitation works",
+        ],
+      },
+      {
+        title: "Concrete Works",
+        items: [
+          "Concrete foundations",
+          "Pavements",
+          "Kerb and gutter",
+          "Footpaths",
+          "Concrete coring",
+          "Slabs and structural concrete",
+        ],
+      },
+      {
+        title: "Site & Construction Management",
+        items: [
+          "Site supervision",
+          "Safety management",
+          "Quality control",
+          "Programme monitoring",
+          "Resource coordination",
+          "Site logistics",
+          "Contractor interfaces",
+        ],
+      },
+      {
+        title: "Project Handover",
+        items: [
+          "Completion inspections",
+          "Defect close-out",
+          "Quality documentation",
+          "Asset records",
+          "As-constructed information",
+          "Handover support",
+        ],
+      },
     ],
   },
 ];
 
 export function getServiceBySlug(slug: string): ServiceData | undefined {
-  return services.find((s) => s.slug === slug);
+  return services.find((service) => service.slug === slug);
 }
 
-// --- Services Page Static Data ---
+export const specialistExpertise: SpecialistExpertise[] = [
+  {
+    slug: "bridges-and-structures",
+    index: "01",
+    title: "Bridges & Structures",
+    description:
+      "Bridges and structures are a core area of ZAMR's specialist expertise, supported by extensive experience in bridge management, design, inspection, rehabilitation, construction and asset management. We provide services across the complete bridge lifecycle—from assessment and design through construction, verification and ongoing asset management.",
+    capabilities: [
+      {
+        title: "Bridge Design",
+        items: [
+          "Concept and detailed design",
+          "Structural analysis",
+          "Load assessment",
+          "Foundation design",
+          "Culvert and bridge structures",
+          "Design optimisation",
+        ],
+      },
+      {
+        title: "Bridge Inspection",
+        items: [
+          "Level 2 inspections",
+          "Level 3 inspections",
+          "Condition assessment",
+          "Defect identification and mapping",
+          "Structural evaluation",
+          "Inspection reporting",
+        ],
+      },
+      {
+        title: "Rehabilitation & Strengthening",
+        items: [
+          "Rehabilitation strategies",
+          "Structural strengthening",
+          "Component replacement",
+          "Crack and concrete repairs",
+          "Bearing and joint works",
+          "Protective treatments",
+        ],
+      },
+      {
+        title: "Bridge Asset Management",
+        items: [
+          "Condition rating",
+          "Maintenance planning",
+          "Lifecycle management",
+          "Risk assessment",
+          "Portfolio reviews",
+          "Renewal prioritisation",
+        ],
+      },
+      {
+        title: "Independent Review & Certification",
+        items: [
+          "Design verification",
+          "Proof engineering",
+          "Load assessment",
+          "Structural certification",
+          "Technical review",
+          "Construction verification",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "traffic-and-road-safety",
+    index: "02",
+    title: "Traffic & Road Safety",
+    description:
+      "ZAMR Engineering provides traffic engineering and road safety services to support safe, efficient and practical transport outcomes for road authorities, councils, developers and infrastructure contractors.",
+    capabilities: [
+      {
+        title: "Road Safety Audits",
+        items: [
+          "Existing roads",
+          "Concept design",
+          "Detailed design",
+          "Pre-opening",
+          "Post-construction",
+          "Temporary traffic arrangements",
+        ],
+      },
+      {
+        title: "Traffic Impact Assessment",
+        items: [
+          "Development traffic assessment",
+          "Trip generation",
+          "Intersection analysis",
+          "Parking demand",
+          "Network impacts",
+          "Mitigation recommendations",
+        ],
+      },
+      {
+        title: "Traffic Modelling",
+        items: [
+          "SIDRA modelling",
+          "Intersection modelling",
+          "Network analysis",
+          "Delay and queue analysis",
+          "Scenario testing",
+          "Capacity assessment",
+        ],
+      },
+      {
+        title: "Traffic Signal Engineering",
+        items: [
+          "Traffic signal design",
+          "Signal warrant assessment",
+          "Phasing and timing",
+          "Pedestrian facilities",
+          "Vehicle detection",
+          "TfNSW compliance",
+        ],
+      },
+      {
+        title: "Traffic Management",
+        items: [
+          "Traffic Management Plans",
+          "Traffic Control Plans",
+          "Construction staging",
+          "Temporary traffic arrangements",
+          "Pedestrian and cyclist management",
+          "Construction access planning",
+        ],
+      },
+      {
+        title: "Traffic Surveys",
+        items: [
+          "Traffic counts",
+          "Turning movements",
+          "Pedestrian counts",
+          "Speed surveys",
+          "Peak-hour analysis",
+          "Data reporting",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "civil-infrastructure",
+    index: "03",
+    title: "Civil Infrastructure",
+    description:
+      "ZAMR Engineering provides civil infrastructure engineering across roads, drainage, pavements, utilities and land development, combining practical design expertise with an understanding of construction and asset performance.",
+    capabilities: [
+      {
+        title: "Roads & Pavements",
+        items: [
+          "Road geometry",
+          "Intersection upgrades",
+          "Pavement design",
+          "Rehabilitation",
+          "Shared paths",
+          "Access roads",
+        ],
+      },
+      {
+        title: "Drainage",
+        items: [
+          "Stormwater systems",
+          "Culverts",
+          "Pits and headwalls",
+          "Flood mitigation",
+          "Scour protection",
+          "Drainage rehabilitation",
+        ],
+      },
+      {
+        title: "Earthworks",
+        items: [
+          "Site grading",
+          "Bulk earthworks",
+          "Cut and fill",
+          "Embankments",
+          "Foundation preparation",
+          "Site development",
+        ],
+      },
+      {
+        title: "Utilities",
+        items: [
+          "Utility identification",
+          "Coordination",
+          "Relocation planning",
+          "Protection works",
+          "Service interfaces",
+        ],
+      },
+      {
+        title: "Civil Structures",
+        items: [
+          "Retaining walls",
+          "Culverts",
+          "Headwalls",
+          "Protection slabs",
+          "Foundations",
+          "Temporary structures",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "digital-engineering-and-bim",
+    index: "04",
+    title: "Digital Engineering & BIM",
+    description:
+      "ZAMR Engineering integrates digital engineering, BIM, data and emerging technology into project delivery to improve coordination, decision-making, quality and efficiency.",
+    capabilities: [
+      {
+        title: "BIM & Digital Modelling",
+        items: [
+          "BIM models",
+          "Design coordination",
+          "Model review",
+          "Construction modelling",
+          "Asset information models",
+        ],
+      },
+      {
+        title: "Drafting",
+        items: [
+          "Civil drawings",
+          "Structural drawings",
+          "Shop drawings",
+          "Survey plans",
+          "Work-as-executed drawings",
+          "Technical detailing",
+        ],
+      },
+      {
+        title: "Digital Project Delivery",
+        items: [
+          "Digital document workflows",
+          "Project dashboards",
+          "Data management",
+          "Digital QA",
+          "Collaboration platforms",
+        ],
+      },
+      {
+        title: "Technology-Enabled Inspections",
+        items: [
+          "Drone imagery",
+          "Digital defect records",
+          "Photographic registers",
+          "Condition databases",
+          "Digital inspection reporting",
+        ],
+      },
+      {
+        title: "AI-Enabled Engineering",
+        items: [
+          "AI-assisted technical workflows",
+          "Information review",
+          "Knowledge management",
+          "Reporting support",
+          "Process automation",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "inspection-certification-and-technical-assurance",
+    index: "05",
+    title: "Inspection, Certification & Technical Assurance",
+    description:
+      "ZAMR provides independent inspection, certification and technical-assurance services to support compliance, manage risk and give clients confidence in the condition and performance of their assets and projects.",
+    capabilities: [
+      {
+        title: "Engineering Inspections",
+        items: [
+          "Structural inspections",
+          "Civil inspections",
+          "Construction inspections",
+          "Existing asset inspections",
+          "Defect investigations",
+        ],
+      },
+      {
+        title: "Certification",
+        items: [
+          "Structural certification",
+          "Temporary works certification",
+          "Engineering certificates",
+          "Construction compliance",
+          "Design compliance",
+        ],
+      },
+      {
+        title: "Dilapidation",
+        items: [
+          "Pre-construction surveys",
+          "Post-construction surveys",
+          "Photographic records",
+          "Comparative condition reporting",
+        ],
+      },
+      {
+        title: "Technical Assessment",
+        items: [
+          "Structural assessment",
+          "Condition assessment",
+          "Engineering investigations",
+          "Technical due diligence",
+          "Failure and defect investigation",
+        ],
+      },
+      {
+        title: "Quality & Compliance",
+        items: [
+          "ITP reviews",
+          "Hold point inspections",
+          "QA audits",
+          "Compliance reviews",
+          "Documentation verification",
+        ],
+      },
+    ],
+  },
+];
+
+// --- Services Page Static Data (shared with other components) ---
+
+export const defaultHeroImage = "/images/image5.jpeg";
 
 export interface ServicesHeroContent {
   title: string;
@@ -355,41 +882,118 @@ export interface ServicesHeroContent {
 export const servicesHero: ServicesHeroContent = {
   title: "Our Services",
   subtitle:
-    "Five specialist engineering disciplines. One integrated consultancy. Delivering precision-led infrastructure outcomes across NSW, QLD, and Victoria.",
+    "Specialist engineering services delivering practical, compliant, and buildable infrastructure solutions across New South Wales.",
   image: "/images/image5.jpeg",
 };
 
+export const servicesCapabilitiesSection = {
+  sectionNumber: "01",
+  sectionLabel: "SERVICES",
+  heading: "Our Full Capabilities",
+};
+
 export interface WhyZamrFeature {
+  number: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+}
+
+export interface WhyZamrSection {
+  sectionNumber: string;
+  sectionLabel: string;
+  heading: string;
+  subtitle: string;
+  intro: string;
+  features: WhyZamrFeature[];
+}
+
+export const whyZamrSection: WhyZamrSection = {
+  sectionNumber: "02",
+  sectionLabel: "WHY ZAMR",
+  heading: "The ZAMR Difference",
+  subtitle: "Built on experience. Focused on the future.",
+  intro:
+    "We combine senior engineering judgement, independent technical assurance and practical delivery experience with the agility and technology-driven approach of a modern consultancy. The result is engineering advice that is clear, responsive and focused on outcomes.",
+  features: [
+    {
+      number: "01",
+      eyebrow: "EXPERIENCE WHERE IT MATTERS",
+      title: "Senior-Led Engineering",
+      description:
+        "Our projects are supported by experienced engineering professionals who understand not only design, but how infrastructure is approved, constructed, verified, operated and maintained. That lifecycle perspective helps us identify issues early, make sound decisions and develop practical solutions that work beyond the drawing board.",
+    },
+    {
+      number: "02",
+      eyebrow: "CONFIDENCE THROUGH INDEPENDENCE",
+      title: "Technical Assurance with Integrity",
+      description:
+        "Independence, professional judgement and technical integrity underpin our verification, certification and assurance services. We assess projects objectively against applicable requirements, identify risks clearly and provide clients and stakeholders with the confidence to make informed decisions.",
+    },
+    {
+      number: "03",
+      eyebrow: "WE UNDERSTAND THE DELIVERY ENVIRONMENT",
+      title: "Government, Authority & Infrastructure Expertise",
+      description:
+        "Our experience spans government agencies, councils, developers, contractors and infrastructure owners. We understand the standards, specifications, approval pathways, interfaces and delivery pressures that shape real projects — particularly within transport and public infrastructure environments.",
+    },
+    {
+      number: "04",
+      eyebrow: "MORE THAN A CONSULTANT",
+      title: "Integrated From Vision to Completion",
+      description:
+        "Our capability extends from planning, investigations and engineering design through project management, verification, construction support, inspection and asset management. Clients can engage ZAMR for a specialist assignment or bring us into the wider delivery team — reducing interfaces and maintaining continuity across the project lifecycle.",
+    },
+    {
+      number: "05",
+      eyebrow: "AGILE BY DESIGN. FUTURE FOCUSED.",
+      title: "Technology-Enabled, Client-Focused Delivery",
+      description:
+        "Our focused core team, supported by an established network of specialist professionals, allows us to assemble the right expertise around each assignment while maintaining senior involvement and accountability. We continue to integrate digital engineering, data and AI-enabled workflows to improve efficiency, collaboration and the quality of our engineering outcomes.",
+    },
+  ],
+};
+
+export interface MethodologyStep {
   number: string;
   title: string;
   description: string;
 }
 
-export const defaultHeroImage = "/images/image5.jpeg";
+export interface MethodologySection {
+  sectionNumber: string;
+  sectionLabel: string;
+  heading: string;
+  subtitle: string;
+  steps: MethodologyStep[];
+}
 
-export const whyZamrFeatures: WhyZamrFeature[] = [
-  {
-    number: "01",
-    title: "Technical Excellence",
-    description:
-      "Every deliverable is produced by experienced, accredited engineers and subjected to rigorous internal review before issue. No shortcuts. No junior-only teams.",
-  },
-  {
-    number: "02",
-    title: "Independence & Integrity",
-    description:
-      "Our verification and compliance practices operate with complete independence from design. We report what we find — not what clients want to hear.",
-  },
-  {
-    number: "03",
-    title: "Government Expertise",
-    description:
-      "Deep experience working within TfNSW, RMS, and Infrastructure NSW frameworks. We know the standards, the approval processes, and the people.",
-  },
-  {
-    number: "04",
-    title: "End-to-End Delivery",
-    description:
-      "From initial feasibility to as-built certification, we can resource the full project lifecycle — eliminating the gaps between consultant handovers.",
-  },
-];
+export const methodologySection: MethodologySection = {
+  sectionNumber: "03",
+  sectionLabel: "METHODOLOGY",
+  heading: "From Planning to Delivery",
+  subtitle:
+    "Supporting projects through every stage with practical engineering expertise and disciplined project delivery.",
+  steps: [
+    {
+      number: "01",
+      title: "Understand",
+      description: "Project requirements and challenges",
+    },
+    {
+      number: "02",
+      title: "Develop",
+      description: "Engineering and delivery solutions",
+    },
+    {
+      number: "03",
+      title: "Deliver",
+      description: "Quality-focused project execution",
+    },
+    {
+      number: "04",
+      title: "Support",
+      description: "Verification, improvement, and ongoing support",
+    },
+  ],
+};

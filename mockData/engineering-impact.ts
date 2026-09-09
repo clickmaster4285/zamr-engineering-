@@ -175,12 +175,12 @@ export const featuredProjects: FeaturedProject[] = [
   {
     title: "Hunter Valley Renewable Energy Hub",
     image: "/images/image2.jpeg",
-    href: "/projects/hunter-valley-renewable-energy-hub",
+    href: "/projects/jonica-rd-australia-double-storey-dwelling-&-studio",
   },
   {
     title: "Metropolitan Bridge Rehabilitation",
     image: "/images/image10.png",
-    href: "/projects/metropolitan-bridge-rehabilitation",
+    href: "/projects/great-western-highway-upgrade—kelso-to-raglan",
   },
   {
     title: "Urban Stormwater Management System",

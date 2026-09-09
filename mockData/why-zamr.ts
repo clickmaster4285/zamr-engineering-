@@ -9,7 +9,7 @@ export interface HeroContent {
 export const heroContent: HeroContent = {
   title: "Engineering Confidence Through\nExperience, Quality & Precision",
   subtitle:
-    "Choosing the right engineering partner is critical to every project's success. At ZAMR Engineering, we combine technical expertise, industry knowledge, and practical solutions to deliver reliable outcomes that exceed expectations.",
+    "At ZAMR Engineering, we provide practical engineering solutions backed by industry experience, technical expertise, and a commitment to quality. From infrastructure delivery to independent verification, we work alongside our clients to solve complex challenges and deliver reliable project outcomes.",
   image: "/images/image5.jpeg",
 };
 
@@ -20,34 +20,34 @@ export interface HowWeWorkRow {
 
 export const howWeWorkRows: HowWeWorkRow[] = [
   {
-    title: "Engineering Expertise",
+    title: "Experienced Engineering Team",
     description:
-      "Experienced professionals delivering practical engineering solutions across complex infrastructure projects.",
+      "Our multidisciplinary team brings extensive experience across civil infrastructure, transport, structural engineering, and project verification.",
   },
   {
-    title: "Quality Focus",
+    title: "Quality-Driven Delivery",
     description:
-      "Every project follows structured quality management processes to ensure consistent and reliable outcomes.",
+      "Structured quality systems, technical reviews, and compliance processes ensure every deliverable meets project requirements and industry standards.",
   },
   {
-    title: "Safety Commitment",
+    title: "Independent Technical Assurance",
     description:
-      "Safety is integrated into every stage of planning, design, and project delivery. ",
+      "As a TfNSW-accredited verification provider, we deliver objective reviews that provide confidence in design, construction, and project outcomes.",
   },
   {
-    title: "Client Collaboration",
+    title: "Practical Engineering Solutions",
     description:
-      "We work closely with our clients to understand project objectives and deliver tailored engineering solutions.",
+      "We combine technical knowledge with construction experience to develop solutions that are practical, buildable, and cost-effective.",
   },
   {
-    title: "Reliable Delivery",
+    title: "Client-Focused Collaboration",
     description:
-      "Committed to meeting deadlines while maintaining technical excellence and project quality.",
+      "We work closely with clients, contractors, and stakeholders to understand project objectives and deliver outcomes aligned with expectations.",
   },
   {
-    title: "Sustainable Solutions",
+    title: "Reliable Project Delivery",
     description:
-      "Designing engineering solutions that support long-term performance, efficiency, and responsible development.",
+      "We are committed to delivering high-quality engineering outcomes safely, efficiently, and in accordance with agreed project requirements.",
   },
 ];
 
@@ -71,17 +71,17 @@ export const commitmentCards: CommitmentCard[] = [
   {
     title: "Quality",
     description:
-      "Delivering work that consistently meets the highest engineering standards.",
+      "Delivering engineering solutions that meet the highest standards of technical excellence.",
   },
   {
     title: "Integrity",
     description:
-      "Building strong relationships through honesty, accountability, and professionalism.",
+      "Building trusted relationships through transparency, accountability, and professionalism.",
   },
   {
-    title: "Excellence",
+    title: "Innovation ",
     description:
-      "Continuously improving processes to achieve outstanding project outcomes.",
+      "Applying practical thinking and modern engineering approaches to overcome project challenges.",
   },
 ];
 
@@ -127,10 +127,42 @@ export interface TrackRecordStat {
 
 export const trackRecordStats: TrackRecordStat[] = [
   { value: "12", suffix: "+", label: "YEARS OF EXPERIENCE", align: "start" },
-  { value: "5", label: "ENGINEERING DISCIPLINES", align: "center" },
-  { value: "150", suffix: "+", label: "PROJECTS DELIVERED", align: "center" },
-  { value: "98", suffix: "%", label: "CLIENT SATISFACTION", align: "end" },
+  { value: "05", label: "ENGINEERING DISCIPLINES", align: "center" },
+  { value: "150", suffix: "+", label: "PROJECTS DELIVERED", align: "end" },
 ];
+
+export interface OurValueCard {
+  icon: "users" | "layers" | "map-pin";
+  title: string;
+  description: string;
+}
+
+export const ourValueCards: OurValueCard[] = [
+  {
+    icon: "users",
+    title: "Social Commitment",
+    description:
+      "ZAMR Engineering provides internship programs for both graduates and immigrants — demonstrating strong social commitments to community development and workforce diversity.",
+  },
+  {
+    icon: "layers",
+    title: "End-to-End Services",
+    description:
+      "ZAMR Engineering provides any services that clients are looking for, ranging from design, to construction, to asset management — a true one-stop engineering partner.",
+  },
+  {
+    icon: "map-pin",
+    title: "State-Wide Coverage",
+    description:
+      "ZAMR Engineering provides services across NSW, from urban areas to rural areas — ensuring accessibility and reach for all communities.",
+  },
+];
+
+export const ourValueContent = {
+  heading: "Our Value",
+  subtitle:
+    "We deliver more than engineering expertise — we bring a commitment to community, accessibility, and end-to-end partnership.",
+};
 
 export interface CTAContent {
   heading: string;

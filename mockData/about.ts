@@ -20,28 +20,13 @@ export interface Pillar {
   description: string;
 }
 
-export const pillars: Pillar[] = [
-  {
-    title: "Precision",
-    description:
-      "Every calculation, every specification, every deliverable held to the highest standard.",
-  },
-  {
-    title: "Integrity",
-    description:
-      "Transparent reporting and independent verification on every engagement.",
-  },
-  {
-    title: "Innovation",
-    description:
-      "Forward-looking design thinking applied to proven engineering principles.",
-  },
-];
-
 export const aboutParagraphs: string[] = [
-  "ZAMR Engineering was founded in 2012 with a single conviction: that infrastructure should be engineered with uncompromising precision and long-term thinking. From a modest two-person consultancy, we have grown into one of New South Wales' most trusted civil engineering firms, delivering over 150 projects across road, civil, energy, and compliance disciplines.",
-  "Our team of 45 engineers, project managers, and compliance specialists operates across NSW, Queensland, and Victoria — partnering with government agencies, private developers, and infrastructure funds to deliver outcomes that endure. We hold accreditations with TfNSW, Infrastructure NSW, and the Australian Institute of Engineers.",
-  "We believe the best engineering is invisible — infrastructure that simply works, year after year, without incident. Every project we take on is guided by this philosophy: rigorous analysis, precise design, and disciplined delivery.",
+  "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering practical, high-quality infrastructure solutions across New South Wales. We work with government agencies, councils, developers, contractors, and private clients to provide civil engineering, project verification, Transport for NSW compliance, project management, and technical advisory services",
+  "Our approach combines sound engineering principles with practical construction experience to deliver infrastructure that is safe, compliant, buildable, and designed for long-term performance. From concept through to construction, we focus on reducing project risk, improving constructability, and ensuring every solution meets the required technical and regulatory standards.",
+  "At ZAMR Engineering, we believe successful engineering is measured not only by technical excellence but by the confidence it gives our clients. Every project is delivered with precision, integrity, and a commitment to achieving practical outcomes that stand the test of time.",
+];
+export const aboutDividerParagraphs: string[] = [
+  "Our approach integrates rigorous engineering methodology with forward-looking design thinking — producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
 ];
 
 export interface StatItem {
@@ -52,9 +37,11 @@ export interface StatItem {
 }
 
 export const stats: StatItem[] = [
-  { value: 150, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
-  { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
-  { value: 98, suffix: "%", label: "COMPLIANCE RATE", align: "end" },
+  { value: 10, suffix: "+", label: "Local Councils", align: "start" },
+  { value: 15, suffix: "+", label: "Government Agencies & Authorities", align: "center" },
+  { value: 99, suffix: "%", label: "Client Satisfaction", align: "center" },
+  { value: 50, suffix: "+", label: "Private Developers & Contractors", align: "center" },
+  { value: 100, suffix: "+", label: "Major Infrastructure Packages Supported", align: "end" },
 ];
 
 // --- Organizational Structure Data ---
@@ -221,3 +208,66 @@ export const growthStats: GrowthStat[] = [
   { label: "FY24 GROWTH", value: "+9.9%" },
   { label: "CAGR (3Y)", value: "+17.9%" },
 ];
+
+// --- Key Directors / Organizational Team ---
+export interface KeyDirector {
+  name: string;
+  role: string;
+  department: string;
+  headshot: string;
+}
+
+export const keyDirectorsContent = {
+  sectionNumber: "03",
+  sectionLabel: "KEY DIRECTORS",
+  heading: "Organizational Team",
+  directors: [
+    {
+      name: "Omar Faruqi",
+      role: "Design Manager",
+      department: "Planning & Design",
+      headshot: "/images/team/image1.png",
+    },
+    {
+      name: "Khalid Javed",
+      role: "Managing Director",
+      department: "Leadership",
+      headshot: "/images/team/image2.png",
+    },
+    {
+      name: "Yashwant Dyall",
+      role: "Quality Manager",
+      department: "Operational Quality",
+      headshot: "/images/team/image3.png",
+    },
+    {
+      name: "Sara Mitchell",
+      role: "Senior Civil Engineer",
+      department: "Civil Engineering",
+      headshot: "/images/team/image4.png",
+    },
+  ] satisfies KeyDirector[],
+};
+
+// --- About US 04 ---
+export const aboutUs04Content = {
+  sectionNumber: "04",
+  sectionLabel: "About Us",
+  heading: "The Founder's Story Behind the Name ZAMR",
+  image: "/images/image11.png",
+  imageAlt: "ZAMR engineers reviewing project plans on an active construction site",
+  paragraphs: [
+    "Ours begins with family, is strengthened by purpose, and continues through a commitment to engineering excellence.",
+    "The name ZAMR was deliberately chosen based on two complementary foundations that continue to define who we are today.",
+    "Firstly, ZAMR is formed from the initials of our four children, reflecting the family values, integrity, and long-term commitment to building something that will endure for generations.",
+    "Secondly, the name ZAMR carries an established linguistic association with strength and a clear, confident voice. These attributes resonated strongly with the type of engineering consultancy we aspired to build - one known for technical excellence, sound judgement, and decisive outcomes; one that values long-term relationships, and consistently delivers practical, outcome-focused solutions.",
+    "Together, these two inspirations gave the name ZAMR both a deeply personal meaning and a professional identity. Today, it reflects our commitment to engineering excellence, trusted partnerships, continuous innovation, and creating lasting value for our clients and the communities we serve.",
+    "The name ZAMR represents not only where we came from, but also where we are going—built on experience, focused on the future, and committed to delivering engineering solutions that make a lasting impact.",
+  ],
+};
+
+// --- About Video (footer video poster) ---
+export const aboutVideoContent = {
+  posterImage: "/aboutusfootervideo.png",
+  posterAlt: "ZAMR Engineering about and footer video",
+};

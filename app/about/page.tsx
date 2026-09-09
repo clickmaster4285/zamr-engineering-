@@ -2,8 +2,9 @@
 import AboutHero from "@/components/About/Hero";
 import About  from "@/components/About/About";
 import Stat  from "@/components/About/Stat";
-import Structure  from "@/components/About/Structure";
-import Performance  from "@/components/About/Performance";
+import KeyDirectors  from "@/components/About/KeyDirectors";
+import AboutUs04  from "@/components/About/AboutUs04";
+import AboutVideo  from "@/components/About/AboutVideo";
 
 export default function Page() {
   return (
@@ -11,8 +12,9 @@ export default function Page() {
       <AboutHero />
       <About />
       <Stat />
-      <Structure />
-      <Performance />
+      <KeyDirectors />
+      <AboutUs04 />
+      <AboutVideo />
     </main>
   );
 }

@@ -1,12 +1,17 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowRight } from "lucide-react";
 import { Barlow } from "next/font/google";
-import { projects, projectFilters, projectsHeroStats, projectsHowWeDeliver, projectsContactInfo } from "@/mockData/projects";
+import {
+  projects,
+  projectFilters,
+  projectFilterCategoryMap,
+  projectsHeroStats,
+  projectsHowWeDeliver,
+  projectsContactInfo,
+} from "@/mockData/projects";
 import {
   useContactEnquiry,
   CONTACT_STATUS_MESSAGES,
@@ -68,16 +73,14 @@ function ProjectCard({
     <div
       ref={ref}
       onClick={() => router.push(`/projects/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        inView
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-10 scale-95"
-      }`}
+      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView
+        ? "opacity-100 translate-y-0 scale-100"
+        : "opacity-0 translate-y-10 scale-95"
+        }`}
     >
       <div
-        className={`relative w-full overflow-hidden ${
-          isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
-        }`}
+        className={`relative w-full overflow-hidden ${isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
+          }`}
       >
         <Image
           src={project.heroImage}
@@ -88,18 +91,17 @@ function ProjectCard({
         />
 
         <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge && !noHover ? " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]":"bg-[var(--overlay-image-default)]"}`}
+          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge && !noHover ? " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]" : "bg-[var(--overlay-image-default)]"}`}
         />
 
         <span
-          className={`absolute left-5 top-5 font-[800] tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${
-            isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
-          }`}
+          className={`absolute left-5 top-5 font-semibold tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
+            }`}
         >
           {project.index}
         </span>
 
-        <h3 className={`absolute left-5 bottom-5 font-semibold text-white text-[20px] leading-[26px] sm:left-8 sm:bottom-8 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px] ${isLarge && !noHover && " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"}`}>
+        <h3 className={`absolute left-5 bottom-5 font-semibold text-white ${noHover ? "text-[18px] leading-[23px]" : "text-[20px] leading-[26px] sm:left-8 sm:bottom-8 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px]"} ${isLarge && !noHover && " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"}`}>
           {project.title}
         </h3>
 
@@ -122,7 +124,12 @@ export default function ProjectsPage() {
   const filteredProjects =
     activeFilter === "ALL"
       ? projects
-      : projects.filter((p) => p.category === activeFilter);
+      : projects.filter((p) => {
+        const categories = projectFilterCategoryMap[activeFilter.toLowerCase()];
+        return categories?.some(
+          (c) => c.toLowerCase() === p.category.toLowerCase()
+        );
+      });
 
   const displayedProjects = filteredProjects.slice(0, visibleCount);
   const hasMore = visibleCount < filteredProjects.length;
@@ -149,15 +156,16 @@ export default function ProjectsPage() {
         />
         <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-        <div className="absolute bottom-0 left-0 right-0  lg:px-0 pb-24  sm:top-[130px] sm:bottom-auto sm:pb-0 lg:left-[130px] lg:right-auto lg:w-[933px] lg:top-[308px] lg:gap-[20px]">
-          <div className="flex flex-col gap-3 sm:gap-5 px-6">
+        <div className="absolute bottom-0 left-0 right-0 pb-24 sm:top-[130px] sm:bottom-auto sm:pb-0 lg:left-[130px] lg:right-auto lg:top-[286.5px] lg:w-[933px]">
+          <div className="flex flex-col gap-3 px-6 sm:gap-5 lg:px-0">
             <h1 className="font-bold text-white text-[32px] leading-[38px] sm:text-[52px] sm:leading-[62px] lg:text-[80px] lg:leading-[101px]">
               Our Projects
             </h1>
             <p className="font-medium text-[var(--color-text-light-subtle)] text-[14px] leading-[19px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
-              A portfolio of precision-engineered infrastructure — from arterial
-              road rehabilitations and renewable energy civil works to structural
-              bridge rehabilitation and independent project verification.
+              From complex transport upgrades to structural rehabilitation, civil engineering, and independent project verification, ZAMR Engineering has delivered practical, high-quality engineering solutions across Australia.
+            </p>
+            <p className="font-medium text-[var(--color-text-light-subtle)] text-[14px] leading-[19px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
+              Every project reflects the same commitment to technical excellence, collaboration, and long-term asset performance
             </p>
           </div>
         </div>
@@ -167,9 +175,8 @@ export default function ProjectsPage() {
             {projectsHeroStats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex flex-col justify-center items-start flex-1 min-w-0 ${
-                  i > 0 ? "border-l border-white/37" : ""
-                } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
+                className={`flex flex-col justify-center items-start flex-1 min-w-0 ${i > 0 ? "border-l border-white/37" : ""
+                  } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
               >
                 <span
                   className={`${barlow.className} font-black text-white text-[16px] leading-[20px] sm:text-[24px] sm:leading-[28px] lg:text-[34px] lg:leading-[34px]`}
@@ -221,11 +228,10 @@ export default function ProjectsPage() {
                     key={filter}
                     type="button"
                     onClick={() => handleFilterChange(filter)}
-                    className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${
-                      isActive
-                        ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                        : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                    } ${isAll ? "w-20 lg:flex-none" : ""}`}
+                    className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${isActive
+                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                      } ${isAll ? "w-20 lg:flex-none" : ""}`}
                   >
                     {filter}
                   </button>
@@ -265,13 +271,13 @@ export default function ProjectsPage() {
 
           {/* Load More button — always shown, disabled when all loaded */}
           <div className="flex justify-end">
-  <button
-    type="button"
-    className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
-  >
-    Load More
-  </button>
-</div>
+            <button
+              type="button"
+              className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
+            >
+              Load Mores
+            </button>
+          </div>
         </div>
       </section>
 
@@ -315,7 +321,7 @@ export default function ProjectsPage() {
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
         <div className="mx-auto flex max-w-[1468px] flex-col gap-12 lg:flex-row lg:items-start lg:gap-[231px]">
           {/* Left — info */}
-          <div className="flex w-full flex-col gap-[30px] lg:w-[555px]">
+          <div className="flex w-full flex-col gap-[30px] lg:w-[600px]">
             <div className="flex flex-col gap-[30px]">
               <div className="flex items-center gap-4">
                 <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
@@ -323,22 +329,30 @@ export default function ProjectsPage() {
                 </span>
                 <span className="h-px w-[104px] bg-[var(--text-dark)]" />
                 <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-dark)]">
-                  HOW WE DELIVER
+                  CONTACT
                 </span>
               </div>
               <h2 className="text-[36px] font-bold leading-[45px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
-                Start Your Project
+                Let's Build Something Exceptional.
               </h2>
             </div>
 
             <div className="flex flex-col justify-end gap-5">
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
-                Tell us about your infrastructure challenge. We&apos;ll match you with the
-                right engineering specialist and respond within 1&ndash;2 business days.
+                <span className="text-[var(--color-blue-label)]">Company Name:</span>{" "}
+                {projectsContactInfo.company_name}
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
-                <span className="text-[var(--color-blue-label)]">Office:</span>{" "}
-                {projectsContactInfo.address}
+                <span className="text-[var(--color-blue-label)]">Address 1:</span>{" "}
+                {projectsContactInfo.address1}
+              </p>
+              <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
+                <span className="text-[var(--color-blue-label)]">Address 2:</span>{" "}
+                {projectsContactInfo.address2}
+              </p>
+              <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
+                <span className="text-[var(--color-blue-label)]">Email:</span>{" "}
+                {projectsContactInfo.email1}
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
                 <span className="text-[var(--color-blue-label)]">Phone:</span>{" "}
@@ -346,7 +360,7 @@ export default function ProjectsPage() {
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
                 <span className="text-[var(--color-blue-label)]">Email:</span>{" "}
-                {projectsContactInfo.email}
+                {projectsContactInfo.email2}
               </p>
             </div>
           </div>
@@ -357,7 +371,7 @@ export default function ProjectsPage() {
               <div className="flex flex-1 flex-col gap-2">
                 <label
                   htmlFor="name"
-                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
                 >
                   NAME
                 </label>
@@ -377,10 +391,69 @@ export default function ProjectsPage() {
               </div>
               <div className="flex flex-1 flex-col gap-2">
                 <label
-                  htmlFor="email"
-                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                  htmlFor="designation"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
                 >
-                  EMAIL
+                  DESIGNATION
+                </label>
+                <input
+                  id="designation"
+                  name="designation"
+                  type="text"
+                  value={form.designation}
+                  onChange={handleChange}
+                  placeholder="Designation"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
+
+            </div>
+            <div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="company"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
+                >
+                  COMPANY NAME
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Company Name"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="website"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
+                >
+                  COMPANY WEBSITE
+                </label>
+                <input
+                  id="website"
+                  name="website"
+                  type="url"
+                  value={form.website}
+                  onChange={handleChange}
+                  placeholder="Website  URL"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-7 sm:flex-row sm:gap-6">
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="email"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
+                >
+                  BUSINESS EMAIL
                 </label>
                 <input
                   id="email"
@@ -388,7 +461,7 @@ export default function ProjectsPage() {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="you@company.com.au"
+                  placeholder="Business Email"
                   className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                   style={{ borderBottom: "1px solid var(--border-input)" }}
                 />
@@ -396,12 +469,32 @@ export default function ProjectsPage() {
                   <p className="text-[12px] leading-[15px] text-[var(--color-error)]">{errors.email}</p>
                 )}
               </div>
+              <div className="flex flex-1 flex-col gap-2">
+                <label
+                  htmlFor="phone"
+                  className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
+                >
+                  BUSINESS PHONE NUMBER
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="Business Phone Number"
+                  className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
+                  style={{ borderBottom: "1px solid var(--border-input)" }}
+                />
+              </div>
             </div>
+
+
 
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="subject"
-                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
               >
                 SUBJECT
               </label>
@@ -411,7 +504,7 @@ export default function ProjectsPage() {
                 type="text"
                 value={form.subject}
                 onChange={handleChange}
-                placeholder="Project enquiry"
+                placeholder="Subject"
                 className="w-full border-0 border-b bg-transparent py-[10px] text-[12px] leading-[15px] text-[var(--text-dark)] placeholder-[var(--text-soft)]/50 focus:outline-none"
                 style={{ borderBottom: "1px solid var(--border-input)" }}
               />
@@ -423,9 +516,9 @@ export default function ProjectsPage() {
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="message"
-                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-label)]"
+                className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
               >
-                PROJECT DETAILS
+                Message
               </label>
               <textarea
                 id="message"
@@ -453,12 +546,12 @@ export default function ProjectsPage() {
               </p>
             )}
             <button
-            type="submit"
-            disabled={status === "sending"}
-            className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
-          </button>
+              type="submit"
+              disabled={status === "sending"}
+              className="mt-2 w-full border border-[var(--color-primary)] bg-[var(--bg-light)] py-4 text-sm font-bold tracking-[0.3em] text-[var(--color-primary)] transition-all hover:bg-[var(--color-primary)] hover:text-white sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
+            </button>
           </form>
         </div>
       </section>

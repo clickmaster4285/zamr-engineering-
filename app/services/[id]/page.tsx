@@ -2,12 +2,9 @@
 
 import { useParams } from "next/navigation";
 import { getServiceBySlug } from "@/mockData/services";
-import ProjectHero from "@/components/services/detail/ProjectHero";
-import Overview from "@/components/services/detail/Overview";
+import ServicesHero from "@/components/services/detail/ServicesHero";
 import Capabilities from "@/components/services/detail/Capabilities";
-import Process from "@/components/services/detail/Process";
-import Deliverables from "@/components/services/detail/Deliverables";
-import RelatedWork from "@/components/services/detail/RelatedWork";
+import ReferProjects from "@/components/services/detail/ReferProjects";
 import Contact from "@/components/services/Contact";
 
 export default function ServiceDetailPage() {
@@ -24,35 +21,14 @@ export default function ServiceDetailPage() {
 
   return (
     <main className="w-full flex flex-col items-center">
-      <ProjectHero title={service.heroTitle} subtitle={service.heroSubtitle} />
-      <Overview
-        number={service.overviewNumber}
-        heading={service.overviewHeading}
-        paragraphs={service.overviewParagraphs}
-        serviceDetails={service.serviceDetails}
-      />
+      <ServicesHero title={service.title} subtitle={service.description} />
       <Capabilities
-        number={service.capabilitiesNumber}
-        heading={service.capabilitiesHeading}
+        number="01"
+        heading="Technical Excellence & Delivery Focus"
         capabilities={service.capabilities}
       />
-      <Process
-        number={service.processNumber}
-        heading={service.processHeading}
-        processSteps={service.processSteps}
-      />
-      <Deliverables
-        number={service.deliverablesNumber}
-        heading={service.deliverablesHeading}
-        subtext={service.deliverablesSubtext}
-        deliverables={service.deliverables}
-      />
-      <RelatedWork
-        number={service.relatedNumber}
-        heading={service.relatedHeading}
-        projects={service.relatedProjects}
-      />
-      <Contact number="06" serviceTitle={service.title} />
+      <ReferProjects />
+      <Contact number="03" serviceTitle={service.capabilities[0].title} />
     </main>
   );
 }

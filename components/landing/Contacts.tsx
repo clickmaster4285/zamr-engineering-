@@ -75,7 +75,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="flex flex-col gap-6 sm:gap-7">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
               <div>
-                <label htmlFor="name" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
+                <label htmlFor="name" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
                   NAME
                 </label>
                 <input
@@ -92,8 +92,8 @@ export default function Contact() {
                 )}
               </div>
               <div>
-                <label htmlFor="email" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
-                  EMAIL
+                <label htmlFor="email" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
+                  BUSINESS EMAIL
                 </label>
                 <input
                   id="email"
@@ -108,9 +108,65 @@ export default function Contact() {
                   <p className="mt-1 text-xs text-[var(--color-error)]">{errors.email}</p>
                 )}
               </div>
+              <div>
+                <label htmlFor="designation" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
+                  DESIGNATION
+                </label>
+                <input
+                  id="designation"
+                  name="designation"
+                  type="text"
+                  value={form.designation}
+                  onChange={handleChange}
+                  placeholder="Project Manager"
+                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="phone" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
+                  BUSINESS PHONE NUMBER
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="+61 400 000 000"
+                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="company" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
+                  COMPANY NAME
+                </label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Company Pty Ltd"
+                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="website" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
+                  COMPANY WEBSITE
+                </label>
+                <input
+                  id="website"
+                  name="website"
+                  type="url"
+                  value={form.website}
+                  onChange={handleChange}
+                  placeholder="https://company.com.au"
+                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
+                />
+              </div>
             </div>
             <div>
-              <label htmlFor="subject" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
+              <label htmlFor="subject" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
                 SUBJECT
               </label>
               <input
@@ -127,7 +183,7 @@ export default function Contact() {
               )}
             </div>
             <div>
-              <label htmlFor="message" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--color-text-label)] sm:text-xs">
+              <label htmlFor="message" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
                 MESSAGE
               </label>
               <textarea

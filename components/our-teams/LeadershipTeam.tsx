@@ -48,12 +48,12 @@ export default function LeadershipTeam() {
                 <h3 className="w-full text-lg font-bold leading-[23px] text-[var(--text-dark)]">
                   {member.name}
                 </h3>
-                <p className="w-full text-sm font-medium leading-[18px] text-[var(--color-primary)]">
+                {/* <p className="w-full text-sm font-medium leading-[18px] text-[var(--color-primary)]">
                   {member.role}
                 </p>
                 <p className="w-full text-[13px] font-normal leading-4 text-[var(--text-soft)]">
                   {member.department}
-                </p>
+                </p> */}
               </div>
             </div>
           ))}

@@ -72,7 +72,7 @@ export default function About() {
 
           {/* Frame 119 — heading */}
           <div className="flex w-full flex-col items-start gap-[10px]">
-            <h2 className="w-full text-[40px] font-bold leading-[50px] text-[var(--text-dark)] sm:text-[48px] sm:leading-[60px] lg:w-[344px] lg:text-[56px] lg:leading-[71px]">
+            <h2 className="w-full text-[40px] font-bold leading-[50px] text-[var(--text-heading)] sm:text-[48px] sm:leading-[60px] lg:w-[344px] lg:text-[56px] lg:leading-[71px]">
               Built on
               <br />
               Precision

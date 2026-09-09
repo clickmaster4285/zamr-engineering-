@@ -21,7 +21,7 @@ export default function HowWeWork() {
 
           {/* Heading */}
           <h2 className="w-full text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
-            The Difference Is How We Deliver
+            The ZAMR Difference
           </h2>
         </div>
 
@@ -36,7 +36,7 @@ export default function HowWeWork() {
               <span className="absolute left-0 bottom-0 w-[4px] h-0 bg-[var(--color-secondary)] transition-all duration-300 group-hover:h-full" />
 
               {/* Title */}
-              <h3 className="w-full text-xl font-semibold leading-[28px] text-[var(--text-dark)] sm:w-[150px] sm:shrink-0 lg:w-[279px] lg:text-[28px] lg:leading-[35px]">
+              <h3 className="w-full text-xl font-semibold leading-[28px] text-[var(--text-dark)] sm:w-[150px] sm:shrink-0 lg:w-[320px] lg:text-[28px] lg:leading-[35px]">
                 {row.title}
               </h3>
 

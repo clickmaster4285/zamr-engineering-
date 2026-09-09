@@ -1,4 +1,4 @@
-// mockData/landing.ts — All static data for the landing page
+﻿// mockData/landing.ts  All static data for the landing page
 
 export interface NavLink {
   label: string;
@@ -44,7 +44,7 @@ export const aboutStats: StatItem[] = [
 
 export const aboutParagraphs: string[] = [
   "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales and beyond. Founded on a commitment to technical excellence, we partner with government bodies, developers, and industry leaders to engineer infrastructure that endures.",
-  "Our approach integrates rigorous engineering methodology with forward-looking design thinking — producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
+  "Our approach integrates rigorous engineering methodology with forward-looking design thinking  producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
 ];
 
 export interface ServicePreviewItem {
@@ -52,58 +52,164 @@ export interface ServicePreviewItem {
   slug: string;
   title: string;
   description: string;
+  tags: string[];
 }
+
+export interface ProjectsFeaturedWork {
+  slug: string;
+  index: string;
+  title: string;
+  category: string;
+  shortDescription: string;
+  heroTitle: string;
+  featuredImage: string;
+  featuredImagewithhover: string;
+}
+
+export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
+  {
+    slug: "solarfarm-intersection-upgrade-at-643-mitchell-highway-orange",
+    index: "01",
+    title: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange ",
+    category: "Urban Infrastructure",
+    shortDescription:
+      "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
+
+    heroTitle: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange",
+    
+    featuredImage: "/images/image12.png",
+    featuredImagewithhover: "/images/image3.jpeg",
+  },
+  {
+    slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection",
+    index: "01",
+    title: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection ",
+    category: "Urban Infrastructure",
+    shortDescription:
+      "Signalised intersection upgrade at Grantham Farm improving traffic flow, safety, and connectivity for the surrounding road network.",
+    heroTitle: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection",
+    
+    featuredImage: "/images/image13.png",
+    featuredImagewithhover: "/images/image2.jpeg",
+
+  },
+  {
+    slug: "mr536-mamre-road-&-abbotts Rd-kemps-creek",
+    index: "01",
+    title: "MR536 Mamre Road & Abbotts Rd Kemps Creek ",
+    category: "Urban Infrastructure",
+    shortDescription:
+      "Road infrastructure upgrade improving intersection geometry, drainage, and overall road safety at the Mamre Road and Abbotts Road connection.",
+    heroTitle: "MR536 Mamre Road & Abbotts Rd Kemps Creek",
+    
+    featuredImage: "/images/image14.png",
+    featuredImagewithhover: "/images/image1.jpeg",
+
+  },
+];
 
 export const servicesPreview: ServicePreviewItem[] = [
   {
     index: "01",
-    slug: "civil-engineering",
-    title: "Civil Engineering",
+    slug: "engineering-and-design",
+    title: "Engineering & Design",
     description:
-      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
+      "Integrated engineering and design services across civil, structural, transport and infrastructure projects from early investigations through detailed design and construction support.",
+    tags: [
+      "Civil",
+      "Structural",
+      "Transport & Traffic",
+      "Bridges",
+      "Drainage",
+      "Geotechnical",
+    ],
   },
   {
     index: "02",
-    slug: "project-verification",
-    title: "Project Verification",
+    slug: "project-and-program-management",
+    title: "Project & Program Management",
     description:
-      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
+      "Senior-led project and program management across the infrastructure lifecycle  from project development and procurement through design, construction and close-out.",
+    tags: [
+      "Project Management",
+      "Contract Management",
+      "Procurement",
+      "Commercial",
+      "Delivery Advisory",
+    ],
   },
   {
     index: "03",
-    slug: "road-infrastructure",
-    title: "Road Infrastructure",
+    slug: "project-verification-and-assurance",
+    title: "Project Verification & Assurance",
     description:
-      "Advanced pavement engineering, geometric road design, and integrated traffic systems for future-ready transport networks across New South Wales and beyond.",
+      "Independent project verification and technical assurance for transport and infrastructure  with particular expertise in TfNSW developer-delivered works.",
+    tags: [
+      "TfNSW WAD",
+      "Independent Verification",
+      "Design Verification",
+      "Construction Verification",
+      "Quality Assurance",
+    ],
   },
   {
     index: "04",
-    slug: "renewable-energy-infrastructure",
-    title: "Renewable Energy Infrastructure",
+    slug: "asset-management-and-inspection",
+    title: "Asset Management & Inspection",
     description:
-      "Engineering the clean energy transition — solar farm civil works, wind turbine foundations, and hybrid energy infrastructure at utility scale.",
+      "Asset management, inspection and condition assessment services that help infrastructure owners manage risk and optimise maintenance and renewal investment.",
+    tags: [
+      "Bridge Inspections",
+      "Structural Inspections",
+      "Condition Assessment",
+      "Asset Management",
+      "Lifecycle Planning",
+    ],
   },
   {
     index: "05",
-    slug: "tfnsw-compliance",
-    title: "TfNSW Compliance",
+    slug: "buildings-and-property-engineering",
+    title: "Buildings & Property Engineering",
     description:
-      "Specialist advisory and compliance consulting precisely aligned with Transport for NSW regulatory standards, technical specifications, and certification frameworks.",
+      "Multidisciplinary engineering for residential, commercial, industrial and community buildings  from feasibility and design through approvals, inspection and certification.",
+    tags: [
+      "Structural",
+      "Civil",
+      "Stormwater",
+      "Certification",
+      "Inspections",
+      "Dilapidation",
+      "Construction Support",
+    ],
+  },
+  {
+    index: "06",
+    slug: "construction-and-project-delivery",
+    title: "Construction & Project Delivery",
+    description:
+      "Engineering-led construction and project delivery for civil and infrastructure works  combining technical understanding with practical construction management.",
+    tags: [
+      "Civil Works",
+      "Roads",
+      "Drainage",
+      "Concrete",
+      "Structures",
+      "Site Delivery",
+    ],
   },
 ];
 
-export const serviceTagRows: string[][] = [
-  ["STRUCTURAL", "Hydraulic"],
-  ["GEOTECHNICAL"],
-];
+
 
 export const projectFilters: string[] = [
   "ALL",
-  "Urban Infrastructure",
-  "Structural Engineering",
-  "Transportation Projects",
-  "Water & Irrigation Systems",
-  "Industrial Development",
+  "Project Verification",
+  "Buildings",
+  "Civil Design",
+  "Asset Management",
+  "Civil Works",
+  "Bridge Works",
+  "Project Management",
 ];
 
 export interface ClientLogo {
@@ -129,24 +235,24 @@ export interface WhyZamrPoint {
 
 export const whyZamrPoints: WhyZamrPoint[] = [
   {
-    title: "Safety first",
+    title: "Technical Excellence",
     description:
-      "An EMR consistently below industry average — because every worker goes home.",
+      "Delivering precise engineering solutions backed by rigorous analysis, industry standards, and a commitment to quality outcomes.",
   },
   {
-    title: "Self-perform strength",
+    title: "TfNSW Specialists",
     description:
-      "In-house concrete, steel, and interiors crews give us schedule and quality control others can't match.",
+      "Extensive experience delivering projects in accordance with Transport for NSW standards and specifications.",
   },
   {
-    title: "Built sustainably",
+    title: "Practical Delivery Focus",
     description:
-      "LEED, WELL, and net-zero expertise woven into every phase of design and construction.",
+      "Combining engineering expertise with construction knowledge to develop solutions that are safe, efficient, and buildable.",
   },
   {
-    title: "Owner-aligned",
+    title: "Client-Aligned Approach",
     description:
-      "Transparent budgets, open-book contracts, and one team accountable from day one to handover.",
+      "Working collaboratively with government, developers, and contractors to deliver transparent advice and successful project outcomes from concept to completion.",
   },
 ];
 
@@ -165,6 +271,7 @@ export const contactInfo: ContactInfo = {
   address2: "L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150",
   emails: [
     { label: "Email", address: "admin@zamrengineering.com.au" },
+    { label: "Phone", address: "02 9688 5322" },
     { label: "Email", address: "khalid.javed@zamrengineering.com.au" },
   ],
   phone: "",

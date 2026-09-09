@@ -41,24 +41,20 @@ function StatItem({
 }) {
   const count = useCountUp(stat.value, shouldStart);
 
-  const alignClass = {
-    start: "sm:items-start",
-    center: "sm:items-center",
-    end: "sm:items-end",
-  }[stat.align];
-
   return (
     <div
-      className={`flex flex-1 flex-col items-center gap-[2px] ${alignClass}`}
+      className={`flex w-full flex-col items-center gap-[2px] items-start`}
     >
       <div className="flex flex-row items-start gap-2">
         <span className="text-[48px] font-normal leading-[60px] text-white sm:text-[60px] sm:leading-[76px] lg:text-[72px] lg:leading-[91px]">
           {count}
         </span>
+
         <span className="text-[28px] font-light leading-[34px] text-white sm:text-[36px] sm:leading-[42px] lg:text-[42px] lg:leading-[50px]">
           {stat.suffix}
         </span>
       </div>
+
       <span className="text-sm font-light leading-5 text-white lg:text-base">
         {stat.label}
       </span>
@@ -101,16 +97,16 @@ export default function StatsSection() {
           </span>
           <span className="h-px w-12 bg-white sm:w-[104px]" />
           <span className="text-sm font-medium tracking-[3px] uppercase text-white lg:text-base">
-            STATS
+            Trusted by Government, Developers & Contractors
           </span>
         </div>
 
-        {/* Stats row */}
-        <div className="flex w-full flex-col items-center gap-8 sm:flex-row sm:items-center sm:justify-between sm:gap-x-[185px] mt-[60px]">
-          {stats.map((stat) => (
-            <StatItem key={stat.label} stat={stat} shouldStart={inView} />
-          ))}
-        </div>
+       {/* Stats row */}
+<div className="mt-[60px] grid w-full grid-cols-1 sm:grid-cols-5">
+  {stats.map((stat) => (
+    <StatItem key={stat.label} stat={stat} shouldStart={inView} />
+  ))}
+</div>
       </div>
     </section>
   );
