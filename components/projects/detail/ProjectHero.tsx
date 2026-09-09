@@ -106,14 +106,13 @@ export default function ProjectHero({ image = defaultHeroImage, title, subtitle 
                   .map((stat) => (
                     <div
                       key={stat.label}
-                      className="flex flex-1 flex-col justify-center border-l border-white/[0.07] px-5"
+                      className="flex flex-1 flex-col justify-center  px-5"
                     >
                       <span
                         className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}
                       >
                         {stat.label}
                       </span>
-
                       <span
                         className={`${barlow.className} pt-[7px] text-[14px] font-bold leading-[17px] text-white/80`}
                       >
