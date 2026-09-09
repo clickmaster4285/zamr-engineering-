@@ -4,7 +4,7 @@ import { journeyMilestones } from "@/mockData/trusted-accredited";
 
 export default function Journey() {
   return (
-    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-32.5">
+    <section className="w-full px-6 py-16 lg:px-[130px] lg:py-32.5 bg-[var(--bg-section)]">
       <div>
         {/* Header */}
         <div className="flex w-full flex-col gap-6 lg:gap-[30px]">
@@ -27,7 +27,7 @@ export default function Journey() {
           {journeyMilestones.map((milestone) => (
             <div
               key={milestone.year}
-              className="group relative flex cursor-pointer flex-col gap-3 border-b border-[var(--border-section)] bg-white px-6 py-6 transition-colors duration-300 hover:bg-[var(--bg-hover)] active:bg-[var(--bg-hover)] lg:h-[164px] lg:flex-row lg:items-center lg:px-[50px] lg:py-0"
+              className="group relative flex cursor-pointer flex-col gap-3 border-b border-[var(--border-section)]  px-6 py-6 transition-colors duration-300 hover:bg-[var(--bg-hover)] active:bg-[var(--bg-hover)] lg:h-[164px] lg:flex-row lg:items-center lg:px-[50px] lg:py-0"
             >
               {/* Accent border */}
               <span className="absolute bottom-0 left-0 h-0 w-[4px] bg-[var(--color-secondary)] transition-all duration-300 group-hover:h-full group-active:h-full" />
