@@ -1281,15 +1281,21 @@ export const projectsHowWeDeliver: HowWeDeliverItem[] = [
 ];
 
 export interface ProjectsContactInfo {
-  address: string;
+  company_name: string;
+  address1: string;
+  address2: string;
   phone: string;
-  email: string;
+  email1: string;
+  email2: string;
 }
 
 export const defaultHeroImage = "/images/image5.jpeg";
 
 export const projectsContactInfo: ProjectsContactInfo = {
-  address: "L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150, 30 Smith Street, Wentworthville, NSW 2145",
+  company_name: "ZAMR Engineering Pty Ltd",
+  address1: "30 Smith Street Wentworthville NSW, 2145",
+  address2: "L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150",
   phone: "02 9688 5322",
-  email: "admin@zamrengineering.com.au",
+  email1: "admin@zamrengineering.com.au",
+  email2: "khalid.javed@zamrengineering.com.au",
 };

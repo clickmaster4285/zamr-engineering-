@@ -321,7 +321,7 @@ export default function ProjectsPage() {
       <section className="w-full bg-white px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
         <div className="mx-auto flex max-w-[1468px] flex-col gap-12 lg:flex-row lg:items-start lg:gap-[231px]">
           {/* Left — info */}
-          <div className="flex w-full flex-col gap-[30px] lg:w-[555px]">
+          <div className="flex w-full flex-col gap-[30px] lg:w-[755px]">
             <div className="flex flex-col gap-[30px]">
               <div className="flex items-center gap-4">
                 <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
@@ -329,21 +329,30 @@ export default function ProjectsPage() {
                 </span>
                 <span className="h-px w-[104px] bg-[var(--text-dark)]" />
                 <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-dark)]">
-                  HOW WE DELIVER
+                  CONTACT
                 </span>
               </div>
               <h2 className="text-[36px] font-bold leading-[45px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[55px] lg:text-[56px] lg:leading-[71px]">
-                Start Your Project
+                Let's Build Something Exceptional.
               </h2>
             </div>
 
             <div className="flex flex-col justify-end gap-5">
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
-                Tell us about your project or challenge. Our engineering team will review your enquiry and respond within 1–2 business days.
+                <span className="text-[var(--color-blue-label)]">Company Name:</span>{" "}
+                {projectsContactInfo.company_name}
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
-                <span className="text-[var(--color-blue-label)]">Office:</span>{" "}
-                {projectsContactInfo.address}
+                <span className="text-[var(--color-blue-label)]">Address 1:</span>{" "}
+                {projectsContactInfo.address1}
+              </p>
+              <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
+                <span className="text-[var(--color-blue-label)]">Address 2:</span>{" "}
+                {projectsContactInfo.address2}
+              </p>
+              <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
+                <span className="text-[var(--color-blue-label)]">Email:</span>{" "}
+                {projectsContactInfo.email1}
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
                 <span className="text-[var(--color-blue-label)]">Phone:</span>{" "}
@@ -351,7 +360,7 @@ export default function ProjectsPage() {
               </p>
               <p className="text-[16px] leading-[22px] text-[var(--text-dark)] sm:text-[18px] sm:leading-[23px]">
                 <span className="text-[var(--color-blue-label)]">Email:</span>{" "}
-                {projectsContactInfo.email}
+                {projectsContactInfo.email2}
               </p>
             </div>
           </div>
