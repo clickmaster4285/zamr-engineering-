@@ -114,6 +114,14 @@ export const servicesPreview: ServicePreviewItem[] = [
     title: "Engineering & Design",
     description:
       "Integrated engineering and design services across civil, structural, transport and infrastructure projects from early investigations through detailed design and construction support.",
+    tags: [
+      "Civil",
+      "Structural",
+      "Transport & Traffic",
+      "Bridges",
+      "Drainage",
+      "Geotechnical",
+    ],
   },
   {
     index: "02",
@@ -121,6 +129,13 @@ export const servicesPreview: ServicePreviewItem[] = [
     title: "Project & Program Management",
     description:
       "Senior-led project and program management across the infrastructure lifecycle  from project development and procurement through design, construction and close-out.",
+    tags: [
+      "Project Management",
+      "Contract Management",
+      "Procurement",
+      "Commercial",
+      "Delivery Advisory",
+    ],
   },
   {
     index: "03",
@@ -128,6 +143,13 @@ export const servicesPreview: ServicePreviewItem[] = [
     title: "Project Verification & Assurance",
     description:
       "Independent project verification and technical assurance for transport and infrastructure  with particular expertise in TfNSW developer-delivered works.",
+    tags: [
+      "TfNSW WAD",
+      "Independent Verification",
+      "Design Verification",
+      "Construction Verification",
+      "Quality Assurance",
+    ],
   },
   {
     index: "04",
@@ -135,6 +157,13 @@ export const servicesPreview: ServicePreviewItem[] = [
     title: "Asset Management & Inspection",
     description:
       "Asset management, inspection and condition assessment services that help infrastructure owners manage risk and optimise maintenance and renewal investment.",
+    tags: [
+      "Bridge Inspections",
+      "Structural Inspections",
+      "Condition Assessment",
+      "Asset Management",
+      "Lifecycle Planning",
+    ],
   },
   {
     index: "05",
@@ -142,6 +171,15 @@ export const servicesPreview: ServicePreviewItem[] = [
     title: "Buildings & Property Engineering",
     description:
       "Multidisciplinary engineering for residential, commercial, industrial and community buildings  from feasibility and design through approvals, inspection and certification.",
+    tags: [
+      "Structural",
+      "Civil",
+      "Stormwater",
+      "Certification",
+      "Inspections",
+      "Dilapidation",
+      "Construction Support",
+    ],
   },
   {
     index: "06",
@@ -149,6 +187,14 @@ export const servicesPreview: ServicePreviewItem[] = [
     title: "Construction & Project Delivery",
     description:
       "Engineering-led construction and project delivery for civil and infrastructure works  combining technical understanding with practical construction management.",
+    tags: [
+      "Civil Works",
+      "Roads",
+      "Drainage",
+      "Concrete",
+      "Structures",
+      "Site Delivery",
+    ],
   },
 ];
 
