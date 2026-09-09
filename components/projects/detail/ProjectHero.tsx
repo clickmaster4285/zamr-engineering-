@@ -76,7 +76,7 @@ export default function ProjectHero({ image = defaultHeroImage, title, subtitle 
           {stats && (
             <div
               className="
-      bg-[var(--bg-hero)]
+      bg-[var(--bg-project-detail-stats)]
       lg:absolute lg:left-[130px] lg:top-[536px]
       lg:w-[82vw]
     "
@@ -136,8 +136,8 @@ export default function ProjectHero({ image = defaultHeroImage, title, subtitle 
                   <Image
                     src="/images/image15.png"
                     alt="Transport for NSW"
-                    width={180}
-                    height={68}
+                    width={207}
+                    height={79}
                     className="h-auto max-h-[68px] w-auto object-contain object-left"
                   />
                 </div>

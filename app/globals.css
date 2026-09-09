@@ -49,7 +49,8 @@
   --bg-section: oklch(0.9764 0.0063 254.21);       /* #F6F8FC — section backgrounds */
   --bg-card: oklch(0.956 0.005 264.4);          /* #EFF4FC — card backgrounds */
   --bg-hover: oklch(0.976 0.002 264.4);         /* #F9FAFC — hover state */
-
+  
+  --bg-project-detail-stats: oklch(0.1947 0.0427 264.49);          /* dark blue for project detial stats background */
   /* ════════════════════════════════════════════
      TEXT COLORS
      ════════════════════════════════════════════ */
