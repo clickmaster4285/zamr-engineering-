@@ -1,45 +1,26 @@
-/* OVERVIEW */
+/* OUR VALUE */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 130px;
-gap: 10px;
+gap: 60px;
 
 width: 1728px;
-height: 554px;
+height: 760px;
 
 background: #F6F8FC;
 background: color(display-p3 0.965 0.973 0.988);
 
 /* Inside auto layout */
 flex: none;
-order: 2;
+order: 4;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319060 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 60px;
-
-width: 1468px;
-height: 294px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319050 */
+/* Frame */
 
 /* Auto layout */
 display: flex;
@@ -49,17 +30,16 @@ padding: 0px;
 gap: 28px;
 
 width: 1468px;
-height: 103px;
+height: 154px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 118 */
+/* Frame */
 
 /* Auto layout */
 display: flex;
@@ -68,7 +48,7 @@ align-items: center;
 padding: 0px;
 gap: 16px;
 
-width: 344px;
+width: 270px;
 height: 20px;
 
 
@@ -78,7 +58,7 @@ order: 0;
 flex-grow: 0;
 
 
-/* 02 */
+/* 05 */
 
 width: 23px;
 height: 20px;
@@ -90,8 +70,8 @@ font-size: 16px;
 line-height: 20px;
 letter-spacing: 3px;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #1945A7;
+color: color(display-p3 0.145 0.267 0.631);
 
 
 /* Inside auto layout */
@@ -100,13 +80,13 @@ order: 0;
 flex-grow: 0;
 
 
-/* Vector 4 */
+/* Vector */
 
 width: 104px;
 height: 0px;
 
-border: 1px solid #333333;
-border: 1px solid color(display-p3 0.200 0.200 0.200);
+border: 1px solid #1945A7;
+border: 1px solid color(display-p3 0.145 0.267 0.631);
 
 /* Inside auto layout */
 flex: none;
@@ -114,9 +94,9 @@ order: 1;
 flex-grow: 0;
 
 
-/* Our Commitment */
+/* Our Value */
 
-width: 185px;
+width: 111px;
 height: 20px;
 
 font-family: 'Outfit';
@@ -127,8 +107,8 @@ line-height: 20px;
 letter-spacing: 3px;
 text-transform: uppercase;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
+color: #1945A7;
+color: color(display-p3 0.145 0.267 0.631);
 
 
 /* Inside auto layout */
@@ -137,9 +117,9 @@ order: 2;
 flex-grow: 0;
 
 
-/* Our Commitment to Every Client */
+/* Our Value */
 
-width: 657px;
+width: 1468px;
 height: 55px;
 
 font-family: 'Outfit';
@@ -155,19 +135,138 @@ color: color(display-p3 0.200 0.200 0.200);
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319062 */
+/* We deliver more than engineering expertise — we bring a commitment to community, accessibility, and end-to-end partnership. */
+
+width: 1468px;
+height: 23px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+width: 1468px;
+height: 286px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Value Card — Social Commitment */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 32px;
+gap: 16px;
+
+width: 473.33px;
+height: 286px;
+
+background: #07183D;
+background: color(display-p3 0.043 0.094 0.231);
+border: 2px solid #1945A7;
+border: 2px solid color(display-p3 0.145 0.267 0.631);
+box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.101961);
+box-shadow: 0px 12px 24px color(display-p3 0.000 0.000 0.000 / 0.101961);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Icon Badge */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
 align-items: center;
 padding: 0px;
 
-width: 1468px;
-height: 131px;
+width: 56px;
+height: 56px;
+
+background: rgba(255, 255, 255, 0.3);
+background: color(display-p3 1.000 1.000 1.000 / 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* users */
+
+width: 28px;
+height: 28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 8.33%;
+right: 8.33%;
+top: 12.5%;
+bottom: 12.5%;
+
+border: 2px solid #FFFFFF;
+border: 2px solid color(display-p3 1.000 1.000 1.000);
+
+
+/* Social Commitment */
+
+width: 409.33px;
+height: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 30px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
@@ -177,96 +276,31 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Container */
+/* ZAMR Engineering provides internship programs for both graduates and immigrants — demonstrating strong social commitments to community development and workforce diversity. */
 
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px;
-
-width: 489.33px;
-height: 131px;
-
-border-width: 0px 0px 1px 1px;
-border-style: solid;
-border-color: #EAEAEA;
-border-color: color(display-p3 0.918 0.918 0.918);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 440.33px;
-height: 82px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Quality */
-
-width: 440.33px;
-height: 30px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 30px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 440.33px;
-height: 40px;
+width: 409.33px;
+height: 104px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
-line-height: 20px;
+line-height: 26px;
+/* or 162% */
 
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
+opacity: 0.9;
 
 /* Inside auto layout */
 flex: none;
-order: 1;
+order: 2;
 align-self: stretch;
 flex-grow: 0;
 
 
-/* Container */
+/* Value Card — End-to-End Services */
 
 box-sizing: border-box;
 
@@ -274,15 +308,18 @@ box-sizing: border-box;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 24px;
+padding: 32px;
+gap: 16px;
 
-width: 489.33px;
-height: 131px;
+width: 473.33px;
+height: 286px;
 
-border-width: 0px 0px 1px 1px;
-border-style: solid;
-border-color: #EAEAEA;
-border-color: color(display-p3 0.918 0.918 0.918);
+background: #07183D;
+background: color(display-p3 0.043 0.094 0.231);
+border: 2px solid #1945A7;
+border: 2px solid color(display-p3 0.145 0.267 0.631);
+box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.101961);
+box-shadow: 0px 12px 24px color(display-p3 0.000 0.000 0.000 / 0.101961);
 
 /* Inside auto layout */
 flex: none;
@@ -291,61 +328,64 @@ align-self: stretch;
 flex-grow: 1;
 
 
-/* Frame 1321319061 */
+/* Icon Badge */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+justify-content: center;
+align-items: center;
 padding: 0px;
-gap: 12px;
 
-width: 440.33px;
-height: 82px;
+width: 56px;
+height: 56px;
+
+background: rgba(255, 255, 255, 0.3);
+background: color(display-p3 1.000 1.000 1.000 / 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* layers */
+
+width: 28px;
+height: 28px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Integrity */
+/* Vector */
 
-width: 440.33px;
+position: absolute;
+left: 8.33%;
+right: 8.26%;
+top: 8.33%;
+bottom: 8.34%;
+
+border: 2px solid #FFFFFF;
+border: 2px solid color(display-p3 1.000 1.000 1.000);
+
+
+/* End-to-End Services */
+
+width: 409.33px;
 height: 30px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
+font-weight: 700;
 font-size: 24px;
 line-height: 30px;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 440.33px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
@@ -355,7 +395,31 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Container */
+/* ZAMR Engineering provides any services that clients are looking for, ranging from design, to construction, to asset management — a true one-stop engineering partner. */
+
+width: 409.33px;
+height: 78px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* or 162% */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Value Card — State-Wide Coverage */
 
 box-sizing: border-box;
 
@@ -363,15 +427,18 @@ box-sizing: border-box;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 24px;
+padding: 32px;
+gap: 16px;
 
-width: 489.33px;
-height: 131px;
+width: 473.33px;
+height: 286px;
 
-border-width: 0px 0px 1px 1px;
-border-style: solid;
-border-color: #EAEAEA;
-border-color: color(display-p3 0.918 0.918 0.918);
+background: #07183D;
+background: color(display-p3 0.043 0.094 0.231);
+border: 2px solid #1945A7;
+border: 2px solid color(display-p3 0.145 0.267 0.631);
+box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.101961);
+box-shadow: 0px 12px 24px color(display-p3 0.000 0.000 0.000 / 0.101961);
 
 /* Inside auto layout */
 flex: none;
@@ -380,65 +447,92 @@ align-self: stretch;
 flex-grow: 1;
 
 
-/* Frame 1321319061 */
+/* Icon Badge */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+justify-content: center;
+align-items: center;
 padding: 0px;
-gap: 12px;
 
-width: 440.33px;
-height: 82px;
+width: 56px;
+height: 56px;
+
+background: rgba(255, 255, 255, 0.3);
+background: color(display-p3 1.000 1.000 1.000 / 0.3);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* map-pin */
+
+width: 28px;
+height: 28px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Innovation */
+/* Vector */
 
-width: 440.33px;
+position: absolute;
+left: 16.67%;
+right: 16.67%;
+top: 8.33%;
+bottom: 8.33%;
+
+border: 2px solid #FFFFFF;
+border: 2px solid color(display-p3 1.000 1.000 1.000);
+
+
+/* State-Wide Coverage */
+
+width: 409.33px;
 height: 30px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
+font-weight: 700;
 font-size: 24px;
 line-height: 30px;
 
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 440.33px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ZAMR Engineering provides services across NSW, from urban areas to rural areas — ensuring accessibility and reach for all communities. */
+
+width: 409.33px;
+height: 78px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+/* or 162% */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
 align-self: stretch;
 flex-grow: 0;

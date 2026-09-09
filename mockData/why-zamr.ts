@@ -127,10 +127,42 @@ export interface TrackRecordStat {
 
 export const trackRecordStats: TrackRecordStat[] = [
   { value: "12", suffix: "+", label: "YEARS OF EXPERIENCE", align: "start" },
-  { value: "5", label: "ENGINEERING DISCIPLINES", align: "center" },
-  { value: "150", suffix: "+", label: "PROJECTS DELIVERED", align: "center" },
-  { value: "98", suffix: "%", label: "CLIENT SATISFACTION", align: "end" },
+  { value: "05", label: "ENGINEERING DISCIPLINES", align: "center" },
+  { value: "150", suffix: "+", label: "PROJECTS DELIVERED", align: "end" },
 ];
+
+export interface OurValueCard {
+  icon: "users" | "layers" | "map-pin";
+  title: string;
+  description: string;
+}
+
+export const ourValueCards: OurValueCard[] = [
+  {
+    icon: "users",
+    title: "Social Commitment",
+    description:
+      "ZAMR Engineering provides internship programs for both graduates and immigrants — demonstrating strong social commitments to community development and workforce diversity.",
+  },
+  {
+    icon: "layers",
+    title: "End-to-End Services",
+    description:
+      "ZAMR Engineering provides any services that clients are looking for, ranging from design, to construction, to asset management — a true one-stop engineering partner.",
+  },
+  {
+    icon: "map-pin",
+    title: "State-Wide Coverage",
+    description:
+      "ZAMR Engineering provides services across NSW, from urban areas to rural areas — ensuring accessibility and reach for all communities.",
+  },
+];
+
+export const ourValueContent = {
+  heading: "Our Value",
+  subtitle:
+    "We deliver more than engineering expertise — we bring a commitment to community, accessibility, and end-to-end partnership.",
+};
 
 export interface CTAContent {
   heading: string;
