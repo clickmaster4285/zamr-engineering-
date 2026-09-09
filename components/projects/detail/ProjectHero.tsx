@@ -84,7 +84,7 @@ export default function ProjectHero({ image = defaultHeroImage, title, subtitle 
               {/* Desktop */}
               <div className="hidden min-h-[147px] lg:flex">
                 {/* Client logo */}
-                <div className="flex w-[294px] flex-col justify-center px-5">
+                <div className="flex w-[294px] flex-col justify-center px-5 ">
                   <span
                     className={`${barlow.className} mb-2 text-[12px] font-semibold leading-[14px] text-white/30`}
                   >
@@ -106,7 +106,7 @@ export default function ProjectHero({ image = defaultHeroImage, title, subtitle 
                   .map((stat) => (
                     <div
                       key={stat.label}
-                      className="flex flex-1 flex-col justify-center  px-5"
+                      className="flex flex-1 flex-col justify-center  px-5 my-7.25 border-l border-white/[0.07] "
                     >
                       <span
                         className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}
