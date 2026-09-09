@@ -71,17 +71,17 @@ export const commitmentCards: CommitmentCard[] = [
   {
     title: "Quality",
     description:
-      "Delivering work that consistently meets the highest engineering standards.",
+      "Delivering engineering solutions that meet the highest standards of technical excellence.",
   },
   {
     title: "Integrity",
     description:
-      "Building strong relationships through honesty, accountability, and professionalism.",
+      "Building trusted relationships through transparency, accountability, and professionalism.",
   },
   {
-    title: "Excellence",
+    title: "Innovation ",
     description:
-      "Continuously improving processes to achieve outstanding project outcomes.",
+      "Applying practical thinking and modern engineering approaches to overcome project challenges.",
   },
 ];
 
