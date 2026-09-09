@@ -271,6 +271,7 @@ export const contactInfo: ContactInfo = {
   address2: "L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150",
   emails: [
     { label: "Email", address: "admin@zamrengineering.com.au" },
+    { label: "Phone", address: "02 9688 5322" },
     { label: "Email", address: "khalid.javed@zamrengineering.com.au" },
   ],
   phone: "",
