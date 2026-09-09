@@ -20,34 +20,34 @@ export interface HowWeWorkRow {
 
 export const howWeWorkRows: HowWeWorkRow[] = [
   {
-    title: "Engineering Expertise",
+    title: "Experienced Engineering Team",
     description:
-      "Experienced professionals delivering practical engineering solutions across complex infrastructure projects.",
+      "Our multidisciplinary team brings extensive experience across civil infrastructure, transport, structural engineering, and project verification.",
   },
   {
-    title: "Quality Focus",
+    title: "Quality-Driven Delivery",
     description:
-      "Every project follows structured quality management processes to ensure consistent and reliable outcomes.",
+      "Structured quality systems, technical reviews, and compliance processes ensure every deliverable meets project requirements and industry standards.",
   },
   {
-    title: "Safety Commitment",
+    title: "Independent Technical Assurance",
     description:
-      "Safety is integrated into every stage of planning, design, and project delivery. ",
+      "As a TfNSW-accredited verification provider, we deliver objective reviews that provide confidence in design, construction, and project outcomes.",
   },
   {
-    title: "Client Collaboration",
+    title: "Practical Engineering Solutions",
     description:
-      "We work closely with our clients to understand project objectives and deliver tailored engineering solutions.",
+      "We combine technical knowledge with construction experience to develop solutions that are practical, buildable, and cost-effective.",
   },
   {
-    title: "Reliable Delivery",
+    title: "Client-Focused Collaboration",
     description:
-      "Committed to meeting deadlines while maintaining technical excellence and project quality.",
+      "We work closely with clients, contractors, and stakeholders to understand project objectives and deliver outcomes aligned with expectations.",
   },
   {
-    title: "Sustainable Solutions",
+    title: "Reliable Project Delivery",
     description:
-      "Designing engineering solutions that support long-term performance, efficiency, and responsible development.",
+      "We are committed to delivering high-quality engineering outcomes safely, efficiently, and in accordance with agreed project requirements.",
   },
 ];
 

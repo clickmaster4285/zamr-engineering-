@@ -21,7 +21,7 @@ export default function HowWeWork() {
 
           {/* Heading */}
           <h2 className="w-full text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
-            The Difference Is How We Deliver
+            The ZAMR Difference
           </h2>
         </div>
 
