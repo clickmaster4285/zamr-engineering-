@@ -7,17 +7,35 @@ const barlow = Barlow({
   subsets: ["latin"],
   display: "swap",
 });
-interface StatItem {
-  label: string;
-  value: string;
-}
 interface Props {
   image?: string;
   title: string;
   subtitle: string;
-  stats?: StatItem[];
 }
-export default function ProjectHero({ image = defaultHeroImage, title, subtitle, stats }: Props) {
+export default function ProjectHero({ image = defaultHeroImage, title, subtitle }: Props) {
+  const stats = [
+    {
+      label: "Client",
+      value: "Transport for NSW",
+    },
+    {
+      label: "Value",
+      value: "$45 Million",
+    },
+    {
+      label: "Duration",
+      value: "March 2022–March 2025",
+    },
+    {
+      label: "Location",
+      value: "Bathurst, NSW",
+    },
+    {
+      label: "Scope",
+      value: "Civil Works",
+    },
+  ];
+
   return (
     <section className="relative w-full">
       {/* Figma: 1728 × 700px hero with overlay rgba(7, 24, 61, 0.8) */}
@@ -56,43 +74,96 @@ export default function ProjectHero({ image = defaultHeroImage, title, subtitle,
           </div>
 
           {stats && (
-            <div className="bg-[var(--bg-hero)] lg:absolute lg:w-[82vw] lg:left-[130px] lg:top-140 lg:bg-[var(--bg-hero)]">
-              {/* Desktop: 6 equal columns */}
-              <div className="hidden lg:flex">
-                {stats.map((stat, i) => (
-                  <div
-                    key={stat.label}
-                    className={`flex flex-1 flex-col justify-center px-5 py-6 min-h-[103px] ${
-                      i > 0 ? "border-l border-white/[0.07]" : ""
-                    }`}
+            <div
+              className="
+      bg-[var(--bg-hero)]
+      lg:absolute lg:left-[130px] lg:top-[536px]
+      lg:w-[82vw]
+    "
+            >
+              {/* Desktop */}
+              <div className="hidden min-h-[147px] lg:flex">
+                {/* Client logo */}
+                <div className="flex w-[294px] flex-col justify-center px-5">
+                  <span
+                    className={`${barlow.className} mb-2 text-[12px] font-semibold leading-[14px] text-white/30`}
                   >
-                    <span className={`${barlow.className} font-semibold text-[12px] leading-[14px] text-white/30`}>
-                      {stat.label}
-                    </span>
-                    <span className={`${barlow.className} font-bold text-[14px] leading-[17px] text-white/82 pt-[7px]`}>
-                      {stat.value}
-                    </span>
-                  </div>
-                ))}
+                    CLIENT
+                  </span>
+
+                  <Image
+                    src="/images/image15.png"
+                    alt="Transport for NSW"
+                    width={210}
+                    height={80}
+                    className="h-auto max-h-[80px] w-auto object-contain object-left"
+                  />
+                </div>
+
+                {/* Other statistics */}
+                {stats
+                  .filter((stat) => stat.label.toLowerCase() !== "client")
+                  .map((stat) => (
+                    <div
+                      key={stat.label}
+                      className="flex flex-1 flex-col justify-center border-l border-white/[0.07] px-5"
+                    >
+                      <span
+                        className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}
+                      >
+                        {stat.label}
+                      </span>
+
+                      <span
+                        className={`${barlow.className} pt-[7px] text-[14px] font-bold leading-[17px] text-white/80`}
+                      >
+                        {stat.value}
+                      </span>
+                    </div>
+                  ))}
               </div>
 
-              {/* Mobile/tablet: solid 3-column grid, wraps into rows automatically */}
+              {/* Mobile and tablet */}
               <div className="grid grid-cols-3 lg:hidden">
-                {stats.map((stat, i) => (
-                  <div
-                    key={stat.label}
-                    className={`flex flex-col justify-center px-3 py-4 min-h-[76px] ${
-                      i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
-                    } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
+                {/* Client logo */}
+                <div className="col-span-3 flex min-h-[90px] flex-col justify-center px-4 py-4">
+                  <span
+                    className={`${barlow.className} mb-2 text-[10px] font-semibold leading-[12px] text-white/30`}
                   >
-                    <span className={`${barlow.className} font-semibold text-[10px] leading-[12px] text-white/30`}>
-                      {stat.label}
-                    </span>
-                    <span className={`${barlow.className} font-bold text-[12px] leading-[15px] text-white/82 pt-1`}>
-                      {stat.value}
-                    </span>
-                  </div>
-                ))}
+                    CLIENT
+                  </span>
+
+                  <Image
+                    src="/images/image15.png"
+                    alt="Transport for NSW"
+                    width={180}
+                    height={68}
+                    className="h-auto max-h-[68px] w-auto object-contain object-left"
+                  />
+                </div>
+
+                {/* Other statistics */}
+                {stats
+                  .filter((stat) => stat.label.toLowerCase() !== "client")
+                  .map((stat, i) => (
+                    <div
+                      key={stat.label}
+                      className={`flex min-h-[76px] flex-col justify-center px-3 py-4 ${i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
+                        } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
+                    >
+                      <span
+                        className={`${barlow.className} text-[10px] font-semibold leading-[12px] text-white/30`}
+                      >
+                        {stat.label}
+                      </span>
+
+                      <span
+                        className={`${barlow.className} pt-1 text-[12px] font-bold leading-[15px] text-white/80`}
+                      >
+                        {stat.value}
+                      </span>
+                    </div>
+                  ))}
               </div>
             </div>
           )}
