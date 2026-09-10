@@ -210,7 +210,7 @@ export default function Contact({ number = "06", serviceTitle = "Civil Engineeri
               htmlFor="message"
               className="text-[12px] font-bold leading-[14px] tracking-[3px] text-[var(--text-dark)]"
             >
-              PROJECT DETAILS
+              MESSAGE
             </label>
             <textarea
               id="message"

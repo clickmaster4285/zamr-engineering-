@@ -31,19 +31,19 @@ export const leadershipTeam: TeamMember[] = [
     name: "Kah Yong Tan",
     role: "Managing Director",
     department: "Leadership",
-    headshot: "/images/team/noimage.png",
+    headshot: "/images/team/Kah.jpeg",
   },
   {
     name: "Janaka Bandara",
     role: "Quality Manager",
     department: "Operational Quality",
-    headshot: "/images/team/noimage.png",
+    headshot: "/images/team/Janaka.jpeg",
   },
   {
     name: "Yashwant Dyall",
     role: "Senior Civil Engineer",
     department: "Civil Engineering",
-    headshot: "/images/team/noimage.png",
+    headshot: "/images/team/Yashwant.jpeg",
   },
 ];
 

@@ -298,7 +298,7 @@ export const footerServiceLinks: string[] = [
   "Project Management",
   "Project Verification",
   "Buildings Services",
-  "Others Services",
+  "Other Services",
 ];
 
 export interface FooterContactInfo {
@@ -317,3 +317,18 @@ export const logoImage = "/images/zamarlogoTransparant.png";
 
 export const footerDescription: string =
   "Specialist civil engineering consultancy delivering precision and compliance in infrastructure projects across Australia.";
+
+export interface LocationsContent {
+  sectionNumber: string;
+  sectionLabel: string;
+  heading: string;
+  description: string;
+}
+
+export const locationsContent: LocationsContent = {
+  sectionNumber: "06",
+  sectionLabel: "LOCATIONS",
+  heading: "Where We\u2019ve Made an Impact",
+  description:
+    "Discover the projects and locations where our engineering expertise has contributed to better infrastructure and project outcomes.",
+};
