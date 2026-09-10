@@ -37,11 +37,11 @@ export interface StatItem {
 }
 
 export const stats: StatItem[] = [
-  { value: 10, suffix: "+", label: "Local Councils", align: "start" },
-  { value: 15, suffix: "+", label: "Government Agencies & Authorities", align: "center" },
-  { value: 99, suffix: "%", label: "Client Satisfaction", align: "center" },
-  { value: 50, suffix: "+", label: "Private Developers & Contractors", align: "center" },
-  { value: 100, suffix: "+", label: "Major Infrastructure Packages Supported", align: "end" },
+  { value: 10, suffix: "+", label: "Local\nCouncils", align: "start" },
+  { value: 15, suffix: "+", label: "Government Agencies\n& Authorities", align: "center" },
+  { value: 99, suffix: "%", label: "Client\nSatisfaction", align: "center" },
+  { value: 50, suffix: "+", label: "Private Developers\n& Contractors", align: "center" },
+  { value: 100, suffix: "+", label: "Major Infrastructure\nPackages Supported", align: "end" },
 ];
 
 // --- Organizational Structure Data ---

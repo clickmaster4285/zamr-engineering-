@@ -55,7 +55,7 @@ function StatItem({
         </span>
       </div>
 
-      <span className="text-sm font-light leading-5 text-white lg:text-base">
+      <span className="whitespace-pre-line text-sm font-light leading-5 text-white lg:text-base">
         {stat.label}
       </span>
     </div>
@@ -102,9 +102,9 @@ export default function StatsSection() {
         </div>
 
        {/* Stats row */}
-<div className="mt-[60px] grid w-full grid-cols-1 sm:grid-cols-5">
+<div className="mt-[60px] grid w-full grid-cols-1 sm:grid-cols-5 ">
   {stats.map((stat) => (
-    <StatItem key={stat.label} stat={stat} shouldStart={inView} />
+      <StatItem key={stat.label} stat={stat} shouldStart={inView} />
   ))}
 </div>
       </div>
