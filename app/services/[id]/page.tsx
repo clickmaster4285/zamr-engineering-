@@ -5,8 +5,7 @@ import { getServiceBySlug } from "@/mockData/services";
 import ServicesHero from "@/components/services/detail/ServicesHero";
 import Capabilities from "@/components/services/detail/Capabilities";
 import ReferProjects from "@/components/services/detail/ReferProjects";
-// import Contact from "@/components/services/Contact";
-import Contacts from "@/components/landing/Contacts";
+import Contacts from "@/components/Contacts";
 
 export default function ServiceDetailPage() {
   const params = useParams();

@@ -23,7 +23,7 @@ const barlow = Barlow({
   display: "swap",
 });
 
-import Contacts from "@/components/landing/Contacts";
+import Contacts from "@/components/Contacts";
 
 const INITIAL_COUNT = 6;
 const LOAD_MORE_COUNT = 3;
@@ -316,7 +316,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-<Contacts />
+      <Contacts />
     </main>
   );
 }

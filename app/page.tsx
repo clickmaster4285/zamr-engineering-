@@ -5,7 +5,7 @@ import Services from "@/components/landing/Services";
 import Projects from "@/components/landing/Projects";
 import WhyZamr from "@/components/landing/WhyZamr";
 import Locations from "@/components/landing/Locations";
-import Contacts from "@/components/landing/Contacts";
+import Contacts from "@/components/Contacts";
 
 export default function Page() {
   return (
