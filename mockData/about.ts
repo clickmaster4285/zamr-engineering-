@@ -244,7 +244,7 @@ export const keyDirectorsContent = {
       name: "Sara Mitchell",
       role: "Senior Civil Engineer",
       department: "Civil Engineering",
-      headshot: "/images/team/Sara.png",
+      headshot: "/images/team/girlreflict.png",
     },
   ] satisfies KeyDirector[],
 };
