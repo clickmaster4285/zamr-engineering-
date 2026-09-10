@@ -7,7 +7,7 @@ export default function CTASection() {
   const { heading, description, primaryButton, secondaryButton } = ctaContent;
 
   return (
-    <section className="w-full bg-[var(--bg-section)] px-6 py-16 lg:p-[130px]">
+    <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
       <div className="mx-auto flex w-full max-w-[728px] flex-col items-center justify-center gap-8 lg:gap-[30px]">
         <h2 className="w-full text-center text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
           {heading}

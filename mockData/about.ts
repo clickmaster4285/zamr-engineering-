@@ -37,11 +37,11 @@ export interface StatItem {
 }
 
 export const stats: StatItem[] = [
-  { value: 10, suffix: "+", label: "Local Councils", align: "start" },
-  { value: 15, suffix: "+", label: "Government Agencies & Authorities", align: "center" },
-  { value: 99, suffix: "%", label: "Client Satisfaction", align: "center" },
-  { value: 50, suffix: "+", label: "Private Developers & Contractors", align: "center" },
-  { value: 100, suffix: "+", label: "Major Infrastructure Packages Supported", align: "end" },
+  { value: 10, suffix: "+", label: "Local\nCouncils", align: "start" },
+  { value: 15, suffix: "+", label: "Government Agencies\n& Authorities", align: "center" },
+  { value: 99, suffix: "%", label: "Client\nSatisfaction", align: "center" },
+  { value: 50, suffix: "+", label: "Private Developers\n& Contractors", align: "center" },
+  { value: 100, suffix: "+", label: "Major Infrastructure\nPackages Supported", align: "end" },
 ];
 
 // --- Organizational Structure Data ---
@@ -226,25 +226,25 @@ export const keyDirectorsContent = {
       name: "Omar Faruqi",
       role: "Design Manager",
       department: "Planning & Design",
-      headshot: "/images/team/image1.png",
+      headshot: "/images/team/Omar.jpeg",
     },
     {
       name: "Khalid Javed",
       role: "Managing Director",
       department: "Leadership",
-      headshot: "/images/team/image2.png",
+      headshot: "/images/team/Khalid.jpeg",
     },
     {
       name: "Yashwant Dyall",
       role: "Quality Manager",
       department: "Operational Quality",
-      headshot: "/images/team/image3.png",
+      headshot: "/images/team/Yashwant.jpeg",
     },
     {
       name: "Sara Mitchell",
       role: "Senior Civil Engineer",
       department: "Civil Engineering",
-      headshot: "/images/team/image4.png",
+      headshot: "/images/team/girlreflict.png",
     },
   ] satisfies KeyDirector[],
 };

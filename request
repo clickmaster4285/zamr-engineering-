@@ -1,2 +1,7 @@
-now on @components/landing/Projects.tsx data show according to @mockData/landing.ts projectsFeaturedWork
-and also set the tsx error
+now i want to redesign my hero section of @app\projects\page.tsx  
+
+figma screenshot i attached
+and figma css :
+@figmacss.css
+
+i want exact same pixal to pixal design with my latest global css

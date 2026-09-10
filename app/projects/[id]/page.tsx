@@ -8,8 +8,7 @@ import Approach from "@/components/projects/detail/Approach";
 import Results from "@/components/projects/detail/Results";
 import Gallery from "@/components/projects/detail/Gallery";
 import RelatedWork from "@/components/projects/detail/RelatedWork";
-import Contact from "@/components/projects/detail/Contact";
-
+import Contacts from "@/components/Contacts";
 export default function ProjectDetailPage() {
   const params = useParams();
   const project = getProjectBySlug(params.id as string);
@@ -67,7 +66,7 @@ export default function ProjectDetailPage() {
         }))}
       />
 
-      <Contact number="06" serviceTitle={project.title} />
+      <Contacts />
     </main>
   );
 }

@@ -1,0 +1,283 @@
+/* Why ZAMR Engineering */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 130px;
+gap: 10px;
+
+width: 1728px;
+height: 932px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Frame 1321319118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 249px;
+
+width: 1468px;
+height: 672px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 120 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+
+width: 588px;
+height: 268px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 272px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 06 */
+
+width: 23px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #1945A7;
+color: color(display-p3 0.145 0.267 0.631);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 104px;
+height: 0px;
+
+border: 1px solid #000000;
+border: 1px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Locations */
+
+width: 113px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Where We’ve Made an Impact */
+
+width: 588px;
+height: 142px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 56px;
+line-height: 71px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Discover the projects and locations where our engineering expertise has contributed to better infrastructure and project outcomes. */
+
+width: 588px;
+height: 46px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+font-feature-settings: 'liga' off;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319119 */
+
+width: 631px;
+height: 672px;
+
+background: #D9D9D9;
+background: color(display-p3 0.851 0.851 0.851);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame 1321319120 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 13px;
+
+position: absolute;
+width: 87px;
+height: 139px;
+left: calc(50% - 87px/2);
+top: calc(50% - 139px/2 - 0.25px);
+
+
+
+/* at-icons:location */
+
+width: 72px;
+height: 72px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Group */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 6.25%;
+bottom: 6.25%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 65.53%;
+bottom: 6.25%;
+
+background: #9A9A9A;
+background: color(display-p3 0.604 0.604 0.604);
+
+
+/* Vector */
+
+position: absolute;
+left: 25%;
+right: 25%;
+top: 6.25%;
+bottom: 25%;
+
+background: #9A9A9A;
+background: color(display-p3 0.604 0.604 0.604);
+
+
+/* Map */
+
+width: 87px;
+height: 54px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 42.7368px;
+line-height: 54px;
+/* identical to box height */
+text-align: center;
+font-feature-settings: 'liga' off;
+
+color: #9A9A9A;
+color: color(display-p3 0.604 0.604 0.604);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;

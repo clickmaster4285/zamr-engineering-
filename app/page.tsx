@@ -4,7 +4,8 @@ import About from "@/components/landing/About";
 import Services from "@/components/landing/Services";
 import Projects from "@/components/landing/Projects";
 import WhyZamr from "@/components/landing/WhyZamr";
-import Contacts from "@/components/landing/Contacts";
+import Locations from "@/components/landing/Locations";
+import Contacts from "@/components/Contacts";
 
 export default function Page() {
   return (
@@ -14,7 +15,8 @@ export default function Page() {
       <Services />
       <Projects />
       <WhyZamr />
-      <Contacts />
+      <Locations />
+      <Contacts bgcolor="bg-white" />
     </main>
   );
 }

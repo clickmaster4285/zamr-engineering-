@@ -7,11 +7,11 @@ import {
   CONTACT_STATUS_MESSAGES,
 } from "@/lib/useContactEnquiry";
 
-export default function Contact() {
+export default function Contact({bgcolor='bg-[var(--bg-light)]'}) {
   const { form, handleChange, handleSubmit, status, errors } = useContactEnquiry();
 
   return (
-    <section className="w-full bg-[var(--bg-light)] px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-32 lg:py-32.5">
+    <section className={`w-full ${bgcolor} px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-32 lg:py-32.5`}>
       <div>
         <div className="grid grid-cols-1 gap-12 sm:gap-16 lg:grid-cols-[1fr_1fr] lg:gap-32">
           {/* Left column – Contact info */}
