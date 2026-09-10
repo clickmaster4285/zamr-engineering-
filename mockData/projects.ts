@@ -538,12 +538,12 @@ export const projects: ProjectData[] = [
   {
     slug: "may-street-bridge-over-mulwaree-river-goulburn",
     index: "06",
-    title: ".	May Street Bridge over Mulwaree River, Goulburn",
+    title: "May Street Bridge over Mulwaree River, Goulburn",
     category: "Transportation Projects",
     shortDescription:
       "Strategic corridor enhancement program along the Pacific Highway, delivering road safety improvements, capacity upgrades, and travel time reliability for this critical national freight route.",
 
-    heroTitle: ".	May Street Bridge over Mulwaree River, Goulburn",
+    heroTitle: "May Street Bridge over Mulwaree River, Goulburn",
     heroImage: "/images/image7.jpeg",
 
     stats: [
