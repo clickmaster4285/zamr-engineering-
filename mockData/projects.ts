@@ -144,7 +144,7 @@ export const projects: ProjectData[] = [
     relatedProjects: [
       { title: "Jonica Rd Austral Double Storey Dwelling & Studio", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
       { title: "Kurrajong Rd, Prestons- Staged Improvement Strategic Design", slug: "Kurrajong-rd-,-prestons-staged-improvement-strategic-design", image: "/images/image1.jpeg" },
-      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image2.jpeg" },
+      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba", image: "/images/image2.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -241,7 +241,7 @@ export const projects: ProjectData[] = [
     relatedProjects: [
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
       { title: "Kurrajong Rd, Prestons- Staged Improvement Strategic Design", slug: "Kurrajong-rd-,-prestons-staged-improvement-strategic-design", image: "/images/image6.jpeg" },
-      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image7.jpeg" },
+      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba", image: "/images/image7.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -252,12 +252,12 @@ export const projects: ProjectData[] = [
   {
     slug: "Kurrajong-rd-,-prestons-staged-improvement-strategic-design",
     index: "03",
-    title: "kurrajong Rd, Prestons- Staged Improvement Strategic Design",
+    title: "Kurrajong Rd, Prestons- Staged Improvement Strategic Design",
     category: "Structural Engineering",
     shortDescription:
       "Rebuilding a critical arterial corridor without stopping a city.",
 
-    heroTitle: "kurrajong Rd, Prestons- Staged Improvement Strategic Design",
+    heroTitle: "Kurrajong Rd, Prestons- Staged Improvement Strategic Design",
     heroImage: "/images/image1.jpeg",
 
     stats: [
@@ -338,7 +338,7 @@ export const projects: ProjectData[] = [
     relatedProjects: [
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
       { title: "Jonica Rd Austral Double Storey Dwelling & Studio", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image2.jpeg" },
-      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image7.jpeg" },
+      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba", image: "/images/image7.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -347,14 +347,14 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first",
+    slug: "bmd-bridge-inspection-tba",
     index: "04",
-    title: "BMD Bridge Inspection- TBA, can used another project first",
+    title: "BMD Bridge Inspection",
     category: "Water & Irrigation Systems",
     shortDescription:
       "Integrated stormwater management solution for a high-density urban precinct, combining flood mitigation, water quality treatment, and community amenity.",
 
-    heroTitle: "BMD Bridge Inspection- TBA, can used another project first",
+    heroTitle: "BMD Bridge Inspection",
     heroImage: "/images/image2.jpeg",
 
     stats: [
@@ -527,7 +527,7 @@ export const projects: ProjectData[] = [
     relatedProjects: [
       { title: "Jonica Rd Austral Double Storey Dwelling & Studio", slug: "jonica-rd-australia-double-storey-dwelling-&-studio", image: "/images/image1.jpeg" },
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image6.jpeg" },
-      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image7.jpeg" },
+      { title: "BMD Bridge Inspection- TBA", slug: "bmd-bridge-inspection-tba", image: "/images/image7.jpeg" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -1177,7 +1177,7 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
-      { title: "BMD Bridge Inspection - TBA", slug: "bmd-bridge-inspection-tba-,-can-used-another-project-first", image: "/images/image2.jpeg" },
+      { title: "BMD Bridge Inspection - TBA", slug: "bmd-bridge-inspection-tba", image: "/images/image2.jpeg" },
       { title: "Mamre Road and Abbotts Road, Kemps Creek", slug: "mamre-road-and-abbotts-road-kemps-creek", image: "/images/image6.jpeg" },
     ],
     referProjects: [
