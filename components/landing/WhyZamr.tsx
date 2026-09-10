@@ -28,7 +28,7 @@ export default function WhyZamr() {
 </span>
           </div>
           <h2 className="text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] md:text-[44px] md:leading-[52px] lg:text-[56px] lg:leading-[71px]">
-            The difference is in how we Engineer.
+            The difference is in How we Engineer.
           </h2>
         </div>
 

@@ -42,7 +42,7 @@ export default function Locations() {
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowFullScreen=""
+            allowFullScreen
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
           />

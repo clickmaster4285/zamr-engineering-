@@ -82,7 +82,7 @@ export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
   },
   {
     slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection",
-    index: "01",
+    index: "02",
     title: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection ",
     category: "Urban Infrastructure",
     shortDescription:
@@ -95,7 +95,7 @@ export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
   },
   {
     slug: "mr536-mamre-road-&-abbotts Rd-kemps-creek",
-    index: "01",
+    index: "03",
     title: "MR536 Mamre Road & Abbotts Rd Kemps Creek ",
     category: "Urban Infrastructure",
     shortDescription:
