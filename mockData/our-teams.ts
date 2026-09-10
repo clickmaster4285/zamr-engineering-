@@ -22,28 +22,28 @@ export interface TeamMember {
 
 export const leadershipTeam: TeamMember[] = [
   {
-    name: "Omar Faruqi",
+    name: "Khalid Javed",
     role: "Design Manager",
     department: "Planning & Design",
-    headshot: "/images/team/image1.png",
+    headshot: "/images/team/Khalid.jpeg",
   },
   {
-    name: "Khalid Javed",
+    name: "Kah Yong Tan",
     role: "Managing Director",
     department: "Leadership",
-    headshot: "/images/team/image2.png",
+    headshot: "/images/team/noimage.png",
+  },
+  {
+    name: "Janaka Bandara",
+    role: "Quality Manager",
+    department: "Operational Quality",
+    headshot: "/images/team/noimage.png",
   },
   {
     name: "Yashwant Dyall",
-    role: "Quality Manager",
-    department: "Operational Quality",
-    headshot: "/images/team/image3.png",
-  },
-  {
-    name: "Sara Mitchell",
     role: "Senior Civil Engineer",
     department: "Civil Engineering",
-    headshot: "/images/team/image4.png",
+    headshot: "/images/team/noimage.png",
   },
 ];
 

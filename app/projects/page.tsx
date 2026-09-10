@@ -275,7 +275,7 @@ export default function ProjectsPage() {
               type="button"
               className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
             >
-              Load Mores
+              Load More
             </button>
           </div>
         </div>
