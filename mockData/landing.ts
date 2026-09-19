@@ -64,6 +64,13 @@ export interface ServicePreviewItem {
   tags: string[];
 }
 
+export const servicesSection = {
+  sectionNumber: "02",
+  sectionLabel: "SERVICES",
+  heading: "What We Engineer",
+  ctaLabel: "ZAMR Capability Statement",
+};
+
 export interface ProjectsFeaturedWork {
   slug: string;
   index: string;
