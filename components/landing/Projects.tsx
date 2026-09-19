@@ -247,7 +247,7 @@ export default function Projects() {
               {projectsSection.logosLabel}
             </p>
             <div className="flex w-full flex-row flex-wrap justify-center gap-3">
-              {clientLogos.map((logo) => (
+              {clientLogos.slice(0, 6).map((logo) => (
                 <div
                   key={logo.alt}
                   className="relative flex h-[50px] w-[110px] shrink-0 items-center justify-center border border-[var(--border-section)] bg-white"
