@@ -60,6 +60,8 @@ export default function Contact({ bgcolor = "bg-white" }: Props) {
             value={value}
             onChange={handleChange}
             placeholder={field.placeholder}
+            minLength={field.name === "phone" ? 7 : undefined}
+            maxLength={field.name === "phone" ? 15 : undefined}
             className={`${inputClassName} h-[43.5px]`}
           />
         )}
