@@ -29,7 +29,7 @@
      BLUE VARIANTS (derived from primary #132044)
      ════════════════════════════════════════════ */
   --color-blue-accent: oklch(0.296 0.101 268.4);    /* #1945A7 — section numbers, tags, metrics */
-  --color-blue-header: oklch(0.266 0.104 268.1);    /* #22419E — header bars, chart primary */
+  --color-blue-header: oklch(0.266 0.104 268.1);    /* #132044 — header bars, chart primary */
   --color-blue-label: oklch(0.287 0.102 267.8);     /* #2B439B — contact info labels */
   --color-chart-bar-1: oklch(0.408 0.157 268.2);    /* #3157CB */
   --color-chart-bar-2: oklch(0.491 0.167 267.5);    /* #3E70DB */
@@ -58,7 +58,7 @@
   --text-muted: oklch(0.417 0 0);
   --text-light: oklch(0.757 0 0);
   --text-contact: oklch(0.254 0.07 266.5);
-  --text-heading: oklch(0.321 0 0);          /* #333333 — very dark headings */
+  --text-heading: oklch(0.254 0.07 266.5);          /* #132044 — very dark headings */
   --text-paragraph: oklch(0.285 0.023 258.3);    /* #344153 — paragraph text */
   --text-soft: oklch(0.487 0.022 258.3);         /* #697281 — muted body text */
   --text-label: oklch(0.649 0.022 258.3);        /* #9AA3B0 — form labels */
@@ -88,7 +88,7 @@
      BORDERS
      ════════════════════════════════════════════ */
   --border-light: oklch(0.937 0 0);
-  --border-input: oklch(0.254 0.07 266.5 / 0.18);
+  --border-input: oklch(0.254 0.07 266.5 / 0.18); /* #132044 — input borders */
   --border-section: oklch(0.925 0 0);             /* #EAEAEA */
   --border-table: oklch(0.951 0.004 264.4);       /* #EEF0F8 */
   --border-dark: oklch(1 0 0 / 0.08);             /* white 8% — for dark backgrounds */
@@ -167,8 +167,8 @@
   --color-text-dark: oklch(0.321 0 0);            /* #333333 */
   --color-text-muted: oklch(0.417 0 0);
   --color-text-light: oklch(0.757 0 0);
-  --color-text-contact: oklch(0.254 0.07 266.5);
-  --color-text-heading: oklch(0.321 0 0);          /* #333333 */
+  --color-text-contact: oklch(0.254 0.07 266.5); /* #132044 — contact page text */
+  --color-text-heading: oklch(0.254 0.07 266.5); /* #132044 — heading text */
   --color-text-paragraph: oklch(0.285 0.023 258.3);
   --color-text-soft: oklch(0.487 0.022 258.3);
   --color-text-label: oklch(0.649 0.022 258.3);

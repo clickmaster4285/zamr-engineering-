@@ -36,6 +36,12 @@ export interface StatItem {
   align: "start" | "center" | "end";
 }
 
+export const aboutSection = {
+  sectionNumber: "01",
+  sectionLabel: "ABOUT US",
+  heading: "Built on Precision & Reliability",
+};
+
 export const aboutStats: StatItem[] = [
   { value: 125, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
   { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
@@ -45,6 +51,7 @@ export const aboutParagraphs: string[] = [
   "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering integrated design, project verification, and infrastructure delivery solutions across New South Wales and beyond. Founded on a commitment to technical excellence, we partner with government bodies, developers, and industry leaders to engineer infrastructure that endures.",
   "Our approach integrates rigorous engineering methodology with forward-looking design thinking — delivering infrastructure that is compliant, buildable, practical and engineered for long-term performance. Every project is delivered with a focus on quality, compliance, risk management and practical engineering outcomes.",
 ];
+
 export const aboutlastbottomparagraph: string[] = [
   "Trusted by Government, Developers & Contractors",
 ];
