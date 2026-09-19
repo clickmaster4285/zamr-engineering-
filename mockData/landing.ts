@@ -256,6 +256,14 @@ export interface WhyZamrPoint {
   description: string;
 }
 
+export const whyZamrSection = {
+  sectionNumber: "04",
+  sectionLabel: "Why ZAMR Engineering",
+  heading: "The Difference Is How We Engineer",
+  ctaLabel: "Learn More",
+  ctaHref: "/why-zamr-engineering",
+};
+
 export const whyZamrPoints: WhyZamrPoint[] = [
   {
     title: "Technical Excellence",
@@ -423,38 +431,129 @@ export const contactSection: ContactSectionContent = {
 
 export const footerQuickLinks: { label: string; href: string }[] = [
   { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "Why ZAMR Engineering", href: "/why-zamr-engineering" },
-  { label: "Our Team", href: "/our-teams" },
   { label: "Trusted & Accredited", href: "/trusted-accredited" },
   { label: "Engineering For Impact", href: "/engineering-impact" },
-  { label: "Contact", href: "/contact" },
 ];
 
-export const footerServiceLinks: string[] = [
-  "Planning & Design",
-  "Project Management",
-  "Project Verification",
-  "Buildings Services",
-  "Other Services",
+export const footerServiceLinks: { label: string; href: string }[] = [
+  {
+    label: "Engineering & Design",
+    href: "/services/engineering-and-design",
+  },
+  {
+    label: "Project & Program Management",
+    href: "/services/project-and-program-management",
+  },
+  {
+    label: "Project Verification & Assurance",
+    href: "/services/project-verification-and-assurance",
+  },
+  {
+    label: "Asset Management & Inspection",
+    href: "/services/asset-management-and-inspection",
+  },
+  {
+    label: "Buildings & Property Engineering",
+    href: "/services/buildings-and-property-engineering",
+  },
+  {
+    label: "Construction & Project Delivery",
+    href: "/services/construction-and-project-delivery",
+  },
 ];
 
 export interface FooterContactInfo {
-  location: string;
+  location1: string;
+  location2: string;
   email: string;
   phone: string;
 }
 
 export const footerContactInfo: FooterContactInfo = {
-  location: "Sydney, New South Wales Australia",
-  email: "info@zamreng.com.au",
-  phone: "+61 2 3456 7890",
+  location1: "L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150",
+  location2: "30 Smith Street Wentworthville NSW, 2145",
+  email: "admin@zamrengineering.com.au",
+  phone: "02 9688 5322",
 };
+
+export interface FooterMetaItem {
+  type: "phone" | "email" | "location";
+  value: string;
+  href?: string;
+  icon: string;
+  alt: string;
+}
+
+export const footerMetaItems: FooterMetaItem[] = [
+  {
+    type: "phone",
+    value: footerContactInfo.phone,
+    href: `tel:${footerContactInfo.phone.replace(/\s/g, "")}`,
+    icon: "/icons/phonewhite.svg",
+    alt: "Phone",
+  },
+  {
+    type: "email",
+    value: footerContactInfo.email,
+    href: `mailto:${footerContactInfo.email}`,
+    icon: "/icons/gamilwhite.svg",
+    alt: "Email",
+  },
+  {
+    type: "location",
+    value: footerContactInfo.location1,
+    icon: "/icons/location.svg",
+    alt: "Location",
+  },
+  {
+    type: "location",
+    value: footerContactInfo.location2,
+    icon: "/icons/location.svg",
+    alt: "Location",
+  },
+];
+
+export interface FooterSocialLink {
+  src: string;
+  alt: string;
+  href: string;
+}
+
+export const footerSocialLinks: FooterSocialLink[] = [
+  {
+    src: "/icons/Linkdinsq.svg",
+    alt: "LinkedIn",
+    href: contactInfo.socialLinks[1]?.href ?? "#",
+  },
+  {
+    src: "/icons/facebookSq.svg",
+    alt: "Facebook",
+    href: "#",
+  },
+  {
+    src: "/icons/tweetersq.svg",
+    alt: "Twitter",
+    href: "#",
+  },
+];
+
+export const footerLegalLinks: { label: string; href: string }[] = [
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "#" },
+];
 
 export const logoImage = "/images/zamarlogoTransparant.png";
 
 export const footerDescription: string =
   "Specialist civil engineering consultancy delivering precision and compliance in infrastructure projects across Australia.";
+
+export const footerCopyright =
+  "\u00A9 2026 ZAMR Engineering. All rights reserved.";
+
+export const footerVideoSrc = "/videos/video1.mp4";
 
 export interface LocationsStat {
   value: string;
