@@ -239,20 +239,44 @@ export default function Projects() {
           </div>
         )}
 
-        {/* Client logos marquee */}
-        <div className="group/logo relative w-full overflow-hidden">
-          <div className="flex w-fit animate-marquee group-hover/logo:[animation-play-state:paused]">
-            {[...clientLogos, ...clientLogos].map((logo, i) => (
+        {/* Client logos — static grid, no marquee */}
+        <div className="w-full">
+          {/* Mobile: label + 2-row bordered grid */}
+          <div className="flex w-full flex-col gap-3 pt-4 lg:hidden">
+            <p className="w-full text-center text-xs font-medium leading-[15px] tracking-[3px] text-[var(--text-soft)]">
+              {projectsSection.logosLabel}
+            </p>
+            <div className="flex w-full flex-row flex-wrap justify-center gap-3">
+              {clientLogos.map((logo) => (
+                <div
+                  key={logo.alt}
+                  className="relative flex h-[50px] w-[110px] shrink-0 items-center justify-center border border-[var(--border-section)] bg-white"
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={96}
+                    height={28}
+                    className="max-h-[28px] w-auto max-w-[96px] object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tablet + Desktop: equal flex row, no animation */}
+          <div className="hidden w-full flex-row items-center gap-[18px] lg:flex 2xl:gap-[30px]">
+            {clientLogos.map((logo) => (
               <div
-                key={`${logo.alt}-${i}`}
-                className="relative mx-2 flex h-[50px] w-[110px] flex-none items-center justify-center bg-[var(--bg-light)] lg:mx-[9px] lg:h-[51px] lg:w-[93px] 2xl:mx-[15px] 2xl:h-[86px] 2xl:w-[157px]"
+                key={logo.alt}
+                className="relative flex h-[51px] min-w-0 flex-1 items-center justify-center bg-[var(--bg-section)] 2xl:h-[86px]"
               >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  fill
-                  sizes="157px"
-                  className="object-contain p-1"
+                  width={157}
+                  height={57}
+                  className="max-h-[34px] w-auto max-w-[94px] object-contain 2xl:max-h-[57px] 2xl:max-w-[157px]"
                 />
               </div>
             ))}

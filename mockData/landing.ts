@@ -233,6 +233,7 @@ export const projectsSection = {
   sectionLabel: "PROJECTS",
   heading: "Featured Work",
   ctaLabel: "ALL PROJECTS",
+  logosLabel: "TRUSTED BY",
 };
 
 export interface ClientLogo {
