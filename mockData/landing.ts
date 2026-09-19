@@ -341,17 +341,64 @@ export const logoImage = "/images/zamarlogoTransparant.png";
 export const footerDescription: string =
   "Specialist civil engineering consultancy delivering precision and compliance in infrastructure projects across Australia.";
 
+export interface LocationsStat {
+  value: string;
+  label: string;
+}
+
+export interface LocationArea {
+  name: string;
+  projectCount: number;
+}
+
 export interface LocationsContent {
   sectionNumber: string;
   sectionLabel: string;
   heading: string;
   description: string;
+  stats: LocationsStat[];
+  mapLegendTitle: string;
+  mapLegendItems: { label: string; emphasized?: boolean }[];
+  sidebarTitle: string;
+  sidebarCountLabel: string;
+  areas: LocationArea[];
+  mapEmbedUrl: string;
 }
 
 export const locationsContent: LocationsContent = {
-  sectionNumber: "06",
+  sectionNumber: "05",
   sectionLabel: "LOCATIONS",
   heading: "Where We\u2019ve Made an Impact",
   description:
     "Discover the projects and locations where our engineering expertise has contributed to better infrastructure and project outcomes.",
+  stats: [
+    { value: "14", label: "Locations" },
+    { value: "18", label: "Projects" },
+    { value: "NSW", label: "Region" },
+  ],
+  mapLegendTitle: "Project Locations",
+  mapLegendItems: [
+    { label: "2+ projects", emphasized: true },
+    { label: "1 project" },
+  ],
+  sidebarTitle: "All Locations",
+  sidebarCountLabel: "14 areas",
+  areas: [
+    { name: "Blacktown", projectCount: 2 },
+    { name: "Castle Hill", projectCount: 1 },
+    { name: "Hornsby", projectCount: 1 },
+    { name: "Parramatta", projectCount: 3 },
+    { name: "Chatswood", projectCount: 1 },
+    { name: "Liverpool", projectCount: 2 },
+    { name: "Box Hill", projectCount: 1 },
+    { name: "Marrickville", projectCount: 1 },
+    { name: "Bankstown", projectCount: 1 },
+    { name: "Penrith", projectCount: 1 },
+    { name: "Campsie", projectCount: 1 },
+    { name: "Sutherland", projectCount: 1 },
+    { name: "Manly", projectCount: 1 },
+    { name: "Campbelltown", projectCount: 1 },
+  ],
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.992283969211!2d150.9671837!3d-33.8125122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a2bb67749bf9%3A0xb0ef6047fcb0149d!2sZAMR%20Engineering!5e0!3m2!1sen!2s!4v1789019051054!5m2!1sen!2s",
 };
