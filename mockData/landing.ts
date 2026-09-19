@@ -294,16 +294,131 @@ export const contactInfo: ContactInfo = {
   address2: "L14, 3 Parramatta Square, 153 Macquarie St, Parramatta, NSW 2150",
   emails: [
     { label: "Email", address: "admin@zamrengineering.com.au" },
-    { label: "Phone", address: "02 9688 5322" },
-    { label: "Email", address: "khalid.javed@zamrengineering.com.au" },
   ],
-  phone: "",
+  phone: "02 9688 5322",
   socialLinks: [
     { src: "/icons/mynaui_instagram.svg", alt: "Instagram", href: "https://www.instagram.com/zamr_engineering?igsh=cW1hZ2pzdXNwanZk" },
     { src: "/icons/mynaui_linkedin.svg", alt: "LinkedIn", href: "https://www.linkedin.com/company/zamr-engineering/" },
     { src: "/icons/et_global.svg", alt: "Website", href: "https://zamrengineering.com.au/" },
     { src: "/icons/Vector.svg", alt: "Email", href: "mailto:admin@zamrengineering.com.au" },
   ],
+};
+
+export interface ContactDetailLine {
+  label: string;
+  value: string;
+  href?: string;
+}
+
+export interface ContactFormField {
+  id: string;
+  name: "name" | "email" | "phone" | "designation" | "company" | "subject" | "message";
+  label: string;
+  placeholder: string;
+  type?: "text" | "email" | "tel" | "textarea";
+  required?: boolean;
+  half?: boolean;
+}
+
+export interface ContactSectionContent {
+  sectionNumber: string;
+  sectionLabel: string;
+  heading: string;
+  details: ContactDetailLine[];
+  formFields: ContactFormField[];
+  submitLabel: string;
+  sendingLabel: string;
+}
+
+export const contactSection: ContactSectionContent = {
+  sectionNumber: "06",
+  sectionLabel: "CONTACT",
+  heading: "Let\u2019s Build Something Exceptional.",
+  details: [
+    {
+      label: "Company Name",
+      value: contactInfo.companyName,
+    },
+    {
+      label: "Address 1",
+      value: contactInfo.address1,
+    },
+    {
+      label: "Address 2",
+      value: contactInfo.address2,
+    },
+    {
+      label: "Email",
+      value: contactInfo.emails[0].address,
+      href: `mailto:${contactInfo.emails[0].address}`,
+    },
+    {
+      label: "Phone",
+      value: contactInfo.phone,
+      href: `tel:${contactInfo.phone.replace(/\s/g, "")}`,
+    },
+  ],
+  formFields: [
+    {
+      id: "name",
+      name: "name",
+      label: "Full Name",
+      placeholder: "John Smith",
+      type: "text",
+      required: true,
+      half: true,
+    },
+    {
+      id: "email",
+      name: "email",
+      label: "Email Address",
+      placeholder: "Email Address",
+      type: "email",
+      required: true,
+      half: true,
+    },
+    {
+      id: "phone",
+      name: "phone",
+      label: "Phone Number (Optional)",
+      placeholder: "Phone Number",
+      type: "tel",
+      half: true,
+    },
+    {
+      id: "designation",
+      name: "designation",
+      label: "Origination(optional)",
+      placeholder: "Origination",
+      type: "text",
+      half: true,
+    },
+    {
+      id: "company",
+      name: "company",
+      label: "Company Name (Optional)",
+      placeholder: "Company Name",
+      type: "text",
+    },
+    {
+      id: "subject",
+      name: "subject",
+      label: "Subject",
+      placeholder: "Subject",
+      type: "text",
+      required: true,
+    },
+    {
+      id: "message",
+      name: "message",
+      label: "Message",
+      placeholder: "Tell us about your project...",
+      type: "textarea",
+      required: true,
+    },
+  ],
+  submitLabel: "SUBMIT ENQUIRY",
+  sendingLabel: "SENDING\u2026",
 };
 
 export const footerQuickLinks: { label: string; href: string }[] = [

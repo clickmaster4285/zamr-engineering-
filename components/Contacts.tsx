@@ -1,223 +1,158 @@
 "use client";
 
-import Image from "next/image";
-import { contactInfo } from "@/mockData/landing";
+import { contactSection } from "@/mockData/landing";
 import {
   useContactEnquiry,
   CONTACT_STATUS_MESSAGES,
+  type ContactFormData,
 } from "@/lib/useContactEnquiry";
 
-export default function Contact({bgcolor='bg-[var(--bg-light)]'}) {
-  const { form, handleChange, handleSubmit, status, errors } = useContactEnquiry();
+const inputClassName =
+  "w-full border-0 border-b border-[var(--border-input)] bg-transparent py-2.5 text-xs leading-[15px] text-[var(--text-heading)] placeholder:text-[var(--text-soft)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none";
+
+const labelClassName =
+  "block text-[10px] font-bold leading-[13px] text-[var(--text-heading)] lg:text-xs lg:leading-[15px] lg:tracking-[3px]";
+
+type Props = {
+  bgcolor?: string;
+};
+
+export default function Contact({ bgcolor = "bg-white" }: Props) {
+  const { form, handleChange, handleSubmit, status, errors } =
+    useContactEnquiry();
+  const {
+    sectionNumber,
+    sectionLabel,
+    heading,
+    details,
+    formFields,
+    submitLabel,
+    sendingLabel,
+  } = contactSection;
+
+  const halfFields = formFields.filter((f) => f.half);
+  const fullFields = formFields.filter((f) => !f.half);
+
+  const renderField = (field: (typeof formFields)[number]) => {
+    const value = form[field.name as keyof ContactFormData] ?? "";
+    const error = errors[field.name];
+
+    return (
+      <div key={field.id} className="flex w-full flex-col gap-2">
+        <label htmlFor={field.id} className={labelClassName}>
+          {field.label}
+        </label>
+        {field.type === "textarea" ? (
+          <textarea
+            id={field.id}
+            name={field.name}
+            rows={5}
+            value={value}
+            onChange={handleChange}
+            placeholder={field.placeholder}
+            className={`${inputClassName} h-[133.5px] resize-none`}
+          />
+        ) : (
+          <input
+            id={field.id}
+            name={field.name}
+            type={field.type ?? "text"}
+            value={value}
+            onChange={handleChange}
+            placeholder={field.placeholder}
+            className={`${inputClassName} h-[43.5px]`}
+          />
+        )}
+        {error && (
+          <p className="text-xs text-[var(--color-error)]">{error}</p>
+        )}
+      </div>
+    );
+  };
 
   return (
-    <section className={`w-full ${bgcolor} px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-32 lg:py-32.5`}>
-      <div>
-        <div className="grid grid-cols-1 gap-12 sm:gap-16 lg:grid-cols-[1fr_1fr] lg:gap-32">
-          {/* Left column – Contact info */}
-          <div>
-            <div className="mb-6 flex flex-wrap items-center gap-3 sm:mb-8 sm:gap-4">
-              <span className="text-sm font-medium tracking-[0.2em] text-[var(--color-primary)] sm:text-base">
-                05
+    <section
+      className={`w-full ${bgcolor} px-[30px] py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]`}
+    >
+      <div className="flex w-full flex-col items-center gap-8 lg:gap-10 2xl:flex-row 2xl:items-center 2xl:gap-[231px]">
+        {/* Left — heading + details */}
+        <div className="flex w-full flex-col gap-[11px] lg:gap-[30px] 2xl:w-[555px] 2xl:shrink-0 2xl:gap-[50px]">
+          <div className="flex flex-col gap-[7px] lg:gap-[18px] 2xl:gap-[30px]">
+            <div className="flex items-center gap-[4px] lg:gap-[9.5px] 2xl:gap-4">
+              <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+                {sectionNumber}
               </span>
-              <span className="hidden h-px w-16 sm:block sm:w-24 bg-[var(--text-dark)]" />
-              <span className="text-sm font-medium tracking-[0.2em] text-[var(--text-dark)] sm:text-base">
-                CONTACT
+              <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
+              <span className="text-xs font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-soft)]">
+                {sectionLabel}
               </span>
             </div>
-            <h2 className="mb-8 text-[28px] font-bold leading-[36px] text-[var(--text-dark)] sm:mb-12 sm:text-[36px] sm:leading-[44px] md:text-[44px] md:leading-[52px] lg:text-[56px] lg:leading-[71px]">
-              Let&apos;s Build Something
-              <br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>Exceptional.
+            <h2 className="text-[36px] font-bold leading-[45px] text-[var(--text-heading)] lg:text-[33px] lg:leading-[42px] 2xl:text-[56px] 2xl:leading-[71px]">
+              {heading}
             </h2>
+          </div>
 
-            <div className="space-y-4 text-sm text-[var(--text-dark)] sm:space-y-5 sm:text-base lg:text-lg">
-              <p>
-                <span className="text-[var(--color-primary)]">Company Name: </span> {contactInfo.companyName}
-              </p>
-              <p>
-                <span className="text-[var(--color-primary)]"> Address 1:</span> {contactInfo.address1}
-              </p>
-              <p>
-                <span className="text-[var(--color-primary)]"> Address 2:</span> {contactInfo.address2}
-              </p>
-              {contactInfo.emails.map((email, i) => (
-                <p key={i}>
-                  <span className={i === 0 ? "text-[var(--color-primary)]" : "text-[var(--color-blue-label)]"}>
-                    {email.label}:{" "}
-                  </span>
+          <div className="flex flex-col gap-5">
+            {details.map((line) => (
+              <p
+                key={line.label}
+                className="text-xs leading-[15px] [font-feature-settings:'liga'_off] 2xl:text-lg 2xl:leading-[23px]"
+              >
+                <span className=" text-[var(--color-primary)]">
+                {line.label}:{" "}
+
+                </span>
+                {line.href ? (
                   <a
-                    href={`mailto:${email.address}`}
-                    className="break-all transition-all hover:underline sm:break-normal"
+                    href={line.href}
+                    className="transition-opacity hover:opacity-70"
                   >
-                    {email.address}
+                    {line.value}
                   </a>
-                </p>
-              ))}
-            </div>
+                ) : (
+                  line.value
+                )}
+              </p>
+            ))}
+          </div>
+        </div>
 
-            <div className="mt-5 flex items-center gap-5 sm:mt-[20px] sm:gap-6">
-              {contactInfo.socialLinks.map((link, i) => (
-                <a
-                  key={i}
-                  href={link.href || undefined}
-                  aria-label={link.alt}
-                  target={"_blank"}
-                  className="flex h-6 w-6 items-center justify-center transition-all hover:opacity-70 sm:h-7 sm:w-7"
-                >
-                  <Image src={link.src} alt={link.alt} width={28} height={28} />
-                </a>
-              ))}
+        {/* Right — form */}
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full flex-col gap-7 2xl:w-[682px] 2xl:shrink-0"
+        >
+          {/* Row pairs: name/email, phone/origination */}
+          <div className="flex w-full flex-col gap-7">
+            <div className="grid grid-cols-2 gap-6">
+              {halfFields.slice(0, 2).map(renderField)}
+            </div>
+            <div className="grid grid-cols-2 gap-7">
+              {halfFields.slice(2, 4).map(renderField)}
             </div>
           </div>
 
-          {/* Right column – Form */}
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 sm:gap-7">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
-              <div>
-                <label htmlFor="name" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
-                  NAME
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  value={form.name}
-                  onChange={handleChange}
-                  placeholder="John Smith"
-                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
-                />
-                {errors.name && (
-                  <p className="mt-1 text-xs text-[var(--color-error)]">{errors.name}</p>
-                )}
-              </div>
-              <div>
-                <label htmlFor="email" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
-                  BUSINESS EMAIL
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder="you@company.com.au"
-                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
-                />
-                {errors.email && (
-                  <p className="mt-1 text-xs text-[var(--color-error)]">{errors.email}</p>
-                )}
-              </div>
-              <div>
-                <label htmlFor="designation" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
-                  DESIGNATION
-                </label>
-                <input
-                  id="designation"
-                  name="designation"
-                  type="text"
-                  value={form.designation}
-                  onChange={handleChange}
-                  placeholder="Project Manager"
-                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
-                  BUSINESS PHONE NUMBER
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={form.phone}
-                  onChange={handleChange}
-                  placeholder="+61 400 000 000"
-                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
-                />
-              </div>
-              <div>
-                <label htmlFor="company" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
-                  COMPANY NAME
-                </label>
-                <input
-                  id="company"
-                  name="company"
-                  type="text"
-                  value={form.company}
-                  onChange={handleChange}
-                  placeholder="Company Pty Ltd"
-                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
-                />
-              </div>
-              <div>
-                <label htmlFor="website" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
-                  COMPANY WEBSITE
-                </label>
-                <input
-                  id="website"
-                  name="website"
-                  type="url"
-                  value={form.website}
-                  onChange={handleChange}
-                  placeholder="https://company.com.au"
-                  className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
-                />
-              </div>
-            </div>
-            <div>
-              <label htmlFor="subject" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
-                SUBJECT
-              </label>
-              <input
-                id="subject"
-                name="subject"
-                type="text"
-                value={form.subject}
-                onChange={handleChange}
-                placeholder="Project enquiry"
-                className="w-full border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
-              />
-              {errors.subject && (
-                <p className="mt-1 text-xs text-[var(--color-error)]">{errors.subject}</p>
-              )}
-            </div>
-            <div>
-              <label htmlFor="message" className="mb-2 block text-[10px] font-bold tracking-[0.3em] text-[var(--text-dark)] sm:text-xs">
-                MESSAGE
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Tell us about your project..."
-                className="w-full resize-none border-0 border-b border-[var(--border-input)] bg-transparent pb-3 text-sm text-[var(--text-dark)] placeholder:text-[var(--color-text-label)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none"
-              />
-              {errors.message && (
-                <p className="mt-1 text-xs text-[var(--color-error)]">{errors.message}</p>
-              )}
-            </div>
-            {status === "success" && (
-              <p className="text-sm text-[var(--color-success)]">
-                {CONTACT_STATUS_MESSAGES.success}
-              </p>
-            )}
-            {status === "error" && (
-              <p className="text-sm text-[var(--color-error)]">
-                {CONTACT_STATUS_MESSAGES.error}
-              </p>
-            )}
-            <button
-              type="submit"
-              disabled={status === "sending"}
-              className="mt-2 w-full hover:bg-[var(--color-primary)] text-[var(--color-primary)] hover:text-white border border-[var(--color-primary)]  py-4 text-sm font-bold tracking-[0.3em] transition-all bg-[var(--bg-light)] text-[var(--color-primary) sm:mt-4 sm:text-base disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {status === "sending" ? "SENDING…" : "SUBMIT ENQUIRY"}
-            </button>
-          </form>
-        </div>
+          {fullFields.map(renderField)}
+
+          {status === "success" && (
+            <p className="text-sm text-[var(--color-success)]">
+              {CONTACT_STATUS_MESSAGES.success}
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-sm text-[var(--color-error)]">
+              {CONTACT_STATUS_MESSAGES.error}
+            </p>
+          )}
+
+          <button
+            type="submit"
+            disabled={status === "sending"}
+            className="flex h-12 w-full items-center justify-center bg-[var(--color-primary)] px-4 text-base font-bold leading-5 tracking-[3px] uppercase text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {status === "sending" ? sendingLabel : submitLabel}
+          </button>
+        </form>
       </div>
     </section>
   );
