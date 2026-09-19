@@ -170,7 +170,7 @@ export default function Locations() {
                 {sectionNumber}
               </span>
               <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px]" />
-              <span className="text-sm font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px]">
+              <span className="text-[12px] font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--text-section-label)] lg:leading-4 lg:tracking-[1.78px]">
                 {sectionLabel}
               </span>
             </div>
@@ -192,7 +192,7 @@ export default function Locations() {
                 {sectionNumber}
               </span>
               <span className="h-px w-[104px] bg-[var(--text-heading)]" />
-              <span className="text-base font-medium leading-5 tracking-[3px] uppercase text-[var(--text-heading)]">
+              <span className="text-[12px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-section-label)]">
                 {sectionLabel}
               </span>
             </div>

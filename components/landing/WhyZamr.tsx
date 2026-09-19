@@ -20,7 +20,7 @@ export default function WhyZamr() {
                 {sectionNumber}
               </span>
               <span className="h-px w-[24px] shrink-0 bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
-              <span className="text-xs font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-soft)]">
+              <span className="text-[12px] font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-section-label)]">
                 {sectionLabel}
               </span>
             </div>

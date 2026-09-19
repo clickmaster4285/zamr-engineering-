@@ -72,7 +72,7 @@ export default function About() {
               {sectionNumber}
             </span>
             <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
-            <span className="text-sm font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            <span className="text-[12px] font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--text-section-label)] lg:leading-4 lg:tracking-[1.78px] 2xl:leading-5 2xl:tracking-[3px]">
               {sectionLabel}
             </span>
           </div>

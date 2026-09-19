@@ -157,7 +157,7 @@ export default function Projects() {
                 {sectionNumber}
               </span>
               <span className="h-px w-[60px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
-              <span className="text-xs font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+              <span className="text-[12px] font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-section-label)] lg:leading-4 lg:tracking-[1.78px] 2xl:leading-5 2xl:tracking-[3px]">
                 {sectionLabel}
               </span>
             </div>

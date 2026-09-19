@@ -85,7 +85,7 @@ export default function Contact({ bgcolor = "bg-white" }: Props) {
                 {sectionNumber}
               </span>
               <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
-              <span className="text-xs font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-soft)]">
+              <span className="text-[12px] font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-section-label)]">
                 {sectionLabel}
               </span>
             </div>
