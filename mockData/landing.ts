@@ -123,7 +123,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "engineering-and-design",
     title: "Engineering & Design",
     description:
-      "Integrated engineering and design services across civil, structural, transport and infrastructure projects from early investigations through detailed design and construction support.",
+      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
     tags: [
       "Civil",
       "Structural",
@@ -138,7 +138,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "project-and-program-management",
     title: "Project & Program Management",
     description:
-      "Senior-led project and program management across the infrastructure lifecycle  from project development and procurement through design, construction and close-out.",
+      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
     tags: [
       "Project Management",
       "Contract Management",
@@ -152,7 +152,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "project-verification-and-assurance",
     title: "Project Verification & Assurance",
     description:
-      "Independent project verification and technical assurance for transport and infrastructure  with particular expertise in TfNSW developer-delivered works.",
+      "Advanced pavement engineering, geometric road design, and integrated traffic systems for future-ready transport networks across New South Wales and beyond.",
     tags: [
       "TfNSW WAD",
       "Independent Verification",
@@ -166,7 +166,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "asset-management-and-inspection",
     title: "Asset Management & Inspection",
     description:
-      "Asset management, inspection and condition assessment services that help infrastructure owners manage risk and optimise maintenance and renewal investment.",
+      "Engineering the clean energy transition — solar farm civil works, wind turbine foundations, and hybrid energy infrastructure at utility scale.",
     tags: [
       "Bridge Inspections",
       "Structural Inspections",
@@ -180,7 +180,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "buildings-and-property-engineering",
     title: "Buildings & Property Engineering",
     description:
-      "Multidisciplinary engineering for residential, commercial, industrial and community buildings  from feasibility and design through approvals, inspection and certification.",
+      "Specialist advisory and compliance consulting precisely aligned with Transport for NSW regulatory standards, technical specifications, and certification frameworks.",
     tags: [
       "Structural",
       "Civil",
@@ -196,7 +196,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "construction-and-project-delivery",
     title: "Construction & Project Delivery",
     description:
-      "Engineering-led construction and project delivery for civil and infrastructure works  combining technical understanding with practical construction management.",
+      "Specialist advisory and compliance consulting precisely aligned with Transport for NSW regulatory standards, technical specifications, and certification frameworks.",
     tags: [
       "Civil Works",
       "Roads",

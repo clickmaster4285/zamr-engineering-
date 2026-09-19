@@ -26,7 +26,7 @@ export const services: ServiceData[] = [
     index: "01",
     title: "Engineering & Design",
     description:
-      "ZAMR Engineering provides integrated engineering and design services across civil, structural, transport and infrastructure projects. From early investigations and concept development through detailed design and construction support, we deliver practical, buildable and value-focused solutions tailored to project requirements.",
+      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
     tags: [
       "Civil",
       "Structural",
@@ -114,7 +114,7 @@ export const services: ServiceData[] = [
     index: "02",
     title: "Project & Program Management",
     description:
-      "ZAMR Engineering provides project and program management services across the infrastructure lifecycle, from project development and procurement through design, construction and close-out. Our senior-led approach focuses on effective governance, commercial control, stakeholder coordination and successful project outcomes.",
+      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
     tags: [
       "Project Management",
       "Contract Management",
@@ -201,7 +201,7 @@ export const services: ServiceData[] = [
     index: "03",
     title: "Project Verification & Assurance",
     description:
-      "ZAMR Engineering provides independent Project Verification and technical assurance services for transport and infrastructure projects, with particular expertise in TfNSW developer-delivered works. We provide independent oversight across design and construction to confirm compliance, quality and technical integrity.",
+      "Advanced pavement engineering, geometric road design, and integrated traffic systems for future-ready transport networks across New South Wales and beyond.",
     tags: [
       "TfNSW WAD",
       "Independent Verification",
@@ -287,7 +287,7 @@ export const services: ServiceData[] = [
     index: "04",
     title: "Asset Management & Inspection",
     description:
-      "ZAMR Engineering provides asset management, inspection and condition assessment services to help infrastructure owners understand asset condition, manage risk and optimise maintenance and renewal investment across the asset lifecycle.",
+      "Engineering the clean energy transition — solar farm civil works, wind turbine foundations, and hybrid energy infrastructure at utility scale.",
     tags: [
       "Bridge Inspections",
       "Structural Inspections",
@@ -373,7 +373,7 @@ export const services: ServiceData[] = [
     index: "05",
     title: "Buildings & Property Engineering",
     description:
-      "ZAMR Engineering provides multidisciplinary engineering services for residential, commercial, industrial and community buildings. We support clients from feasibility and design through approvals, construction, inspection, certification and asset maintenance.",
+      "Specialist advisory and compliance consulting precisely aligned with Transport for NSW regulatory standards, technical specifications, and certification frameworks.",
     tags: [
       "Structural",
       "Civil",
