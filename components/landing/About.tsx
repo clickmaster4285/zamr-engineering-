@@ -117,10 +117,10 @@ export default function About() {
                   }`}
                 >
                   <div className="flex flex-row items-start gap-[2px] lg:gap-[5px] 2xl:gap-2">
-                    <span className="text-[36px] font-normal leading-[45px] text-[var(--text-heading)] lg:text-[43px] lg:leading-[54px] 2xl:text-[72px] 2xl:leading-[91px]">
+                    <span className="text-[36px] font-normal leading-[45px] text-[var(--color-primary)] lg:text-[43px] lg:leading-[54px] 2xl:text-[72px] 2xl:leading-[91px]">
                       {currentValues[index]}
                     </span>
-                    <span className="text-[30px] font-light leading-9 text-[var(--text-heading)] lg:text-[25px] lg:leading-[30px] 2xl:text-[42px] 2xl:leading-[50px]">
+                    <span className="text-[30px] font-light leading-9 text-[var(--color-primary)] lg:text-[25px] lg:leading-[30px] 2xl:text-[42px] 2xl:leading-[50px]">
                       {stat.suffix}
                     </span>
                   </div>
