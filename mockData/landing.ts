@@ -24,7 +24,7 @@ export interface HeroContent {
 
 export const heroContent: HeroContent = {
   location: "SYDNEY · NSW · AUSTRALIA",
-  headline: "Engineering Infrastructure\nfor the Future",
+  headline: "Engineering Infrastructure\nwith Confidence",
   tagline: "",
   videoSrc: "/videos/video1.mp4",
 };
@@ -37,14 +37,16 @@ export interface StatItem {
 }
 
 export const aboutStats: StatItem[] = [
-  { value: 150, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
+  { value: 125, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
   { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
-  { value: 98, suffix: "%", label: "COMPLIANCE RATE", align: "end" },
 ];
 
 export const aboutParagraphs: string[] = [
-  "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering precision-led infrastructure solutions across New South Wales and beyond. Founded on a commitment to technical excellence, we partner with government bodies, developers, and industry leaders to engineer infrastructure that endures.",
-  "Our approach integrates rigorous engineering methodology with forward-looking design thinking  producing outcomes that are structurally sound, environmentally considered, and technically innovative. Every project is an opportunity to advance what infrastructure can achieve.",
+  "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering integrated design, project verification, and infrastructure delivery solutions across New South Wales and beyond. Founded on a commitment to technical excellence, we partner with government bodies, developers, and industry leaders to engineer infrastructure that endures.",
+  "Our approach integrates rigorous engineering methodology with forward-looking design thinking — delivering infrastructure that is compliant, buildable, practical and engineered for long-term performance. Every project is delivered with a focus on quality, compliance, risk management and practical engineering outcomes.",
+];
+export const aboutlastbottomparagraph: string[] = [
+  "Trusted by Government, Developers & Contractors",
 ];
 
 export interface ServicePreviewItem {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { aboutStats, aboutParagraphs } from "@/mockData/landing";
+import { aboutStats, aboutParagraphs ,aboutlastbottomparagraph} from "@/mockData/landing";
 
 export default function About() {
   const [currentValues, setCurrentValues] = useState<number[]>(
@@ -98,33 +98,33 @@ export default function About() {
           <div className="h-px w-full border-t border-[var(--text-dark)]" />
 
           {/* Frame 1321318988 — stats row */}
-          <div className="flex w-full flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-x-8 lg:gap-x-[185px]">
+          <div className="grid w-full grid-cols-2 gap-x-12">
             {aboutStats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className="flex flex-1 flex-col gap-[2px]"
-                style={{ alignItems: stat.align }}
-              >
-                <div
-                  className="flex flex-row items-start gap-2"
-                  style={{
-                    width:
-                      index === 0 ? "145px" : index === 1 ? "97px" : "113px",
-                  }}
-                >
-                  <span className="text-5xl font-normal leading-none text-[var(--color-primary)] sm:text-[72px] sm:leading-[91px]">
+              <div key={stat.label} className="flex flex-col">
+                {/* Number */}
+                <div className="flex items-start">
+                  <span className="text-5xl font-normal leading-none text-[var(--color-primary)] sm:text-[60px]">
                     {currentValues[index]}
                   </span>
-                  <span className="text-3xl font-light leading-none text-[var(--color-primary)] sm:text-[42px] sm:leading-[50px]">
+
+                  <span className="ml-1 text-2xl font-light leading-none text-[var(--color-primary)] sm:text-[30px]">
                     {stat.suffix}
                   </span>
                 </div>
-                <span className="text-sm font-light leading-5 text-[var(--text-dark)] sm:text-base">
+
+                {/* Label */}
+                <span className="mt-3 text-sm font-light leading-5 text-[var(--text-dark)] sm:text-base">
                   {stat.label}
                 </span>
               </div>
             ))}
           </div>
+
+          {aboutlastbottomparagraph.map((p, i) => (
+              <p key={i} className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
+                {p}
+              </p>
+            ))}
         </div>
       </div>
     </section>
