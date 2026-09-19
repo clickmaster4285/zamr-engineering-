@@ -57,7 +57,7 @@ function ProjectCard({
     <div
       ref={ref}
       onClick={() => router.push(`/projects/${project.slug}`)}
-      className={`group relative h-full w-full cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
+      className={`group relative h-full min-w-0 w-full cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
         inView ? "translate-y-0 scale-100" : "translate-y-10 scale-95"
       }`}
     >
@@ -147,8 +147,8 @@ export default function Projects() {
         );
 
   return (
-    <section className="w-full bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
-      <div className="flex w-full flex-col gap-5 lg:gap-9 2xl:gap-[60px]">
+    <section className="w-full max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
+      <div className="flex w-full min-w-0 flex-col gap-5 lg:gap-9 2xl:gap-[60px]">
         {/* Header */}
         <div className="flex w-full flex-col gap-3 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
           <div className="flex flex-col gap-3 lg:gap-[18px] 2xl:gap-[30px]">
@@ -169,32 +169,34 @@ export default function Projects() {
           <AllProjectsLink className="hidden lg:inline-flex" />
         </div>
 
-        {/* Filters */}
-        <div className="flex w-full flex-nowrap gap-2 overflow-x-auto pb-1 lg:gap-[9.5px] lg:overflow-visible 2xl:gap-4">
-          {projectFilters.map((filter) => {
-            const isActive = filter === activeFilter;
-            return (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => setActiveFilter(filter)}
-                className={`flex h-[38px] shrink-0 items-center justify-center whitespace-nowrap border px-4 py-3 text-[11px] font-medium leading-[14px] tracking-[0.68px] transition-all duration-300 lg:h-[35px] lg:px-[15px] lg:py-[9.5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:h-[50px] 2xl:px-[25px] 2xl:py-4 2xl:text-sm 2xl:leading-[18px] 2xl:tracking-[3px] ${
-                  isActive
-                    ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                    : "border-[var(--color-primary)] bg-transparent text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                }`}
-              >
-                {filter}
-              </button>
-            );
-          })}
+        {/* Filters — scroll on mobile/tablet so chips never blow past parent width */}
+        <div className="w-full min-w-0 max-w-full overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex w-max min-w-full flex-nowrap gap-2 lg:gap-[9.5px] 2xl:gap-4">
+            {projectFilters.map((filter) => {
+              const isActive = filter === activeFilter;
+              return (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setActiveFilter(filter)}
+                  className={`flex h-[38px] shrink-0 items-center justify-center whitespace-nowrap border px-4 py-3 text-[11px] font-medium leading-[14px] tracking-[0.68px] transition-all duration-300 lg:h-[35px] lg:px-[15px] lg:py-[9.5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:h-[50px] 2xl:px-[25px] 2xl:py-4 2xl:text-sm 2xl:leading-[18px] 2xl:tracking-[3px] ${
+                    isActive
+                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                      : "border-[var(--color-primary)] bg-transparent text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                  }`}
+                >
+                  {filter}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Project grid */}
+        {/* Project grid — fluid on tablet, fixed Figma widths only at 2xl */}
         {filteredProjects.length > 0 ? (
-          <div className="flex w-full flex-col gap-4 lg:flex-row lg:gap-[18px] 2xl:gap-[30px]">
+          <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-row lg:items-stretch lg:gap-[18px] 2xl:gap-[30px]">
             {filteredProjects[0] && (
-              <div className="w-full lg:w-[484px] lg:shrink-0 2xl:w-[817px]">
+              <div className="w-full min-w-0 lg:flex-[1.315] lg:basis-0 2xl:w-[817px] 2xl:flex-none 2xl:basis-auto">
                 <ProjectCard
                   project={filteredProjects[0]}
                   isLarge
@@ -202,7 +204,7 @@ export default function Projects() {
                 />
               </div>
             )}
-            <div className="flex w-full flex-col gap-4 lg:w-[368px] lg:gap-[18px] lg:shrink-0 2xl:w-[621px] 2xl:gap-[30px]">
+            <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-1 lg:basis-0 2xl:w-[621px] 2xl:flex-none 2xl:basis-auto 2xl:gap-[30px]">
               {filteredProjects.slice(1, 3).map((project) => (
                 <ProjectCard
                   key={project.slug}
