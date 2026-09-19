@@ -1,7 +1,22 @@
-now i want to redesign my hero section of @app\projects\page.tsx  
-
-figma screenshot i attached
-and figma css :
-@figmacss.css
+now i want to redesign my @app/page.tsx 
 
 i want exact same pixal to pixal design with my latest global css
+
+first set the "WHY ZAMR ENGINEERING" section with fully responsive  @components/landing/WhyZamr.tsx 
+don't change the color
+
+
+figmacss :
+desktop: {
+
+}
+
+
+tablet :{
+
+}
+
+
+mobile: {
+
+}

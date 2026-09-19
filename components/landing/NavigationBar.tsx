@@ -12,15 +12,13 @@ export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-const isActive = (href: string) => {
-  if (!href) return false;
 
-  // Home page
-  if (href === "/") return pathname === "/";
+  const isActive = (href: string) => {
+    if (!href) return false;
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
-  // Matches /about and /about/anything
-  return pathname === href || pathname.startsWith(`${href}/`);
-};
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
@@ -47,6 +45,13 @@ const isActive = (href: string) => {
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
+  const linkClass = (href: string) =>
+    `shrink-0 whitespace-nowrap font-medium uppercase transition-colors duration-300 ${
+      isActive(href)
+        ? "text-[var(--color-secondary)]"
+        : "text-white hover:text-[var(--color-secondary)]"
+    }`;
+
   return (
     <>
       <header
@@ -54,61 +59,65 @@ const isActive = (href: string) => {
           scrolled ? "bg-primary shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="relative  flex w-full items-center px-6 h-[73px] lg:px-[130px] lg:h-[100px]">
-          {/* Logo */}
-          <Link href="/" className="shrink-0">
+        {/* ── Mobile (<1024): Figma 350×36 @ top 30px ── */}
+        <div className="mx-auto flex h-[66px] w-full items-center justify-between  px-6  lg:hidden">
+          <Link href="/" className="shrink-0" onClick={closeMenu}>
             <Image
               src={logoImage}
               alt="ZAMR Engineering"
-              width={111}
-              height={49}
-              className="object-contain"
+              width={78}
+              height={24}
+              className="h-auto w-[78px] object-contain"
               priority
             />
           </Link>
 
-          {/* Nav links – centered */}
-<nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 lg:flex">
-  {navLinks.map((link) => (
-    <Link
-      key={link.label}
-      href={link.href}
-      className={`shrink-0 whitespace-nowrap text-sm font-medium uppercase tracking-normal transition-colors duration-300 ${
-        isActive(link.href)
-          ? "text-[var(--color-secondary)]"
-          : "text-white hover:text-[var(--color-secondary)]"
-      }`}
-    >
-      {link.label}
-    </Link>
-  ))}
-</nav>
-
-          {/* Contact button */}
-          <button
-            type="button"
-            onClick={() => router.push("/contact")}
-            className="ml-auto hidden items-center justify-center border border-white px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] text-white transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)] lg:flex"
-            style={{ height: "50px" }}
-          >
-            CONTACT
-          </button>
-
-          {/* Hamburger */}
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            className={`ml-auto transition-colors duration-300 lg:hidden ${
-              scrolled ? "text-[var(--text-dark)]" : "text-white"
-            }`}
+            className="flex h-9 w-9 shrink-0 items-center justify-center p-2 text-[var(--color-secondary)]"
           >
-            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+            {menuOpen ? <X size={20} strokeWidth={2} /> : <Menu size={20} strokeWidth={2} />}
           </button>
         </div>
 
-        {/* Mobile menu — positioned directly below header via top-full */}
+        {/* ── Tablet (lg) + Desktop (2xl): Figma 1024 / 1727 ── */}
+        <div className="relative mx-auto hidden h-[72px] w-full max-w-[1727px] grid-cols-[auto_1fr_auto] items-center px-[77px] lg:grid 2xl:h-[100px] 2xl:px-[130px]">
+          <Link href="/" className="shrink-0 justify-self-start">
+            <Image
+              src={logoImage}
+              alt="ZAMR Engineering"
+              width={111}
+              height={49}
+              className="h-auto w-[66px] object-contain 2xl:w-[111px]"
+              priority
+            />
+          </Link>
+
+          <nav className="flex items-center justify-center gap-2.5 2xl:gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={`${linkClass(link.href)} text-[11px] leading-[14px] 2xl:text-sm 2xl:leading-[18px]`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <button
+            type="button"
+            onClick={() => router.push("/contact")}
+            className="flex h-[35px] w-[101px] shrink-0 items-center justify-center justify-self-end border-[0.6px] border-white px-[15px] text-[13px] font-medium leading-4 tracking-[1.78px] text-white uppercase transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)] 2xl:h-[50px] 2xl:w-[133px] 2xl:border 2xl:px-[25px] 2xl:py-4 2xl:text-sm 2xl:leading-[18px] 2xl:tracking-[3px]"
+          >
+            CONTACT
+          </button>
+        </div>
+
+        {/* Mobile menu drawer */}
         <div
           className={`absolute left-0 w-full border-t px-6 py-8 transition-all duration-300 lg:hidden ${
             menuOpen
@@ -121,27 +130,23 @@ const isActive = (href: string) => {
           }`}
         >
           <div className="flex flex-col items-center gap-6">
-          {navLinks.map((link) => (
-  <Link
-    key={link.label}
-    href={link.href}
-    onClick={closeMenu}
-    className={`whitespace-nowrap text-sm font-medium uppercase transition-colors duration-300 ${
-      isActive(link.href)
-        ? "text-[var(--color-secondary)]"
-        : "text-white hover:text-[var(--color-secondary)]"
-    }`}
-  >
-    {link.label}
-  </Link>
-))}
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={closeMenu}
+                className={`${linkClass(link.href)} text-sm leading-[18px]`}
+              >
+                {link.label}
+              </Link>
+            ))}
             <button
               type="button"
               onClick={() => {
                 closeMenu();
                 router.push("/contact");
               }}
-              className="whitespace-nowrap border border-white px-[25px] py-4 text-sm font-medium uppercase tracking-[0.3em] text-white transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)]"
+              className="whitespace-nowrap border border-white px-[25px] py-4 text-sm font-medium uppercase tracking-[3px] text-white transition-colors duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)]"
             >
               CONTACT
             </button>

@@ -3,122 +3,242 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { footerQuickLinks, footerServiceLinks, footerContactInfo, footerDescription, logoImage } from "@/mockData/landing";
+import {
+  footerQuickLinks,
+  footerServiceLinks,
+  footerMetaItems,
+  footerSocialLinks,
+  footerLegalLinks,
+  footerDescription,
+  footerCopyright,
+  footerVideoSrc,
+  logoImage,
+} from "@/mockData/landing";
+
+function SocialLinks() {
+  return (
+    <div className="flex items-center gap-[9.5px] 2xl:gap-4">
+      {footerSocialLinks.map((link) => (
+        <Link
+          key={link.alt}
+          href={link.href}
+          aria-label={link.alt}
+          target={link.href.startsWith("http") ? "_blank" : undefined}
+          rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+          className="flex h-6 w-6 shrink-0 items-center justify-center border border-white transition-opacity hover:opacity-70 2xl:h-10 2xl:w-10"
+        >
+          <Image
+            src={link.src}
+            alt={link.alt}
+            width={20}
+            height={20}
+            className="h-3 w-3 object-contain 2xl:h-5 2xl:w-5"
+          />
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+function QuickLinksColumn() {
+  return (
+    <div className="flex min-w-0 flex-1 flex-col gap-6">
+      <h3 className="text-[13px] font-bold leading-4 text-white lg:text-[13px] lg:leading-4 2xl:text-lg 2xl:leading-[23px]">
+        Quick Links
+      </h3>
+      <ul className="flex flex-col gap-3">
+        {footerQuickLinks.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="text-[13px] leading-6 uppercase text-white transition-opacity hover:opacity-80 2xl:text-base"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ServicesColumn() {
+  return (
+    <div className="flex min-w-0 flex-1 flex-col gap-6">
+      <h3 className="text-[13px] font-bold leading-4 text-white lg:text-[13px] lg:leading-4 2xl:text-lg 2xl:leading-[23px]">
+        Services
+      </h3>
+      <ul className="flex flex-col gap-3">
+        {footerServiceLinks.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="text-[13px] leading-6 text-white transition-opacity hover:opacity-80 2xl:text-base"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function MetaBar() {
+  return (
+    <div className="hidden w-full flex-row items-center gap-6 lg:flex">
+      {footerMetaItems.map((item, i) => {
+        const content = (
+          <>
+            <Image
+              src={item.icon}
+              alt={item.alt}
+              width={20}
+              height={20}
+              className="h-3 w-3 shrink-0 2xl:h-5 2xl:w-5"
+            />
+            <span className="min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px]">
+              {item.value}
+            </span>
+          </>
+        );
+
+        const className =
+          "flex min-w-0 flex-1 flex-row items-center gap-3";
+
+        if (item.href) {
+          return (
+            <a
+              key={`${item.type}-${i}`}
+              href={item.href}
+              className={`${className} transition-opacity hover:opacity-80`}
+            >
+              {content}
+            </a>
+          );
+        }
+
+        return (
+          <div key={`${item.type}-${i}`} className={className}>
+            {content}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden text-white">
+    <footer className="relative w-full overflow-hidden bg-[var(--bg-hero)] text-white">
+      {/* Desktop / tablet video background */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 hidden h-full w-full object-cover lg:block"
       >
-        <source src="/videos/video1.mp4" type="video/mp4" />
+        <source src={footerVideoSrc} type="video/mp4" />
       </video>
 
-      <div className="pointer-events-none absolute inset-0" />
+      {/* Soft dark overlay so white type stays readable */}
+      <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-hero)] lg:bg-[var(--overlay-image-default)]" />
 
-      <div className="relative z-10 w-full px-6 py-12 lg:p-[130px]">
-        <div className="flex flex-col gap-8 lg:gap-[30px]">
-          {/* Frame 60 — top row */}
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-[60px]">
-            {/* Frame 55 — Logo + Description + Social */}
-            <div className="flex w-full flex-col items-start gap-8 lg:w-[369px] lg:gap-[50px]">
+      {/* ─── Desktop + Tablet ─── */}
+      <div className="relative z-10 hidden w-full px-[77px] py-[77px] lg:block 2xl:p-[130px]">
+        <div className="mx-auto flex w-full max-w-[1467px] flex-col gap-[18px] 2xl:gap-[30px]">
+          {/* Top: brand + link columns */}
+          <div className="flex w-full flex-row items-start gap-9 2xl:gap-[60px]">
+            {/* Brand column */}
+            <div className="flex w-[219px] shrink-0 flex-col gap-[30px] 2xl:w-[369px] 2xl:gap-[50px]">
               <Image
                 src={logoImage}
                 alt="ZAMR Engineering"
-                width={250}
-                height={150}
-                className="object-contain"
+                width={218}
+                height={124}
+                className="h-[74px] w-[129px] object-contain 2xl:h-[124px] 2xl:w-[218px]"
                 priority
               />
-              {/* Frame 54 */}
-              <div className="flex w-full flex-col items-start gap-4">
-                <p className="max-w-[330px] text-base leading-[29px] text-white">
+              <div className="flex w-full flex-col gap-[9.5px] 2xl:gap-4">
+                <p className="max-w-[198px] text-[13px] leading-6 text-white 2xl:max-w-[334px] 2xl:text-base 2xl:leading-[29px]">
                   {footerDescription}
                 </p>
-                {/* Frame 53 — social icons */}
-                {/* <div className="flex items-center gap-4">
-                  <Link href="" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white">
-                    <Image src="/icons/Linkdinsq.svg" alt="LinkedIn" width={40} height={40} />
-                  </Link>
-                  <Link href="" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white">
-                    <Image src="/icons/facebookSq.svg" alt="Facebook" width={40} height={40} />
-                  </Link>
-                  <Link href="" aria-label="Twitter" className="flex h-10 w-10 items-center justify-center border border-white/25 transition-colors hover:border-white">
-                    <Image src="/icons/tweetersq.svg" alt="Twitter" width={40} height={40} />
-                  </Link>
-                </div> */}
+                <SocialLinks />
               </div>
             </div>
 
-            {/* Frame 56 — Quick Links + Services + Contact Info */}
-            <div className="flex w-full flex-col gap-8 lg:flex-1 lg:flex-row lg:items-start lg:gap-12">
-              {/* Quick Links */}
-              <div className="flex flex-1 flex-col gap-6">
-                <h3 className="text-lg font-bold leading-[23px] text-white">Quick Links</h3>
-                <ul className="flex flex-col gap-3">
-                  {footerQuickLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className="text-base leading-6 text-white transition-colors hover:text-white/80">
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Services */}
-              <div className="flex flex-1 flex-col gap-6">
-                <h3 className="text-lg font-bold leading-[23px] text-white">Services</h3>
-                <ul className="flex flex-col gap-3">
-                  {footerServiceLinks.map((label) => (
-                    <li key={label}>
-                      <span className="text-base leading-6 text-white">{label}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Contact Info */}
-              <div className="flex flex-1 flex-col gap-6">
-                <h3 className="text-lg font-bold leading-[23px] text-white">Contact Info</h3>
-                <ul className="flex flex-col gap-4">
-                  <li className="flex flex-row items-center gap-3">
-                    <Image src="/icons/location.svg" alt="Location" width={20} height={20} />
-                    <span className="text-base leading-[26px] text-white">{footerContactInfo.location}</span>
-                  </li>
-                  <li className="flex flex-row items-end gap-3">
-                    <Image src="/icons/gamilwhite.svg" alt="Email" width={20} height={20} />
-                    <span className="text-base leading-6 text-white">{footerContactInfo.email}</span>
-                  </li>
-                  <li className="flex flex-row items-center gap-3">
-                    <Image src="/icons/phonewhite.svg" alt="Phone" width={20} height={20} />
-                    <span className="text-base leading-6 text-white">{footerContactInfo.phone}</span>
-                  </li>
-                </ul>
-              </div>
+            {/* Quick Links + Services */}
+            <div className="flex min-w-0 flex-1 flex-row justify-between gap-7 2xl:gap-12">
+              <QuickLinksColumn />
+              <ServicesColumn />
             </div>
           </div>
 
-          {/* Divider */}
           <div className="h-px w-full bg-white" />
 
-          {/* Bottom row */}
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-            <p className="text-sm leading-5 text-white sm:text-base">
-              &copy; 2026 ZAMR Engineering. All rights reserved.
+          <MetaBar />
+
+          <div className="h-px w-full bg-white" />
+
+          <div className="flex w-full flex-row items-center justify-between gap-4">
+            <p className="text-[13px] leading-4 text-white 2xl:text-base 2xl:leading-5">
+              {footerCopyright}
             </p>
-            <div className="flex flex-row items-center gap-5">
-              <Link href="" className="text-sm leading-5 text-right text-white transition-colors hover:text-white/80 sm:text-base">
-                Privacy Policy
-              </Link>
-              <Link href="" className="text-sm leading-5 text-right text-white transition-colors hover:text-white/80 sm:text-base">
-                Terms of Service
-              </Link>
+            <div className="flex flex-row items-center gap-3 2xl:gap-5">
+              {footerLegalLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-right text-[13px] leading-4 text-white transition-opacity hover:opacity-80 2xl:text-base 2xl:leading-5"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ─── Mobile ─── */}
+      <div className="relative z-10 flex w-full flex-col gap-5 px-5 py-[30px] lg:hidden">
+        <div className="flex w-full flex-col gap-6">
+          <Image
+            src={logoImage}
+            alt="ZAMR Engineering"
+            width={78}
+            height={44}
+            className="h-6 w-[78px] object-contain object-left"
+            priority
+          />
+          <p className="text-sm leading-[150%] text-white opacity-70">
+            {footerDescription}
+          </p>
+        </div>
+
+        <div className="h-px w-full bg-white opacity-10" />
+
+        <div className="flex w-full flex-row justify-between gap-4">
+          <QuickLinksColumn />
+          <ServicesColumn />
+        </div>
+
+        <div className="h-px w-full bg-white opacity-10" />
+
+        <div className="flex w-full flex-col gap-4">
+          <p className="text-xs leading-[150%] text-white opacity-60">
+            {footerCopyright}
+          </p>
+          <div className="flex flex-row items-start gap-4">
+            {footerLegalLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-xs leading-[150%] text-white opacity-60 transition-opacity hover:opacity-100"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

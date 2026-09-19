@@ -1,12 +1,18 @@
 "use client";
+
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { projectFilters, clientLogos, projectsFeaturedWork } from "@/mockData/landing";
+import {
+  projectFilters,
+  clientLogos,
+  projectsFeaturedWork,
+  projectsSection,
+} from "@/mockData/landing";
 
-function useInView(threshold = 0.15) {
+function useInView(threshold = 0.05) {
   const [inView, setInView] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const ref = useCallback(
@@ -23,7 +29,7 @@ function useInView(threshold = 0.15) {
             observerRef.current?.disconnect();
           }
         },
-        { threshold }
+        { threshold, rootMargin: "100px 0px" }
       );
       observerRef.current.observe(node);
     },
@@ -38,9 +44,11 @@ function useInView(threshold = 0.15) {
 function ProjectCard({
   project,
   isLarge = false,
+  priority = false,
 }: {
   project: (typeof projectsFeaturedWork)[number];
   isLarge?: boolean;
+  priority?: boolean;
 }) {
   const { ref, inView } = useInView();
   const router = useRouter();
@@ -49,156 +57,216 @@ function ProjectCard({
     <div
       ref={ref}
       onClick={() => router.push(`/projects/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView
-          ? "opacity-100 translate-y-0 scale-100"
-          : "opacity-0 translate-y-10 scale-95"
-        }`}
+      className={`group relative h-full min-w-0 w-full cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
+        inView ? "translate-y-0 scale-100" : "translate-y-10 scale-95"
+      }`}
     >
       <div
-        className={`relative w-full overflow-hidden ${isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
-          }`}
+        className={`relative w-full overflow-hidden ${
+          isLarge
+            ? "h-[320px] lg:h-[386px] 2xl:h-[652px]"
+            : "h-[320px] lg:h-[184px] 2xl:h-[311px]"
+        }`}
       >
         <Image
           src={project.featuredImage}
           alt={project.title}
           fill
-          sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135 group-hover:opacity-0"
-        />
-        <Image
-          src={project.featuredImagewithhover}
-          alt={project.title}
-          fill
-          sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover opacity-0 transition-all duration-500 ease-in-out group-hover:scale-135 group-hover:opacity-100"
-        />
-        {/* Default overlay color overlay */}
-        <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)]`}
+          priority={priority}
+          sizes="(min-width: 1536px) 817px, (min-width: 1024px) 484px, 100vw"
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
 
-        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
         <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge ? " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]" : ""}`}
+          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${
+            !isLarge
+              ? "transition-colors duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:bg-[var(--overlay-image-hover)]"
+              : ""
+          }`}
         />
 
-        {/* Project index */}
+        {/* Mobile layout — stacked content */}
+        <div className="absolute inset-0 flex flex-col justify-between p-6 lg:hidden">
+          <span className="text-sm font-bold leading-[18px] tracking-[3px] text-white">
+            {project.index}
+          </span>
+          <h3 className="text-xl font-semibold leading-[1.3] text-white">
+            {project.title}
+          </h3>
+        </div>
+
+        {/* Tablet + Desktop layout */}
         <span
-          className={`absolute left-5 top-5 font-[800] tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
-            }`}
+          className={`absolute left-[30px] top-[30px] hidden font-extrabold tracking-[1.78px] text-white lg:block 2xl:left-[50px] 2xl:top-[50px] 2xl:tracking-[3px] ${
+            isLarge
+              ? "text-[32px] leading-10 2xl:text-[54px] 2xl:leading-[68px]"
+              : "text-[20px] leading-[25px] 2xl:text-[34px] 2xl:leading-[43px]"
+          }`}
         >
           {project.index}
         </span>
 
-        {/* Title */}
-        <h3 className={`absolute left-5 bottom-5 font-semibold text-white text-[20px] leading-[26px] sm:left-8 sm:right-8 sm:bottom-8 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px] ${isLarge ? " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out" : ""}`}>
+        <h3
+          className={`absolute bottom-[30px] left-[30px] right-[30px] hidden font-semibold text-white lg:block 2xl:bottom-[50px] 2xl:left-[50px] 2xl:right-[50px] ${
+            isLarge
+              ? "max-w-[319px] text-lg leading-[23px] 2xl:max-w-[496px] 2xl:text-[28px] 2xl:leading-[35px]"
+              : "max-w-[328px] text-lg leading-[23px] 2xl:max-w-[511px] 2xl:text-[28px] 2xl:leading-[35px]"
+          }`}
+        >
           {project.title}
         </h3>
-
-        {/* Description — large card only, slides up from below on hover */}
-        {isLarge && (
-          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-5 pb-5 sm:px-8 sm:pb-8 md:px-[50px] md:pb-[50px]">
-            <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white sm:text-[16px] sm:leading-[20px]">
-              {project.shortDescription}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );
 }
 
+function AllProjectsLink({ className = "" }: { className?: string }) {
+  return (
+    <Link
+      href="/projects"
+      className={`group inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[3px] text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-[5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:gap-2 2xl:text-base 2xl:leading-5 2xl:tracking-[3px] ${className}`}
+    >
+      {projectsSection.ctaLabel}
+      <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+        <ArrowRight className="h-4 w-4 lg:h-[14px] lg:w-[14px] 2xl:h-6 2xl:w-6" strokeWidth={1.25} />
+      </span>
+    </Link>
+  );
+}
+
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("ALL");
+  const [activeFilter, setActiveFilter] = useState(projectFilters[1]);
+  const { sectionNumber, sectionLabel, heading } = projectsSection;
+
   const filteredProjects =
     activeFilter === "ALL"
       ? projectsFeaturedWork
-      : projectsFeaturedWork.filter((p) => p.category === activeFilter);
+      : projectsFeaturedWork.filter(
+          (p) => p.category.toLowerCase() === activeFilter.toLowerCase()
+        );
 
   return (
-    <section className="w-full bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
-      <div className="flex flex-col gap-10 lg:gap-[60px]">
-        <div className="flex flex-col gap-6 lg:gap-[30px]">
-          {/* Title header */}
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-            <div className="flex flex-col gap-6 lg:gap-[30px]">
-              <div className="flex items-center gap-4">
-                <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
-                  03
-                </span>
-                <span className="h-px w-[104px] bg-[var(--bg-hero)]" />
-                <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
-                  PROJECTS
-                </span>
-              </div>
-              <h2 className="text-3xl font-bold leading-tight text-[var(--text-dark)] sm:text-4xl md:text-[56px] md:leading-[71px]">
-                Featured Work
-              </h2>
-            </div>
-            <Link
-              href="/projects"
-              className="group flex items-center gap-2 text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] transition-all duration-300 hover:text-[var(--color-secondary)] sm:text-base"
-            >
-              ALL PROJECTS
-              <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
-                <ArrowRight size={24} />
+    <section className="w-full max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
+      <div className="flex w-full min-w-0 flex-col gap-5 lg:gap-9 2xl:gap-[60px]">
+        {/* Header */}
+        <div className="flex w-full flex-col gap-3 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
+          <div className="flex flex-col gap-3 lg:gap-[18px] 2xl:gap-[30px]">
+            <div className="flex items-center gap-3 lg:gap-[9.5px] 2xl:gap-4">
+              <span className="text-xs font-bold leading-[15px] tracking-[3px] text-[var(--color-primary)] lg:text-[13px] lg:font-medium lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+                {sectionNumber}
               </span>
-            </Link>
+              <span className="h-px w-[60px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
+              <span className="text-[12px] font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-section-label)] lg:leading-4 lg:tracking-[1.78px] 2xl:leading-5 2xl:tracking-[3px]">
+                {sectionLabel}
+              </span>
+            </div>
+            <h2 className="text-[28px] font-bold leading-[1.2] text-[var(--text-heading)] lg:text-[33px] lg:leading-[42px] 2xl:text-[56px] 2xl:leading-[71px]">
+              {heading}
+            </h2>
           </div>
 
-          {/* Filter tabs */}
-          <div className="flex w-full flex-nowrap gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:overflow-visible lg:gap-4">
+          <AllProjectsLink className="hidden lg:inline-flex" />
+        </div>
+
+        {/* Filters — scroll on mobile/tablet so chips never blow past parent width */}
+        <div className="w-full min-w-0 max-w-full overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex w-max min-w-full flex-nowrap gap-2 lg:gap-[9.5px] 2xl:gap-4">
             {projectFilters.map((filter) => {
               const isActive = filter === activeFilter;
-              const isAll = filter === "ALL";
               return (
                 <button
                   key={filter}
                   type="button"
-                  className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${isActive
+                  onClick={() => setActiveFilter(filter)}
+                  className={`flex h-[38px] shrink-0 items-center justify-center whitespace-nowrap border px-4 py-3 text-[11px] font-medium leading-[14px] tracking-[0.68px] transition-all duration-300 lg:h-[35px] lg:px-[15px] lg:py-[9.5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:h-[50px] 2xl:px-[25px] 2xl:py-4 2xl:text-sm 2xl:leading-[18px] 2xl:tracking-[3px] ${
+                    isActive
                       ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                    } ${isAll ? "w-20 lg:flex-none" : ""}`}
+                      : "border-[var(--color-primary)] bg-transparent text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                  }`}
                 >
                   {filter}
                 </button>
               );
             })}
           </div>
+        </div>
 
-          {/* Project grid */}
-          {filteredProjects.length > 0 ? (
-            <div className="flex flex-col gap-5 md:gap-[30px] md:flex-row md:items-stretch">
-              {filteredProjects[0] && (
-                <div className="w-full md:w-[817px]">
-                  <ProjectCard project={filteredProjects[0]} isLarge />
-                </div>
-              )}
-              <div className="flex w-full flex-col gap-5 md:gap-[30px] md:w-[621px]">
-                {filteredProjects.slice(1, 3).map((project) => (
-                  <ProjectCard key={project.slug} project={project} isLarge={false} />
-                ))}
+        {/* Project grid — fluid on tablet, fixed Figma widths only at 2xl */}
+        {filteredProjects.length > 0 ? (
+          <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-row lg:items-stretch lg:gap-[18px] 2xl:gap-[30px]">
+            {filteredProjects[0] && (
+              <div className="w-full min-w-0 lg:flex-[1.315] lg:basis-0 2xl:w-[817px] 2xl:flex-none 2xl:basis-auto">
+                <ProjectCard
+                  project={filteredProjects[0]}
+                  isLarge
+                  priority
+                />
               </div>
+            )}
+            <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-1 lg:basis-0 2xl:w-[621px] 2xl:flex-none 2xl:basis-auto 2xl:gap-[30px]">
+              {filteredProjects.slice(1, 3).map((project) => (
+                <ProjectCard
+                  key={project.slug}
+                  project={project}
+                  isLarge={false}
+                />
+              ))}
             </div>
-          ) : (
-            <div className="py-12 text-center text-lg text-[var(--text-muted)]">
-              No projects found in this category.
-            </div>
-          )}
+          </div>
+        ) : (
+          <div className="py-12 text-center text-lg text-[var(--text-muted)]">
+            No projects found in this category.
+          </div>
+        )}
 
-          {/* Client logos — infinite scrolling marquee */}
-          <div className="group/logo relative w-full overflow-hidden">
-            <div className="flex w-fit animate-marquee group-hover/logo:[animation-play-state:paused]">
-              {[...clientLogos, ...clientLogos].map((logo, i) => (
+        {/* Client logos — static grid, no marquee */}
+        <div className="w-full">
+          {/* Mobile: label + 2-row bordered grid */}
+          <div className="flex w-full flex-col gap-3 pt-4 lg:hidden">
+            <p className="w-full text-center text-xs font-medium leading-[15px] tracking-[3px] text-[var(--text-soft)]">
+              {projectsSection.logosLabel}
+            </p>
+            <div className="flex w-full flex-row flex-wrap justify-center gap-3">
+              {clientLogos.slice(0, 6).map((logo) => (
                 <div
-                  key={`${logo.alt}-${i}`}
-                  className="relative mx-3 h-[50px] w-[140px] flex-none sm:h-[70px] sm:w-[180px] md:mx-4 md:h-[86px] md:w-[220px]"
+                  key={logo.alt}
+                  className="relative flex h-[50px] w-[110px] shrink-0 items-center justify-center border border-[var(--border-section)] bg-white"
                 >
-                  <Image src={logo.src} alt={logo.alt} fill sizes="220px" className="object-contain" />
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={96}
+                    height={28}
+                    className="max-h-[28px] w-auto max-w-[96px] object-contain"
+                  />
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Tablet + Desktop: equal flex row, no animation */}
+          <div className="hidden w-full flex-row items-center gap-[18px] lg:flex 2xl:gap-[30px]">
+            {clientLogos.map((logo) => (
+              <div
+                key={logo.alt}
+                className="relative flex h-[51px] min-w-0 flex-1 items-center justify-center bg-[var(--bg-section)] 2xl:h-[86px]"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={157}
+                  height={57}
+                  className="max-h-[34px] w-auto max-w-[94px] object-contain 2xl:max-h-[57px] 2xl:max-w-[157px]"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile CTA */}
+        <div className="flex w-full justify-end lg:hidden">
+          <AllProjectsLink />
         </div>
       </div>
     </section>

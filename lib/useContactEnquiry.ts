@@ -36,12 +36,16 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export const CONTACT_VALIDATION_MESSAGES = {
   required: "Please enter this field.",
   invalidEmail: "Please enter a valid email address.",
+  invalidPhone: "Phone number must be between 7 and 15 characters.",
 };
 
 export const CONTACT_STATUS_MESSAGES: Record<"success" | "error", string> = {
   success: "Your message has been sent successfully. We'll get back to you within 1\u20132 business days.",
   error: "Something went wrong. Please try again or email us directly.",
 };
+
+const PHONE_MIN_LENGTH = 7;
+const PHONE_MAX_LENGTH = 15;
 
 export function useContactEnquiry() {
   const [form, setForm] = useState<ContactFormData>(INITIAL_FORM);
@@ -52,7 +56,9 @@ export function useContactEnquiry() {
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+    const nextValue =
+      name === "phone" ? value.slice(0, PHONE_MAX_LENGTH) : value;
+    setForm((prev) => ({ ...prev, [name]: nextValue }));
     setErrors((prev) => {
       if (!(name in prev)) return prev;
       const next = { ...prev };
@@ -69,6 +75,15 @@ export function useContactEnquiry() {
       next.email = CONTACT_VALIDATION_MESSAGES.invalidEmail;
     if (!form.subject.trim()) next.subject = CONTACT_VALIDATION_MESSAGES.required;
     if (!form.message.trim()) next.message = CONTACT_VALIDATION_MESSAGES.required;
+
+    const phone = form.phone?.trim() ?? "";
+    if (
+      phone.length > 0 &&
+      (phone.length < PHONE_MIN_LENGTH || phone.length > PHONE_MAX_LENGTH)
+    ) {
+      next.phone = CONTACT_VALIDATION_MESSAGES.invalidPhone;
+    }
+
     return next;
   };
 
@@ -78,7 +93,8 @@ export function useContactEnquiry() {
     if (Object.keys(nextErrors).length > 0) {
       setErrors(nextErrors);
       setStatus("idle");
-      const firstField = REQUIRED_FIELDS.find((field) => nextErrors[field]);
+      const focusOrder = [...REQUIRED_FIELDS, "phone"] as const;
+      const firstField = focusOrder.find((field) => nextErrors[field]);
       if (firstField) document.getElementById(firstField)?.focus();
       return;
     }

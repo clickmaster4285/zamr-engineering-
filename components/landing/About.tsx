@@ -1,7 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { aboutStats, aboutParagraphs } from "@/mockData/landing";
+import {
+  aboutSection,
+  aboutStats,
+  aboutParagraphs,
+  aboutlastbottomparagraph,
+} from "@/mockData/landing";
 
 export default function About() {
   const [currentValues, setCurrentValues] = useState<number[]>(
@@ -50,81 +55,96 @@ export default function About() {
     };
   }, []);
 
+  const { sectionNumber, sectionLabel, heading } = aboutSection;
+
   return (
     <section
       ref={sectionRef}
-      className="w-full bg-[var(--bg-light)] px-6 py-16 lg:p-[130px]"
+      className="w-full bg-[var(--bg-section)] px-[30px] py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]"
     >
-      {/* Frame 1321318991 — inner row */}
-      <div className="flex flex-col items-start gap-10 lg:flex-row lg:gap-[135px]">
-        {/* Frame 120 — left column */}
-        <div className="flex w-full flex-col items-start gap-6 lg:w-[344px] lg:gap-[30px]">
+      {/* Frame 1321318991 — desktop: row + 135px gap | tablet/mobile: column */}
+      <div className="flex w-full flex-col items-start gap-7 lg:gap-8 2xl:flex-row 2xl:gap-[135px]">
+        {/* Frame 120 — left / top: label + heading */}
+        <div className="flex w-full flex-col items-start gap-[7px] lg:gap-[18px] 2xl:w-[344px] 2xl:shrink-0 2xl:gap-[30px]">
           {/* Frame 118 — section label */}
-          <div className="flex flex-row items-center gap-4">
-            <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
-              01
+          <div className="flex flex-row items-center gap-[4px] lg:gap-[9.5px] 2xl:gap-4">
+            <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+              {sectionNumber}
             </span>
-            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
-            <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
-              ABOUT US
+            <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
+            <span className="text-[12px] font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--text-section-label)] lg:leading-4 lg:tracking-[1.78px] 2xl:leading-5 2xl:tracking-[3px]">
+              {sectionLabel}
             </span>
           </div>
 
-          {/* Frame 119 — heading */}
-          <div className="flex w-full flex-col items-start gap-[10px]">
-            <h2 className="w-full text-[40px] font-bold leading-[50px] text-[var(--text-heading)] sm:text-[48px] sm:leading-[60px] lg:w-[344px] lg:text-[56px] lg:leading-[71px]">
-              Built on
-              <br />
-              Precision
-              <br />
-              &amp; Reliability
+          {/* Frame 119 — heading + red underline */}
+          <div className="flex w-full flex-col items-start gap-[2px] lg:gap-[6px] 2xl:gap-2.5">
+            <h2 className="w-full text-[36px] font-bold leading-[45px] text-[var(--text-heading)] lg:text-[33px] lg:leading-[42px] 2xl:text-[56px] 2xl:leading-[71px]">
+              {heading}
             </h2>
-            <span className=" w-[133px] border-1 border-[var(--color-accent)]" />
+            <span className="block h-px w-[30px] bg-[var(--color-alert-accent-line)] lg:w-[79px] 2xl:w-[133px]" />
           </div>
         </div>
 
-        {/* Frame 1321318990 — right column */}
-        <div className="flex w-full flex-col gap-6 lg:w-[989px] lg:gap-[30px]">
+        {/* Frame 1321318990 — right / bottom: copy + stats */}
+        <div className="flex w-full flex-col items-start gap-[7px] lg:gap-[18px] 2xl:max-w-[989px] 2xl:gap-[30px]">
           {/* Frame 1321318989 — paragraphs */}
-          <div className="flex w-full flex-col gap-5">
+          <div className="flex w-full flex-col items-start gap-[4.5px] lg:gap-3 2xl:gap-5">
             {aboutParagraphs.map((p, i) => (
-              <p key={i} className="w-full text-base leading-relaxed text-[var(--text-dark)] lg:text-[20px] lg:leading-[25px]">
+              <p
+                key={i}
+                className="w-full text-base leading-5 text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:text-[15px] lg:leading-[19px] 2xl:text-[20px] 2xl:leading-[25px]"
+              >
                 {p}
               </p>
             ))}
           </div>
 
-          {/* Divider */}
-          <div className="h-px w-full border-t border-[var(--text-dark)]" />
+          {/* Vector 23 — divider (partial width on tablet/mobile) */}
+          <div className="h-px w-[225px] bg-[var(--text-heading)] lg:w-[586px] 2xl:w-full" />
 
-          {/* Frame 1321318988 — stats row */}
-          <div className="flex w-full flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-x-8 lg:gap-x-[185px]">
-            {aboutStats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className="flex flex-1 flex-col gap-[2px]"
-                style={{ alignItems: stat.align }}
-              >
+          {/* Frame 1321318988 — stats */}
+          <div className="flex w-full flex-row flex-wrap items-center justify-between gap-4 lg:flex-nowrap lg:gap-[110px] 2xl:gap-[185px]">
+            {aboutStats.map((stat, index) => {
+              const isCentered = stat.align === "center";
+              return (
                 <div
-                  className="flex flex-row items-start gap-2"
-                  style={{
-                    width:
-                      index === 0 ? "145px" : index === 1 ? "97px" : "113px",
-                  }}
+                  key={stat.label}
+                  className={`flex min-w-0 flex-1 flex-col gap-[0.5px] lg:gap-[1px] 2xl:gap-0.5 ${
+                    isCentered
+                      ? "items-center lg:items-start"
+                      : "items-start"
+                  }`}
                 >
-                  <span className="text-5xl font-normal leading-none text-[var(--color-primary)] sm:text-[72px] sm:leading-[91px]">
-                    {currentValues[index]}
-                  </span>
-                  <span className="text-3xl font-light leading-none text-[var(--color-primary)] sm:text-[42px] sm:leading-[50px]">
-                    {stat.suffix}
+                  <div className="flex flex-row items-start gap-[2px] lg:gap-[5px] 2xl:gap-2">
+                    <span className="text-[36px] font-normal leading-[45px] text-[var(--color-primary)] lg:text-[43px] lg:leading-[54px] 2xl:text-[72px] 2xl:leading-[91px]">
+                      {currentValues[index]}
+                    </span>
+                    <span className="text-[30px] font-light leading-9 text-[var(--color-primary)] lg:text-[25px] lg:leading-[30px] 2xl:text-[42px] 2xl:leading-[50px]">
+                      {stat.suffix}
+                    </span>
+                  </div>
+                  <span
+                    className={`w-full text-sm font-light leading-[18px] text-[var(--text-heading)] lg:text-[13px] lg:leading-4 2xl:text-base 2xl:leading-5 ${
+                      isCentered ? "text-center lg:text-left" : "text-left"
+                    }`}
+                  >
+                    {stat.label}
                   </span>
                 </div>
-                <span className="text-sm font-light leading-5 text-[var(--text-dark)] sm:text-base">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
+              );
+            })}
           </div>
+
+          {/* Trusted line */}
+          {aboutlastbottomparagraph.map((p, i) => (
+            <p
+              key={i}
+              className="w-full text-base leading-5 text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:text-[15px] lg:leading-[19px] 2xl:text-[20px] 2xl:leading-[25px]"
+            >
+              {p}
+            </p>
+          ))}
         </div>
       </div>
     </section>
