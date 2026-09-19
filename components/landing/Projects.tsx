@@ -44,12 +44,10 @@ function useInView(threshold = 0.05) {
 function ProjectCard({
   project,
   isLarge = false,
-  showDescription = false,
   priority = false,
 }: {
   project: (typeof projectsFeaturedWork)[number];
   isLarge?: boolean;
-  showDescription?: boolean;
   priority?: boolean;
 }) {
   const { ref, inView } = useInView();
@@ -76,14 +74,7 @@ function ProjectCard({
           fill
           priority={priority}
           sizes="(min-width: 1536px) 817px, (min-width: 1024px) 484px, 100vw"
-          className="object-cover transition-all duration-500 ease-in-out group-hover:scale-135 [@media(hover:hover)_and_(pointer:fine)]:group-hover:opacity-0"
-        />
-        <Image
-          src={project.featuredImagewithhover}
-          alt={project.title}
-          fill
-          sizes="(min-width: 1536px) 817px, (min-width: 1024px) 484px, 100vw"
-          className="object-cover opacity-0 transition-all duration-500 ease-in-out [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-135 [@media(hover:hover)_and_(pointer:fine)]:group-hover:opacity-100"
+          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
         />
 
         <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
@@ -100,12 +91,9 @@ function ProjectCard({
           <span className="text-sm font-bold leading-[18px] tracking-[3px] text-white">
             {project.index}
           </span>
-          <div className="flex flex-col gap-2">
-            <h3 className="text-xl font-semibold leading-[1.3] text-white">{project.title}</h3>
-            {showDescription && (
-              <p className="text-sm leading-[1.5] text-white/80">{project.shortDescription}</p>
-            )}
-          </div>
+          <h3 className="text-xl font-semibold leading-[1.3] text-white">
+            {project.title}
+          </h3>
         </div>
 
         {/* Tablet + Desktop layout */}
@@ -122,21 +110,12 @@ function ProjectCard({
         <h3
           className={`absolute bottom-[30px] left-[30px] right-[30px] hidden font-semibold text-white lg:block 2xl:bottom-[50px] 2xl:left-[50px] 2xl:right-[50px] ${
             isLarge
-              ? "max-w-[319px] text-lg leading-[23px] transition-transform duration-500 ease-in-out group-hover:-translate-y-[70px] 2xl:max-w-[496px] 2xl:text-[28px] 2xl:leading-[35px]"
+              ? "max-w-[319px] text-lg leading-[23px] 2xl:max-w-[496px] 2xl:text-[28px] 2xl:leading-[35px]"
               : "max-w-[328px] text-lg leading-[23px] 2xl:max-w-[511px] 2xl:text-[28px] 2xl:leading-[35px]"
           }`}
         >
           {project.title}
         </h3>
-
-        {/* Description — large card only, slides up from below on hover */}
-        {isLarge && (
-          <div className="absolute bottom-0 left-0 right-0 hidden translate-y-full px-[30px] pb-[30px] transition-transform duration-500 ease-in-out group-hover:translate-y-0 lg:block 2xl:px-[50px] 2xl:pb-[50px]">
-            <p className="max-w-[425px] text-[13px] leading-4 font-normal text-white 2xl:max-w-[717px] 2xl:text-base 2xl:leading-5">
-              {project.shortDescription}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );
@@ -219,7 +198,6 @@ export default function Projects() {
                 <ProjectCard
                   project={filteredProjects[0]}
                   isLarge
-                  showDescription
                   priority
                 />
               </div>
@@ -230,7 +208,6 @@ export default function Projects() {
                   key={project.slug}
                   project={project}
                   isLarge={false}
-                  showDescription={false}
                 />
               ))}
             </div>

@@ -74,7 +74,7 @@ function MapPanel() {
       <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-default)]" />
 
       {/* Legend */}
-      <div className="absolute left-5 top-5 z-10 flex w-[112px] flex-col gap-[7px] rounded-lg border border-[var(--border-section)] bg-white/80 p-2.5 px-3 shadow-[0px_2px_8px_rgba(0,0,0,0.1)]">
+      <div className="absolute right-5 top-5 z-10 flex w-[112px] flex-col gap-[7px] rounded-lg border border-[var(--border-section)] bg-white/80 p-2.5 px-3 shadow-[0px_2px_8px_rgba(0,0,0,0.1)]">
         <span className="text-[11px] font-bold leading-[14px] text-[var(--text-heading)]">
           {mapLegendTitle}
         </span>
