@@ -228,6 +228,13 @@ export const projectFilters: string[] = [
   "Project Management",
 ];
 
+export const projectsSection = {
+  sectionNumber: "03",
+  sectionLabel: "PROJECTS",
+  heading: "Featured Work",
+  ctaLabel: "ALL PROJECTS",
+};
+
 export interface ClientLogo {
   src: string;
   alt: string;
