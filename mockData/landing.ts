@@ -87,7 +87,7 @@ export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
     slug: "solarfarm-intersection-upgrade-at-643-mitchell-highway-orange",
     index: "01",
     title: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange ",
-    category: "Urban Infrastructure",
+    category: "project verification",
     shortDescription:
       "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
 
@@ -100,7 +100,7 @@ export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
     slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection",
     index: "02",
     title: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection ",
-    category: "Urban Infrastructure",
+    category: "project verification",
     shortDescription:
       "Signalised intersection upgrade at Grantham Farm improving traffic flow, safety, and connectivity for the surrounding road network.",
     heroTitle: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection",
@@ -113,7 +113,7 @@ export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
     slug: "mr536-mamre-road-&-abbotts Rd-kemps-creek",
     index: "03",
     title: "MR536 Mamre Road & Abbotts Rd Kemps Creek ",
-    category: "Urban Infrastructure",
+    category: "project verification",
     shortDescription:
       "Road infrastructure upgrade improving intersection geometry, drainage, and overall road safety at the Mamre Road and Abbotts Road connection.",
     heroTitle: "MR536 Mamre Road & Abbotts Rd Kemps Creek",

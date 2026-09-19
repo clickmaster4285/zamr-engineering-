@@ -157,13 +157,15 @@ function AllProjectsLink({ className = "" }: { className?: string }) {
 }
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("ALL");
+  const [activeFilter, setActiveFilter] = useState(projectFilters[1]);
   const { sectionNumber, sectionLabel, heading } = projectsSection;
 
   const filteredProjects =
     activeFilter === "ALL"
       ? projectsFeaturedWork
-      : projectsFeaturedWork.filter((p) => p.category === activeFilter);
+      : projectsFeaturedWork.filter(
+          (p) => p.category.toLowerCase() === activeFilter.toLowerCase()
+        );
 
   return (
     <section className="w-full bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
