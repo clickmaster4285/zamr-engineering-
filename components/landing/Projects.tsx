@@ -12,7 +12,7 @@ import {
   projectsSection,
 } from "@/mockData/landing";
 
-function useInView(threshold = 0.15) {
+function useInView(threshold = 0.05) {
   const [inView, setInView] = useState(false);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const ref = useCallback(
@@ -29,7 +29,7 @@ function useInView(threshold = 0.15) {
             observerRef.current?.disconnect();
           }
         },
-        { threshold }
+        { threshold, rootMargin: "100px 0px" }
       );
       observerRef.current.observe(node);
     },
@@ -45,10 +45,12 @@ function ProjectCard({
   project,
   isLarge = false,
   showDescription = false,
+  priority = false,
 }: {
   project: (typeof projectsFeaturedWork)[number];
   isLarge?: boolean;
   showDescription?: boolean;
+  priority?: boolean;
 }) {
   const { ref, inView } = useInView();
   const router = useRouter();
@@ -58,7 +60,7 @@ function ProjectCard({
       ref={ref}
       onClick={() => router.push(`/projects/${project.slug}`)}
       className={`group relative h-full w-full cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        inView ? "translate-y-0 scale-100 opacity-100" : "translate-y-10 scale-95 opacity-0"
+        inView ? "translate-y-0 scale-100" : "translate-y-10 scale-95"
       }`}
     >
       <div
@@ -72,21 +74,24 @@ function ProjectCard({
           src={project.featuredImage}
           alt={project.title}
           fill
+          priority={priority}
           sizes="(min-width: 1536px) 817px, (min-width: 1024px) 484px, 100vw"
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135 group-hover:opacity-0"
+          className="object-cover transition-all duration-500 ease-in-out group-hover:scale-135 [@media(hover:hover)_and_(pointer:fine)]:group-hover:opacity-0"
         />
         <Image
           src={project.featuredImagewithhover}
           alt={project.title}
           fill
           sizes="(min-width: 1536px) 817px, (min-width: 1024px) 484px, 100vw"
-          className="object-cover opacity-0 transition-all duration-500 ease-in-out group-hover:scale-135 group-hover:opacity-100"
+          className="object-cover opacity-0 transition-all duration-500 ease-in-out [@media(hover:hover)_and_(pointer:fine)]:group-hover:scale-135 [@media(hover:hover)_and_(pointer:fine)]:group-hover:opacity-100"
         />
 
         <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
         <div
           className={`absolute inset-0 bg-[var(--overlay-image-default)] ${
-            !isLarge ? "transition-colors duration-500 group-hover:bg-[var(--overlay-image-hover)]" : ""
+            !isLarge
+              ? "transition-colors duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:bg-[var(--overlay-image-hover)]"
+              : ""
           }`}
         />
 
@@ -213,6 +218,7 @@ export default function Projects() {
                   project={filteredProjects[0]}
                   isLarge
                   showDescription
+                  priority
                 />
               </div>
             )}
