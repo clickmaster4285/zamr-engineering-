@@ -91,7 +91,7 @@ function ProjectCard({
         />
 
         <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge && !noHover ? " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]" : "bg-[var(--overlay-image-default)]"}`}
+          className={`absolute inset-0 bg-[var(--overlay-image-default)] `}
         />
 
         <span
@@ -101,17 +101,9 @@ function ProjectCard({
           {project.index}
         </span>
 
-        <h3 className={`absolute left-5 bottom-5 font-semibold text-white ${noHover ? "text-[18px] leading-[23px]" : "text-[20px] leading-[26px] sm:left-8 sm:bottom-8 pr-6 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px]"} ${isLarge && !noHover && " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"}`}>
+        <h3 className={`absolute left-5 bottom-5 font-semibold text-white ${noHover ? "text-[18px] leading-[23px]" : "text-[20px] leading-[26px] sm:left-8 sm:bottom-8 pr-6 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px]"} `}>
           {project.title}
         </h3>
-
-        {isLarge && !noHover && (
-          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-5 pb-5 sm:px-8 sm:pb-8 md:px-[50px] md:pb-[50px]">
-            <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white sm:text-[16px] sm:leading-[20px]">
-              {project.shortDescription}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );
