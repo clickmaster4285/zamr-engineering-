@@ -84,6 +84,15 @@ export default function About() {
             </h2>
             <span className="block h-px w-[30px] bg-[var(--color-alert-accent-line)] lg:w-[79px] 2xl:w-[133px]" />
           </div>
+          {/* Trusted line */}
+          {aboutlastbottomparagraph.map((p, i) => (
+            <p
+              key={i}
+              className="w-full text-[var(--color-primary)] text-base leading-5 [font-feature-settings:'liga'_off] lg:text-[15px] lg:leading-[19px] 2xl:text-[20px] 2xl:leading-[25px]"
+            >
+              {p}
+            </p>
+          ))}
         </div>
 
         {/* Frame 1321318990 — right / bottom: copy + stats */}
@@ -136,15 +145,7 @@ export default function About() {
             })}
           </div>
 
-          {/* Trusted line */}
-          {aboutlastbottomparagraph.map((p, i) => (
-            <p
-              key={i}
-              className="w-full text-base leading-5 text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:text-[15px] lg:leading-[19px] 2xl:text-[20px] 2xl:leading-[25px]"
-            >
-              {p}
-            </p>
-          ))}
+          
         </div>
       </div>
     </section>

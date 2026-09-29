@@ -44,7 +44,7 @@ export const aboutSection = {
 
 export const aboutStats: StatItem[] = [
   { value: 125, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
-  { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
+  { value: 12, suffix: "+", label: "YEARS INDUSTRY EXPERIENCE", align: "center" },
 ];
 
 export const aboutParagraphs: string[] = [
