@@ -629,14 +629,14 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "solarfarm-intersection-upgrade-at-643-mitchell-highway-orange",
+    slug: "wad-orange",
     index: "07",
-    title: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange",
+    title: "WAD Orange",
     category: "Urban Infrastructure",
     shortDescription:
       "Intersection upgrade improving traffic flow, safety, and connectivity at the Solarfarm site on Mitchell Highway, Orange.",
 
-    heroTitle: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange",
+    heroTitle: "WAD Orange",
     heroImage: "/images/image12.png",
 
     stats: [
@@ -712,8 +712,8 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
-      { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection", image: "/images/image2.jpeg" },
-      { title: "MR536 Mamre Road & Abbotts Rd Kemps Creek", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
+      { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "dunmore-st-wentworthville", image: "/images/image2.jpeg" },
+      { title: "Liverpool Bridge Inspection", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -722,7 +722,7 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection",
+    slug: "dunmore-st-wentworthville",
     index: "08",
     title: "Loftus Street and Windsor Road, Grantham Farm - Signalised Intersection",
     category: "Urban Infrastructure",
@@ -805,8 +805,8 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
-      { title: "Solarfarm Intersection Upgrade, Orange", slug: "solarfarm-intersection-upgrade-at-643-mitchell-highway-orange", image: "/images/image12.png" },
-      { title: "MR536 Mamre Road & Abbotts Rd Kemps Creek", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
+      { title: "Solarfarm Intersection Upgrade, Orange", slug: "wad-orange", image: "/images/image12.png" },
+      { title: "Liverpool Bridge Inspection", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -817,12 +817,12 @@ export const projects: ProjectData[] = [
   {
     slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek",
     index: "09",
-    title: "MR536 Mamre Road & Abbotts Rd Kemps Creek",
+    title: "Liverpool Bridge Inspection",
     category: "Urban Infrastructure",
     shortDescription:
       "Road infrastructure upgrade improving intersection geometry, drainage, and overall road safety at the Mamre Road and Abbotts Road connection.",
 
-    heroTitle: "MR536 Mamre Road & Abbotts Rd Kemps Creek",
+    heroTitle: "Liverpool Bridge Inspection",
     heroImage: "/images/image14.png",
 
     stats: [
@@ -898,8 +898,8 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
-      { title: "Solarfarm Intersection Upgrade, Orange", slug: "solarfarm-intersection-upgrade-at-643-mitchell-highway-orange", image: "/images/image12.png" },
-      { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection", image: "/images/image13.png" },
+      { title: "Solarfarm Intersection Upgrade, Orange", slug: "wad-orange", image: "/images/image12.png" },
+      { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "dunmore-st-wentworthville", image: "/images/image13.png" },
     ],
     referProjects: [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
@@ -991,7 +991,7 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
-      { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection", image: "/images/image13.png" },
+      { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "dunmore-st-wentworthville", image: "/images/image13.png" },
       { title: "Mamre Road and Abbotts Road, Kemps Creek", slug: "mamre-road-and-abbotts-road-kemps-creek", image: "/images/image6.jpeg" },
     ],
     referProjects: [
@@ -1084,7 +1084,7 @@ export const projects: ProjectData[] = [
     relatedHeading: "Related Work",
     relatedProjects: [
       { title: "Great Western Highway Upgrade — Kelso to Raglan", slug: "great-western-highway-upgrade—kelso-to-raglan", image: "/images/image1.jpeg" },
-      { title: "MR536 Mamre Road & Abbotts Rd Kemps Creek", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
+      { title: "Liverpool Bridge Inspection", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
       { title: "Loftus Street, Riverstone Intersection Upgrade", slug: "loftus-street-riverstone-intersection-upgrade", image: "/images/image2.jpeg" },
     ],
     referProjects: [
@@ -1184,6 +1184,98 @@ export const projects: ProjectData[] = [
       { title: "Loftus Street, Riverstone Intersection Upgrade", image: "/images/image2.jpeg", slug: "loftus-street-riverstone-intersection-upgrade" },
       { title: "Mamre Road and Abbotts Road, Kemps Creek", image: "/images/image6.jpeg", slug: "mamre-road-and-abbotts-road-kemps-creek" },
       { title: "Urban Stormwater Management System", image: "/images/image7.jpeg", slug: "urban-stormwater-management-system" },
+    ],
+  },
+  {
+    slug: "liverpool-bridge-inspection",
+    index: "12",
+    title: "Liverpool Bridge Inspection",
+    category: "project verification",
+    shortDescription:
+      "Liverpool Bridge Inspection",
+
+    heroTitle: "Liverpool Bridge Inspection",
+    heroImage: "/images/projects/liverpool.png",
+
+    stats: [
+      { label: "CLIENT", value: "Transport for NSW" },
+      { label: "VALUE", value: "$15 Million" },
+      { label: "DURATION", value: "2023 – 2025" },
+      { label: "LOCATION", value: "Liverpool, NSW" },
+      { label: "SCOPE", value: "Bridge Inspection" },
+      { label: "TEAM", value: "8 Engineers" },
+    ],
+
+    aboutNumber: "01",
+    aboutHeading: "What needed to be solved.",
+    aboutDescription:
+      "The Liverpool Bridge required inspection to assess structural integrity, safety, and compliance with current standards and regulations.",
+    location: "Western Sydney, NSW",
+    challengeParagraphs: [
+      "The bridge inspection needed to be conducted in a safe and efficient manner while minimising disruption to traffic and pedestrians.",
+      "The inspection needed to be conducted in accordance with current standards and regulations.",
+    ],
+
+    approachNumber: "02",
+    approachHeading: "How We Delivered It",
+    approachSteps: [
+      {
+        number: "01",
+        title: "Hydrological Assessment",
+        description: "Inspection of the bridge structure, foundation, and supporting infrastructure to assess structural integrity and safety.",
+      },
+      {
+        number: "02",
+        title: "Bridge Inspection Report",
+        description: "Preparation of a comprehensive bridge inspection report including structural assessment, safety evaluation, and compliance recommendations.",
+      },
+      {
+        number: "03",
+          title: "Bridge Maintenance & Rehabilitation",
+          description: "Recommendations for bridge maintenance and rehabilitation to ensure long-term safety and compliance.",
+      },
+      {
+        number: "04",
+        title: "Bridge Inspection Report",
+        description: "Preparation of a comprehensive bridge inspection report including structural assessment, safety evaluation, and compliance recommendations.",
+      },
+    ],
+
+    resultsNumber: "03",
+    resultsHeading: "Project Outcomes",
+    resultsMetrics: [
+      { value: "100%", label: "Structural Integrity" },
+      { value: "100%", label: "Safety Compliance" },
+      { value: "100%", label: "Compliance with Standards" },
+      { value: "100%", label: "Long-term Safety" },
+    ],
+    achievements: [
+      "Achieved 100% structural integrity assessment.",
+      "Achieved 100% safety compliance assessment.",
+      "Achieved 100% compliance with standards assessment.",
+      "Achieved 100% long-term safety assessment.",
+    ],
+
+    galleryNumber: "04",
+    galleryHeading: "Project Gallery",
+    galleryImages: [
+      "/images/projects/liverpool.png",
+      "/images/image1.jpeg",
+      "/images/projects/liverpool.png",
+      "/images/projects/liverpool.png",
+    ],
+
+    relatedNumber: "05",
+    relatedHeading: "Related Work",
+    relatedProjects: [
+      { title: "WAD Orange", slug: "wad-orange", image: "/images/projects/wad_orange.jpg" },
+      { title: "Dunmore St Wentworthville", slug: "dunmore-st-wentworthville", image: "/images/projects/dunmore.jpg" },
+      { title: "Mamre Road and Abbotts Road, Kemps Creek", slug: "mamre-road-and-abbotts-road-kemps-creek", image: "/images/projects/liverpool.png" },
+    ],
+    referProjects: [
+      { title: "WAD Orange", image: "/images/projects/wad_orange.jpg", slug: "wad-orange" },
+      { title: "Dunmore St Wentworthville", image: "/images/projects/dunmore.jpg", slug: "dunmore-st-wentworthville" },
+      { title: "Mamre Road and Abbotts Road, Kemps Creek", image: "/images/projects/liverpool.png", slug: "mamre-road-and-abbotts-road-kemps-creek" },
     ],
   },
 ];

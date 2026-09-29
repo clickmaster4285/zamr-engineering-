@@ -83,34 +83,34 @@ export interface ProjectsFeaturedWork {
 
 export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
   {
-    slug: "solarfarm-intersection-upgrade-at-643-mitchell-highway-orange",
+    slug: "wad-orange",
     index: "01",
-    title: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange ",
+    title: "WAD Orange ",
     category: "project verification",
     shortDescription:
       "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
-    heroTitle: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange",
-    featuredImage: "/images/image12.png",
+    heroTitle: "WAD Orange",
+    featuredImage: "/images/projects/wad_orange.jpg",
   },
   {
-    slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection",
+    slug: "dunmore-st-wentworthville",
     index: "02",
-    title: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection ",
+    title: "Dunmore St Wentworthville",
     category: "project verification",
     shortDescription:
       "Signalised intersection upgrade at Grantham Farm improving traffic flow, safety, and connectivity for the surrounding road network.",
-    heroTitle: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection",
-    featuredImage: "/images/image13.png",
+    heroTitle: "Dunmore St Wentworthville",
+    featuredImage: "/images/projects/dunmore.jpg",
   },
   {
-    slug: "mr536-mamre-road-&-abbotts Rd-kemps-creek",
+    slug: "liverpool-bridge-inspection",
     index: "03",
-    title: "MR536 Mamre Road & Abbotts Rd Kemps Creek ",
+    title: "Liverpool Bridge Inspection",
     category: "project verification",
     shortDescription:
       "Road infrastructure upgrade improving intersection geometry, drainage, and overall road safety at the Mamre Road and Abbotts Road connection.",
-    heroTitle: "MR536 Mamre Road & Abbotts Rd Kemps Creek",
-    featuredImage: "/images/image14.png",
+    heroTitle: "Liverpool Bridge Inspection",
+    featuredImage: "/images/projects/liverpool.png",
   },
 ];
 
