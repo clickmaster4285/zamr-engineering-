@@ -12,7 +12,7 @@ export default function Commitment() {
           {/* Frame 118 — section label */}
           <div className="flex flex-row items-center gap-4">
             <span className="text-sm font-medium tracking-[3px]  lg:text-base">
-              03
+              02
             </span>
             <span className="h-px w-12 bg-[var(--text-dark)] sm:w-[104px]" />
             <span className="text-sm font-medium tracking-[3px] uppercase  lg:text-base">

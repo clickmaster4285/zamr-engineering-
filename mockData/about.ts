@@ -114,23 +114,6 @@ export const orgChartOd: BoxData = {
   type: "operational",
 };
 
-export interface SubHeaderData {
-  left: number;
-  top: number;
-  width: number;
-  title: string;
-  type: TeamType;
-}
-
-export const orgChartSubHeaders: SubHeaderData[] = [
-  { left: 106, top: 782, width: 196.43, title: "Structure Design", type: "technical" },
-  { left: 329, top: 782, width: 188.64, title: "Civil Design", type: "technical" },
-  { left: 554.54, top: 787.31, width: 196.43, title: "Traffic Management", type: "technical" },
-  { left: 791.78, top: 787.98, width: 196.43, title: "Asset Management", type: "technical" },
-  { left: 1016.2, top: 787.98, width: 198.04, title: "Operational - Quality", type: "operational" },
-  { left: 1237.48, top: 787.98, width: 197.23, title: "Operation Safety", type: "operational" },
-  { left: 1467, top: 786, width: 198.04, title: "Project Management", type: "operational" },
-];
 
 export const orgChartSubH = 44.9;
 

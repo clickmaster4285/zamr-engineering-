@@ -9,7 +9,7 @@ export default function TrackRecord() {
         {/* Frame 118 — section label */}
         <div className="flex flex-row items-center gap-4">
           <span className="text-sm font-medium tracking-[3px] text-white lg:text-base">
-            05
+            03
           </span>
           <span className="h-px w-12 bg-white sm:w-[104px]" />
           <span className="text-sm font-medium tracking-[3px] uppercase text-white lg:text-base">

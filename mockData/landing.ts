@@ -387,8 +387,8 @@ export const contactSection: ContactSectionContent = {
     {
       id: "designation",
       name: "designation",
-      label: "Origination(optional)",
-      placeholder: "Origination",
+      label: "Organizations (optional)",
+      placeholder: "Organizations",
       type: "text",
       half: true,
     },
@@ -520,13 +520,8 @@ export const footerSocialLinks: FooterSocialLink[] = [
     href: contactInfo.socialLinks[1]?.href ?? "#",
   },
   {
-    src: "/icons/facebookSq.svg",
-    alt: "Facebook",
-    href: "#",
-  },
-  {
-    src: "/icons/tweetersq.svg",
-    alt: "Twitter",
+    src: "/icons/insta.png",
+    alt: "InstaGram",
     href: "#",
   },
 ];

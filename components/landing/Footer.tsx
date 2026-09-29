@@ -25,14 +25,14 @@ function SocialLinks() {
           aria-label={link.alt}
           target={link.href.startsWith("http") ? "_blank" : undefined}
           rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="flex h-6 w-6 shrink-0 items-center justify-center border border-white transition-opacity hover:opacity-70 2xl:h-10 2xl:w-10"
+          className="flex  shrink-0 items-center justify-center  transition-opacity hover:opacity-70 "
         >
           <Image
             src={link.src}
             alt={link.alt}
-            width={20}
-            height={20}
-            className="h-3 w-3 object-contain 2xl:h-5 2xl:w-5"
+            width={40}
+            height={40}
+            className=" object-contain "
           />
         </Link>
       ))}
@@ -51,7 +51,7 @@ function QuickLinksColumn() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="text-[13px] leading-6 uppercase text-white transition-opacity hover:opacity-80 2xl:text-base"
+              className="text-[13px] leading-6  text-white transition-opacity hover:opacity-80 2xl:text-base"
             >
               {link.label}
             </Link>
@@ -130,7 +130,7 @@ function MetaBar() {
 
 export default function Footer() {
   return (
-    <footer className="relative w-full overflow-hidden bg-[var(--bg-hero)] text-white">
+    <footer className="relative max-w-full overflow-hidden bg-[var(--bg-hero)] text-white">
       {/* Desktop / tablet video background */}
       <video
         autoPlay
@@ -147,20 +147,19 @@ export default function Footer() {
 
       {/* ─── Desktop + Tablet ─── */}
       <div className="relative z-10 hidden w-full px-[77px] py-[77px] lg:block 2xl:p-[130px]">
-        <div className="mx-auto flex w-full max-w-[1467px] flex-col gap-[18px] 2xl:gap-[30px]">
+        <div className="mx-auto flex w-full max-w-full flex-col gap-[18px] 2xl:gap-[30px]">
           {/* Top: brand + link columns */}
           <div className="flex w-full flex-row items-start gap-9 2xl:gap-[60px]">
             {/* Brand column */}
-            <div className="flex w-[219px] shrink-0 flex-col gap-[30px] 2xl:w-[369px] 2xl:gap-[50px]">
+            <div className=" w-[219px] shrink-0   2xl:w-[369px] 2xl:gap-[50px]">
               <Image
                 src={logoImage}
                 alt="ZAMR Engineering"
                 width={218}
                 height={124}
-                className="h-[74px] w-[129px] object-contain 2xl:h-[124px] 2xl:w-[218px]"
                 priority
               />
-              <div className="flex w-full flex-col gap-[9.5px] 2xl:gap-4">
+              <div className="flex w-full flex-col gap-[9.5px] 2xl:gap-4 mt-[12px]">
                 <p className="max-w-[198px] text-[13px] leading-6 text-white 2xl:max-w-[334px] 2xl:text-base 2xl:leading-[29px]">
                   {footerDescription}
                 </p>

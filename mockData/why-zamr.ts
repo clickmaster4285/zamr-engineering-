@@ -174,7 +174,7 @@ export interface CTAContent {
 export const ctaContent: CTAContent = {
   heading: "Partner with a Team You Can Trust",
   description:
-    "Whether you're planning new infrastructure, managing complex engineering challenges, or seeking reliable technical expertise, ZAMR Engineering is ready to support your next project.",
+    "Whether you require civil engineering support, infrastructure delivery expertise, or independent project verification, ZAMR Engineering provides the technical confidence and practical solutions needed to deliver successful outcomes.",
   primaryButton: { label: "Get In Touch", href: "/contact" },
   secondaryButton: { label: "Explore Services", href: "/services" },
 };

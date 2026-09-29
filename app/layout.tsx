@@ -24,11 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth" className={cn("h-full antialiased", "font-sans", inter.variable)}>
-      <body className={`${outfit.className} min-h-full flex flex-col items-center overflow-x-hidden`}>
+      <body className={`${outfit.className} min-h-full flex flex-col overflow-x-hidden w-full max-w-[1728px] mx-auto`}>
         <Navbar />
-        <div className="w-full max-w-[1727px] mx-auto">
           {children}
-        </div>
         <Footer />
       </body>
     </html>

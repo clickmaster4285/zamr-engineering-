@@ -147,7 +147,7 @@ export default function Projects() {
         );
 
   return (
-    <section className="w-full max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
+    <section className="w-full min-w-0 max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
       <div className="flex w-full min-w-0 flex-col gap-5 lg:gap-9 2xl:gap-[60px]">
         {/* Header */}
         <div className="flex w-full flex-col gap-3 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
@@ -171,7 +171,7 @@ export default function Projects() {
 
         {/* Filters — scroll on mobile/tablet so chips never blow past parent width */}
         <div className="w-full min-w-0 max-w-full overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex w-max min-w-full flex-nowrap gap-2 lg:gap-[9.5px] 2xl:gap-4">
+          <div className="flex w-max min-w-full flex-nowrap gap-2 lg:gap-[9.5px] 2xl:gap-[16px]">
             {projectFilters.map((filter) => {
               const isActive = filter === activeFilter;
               return (
@@ -192,11 +192,11 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Project grid — fluid on tablet, fixed Figma widths only at 2xl */}
+        {/* Project grid — fluid width, Figma ratio (~817:621) */}
         {filteredProjects.length > 0 ? (
           <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-row lg:items-stretch lg:gap-[18px] 2xl:gap-[30px]">
             {filteredProjects[0] && (
-              <div className="w-full min-w-0 lg:flex-[1.315] lg:basis-0 2xl:w-[817px] 2xl:flex-none 2xl:basis-auto">
+              <div className="w-full min-w-0 lg:flex-[1.315] lg:basis-0">
                 <ProjectCard
                   project={filteredProjects[0]}
                   isLarge
@@ -204,7 +204,7 @@ export default function Projects() {
                 />
               </div>
             )}
-            <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-1 lg:basis-0 2xl:w-[621px] 2xl:flex-none 2xl:basis-auto 2xl:gap-[30px]">
+            <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-1 lg:basis-0 2xl:gap-[30px]">
               {filteredProjects.slice(1, 3).map((project) => (
                 <ProjectCard
                   key={project.slug}

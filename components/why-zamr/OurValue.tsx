@@ -18,7 +18,7 @@ export default function OurValue() {
           {/* Frame 118 — section label */}
           <div className="flex flex-row items-center gap-4">
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-contact-accent)] lg:text-base">
-              05
+              04
             </span>
             <span className="h-px w-12 bg-[var(--color-contact-accent)] sm:w-[104px]" />
             <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--color-contact-accent)] lg:text-base">

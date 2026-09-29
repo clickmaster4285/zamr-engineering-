@@ -124,7 +124,7 @@ export default function Contact({ bgcolor = "bg-white" }: Props) {
           onSubmit={handleSubmit}
           className="flex w-full flex-col gap-7 2xl:w-[682px] 2xl:shrink-0"
         >
-          {/* Row pairs: name/email, phone/origination */}
+          {/* Row pairs: name/email, phone/Organizations */}
           <div className="flex w-full flex-col gap-7">
             <div className="grid grid-cols-2 gap-6">
               {halfFields.slice(0, 2).map(renderField)}
