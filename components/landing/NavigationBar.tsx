@@ -55,12 +55,12 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-50 w-full transition-[background-color,box-shadow] duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 mx-auto w-full max-w-[1727px] transition-[background-color,box-shadow] duration-300 ${
           scrolled ? "bg-primary shadow-md" : "bg-transparent"
         }`}
       >
         {/* ── Mobile (<1024): Figma 350×36 @ top 30px ── */}
-        <div className="mx-auto flex h-[66px] w-full items-center justify-between  px-6  lg:hidden">
+        <div className="mx-auto flex h-[66px] w-full items-center justify-between px-6 lg:hidden">
           <Link href="/" className="shrink-0" onClick={closeMenu}>
             <Image
               src={logoImage}
@@ -84,7 +84,7 @@ export default function Navbar() {
         </div>
 
         {/* ── Tablet (lg) + Desktop (2xl): Figma 1024 / 1727 ── */}
-        <div className="relative mx-auto hidden h-[72px] w-full max-w-[1727px] grid-cols-[auto_1fr_auto] items-center px-[77px] lg:grid 2xl:h-[100px] 2xl:px-[130px]">
+        <div className="relative hidden h-[72px] w-full grid-cols-[auto_1fr_auto] items-center px-[77px] lg:grid 2xl:h-[100px] 2xl:px-[130px]">
           <Link href="/" className="shrink-0 justify-self-start">
             <Image
               src={logoImage}

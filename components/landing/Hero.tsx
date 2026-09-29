@@ -6,7 +6,7 @@ export default function Hero() {
   const { location, headline, videoSrc } = heroContent;
 
   return (
-    <section className="relative isolate min-h-screen w-full overflow-hidden bg-[var(--bg-hero)] text-white">
+    <section className="relative isolate min-h-screen w-full overflow-hidden bg-[var(--bg-hero)] text-white ">
       {/* Video background */}
       <video
         autoPlay
