@@ -11,7 +11,7 @@ export default function Page() {
       <Capabilities />
       <WhyZamr />
       <Methodology />
-      <Contacts />
+      <Contacts sectionNumber="04"/>
     </main>
   );
 }

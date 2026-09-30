@@ -10,7 +10,7 @@ export default function Journey() {
         <div className="flex w-full flex-col gap-6 lg:gap-[30px]">
           <div className="flex flex-row items-center gap-4">
             <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
-              04
+              02
             </span>
             <span className="h-px w-12 bg-[var(--text-dark)] sm:w-[104px]" />
             <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] lg:text-base">

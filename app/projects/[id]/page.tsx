@@ -66,7 +66,7 @@ export default function ProjectDetailPage() {
         }))}
       />
 
-      <Contacts />
+      <Contacts sectionNumber="06"  />
     </main>
   );
 }

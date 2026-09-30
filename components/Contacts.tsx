@@ -15,7 +15,7 @@ const labelClassName =
 
 type Props = {
   bgcolor?: string;
-  sectionNumber?: string;
+  sectionNumber: string;
 };
 
 export default function Contact({
@@ -25,7 +25,6 @@ export default function Contact({
   const { form, handleChange, handleSubmit, status, errors } =
     useContactEnquiry();
   const {
-    sectionNumber: defaultSectionNumber,
     sectionLabel,
     heading,
     details,
@@ -34,7 +33,6 @@ export default function Contact({
     sendingLabel,
   } = contactSection;
 
-  const displaySectionNumber = sectionNumber ?? defaultSectionNumber;
   const halfFields = formFields.filter((f) => f.half);
   const fullFields = formFields.filter((f) => !f.half);
 
@@ -87,7 +85,7 @@ export default function Contact({
           <div className="flex w-full flex-col items-start gap-3 lg:gap-[17.78px] 2xl:gap-[30px]">
             <div className="flex flex-row items-center gap-3 lg:gap-[9.48px] 2xl:gap-4">
               <span className="text-sm font-medium leading-[18px] text-[var(--color-blue-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
-                {displaySectionNumber}
+                {sectionNumber}
               </span>
               <span className="h-px w-10 bg-[var(--color-contact-dark)] lg:w-[61.63px] lg:bg-[var(--text-heading)] 2xl:w-[104px]" />
               <span className="text-sm font-medium leading-[18px] tracking-[3px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5">

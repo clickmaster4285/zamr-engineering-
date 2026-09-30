@@ -10,7 +10,7 @@ export default function Page() {
       <TrustedAccreditedHero />
       <IndustryCertifications />
       <Journey />
-      <Contacts />
+      <Contacts sectionNumber="03" />
       <CTASection />
     </main>
   );
