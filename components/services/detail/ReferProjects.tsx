@@ -26,7 +26,7 @@ export default function ReferProjects() {
       <div className="flex w-full flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8 2xl:gap-[60px]">
         <div className="flex w-full flex-col items-start gap-4 lg:w-auto lg:gap-[16.59px] 2xl:gap-7">
           <div className="flex flex-row items-center gap-3 lg:gap-[9.48px] 2xl:gap-4">
-            <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            <span className="shrink-0 text-sm font-medium leading-[18px] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
               {SECTION.number}
             </span>
             <span className="h-px w-[60px] shrink-0 bg-[var(--text-heading)] lg:w-[61.63px] 2xl:w-[104px]" />
@@ -60,7 +60,7 @@ export default function ReferProjects() {
             key={project.slug}
             type="button"
             onClick={() => router.push(`/projects/${project.slug}`)}
-            className={`group relative h-[200px] w-full cursor-pointer overflow-hidden bg-[var(--color-contact-dark)] text-left lg:h-[280px] 2xl:h-[340px] 2xl:min-w-0 2xl:flex-1 ${
+            className={`group relative h-[200px] w-full cursor-pointer overflow-hidden bg-[var(--color-primary)] text-left lg:h-[280px] 2xl:h-[340px] 2xl:min-w-0 2xl:flex-1 ${
               index === cards.length - 1
                 ? "lg:w-full 2xl:w-auto"
                 : "lg:w-[calc(50%-12px)] 2xl:w-auto"

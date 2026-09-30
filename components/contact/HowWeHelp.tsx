@@ -5,7 +5,7 @@ export default function HowWeHelp() {
   const { heading, subtitle, items, sectionNumber, sectionLabel } = helpContent;
 
   return (
-    <section className="flex w-full flex-col items-start justify-center bg-[var(--color-contact-dark)] px-5 py-12 lg:items-center lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]">
+    <section className="flex w-full flex-col items-start justify-center bg-[var(--color-primary)] px-5 py-12 lg:items-center lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]">
       <div className="flex w-full flex-col items-start justify-center gap-8 lg:gap-[29.63px] 2xl:gap-[50px]">
         {/* Header */}
         <div className="flex w-full flex-col items-start gap-3 lg:gap-3 2xl:gap-5">

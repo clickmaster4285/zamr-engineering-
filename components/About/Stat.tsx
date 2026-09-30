@@ -89,7 +89,7 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="flex w-full flex-col items-start gap-8 bg-[var(--color-contact-dark)] px-5 py-14 lg:gap-[35.56px] lg:px-[77.037px] lg:py-[77.037px] 2xl:gap-[60px] 2xl:p-[130px]"
+      className="flex w-full flex-col items-start gap-8 bg-[var(--color-primary)] px-5 py-14 lg:gap-[35.56px] lg:px-[77.037px] lg:py-[77.037px] 2xl:gap-[60px] 2xl:p-[130px]"
     >
       {/* Mobile: short label + heading. Tablet/Desktop: full label only. */}
       <div className="flex w-full flex-col items-start gap-8 lg:gap-0">

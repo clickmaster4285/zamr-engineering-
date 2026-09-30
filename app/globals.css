@@ -66,11 +66,6 @@
   --color-success: oklch(0.52 0.14 152);           /* form success feedback */
   --color-error: oklch(0.55 0.19 27);              /* form error feedback */
 
-  /* ════════════════════════════════════════════
-     CONTACT PAGE (Figma design)
-     ════════════════════════════════════════════ */
-  --color-contact-blue: oklch(0.422 0.154 265);   /* #2344A1 — contact detail lines, social icon strokes */
-  --color-contact-dark: oklch(0.221 0.075 264);   /* #07183D — dark navy sections (How Can We Help / map) */
 
   /* ════════════════════════════════════════════
      IMAGE OVERLAYS (non-hero images)
@@ -93,7 +88,6 @@
   --border-table: oklch(0.951 0.004 264.4);       /* #EEF0F8 */
   --border-dark: oklch(1 0 0 / 0.08);             /* white 8% — for dark backgrounds */
   --border-impact-card: oklch(0.905 0.022 255);   /* #D7E2F1 — impact story card border */
-  --shadow-impact-card: 0px 12px 32px -12px color-mix(in srgb, var(--color-contact-dark) 7.84314%, transparent);
 
   /* ════════════════════════════════════════════
      SHADCN / DEFAULT VARS (unchanged)

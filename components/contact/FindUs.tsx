@@ -26,7 +26,7 @@ export default function FindUs() {
               <span className="text-sm font-medium leading-[18px] text-[var(--color-primary)]">
                 {sectionNumber}
               </span>
-              <span className="h-px w-10 bg-[var(--color-contact-dark)]" />
+              <span className="h-px w-10 bg-[var(--color-primary)]" />
               <span className="text-[13px] font-medium leading-4 tracking-[1.78px] uppercase text-[var(--text-heading)]">
                 {sectionLabel}
               </span>
@@ -73,7 +73,7 @@ export default function FindUs() {
         </div>
 
         {/* Right — map */}
-        <div className="relative h-[240px] w-full overflow-hidden rounded-none bg-[var(--color-contact-dark)] lg:h-[237.04px] lg:w-auto lg:flex-1 lg:rounded-[7.11111px] 2xl:h-[400px] 2xl:rounded-xl">
+        <div className="relative h-[240px] w-full overflow-hidden rounded-none bg-[var(--color-primary)] lg:h-[237.04px] lg:w-auto lg:flex-1 lg:rounded-[7.11111px] 2xl:h-[400px] 2xl:rounded-xl">
           <iframe
             src={mapSrc}
             title={mapLabel}

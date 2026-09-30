@@ -18,7 +18,7 @@ export default function TechnicalCapabilities({
     <section className="flex w-full flex-col items-start gap-8 bg-[var(--bg-section)] px-4 py-12 lg:gap-[28.44px] lg:px-[91.8519px] lg:pb-[59.2593px] lg:pt-[47.4074px] 2xl:gap-12 2xl:px-[155px] 2xl:pb-[100px] 2xl:pt-20">
       <div className="flex w-full flex-col items-start gap-3 lg:gap-[7.11px] 2xl:gap-3">
         <div className="flex w-full flex-row items-center gap-3 lg:w-auto lg:gap-[9.48px] 2xl:gap-4">
-          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+          <span className="shrink-0 text-sm font-medium leading-[18px] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
             {number}
           </span>
           <span className="h-px w-[60px] shrink-0 bg-[var(--text-heading)] lg:w-[61.63px] 2xl:w-[104px]" />

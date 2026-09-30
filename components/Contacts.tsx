@@ -87,7 +87,7 @@ export default function Contact({
               <span className="text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
                 {sectionNumber}
               </span>
-              <span className="h-px w-10 bg-[var(--color-contact-dark)] lg:w-[61.63px] lg:bg-[var(--text-heading)] 2xl:w-[104px]" />
+              <span className="h-px w-10 bg-[var(--color-primary)] lg:w-[61.63px] lg:bg-[var(--text-heading)] 2xl:w-[104px]" />
               <span className="text-sm font-medium leading-[18px] tracking-[3px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5">
                 {sectionLabel}
               </span>

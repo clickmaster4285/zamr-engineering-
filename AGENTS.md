@@ -200,7 +200,7 @@ zamr-engineering/
 | `--color-error` | oklch(0.55 0.19 27) | Form error feedback messages |
 | `--color-primary` | oklch(0.254 0.07 266.5) | Contact page submit button, section numbers, icon strokes |
 | `--color-contact-blue` | oklch(0.422 0.154 265) (#2344A1) | Contact page detail lines, social icon strokes |
-| `--color-contact-dark` | oklch(0.221 0.075 264) (#07183D) | Contact page dark navy sections (How Can We Help, map bg) |
+
 
 ### Image Overlays
 
@@ -297,7 +297,7 @@ All 5 contact forms (landing `Contacts.tsx`, `services/Contact.tsx`, `projects/d
 ### The /contact page
 - Route: `app/contact/page.tsx` → `ContactHero` → `Enquiry` → `HowWeHelp` → `FindUs` (global Navbar/Footer wrap it)
 - The Enquiry form has 8 fields (Name, Designation, Company Name, Company Website, Business Email, Business Phone Number, Subject, Message). Only `name`, `email`, `subject`, `message` are required; the optional fields (`designation`, `company`, `website`, `phone`) are included in the email body when filled
-- The dark checkmark grid and map section use `--color-contact-dark`; the submit button uses `--color-primary`
+- The dark checkmark grid and map section use `--color-primary`; the submit button uses `--color-primary`
 - Hero image lives in `mockData/contact.ts` (`heroContent.image`) — swap there when the final asset arrives
 
 ### Contact link routing (all point to `/contact`)

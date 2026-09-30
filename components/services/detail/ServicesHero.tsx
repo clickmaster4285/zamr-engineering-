@@ -16,7 +16,7 @@ export default function ServicesHero({
     <section className="relative flex w-full min-h-[317px] flex-col overflow-hidden lg:block lg:h-[414.81px] lg:min-h-0 2xl:h-[700px]">
       <Image src={image} alt={title} fill priority className="object-cover" />
 
-      <div className="absolute inset-0 bg-[var(--color-contact-dark)]/85 lg:bg-[var(--color-contact-dark)]/80" />
+      <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
       {/* Mobile: in-flow so tall copy grows the hero */}
       <div className="relative z-10 ml-4 flex w-[calc(100%-32px)] max-w-[358px] flex-col items-start gap-6 pt-[100px] pb-8 lg:hidden">

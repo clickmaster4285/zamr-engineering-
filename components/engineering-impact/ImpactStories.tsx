@@ -77,7 +77,7 @@ function StoryCard({ story }: { story: ImpactStory }) {
   const imageFirst = story.imagePosition === "top";
 
   return (
-    <article className="flex h-full w-full min-w-0 flex-col items-start gap-5 overflow-hidden bg-white p-5 lg:gap-[11.85px] lg:border-[0.592593px] lg:border-[var(--border-impact-card)] lg:p-[14.2222px] lg:shadow-[0px_7.11111px_18.963px_-7.11111px_color-mix(in_srgb,var(--color-contact-dark)_7.84314%,transparent)] 2xl:gap-5 2xl:border 2xl:border-[var(--border-impact-card)] 2xl:p-6 2xl:shadow-[var(--shadow-impact-card)]">
+    <article className="flex h-full w-full min-w-0 flex-col items-start gap-5 overflow-hidden bg-white p-5 lg:gap-[11.85px] lg:border-[0.592593px] lg:border-[var(--border-impact-card)] lg:p-[14.2222px] lg:shadow-[0px_7.11111px_18.963px_-7.11111px_color-mix(in_srgb,var(--color-primary)_7.84314%,transparent)] 2xl:gap-5 2xl:border 2xl:border-[var(--border-impact-card)] 2xl:p-6 2xl:shadow-[var(--shadow-impact-card)]">
       {imageFirst ? (
         <>
           <StoryImage story={story} fillRemaining={false} />
@@ -98,7 +98,7 @@ export default function ImpactStories() {
     impactStoriesContent;
 
   return (
-    <section className="flex w-full flex-col items-start bg-[var(--color-contact-dark)] px-4 py-14 lg:gap-[28.44px] lg:px-[77.037px] lg:py-[77.037px] 2xl:gap-12 2xl:p-[130px]">
+    <section className="flex w-full flex-col items-start bg-[var(--color-primary)] px-4 py-14 lg:gap-[28.44px] lg:px-[77.037px] lg:py-[77.037px] 2xl:gap-12 2xl:p-[130px]">
       <div className="flex w-full flex-col items-start gap-8 lg:gap-[18.96px] 2xl:gap-8">
         <div className="flex w-full flex-col items-start gap-8 lg:gap-[11.85px] 2xl:gap-5">
           <div className="flex w-full flex-row items-center gap-3 lg:gap-[9.48px] 2xl:gap-4">
