@@ -48,10 +48,6 @@ export interface ProjectData {
   relatedNumber: string;
   relatedHeading: string;
   relatedProjects: { title: string; slug: string; image: string }[];
-
-  // Project cards displayed in the Refer Projects section on the services
-  // detail page. Edit these directly on the relevant project entry.
-  referProjects: { title: string; image: string; slug: string }[];
 }
 
 export const projects: ProjectData[] = [
@@ -142,11 +138,6 @@ export const projects: ProjectData[] = [
       { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "dunmore-st-wentworthville", image: "/images/image2.jpeg" },
       { title: "Liverpool Bridge Inspection", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
     ],
-    referProjects: [
-      { title: "Kelso to Raglan Drainage", image: "/images/projects/kelso.jpg", slug: "kelso-to-raglan-drainage" },
-      { title: "Tenterfield Bridge", image: "/images/projects/tenterfield.jpg", slug: "tenterfield-bridge" },
-      { title: "M4 Smart Motorway", image: "/images/projects/m4moter.jpg", slug: "m4-smart-motorway " },
-    ],
   },
   {
     slug: "dunmore-st-wentworthville",
@@ -234,11 +225,6 @@ export const projects: ProjectData[] = [
       { title: "WAD Orange", slug: "wad-orange ", image: "/images/projects/wad_orange.jpg" },
       { title: "Solarfarm Intersection Upgrade, Orange", slug: "wad-orange", image: "/images/image12.png" },
       { title: "Liverpool Bridge Inspection", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
-    ],
-    referProjects: [
-      { title: "Kelso to Raglan Drainage", image: "/images/projects/kelso.jpg", slug: "kelso-to-raglan-drainage" },
-      { title: "Tenterfield Bridge", image: "/images/projects/tenterfield.jpg", slug: "tenterfield-bridge" },
-      { title: "M4 Smart Motorway", image: "/images/projects/m4moter.jpg", slug: "m4-smart-motorway " },
     ],
   },
   {
@@ -328,11 +314,6 @@ export const projects: ProjectData[] = [
       { title: "Solarfarm Intersection Upgrade, Orange", slug: "wad-orange", image: "/images/image12.png" },
       { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "dunmore-st-wentworthville", image: "/images/image13.png" },
     ],
-    referProjects: [
-      { title: "Kelso to Raglan Drainage", image: "/images/projects/kelso.jpg", slug: "kelso-to-raglan-drainage" },
-      { title: "Tenterfield Bridge", image: "/images/projects/tenterfield.jpg", slug: "tenterfield-bridge" },
-      { title: "M4 Smart Motorway", image: "/images/projects/m4moter.jpg", slug: "m4-smart-motorway " },
-    ],
   },
   {
     slug: "kelso-to-raglan-drainage",
@@ -420,11 +401,6 @@ export const projects: ProjectData[] = [
       { title: "WAD Orange", slug: "wad-orange ", image: "/images/projects/wad_orange.jpg" },
       { title: "Loftus Street and Windsor Road, Grantham Farm", slug: "dunmore-st-wentworthville", image: "/images/image13.png" },
       { title: "Tenterfield Bridge", slug: "tenterfield-bridge", image: "/images/projects/tenterfield.jpg" },
-    ],
-    referProjects: [
-      { title: "Kelso to Raglan Drainage", image: "/images/projects/kelso.jpg", slug: "kelso-to-raglan-drainage" },
-      { title: "Tenterfield Bridge", image: "/images/projects/tenterfield.jpg", slug: "tenterfield-bridge" },
-      { title: "M4 Smart Motorway", image: "/images/projects/m4moter.jpg", slug: "m4-smart-motorway " },
     ],
   },
   {
@@ -514,11 +490,6 @@ export const projects: ProjectData[] = [
       { title: "Liverpool Bridge Inspection", slug: "mr536-mamre-road-&-abbotts-rd-kemps-creek", image: "/images/image14.png" },
       { title: "Kelso to Raglan Drainage", slug: "kelso-to-raglan-drainage", image: "/images/projects/kelso.jpg" },
     ],
-    referProjects: [
-      { title: "Kelso to Raglan Drainage", image: "/images/projects/kelso.jpg", slug: "kelso-to-raglan-drainage" },
-      { title: "Tenterfield Bridge", image: "/images/projects/tenterfield.jpg", slug: "tenterfield-bridge" },
-      { title: "M4 Smart Motorway", image: "/images/projects/m4moter.jpg", slug: "m4-smart-motorway " },
-    ],
   },
   {
     slug: "m4-smart-motorway ",
@@ -606,11 +577,6 @@ export const projects: ProjectData[] = [
       { title: "WAD Orange", slug: "wad-orange ", image: "/images/projects/wad_orange.jpg" },
       { title: "BMD Bridge Inspection - TBA", slug: "bmd-bridge-inspection-tba", image: "/images/image2.jpeg" },
       { title: "Tenterfield Bridge", slug: "tenterfield-bridge", image: "/images/projects/tenterfield.jpg" },
-    ],
-    referProjects: [
-      { title: "Kelso to Raglan Drainage", image: "/images/projects/kelso.jpg", slug: "kelso-to-raglan-drainage" },
-      { title: "Tenterfield Bridge", image: "/images/projects/tenterfield.jpg", slug: "tenterfield-bridge" },
-      { title: "M4 Smart Motorway", image: "/images/projects/m4moter.jpg", slug: "m4-smart-motorway " },
     ],
   },
 ];
