@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { methodologySection } from "@/mockData/services";
 
 export default function Methodology() {
@@ -8,78 +7,61 @@ export default function Methodology() {
     methodologySection;
 
   return (
-    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-[130px]">
-      <div className="flex flex-col gap-[60px]">
-        {/* Header */}
-        <div className="flex flex-col gap-[28px]">
-          {/* Section label */}
-          <div className="flex flex-row items-center gap-4">
-            <span className="text-base font-medium tracking-[3px] text-[var(--color-contact-accent)]">
-              {sectionNumber}
-            </span>
-            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
-            <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
-              {sectionLabel}
-            </span>
-          </div>
+    <section className="flex w-full flex-col items-start gap-8 bg-white px-4 py-12 lg:gap-[47.41px] lg:p-[71.1111px] 2xl:gap-20 2xl:p-[120px]">
+      <div className="flex w-full flex-col items-start gap-4 lg:gap-[9.48px] 2xl:gap-4">
+        <div className="flex w-full flex-row items-center gap-3 lg:w-auto lg:gap-[9.48px] 2xl:gap-4">
+          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            {sectionNumber}
+          </span>
+          <span className="h-px w-10 shrink-0 bg-[var(--text-heading)] lg:w-[61.63px] 2xl:w-[104px]" />
+          <span className="text-sm font-medium leading-[18px] tracking-[3px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            {sectionLabel}
+          </span>
+        </div>
 
-          {/* Heading + subtitle */}
-          <div className="flex flex-col gap-3">
-            <h2 className="text-[36px] font-bold leading-[44px] text-[var(--text-heading)] sm:text-[44px] sm:leading-[55px] lg:text-[48px] lg:leading-[60px]">
-              {heading}
-            </h2>
-            <p
-              className="text-[16px] leading-[26px] lg:text-[18px] lg:leading-[29px]"
-              style={{ color: "var(--text-soft)" }}
+        <h2 className="w-full text-[28px] font-semibold leading-[35px] text-[var(--text-heading)] lg:text-[26.0741px] lg:font-bold lg:leading-[33px] 2xl:text-[44px] 2xl:leading-[55px]">
+          {heading}
+        </h2>
+        <p className="w-full text-sm font-normal leading-[22px] text-[var(--text-soft)] lg:text-[13px] lg:leading-[1.6] 2xl:text-[18px]">
+          {subtitle}
+        </p>
+      </div>
+
+      <div className="flex w-full flex-col items-start lg:flex-row lg:flex-wrap lg:gap-6 2xl:flex-nowrap 2xl:gap-10">
+        {steps.map((step, index) => {
+          const isLast = index === steps.length - 1;
+
+          return (
+            <div
+              key={step.number}
+              className="flex w-full flex-col items-start gap-4 lg:w-[calc(50%-12px)] lg:gap-[14.22px] 2xl:w-auto 2xl:min-w-0 2xl:flex-1 2xl:gap-6"
             >
-              {subtitle}
-            </p>
-          </div>
-        </div>
-
-        {/* Steps Tracker */}
-        <div className="flex flex-col gap-10 lg:flex-row lg:gap-10">
-          {steps.map((step, idx) => {
-            const isLast = idx === steps.length - 1;
-            return (
-              <div
-                key={step.number}
-                className="flex flex-1 flex-col gap-6"
-              >
-                {/* Step head: circle + connector line */}
-                <div className="flex flex-row items-center gap-4">
-                  <div
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full"
-                    style={{ background: "var(--color-contact-accent)" }}
-                  >
-                    <span className="text-base font-bold leading-5 text-white">
-                      {step.number}
-                    </span>
-                  </div>
-                  {!isLast && (
-                    <span
-                      className="h-0 flex-1"
-                      style={{ borderTop: "2px solid var(--color-contact-accent)" }}
-                    />
-                  )}
+              <div className="flex w-full flex-row items-center gap-4 lg:gap-[9.48px] 2xl:gap-4">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center bg-[var(--color-contact-accent)] lg:h-[28.44px] lg:w-[28.44px] lg:rounded-full 2xl:h-12 2xl:w-12">
+                  <span className="text-sm font-bold leading-[18px] text-white lg:text-[13px] lg:leading-4 2xl:text-base 2xl:leading-5">
+                    {step.number}
+                  </span>
                 </div>
-
-                {/* Step body */}
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-[20px] font-semibold leading-[25px] text-[var(--text-heading)]">
-                    {step.title}
-                  </h3>
-                  <p
-                    className="text-[15px] leading-[22px]"
-                    style={{ color: "var(--text-soft)" }}
-                  >
-                    {step.description}
-                  </p>
-                </div>
+                {!isLast && (
+                  <span className="hidden h-0 flex-1 border-t-[1.18519px] border-[var(--color-contact-accent)] lg:block 2xl:border-t-2" />
+                )}
               </div>
-            );
-          })}
-        </div>
+
+              <div
+                className={`flex w-full flex-col items-start gap-1 lg:gap-[4.74px] 2xl:gap-2 ${
+                  isLast ? "" : "pb-6 lg:pb-0"
+                }`}
+              >
+                <h3 className="text-lg font-semibold leading-[23px] text-[var(--text-heading)] lg:text-[15px] lg:leading-[19px] 2xl:text-[20px] 2xl:leading-[25px]">
+                  {step.title}
+                </h3>
+                <p className="w-full text-sm font-normal leading-5 text-[var(--text-soft)] lg:text-[13px] lg:leading-[1.5] 2xl:text-[15px]">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
