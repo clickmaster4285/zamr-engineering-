@@ -94,6 +94,8 @@
   --border-section: oklch(0.925 0 0);             /* #EAEAEA */
   --border-table: oklch(0.951 0.004 264.4);       /* #EEF0F8 */
   --border-dark: oklch(1 0 0 / 0.08);             /* white 8% — for dark backgrounds */
+  --border-impact-card: oklch(0.905 0.022 255);   /* #D7E2F1 — impact story card border */
+  --shadow-impact-card: 0px 12px 32px -12px color-mix(in srgb, var(--color-contact-dark) 7.84314%, transparent);
 
   /* ════════════════════════════════════════════
      SHADCN / DEFAULT VARS (unchanged)

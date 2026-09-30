@@ -13,36 +13,6 @@ export const heroContent: HeroContent = {
   image: "/images/image5.jpeg",
 };
 
-// ─── Impact Areas (01 — 2×2 grid) ─────────────────────────────────────
-
-export interface ImpactArea {
-  title: string;
-  description: string;
-}
-
-export const impactAreas: ImpactArea[] = [
-  {
-    title: "Safer Infrastructure",
-    description:
-      "Engineering solutions that prioritize structural integrity and public safety.",
-  },
-  {
-    title: "Better Communities",
-    description:
-      "Supporting infrastructure that connects people and enhances everyday life.",
-  },
-  {
-    title: "Sustainable Development",
-    description:
-      "Designing with long-term environmental and operational responsibility in mind.",
-  },
-  {
-    title: "Reliable Delivery",
-    description:
-      "Providing dependable engineering services that help projects succeed from planning to completion.",
-  },
-];
-
 // ─── Areas of Impact (01 — checklist + image) ─────────────────────────
 
 export interface AreasOfImpactContent {
@@ -72,138 +42,73 @@ export const areasOfImpactContent: AreasOfImpactContent = {
   image: "/images/engineering-impact/image2.png",
 };
 
-// ─── Why It Matters (03 — dark blue 2×2 grid) ─────────────────────────
+// ─── Impact Stories (02 — story cards) ────────────────────────────────
 
-export interface WhyItMattersItem {
-  icon: "award" | "shield-check";
+export interface ImpactStory {
+  category: string;
   title: string;
   description: string;
-}
-
-export const whyItMattersItems: WhyItMattersItem[] = [
-  {
-    icon: "award",
-    title: "Quality",
-    description:
-      "Consistent engineering standards applied on every project we deliver.",
-  },
-  {
-    icon: "shield-check",
-    title: "Safety",
-    description:
-      "Workplace safety embedded into every stage of design and delivery.",
-  },
-  {
-    icon: "shield-check",
-    title: "Compliance",
-    description:
-      "Aligned with Australian regulations and international management standards.",
-  },
-  {
-    icon: "award",
-    title: "Confidence",
-    description:
-      "Independently recognised systems that give clients full peace of mind.",
-  },
-];
-
-// ─── Our Approach (04 — timeline steps) ───────────────────────────────
-
-export interface ApproachStep {
-  number: string;
-  title: string;
-  description: string;
-}
-
-export const approachSteps: ApproachStep[] = [
-  {
-    number: "01",
-    title: "Understand",
-    description: "We begin by understanding project goals, challenges, and stakeholder requirements.",
-  },
-  {
-    number: "02",
-    title: "Design",
-    description: "Develop practical engineering solutions focused on quality, efficiency, and compliance.",
-  },
-  {
-    number: "03",
-    title: "Deliver",
-    description: "Execute projects with precision, collaboration, and technical excellence.",
-  },
-  {
-    number: "04",
-    title: "Improve",
-    description: "Continuously evaluate outcomes to support long-term performance and future growth.",
-  },
-];
-
-// ─── Our Impact (05 — dark blue 3 columns) ────────────────────────────
-
-export interface OurImpactItem {
-  title: string;
-  description: string;
-}
-
-export const ourImpactItems: OurImpactItem[] = [
-  {
-    title: "Innovation",
-    description:
-      "Applying modern engineering practices to solve complex challenges and drive better outcomes for clients and communities.",
-  },
-  {
-    title: "Quality",
-    description:
-      "Maintaining the highest standards across every stage of project delivery, from initial design through to completion.",
-  },
-  {
-    title: "Collaboration",
-    description:
-      "Working closely with clients, stakeholders, and project teams to achieve successful and lasting outcomes.",
-  },
-];
-
-// ─── Featured Projects (06 — project cards) ──────────────────────────
-
-export interface FeaturedProject {
-  title: string;
+  points: string[];
   image: string;
-  href: string;
+  imageAlt: string;
+  imagePosition: "top" | "bottom";
 }
 
-export const featuredProjects: FeaturedProject[] = [
-  {
-    title: "Hunter Valley Renewable Energy Hub",
-    image: "/images/image2.jpeg",
-    href: "/projects/jonica-rd-australia-double-storey-dwelling-&-studio",
-  },
-  {
-    title: "Metropolitan Bridge Rehabilitation",
-    image: "/images/image10.png",
-    href: "/projects/great-western-highway-upgrade—kelso-to-raglan",
-  },
-  {
-    title: "Urban Stormwater Management System",
-    image: "/images/image7.jpeg",
-    href: "/projects/urban-stormwater-management-system",
-  },
-];
-
-// ─── Track Record (07 — stats) ────────────────────────────────────────
-
-export interface TrackRecordStat {
-  value: string;
-  suffix: string;
-  label: string;
-  align: "start" | "center" | "end";
+export interface ImpactStoriesContent {
+  sectionNumber: string;
+  sectionLabel: string;
+  heading: string;
+  stories: ImpactStory[];
 }
 
-export const trackRecordStats: TrackRecordStat[] = [
-  { value: "12", suffix: "+", label: "YEARS OF EXPERIENCE", align: "start" },
-  { value: "05", suffix: "", label: "ENGINEERING DISCIPLINES", align: "start" },
-  { value: "150", suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
-  { value: "98", suffix: "%", label: "CLIENT SATISFACTION", align: "start" },
-];
+export const impactStoriesContent: ImpactStoriesContent = {
+  sectionNumber: "02",
+  sectionLabel: "Impact Stories",
+  heading: "Engineering Impact Stories",
+  stories: [
+    {
+      category: "Community Leadership & Social Commitment",
+      title: "Leadership That Builds Community",
+      description:
+        "ZAMR Engineering believes that engineering excellence is only one part of the equation. Through active leadership and social commitment, the firm supports stronger, more resilient communities where people can thrive.",
+      points: [
+        "Khalid is vice president of Engineers Australia Immigrant, helping shape pathways for diverse talent to contribute to the profession.",
+        "Donation to Child Support reflects the firm's commitment to supporting vulnerable families and creating long-term social impact.",
+      ],
+      image: "/images/engineering-impact/commitment.png",
+      imageAlt: "Community leadership editorial image",
+      imagePosition: "bottom",
+    },
+    {
+      category: "Engineering Impact for Community Organisations",
+      title: "Engineering That Serves Community",
+      description:
+        "From structural assessments to civil works, ZAMR Engineering partners with community organisations to deliver practical, reliable engineering support that helps them serve their members with confidence.",
+      points: [
+        "Building structural assessment for Wentworthville Muslim Community helps ensure safe, compliant facilities for community use.",
+        "Civil Works & Drainage Inspection for Marsden Park Mosque supports reliable infrastructure and long-term maintenance planning.",
+        "Building Iteration for Parramatta Muslim Association helps organisations evolve their facilities with confidence and clarity.",
+      ],
+      image: "/images/engineering-impact/organisations.png",
+      imageAlt: "Community engineering assessment image",
+      imagePosition: "top",
+    },
+    {
+      category: "Immigrant Career Support",
+      title: "Opening Doors for Immigrant Talent",
+      description:
+        "ZAMR Engineering recognises that diverse talent is essential to a resilient engineering sector. The firm actively supports immigrant professionals through structured pathways that help them build careers in Australia.",
+      points: [
+        "ZAMR support of immigrant engineers through internship programs gives emerging professionals practical experience and industry exposure.",
+        "Provide Sponsorship Visa support helps bridge the gap between talent and opportunity, creating a more inclusive engineering workforce.",
+      ],
+      image: "/images/engineering-impact/talent.png",
+      imageAlt: "Immigrant engineer mentorship image",
+      imagePosition: "bottom",
+    },
+  ],
+};
+
 
 // ─── CTA Section ──────────────────────────────────────────────────────
 
