@@ -60,9 +60,11 @@ export default function Services() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm leading-[18px] text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:ml-[14px] lg:flex-1 lg:text-[13px] lg:leading-4 2xl:ml-[22px] 2xl:max-w-[690px] 2xl:text-lg 2xl:leading-[23px]">
-                  {service.description}
-                </p>
+                <p className="text-sm leading-[18px] text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:ml-[14px] lg:flex-1 lg:text-[13px] lg:leading-4 2xl:mx-[22px] 2xl:max-w-[690px] 2xl:text-lg 2xl:leading-[23px]">
+  {service.description.length > 100
+    ? `${service.description.slice(0, 100)}...`
+    : service.description}
+</p>
 
                 {/* Tags — always on mobile; hover-reveal tablet+ */}
                 {service.tags.length > 0 && (
