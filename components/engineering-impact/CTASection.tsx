@@ -4,20 +4,17 @@ import Link from "next/link";
 import { ctaContent } from "@/mockData/engineering-impact";
 
 export default function CTASection() {
+  const { heading, description, primaryButton, secondaryButton } = ctaContent;
+
   return (
-    <section className="flex w-full flex-col items-center justify-center bg-[var(--bg-section)] px-6 py-16 sm:px-10 sm:py-20 lg:p-[130px]">
-      <div className="flex w-full max-w-[728px] flex-col items-center gap-8 sm:gap-10 lg:gap-[30px]">
-        <h2 className="w-full text-[28px] font-bold leading-[36px] text-center text-[var(--text-dark)] sm:text-[36px] sm:leading-[44px] lg:text-[56px] lg:leading-[71px]">
-          {ctaContent.heading.split("\n").map((line, i) => (
-            <span key={i}>
-              {line}
-              {i < ctaContent.heading.split("\n").length - 1 && <br />}
-            </span>
-          ))}
+    <section className="flex w-full flex-col items-stretch justify-center bg-[var(--bg-section)] px-4 py-14 lg:items-center lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]">
+      <div className="flex w-full flex-col items-stretch gap-6 lg:items-center lg:gap-[17.78px] 2xl:max-w-[728px] 2xl:gap-[30px]">
+        <h2 className="w-full text-center text-[28px] font-semibold leading-[35px] text-[var(--text-heading)] lg:text-[33.1852px] lg:font-bold lg:leading-[42px] 2xl:text-[56px] 2xl:leading-[71px]">
+          {heading}
         </h2>
 
-        <p className="w-full text-sm leading-[23px] text-center text-[var(--text-paragraph)] sm:text-base lg:text-lg">
-          {ctaContent.description}
+        <p className="w-full text-center text-base font-normal leading-6 text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:text-[13px] lg:leading-4 2xl:text-[18px] 2xl:leading-[23px]">
+          {description}
         </p>
 
         <div className="flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center">
