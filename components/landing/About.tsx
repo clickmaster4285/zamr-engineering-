@@ -118,29 +118,23 @@ export default function About() {
               const isCentered = stat.align === "center";
               return (
                 <div
-                  key={stat.label}
-                  className={`flex min-w-0 flex-1 flex-col gap-[0.5px] lg:gap-[1px] 2xl:gap-0.5 ${
-                    isCentered
-                      ? "items-center lg:items-start"
-                      : "items-start"
-                  }`}
-                >
-                  <div className="flex flex-row items-start gap-[2px] lg:gap-[5px] 2xl:gap-2">
-                    <span className="text-[36px] font-normal leading-[45px] text-[var(--color-primary)] lg:text-[43px] lg:leading-[54px] 2xl:text-[72px] 2xl:leading-[91px]">
-                      {currentValues[index]}
-                    </span>
-                    <span className="text-[30px] font-light leading-9 text-[var(--color-primary)] lg:text-[25px] lg:leading-[30px] 2xl:text-[42px] 2xl:leading-[50px]">
-                      {stat.suffix}
-                    </span>
-                  </div>
-                  <span
-                    className={`w-full text-sm font-light leading-[18px] text-[var(--text-heading)] lg:text-[13px] lg:leading-4 2xl:text-base 2xl:leading-5 ${
-                      isCentered ? "text-center lg:text-left" : "text-left"
-                    }`}
-                  >
-                    {stat.label}
+                key={stat.label}
+                className="flex min-w-0 flex-1 flex-col items-start gap-[0.5px] lg:gap-[1px] 2xl:gap-0.5"
+              >
+                <div className="flex flex-row items-start gap-[2px] lg:gap-[5px] 2xl:gap-2">
+                  <span className="text-[36px] font-normal leading-[45px] text-[var(--color-primary)] lg:text-[43px] lg:leading-[54px] 2xl:text-[72px] 2xl:leading-[91px]">
+                    {currentValues[index]}
+                  </span>
+              
+                  <span className="text-[30px] font-light leading-9 text-[var(--color-primary)] lg:text-[25px] lg:leading-[30px] 2xl:text-[42px] 2xl:leading-[50px]">
+                    {stat.suffix}
                   </span>
                 </div>
+              
+                <span className="w-full text-left text-sm font-light leading-[18px] text-[var(--text-heading)] lg:text-[13px] lg:leading-4 2xl:text-base 2xl:leading-[20px]">
+                  {stat.label}
+                </span>
+              </div>
               );
             })}
           </div>
