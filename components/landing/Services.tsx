@@ -87,7 +87,7 @@ export default function Services() {
           <button
             type="button"
             onClick={() => router.push("/contact")}
-            className="group inline-flex cursor-pointer items-center gap-[2px] text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-blue-accent)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-2 lg:text-base lg:leading-5 lg:tracking-[3px]"
+            className="group uppercase inline-flex cursor-pointer items-center gap-[2px] text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-blue-accent)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-2 lg:text-base lg:leading-5 lg:tracking-[3px]"
           >
             {ctaLabel}
             <span className="transition-transform duration-300 group-hover:translate-x-[5px]">

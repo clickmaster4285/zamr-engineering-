@@ -1,15 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { services, servicesCapabilitiesSection } from "@/mockData/services";
+import { ArrowRight } from "lucide-react";
 
 export default function Capabilities() {
-  const { sectionNumber, sectionLabel, heading } = servicesCapabilitiesSection;
+  const { sectionNumber, sectionLabel, heading, ctaLabel } = servicesCapabilitiesSection;
   const router = useRouter();
   return (
     <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-[130px]">
       <div className="flex w-full flex-col gap-[60px]">
         {/* Header */}
-        <div className="flex w-full flex-col gap-[30px]">
+        <div className="flex w-full flex-col gap-[30px] ">
           {/* Section label — Frame 118 */}
           <div className="flex flex-row items-center gap-4">
             <span className="text-base font-medium tracking-[3px] text-[var(--color-contact-accent)]">
@@ -63,6 +64,19 @@ export default function Capabilities() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex w-full flex-col items-end gap-[11px] lg:gap-[30px] 2xl:gap-[50px]">
+          {/* CTA */}
+          <button
+            type="button"
+            onClick={() => router.push("/contact")}
+            className="group uppercase inline-flex cursor-pointer items-center gap-[2px] text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-blue-accent)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-2 lg:text-base lg:leading-5 lg:tracking-[3px]"
+          >
+            {ctaLabel}
+            <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+              <ArrowRight className="h-4 w-4 lg:h-6 lg:w-6" strokeWidth={1.25} />
+            </span>
+          </button>
         </div>
       </div>
     </section>

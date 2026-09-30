@@ -58,12 +58,23 @@ export default function ReferProjects({ projectSlug }: Props) {
     href={allProjectsLink}
     className="group flex w-fit shrink-0 items-center gap-2 text-[var(--color-blue-header)] transition-colors duration-300 hover:text-[var(--color-secondary)]"
   >
-    <span
-      className="whitespace-nowrap text-[12px] font-bold leading-4 tracking-[1.68px]"
-      style={{ fontFamily: barlow.style.fontFamily }}
-    >
-      ALL PROJECTS
-    </span>
+<span
+  className="
+    whitespace-nowrap
+    font-outfit
+    font-medium
+    uppercase
+    text-center
+    text-[12px]
+    leading-[13.12px]
+    tracking-[2%]
+    lg:text-[16px]
+    lg:leading-[100%]
+    lg:tracking-[3%]
+  "
+>
+  ALL PROJECTS
+</span>
 
     <span className="shrink-0 transition-transform duration-300 group-hover:translate-x-[5px]">
       <ArrowRight size={24} strokeWidth={1.25} />

@@ -890,6 +890,7 @@ export const servicesCapabilitiesSection = {
   sectionNumber: "01",
   sectionLabel: "SERVICES",
   heading: "Our Full Capabilities",
+  ctaLabel: "ZAMR Capability Statement",
 };
 
 export interface WhyZamrFeature {
