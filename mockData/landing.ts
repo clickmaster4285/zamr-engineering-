@@ -526,8 +526,8 @@ export const footerSocialLinks: FooterSocialLink[] = [
   },
   {
     src: "/icons/insta.png",
-    alt: "InstaGram",
-    href: "#",
+    alt: "Instagram",
+    href: contactInfo.socialLinks[0]?.href ?? "#",
   },
 ];
 
