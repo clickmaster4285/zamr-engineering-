@@ -18,8 +18,8 @@ function StoryImage({
     <div
       className={
         fillRemaining
-          ? "relative mt-auto h-[180px] w-full shrink-0 overflow-hidden rounded-none lg:h-auto lg:min-h-0 lg:flex-1 lg:shrink lg:rounded-[11.8519px] 2xl:rounded-[20px]"
-          : "relative h-[180px] w-full shrink-0 overflow-hidden rounded-none lg:h-[130.37px] lg:rounded-[11.8519px] 2xl:h-[220px] 2xl:rounded-[20px]"
+          ? "relative mt-auto h-[180px] w-full shrink-0 overflow-hidden  lg:h-auto lg:min-h-0 lg:flex-1 lg:shrink  "
+          : "relative h-[180px] w-full shrink-0 overflow-hidden  lg:h-[130.37px]  2xl:h-[220px] "
       }
     >
       <Image
@@ -56,7 +56,7 @@ function StoryContent({ story }: { story: ImpactStory }) {
             key={point}
             className="flex w-full flex-row items-start gap-3 lg:items-center lg:gap-[9.48px] 2xl:gap-4"
           >
-            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-[10px] bg-[var(--color-blue-accent)] lg:mt-0 lg:h-[14.22px] lg:w-[14.22px] lg:rounded-[7.11111px] 2xl:h-6 2xl:w-6 2xl:rounded-xl">
+            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center  bg-[var(--color-blue-accent)] lg:mt-0 lg:h-[14.22px] lg:w-[14.22px]  2xl:h-6 2xl:w-6 ">
               <Check
                 className="h-3 w-3 text-white lg:h-[8.3px] lg:w-[8.3px] 2xl:h-3.5 2xl:w-3.5"
                 strokeWidth={2}
@@ -77,7 +77,7 @@ function StoryCard({ story }: { story: ImpactStory }) {
   const imageFirst = story.imagePosition === "top";
 
   return (
-    <article className="flex h-full w-full min-w-0 flex-col items-start gap-5 overflow-hidden bg-white p-5 lg:gap-[11.85px] lg:rounded-[14.2222px] lg:border-[0.592593px] lg:border-[var(--border-impact-card)] lg:p-[14.2222px] lg:shadow-[0px_7.11111px_18.963px_-7.11111px_color-mix(in_srgb,var(--color-contact-dark)_7.84314%,transparent)] 2xl:gap-5 2xl:rounded-3xl 2xl:border 2xl:border-[var(--border-impact-card)] 2xl:p-6 2xl:shadow-[var(--shadow-impact-card)]">
+    <article className="flex h-full w-full min-w-0 flex-col items-start gap-5 overflow-hidden bg-white p-5 lg:gap-[11.85px] lg:border-[0.592593px] lg:border-[var(--border-impact-card)] lg:p-[14.2222px] lg:shadow-[0px_7.11111px_18.963px_-7.11111px_color-mix(in_srgb,var(--color-contact-dark)_7.84314%,transparent)] 2xl:gap-5 2xl:border 2xl:border-[var(--border-impact-card)] 2xl:p-6 2xl:shadow-[var(--shadow-impact-card)]">
       {imageFirst ? (
         <>
           <StoryImage story={story} fillRemaining={false} />
