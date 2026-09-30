@@ -235,7 +235,7 @@ export const keyDirectorsContent = {
 // --- About US 04 ---
 export const aboutUs04Content = {
   sectionNumber: "04",
-  sectionLabel: "About Us",
+  sectionLabel: "Founder's Story",
   heading: "The Founder's Story Behind the Name ZAMR",
   image: "/images/image11.png",
   imageAlt: "ZAMR engineers reviewing project plans on an active construction site",

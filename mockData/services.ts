@@ -970,7 +970,7 @@ export interface MethodologySection {
 
 export const methodologySection: MethodologySection = {
   sectionNumber: "03",
-  sectionLabel: "METHODOLOGY",
+  sectionLabel: "Process",
   heading: "From Planning to Delivery",
   subtitle:
     "Supporting projects through every stage with practical engineering expertise and disciplined project delivery.",

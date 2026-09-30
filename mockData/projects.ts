@@ -57,7 +57,7 @@ export interface ProjectData {
 export const projects: ProjectData[] = [
   {
     slug: "wad-orange",
-    index: "07",
+    index: "01",
     title: "WAD Orange",
     category: "",
     shortDescription:
@@ -150,7 +150,7 @@ export const projects: ProjectData[] = [
   },
   {
     slug: "dunmore-st-wentworthville",
-    index: "08",
+    index: "02",
     title: "Dunmore St Wentworthville",
     category: "",
     shortDescription:
@@ -243,7 +243,7 @@ export const projects: ProjectData[] = [
   },
   {
     slug: "liverpool-bridge-inspection",
-    index: "09",
+    index: "03",
     title: "Liverpool Bridge Inspection",
     category: "",
     shortDescription:
@@ -336,7 +336,7 @@ export const projects: ProjectData[] = [
   },
   {
     slug: "kelso-to-raglan-drainage",
-    index: "10",
+    index: "04",
     title: "Kelso to Raglan Drainage",
     category: "",
     shortDescription:
@@ -429,7 +429,7 @@ export const projects: ProjectData[] = [
   },
   {
     slug: "tenterfield-bridge",
-    index: "11",
+    index: "05",
     title: "Tenterfield Bridge",
     category: "Urban Infrastructure",
     shortDescription:
@@ -522,7 +522,7 @@ export const projects: ProjectData[] = [
   },
   {
     slug: "m4-smart-motorway ",
-    index: "12",
+    index: "06",
     title: "M4 Smart Motorway",
     category: "Water & Irrigation Systems",
     shortDescription:
