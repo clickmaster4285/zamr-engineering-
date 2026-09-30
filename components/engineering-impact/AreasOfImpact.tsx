@@ -9,10 +9,10 @@ export default function AreasOfImpact() {
     areasOfImpactContent;
 
   return (
-    <section className="w-full bg-[var(--bg-section)] px-4 py-14 lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]">
-      <div className="flex w-full flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-[156.44px] 2xl:gap-[264px]">
+    <section className="w-full max-w-full bg-[var(--bg-section)] px-4 py-14 lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]">
+      <div className="flex w-full min-w-0 flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12 2xl:gap-[264px]">
         {/* Left column */}
-        <div className="flex w-full flex-col items-start gap-8 lg:w-[539.35px] lg:shrink-0 lg:gap-[29.63px] 2xl:w-[555px] 2xl:gap-[50px]">
+        <div className="flex w-full min-w-0 flex-col items-start gap-8 lg:max-w-[539.35px] lg:flex-1 lg:gap-[29.63px] 2xl:max-w-[555px] 2xl:gap-[50px]">
           {/* Header — label + heading */}
           <div className="flex w-full flex-col items-start gap-8 lg:gap-[17.78px] 2xl:gap-[30px]">
             <div className="flex flex-row items-center gap-3 lg:gap-[9.48px] 2xl:gap-4">
@@ -56,12 +56,12 @@ export default function AreasOfImpact() {
         </div>
 
         {/* Right column — image */}
-        <div className="relative h-[240px] w-full overflow-hidden lg:h-[309.15px] lg:w-[330.57px] lg:shrink-0 lg:grow 2xl:h-[556px] 2xl:w-[649px] 2xl:grow-0">
+        <div className="relative h-[240px] w-full min-w-0 overflow-hidden lg:h-[309.15px] lg:w-[330px] lg:flex-1 2xl:h-[556px]">
           <Image
             src={image}
             alt="Engineering impact areas"
             fill
-            className="object-cover"
+            className="object-cover "
           />
         </div>
       </div>
