@@ -356,6 +356,11 @@ export const contactSection: ContactSectionContent = {
       value: contactInfo.phone,
       href: `tel:${contactInfo.phone.replace(/\s/g, "")}`,
     },
+    {
+      label: "Email",
+      value: "khalid.javed@zamrengineering.com.au",
+      href: "mailto:khalid.javed@zamrengineering.com.au",
+    },
   ],
   formFields: [
     {
@@ -387,7 +392,7 @@ export const contactSection: ContactSectionContent = {
     {
       id: "designation",
       name: "designation",
-      label: "Organizations (optional)",
+      label: "Organizations (Optional)",
       placeholder: "Organizations",
       type: "text",
       half: true,

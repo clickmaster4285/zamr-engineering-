@@ -89,12 +89,16 @@ export const enquiryContent: EnquiryContent = {
 // ─── How Can We Help? section ─────────────────────────────────────────
 
 export interface HelpContent {
+  sectionNumber: string;
+  sectionLabel: string;
   heading: string;
   subtitle: string;
   items: string[];
 }
 
 export const helpContent: HelpContent = {
+  sectionNumber: "02",
+  sectionLabel: "HELP",
   heading: "How Can We Help?",
   subtitle: "Select from our engineering disciplines or project advisory services.",
   items: [
@@ -112,6 +116,8 @@ export const helpContent: HelpContent = {
 // ─── Find Us section ──────────────────────────────────────────────────
 
 export interface FindUsContent {
+  sectionNumber: string;
+  sectionLabel: string;
   heading: string;
   description: string;
   companyName: string;
@@ -122,6 +128,8 @@ export interface FindUsContent {
 }
 
 export const findUsContent: FindUsContent = {
+  sectionNumber: "03",
+  sectionLabel: "FIND US",
   heading: "Find Us",
   description:
     "Visit our primary metropolitan Sydney office or request a meeting with our regional directors.",
@@ -130,9 +138,7 @@ export const findUsContent: FindUsContent = {
   mapLabel: "Sydney HQ Location Map",
   mapQuery: "30 Smith Street Wentworthville NSW 2145",
   socialLinks: [
-    { src: "/icons/mynaui_instagram.svg", alt: "Instagram", href: "https://www.instagram.com/zamr_engineering?igsh=cW1hZ2pzdXNwanZk" },
-    { src: "/icons/mynaui_linkedin.svg", alt: "LinkedIn", href: "https://www.linkedin.com/company/zamr-engineering/" },
-    { src: "/icons/et_global.svg", alt: "Website", href: "https://zamrengineering.com.au/" },
-    { src: "/icons/Vector.svg", alt: "Email", href: "mailto:admin@zamrengineering.com.au" },
+    { src: "/icons/Linkdinsq_blue.svg", alt: "LinkedIn", href: "https://www.linkedin.com/company/zamr-engineering/" },
+    { src: "/icons/instasq_blue.svg", alt: "Instagram", href: "https://www.instagram.com/zamr_engineering?igsh=cW1hZ2pzdXNwanZk" },
   ],
 };
