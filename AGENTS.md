@@ -160,7 +160,7 @@ zamr-engineering/
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `--color-blue-accent` | oklch(0.296 0.101 268.4) | Section numbers, tags, metric values |
+| `--color-primary` | oklch(0.254 0.07 266.5) | Section numbers, tags, metric values |
 | `--color-blue-header` | oklch(0.266 0.104 268.1) | Header bars, chart primary, card titles |
 | `--color-blue-label` | oklch(0.287 0.102 267.8) | Contact info labels |
 | `--color-chart-bar-1` | oklch(0.408 0.157 268.2) | Chart bar (Civil Engineering) |
@@ -198,7 +198,7 @@ zamr-engineering/
 | `--text-light-subtle` | oklch(0.72 0 0) | Light text on dark (#B3B3B3) |
 | `--color-success` | oklch(0.52 0.14 152) | Form success feedback messages |
 | `--color-error` | oklch(0.55 0.19 27) | Form error feedback messages |
-| `--color-contact-accent` | oklch(0.426 0.163 263) (#1945A7) | Contact page submit button, section numbers, icon strokes |
+| `--color-primary` | oklch(0.254 0.07 266.5) | Contact page submit button, section numbers, icon strokes |
 | `--color-contact-blue` | oklch(0.422 0.154 265) (#2344A1) | Contact page detail lines, social icon strokes |
 | `--color-contact-dark` | oklch(0.221 0.075 264) (#07183D) | Contact page dark navy sections (How Can We Help, map bg) |
 
@@ -297,7 +297,7 @@ All 5 contact forms (landing `Contacts.tsx`, `services/Contact.tsx`, `projects/d
 ### The /contact page
 - Route: `app/contact/page.tsx` → `ContactHero` → `Enquiry` → `HowWeHelp` → `FindUs` (global Navbar/Footer wrap it)
 - The Enquiry form has 8 fields (Name, Designation, Company Name, Company Website, Business Email, Business Phone Number, Subject, Message). Only `name`, `email`, `subject`, `message` are required; the optional fields (`designation`, `company`, `website`, `phone`) are included in the email body when filled
-- The dark checkmark grid and map section use `--color-contact-dark`; the submit button uses `--color-contact-accent`
+- The dark checkmark grid and map section use `--color-contact-dark`; the submit button uses `--color-primary`
 - Hero image lives in `mockData/contact.ts` (`heroContent.image`) — swap there when the final asset arrives
 
 ### Contact link routing (all point to `/contact`)

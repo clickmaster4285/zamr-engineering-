@@ -31,7 +31,7 @@ export default function Challenge({
           {/* Frame 118 — section label */}
           {/* Figma: "01" / 104px line / "THE CHALLENGE", 16px/500/20px, gap:16px */}
           <div className="flex flex-row items-center gap-4">
-            <span className="text-base font-medium tracking-[3px] text-[var(--color-blue-accent)]">
+            <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
               {number}
             </span>
             <span className="h-px w-[104px] bg-[var(--text-dark)]" />

@@ -9,7 +9,7 @@ export default function KeyDirectors() {
       {/* Header — label + heading */}
       <div className="flex w-full flex-col items-start gap-8 lg:gap-[16.59px] 2xl:gap-7">
         <div className="flex w-full flex-row items-center gap-3 lg:w-auto lg:gap-[9.48px] 2xl:gap-4">
-          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
             {sectionNumber}
           </span>
           <span className="h-px w-10 shrink-0 bg-[var(--text-heading)] lg:w-[61.63px] 2xl:w-[104px]" />
@@ -44,7 +44,7 @@ export default function KeyDirectors() {
               <h3 className="w-full text-lg font-bold leading-[23px] text-[var(--text-heading)] lg:text-[13px] lg:leading-4 2xl:text-lg 2xl:leading-[23px]">
                 {director.name}
               </h3>
-              <p className="w-full text-sm font-medium leading-[18px] text-[var(--color-contact-dark)] lg:text-[13px] lg:leading-4 lg:text-[var(--color-contact-accent)] 2xl:text-sm 2xl:leading-[18px]">
+              <p className="w-full text-sm font-medium leading-[18px] text-[var(--color-contact-dark)] lg:text-[13px] lg:leading-4 lg:text-[var(--color-primary)] 2xl:text-sm 2xl:leading-[18px]">
                 {director.role}
               </p>
               <p className="w-full text-[13px] font-normal leading-4 text-[var(--text-soft)] lg:text-[10px] lg:leading-[13px] 2xl:text-[13px] 2xl:leading-4">

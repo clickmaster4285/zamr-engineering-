@@ -23,7 +23,7 @@ export default function FindUs() {
         <div className="flex w-full flex-col items-start gap-6 lg:w-auto lg:flex-1 lg:gap-[17.78px] 2xl:gap-[30px]">
           <div className="flex w-full flex-col items-start gap-3 lg:gap-[11.85px] 2xl:gap-5">
             <div className="flex flex-row items-center gap-3">
-              <span className="text-sm font-medium leading-[18px] text-[var(--color-blue-accent)]">
+              <span className="text-sm font-medium leading-[18px] text-[var(--color-primary)]">
                 {sectionNumber}
               </span>
               <span className="h-px w-10 bg-[var(--color-contact-dark)]" />

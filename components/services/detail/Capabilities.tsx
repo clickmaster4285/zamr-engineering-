@@ -19,7 +19,7 @@ export default function TechnicalCapabilities({ number, heading, capabilities }:
         {/* Section Header */}
         <div className="flex w-full max-w-full flex-col gap-3">
           <div className="flex items-center gap-4">
-            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
+            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-primary)]">
               {number}
             </span>
             <span className="h-px w-[104px] bg-[var(--text-dark)]" />

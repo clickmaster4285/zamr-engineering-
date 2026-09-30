@@ -37,7 +37,7 @@ function StoryContent({ story }: { story: ImpactStory }) {
   return (
     <div className="flex w-full shrink-0 flex-col items-start gap-5 lg:gap-[11.85px] 2xl:gap-5">
       <div className="flex w-full flex-col items-start gap-3 lg:gap-[7.11px] 2xl:gap-3">
-        <span className="text-sm font-semibold leading-[18px] uppercase text-[var(--color-blue-accent)] lg:text-[13px] lg:font-medium lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+        <span className="text-sm font-semibold leading-[18px] uppercase text-[var(--color-primary)] lg:text-[13px] lg:font-medium lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
           {story.category}
         </span>
 
@@ -56,7 +56,7 @@ function StoryContent({ story }: { story: ImpactStory }) {
             key={point}
             className="flex w-full flex-row items-start gap-3 lg:items-center lg:gap-[9.48px] 2xl:gap-4"
           >
-            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center  bg-[var(--color-blue-accent)] lg:mt-0 lg:h-[14.22px] lg:w-[14.22px]  2xl:h-6 2xl:w-6 ">
+            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center  bg-[var(--color-primary)] lg:mt-0 lg:h-[14.22px] lg:w-[14.22px]  2xl:h-6 2xl:w-6 ">
               <Check
                 className="h-3 w-3 text-white lg:h-[8.3px] lg:w-[8.3px] 2xl:h-3.5 2xl:w-3.5"
                 strokeWidth={2}

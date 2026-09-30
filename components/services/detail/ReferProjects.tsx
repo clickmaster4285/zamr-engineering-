@@ -27,7 +27,7 @@ export default function ReferProjects() {
         <div className="flex w-full flex-col gap-7 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-1 flex-col gap-[28px]">
             <div className="flex items-center gap-4">
-              <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-blue-accent)]">
+              <span className="text-[16px] font-medium leading-5 tracking-[3px] text-[var(--color-primary)]">
                 {SECTION.number}
               </span>
               <span className="h-px w-[104px] bg-[var(--text-dark)]" />

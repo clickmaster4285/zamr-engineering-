@@ -28,7 +28,6 @@
   /* ════════════════════════════════════════════
      BLUE VARIANTS (derived from primary #132044)
      ════════════════════════════════════════════ */
-  --color-blue-accent: oklch(0.296 0.101 268.4);    /* #1945A7 — section numbers, tags, metrics */
   --color-blue-header: oklch(0.266 0.104 268.1);    /* #22419E — header bars, chart primary */
   --color-blue-label: oklch(0.287 0.102 267.8);     /* #2B439B — contact info labels */
   --color-chart-bar-1: oklch(0.408 0.157 268.2);    /* #3157CB */
@@ -70,7 +69,6 @@
   /* ════════════════════════════════════════════
      CONTACT PAGE (Figma design)
      ════════════════════════════════════════════ */
-  --color-contact-accent: oklch(0.426 0.163 263); /* #1945A7 — submit button, section numbers, icon strokes */
   --color-contact-blue: oklch(0.422 0.154 265);   /* #2344A1 — contact detail lines, social icon strokes */
   --color-contact-dark: oklch(0.221 0.075 264);   /* #07183D — dark navy sections (How Can We Help / map) */
 
@@ -147,7 +145,6 @@
   --color-accent-light: oklch(0.785 0.091 75.7);
 
   /* ═══ Blue variants ═══ */
-  --color-blue-accent: oklch(0.296 0.101 268.4);
   --color-blue-header: oklch(0.266 0.104 268.1);
   --color-blue-label: oklch(0.287 0.102 267.8);
   --color-chart-bar-1: oklch(0.408 0.157 268.2);

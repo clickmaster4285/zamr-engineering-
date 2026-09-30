@@ -17,11 +17,11 @@ export default function OurValue() {
         <div className="flex w-full flex-col items-start gap-7 lg:gap-[28px]">
           {/* Frame 118 — section label */}
           <div className="flex flex-row items-center gap-4">
-            <span className="text-sm font-medium tracking-[3px] text-[var(--color-contact-accent)] lg:text-base">
+            <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
               04
             </span>
-            <span className="h-px w-12 bg-[var(--color-contact-accent)] sm:w-[104px]" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--color-contact-accent)] lg:text-base">
+            <span className="h-px w-12 bg-[var(--color-primary)] sm:w-[104px]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--color-primary)] lg:text-base">
               Our Value
             </span>
           </div>
@@ -44,7 +44,7 @@ export default function OurValue() {
             return (
               <div
                 key={card.title}
-                className="flex flex-1 flex-col items-start rounded-none border-2 border-[var(--color-contact-accent)] bg-[var(--color-contact-dark)] p-8 shadow-[0px_12px_24px_rgba(0,0,0,0.102)]"
+                className="flex flex-1 flex-col items-start rounded-none border-2 border-[var(--color-primary)] bg-[var(--color-contact-dark)] p-8 shadow-[0px_12px_24px_rgba(0,0,0,0.102)]"
                 style={{ padding: "32px", gap: "16px" }}
               >
                 {/* Icon Badge */}

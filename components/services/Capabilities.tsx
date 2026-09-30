@@ -13,7 +13,7 @@ export default function Capabilities() {
     <section className="flex w-full flex-col items-start gap-8 bg-white px-4 py-12 lg:gap-[35.56px] lg:px-[76.4444px] lg:py-[77.037px] 2xl:gap-[60px] 2xl:px-[129px] 2xl:py-[130px]">
       <div className="flex w-full flex-col items-start gap-4 lg:gap-[17.78px] 2xl:gap-[30px]">
         <div className="flex w-full flex-row items-center gap-3 lg:w-auto lg:gap-[9.48px] 2xl:gap-4">
-          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
             {sectionNumber}
           </span>
           <span className="h-px w-10 shrink-0 bg-[var(--text-heading)] lg:w-[61.63px] 2xl:w-[104px]" />
@@ -49,7 +49,7 @@ export default function Capabilities() {
                 {service.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="border border-[color-mix(in_srgb,var(--color-contact-accent)_18%,transparent)] bg-white px-2.5 py-1 text-xs font-medium leading-[15px] text-[var(--text-heading)] lg:border-0 lg:px-[7.11111px] lg:py-[3.55556px] lg:text-[10px] lg:leading-[13px] 2xl:px-3 2xl:py-1.5 2xl:text-xs 2xl:leading-[15px]"
+                    className="border border-[color-mix(in_srgb,var(--color-primary)_18%,transparent)] bg-white px-2.5 py-1 text-xs font-medium leading-[15px] text-[var(--text-heading)] lg:border-0 lg:px-[7.11111px] lg:py-[3.55556px] lg:text-[10px] lg:leading-[13px] 2xl:px-3 2xl:py-1.5 2xl:text-xs 2xl:leading-[15px]"
                   >
                     {tag}
                   </span>
@@ -58,15 +58,19 @@ export default function Capabilities() {
             </button>
           ))}
         </div>
-
-        <button
-          type="button"
-          onClick={() => router.push("/contact")}
-          className="inline-flex cursor-pointer items-center gap-2 text-xs font-medium uppercase leading-[15px] tracking-[0.02em] text-[var(--color-contact-accent)] lg:text-xs 2xl:text-base 2xl:leading-5 2xl:tracking-[0.03em]"
-        >
-          {ctaLabel}
-          <ArrowRight className="h-[18px] w-[18px] lg:h-6 lg:w-6" strokeWidth={1.25} />
-        </button>
+        <div className="flex w-full flex-col items-end gap-[11px] lg:gap-[30px] 2xl:gap-[50px]">
+          {/* CTA */}
+          <button
+            type="button"
+            onClick={() => router.push("/contact")}
+            className="group uppercase inline-flex cursor-pointer items-center gap-[2px] text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-2 lg:text-base lg:leading-5 lg:tracking-[3px]"
+          >
+            {ctaLabel}
+            <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+              <ArrowRight className="h-4 w-4 lg:h-6 lg:w-6" strokeWidth={1.25} />
+            </span>
+          </button>
+        </div>
       </div>
     </section>
   );

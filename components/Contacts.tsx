@@ -8,7 +8,7 @@ import {
 } from "@/lib/useContactEnquiry";
 
 const inputClassName =
-  "w-full border-0 border-b border-[var(--border-input)] bg-transparent py-2.5 text-[15px] leading-[19px] text-[var(--text-heading)] placeholder:text-[var(--text-soft)]/50 transition-colors focus:border-[var(--color-blue-accent)] focus:outline-none lg:text-xs lg:leading-[15px]";
+  "w-full border-0 border-b border-[var(--border-input)] bg-transparent py-2.5 text-[15px] leading-[19px] text-[var(--text-heading)] placeholder:text-[var(--text-soft)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none lg:text-xs lg:leading-[15px]";
 
 const labelClassName =
   "block text-[13px] font-bold leading-4 tracking-[2px] uppercase text-[var(--text-heading)] lg:text-xs lg:leading-[15px] lg:tracking-[3px] lg:normal-case";
@@ -84,7 +84,7 @@ export default function Contact({
         <div className="flex w-full flex-col items-start gap-6 lg:gap-[29.63px] 2xl:w-[555px] 2xl:shrink-0 2xl:gap-[50px]">
           <div className="flex w-full flex-col items-start gap-3 lg:gap-[17.78px] 2xl:gap-[30px]">
             <div className="flex flex-row items-center gap-3 lg:gap-[9.48px] 2xl:gap-4">
-              <span className="text-sm font-medium leading-[18px] text-[var(--color-blue-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+              <span className="text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
                 {sectionNumber}
               </span>
               <span className="h-px w-10 bg-[var(--color-contact-dark)] lg:w-[61.63px] lg:bg-[var(--text-heading)] 2xl:w-[104px]" />
@@ -147,7 +147,7 @@ export default function Contact({
           <button
             type="submit"
             disabled={status === "sending"}
-            className="flex h-[47px] w-full items-center justify-center bg-[var(--color-blue-accent)] px-4 text-[15px] font-bold leading-[19px] tracking-[3px] uppercase text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 lg:h-12 lg:text-base lg:leading-5"
+            className="flex h-[47px] w-full items-center justify-center bg-[var(--color-primary)] px-4 text-[15px] font-bold leading-[19px] tracking-[3px] uppercase text-white transition-opacity hover:bg-white hover:text-[var(--color-primary)] hover:border hover:border-[var(--color-primary)] disabled:cursor-not-allowed disabled:opacity-60 lg:h-12 lg:text-base lg:leading-5"
           >
             {status === "sending" ? sendingLabel : submitLabel}
           </button>

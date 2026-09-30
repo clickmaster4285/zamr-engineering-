@@ -17,7 +17,7 @@ export default function WhyZamr() {
     <section className="flex w-full flex-col items-start gap-8 bg-[var(--bg-section)] px-4 py-12 lg:gap-[35.56px] lg:p-[77.037px] 2xl:gap-[60px] 2xl:p-[130px]">
       <div className="flex w-full flex-col items-start gap-4 lg:gap-[16.59px] 2xl:gap-7">
         <div className="flex w-full flex-row items-center gap-3 lg:w-auto lg:gap-[9.48px] 2xl:gap-4">
-          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
             {sectionNumber}
           </span>
           <span className="h-px w-10 shrink-0 bg-[var(--text-heading)] lg:w-[61.63px] 2xl:w-[104px]" />
@@ -44,14 +44,14 @@ export default function WhyZamr() {
         {features.map((feature, index) => (
           <article
             key={feature.number}
-            className={`flex flex-col items-start gap-4 border border-[color-mix(in_srgb,var(--color-contact-accent)_10%,transparent)] bg-[var(--bg-card)] p-5 lg:gap-0 lg:p-[16.5926px] 2xl:p-7 ${
+            className={`flex flex-col items-start gap-4 border border-[color-mix(in_srgb,var(--color-primary)_10%,transparent)] bg-[var(--bg-card)] p-5 lg:gap-0 lg:p-[16.5926px] 2xl:p-7 ${
               index === features.length - 1 ? "lg:col-span-2" : ""
             }`}
           >
             <span className="block h-0.5 w-6 shrink-0 bg-[var(--color-alert-accent-line)] lg:h-[1.19px] lg:w-[14.22px] 2xl:h-0.5 2xl:w-6" />
 
             <span
-              className="text-[11px] font-bold leading-[13px] tracking-[2px] text-[color-mix(in_srgb,var(--color-contact-accent)_45%,transparent)] lg:pt-[14.2222px] lg:text-[10px] lg:leading-[15px] lg:tracking-[1.06667px] 2xl:pt-6 2xl:text-[9px] 2xl:leading-[14px] 2xl:tracking-[1.8px]"
+              className="text-[11px] font-bold leading-[13px] tracking-[2px] text-[color-mix(in_srgb,var(--color-primary)_45%,transparent)] lg:pt-[14.2222px] lg:text-[10px] lg:leading-[15px] lg:tracking-[1.06667px] 2xl:pt-6 2xl:text-[9px] 2xl:leading-[14px] 2xl:tracking-[1.8px]"
               style={{ fontFamily: barlow.style.fontFamily }}
             >
               {feature.number}

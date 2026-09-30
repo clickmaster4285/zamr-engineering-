@@ -16,10 +16,10 @@ export default function AreasOfImpact() {
           {/* Header — label + heading */}
           <div className="flex w-full flex-col items-start gap-8 lg:gap-[17.78px] 2xl:gap-[30px]">
             <div className="flex flex-row items-center gap-3 lg:gap-[9.48px] 2xl:gap-4">
-              <span className="text-sm font-medium leading-[18px] text-[var(--color-blue-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+              <span className="text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
                 {sectionNumber}
               </span>
-              <span className="h-px w-[60px] bg-[var(--color-blue-accent)] lg:w-[61.63px] lg:bg-[var(--text-heading)] 2xl:w-[104px]" />
+              <span className="h-px w-[60px] bg-[var(--color-primary)] lg:w-[61.63px] lg:bg-[var(--text-heading)] 2xl:w-[104px]" />
               <span className="text-sm font-semibold leading-[18px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:font-medium lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
                 {sectionLabel}
               </span>
@@ -43,7 +43,7 @@ export default function AreasOfImpact() {
                   className="flex w-full flex-row items-center gap-3 lg:gap-[7.11px] 2xl:gap-3"
                 >
                   <Check
-                    className="h-5 w-5 shrink-0 text-[var(--color-blue-accent)] lg:h-[11.85px] lg:w-[11.85px] lg:[stroke-width:1.185px] 2xl:h-5 2xl:w-5 2xl:[stroke-width:2px]"
+                    className="h-5 w-5 shrink-0 text-[var(--color-primary)] lg:h-[11.85px] lg:w-[11.85px] lg:[stroke-width:1.185px] 2xl:h-5 2xl:w-5 2xl:[stroke-width:2px]"
                     strokeWidth={2}
                   />
                   <span className="min-w-0 flex-1 text-base font-medium leading-5 text-[var(--text-heading)] lg:text-[13px] lg:leading-4 2xl:text-[18px] 2xl:leading-[23px]">

@@ -10,7 +10,7 @@ export default function HowWeWork() {
         <div className="flex w-full max-w-[853px] flex-col items-start gap-6 lg:gap-[30px]">
           {/* Frame 118 — section label */}
           <div className="flex flex-row items-center gap-4">
-            <span className="text-sm font-medium tracking-[3px] text-[var(--color-blue-accent)] lg:text-base">
+            <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] lg:text-base">
               01
             </span>
             <span className="h-px w-12 bg-[var(--text-dark)] sm:w-[104px]" />

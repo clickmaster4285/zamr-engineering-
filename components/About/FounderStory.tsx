@@ -9,7 +9,7 @@ export default function FounderStory() {
     <section className="flex w-full flex-col items-start gap-8 bg-[var(--bg-section)] px-5 py-14 lg:gap-[17.78px] lg:px-[77.037px] lg:py-[77.037px] 2xl:gap-[30px] 2xl:p-[130px]">
       {/* Frame 118 — section label */}
       <div className="flex w-full flex-row items-center gap-3 lg:w-auto lg:gap-[9.48px] 2xl:gap-4">
-        <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+        <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
           {sectionNumber}
         </span>
         <span className="h-px w-10 shrink-0 bg-[var(--text-heading)] lg:w-[61.63px] 2xl:w-[104px]" />

@@ -20,7 +20,7 @@ export default function RelatedWork({ number, heading, projects }: Props) {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-[30px]">
           <div className="flex flex-col gap-6 lg:gap-[30px]">
             <div className="flex items-center gap-4">
-              <span className="text-base font-medium tracking-[3px] text-[var(--color-blue-accent)]">
+              <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
                 {number}
               </span>
               <span className="h-px w-[104px] bg-[var(--text-dark)]" />

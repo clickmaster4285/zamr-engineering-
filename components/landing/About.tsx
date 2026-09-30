@@ -68,7 +68,7 @@ export default function About() {
         <div className="flex w-full flex-col items-start gap-[7px] lg:gap-[18px] 2xl:w-[344px] 2xl:shrink-0 2xl:gap-[30px]">
           {/* Frame 118 — section label */}
           <div className="flex flex-row items-center gap-[4px] lg:gap-[9.5px] 2xl:gap-4">
-            <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
               {sectionNumber}
             </span>
             <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />

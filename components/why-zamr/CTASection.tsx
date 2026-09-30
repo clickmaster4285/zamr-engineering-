@@ -20,14 +20,14 @@ export default function CTASection() {
         <div className="flex flex-row items-center justify-center gap-4">
   <Link
     href={primaryButton.href}
-    className="flex items-center justify-center border border-[var(--color-blue-accent)] bg-[var(--color-blue-accent)] px-8 py-4 text-sm font-semibold uppercase tracking-[3px] text-white transition-all duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-blue-accent)] active:scale-[0.98]"
+    className="flex items-center justify-center border border-[var(--color-primary)] bg-[var(--color-primary)] px-8 py-4 text-sm font-semibold uppercase tracking-[3px] text-white transition-all duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)] active:scale-[0.98]"
   >
     {primaryButton.label}
   </Link>
 
   <Link
     href={secondaryButton.href}
-    className="flex items-center justify-center border border-[var(--color-blue-accent)] bg-[var(--bg-light)] px-8 py-4 text-sm font-semibold uppercase tracking-[3px] text-[var(--color-blue-accent)] transition-all duration-300 hover:bg-[var(--color-blue-accent)] hover:text-white active:scale-[0.98]"
+    className="flex items-center justify-center border border-[var(--color-primary)] bg-[var(--bg-light)] px-8 py-4 text-sm font-semibold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98]"
   >
     {secondaryButton.label}
   </Link>
