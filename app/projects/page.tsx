@@ -210,26 +210,26 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            {/* Filter pills — matching landing page style */}
-            <div className="flex w-full flex-nowrap gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:overflow-visible lg:gap-4">
-              {projectFilters.map((filter) => {
-                const isActive = filter === activeFilter;
-                const isAll = filter === "ALL";
-                return (
-                  <button
-                    key={filter}
-                    type="button"
-                    onClick={() => handleFilterChange(filter)}
-                    className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${isActive
-                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                      } ${isAll ? "w-20 lg:flex-none" : ""}`}
-                  >
-                    {filter}
-                  </button>
-                );
-              })}
-            </div>
+            {/* Filter pills — one scrolling row below 1440px, one full row from 1440px up */}
+        <div className="flex w-full min-w-0 flex-nowrap gap-3 overflow-x-auto pb-1 min-[1440px]:overflow-visible min-[1440px]:pb-0 min-[1560px]:gap-4">
+          {projectFilters.map((filter) => {
+            const isActive = filter === activeFilter;
+            const isAll = filter === "ALL";
+            return (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => handleFilterChange(filter)}
+                className={`flex-none whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm min-[1440px]:flex-1 ${isActive
+                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                  : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                  } ${isAll ? "w-20 min-[1440px]:flex-none" : ""}`}
+              >
+                {filter}
+              </button>
+            );
+          })}
+        </div>
 
             {/* Project grid — matching landing page layout */}
             {displayedProjects.length > 0 ? (
@@ -308,7 +308,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <Contacts />
+      <Contacts sectionNumber="03" />
     </main>
   );
 }
