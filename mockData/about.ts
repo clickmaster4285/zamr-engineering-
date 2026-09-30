@@ -20,6 +20,12 @@ export interface Pillar {
   description: string;
 }
 
+export const aboutSection = {
+  sectionNumber: "01",
+  sectionLabel: "ABOUT US",
+  heading: "Built on Precision & Reliability",
+};
+
 export const aboutParagraphs: string[] = [
   "ZAMR Engineering is a Sydney-based civil engineering consultancy delivering practical, high-quality infrastructure solutions across New South Wales. We work with government agencies, councils, developers, contractors, and private clients to provide civil engineering, project verification, Transport for NSW compliance, project management, and technical advisory services",
   "Our approach combines sound engineering principles with practical construction experience to deliver infrastructure that is safe, compliant, buildable, and designed for long-term performance. From concept through to construction, we focus on reducing project risk, improving constructability, and ensuring every solution meets the required technical and regulatory standards.",
@@ -33,15 +39,21 @@ export interface StatItem {
   value: number;
   suffix: string;
   label: string;
-  align: "start" | "center" | "end";
 }
 
+export const statsSection = {
+  sectionNumber: "02",
+  sectionLabel: "Trusted by Government, Developers & Contractors",
+  mobileSectionLabel: "Trusted Partner",
+  heading: "Trusted by Government, Developers & Contractors",
+};
+
 export const stats: StatItem[] = [
-  { value: 10, suffix: "+", label: "Local\nCouncils", align: "start" },
-  { value: 15, suffix: "+", label: "Government Agencies\n& Authorities", align: "center" },
-  { value: 99, suffix: "%", label: "Client\nSatisfaction", align: "center" },
-  { value: 50, suffix: "+", label: "Private Developers\n& Contractors", align: "center" },
-  { value: 100, suffix: "+", label: "Major Infrastructure\nPackages Supported", align: "end" },
+  { value: 10, suffix: "+", label: "Local Councils" },
+  { value: 15, suffix: "+", label: "Government Agencies & Authorities" },
+  { value: 99, suffix: "%", label: "Client Satisfaction" },
+  { value: 50, suffix: "+", label: "Private Developers & Contractors" },
+  { value: 100, suffix: "+", label: "Major Infrastructure Packages Supported" },
 ];
 
 // --- Organizational Structure Data ---
@@ -114,23 +126,6 @@ export const orgChartOd: BoxData = {
   type: "operational",
 };
 
-export interface SubHeaderData {
-  left: number;
-  top: number;
-  width: number;
-  title: string;
-  type: TeamType;
-}
-
-export const orgChartSubHeaders: SubHeaderData[] = [
-  { left: 106, top: 782, width: 196.43, title: "Structure Design", type: "technical" },
-  { left: 329, top: 782, width: 188.64, title: "Civil Design", type: "technical" },
-  { left: 554.54, top: 787.31, width: 196.43, title: "Traffic Management", type: "technical" },
-  { left: 791.78, top: 787.98, width: 196.43, title: "Asset Management", type: "technical" },
-  { left: 1016.2, top: 787.98, width: 198.04, title: "Operational - Quality", type: "operational" },
-  { left: 1237.48, top: 787.98, width: 197.23, title: "Operation Safety", type: "operational" },
-  { left: 1467, top: 786, width: 198.04, title: "Project Management", type: "operational" },
-];
 
 export const orgChartSubH = 44.9;
 
@@ -252,7 +247,7 @@ export const keyDirectorsContent = {
 // --- About US 04 ---
 export const aboutUs04Content = {
   sectionNumber: "04",
-  sectionLabel: "About Us",
+  sectionLabel: "Founder's Story",
   heading: "The Founder's Story Behind the Name ZAMR",
   image: "/images/image11.png",
   imageAlt: "ZAMR engineers reviewing project plans on an active construction site",

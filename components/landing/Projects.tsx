@@ -57,16 +57,14 @@ function ProjectCard({
     <div
       ref={ref}
       onClick={() => router.push(`/projects/${project.slug}`)}
-      className={`group relative h-full min-w-0 w-full cursor-pointer overflow-hidden transition-all duration-700 ease-out ${
-        inView ? "translate-y-0 scale-100" : "translate-y-10 scale-95"
-      }`}
+      className={`group relative h-full min-w-0 w-full cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView ? "translate-y-0 scale-100" : "translate-y-10 scale-95"
+        }`}
     >
       <div
-        className={`relative w-full overflow-hidden ${
-          isLarge
+        className={`relative w-full overflow-hidden ${isLarge
             ? "h-[320px] lg:h-[386px] 2xl:h-[652px]"
             : "h-[320px] lg:h-[184px] 2xl:h-[311px]"
-        }`}
+          }`}
       >
         <Image
           src={project.featuredImage}
@@ -79,11 +77,10 @@ function ProjectCard({
 
         <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
         <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${
-            !isLarge
+          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge
               ? "transition-colors duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:bg-[var(--overlay-image-hover)]"
               : ""
-          }`}
+            }`}
         />
 
         {/* Mobile layout — stacked content */}
@@ -98,21 +95,19 @@ function ProjectCard({
 
         {/* Tablet + Desktop layout */}
         <span
-          className={`absolute left-[30px] top-[30px] hidden font-extrabold tracking-[1.78px] text-white lg:block 2xl:left-[50px] 2xl:top-[50px] 2xl:tracking-[3px] ${
-            isLarge
+          className={`absolute left-[30px] top-[30px] hidden font-extrabold tracking-[1.78px] text-white lg:block 2xl:left-[50px] 2xl:top-[50px] 2xl:tracking-[3px] ${isLarge
               ? "text-[32px] leading-10 2xl:text-[54px] 2xl:leading-[68px]"
               : "text-[20px] leading-[25px] 2xl:text-[34px] 2xl:leading-[43px]"
-          }`}
+            }`}
         >
           {project.index}
         </span>
 
         <h3
-          className={`absolute bottom-[30px] left-[30px] right-[30px] hidden font-semibold text-white lg:block 2xl:bottom-[50px] 2xl:left-[50px] 2xl:right-[50px] ${
-            isLarge
+          className={`absolute bottom-[30px] left-[30px] right-[30px] hidden font-semibold text-white lg:block 2xl:bottom-[50px] 2xl:left-[50px] 2xl:right-[50px] ${isLarge
               ? "max-w-[319px] text-lg leading-[23px] 2xl:max-w-[496px] 2xl:text-[28px] 2xl:leading-[35px]"
               : "max-w-[328px] text-lg leading-[23px] 2xl:max-w-[511px] 2xl:text-[28px] 2xl:leading-[35px]"
-          }`}
+            }`}
         >
           {project.title}
         </h3>
@@ -136,18 +131,21 @@ function AllProjectsLink({ className = "" }: { className?: string }) {
 }
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState(projectFilters[1]);
+  const [activeFilter, setActiveFilter] = useState(projectFilters[0]);
   const { sectionNumber, sectionLabel, heading } = projectsSection;
 
   const filteredProjects =
     activeFilter === "ALL"
       ? projectsFeaturedWork
       : projectsFeaturedWork.filter(
-          (p) => p.category.toLowerCase() === activeFilter.toLowerCase()
-        );
+        (p) => p.category.toLowerCase() === activeFilter.toLowerCase()
+      );
 
+  const handleFilterChange = (filter: string) => {
+    setActiveFilter(filter);
+  };
   return (
-    <section className="w-full max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
+    <section className="w-full min-w-0 max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
       <div className="flex w-full min-w-0 flex-col gap-5 lg:gap-9 2xl:gap-[60px]">
         {/* Header */}
         <div className="flex w-full flex-col gap-3 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
@@ -169,34 +167,32 @@ export default function Projects() {
           <AllProjectsLink className="hidden lg:inline-flex" />
         </div>
 
-        {/* Filters — scroll on mobile/tablet so chips never blow past parent width */}
-        <div className="w-full min-w-0 max-w-full overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex w-max min-w-full flex-nowrap gap-2 lg:gap-[9.5px] 2xl:gap-4">
-            {projectFilters.map((filter) => {
-              const isActive = filter === activeFilter;
-              return (
-                <button
-                  key={filter}
-                  type="button"
-                  onClick={() => setActiveFilter(filter)}
-                  className={`flex h-[38px] shrink-0 items-center justify-center whitespace-nowrap border px-4 py-3 text-[11px] font-medium leading-[14px] tracking-[0.68px] transition-all duration-300 lg:h-[35px] lg:px-[15px] lg:py-[9.5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:h-[50px] 2xl:px-[25px] 2xl:py-4 2xl:text-sm 2xl:leading-[18px] 2xl:tracking-[3px] ${
-                    isActive
-                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                      : "border-[var(--color-primary)] bg-transparent text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                  }`}
-                >
-                  {filter}
-                </button>
-              );
-            })}
-          </div>
+        {/* Filter pills — one scrolling row below 1440px, one full row from 1440px up */}
+        <div className="flex w-full min-w-0 flex-nowrap gap-3 overflow-x-auto pb-1 min-[1440px]:overflow-visible min-[1440px]:pb-0 min-[1560px]:gap-4">
+          {projectFilters.map((filter) => {
+            const isActive = filter === activeFilter;
+            const isAll = filter === "ALL";
+            return (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => handleFilterChange(filter)}
+                className={`flex-none whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm min-[1440px]:flex-1 ${isActive
+                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                  : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                  } ${isAll ? "w-20 min-[1440px]:flex-none" : ""}`}
+              >
+                {filter}
+              </button>
+            );
+          })}
         </div>
 
-        {/* Project grid — fluid on tablet, fixed Figma widths only at 2xl */}
+        {/* Project grid — fluid width, Figma ratio (~817:621) */}
         {filteredProjects.length > 0 ? (
           <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-row lg:items-stretch lg:gap-[18px] 2xl:gap-[30px]">
             {filteredProjects[0] && (
-              <div className="w-full min-w-0 lg:flex-[1.315] lg:basis-0 2xl:w-[817px] 2xl:flex-none 2xl:basis-auto">
+              <div className="w-full min-w-0 lg:flex-[1.315] lg:basis-0">
                 <ProjectCard
                   project={filteredProjects[0]}
                   isLarge
@@ -204,7 +200,7 @@ export default function Projects() {
                 />
               </div>
             )}
-            <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-1 lg:basis-0 2xl:w-[621px] 2xl:flex-none 2xl:basis-auto 2xl:gap-[30px]">
+            <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-1 lg:basis-0 2xl:gap-[30px]">
               {filteredProjects.slice(1, 3).map((project) => (
                 <ProjectCard
                   key={project.slug}

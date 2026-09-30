@@ -91,7 +91,7 @@ function ProjectCard({
         />
 
         <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge && !noHover ? " transition-colors duration-500 hover:bg-[var(--overlay-image-hover)]" : "bg-[var(--overlay-image-default)]"}`}
+          className={`absolute inset-0 bg-[var(--overlay-image-default)] `}
         />
 
         <span
@@ -101,17 +101,9 @@ function ProjectCard({
           {project.index}
         </span>
 
-        <h3 className={`absolute left-5 bottom-5 font-semibold text-white ${noHover ? "text-[18px] leading-[23px]" : "text-[20px] leading-[26px] sm:left-8 sm:bottom-8 pr-6 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px]"} ${isLarge && !noHover && " group-hover:translate-y-[-70px] transition-transform duration-500 ease-in-out"}`}>
+        <h3 className={`absolute left-5 bottom-5 font-semibold text-white ${noHover ? "text-[18px] leading-[23px]" : "text-[20px] leading-[26px] sm:left-8 sm:bottom-8 pr-6 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px]"} `}>
           {project.title}
         </h3>
-
-        {isLarge && !noHover && (
-          <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out px-5 pb-5 sm:px-8 sm:pb-8 md:px-[50px] md:pb-[50px]">
-            <p className="max-w-[717px] text-[14px] leading-[18px] font-[400] text-white sm:text-[16px] sm:leading-[20px]">
-              {project.shortDescription}
-            </p>
-          </div>
-        )}
       </div>
     </div>
   );
@@ -218,26 +210,26 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            {/* Filter pills — matching landing page style */}
-            <div className="flex w-full flex-nowrap gap-3 overflow-x-auto pb-2 lg:flex-wrap lg:overflow-visible lg:gap-4">
-              {projectFilters.map((filter) => {
-                const isActive = filter === activeFilter;
-                const isAll = filter === "ALL";
-                return (
-                  <button
-                    key={filter}
-                    type="button"
-                    onClick={() => handleFilterChange(filter)}
-                    className={`whitespace-nowrap flex-none border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm lg:flex-1 ${isActive
-                      ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                      : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                      } ${isAll ? "w-20 lg:flex-none" : ""}`}
-                  >
-                    {filter}
-                  </button>
-                );
-              })}
-            </div>
+            {/* Filter pills — one scrolling row below 1440px, one full row from 1440px up */}
+        <div className="flex w-full min-w-0 flex-nowrap gap-3 overflow-x-auto pb-1 min-[1440px]:overflow-visible min-[1440px]:pb-0 min-[1560px]:gap-4">
+          {projectFilters.map((filter) => {
+            const isActive = filter === activeFilter;
+            const isAll = filter === "ALL";
+            return (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => handleFilterChange(filter)}
+                className={`flex-none whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm min-[1440px]:flex-1 ${isActive
+                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                  : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
+                  } ${isAll ? "w-20 min-[1440px]:flex-none" : ""}`}
+              >
+                {filter}
+              </button>
+            );
+          })}
+        </div>
 
             {/* Project grid — matching landing page layout */}
             {displayedProjects.length > 0 ? (
@@ -316,7 +308,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <Contacts />
+      <Contacts sectionNumber="03" />
     </main>
   );
 }

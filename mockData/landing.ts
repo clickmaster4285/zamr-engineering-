@@ -44,7 +44,7 @@ export const aboutSection = {
 
 export const aboutStats: StatItem[] = [
   { value: 125, suffix: "+", label: "PROJECTS DELIVERED", align: "start" },
-  { value: 12, suffix: "+", label: "YEARS OF EXPERIENCE", align: "center" },
+  { value: 12, suffix: "+", label: "YEARS INDUSTRY EXPERIENCE", align: "center" },
 ];
 
 export const aboutParagraphs: string[] = [
@@ -83,34 +83,34 @@ export interface ProjectsFeaturedWork {
 
 export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
   {
-    slug: "solarfarm-intersection-upgrade-at-643-mitchell-highway-orange",
+    slug: "wad-orange",
     index: "01",
-    title: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange ",
+    title: "WAD Orange ",
     category: "project verification",
     shortDescription:
       "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
-    heroTitle: "Solarfarm Intersection Upgrade at 643 Mitchell Highway, Orange",
-    featuredImage: "/images/image12.png",
+    heroTitle: "WAD Orange",
+    featuredImage: "/images/projects/wad_orange.jpg",
   },
   {
-    slug: "loftus-street-and-windsor-road-grantham-farm-signalised-intersection",
+    slug: "dunmore-st-wentworthville",
     index: "02",
-    title: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection ",
+    title: "Dunmore St Wentworthville",
     category: "project verification",
     shortDescription:
       "Signalised intersection upgrade at Grantham Farm improving traffic flow, safety, and connectivity for the surrounding road network.",
-    heroTitle: "Loftus Street and Windsor Road, Grantham Farm- Signalised Intersection",
-    featuredImage: "/images/image13.png",
+    heroTitle: "Dunmore St Wentworthville",
+    featuredImage: "/images/projects/dunmore.jpg",
   },
   {
-    slug: "mr536-mamre-road-&-abbotts Rd-kemps-creek",
+    slug: "liverpool-bridge-inspection",
     index: "03",
-    title: "MR536 Mamre Road & Abbotts Rd Kemps Creek ",
+    title: "Liverpool Bridge Inspection",
     category: "project verification",
     shortDescription:
       "Road infrastructure upgrade improving intersection geometry, drainage, and overall road safety at the Mamre Road and Abbotts Road connection.",
-    heroTitle: "MR536 Mamre Road & Abbotts Rd Kemps Creek",
-    featuredImage: "/images/image14.png",
+    heroTitle: "Liverpool Bridge Inspection",
+    featuredImage: "/images/projects/liverpool.png",
   },
 ];
 
@@ -120,7 +120,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "engineering-and-design",
     title: "Engineering & Design",
     description:
-      "Precision-engineered civil solutions across hydraulic systems, structural frameworks, and geotechnical analysis for complex urban and regional infrastructure projects.",
+      "ZAMR Engineering provides integrated engineering and design services across civil, structural, transport and infrastructure projects. From early investigations and concept development through detailed design and construction support, we deliver practical, buildable and value-focused solutions tailored to project requirements.",
     tags: [
       "Civil",
       "Structural",
@@ -135,7 +135,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "project-and-program-management",
     title: "Project & Program Management",
     description:
-      "Independent technical assurance — compliance review, quality auditing, and risk mitigation across the full infrastructure project lifecycle from design through to delivery.",
+      "ZAMR Engineering provides project and program management services across the infrastructure lifecycle, from project development and procurement through design, construction and close-out. Our senior-led approach focuses on effective governance, commercial control, stakeholder coordination and successful project outcomes.",
     tags: [
       "Project Management",
       "Contract Management",
@@ -149,7 +149,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "project-verification-and-assurance",
     title: "Project Verification & Assurance",
     description:
-      "Advanced pavement engineering, geometric road design, and integrated traffic systems for future-ready transport networks across New South Wales and beyond.",
+      "ZAMR Engineering provides independent Project Verification and technical assurance services for transport and infrastructure projects, with particular expertise in TfNSW developer-delivered works. We provide independent oversight across design and construction to confirm compliance, quality and technical integrity.",
     tags: [
       "TfNSW WAD",
       "Independent Verification",
@@ -163,7 +163,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "asset-management-and-inspection",
     title: "Asset Management & Inspection",
     description:
-      "Engineering the clean energy transition — solar farm civil works, wind turbine foundations, and hybrid energy infrastructure at utility scale.",
+      "ZAMR Engineering provides asset management, inspection and condition assessment services to help infrastructure owners understand asset condition, manage risk and optimise maintenance and renewal investment across the asset lifecycle.",
     tags: [
       "Bridge Inspections",
       "Structural Inspections",
@@ -177,7 +177,7 @@ export const servicesPreview: ServicePreviewItem[] = [
     slug: "buildings-and-property-engineering",
     title: "Buildings & Property Engineering",
     description:
-      "Specialist advisory and compliance consulting precisely aligned with Transport for NSW regulatory standards, technical specifications, and certification frameworks.",
+      "ZAMR Engineering provides multidisciplinary engineering services for residential, commercial, industrial and community buildings. We support clients from feasibility and design through approvals, construction, inspection, certification and asset maintenance.",
     tags: [
       "Structural",
       "Civil",
@@ -356,6 +356,11 @@ export const contactSection: ContactSectionContent = {
       value: contactInfo.phone,
       href: `tel:${contactInfo.phone.replace(/\s/g, "")}`,
     },
+    {
+      label: "Email",
+      value: "khalid.javed@zamrengineering.com.au",
+      href: "mailto:khalid.javed@zamrengineering.com.au",
+    },
   ],
   formFields: [
     {
@@ -387,8 +392,8 @@ export const contactSection: ContactSectionContent = {
     {
       id: "designation",
       name: "designation",
-      label: "Origination(optional)",
-      placeholder: "Origination",
+      label: "Organizations (Optional)",
+      placeholder: "Organizations",
       type: "text",
       half: true,
     },
@@ -520,14 +525,9 @@ export const footerSocialLinks: FooterSocialLink[] = [
     href: contactInfo.socialLinks[1]?.href ?? "#",
   },
   {
-    src: "/icons/facebookSq.svg",
-    alt: "Facebook",
-    href: "#",
-  },
-  {
-    src: "/icons/tweetersq.svg",
-    alt: "Twitter",
-    href: "#",
+    src: "/icons/insta.png",
+    alt: "Instagram",
+    href: contactInfo.socialLinks[0]?.href ?? "#",
   },
 ];
 

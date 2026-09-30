@@ -9,7 +9,7 @@ export interface HeroContent {
 export const heroContent: HeroContent = {
   title: "Meet the Experts Behind\nZAMR Engineering",
   subtitle:
-    "Our strength lies in our people. From engineering specialists to project managers and operational leaders, our experienced team works together to deliver quality, innovation, and reliable engineering solutions across every project.",
+    "Our strength lies in our people — experienced engineers, project professionals, and technical specialists who combine practical delivery experience with engineering excellence to support complex infrastructure projects.",
   image: "/images/image5.jpeg",
 };
 

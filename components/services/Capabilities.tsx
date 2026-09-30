@@ -1,68 +1,75 @@
 "use client";
+
 import { useRouter } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 import { services, servicesCapabilitiesSection } from "@/mockData/services";
 
 export default function Capabilities() {
-  const { sectionNumber, sectionLabel, heading } = servicesCapabilitiesSection;
+  const { sectionNumber, sectionLabel, heading, ctaLabel } =
+    servicesCapabilitiesSection;
   const router = useRouter();
-  return (
-    <section className="w-full bg-white px-6 py-16 lg:px-[130px] lg:py-[130px]">
-      <div className="flex w-full flex-col gap-[60px]">
-        {/* Header */}
-        <div className="flex w-full flex-col gap-[30px]">
-          {/* Section label — Frame 118 */}
-          <div className="flex flex-row items-center gap-4">
-            <span className="text-base font-medium tracking-[3px] text-[var(--color-contact-accent)]">
-              {sectionNumber}
-            </span>
-            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
-            <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
-              {sectionLabel}
-            </span>
-          </div>
 
-          {/* Heading */}
-          <h2 className="w-full text-[32px] font-bold leading-[40px] text-[var(--text-heading)] sm:text-[40px] sm:leading-[50px] lg:text-[56px] lg:leading-[71px]">
-            {heading}
-          </h2>
+  return (
+    <section className="flex w-full flex-col items-start gap-8 bg-white px-4 py-12 lg:gap-[35.56px] lg:px-[76.4444px] lg:py-[77.037px] 2xl:gap-[60px] 2xl:px-[129px] 2xl:py-[130px]">
+      <div className="flex w-full flex-col items-start gap-4 lg:gap-[17.78px] 2xl:gap-[30px]">
+        <div className="flex w-full flex-row items-center gap-3 lg:w-auto lg:gap-[9.48px] 2xl:gap-4">
+          <span className="shrink-0 text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            {sectionNumber}
+          </span>
+          <span className="h-px w-10 shrink-0 bg-[var(--text-heading)] lg:w-[61.63px] 2xl:w-[104px]" />
+          <span className="text-sm font-medium leading-[18px] tracking-[3px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            {sectionLabel}
+          </span>
         </div>
 
-        {/* Capability cards grid — Frame 1321319114 + 1321319115 */}
-        <div className="grid w-full grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-[31px] lg:gap-y-[30px]">
+        <h2 className="w-full text-[28px] font-semibold leading-[35px] text-[var(--text-heading)] lg:text-[26.0741px] lg:font-bold lg:leading-[33px] 2xl:text-[44px] 2xl:leading-[55px]">
+          {heading}
+        </h2>
+      </div>
+
+      <div className="flex w-full flex-col items-start gap-4 lg:flex-row lg:flex-wrap lg:justify-end lg:gap-6 2xl:gap-[30px]">
+        <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6 2xl:grid-cols-3 2xl:gap-x-[31px] 2xl:gap-y-[30px]">
           {services.map((service) => (
-            <div
+            <button
               key={service.slug}
+              type="button"
               onClick={() => router.push(`/services/${service.slug}`)}
-              className="group flex cursor-pointer flex-col gap-[30px] p-[30px]"
-              style={{ background: "var(--bg-hover)" }}
+              className="group  flex w-full cursor-pointer flex-col items-start gap-5 bg-[var(--bg-hover)] p-5 text-left lg:gap-[17.78px] lg:p-[17.7778px] 2xl:gap-[30px] 2xl:p-[30px]"
             >
-              {/* Number + title */}
-              <div className="flex flex-col items-start gap-3">
-                <span className="text-base font-medium tracking-[3px] text-[var(--text-dark)]">
+              <div className="flex w-full flex-col items-start gap-2 lg:gap-[7.11px] 2xl:gap-3">
+                <span className="text-sm font-medium leading-[18px] tracking-[2px] text-[var(--text-soft)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] lg:text-[var(--text-heading)] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
                   {service.index}
                 </span>
-
-                <h3 className=" text-[28px] font-semibold  leading-[35px] text-[var(--text-dark)]   transition-colors                duration-200   group-hover:text-primary group-hover:underline   "
-                >
+                <h3 className="w-full text-[20px] font-semibold leading-[25px] text-[var(--text-heading)] transition-all duration-300 group-hover:underline lg:text-[18px] lg:leading-[23px] 2xl:text-[28px] 2xl:leading-[35px]">
                   {service.title}
                 </h3>
               </div>
 
-              {/* Tag rows */}
-              <div className="flex flex-col gap-[20px]">
-                <div className="flex flex-wrap items-center gap-[10px]">
-                  {service.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-white px-3 py-1.5 text-[12px] font-medium leading-[15px] text-[var(--text-dark)]"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div className="flex flex-wrap items-start gap-2 lg:gap-[5.93px] 2xl:gap-2.5">
+                {service.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="border border-[color-mix(in_srgb,var(--color-primary)_18%,transparent)] bg-white px-2.5 py-1 text-xs font-medium leading-[15px] text-[var(--text-heading)] lg:border-0 lg:px-[7.11111px] lg:py-[3.55556px] lg:text-[10px] lg:leading-[13px] 2xl:px-3 2xl:py-1.5 2xl:text-xs 2xl:leading-[15px]"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-            </div>
+            </button>
           ))}
+        </div>
+        <div className="flex w-full flex-col items-end gap-[11px] lg:gap-[30px] 2xl:gap-[50px]">
+          {/* CTA */}
+          <button
+            type="button"
+            onClick={() => router.push("/contact")}
+            className="group uppercase inline-flex cursor-pointer items-center gap-[2px] text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-2 lg:text-base lg:leading-5 lg:tracking-[3px]"
+          >
+            {ctaLabel}
+            <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+              <ArrowRight className="h-4 w-4 lg:h-6 lg:w-6" strokeWidth={1.25} />
+            </span>
+          </button>
         </div>
       </div>
     </section>

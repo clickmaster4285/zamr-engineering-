@@ -1,9 +1,29 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { leadershipTeam } from "@/mockData/our-teams";
+import { leadershipTeam, type TeamMember } from "@/mockData/our-teams";
 
 export default function LeadershipTeam() {
+  const [selected, setSelected] = useState<TeamMember | null>(null);
+
+  useEffect(() => {
+    if (!selected) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelected(null);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [selected]);
+
   return (
     <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
       <div className="flex w-full flex-col gap-[60px]">
@@ -29,17 +49,19 @@ export default function LeadershipTeam() {
         {/* Cards grid */}
         <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {leadershipTeam.map((member) => (
-            <div
+            <button
               key={member.name}
-              className="flex w-full flex-col gap-4 border-b border-[var(--border-light)] pb-5"
+              type="button"
+              onClick={() => setSelected(member)}
+              className="group flex w-full cursor-pointer flex-col gap-4 border-b border-[var(--border-light)] pb-5 text-left"
             >
               {/* Headshot */}
-              <div className="relative aspect-[4/5] w-full overflow-hidden bg-gray-100">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-[var(--bg-card)]">
                 <Image
                   src={member.headshot}
                   alt={member.name}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
@@ -48,17 +70,39 @@ export default function LeadershipTeam() {
                 <h3 className="w-full text-lg font-bold leading-[23px] text-[var(--text-dark)]">
                   {member.name}
                 </h3>
-                {/* <p className="w-full text-sm font-medium leading-[18px] text-[var(--color-primary)]">
-                  {member.role}
-                </p>
-                <p className="w-full text-[13px] font-normal leading-4 text-[var(--text-soft)]">
-                  {member.department}
-                </p> */}
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
+
+      {/* Member photo modal */}
+      {selected && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={selected.name}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--overlay-modal)] p-6"
+          onClick={() => setSelected(null)}
+        >
+          <div
+            className="relative aspect-[4/5] w-full max-w-[320px] overflow-hidden shadow-2xl sm:max-w-[380px]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <Image
+              src={selected.headshot}
+              alt={selected.name}
+              fill
+              className="object-cover"
+              sizes="380px"
+              priority
+            />
+            <p className="absolute bottom-5 left-5 text-xl font-bold leading-none text-white sm:text-2xl">
+              {selected.name}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

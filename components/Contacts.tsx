@@ -8,20 +8,23 @@ import {
 } from "@/lib/useContactEnquiry";
 
 const inputClassName =
-  "w-full border-0 border-b border-[var(--border-input)] bg-transparent py-2.5 text-xs leading-[15px] text-[var(--text-heading)] placeholder:text-[var(--text-soft)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none";
+  "w-full border-0 border-b border-[var(--border-input)] bg-transparent py-2.5 text-[15px] leading-[19px] text-[var(--text-heading)] placeholder:text-[var(--text-soft)]/50 transition-colors focus:border-[var(--color-primary)] focus:outline-none lg:text-xs lg:leading-[15px]";
 
 const labelClassName =
-  "block text-[10px] font-bold leading-[13px] text-[var(--text-heading)] lg:text-xs lg:leading-[15px] lg:tracking-[3px]";
+  "block text-[13px] font-bold leading-4 tracking-[2px] uppercase text-[var(--text-heading)] lg:text-xs lg:leading-[15px] lg:tracking-[3px] lg:normal-case";
 
 type Props = {
   bgcolor?: string;
+  sectionNumber: string;
 };
 
-export default function Contact({ bgcolor = "bg-white" }: Props) {
+export default function Contact({
+  bgcolor = "bg-[var(--bg-section)]",
+  sectionNumber,
+}: Props) {
   const { form, handleChange, handleSubmit, status, errors } =
     useContactEnquiry();
   const {
-    sectionNumber,
     sectionLabel,
     heading,
     details,
@@ -50,7 +53,7 @@ export default function Contact({ bgcolor = "bg-white" }: Props) {
             value={value}
             onChange={handleChange}
             placeholder={field.placeholder}
-            className={`${inputClassName} h-[133.5px] resize-none`}
+            className={`${inputClassName} h-[100px] resize-none lg:h-[133.5px]`}
           />
         ) : (
           <input
@@ -62,7 +65,7 @@ export default function Contact({ bgcolor = "bg-white" }: Props) {
             placeholder={field.placeholder}
             minLength={field.name === "phone" ? 7 : undefined}
             maxLength={field.name === "phone" ? 15 : undefined}
-            className={`${inputClassName} h-[43.5px]`}
+            className={`${inputClassName} h-[39px] lg:h-[43.5px]`}
           />
         )}
         {error && (
@@ -74,67 +77,61 @@ export default function Contact({ bgcolor = "bg-white" }: Props) {
 
   return (
     <section
-      className={`w-full ${bgcolor} px-[30px] py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]`}
+      className={`w-full ${bgcolor} px-5 py-12 lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]`}
     >
-      <div className="flex w-full flex-col items-center gap-8 lg:gap-10 2xl:flex-row 2xl:items-center 2xl:gap-[231px]">
+      <div className="flex w-full flex-col items-start gap-10 lg:items-center lg:gap-10 2xl:flex-row 2xl:items-center 2xl:gap-[231px]">
         {/* Left — heading + details */}
-        <div className="flex w-full flex-col gap-[11px] lg:gap-[30px] 2xl:w-[555px] 2xl:shrink-0 2xl:gap-[50px]">
-          <div className="flex flex-col gap-[7px] lg:gap-[18px] 2xl:gap-[30px]">
-            <div className="flex items-center gap-[4px] lg:gap-[9.5px] 2xl:gap-4">
-              <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+        <div className="flex w-full flex-col items-start gap-6 lg:gap-[29.63px] 2xl:w-[555px] 2xl:shrink-0 2xl:gap-[50px]">
+          <div className="flex w-full flex-col items-start gap-3 lg:gap-[17.78px] 2xl:gap-[30px]">
+            <div className="flex flex-row items-center gap-3 lg:gap-[9.48px] 2xl:gap-4">
+              <span className="text-sm font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
                 {sectionNumber}
               </span>
-              <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
-              <span className="text-[12px] font-medium leading-[15px] tracking-[3px] uppercase text-[var(--text-section-label)]">
+              <span className="h-px w-10 bg-[var(--color-primary)] lg:w-[61.63px] lg:bg-[var(--text-heading)] 2xl:w-[104px]" />
+              <span className="text-sm font-medium leading-[18px] tracking-[3px] uppercase text-[var(--text-heading)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] 2xl:text-base 2xl:leading-5">
                 {sectionLabel}
               </span>
             </div>
-            <h2 className="text-[36px] font-bold leading-[45px] text-[var(--text-heading)] lg:text-[33px] lg:leading-[42px] 2xl:text-[56px] 2xl:leading-[71px]">
+
+            <h2 className="w-full text-[28px] font-semibold leading-[35px] text-[var(--text-heading)] lg:text-[33.1852px] lg:font-bold lg:leading-[42px] 2xl:text-[56px] 2xl:leading-[71px]">
               {heading}
             </h2>
           </div>
 
-          <div className="flex flex-col gap-5">
-            {details.map((line) => (
-              <p
-                key={line.label}
-                className="text-xs leading-[15px] [font-feature-settings:'liga'_off] 2xl:text-lg 2xl:leading-[23px]"
-              >
-                <span className=" text-[var(--color-primary)]">
-                {line.label}:{" "}
+          <div className="flex w-full flex-col items-start gap-4 lg:gap-[11.85px] 2xl:gap-5">
+            {details.map((line) => {
+              const Component = line.href ? "a" : "p";
 
-                </span>
-                {line.href ? (
-                  <a
-                    href={line.href}
-                    className="transition-opacity hover:opacity-70"
-                  >
-                    {line.value}
-                  </a>
-                ) : (
-                  line.value
-                )}
-              </p>
-            ))}
+              return (
+                <Component
+                  key={`${line.label}-${line.value}`}
+                  {...(line.href ? { href: line.href } : {})}
+                  className={`w-full text-[15px]  leading-[19px] [font-feature-settings:'liga'_off] lg:text-[13px] lg:font-normal lg:leading-4  2xl:text-lg 2xl:leading-[23px] ${
+                    line.label === "Phone" ? "lg:capitalize" : ""
+                  } ${line.href ? "transition-opacity hover:opacity-70" : ""}`}
+                >
+                  <span className="text-[var(--color-primary)] ">{line.label}: </span> <span> {line.value} </span>
+                 </Component>
+              );
+            })}
           </div>
+
         </div>
 
         {/* Right — form */}
         <form
           onSubmit={handleSubmit}
-          className="flex w-full flex-col gap-7 2xl:w-[682px] 2xl:shrink-0"
+          className="flex w-full flex-col items-start gap-6 lg:gap-7 2xl:w-[682px] 2xl:shrink-0"
         >
-          {/* Row pairs: name/email, phone/origination */}
-          <div className="flex w-full flex-col gap-7">
-            <div className="grid grid-cols-2 gap-6">
+          <div className="flex w-full flex-col gap-6 lg:gap-7">
+            <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-2">
               {halfFields.slice(0, 2).map(renderField)}
             </div>
-            <div className="grid grid-cols-2 gap-7">
+            <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-7">
               {halfFields.slice(2, 4).map(renderField)}
             </div>
+            {fullFields.map(renderField)}
           </div>
-
-          {fullFields.map(renderField)}
 
           {status === "success" && (
             <p className="text-sm text-[var(--color-success)]">
@@ -150,7 +147,7 @@ export default function Contact({ bgcolor = "bg-white" }: Props) {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="flex h-12 w-full items-center justify-center bg-[var(--color-primary)] px-4 text-base font-bold leading-5 tracking-[3px] uppercase text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+            className="flex h-[47px] w-full items-center justify-center bg-[var(--color-primary)] px-4 text-[15px] font-bold leading-[19px] tracking-[3px] uppercase text-white transition-opacity hover:bg-white hover:text-[var(--color-primary)] hover:border hover:border-[var(--color-primary)] disabled:cursor-not-allowed disabled:opacity-60 lg:h-12 lg:text-base lg:leading-5"
           >
             {status === "sending" ? sendingLabel : submitLabel}
           </button>

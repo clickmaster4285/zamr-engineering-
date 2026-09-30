@@ -60,9 +60,11 @@ export default function Services() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm leading-[18px] text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:ml-[14px] lg:flex-1 lg:text-[13px] lg:leading-4 2xl:ml-[22px] 2xl:max-w-[690px] 2xl:text-lg 2xl:leading-[23px]">
-                  {service.description}
-                </p>
+                <p className="text-sm leading-[18px] text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:ml-[14px] lg:flex-1 lg:text-[13px] lg:leading-4 2xl:mx-[22px] 2xl:max-w-[690px] 2xl:text-lg 2xl:leading-[23px]">
+  {service.description.length > 100
+    ? `${service.description.slice(0, 100)}...`
+    : service.description}
+</p>
 
                 {/* Tags — always on mobile; hover-reveal tablet+ */}
                 {service.tags.length > 0 && (
@@ -87,7 +89,7 @@ export default function Services() {
           <button
             type="button"
             onClick={() => router.push("/contact")}
-            className="group inline-flex cursor-pointer items-center gap-[2px] text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-blue-accent)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-2 lg:text-base lg:leading-5 lg:tracking-[3px]"
+            className="group uppercase inline-flex cursor-pointer items-center gap-[2px] text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-2 lg:text-base lg:leading-5 lg:tracking-[3px]"
           >
             {ctaLabel}
             <span className="transition-transform duration-300 group-hover:translate-x-[5px]">

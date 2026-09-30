@@ -5,7 +5,7 @@ export default function ContactHero() {
   const { title, subtitle, image } = heroContent;
 
   return (
-    <section className="relative h-[450px] w-full overflow-hidden sm:h-[550px] lg:h-[700px]">
+    <section className="relative h-[364px] w-full overflow-hidden lg:h-[414.81px] 2xl:h-[700px]">
       <Image
         src={image}
         alt="ZAMR Engineering contact"
@@ -16,11 +16,11 @@ export default function ContactHero() {
 
       <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-      <div className="absolute bottom-8 left-1/2 flex w-full max-w-[912px] -translate-x-1/2 flex-col gap-4 px-4 sm:bottom-10 sm:px-6 lg:bottom-[60px] lg:left-[130px] lg:translate-x-0 lg:gap-5 lg:px-0">
-        <h1 className="w-full text-[28px] font-bold leading-[36px] text-white sm:text-[40px] sm:leading-[48px] md:text-[50px] md:leading-[60px] lg:text-[80px] lg:leading-[101px]">
+      <div className="absolute left-5 right-5 top-[141.48px] flex flex-col items-start justify-center gap-5 lg:left-[77.04px] lg:right-auto lg:top-[calc(50%-81.925px+92.44px)] lg:w-[540.44px] lg:gap-[11.85px] 2xl:left-[130px] 2xl:top-[calc(50%-134px+156px)] 2xl:w-[912px] 2xl:gap-5">
+        <h1 className="w-full text-[34px] font-bold leading-[43px] text-white lg:text-[47.4074px] lg:leading-[60px] 2xl:text-[80px] 2xl:leading-[101px]">
           {title}
         </h1>
-        <p className="w-full max-w-[912px] text-xs font-medium leading-relaxed text-[var(--text-light-subtle)] sm:text-sm md:text-base lg:text-[18px] lg:leading-[23px]">
+        <p className="w-full text-base font-normal leading-[1.5] text-[var(--text-light-subtle)] lg:text-[13px] lg:font-medium lg:leading-4 2xl:text-[18px] 2xl:leading-[23px]">
           {subtitle}
         </p>
       </div>

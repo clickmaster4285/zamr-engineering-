@@ -18,6 +18,12 @@ export interface HowWeWorkRow {
   description: string;
 }
 
+export const howWeWorkSection = {
+  number: "01",
+  label: "How We Work",
+  heading: "The ZAMR Difference",
+} as const;
+
 export const howWeWorkRows: HowWeWorkRow[] = [
   {
     title: "Experienced Engineering Team",
@@ -67,6 +73,12 @@ export interface CommitmentCard {
   description: string;
 }
 
+export const commitmentSection = {
+  number: "02",
+  label: "Our Commitment",
+  heading: "Our Commitment to Every Client",
+} as const;
+
 export const commitmentCards: CommitmentCard[] = [
   {
     title: "Quality",
@@ -79,7 +91,7 @@ export const commitmentCards: CommitmentCard[] = [
       "Building trusted relationships through transparency, accountability, and professionalism.",
   },
   {
-    title: "Innovation ",
+    title: "Innovation",
     description:
       "Applying practical thinking and modern engineering approaches to overcome project challenges.",
   },
@@ -125,6 +137,11 @@ export interface TrackRecordStat {
   align: "start" | "center" | "end";
 }
 
+export const trackRecordSection = {
+  number: "03",
+  label: "Our Track Record",
+} as const;
+
 export const trackRecordStats: TrackRecordStat[] = [
   { value: "12", suffix: "+", label: "YEARS OF EXPERIENCE", align: "start" },
   { value: "05", label: "ENGINEERING DISCIPLINES", align: "center" },
@@ -159,6 +176,8 @@ export const ourValueCards: OurValueCard[] = [
 ];
 
 export const ourValueContent = {
+  number: "04",
+  label: "Our Value",
   heading: "Our Value",
   subtitle:
     "We deliver more than engineering expertise — we bring a commitment to community, accessibility, and end-to-end partnership.",
@@ -174,7 +193,7 @@ export interface CTAContent {
 export const ctaContent: CTAContent = {
   heading: "Partner with a Team You Can Trust",
   description:
-    "Whether you're planning new infrastructure, managing complex engineering challenges, or seeking reliable technical expertise, ZAMR Engineering is ready to support your next project.",
+    "Whether you require civil engineering support, infrastructure delivery expertise, or independent project verification, ZAMR Engineering provides the technical confidence and practical solutions needed to deliver successful outcomes.",
   primaryButton: { label: "Get In Touch", href: "/contact" },
   secondaryButton: { label: "Explore Services", href: "/services" },
 };

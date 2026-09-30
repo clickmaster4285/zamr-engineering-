@@ -28,7 +28,6 @@
   /* ════════════════════════════════════════════
      BLUE VARIANTS (derived from primary #132044)
      ════════════════════════════════════════════ */
-  --color-blue-accent: oklch(0.296 0.101 268.4);    /* #1945A7 — section numbers, tags, metrics */
   --color-blue-header: oklch(0.266 0.104 268.1);    /* #22419E — header bars, chart primary */
   --color-blue-label: oklch(0.287 0.102 267.8);     /* #2B439B — contact info labels */
   --color-chart-bar-1: oklch(0.408 0.157 268.2);    /* #3157CB */
@@ -67,12 +66,6 @@
   --color-success: oklch(0.52 0.14 152);           /* form success feedback */
   --color-error: oklch(0.55 0.19 27);              /* form error feedback */
 
-  /* ════════════════════════════════════════════
-     CONTACT PAGE (Figma design)
-     ════════════════════════════════════════════ */
-  --color-contact-accent: oklch(0.426 0.163 263); /* #1945A7 — submit button, section numbers, icon strokes */
-  --color-contact-blue: oklch(0.422 0.154 265);   /* #2344A1 — contact detail lines, social icon strokes */
-  --color-contact-dark: oklch(0.221 0.075 264);   /* #07183D — dark navy sections (How Can We Help / map) */
 
   /* ════════════════════════════════════════════
      IMAGE OVERLAYS (non-hero images)
@@ -84,6 +77,7 @@
   --overlay-image-default: oklch(0 0 0 / 0.3);      /* black 30% — darkens images for text readability */
   --overlay-image-hover: oklch(0.254 0.07 266.5 / 0.5);  /* primary blue 50% — blue tint on hover */
   --overlay-image-hero: oklch(0.222 0.07 265.6 / 0.8);  /* primary blue 80% — blue tint on hero */
+  --overlay-modal: oklch(0 0 0 / 0.90);               /* black 65% — modal/lightbox backdrop */
 
   /* ════════════════════════════════════════════
      BORDERS
@@ -93,6 +87,7 @@
   --border-section: oklch(0.925 0 0);             /* #EAEAEA */
   --border-table: oklch(0.951 0.004 264.4);       /* #EEF0F8 */
   --border-dark: oklch(1 0 0 / 0.08);             /* white 8% — for dark backgrounds */
+  --border-impact-card: oklch(0.905 0.022 255);   /* #D7E2F1 — impact story card border */
 
   /* ════════════════════════════════════════════
      SHADCN / DEFAULT VARS (unchanged)
@@ -144,7 +139,6 @@
   --color-accent-light: oklch(0.785 0.091 75.7);
 
   /* ═══ Blue variants ═══ */
-  --color-blue-accent: oklch(0.296 0.101 268.4);
   --color-blue-header: oklch(0.266 0.104 268.1);
   --color-blue-label: oklch(0.287 0.102 267.8);
   --color-chart-bar-1: oklch(0.408 0.157 268.2);

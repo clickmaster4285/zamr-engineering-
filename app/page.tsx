@@ -16,7 +16,7 @@ export default function Page() {
       <Projects />
       <WhyZamr />
       <Locations />
-      <Contacts bgcolor="bg-white" />
+      <Contacts bgcolor="bg-white" sectionNumber="06"/>
     </main>
   );
 }

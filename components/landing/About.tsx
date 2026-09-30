@@ -68,7 +68,7 @@ export default function About() {
         <div className="flex w-full flex-col items-start gap-[7px] lg:gap-[18px] 2xl:w-[344px] 2xl:shrink-0 2xl:gap-[30px]">
           {/* Frame 118 — section label */}
           <div className="flex flex-row items-center gap-[4px] lg:gap-[9.5px] 2xl:gap-4">
-            <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-contact-accent)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
               {sectionNumber}
             </span>
             <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px] 2xl:w-[104px]" />
@@ -84,6 +84,15 @@ export default function About() {
             </h2>
             <span className="block h-px w-[30px] bg-[var(--color-alert-accent-line)] lg:w-[79px] 2xl:w-[133px]" />
           </div>
+          {/* Trusted line */}
+          {aboutlastbottomparagraph.map((p, i) => (
+            <p
+              key={i}
+              className="w-full text-[var(--color-primary)] text-base leading-5 [font-feature-settings:'liga'_off] lg:text-[15px] lg:leading-[19px] 2xl:text-[20px] 2xl:leading-[25px]"
+            >
+              {p}
+            </p>
+          ))}
         </div>
 
         {/* Frame 1321318990 — right / bottom: copy + stats */}
@@ -109,42 +118,28 @@ export default function About() {
               const isCentered = stat.align === "center";
               return (
                 <div
-                  key={stat.label}
-                  className={`flex min-w-0 flex-1 flex-col gap-[0.5px] lg:gap-[1px] 2xl:gap-0.5 ${
-                    isCentered
-                      ? "items-center lg:items-start"
-                      : "items-start"
-                  }`}
-                >
-                  <div className="flex flex-row items-start gap-[2px] lg:gap-[5px] 2xl:gap-2">
-                    <span className="text-[36px] font-normal leading-[45px] text-[var(--color-primary)] lg:text-[43px] lg:leading-[54px] 2xl:text-[72px] 2xl:leading-[91px]">
-                      {currentValues[index]}
-                    </span>
-                    <span className="text-[30px] font-light leading-9 text-[var(--color-primary)] lg:text-[25px] lg:leading-[30px] 2xl:text-[42px] 2xl:leading-[50px]">
-                      {stat.suffix}
-                    </span>
-                  </div>
-                  <span
-                    className={`w-full text-sm font-light leading-[18px] text-[var(--text-heading)] lg:text-[13px] lg:leading-4 2xl:text-base 2xl:leading-5 ${
-                      isCentered ? "text-center lg:text-left" : "text-left"
-                    }`}
-                  >
-                    {stat.label}
+                key={stat.label}
+                className="flex min-w-0 flex-1 flex-col items-start gap-[0.5px] lg:gap-[1px] 2xl:gap-0.5"
+              >
+                <div className="flex flex-row items-start gap-[2px] lg:gap-[5px] 2xl:gap-2">
+                  <span className="text-[36px] font-normal leading-[45px] text-[var(--color-primary)] lg:text-[43px] lg:leading-[54px] 2xl:text-[72px] 2xl:leading-[91px]">
+                    {currentValues[index]}
+                  </span>
+              
+                  <span className="text-[30px] font-light leading-9 text-[var(--color-primary)] lg:text-[25px] lg:leading-[30px] 2xl:text-[42px] 2xl:leading-[50px]">
+                    {stat.suffix}
                   </span>
                 </div>
+              
+                <span className="w-full text-left text-sm font-light leading-[18px] text-[var(--text-heading)] lg:text-[13px] lg:leading-4 2xl:text-base 2xl:leading-[20px]">
+                  {stat.label}
+                </span>
+              </div>
               );
             })}
           </div>
 
-          {/* Trusted line */}
-          {aboutlastbottomparagraph.map((p, i) => (
-            <p
-              key={i}
-              className="w-full text-base leading-5 text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:text-[15px] lg:leading-[19px] 2xl:text-[20px] 2xl:leading-[25px]"
-            >
-              {p}
-            </p>
-          ))}
+          
         </div>
       </div>
     </section>

@@ -7,31 +7,31 @@ export default function CTASection() {
   const { heading, description, primaryButton, secondaryButton } = ctaContent;
 
   return (
-    <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
-      <div className="mx-auto flex w-full max-w-[728px] flex-col items-center justify-center gap-8 lg:gap-[30px]">
-        <h2 className="w-full text-center text-[36px] font-bold leading-[44px] text-[var(--text-dark)] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
+    <section className="flex w-full flex-col items-start bg-white px-5 py-[60px] lg:items-center lg:justify-center lg:p-[77.037px] 2xl:p-[130px]">
+      <div className="flex w-full flex-col items-start gap-6 lg:max-w-none lg:items-center lg:justify-center lg:gap-[17.78px] 2xl:max-w-[728px] 2xl:gap-[30px]">
+        <h2 className="w-full text-[28px] font-semibold leading-[35px] text-[var(--text-heading)] lg:text-center lg:text-[33.1852px] lg:font-bold lg:leading-[42px] 2xl:text-[56px] 2xl:leading-[71px]">
           {heading}
         </h2>
 
-        <p className="w-full text-center text-sm leading-5 text-[var(--text-dark)] sm:text-base sm:leading-6 lg:text-[18px] lg:leading-[23px]">
+        <p className="w-full text-[15px] font-normal leading-[22px] text-[var(--text-muted)] lg:text-center lg:text-[13px] lg:leading-4 lg:text-[var(--text-heading)] 2xl:text-[18px] 2xl:leading-[23px]">
           {description}
         </p>
 
-        <div className="flex flex-row items-center justify-center gap-4">
-  <Link
-    href={primaryButton.href}
-    className="flex items-center justify-center border border-[var(--color-blue-accent)] bg-[var(--color-blue-accent)] px-8 py-4 text-sm font-semibold uppercase tracking-[3px] text-white transition-all duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-blue-accent)] active:scale-[0.98]"
-  >
-    {primaryButton.label}
-  </Link>
+        <div className="flex w-full flex-col items-stretch gap-3 lg:w-auto lg:flex-row lg:items-center lg:justify-center lg:gap-[9.48px] 2xl:gap-4">
+          <Link
+            href={primaryButton.href}
+            className="flex h-[46px] items-center justify-center border border-[var(--color-primary)] bg-[var(--color-primary)] px-6 py-3.5 text-sm font-semibold uppercase text-white transition-all duration-300 hover:bg-[var(--bg-light)] hover:text-[var(--color-primary)] active:scale-[0.98] lg:h-[34.96px] lg:px-[18.963px] lg:py-[9.48148px] lg:text-[13px] lg:leading-4 2xl:h-[50px] 2xl:px-8 2xl:py-4 2xl:text-sm 2xl:leading-[18px]"
+          >
+            {primaryButton.label}
+          </Link>
 
-  <Link
-    href={secondaryButton.href}
-    className="flex items-center justify-center border border-[var(--color-blue-accent)] bg-[var(--bg-light)] px-8 py-4 text-sm font-semibold uppercase tracking-[3px] text-[var(--color-blue-accent)] transition-all duration-300 hover:bg-[var(--color-blue-accent)] hover:text-white active:scale-[0.98]"
-  >
-    {secondaryButton.label}
-  </Link>
-</div>
+          <Link
+            href={secondaryButton.href}
+            className="flex h-[46px] items-center justify-center border border-[var(--color-primary)] bg-[var(--bg-light)] px-6 py-3.5 text-sm font-semibold uppercase text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] lg:h-[34.96px] lg:px-[18.963px] lg:py-[9.48148px] lg:text-[13px] lg:leading-4 2xl:h-[50px] 2xl:px-8 2xl:py-4 2xl:text-sm 2xl:leading-[18px]"
+          >
+            {secondaryButton.label}
+          </Link>
+        </div>
       </div>
     </section>
   );
