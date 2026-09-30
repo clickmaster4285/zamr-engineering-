@@ -43,7 +43,7 @@ export const impactAreas: ImpactArea[] = [
   },
 ];
 
-// ─── Areas of Impact (02 — checklist + image) ─────────────────────────
+// ─── Areas of Impact (01 — checklist + image) ─────────────────────────
 
 export interface AreasOfImpactContent {
   sectionNumber: string;
@@ -55,7 +55,7 @@ export interface AreasOfImpactContent {
 }
 
 export const areasOfImpactContent: AreasOfImpactContent = {
-  sectionNumber: "02",
+  sectionNumber: "01",
   sectionLabel: "AREAS OF IMPACT",
   heading: "Delivering Value Across Every Project",
   description:
