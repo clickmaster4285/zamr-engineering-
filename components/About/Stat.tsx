@@ -112,13 +112,13 @@ export default function StatsSection() {
       </div>
 
       {/* Stats — full width; wraps to next line when items don't fit */}
-      <div className="flex w-full flex-wrap items-start gap-x-6 gap-y-6 lg:gap-x-6 lg:gap-y-5 2xl:gap-x-12 2xl:gap-y-5">
+      <div className="flex w-full flex-wrap items-start grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {stats.map((stat) => (
           <StatCard
             key={stat.label}
             stat={stat}
             shouldStart={inView}
-            className="min-w-[163px] flex-1 basis-[163px] lg:min-w-[240px] lg:basis-[240px] 2xl:min-w-[200px] 2xl:basis-[200px]"
+            className=""
           />
         ))}
       </div>

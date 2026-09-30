@@ -34,13 +34,13 @@ export default function Capabilities() {
               key={service.slug}
               type="button"
               onClick={() => router.push(`/services/${service.slug}`)}
-              className="flex w-full cursor-pointer flex-col items-start gap-5 bg-[var(--bg-hover)] p-5 text-left lg:gap-[17.78px] lg:p-[17.7778px] 2xl:gap-[30px] 2xl:p-[30px]"
+              className="group  flex w-full cursor-pointer flex-col items-start gap-5 bg-[var(--bg-hover)] p-5 text-left lg:gap-[17.78px] lg:p-[17.7778px] 2xl:gap-[30px] 2xl:p-[30px]"
             >
               <div className="flex w-full flex-col items-start gap-2 lg:gap-[7.11px] 2xl:gap-3">
                 <span className="text-sm font-medium leading-[18px] tracking-[2px] text-[var(--text-soft)] lg:text-[13px] lg:leading-4 lg:tracking-[1.77778px] lg:text-[var(--text-heading)] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
                   {service.index}
                 </span>
-                <h3 className="w-full text-[20px] font-semibold leading-[25px] text-[var(--text-heading)] underline lg:text-[18px] lg:leading-[23px] 2xl:text-[28px] 2xl:leading-[35px]">
+                <h3 className="w-full text-[20px] font-semibold leading-[25px] text-[var(--text-heading)] transition-all duration-300 group-hover:underline lg:text-[18px] lg:leading-[23px] 2xl:text-[28px] 2xl:leading-[35px]">
                   {service.title}
                 </h3>
               </div>
