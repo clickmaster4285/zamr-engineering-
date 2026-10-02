@@ -119,13 +119,12 @@ function MetaItem({
         alt={item.alt}
         width={20}
         height={20}
-        
       />
       <span
         className={
           stacked
             ? "min-w-0 flex-1 text-sm leading-[18px] text-white"
-            : "min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px]"
+            : "min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px] items-center"
         }
       >
         {item.value}
@@ -134,12 +133,8 @@ function MetaItem({
   );
 
   const className = stacked
-    ? `flex w-full flex-row gap-3 ${
-        item.type === "location" ? "items-start" : "items-center"
-      }`
-    : `flex min-w-0 w-full flex-row gap-[6px] ${
-        item.type === "location" ? "items-start" : "items-center"
-      }`;
+    ? ` flex w-full flex-row gap-3 items-center `
+    : `flex min-w-0 w-full flex-row gap-[6px] items-center`;
 
   if (item.href) {
     return (

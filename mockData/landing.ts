@@ -501,7 +501,7 @@ export const footerMetaItems: FooterMetaItem[] = [
   {
     type: "location",
     value: footerContactInfo.location2,
-    icon: "/icons/location.svg",
+    icon: "/icons/maillocation.svg",
     alt: "Location",
   },
 ];
