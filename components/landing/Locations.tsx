@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import type { Map as LeafletMap } from "leaflet";
 import { locationsContent, type LocationArea } from "@/mockData/landing";
 
 function StatsRow({ className = "" }: { className?: string }) {
@@ -78,20 +77,6 @@ function SectionIntro({ compact }: { compact?: boolean }) {
   );
 }
 
-function createPinIcon(emphasized: boolean) {
-  const opacity = emphasized ? 1 : 0.75;
-  return L.divIcon({
-    className: "zamr-map-pin",
-    iconSize: [28, 40],
-    iconAnchor: [14, 40],
-    popupAnchor: [0, -36],
-    html: `<svg width="28" height="40" viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg" style="opacity:${opacity};filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))">
-      <path d="M14 0C6.268 0 0 6.268 0 14c0 10.5 14 26 14 26s14-15.5 14-26C28 6.268 21.732 0 14 0z" fill="var(--color-error)"/>
-      <circle cx="14" cy="14" r="6" fill="white"/>
-    </svg>`,
-  });
-}
-
 function googleMapsSearchUrl(area: LocationArea) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     `${area.name}, ${area.address}`,
@@ -99,64 +84,91 @@ function googleMapsSearchUrl(area: LocationArea) {
 }
 
 function MapPanel() {
-  const { areas, mapCenter, mapZoom, mapLegendTitle, mapLegendItems } =
-    locationsContent;
+  const { areas, mapCenter, mapZoom } = locationsContent;
   const containerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<L.Map | null>(null);
+  const mapRef = useRef<LeafletMap | null>(null);
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
-    const map = L.map(containerRef.current, {
-      center: [mapCenter.lat, mapCenter.lng],
-      zoom: mapZoom,
-      scrollWheelZoom: false,
-    });
+    let cancelled = false;
+    let resizeHandler: (() => void) | null = null;
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      maxZoom: 18,
-    }).addTo(map);
+    async function initMap() {
+      const L = (await import("leaflet")).default;
+      await import("leaflet/dist/leaflet.css");
 
-    const bounds = L.latLngBounds([]);
+      if (cancelled || !containerRef.current || mapRef.current) return;
 
-    areas.forEach((area) => {
-      const marker = L.marker([area.lat, area.lng], {
-        icon: createPinIcon(area.projectCount >= 2),
-        title: area.name,
+      const createPinIcon = (emphasized: boolean) => {
+        const opacity = emphasized ? 1 : 0.75;
+        return L.divIcon({
+          className: "zamr-map-pin",
+          iconSize: [28, 40],
+          iconAnchor: [14, 40],
+          popupAnchor: [0, -36],
+          html: `<svg width="28" height="40" viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg" style="opacity:${opacity};filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))">
+            <path d="M14 0C6.268 0 0 6.268 0 14c0 10.5 14 26 14 26s14-15.5 14-26C28 6.268 21.732 0 14 0z" fill="var(--color-error)"/>
+            <circle cx="14" cy="14" r="6" fill="white"/>
+          </svg>`,
+        });
+      };
+
+      const map = L.map(containerRef.current, {
+        center: [mapCenter.lat, mapCenter.lng],
+        zoom: mapZoom,
+        scrollWheelZoom: false,
+      });
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 18,
       }).addTo(map);
 
-      const projectLabel =
-        area.projectCount === 1
-          ? "1 project"
-          : `${area.projectCount} projects`;
+      const bounds = L.latLngBounds([]);
 
-      marker.bindPopup(
-        `<div style="font-family:inherit;min-width:168px">
-          <strong style="font-size:13px;color:var(--text-heading)">${area.name}</strong>
-          <div style="margin-top:4px;font-size:11px;line-height:1.35;color:var(--text-soft)">${area.address}</div>
-          <div style="margin-top:4px;font-size:11px;color:var(--color-primary)">${projectLabel}</div>
-          <a href="${googleMapsSearchUrl(area)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;font-size:11px;color:var(--color-primary);text-decoration:underline">Open in Google Maps</a>
-        </div>`,
-      );
+      areas.forEach((area) => {
+        const marker = L.marker([area.lat, area.lng], {
+          icon: createPinIcon(area.projectCount >= 2),
+          title: area.name,
+        }).addTo(map);
 
-      bounds.extend([area.lat, area.lng]);
-    });
+        const projectLabel =
+          area.projectCount === 1
+            ? "1 project"
+            : `${area.projectCount} projects`;
 
-    if (bounds.isValid()) {
-      map.fitBounds(bounds, { padding: [48, 48], maxZoom: 11 });
+        marker.bindPopup(
+          `<div style="font-family:inherit;min-width:168px">
+            <strong style="font-size:13px;color:var(--text-heading)">${area.name}</strong>
+            <div style="margin-top:4px;font-size:11px;line-height:1.35;color:var(--text-soft)">${area.address}</div>
+            <div style="margin-top:4px;font-size:11px;color:var(--color-primary)">${projectLabel}</div>
+            <a href="${googleMapsSearchUrl(area)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;font-size:11px;color:var(--color-primary);text-decoration:underline">Open in Google Maps</a>
+          </div>`,
+        );
+
+        bounds.extend([area.lat, area.lng]);
+      });
+
+      if (bounds.isValid()) {
+        map.fitBounds(bounds, { padding: [48, 48], maxZoom: 11 });
+      }
+
+      mapRef.current = map;
+      resizeHandler = () => map.invalidateSize();
+      window.addEventListener("resize", resizeHandler);
+      requestAnimationFrame(resizeHandler);
     }
 
-    mapRef.current = map;
-
-    const invalidate = () => map.invalidateSize();
-    window.addEventListener("resize", invalidate);
-    requestAnimationFrame(invalidate);
+    void initMap();
 
     return () => {
-      window.removeEventListener("resize", invalidate);
-      map.remove();
+      cancelled = true;
+      if (resizeHandler) {
+        window.removeEventListener("resize", resizeHandler);
+      }
+      mapRef.current?.remove();
       mapRef.current = null;
     };
   }, [areas, mapCenter.lat, mapCenter.lng, mapZoom]);
