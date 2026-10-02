@@ -108,7 +108,7 @@ export default function Contact({
                   {...(line.href ? { href: line.href } : {})}
                   className={`w-full text-[15px]  leading-[19px] [font-feature-settings:'liga'_off] lg:text-[13px] lg:font-normal lg:leading-4  2xl:text-lg 2xl:leading-[23px] ${
                     line.label === "Phone" ? "lg:capitalize" : ""
-                  } ${line.href ? "transition-opacity hover:opacity-70" : ""}`}
+                  } `}
                 >
                   <span className="text-[var(--color-primary)] ">{line.label}: </span> <span> {line.value} </span>
                  </Component>
