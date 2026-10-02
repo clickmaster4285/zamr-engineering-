@@ -1,37 +1,9 @@
 "use client";
 
-import React from "react";
-import { MapPin, ArrowUp } from "lucide-react";
-import { locationsContent } from "@/mockData/landing";
-
-function LocationRow({
-  name,
-  projectCount,
-}: {
-  name: string;
-  projectCount: number;
-}) {
-  const isMulti = projectCount >= 2;
-  return (
-    <div className="flex w-full items-center justify-between border-b border-[var(--border-section)] px-3.5 py-[7px] last:border-b-0">
-      <div className="flex flex-col gap-0.5">
-        <span className="text-[11px] font-semibold leading-[14px] text-[var(--text-heading)]">
-          {name}
-        </span>
-        <span className="text-[9px] font-normal leading-[11px] text-[var(--text-soft)]">
-          {projectCount} {projectCount === 1 ? "project" : "projects"}
-        </span>
-      </div>
-      <span
-        className={`inline-flex items-center rounded-[10px] px-[7px] py-[3px] text-[9px] font-semibold leading-[11px] text-[var(--color-primary)] ${
-          isMulti ? "bg-[var(--bg-card)]" : "bg-[var(--bg-hover)]"
-        }`}
-      >
-        {projectCount}
-      </span>
-    </div>
-  );
-}
+import React, { useEffect, useRef } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import { locationsContent, type LocationArea } from "@/mockData/landing";
 
 function StatsRow({ className = "" }: { className?: string }) {
   const { stats } = locationsContent;
@@ -56,25 +28,147 @@ function StatsRow({ className = "" }: { className?: string }) {
   );
 }
 
-function MapPanel() {
-  const { mapEmbedUrl, mapLegendTitle, mapLegendItems } = locationsContent;
+function SectionIntro({ compact }: { compact?: boolean }) {
+  const { sectionNumber, sectionLabel, heading, description } = locationsContent;
+
+  if (compact) {
+    return (
+      <div className="flex w-full flex-col gap-[7px] lg:gap-8">
+        <div className="flex flex-col gap-[7px] lg:gap-[18px]">
+          <div className="flex items-center gap-[4px] lg:gap-[9.5px]">
+            <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px]">
+              {sectionNumber}
+            </span>
+            <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px]" />
+            <span className="text-[12px] font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--text-section-label)] lg:leading-4 lg:tracking-[1.78px]">
+              {sectionLabel}
+            </span>
+          </div>
+          <h2 className="text-[36px] font-bold leading-[45px] text-[var(--text-heading)] lg:text-[33px] lg:leading-[42px]">
+            {heading}
+          </h2>
+          <p className="text-sm leading-[18px] text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:text-[13px] lg:leading-4">
+            {description}
+          </p>
+        </div>
+        <StatsRow />
+      </div>
+    );
+  }
 
   return (
-    <div className="relative h-[672px] w-full min-w-0 flex-1 overflow-hidden bg-[var(--bg-card)]">
-      <iframe
-        src={mapEmbedUrl}
-        title="ZAMR Engineering locations map"
-        className="absolute inset-0 h-full w-full border-0"
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="strict-origin-when-cross-origin"
+    <div className="flex w-[520px] shrink-0 flex-col gap-[30px]">
+      <div className="flex items-center gap-4">
+        <span className="text-base font-medium leading-5 tracking-[3px] text-[var(--color-primary)]">
+          {sectionNumber}
+        </span>
+        <span className="h-px w-[104px] bg-[var(--text-heading)]" />
+        <span className="text-[12px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-section-label)]">
+          {sectionLabel}
+        </span>
+      </div>
+      <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-heading)]">
+        {heading}
+      </h2>
+      <p className="text-lg leading-[23px] text-[var(--text-muted)] [font-feature-settings:'liga'_off]">
+        {description}
+      </p>
+      <StatsRow />
+    </div>
+  );
+}
+
+function createPinIcon(emphasized: boolean) {
+  const opacity = emphasized ? 1 : 0.75;
+  return L.divIcon({
+    className: "zamr-map-pin",
+    iconSize: [28, 40],
+    iconAnchor: [14, 40],
+    popupAnchor: [0, -36],
+    html: `<svg width="28" height="40" viewBox="0 0 28 40" xmlns="http://www.w3.org/2000/svg" style="opacity:${opacity};filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))">
+      <path d="M14 0C6.268 0 0 6.268 0 14c0 10.5 14 26 14 26s14-15.5 14-26C28 6.268 21.732 0 14 0z" fill="var(--color-error)"/>
+      <circle cx="14" cy="14" r="6" fill="white"/>
+    </svg>`,
+  });
+}
+
+function googleMapsSearchUrl(area: LocationArea) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `${area.name}, ${area.address}`,
+  )}`;
+}
+
+function MapPanel() {
+  const { areas, mapCenter, mapZoom, mapLegendTitle, mapLegendItems } =
+    locationsContent;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<L.Map | null>(null);
+
+  useEffect(() => {
+    if (!containerRef.current || mapRef.current) return;
+
+    const map = L.map(containerRef.current, {
+      center: [mapCenter.lat, mapCenter.lng],
+      zoom: mapZoom,
+      scrollWheelZoom: false,
+    });
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18,
+    }).addTo(map);
+
+    const bounds = L.latLngBounds([]);
+
+    areas.forEach((area) => {
+      const marker = L.marker([area.lat, area.lng], {
+        icon: createPinIcon(area.projectCount >= 2),
+        title: area.name,
+      }).addTo(map);
+
+      const projectLabel =
+        area.projectCount === 1
+          ? "1 project"
+          : `${area.projectCount} projects`;
+
+      marker.bindPopup(
+        `<div style="font-family:inherit;min-width:168px">
+          <strong style="font-size:13px;color:var(--text-heading)">${area.name}</strong>
+          <div style="margin-top:4px;font-size:11px;line-height:1.35;color:var(--text-soft)">${area.address}</div>
+          <div style="margin-top:4px;font-size:11px;color:var(--color-primary)">${projectLabel}</div>
+          <a href="${googleMapsSearchUrl(area)}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;font-size:11px;color:var(--color-primary);text-decoration:underline">Open in Google Maps</a>
+        </div>`,
+      );
+
+      bounds.extend([area.lat, area.lng]);
+    });
+
+    if (bounds.isValid()) {
+      map.fitBounds(bounds, { padding: [48, 48], maxZoom: 11 });
+    }
+
+    mapRef.current = map;
+
+    const invalidate = () => map.invalidateSize();
+    window.addEventListener("resize", invalidate);
+    requestAnimationFrame(invalidate);
+
+    return () => {
+      window.removeEventListener("resize", invalidate);
+      map.remove();
+      mapRef.current = null;
+    };
+  }, [areas, mapCenter.lat, mapCenter.lng, mapZoom]);
+
+  return (
+    <div className="relative h-[420px] w-full min-w-0 overflow-hidden bg-[var(--bg-card)] sm:h-[520px] lg:h-[672px]">
+      <div
+        ref={containerRef}
+        className="absolute inset-0 z-0 h-full w-full [&_.zamr-map-pin]:border-0 [&_.zamr-map-pin]:bg-transparent"
       />
 
-      {/* Soft overlay for Figma map treatment */}
-      <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-default)]" />
-
-      {/* Legend */}
-      <div className="absolute right-5 top-5 z-10 flex w-[112px] flex-col gap-[7px] rounded-lg border border-[var(--border-section)] bg-white/80 p-2.5 px-3 shadow-[0px_2px_8px_rgba(0,0,0,0.1)]">
+      <div className="pointer-events-none absolute right-5 top-5 z-[1000] flex w-[112px] flex-col gap-[7px] rounded-lg border border-[var(--border-section)] bg-white/90 p-2.5 px-3 shadow-[0px_2px_8px_rgba(0,0,0,0.1)]">
         <span className="text-[11px] font-bold leading-[14px] text-[var(--text-heading)]">
           {mapLegendTitle}
         </span>
@@ -91,138 +185,24 @@ function MapPanel() {
           </div>
         ))}
       </div>
-
-      {/* Compass */}
-      <div className="absolute right-4 top-3.5 z-10 flex flex-col items-center gap-0.5">
-        <span className="text-[9px] font-bold leading-[11px] text-[var(--text-soft)]">
-          N
-        </span>
-        <ArrowUp className="h-3.5 w-3.5 text-[var(--text-soft)]" strokeWidth={2} />
-      </div>
-
-      {/* Decorative pins */}
-      <MapPin
-        className="pointer-events-none absolute left-[47%] top-11 z-10 h-9 w-[30px] text-[var(--color-primary)] drop-shadow sm:left-[200px]"
-        fill="currentColor"
-        strokeWidth={0}
-      />
-      <MapPin
-        className="pointer-events-none absolute left-2 top-[366px] z-10 h-8 w-[26px] text-[var(--color-primary)] drop-shadow"
-        fill="currentColor"
-        strokeWidth={0}
-      />
-    </div>
-  );
-}
-
-function LocationsSidebar({ className = "" }: { className?: string }) {
-  const { sidebarTitle, sidebarCountLabel, areas } = locationsContent;
-
-  return (
-    <div
-      className={`flex w-full flex-col overflow-hidden bg-white lg:h-[672px] lg:w-[200px] lg:shrink-0 ${className}`}
-    >
-      <div className="flex flex-col gap-0.5 bg-[var(--color-primary)] px-4 pb-3 pt-4">
-        <span className="text-[11px] font-bold leading-[14px] tracking-[2px] uppercase text-white/80">
-          {sidebarTitle}
-        </span>
-        <span className="text-[22px] font-bold leading-7 text-white">
-          {sidebarCountLabel}
-        </span>
-      </div>
-
-      {/* Desktop / tablet: single column scroll */}
-      <div className="hidden flex-1 overflow-y-auto lg:block">
-        {areas.map((area) => (
-          <LocationRow
-            key={area.name}
-            name={area.name}
-            projectCount={area.projectCount}
-          />
-        ))}
-      </div>
-
-      {/* Mobile: 2-column grid */}
-      <div className="relative grid grid-cols-2 lg:hidden">
-        {areas.map((area) => (
-          <LocationRow
-            key={area.name}
-            name={area.name}
-            projectCount={area.projectCount}
-          />
-        ))}
-      </div>
     </div>
   );
 }
 
 export default function Locations() {
-  const { sectionNumber, sectionLabel, heading, description } = locationsContent;
-
   return (
     <section className="w-full bg-[var(--bg-section)] px-[30px] py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
-      <div className="flex w-full flex-col gap-6 lg:gap-8 2xl:gap-20">
-        {/* Tablet + Mobile header */}
-        <div className="flex w-full flex-col gap-[7px] lg:gap-8 2xl:hidden">
-          <div className="flex flex-col gap-[7px] lg:gap-[18px]">
-            <div className="flex items-center gap-[4px] lg:gap-[9.5px]">
-              <span className="text-sm font-medium leading-[18px] tracking-[0.68px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px]">
-                {sectionNumber}
-              </span>
-              <span className="h-px w-[24px] bg-[var(--text-heading)] lg:w-[62px]" />
-              <span className="text-[12px] font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--text-section-label)] lg:leading-4 lg:tracking-[1.78px]">
-                {sectionLabel}
-              </span>
-            </div>
-            <h2 className="text-[36px] font-bold leading-[45px] text-[var(--text-heading)] lg:text-[33px] lg:leading-[42px]">
-              {heading}
-            </h2>
-            <p className="text-sm leading-[18px] text-[var(--text-heading)] [font-feature-settings:'liga'_off] lg:text-[13px] lg:leading-4">
-              {description}
-            </p>
-          </div>
-          <StatsRow />
+      <div className="flex w-full flex-col gap-6 lg:gap-8 2xl:flex-row 2xl:items-start 2xl:justify-between 2xl:gap-[249px]">
+        <div className="w-full 2xl:hidden">
+          <SectionIntro compact />
         </div>
 
-        {/* Desktop: side-by-side text + map */}
-        <div className="hidden w-full flex-row items-start justify-between gap-[60px] 2xl:flex 2xl:gap-[249px]">
-          <div className="flex w-[520px] shrink-0 flex-col gap-[30px]">
-            <div className="flex items-center gap-4">
-              <span className="text-base font-medium leading-5 tracking-[3px] text-[var(--color-primary)]">
-                {sectionNumber}
-              </span>
-              <span className="h-px w-[104px] bg-[var(--text-heading)]" />
-              <span className="text-[12px] font-medium leading-5 tracking-[3px] uppercase text-[var(--text-section-label)]">
-                {sectionLabel}
-              </span>
-            </div>
-            <h2 className="text-[56px] font-bold leading-[71px] text-[var(--text-heading)]">
-              {heading}
-            </h2>
-            <p className="text-lg leading-[23px] text-[var(--text-muted)] [font-feature-settings:'liga'_off]">
-              {description}
-            </p>
-            <StatsRow />
-          </div>
-
-          <div className="flex h-[672px] min-w-0 flex-1 flex-row items-start overflow-hidden shadow-[0px_8px_32px_rgba(0,0,0,0.1)]">
-            <MapPanel />
-            <LocationsSidebar />
-          </div>
+        <div className="hidden 2xl:block">
+          <SectionIntro />
         </div>
 
-        {/* Tablet: map + sidebar side-by-side */}
-        <div className="hidden w-full overflow-hidden shadow-[0px_8px_32px_rgba(0,0,0,0.1)] lg:flex lg:flex-row 2xl:hidden">
+        <div className="w-full min-w-0 flex-1 overflow-hidden shadow-[0px_8px_32px_rgba(0,0,0,0.1)]">
           <MapPanel />
-          <LocationsSidebar />
-        </div>
-
-        {/* Mobile: map then 2-col list */}
-        <div className="flex w-full flex-col lg:hidden">
-          <div className="w-full overflow-hidden shadow-[0px_8px_32px_rgba(0,0,0,0.1)]">
-            <MapPanel />
-          </div>
-          <LocationsSidebar />
         </div>
       </div>
     </section>
