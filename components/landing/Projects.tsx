@@ -76,12 +76,7 @@ function ProjectCard({
         />
 
         <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
-        <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)] ${!isLarge
-              ? "transition-colors duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:bg-[var(--overlay-image-hover)]"
-              : ""
-            }`}
-        />
+        <div className="absolute inset-0 bg-[var(--overlay-image-default)] transition-colors duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:bg-[var(--overlay-image-hover)]" />
 
         {/* Mobile layout — stacked content */}
         <div className="absolute inset-0 flex flex-col justify-between p-6 lg:hidden">
@@ -103,14 +98,26 @@ function ProjectCard({
           {project.index}
         </span>
 
-        <h3
-          className={`absolute bottom-[30px] left-[30px] right-[30px] hidden font-semibold text-white lg:block 2xl:bottom-[50px] 2xl:left-[50px] 2xl:right-[50px] ${isLarge
-              ? "max-w-[319px] text-lg leading-[23px] 2xl:max-w-[496px] 2xl:text-[28px] 2xl:leading-[35px]"
-              : "max-w-[328px] text-lg leading-[23px] 2xl:max-w-[511px] 2xl:text-[28px] 2xl:leading-[35px]"
-            }`}
-        >
-          {project.title}
-        </h3>
+        <div className="absolute left-[24px] bottom-[20px] lg:left-[30px] right-[30px] hidden flex-col lg:flex 2xl:bottom-[30px] 2xl:left-[50px] 2xl:right-[50px]">
+          <h3
+            className={`font-semibold text-white transition-[margin] duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:mb-[30px] ${isLarge
+                ? "max-w-[319px] text-lg leading-[23px] 2xl:max-w-[496px] 2xl:text-[28px] 2xl:leading-[35px]"
+                : "max-w-[328px] text-lg leading-[23px] 2xl:max-w-[511px] 2xl:text-[28px] 2xl:leading-[35px]"
+              }`}
+          >
+            {project.title}
+          </h3>
+          <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:grid-rows-[1fr] [@media(hover:hover)_and_(pointer:fine)]:group-hover:opacity-100">
+            <p
+              className={`overflow-hidden text-white/90 ${isLarge
+                  ? "max-w-[319px] text-sm leading-5 2xl:max-w-[496px] 2xl:text-base 2xl:leading-[23px]"
+                  : "max-w-[328px] text-sm leading-5 2xl:max-w-[511px] 2xl:text-base 2xl:leading-[23px]"
+                } line-clamp-2`}
+            >
+              {project.shortDescription}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

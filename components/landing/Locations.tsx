@@ -167,24 +167,6 @@ function MapPanel() {
         ref={containerRef}
         className="absolute inset-0 z-0 h-full w-full [&_.zamr-map-pin]:border-0 [&_.zamr-map-pin]:bg-transparent"
       />
-
-      <div className="pointer-events-none absolute right-5 top-5 z-[1000] flex w-[112px] flex-col gap-[7px] rounded-lg border border-[var(--border-section)] bg-white/90 p-2.5 px-3 shadow-[0px_2px_8px_rgba(0,0,0,0.1)]">
-        <span className="text-[11px] font-bold leading-[14px] text-[var(--text-heading)]">
-          {mapLegendTitle}
-        </span>
-        {mapLegendItems.map((item) => (
-          <div key={item.label} className="flex items-center gap-[7px]">
-            <span
-              className={`h-[11px] w-[11px] shrink-0 rounded-full bg-[var(--color-primary)] ${
-                item.emphasized ? "opacity-100" : "opacity-70"
-              }`}
-            />
-            <span className="text-[9px] font-normal leading-[11px] text-[var(--text-muted)]">
-              {item.label}
-            </span>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }
