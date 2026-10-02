@@ -164,7 +164,6 @@ export default function Projects() {
             </h2>
           </div>
 
-          <AllProjectsLink className="hidden lg:inline-flex" />
         </div>
 
         {/* Filter pills — one scrolling row below 1440px, one full row from 1440px up */}
@@ -261,7 +260,7 @@ export default function Projects() {
         </div>
 
         {/* Mobile CTA */}
-        <div className="flex w-full justify-end lg:hidden">
+        <div className="flex w-full justify-end">
           <AllProjectsLink />
         </div>
       </div>
