@@ -88,39 +88,37 @@ export default function Projects() {
           priorityFirst
         />
 
-        <div className="w-full">
-          <div className="flex w-full flex-col gap-3 pt-4 lg:hidden">
-            <div className="flex w-full flex-row flex-wrap justify-center gap-3">
-              {clientLogos.slice(0, 6).map((logo) => (
-                <div
-                  key={logo.alt}
-                  className="relative flex h-[50px] w-[110px] shrink-0 items-center justify-center border border-[var(--border-section)] bg-white"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={96}
-                    height={28}
-                    className="max-h-[28px] w-auto max-w-[96px] object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="hidden w-full flex-row items-center gap-[18px] lg:flex 2xl:gap-[30px]">
-            {clientLogos.map((logo) => (
+        {/* Trusted Client logos section — infinite auto scroll */}
+        <div
+          className="relative w-full overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+          }}
+        >
+          <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
+            {[0, 1].map((copy) => (
               <div
-                key={logo.alt}
-                className="relative flex h-[51px] min-w-0 flex-1 items-center justify-center bg-[var(--bg-section)] 2xl:h-[86px]"
+                key={copy}
+                className="flex shrink-0 items-center gap-[18px] pr-[18px] 2xl:gap-[30px] 2xl:pr-[30px]"
+                aria-hidden={copy === 1}
               >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={157}
-                  height={57}
-                  className="max-h-[34px] w-auto max-w-[94px] object-contain 2xl:max-h-[57px] 2xl:max-w-[157px]"
-                />
+                {clientLogos.map((logo) => (
+                  <div
+                    key={`${copy}-${logo.alt}`}
+                    className="relative flex h-[51px] w-[157px] shrink-0 items-center justify-center bg-[var(--bg-section)] 2xl:h-[86px]"
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={157}
+                      height={57}
+                      className="max-h-[34px] w-auto max-w-[94px] object-contain 2xl:max-h-[57px] 2xl:max-w-[157px]"
+                    />
+                  </div>
+                ))}
               </div>
             ))}
           </div>

@@ -243,6 +243,12 @@ html {
   animation: marquee 30s linear infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
 /* Selection color */
 ::selection {
   background-color: var(--color-primary);
