@@ -259,7 +259,7 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Mobile CTA */}
+        {/* CTA */}
         <div className="flex w-full justify-end">
           <AllProjectsLink />
         </div>
