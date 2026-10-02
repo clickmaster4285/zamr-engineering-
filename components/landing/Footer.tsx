@@ -179,7 +179,7 @@ export default function Footer() {
         loop
         muted
         playsInline
-        className="absolute inset-0 hidden h-full w-full object-cover lg:block"
+        className="absolute inset-0 h-full w-full object-cover"
       >
         <source src={footerVideoSrc} type="video/mp4" />
       </video>
