@@ -208,21 +208,20 @@ export const servicesPreview: ServicePreviewItem[] = [
 
 
 export const projectFilters: string[] = [
-  "ALL",
-  "Project Verification",
-  "Buildings",
-  "Civil Design",
-  "Asset Management",
-  "Civil Works",
-  "Bridge Works",
-  "Project Management",
+  "All",
+  "Engineering & Design",
+  "Project & Program Management",
+  "Project Verification & Assurance",
+  "Asset Management & Inspection",
+  "Buildings & Property Engineering",
+  "Construction & Project Delivery",
 ];
 
 export const projectsSection = {
   sectionNumber: "03",
   sectionLabel: "PROJECTS",
   heading: "Featured Work",
-  ctaLabel: "ALL PROJECTS",
+  ctaLabel: "LEARN MORE",
   logosLabel: "TRUSTED BY",
 };
 
@@ -355,11 +354,6 @@ export const contactSection: ContactSectionContent = {
       label: "Phone",
       value: contactInfo.phone,
       href: `tel:${contactInfo.phone.replace(/\s/g, "")}`,
-    },
-    {
-      label: "Email",
-      value: "khalid.javed@zamrengineering.com.au",
-      href: "mailto:khalid.javed@zamrengineering.com.au",
     },
   ],
   formFields: [
@@ -507,7 +501,7 @@ export const footerMetaItems: FooterMetaItem[] = [
   {
     type: "location",
     value: footerContactInfo.location2,
-    icon: "/icons/location.svg",
+    icon: "/icons/maillocation.svg",
     alt: "Location",
   },
 ];
@@ -554,6 +548,9 @@ export interface LocationsStat {
 export interface LocationArea {
   name: string;
   projectCount: number;
+  address: string;
+  lat: number;
+  lng: number;
 }
 
 export interface LocationsContent {
@@ -564,10 +561,9 @@ export interface LocationsContent {
   stats: LocationsStat[];
   mapLegendTitle: string;
   mapLegendItems: { label: string; emphasized?: boolean }[];
-  sidebarTitle: string;
-  sidebarCountLabel: string;
+  mapCenter: { lat: number; lng: number };
+  mapZoom: number;
   areas: LocationArea[];
-  mapEmbedUrl: string;
 }
 
 export const locationsContent: LocationsContent = {
@@ -586,24 +582,106 @@ export const locationsContent: LocationsContent = {
     { label: "2+ projects", emphasized: true },
     { label: "1 project" },
   ],
-  sidebarTitle: "All Locations",
-  sidebarCountLabel: "14 areas",
+  mapCenter: { lat: -33.85, lng: 150.98 },
+  mapZoom: 10,
   areas: [
-    { name: "Blacktown", projectCount: 2 },
-    { name: "Castle Hill", projectCount: 1 },
-    { name: "Hornsby", projectCount: 1 },
-    { name: "Parramatta", projectCount: 3 },
-    { name: "Chatswood", projectCount: 1 },
-    { name: "Liverpool", projectCount: 2 },
-    { name: "Box Hill", projectCount: 1 },
-    { name: "Marrickville", projectCount: 1 },
-    { name: "Bankstown", projectCount: 1 },
-    { name: "Penrith", projectCount: 1 },
-    { name: "Campsie", projectCount: 1 },
-    { name: "Sutherland", projectCount: 1 },
-    { name: "Manly", projectCount: 1 },
-    { name: "Campbelltown", projectCount: 1 },
+    {
+      name: "Blacktown",
+      projectCount: 2,
+      address: "Blacktown NSW 2148, Australia",
+      lat: -33.771,
+      lng: 150.906,
+    },
+    {
+      name: "Castle Hill",
+      projectCount: 1,
+      address: "Castle Hill NSW 2154, Australia",
+      lat: -33.7318,
+      lng: 151.0069,
+    },
+    {
+      name: "Hornsby",
+      projectCount: 1,
+      address: "Hornsby NSW 2077, Australia",
+      lat: -33.7045,
+      lng: 151.0993,
+    },
+    {
+      name: "Parramatta",
+      projectCount: 3,
+      address: "Parramatta NSW 2150, Australia",
+      lat: -33.814,
+      lng: 151.0027,
+    },
+    {
+      name: "Chatswood",
+      projectCount: 1,
+      address: "Chatswood NSW 2067, Australia",
+      lat: -33.7967,
+      lng: 151.1814,
+    },
+    {
+      name: "Liverpool",
+      projectCount: 2,
+      address: "Liverpool NSW 2170, Australia",
+      lat: -33.921,
+      lng: 150.9236,
+    },
+    {
+      name: "Box Hill",
+      projectCount: 1,
+      address: "Box Hill NSW 2765, Australia",
+      lat: -33.6425,
+      lng: 150.8989,
+    },
+    {
+      name: "Marrickville",
+      projectCount: 1,
+      address: "Marrickville NSW 2204, Australia",
+      lat: -33.9104,
+      lng: 151.1561,
+    },
+    {
+      name: "Bankstown",
+      projectCount: 1,
+      address: "Bankstown NSW 2200, Australia",
+      lat: -33.9172,
+      lng: 151.0336,
+    },
+    {
+      name: "Penrith",
+      projectCount: 1,
+      address: "Penrith NSW 2750, Australia",
+      lat: -33.7512,
+      lng: 150.6942,
+    },
+    {
+      name: "Campsie",
+      projectCount: 1,
+      address: "Campsie NSW 2194, Australia",
+      lat: -33.9144,
+      lng: 151.1032,
+    },
+    {
+      name: "Sutherland",
+      projectCount: 1,
+      address: "Sutherland NSW 2232, Australia",
+      lat: -34.0315,
+      lng: 151.058,
+    },
+    {
+      name: "Manly",
+      projectCount: 1,
+      address: "Manly NSW 2095, Australia",
+      lat: -33.7972,
+      lng: 151.288,
+    },
+    {
+      name: "Campbelltown",
+      projectCount: 1,
+      address: "Campbelltown NSW 2560, Australia",
+      lat: -34.0658,
+      lng: 150.8142,
+    },
   ],
-  mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.992283969211!2d150.9671837!3d-33.8125122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a2bb67749bf9%3A0xb0ef6047fcb0149d!2sZAMR%20Engineering!5e0!3m2!1sen!2s!4v1789019051054!5m2!1sen!2s",
 };

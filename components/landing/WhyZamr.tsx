@@ -25,19 +25,7 @@ export default function WhyZamr() {
               </span>
             </div>
 
-            {/* Learn More */}
-            <Link
-              href={ctaHref}
-              className="group inline-flex shrink-0 items-center gap-1.5 text-sm font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-[5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:gap-2 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]"
-            >
-              {ctaLabel}
-              <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
-                <ArrowRight
-                  className="h-4 w-4 lg:h-[14px] lg:w-[14px] 2xl:h-6 2xl:w-6"
-                  strokeWidth={1.25}
-                />
-              </span>
-            </Link>
+            
           </div>
 
           <h2 className="max-w-[898px] text-[28px] font-bold leading-[35px] text-[var(--text-heading)] lg:text-[33px] lg:leading-[42px] 2xl:text-[56px] 2xl:leading-[71px]">
@@ -62,6 +50,22 @@ export default function WhyZamr() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Learn More */}
+        <div className="flex w-full justify-end">
+            <Link
+              href={ctaHref}
+              className="group inline-flex shrink-0 items-center gap-1.5 text-sm font-medium leading-[18px] tracking-[0.68px] uppercase text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-[5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:gap-2 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]"
+            >
+              {ctaLabel}
+              <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+                <ArrowRight
+                  className="h-4 w-4 lg:h-[14px] lg:w-[14px] 2xl:h-6 2xl:w-6"
+                  strokeWidth={1.25}
+                />
+              </span>
+            </Link>
         </div>
       </div>
     </section>

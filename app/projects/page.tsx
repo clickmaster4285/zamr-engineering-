@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { Barlow } from "next/font/google";
 import {
   projects,
@@ -10,12 +9,15 @@ import {
   projectFilterCategoryMap,
   projectsHeroStats,
   projectsHowWeDeliver,
-  projectsContactInfo,
 } from "@/mockData/projects";
+import Contacts from "@/components/Contacts";
 import {
-  useContactEnquiry,
-  CONTACT_STATUS_MESSAGES,
-} from "@/lib/useContactEnquiry";
+  FeaturedProjectsGrid,
+  ProjectFilterPills,
+  type FeaturedProjectItem,
+} from "@/components/projects/FeaturedProjectsGrid";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const barlow = Barlow({
   weight: ["500", "700", "900"],
@@ -23,105 +25,36 @@ const barlow = Barlow({
   display: "swap",
 });
 
-import Contacts from "@/components/Contacts";
-
 const INITIAL_COUNT = 6;
 const LOAD_MORE_COUNT = 3;
 
-function useInView(threshold = 0.15) {
-  const [inView, setInView] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const ref = useCallback(
-    (node: HTMLElement | null) => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-        observerRef.current = null;
-      }
-      if (!node) return;
-      observerRef.current = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setInView(true);
-            observerRef.current?.disconnect();
-          }
-        },
-        { threshold }
-      );
-      observerRef.current.observe(node);
-    },
-    [threshold]
-  );
-  useEffect(() => {
-    return () => observerRef.current?.disconnect();
-  }, []);
-  return { ref, inView };
-}
-
-function ProjectCard({
-  project,
-  isLarge = false,
-  noHover = false,
-}: {
-  project: (typeof projects)[number];
-  isLarge?: boolean;
-  noHover?: boolean;
-}) {
-  const { ref, inView } = useInView();
-  const router = useRouter();
-
-  return (
-    <div
-      ref={ref}
-      onClick={() => router.push(`/projects/${project.slug}`)}
-      className={`group relative cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView
-        ? "opacity-100 translate-y-0 scale-100"
-        : "opacity-0 translate-y-10 scale-95"
-        }`}
-    >
-      <div
-        className={`relative w-full overflow-hidden ${isLarge ? "h-[300px] sm:h-[400px] md:h-[484px] lg:h-[652px]" : "h-[200px] sm:h-[250px] md:h-[311px]"
-          }`}
-      >
-        <Image
-          src={project.heroImage}
-          alt={project.title}
-          fill
-          sizes="(min-width: 1024px) 50vw, 100vw"
-          className={`object-cover transition-transform duration-500 ease-in-out ${!noHover && "group-hover:scale-135"}`}
-        />
-
-        <div
-          className={`absolute inset-0 bg-[var(--overlay-image-default)] `}
-        />
-
-        <span
-          className={`absolute left-5 top-5 font-semibold tracking-[0.06em] text-white sm:left-8 sm:top-8 md:left-[50px] md:top-[50px] ${isLarge ? "text-[36px] leading-[45px] sm:text-[44px] sm:leading-[56px] md:text-[54px] md:leading-[68px]" : "text-[24px] leading-[30px] sm:text-[28px] sm:leading-[35px] md:text-[34px] md:leading-[43px]"
-            }`}
-        >
-          {project.index}
-        </span>
-
-        <h3 className={`absolute left-5 bottom-5 font-semibold text-white ${noHover ? "text-[18px] leading-[23px]" : "text-[20px] leading-[26px] sm:left-8 sm:bottom-8 pr-6 sm:text-[24px] sm:leading-[30px] md:left-[50px] md:bottom-[50px] md:text-[28px] md:leading-[35px]"} `}>
-          {project.title}
-        </h3>
-      </div>
-    </div>
-  );
+function toFeaturedItems(
+  items: typeof projects,
+): FeaturedProjectItem[] {
+  return items.map((p) => ({
+    slug: p.slug,
+    index: p.index,
+    title: p.title,
+    category: p.category,
+    shortDescription: p.shortDescription,
+    image: p.heroImage,
+  }));
 }
 
 export default function ProjectsPage() {
-  const { form, handleChange, handleSubmit, status, errors } = useContactEnquiry();
-  const [activeFilter, setActiveFilter] = useState("ALL");
+  const [activeFilter, setActiveFilter] = useState(projectFilters[0]);
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+
   const filteredProjects =
-    activeFilter === "ALL"
+    activeFilter === "All"
       ? projects
       : projects.filter((p) => {
-        const categories = projectFilterCategoryMap[activeFilter.toLowerCase()];
-        return categories?.some(
-          (c) => c.toLowerCase() === p.category.toLowerCase()
-        );
-      });
+          const categories =
+            projectFilterCategoryMap[activeFilter.toLowerCase()];
+          return categories?.some(
+            (c) => c.toLowerCase() === p.category.toLowerCase(),
+          );
+        });
 
   const displayedProjects = filteredProjects.slice(0, visibleCount);
   const hasMore = visibleCount < filteredProjects.length;
@@ -154,10 +87,14 @@ export default function ProjectsPage() {
               Our Projects
             </h1>
             <p className="font-medium text-[var(--color-text-light-subtle)] text-[14px] leading-[19px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
-              From complex transport upgrades to structural rehabilitation, civil engineering, and independent project verification, ZAMR Engineering has delivered practical, high-quality engineering solutions across Australia.
+              From complex transport upgrades to structural rehabilitation,
+              civil engineering, and independent project verification, ZAMR
+              Engineering has delivered practical, high-quality engineering
+              solutions across Australia.
             </p>
             <p className="font-medium text-[var(--color-text-light-subtle)] text-[14px] leading-[19px] sm:text-[16px] sm:leading-[22px] lg:text-[18px] lg:leading-[23px]">
-              Every project reflects the same commitment to technical excellence, collaboration, and long-term asset performance
+              Every project reflects the same commitment to technical
+              excellence, collaboration, and long-term asset performance
             </p>
           </div>
         </div>
@@ -167,8 +104,9 @@ export default function ProjectsPage() {
             {projectsHeroStats.map((stat, i) => (
               <div
                 key={stat.label}
-                className={`flex flex-col justify-center items-start flex-1 min-w-0 ${i > 0 ? "border-l border-white/37" : ""
-                  } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
+                className={`flex flex-col justify-center items-start flex-1 min-w-0 ${
+                  i > 0 ? "border-l border-white/37" : ""
+                } px-3 py-4 sm:px-4 sm:py-5 lg:px-[30px] lg:py-[30px] lg:h-[115px]`}
               >
                 <span
                   className={`${barlow.className} font-black text-white text-[16px] leading-[20px] sm:text-[24px] sm:leading-[28px] lg:text-[34px] lg:leading-[34px]`}
@@ -189,86 +127,39 @@ export default function ProjectsPage() {
       </section>
 
       {/* ──────── PROJECTS SECTION ──────── */}
-      <section className="w-full bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
-        <div className="mx-auto flex max-w-[1468px] flex-col gap-10 lg:gap-[60px]">
+      <section className="w-full bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[77px] lg:py-[77px] 2xl:px-[130px] 2xl:py-[130px]">
+        <div className="flex w-full flex-col gap-10 lg:gap-[60px]">
           <div className="flex flex-col gap-6 lg:gap-[30px]">
-            {/* Title header */}
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-              <div className="flex flex-col gap-6 lg:gap-[30px]">
-                <div className="flex items-center gap-4">
-                  <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
-                    01
-                  </span>
-                  <span className="h-px w-[104px] bg-[var(--bg-hero)]" />
-                  <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
-                    PROJECTS
-                  </span>
-                </div>
-                <h2 className="text-3xl font-bold leading-tight text-[var(--text-dark)] sm:text-4xl md:text-[56px] md:leading-[71px]">
-                  Featured Work
-                </h2>
+            <div className="flex flex-col gap-6 lg:gap-[30px]">
+              <div className="flex items-center gap-4">
+                <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
+                  01
+                </span>
+                <span className="h-px w-[104px] bg-[var(--bg-hero)]" />
+                <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+                  PROJECTS
+                </span>
               </div>
+              <h2 className="text-3xl font-bold leading-tight text-[var(--text-dark)] sm:text-4xl md:text-[56px] md:leading-[71px]">
+                Featured Work
+              </h2>
             </div>
 
-            {/* Filter pills — one scrolling row below 1440px, one full row from 1440px up */}
-        <div className="flex w-full min-w-0 flex-nowrap gap-3 overflow-x-auto pb-1 min-[1440px]:overflow-visible min-[1440px]:pb-0 min-[1560px]:gap-4">
-          {projectFilters.map((filter) => {
-            const isActive = filter === activeFilter;
-            const isAll = filter === "ALL";
-            return (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => handleFilterChange(filter)}
-                className={`flex-none whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm min-[1440px]:flex-1 ${isActive
-                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                  : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                  } ${isAll ? "w-20 min-[1440px]:flex-none" : ""}`}
-              >
-                {filter}
-              </button>
-            );
-          })}
-        </div>
+            <ProjectFilterPills
+              filters={projectFilters}
+              activeFilter={activeFilter}
+              onFilterChange={handleFilterChange}
+            />
 
-            {/* Project grid — matching landing page layout */}
-            {displayedProjects.length > 0 ? (
-              <div className="flex flex-col gap-5 md:gap-[30px] md:flex-row md:items-stretch">
-                {displayedProjects[0] && (
-                  <div className="w-full md:w-[817px]">
-                    <ProjectCard project={displayedProjects[0]} isLarge />
-                  </div>
-                )}
-                <div className="flex w-full flex-col gap-5 md:gap-[30px] md:w-[621px]">
-                  {displayedProjects.slice(1, 3).map((project) => (
-                    <ProjectCard key={project.index} project={project} isLarge={false} />
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <div className="py-12 text-center text-lg text-[var(--text-muted)]">
-                No projects found in this category.
-              </div>
-            )}
-
-            {/* Additional projects — 3 equal cards (shown after Load More) */}
-            {displayedProjects.length > 3 && (
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-[16px]">
-                {displayedProjects.slice(3).map((project) => (
-                  <ProjectCard key={project.index} project={project} isLarge={false} noHover />
-                ))}
-              </div>
-            )}
+            <FeaturedProjectsGrid
+              projects={toFeaturedItems(displayedProjects)}
+              showAdditionalGrid
+              priorityFirst
+            />
           </div>
 
-          {/* Load More button — always shown, disabled when all loaded */}
           <div className="flex justify-end">
-            <button
-              type="button"
-              className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
-            >
-              Load More
-            </button>
+            <AllProjectsLink />
           </div>
         </div>
       </section>
@@ -291,11 +182,11 @@ export default function ProjectsPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1  md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             {projectsHowWeDeliver.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col gap-3 border-b border-l border-white/[0.08]  p-4 sm:p-6"
+                className="flex flex-col gap-3 border-b border-l border-white/[0.08] p-4 sm:p-6"
               >
                 <h3 className="text-[18px] font-semibold leading-[23px] text-white">
                   {item.title}
@@ -310,5 +201,21 @@ export default function ProjectsPage() {
       </section>
       <Contacts sectionNumber="03" />
     </main>
+  );
+}
+function AllProjectsLink({ className = "" }: { className?: string }) {
+  return (
+    <Link
+      href="/projects"
+      className={`group inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[3px] text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-[5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:gap-2 2xl:text-base 2xl:leading-5 2xl:tracking-[3px] ${className}`}
+    >
+      Load More
+      <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+        <ArrowRight
+          className="h-4 w-4 lg:h-[14px] lg:w-[14px] 2xl:h-6 2xl:w-6"
+          strokeWidth={1.25}
+        />
+      </span>
+    </Link>
   );
 }

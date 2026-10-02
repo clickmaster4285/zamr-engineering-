@@ -42,7 +42,7 @@ function SocialLinks() {
 
 function QuickLinksColumn() {
   return (
-    <div className="flex min-w-0 flex-1 flex-col gap-6">
+    <div className="flex min-w-0 w-full flex-col gap-6">
       <h3 className="text-[13px] font-bold leading-4 text-white 2xl:text-lg 2xl:leading-[23px]">
         Quick Links
       </h3>
@@ -64,7 +64,7 @@ function QuickLinksColumn() {
 
 function ServicesColumn() {
   return (
-    <div className="flex min-w-0 flex-1 flex-col gap-6">
+    <div className="flex min-w-0 w-full flex-col gap-6">
       <h3 className="text-[13px] font-bold leading-4 text-white 2xl:text-lg 2xl:leading-[23px]">
         Services
       </h3>
@@ -84,65 +84,89 @@ function ServicesColumn() {
   );
 }
 
-function MetaBar({ stacked }: { stacked?: boolean }) {
+function BrandBlock() {
   return (
-    <div
-      className={
-        stacked
-          ? "flex w-full flex-col items-start gap-5"
-          : "flex w-full flex-row items-center gap-6"
-      }
-    >
-      {footerMetaItems.map((item, i) => {
-        const content = (
-          <>
-            <Image
-              src={item.icon}
-              alt={item.alt}
-              width={20}
-              height={20}
-              className={
-                stacked
-                  ? "h-5 w-5 shrink-0"
-                  : "h-3 w-3 shrink-0 2xl:h-5 2xl:w-5"
-              }
-            />
-            <span
-              className={
-                stacked
-                  ? "min-w-0 flex-1 text-sm leading-[18px] text-white"
-                  : "min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px]"
-              }
-            >
-              {item.value}
-            </span>
-          </>
-        );
+    <div className="flex w-full flex-col items-start gap-3">
+      <Image
+        src={logoImage}
+        alt="ZAMR Engineering"
+        width={121}
+        height={37}
+        className="h-[36.88px] w-[121px] object-contain object-left"
+        priority
+      />
+      <div className="flex w-full flex-col items-start gap-4 lg:gap-[9.48px] 2xl:gap-4">
+        <p className="w-full text-sm leading-[150%] text-white opacity-70 lg:max-w-[197.93px] lg:text-[13px] lg:leading-6 lg:opacity-100 2xl:max-w-[334px] 2xl:text-base 2xl:leading-[29px]">
+          {footerDescription}
+        </p>
+        <SocialLinks />
+      </div>
+    </div>
+  );
+}
 
-        const className = stacked
-          ? `flex w-full flex-row gap-3 ${
-              item.type === "location" ? "items-start" : "items-center"
-            }`
-          : "flex min-w-0 flex-1 flex-row items-center gap-3";
-
-        if (item.href) {
-          return (
-            <a
-              key={`${item.type}-${i}`}
-              href={item.href}
-              className={`${className} transition-opacity hover:opacity-80`}
-            >
-              {content}
-            </a>
-          );
+function MetaItem({
+  item,
+  stacked,
+}: {
+  item: (typeof footerMetaItems)[number];
+  stacked?: boolean;
+}) {
+  const content = (
+    <>
+      <Image
+        src={item.icon}
+        alt={item.alt}
+        width={20}
+        height={20}
+      />
+      <span
+        className={
+          stacked
+            ? "min-w-0 flex-1 text-sm leading-[18px] text-white"
+            : "min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px] items-center"
         }
+      >
+        {item.value}
+      </span>
+    </>
+  );
 
-        return (
-          <div key={`${item.type}-${i}`} className={className}>
-            {content}
-          </div>
-        );
-      })}
+  const className = stacked
+    ? ` flex w-full flex-row gap-3 items-center `
+    : `flex min-w-0 w-full flex-row gap-[6px] items-center`;
+
+  if (item.href) {
+    return (
+      <a
+        href={item.href}
+        className={`${className} transition-opacity hover:opacity-80`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
+}
+
+function LegalRow() {
+  return (
+    <div className="flex w-full flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
+      <p className="text-xs leading-[150%] text-white opacity-60 lg:text-[13px] lg:leading-4 lg:opacity-100 2xl:text-base 2xl:leading-5">
+        {footerCopyright}
+      </p>
+      <div className="flex flex-row items-center gap-4 lg:gap-3 2xl:gap-5">
+        {footerLegalLinks.map((link) => (
+          <Link
+            key={link.label}
+            href={link.href}
+            className="text-xs leading-[150%] text-white opacity-60 transition-opacity hover:opacity-100 lg:text-right lg:text-[13px] lg:leading-4 lg:opacity-100 2xl:text-base 2xl:leading-5"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
@@ -155,7 +179,7 @@ export default function Footer() {
         loop
         muted
         playsInline
-        className="absolute inset-0 hidden h-full w-full object-cover lg:block"
+        className="absolute inset-0 h-full w-full object-cover"
       >
         <source src={footerVideoSrc} type="video/mp4" />
       </video>
@@ -163,73 +187,42 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-hero)] lg:bg-[var(--overlay-image-default)]" />
 
       <div className="relative z-10 w-full px-5 py-[30px] lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]">
-        <div className="flex w-full flex-col gap-5 lg:gap-[17.78px] 2xl:gap-[30px]">
-          {/* Brand + link columns (desktop/tablet) | Brand only (mobile) */}
-          <div className="flex w-full flex-col gap-3 lg:flex-row lg:items-start lg:gap-9 2xl:gap-[60px]">
-            {/* Brand */}
-            <div className="flex w-full flex-col items-start gap-3 lg:w-[218.67px] lg:shrink-0 2xl:w-[369px]">
-              <Image
-                src={logoImage}
-                alt="ZAMR Engineering"
-                width={121}
-                height={37}
-                className="h-[36.88px] w-[121px] object-contain object-left"
-                priority
-              />
-              <div className="flex w-full flex-col items-start gap-4 lg:gap-[9.48px] 2xl:gap-4">
-                <p className="w-full text-sm leading-[150%] text-white opacity-70 lg:max-w-[197.93px] lg:text-[13px] lg:leading-6 lg:opacity-100 2xl:max-w-[334px] 2xl:text-base 2xl:leading-[29px]">
-                  {footerDescription}
-                </p>
-                <SocialLinks />
-              </div>
-            </div>
-
-            {/* Quick Links + Services — desktop/tablet */}
-            <div className="hidden min-w-0 flex-1 flex-row justify-between gap-7 lg:flex 2xl:gap-12">
-              <QuickLinksColumn />
-              <ServicesColumn />
-            </div>
-          </div>
-
-          {/* Mobile divider after brand */}
-          <div className="h-px w-full bg-white opacity-10 lg:hidden" />
-
-          {/* Quick Links + Services — mobile */}
-          <div className="flex w-full flex-row justify-between lg:hidden">
+        {/* Mobile */}
+        <div className="flex w-full flex-col gap-5 lg:hidden">
+          <BrandBlock />
+          <div className="h-px w-full bg-white opacity-10" />
+          <div className="flex w-full flex-row justify-between gap-7">
             <QuickLinksColumn />
             <ServicesColumn />
           </div>
-
-          {/* Divider */}
-          <div className="h-px w-full bg-white opacity-10 lg:opacity-100 lg:border-0" />
-
-          {/* Contact meta */}
-          <div className="lg:hidden">
-            <MetaBar stacked />
+          <div className="h-px w-full bg-white opacity-10" />
+          <div className="flex w-full flex-col items-start gap-5">
+            {footerMetaItems.map((item, i) => (
+              <MetaItem key={`${item.type}-${i}`} item={item} stacked />
+            ))}
           </div>
-          <div className="hidden lg:block">
-            <MetaBar />
+          <div className="h-px w-full bg-white opacity-10" />
+          <LegalRow />
+        </div>
+
+        {/* Tablet + Desktop — shared 4-col grid keeps Quick Links↔location1 and Services↔location2 aligned */}
+        <div className="hidden w-full grid-cols-4 gap-x-6 gap-y-[17.78px] lg:grid 2xl:gap-x-12 2xl:gap-y-[30px]">
+          <div className="col-span-2">
+            <BrandBlock />
           </div>
+          <QuickLinksColumn />
+          <ServicesColumn />
 
-          {/* Divider */}
-          <div className="h-px w-full bg-white opacity-10 lg:opacity-100" />
+          <div className="col-span-4 h-px w-full bg-white opacity-100" />
 
-          {/* Copyright + legal */}
-          <div className="flex w-full flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
-            <p className="text-xs leading-[150%] text-white opacity-60 lg:text-[13px] lg:leading-4 lg:opacity-100 2xl:text-base 2xl:leading-5">
-              {footerCopyright}
-            </p>
-            <div className="flex flex-row items-center gap-4 lg:gap-3 2xl:gap-5">
-              {footerLegalLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-xs leading-[150%] text-white opacity-60 transition-opacity hover:opacity-100 lg:text-right lg:text-[13px] lg:leading-4 lg:opacity-100 2xl:text-base 2xl:leading-5"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+          {footerMetaItems.map((item, i) => (
+            <MetaItem key={`${item.type}-${i}`} item={item} />
+          ))}
+
+          <div className="col-span-4 h-px w-full bg-white opacity-100" />
+
+          <div className="col-span-4">
+            <LegalRow />
           </div>
         </div>
       </div>
