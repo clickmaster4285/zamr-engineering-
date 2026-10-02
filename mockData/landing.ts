@@ -208,21 +208,20 @@ export const servicesPreview: ServicePreviewItem[] = [
 
 
 export const projectFilters: string[] = [
-  "ALL",
-  "Project Verification",
-  "Buildings",
-  "Civil Design",
-  "Asset Management",
-  "Civil Works",
-  "Bridge Works",
-  "Project Management",
+  "All",
+  "Engineering & Design",
+  "Project & Program Management",
+  "Project Verification & Assurance",
+  "Asset Management & Inspection",
+  "Buildings & Property Engineering",
+  "Construction & Project Delivery",
 ];
 
 export const projectsSection = {
   sectionNumber: "03",
   sectionLabel: "PROJECTS",
   heading: "Featured Work",
-  ctaLabel: "ALL PROJECTS",
+  ctaLabel: "LEARN MORE",
   logosLabel: "TRUSTED BY",
 };
 

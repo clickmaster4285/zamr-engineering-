@@ -135,7 +135,7 @@ export default function Projects() {
   const { sectionNumber, sectionLabel, heading } = projectsSection;
 
   const filteredProjects =
-    activeFilter === "ALL"
+    activeFilter === "All"
       ? projectsFeaturedWork
       : projectsFeaturedWork.filter(
         (p) => p.category.toLowerCase() === activeFilter.toLowerCase()
@@ -167,10 +167,10 @@ export default function Projects() {
         </div>
 
         {/* Filter pills — one scrolling row below 1440px, one full row from 1440px up */}
-        <div className="flex w-full min-w-0 flex-nowrap gap-3 overflow-x-auto pb-1 min-[1440px]:overflow-visible min-[1440px]:pb-0 min-[1560px]:gap-4">
+        <div className="flex w-full min-w-0 flex-nowrap gap-3 overflow-x-auto pb-1  ">
           {projectFilters.map((filter) => {
             const isActive = filter === activeFilter;
-            const isAll = filter === "ALL";
+            const isAll = filter === "All";
             return (
               <button
                 key={filter}
