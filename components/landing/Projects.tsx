@@ -90,9 +90,6 @@ export default function Projects() {
 
         <div className="w-full">
           <div className="flex w-full flex-col gap-3 pt-4 lg:hidden">
-            <p className="w-full text-center text-xs font-medium leading-[15px] tracking-[3px] text-[var(--text-soft)]">
-              {projectsSection.logosLabel}
-            </p>
             <div className="flex w-full flex-row flex-wrap justify-center gap-3">
               {clientLogos.slice(0, 6).map((logo) => (
                 <div

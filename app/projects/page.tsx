@@ -16,6 +16,8 @@ import {
   ProjectFilterPills,
   type FeaturedProjectItem,
 } from "@/components/projects/FeaturedProjectsGrid";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const barlow = Barlow({
   weight: ["500", "700", "900"],
@@ -157,14 +159,7 @@ export default function ProjectsPage() {
           </div>
 
           <div className="flex justify-end">
-            <button
-              type="button"
-              onClick={handleLoadMore}
-              disabled={!hasMore}
-              className="group w-[192px] cursor-pointer border border-[var(--color-primary)] bg-[var(--bg-light)] py-[14px] text-[14px] font-bold uppercase tracking-[3px] text-[var(--color-primary)] transition-all duration-300 hover:bg-[var(--color-primary)] hover:text-white active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--bg-light)] disabled:hover:text-[var(--color-primary)] disabled:active:scale-100"
-            >
-              Load More
-            </button>
+            <AllProjectsLink />
           </div>
         </div>
       </section>
@@ -206,5 +201,21 @@ export default function ProjectsPage() {
       </section>
       <Contacts sectionNumber="03" />
     </main>
+  );
+}
+function AllProjectsLink({ className = "" }: { className?: string }) {
+  return (
+    <Link
+      href="/projects"
+      className={`group inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[3px] text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-[5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:gap-2 2xl:text-base 2xl:leading-5 2xl:tracking-[3px] ${className}`}
+    >
+      Load More
+      <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
+        <ArrowRight
+          className="h-4 w-4 lg:h-[14px] lg:w-[14px] 2xl:h-6 2xl:w-6"
+          strokeWidth={1.25}
+        />
+      </span>
+    </Link>
   );
 }
