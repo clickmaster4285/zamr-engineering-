@@ -623,14 +623,13 @@ export const projectFilterCategoryMap: Record<string, string[]> = {
 // --- Projects Listing Page Static Data ---
 
 export const projectFilters: string[] = [
-  "ALL",
-  "Project Verification",
-  "Buildings",
-  "Civil Design",
-  "Asset Management",
-  "Civil Works",
-  "Bridge Works",
-  "Project Management",
+  "All",
+  "Engineering & Design",
+  "Project & Program Management",
+  "Project Verification & Assurance",
+  "Asset Management & Inspection",
+  "Buildings & Property Engineering",
+  "Construction & Project Delivery",
 ];
 
 export interface HeroStat {

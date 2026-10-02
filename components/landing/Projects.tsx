@@ -1,126 +1,32 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { useRouter } from "next/navigation";
 import {
   projectFilters,
   clientLogos,
   projectsFeaturedWork,
   projectsSection,
 } from "@/mockData/landing";
+import {
+  FeaturedProjectsGrid,
+  ProjectFilterPills,
+  type FeaturedProjectItem,
+} from "@/components/projects/FeaturedProjectsGrid";
 
-function useInView(threshold = 0.05) {
-  const [inView, setInView] = useState(false);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const ref = useCallback(
-    (node: HTMLElement | null) => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-        observerRef.current = null;
-      }
-      if (!node) return;
-      observerRef.current = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setInView(true);
-            observerRef.current?.disconnect();
-          }
-        },
-        { threshold, rootMargin: "100px 0px" }
-      );
-      observerRef.current.observe(node);
-    },
-    [threshold]
-  );
-  useEffect(() => {
-    return () => observerRef.current?.disconnect();
-  }, []);
-  return { ref, inView };
-}
-
-function ProjectCard({
-  project,
-  isLarge = false,
-  priority = false,
-}: {
-  project: (typeof projectsFeaturedWork)[number];
-  isLarge?: boolean;
-  priority?: boolean;
-}) {
-  const { ref, inView } = useInView();
-  const router = useRouter();
-
-  return (
-    <div
-      ref={ref}
-      onClick={() => router.push(`/projects/${project.slug}`)}
-      className={`group relative h-full min-w-0 w-full cursor-pointer overflow-hidden transition-all duration-700 ease-out ${inView ? "translate-y-0 scale-100" : "translate-y-10 scale-95"
-        }`}
-    >
-      <div
-        className={`relative w-full overflow-hidden ${isLarge
-            ? "h-[320px] lg:h-[386px] 2xl:h-[652px]"
-            : "h-[320px] lg:h-[184px] 2xl:h-[311px]"
-          }`}
-      >
-        <Image
-          src={project.featuredImage}
-          alt={project.title}
-          fill
-          priority={priority}
-          sizes="(min-width: 1536px) 817px, (min-width: 1024px) 484px, 100vw"
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-135"
-        />
-
-        <div className="absolute inset-0 bg-[var(--overlay-image-default)]" />
-        <div className="absolute inset-0 bg-[var(--overlay-image-default)] transition-colors duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:bg-[var(--overlay-image-hover)]" />
-
-        {/* Mobile layout — stacked content */}
-        <div className="absolute inset-0 flex flex-col justify-between p-6 lg:hidden">
-          <span className="text-sm font-bold leading-[18px] tracking-[3px] text-white">
-            {project.index}
-          </span>
-          <h3 className="text-xl font-semibold leading-[1.3] text-white">
-            {project.title}
-          </h3>
-        </div>
-
-        {/* Tablet + Desktop layout */}
-        <span
-          className={`absolute left-[30px] top-[30px] hidden font-extrabold tracking-[1.78px] text-white lg:block 2xl:left-[50px] 2xl:top-[50px] 2xl:tracking-[3px] ${isLarge
-              ? "text-[32px] leading-10 2xl:text-[54px] 2xl:leading-[68px]"
-              : "text-[20px] leading-[25px] 2xl:text-[34px] 2xl:leading-[43px]"
-            }`}
-        >
-          {project.index}
-        </span>
-
-        <div className="absolute left-[24px] bottom-[20px] lg:left-[30px] right-[30px] hidden flex-col lg:flex 2xl:bottom-[30px] 2xl:left-[50px] 2xl:right-[50px]">
-          <h3
-            className={`font-semibold text-white transition-[margin] duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:mb-[30px] ${isLarge
-                ? "max-w-[319px] text-lg leading-[23px] 2xl:max-w-[496px] 2xl:text-[28px] 2xl:leading-[35px]"
-                : "max-w-[328px] text-lg leading-[23px] 2xl:max-w-[511px] 2xl:text-[28px] 2xl:leading-[35px]"
-              }`}
-          >
-            {project.title}
-          </h3>
-          <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:grid-rows-[1fr] [@media(hover:hover)_and_(pointer:fine)]:group-hover:opacity-100">
-            <p
-              className={`overflow-hidden text-white/90 ${isLarge
-                  ? "max-w-[319px] text-sm leading-5 2xl:max-w-[496px] 2xl:text-base 2xl:leading-[23px]"
-                  : "max-w-[328px] text-sm leading-5 2xl:max-w-[511px] 2xl:text-base 2xl:leading-[23px]"
-                } line-clamp-2`}
-            >
-              {project.shortDescription}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+function toFeaturedItems(
+  items: typeof projectsFeaturedWork,
+): FeaturedProjectItem[] {
+  return items.map((p) => ({
+    slug: p.slug,
+    index: p.index,
+    title: p.title,
+    category: p.category,
+    shortDescription: p.shortDescription,
+    image: p.featuredImage,
+  }));
 }
 
 function AllProjectsLink({ className = "" }: { className?: string }) {
@@ -131,7 +37,10 @@ function AllProjectsLink({ className = "" }: { className?: string }) {
     >
       {projectsSection.ctaLabel}
       <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
-        <ArrowRight className="h-4 w-4 lg:h-[14px] lg:w-[14px] 2xl:h-6 2xl:w-6" strokeWidth={1.25} />
+        <ArrowRight
+          className="h-4 w-4 lg:h-[14px] lg:w-[14px] 2xl:h-6 2xl:w-6"
+          strokeWidth={1.25}
+        />
       </span>
     </Link>
   );
@@ -145,16 +54,12 @@ export default function Projects() {
     activeFilter === "All"
       ? projectsFeaturedWork
       : projectsFeaturedWork.filter(
-        (p) => p.category.toLowerCase() === activeFilter.toLowerCase()
-      );
+          (p) => p.category.toLowerCase() === activeFilter.toLowerCase(),
+        );
 
-  const handleFilterChange = (filter: string) => {
-    setActiveFilter(filter);
-  };
   return (
     <section className="w-full min-w-0 max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
       <div className="flex w-full min-w-0 flex-col gap-5 lg:gap-9 2xl:gap-[60px]">
-        {/* Header */}
         <div className="flex w-full flex-col gap-3 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
           <div className="flex flex-col gap-3 lg:gap-[18px] 2xl:gap-[30px]">
             <div className="flex items-center gap-3 lg:gap-[9.5px] 2xl:gap-4">
@@ -170,61 +75,20 @@ export default function Projects() {
               {heading}
             </h2>
           </div>
-
         </div>
 
-        {/* Filter pills — one scrolling row below 1440px, one full row from 1440px up */}
-        <div className="flex w-full min-w-0 flex-nowrap gap-3 overflow-x-auto pb-1  ">
-          {projectFilters.map((filter) => {
-            const isActive = filter === activeFilter;
-            const isAll = filter === "All";
-            return (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => handleFilterChange(filter)}
-                className={`flex-none whitespace-nowrap border px-4 py-3 text-center text-xs tracking-[0.15em] transition-all duration-300 sm:text-sm min-[1440px]:flex-1 ${isActive
-                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
-                  : "border-[var(--color-primary)] bg-white text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white"
-                  } ${isAll ? "w-20 min-[1440px]:flex-none" : ""}`}
-              >
-                {filter}
-              </button>
-            );
-          })}
-        </div>
+        <ProjectFilterPills
+          filters={projectFilters}
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
 
-        {/* Project grid — fluid width, Figma ratio (~817:621) */}
-        {filteredProjects.length > 0 ? (
-          <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-row lg:items-stretch lg:gap-[18px] 2xl:gap-[30px]">
-            {filteredProjects[0] && (
-              <div className="w-full min-w-0 lg:flex-[1.315] lg:basis-0">
-                <ProjectCard
-                  project={filteredProjects[0]}
-                  isLarge
-                  priority
-                />
-              </div>
-            )}
-            <div className="flex w-full min-w-0 flex-col gap-4 lg:flex-1 lg:basis-0 2xl:gap-[30px]">
-              {filteredProjects.slice(1, 3).map((project) => (
-                <ProjectCard
-                  key={project.slug}
-                  project={project}
-                  isLarge={false}
-                />
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div className="py-12 text-center text-lg text-[var(--text-muted)]">
-            No projects found in this category.
-          </div>
-        )}
+        <FeaturedProjectsGrid
+          projects={toFeaturedItems(filteredProjects)}
+          priorityFirst
+        />
 
-        {/* Client logos — static grid, no marquee */}
         <div className="w-full">
-          {/* Mobile: label + 2-row bordered grid */}
           <div className="flex w-full flex-col gap-3 pt-4 lg:hidden">
             <p className="w-full text-center text-xs font-medium leading-[15px] tracking-[3px] text-[var(--text-soft)]">
               {projectsSection.logosLabel}
@@ -247,7 +111,6 @@ export default function Projects() {
             </div>
           </div>
 
-          {/* Tablet + Desktop: equal flex row, no animation */}
           <div className="hidden w-full flex-row items-center gap-[18px] lg:flex 2xl:gap-[30px]">
             {clientLogos.map((logo) => (
               <div
@@ -266,7 +129,6 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* CTA */}
         <div className="flex w-full justify-end">
           <AllProjectsLink />
         </div>
