@@ -228,17 +228,22 @@ export const projectsSection = {
 export interface ClientLogo {
   src: string;
   alt: string;
+  category: string;
 }
 
 export const clientLogos: ClientLogo[] = [
-  { src: "/images/logo1.jpeg", alt: "Transport for NSW" },
-  { src: "/images/logo2.jpeg", alt: "VIDA" },
-  { src: "/images/logo3.jpeg", alt: "Queensland Government" },
-  { src: "/images/logo4.jpeg", alt: "The National Roads & Motorists' Association" },
-  { src: "/images/logo5.jpeg", alt: "Ausbuild" },
-  { src: "/images/logo6.jpeg", alt: "Melbourne Civil Works" },
-  { src: "/images/logo7.jpeg", alt: "Sydney Structural & Civil" },
-  { src: "/images/logo8.jpeg", alt: "Brisbane Growth Development Agency" },
+  { src: "/images/clientlogo/EngineeringDesign1.png", alt: "Engineering & Design Client 1", category: "Engineering & Design" },
+  { src: "/images/clientlogo/EngineeringDesign2.png", alt: "Engineering & Design Client 2", category: "Engineering & Design" },
+  { src: "/images/clientlogo/AssetManagementInspection1.png", alt: "Asset Management & Inspection Client 1", category: "Asset Management & Inspection" },
+  { src: "/images/clientlogo/AssetManagementInspection2.png", alt: "Asset Management & Inspection Client 2", category: "Asset Management & Inspection" },
+  { src: "/images/clientlogo/BuildingsPropertyEngineering1.png", alt: "Buildings & Property Engineering Client 1", category: "Buildings & Property Engineering" },
+  { src: "/images/clientlogo/BuildingsPropertyEngineering2.png", alt: "Buildings & Property Engineering Client 2", category: "Buildings & Property Engineering" },
+  { src: "/images/clientlogo/ConstructionProjectDelivery1.png", alt: "Construction & Project Delivery Client 1", category: "Construction & Project Delivery" },
+  { src: "/images/clientlogo/ConstructionProjectDelivery2.png", alt: "Construction & Project Delivery Client 2", category: "Construction & Project Delivery" },
+  { src: "/images/clientlogo/ProjectProgramManagement1.png", alt: "Project & Program Management Client 1", category: "Project & Program Management" },
+  { src: "/images/clientlogo/ProjectProgramManagement2.png", alt: "Project & Program Management Client 2", category: "Project & Program Management" },
+  { src: "/images/clientlogo/ProjectVerificationAssurance1.png", alt: "Project Verification & Assurance Client 1", category: "Project Verification & Assurance" },
+  { src: "/images/clientlogo/ProjectVerificationAssurance2.png", alt: "Project Verification & Assurance Client 2", category: "Project Verification & Assurance" },
 ];
 
 export interface WhyZamrPoint {

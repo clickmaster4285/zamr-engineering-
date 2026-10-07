@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -49,6 +49,8 @@ function AllProjectsLink({ className = "" }: { className?: string }) {
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState(projectFilters[0]);
   const { sectionNumber, sectionLabel, heading } = projectsSection;
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   const filteredProjects =
     activeFilter === "All"
@@ -56,6 +58,28 @@ export default function Projects() {
       : projectsFeaturedWork.filter(
           (p) => p.category.toLowerCase() === activeFilter.toLowerCase(),
         );
+
+  const filteredLogos = useMemo(() => {
+    if (activeFilter === "All") {
+      return clientLogos;
+    }
+    return clientLogos.filter((logo) => logo.category === activeFilter);
+  }, [activeFilter]);
+
+  // Check if content overflows container width
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (marqueeRef.current) {
+        const contentWidth = marqueeRef.current.scrollWidth;
+        const containerWidth = marqueeRef.current.parentElement?.clientWidth || 0;
+        setShouldAnimate(contentWidth > containerWidth);
+      }
+    };
+
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [filteredLogos]);
 
   return (
     <section className="w-full min-w-0 max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
@@ -84,45 +108,42 @@ export default function Projects() {
         />
 
         <FeaturedProjectsGrid
-          projects={toFeaturedItems(filteredProjects)}
+                  projects={toFeaturedItems(projectsFeaturedWork)}
           priorityFirst
         />
 
-        {/* Trusted Client logos section — infinite auto scroll */}
-        <div
-          className="relative w-full overflow-hidden"
-          style={{
-            maskImage:
-              "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
-          }}
-        >
-          <div className="flex w-max animate-marquee items-center hover:[animation-play-state:paused]">
-            {[0, 1].map((copy) => (
-              <div
-                key={copy}
-                className="flex shrink-0 items-center gap-[18px] pr-[18px] 2xl:gap-[30px] 2xl:pr-[30px]"
-                aria-hidden={copy === 1}
-              >
-                {clientLogos.map((logo) => (
+        {/* Trusted Client logos section — centered, no duplication */}
+                <div
+                  className="relative w-full overflow-hidden"
+                  style={{
+                    maskImage:
+                      "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+                    WebkitMaskImage:
+                      "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+                  }}
+                >
                   <div
-                    key={`${copy}-${logo.alt}`}
-                    className="relative flex h-[51px] w-[157px] shrink-0 items-center justify-center bg-[var(--bg-section)] 2xl:h-[86px]"
+                    ref={marqueeRef}
+                    className={`flex w-full justify-center items-center gap-[18px] 2xl:gap-[30px] ${
+                      shouldAnimate ? "animate-marquee" : ""
+                    }`}
                   >
-                    <Image
-                      src={logo.src}
-                      alt={logo.alt}
-                      width={157}
-                      height={57}
-                      className="max-h-[34px] w-auto max-w-[94px] object-contain 2xl:max-h-[57px] 2xl:max-w-[157px]"
-                    />
+                    {filteredLogos.map((logo) => (
+                      <div
+                        key={logo.alt}
+                        className="relative flex h-[51px] w-[157px] shrink-0 items-center justify-center bg-[var(--bg-section)] 2xl:h-[86px]"
+                      >
+                        <Image
+                          src={logo.src}
+                          alt={logo.alt}
+                          width={157}
+                          height={57}
+                          className="max-h-[34px] w-auto max-w-[94px] object-contain 2xl:max-h-[57px] 2xl:max-w-[157px]"
+                        />
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
+                </div>
 
         <div className="flex w-full justify-end">
           <AllProjectsLink />
