@@ -152,7 +152,7 @@ export default function ProjectsPage() {
             />
 
             <FeaturedProjectsGrid
-              projects={toFeaturedItems(displayedProjects)}
+                          projects={toFeaturedItems(projects)}
               showAdditionalGrid
               priorityFirst
             />

@@ -108,7 +108,7 @@ export default function Projects() {
         />
 
         <FeaturedProjectsGrid
-          projects={toFeaturedItems(filteredProjects)}
+                  projects={toFeaturedItems(projectsFeaturedWork)}
           priorityFirst
         />
 
