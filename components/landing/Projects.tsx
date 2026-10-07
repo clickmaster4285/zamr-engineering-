@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -15,6 +15,8 @@ import {
   ProjectFilterPills,
   type FeaturedProjectItem,
 } from "@/components/projects/FeaturedProjectsGrid";
+
+const LOGO_ITEM_WIDTH = 157;
 
 function toFeaturedItems(
   items: typeof projectsFeaturedWork,
@@ -49,6 +51,8 @@ function AllProjectsLink({ className = "" }: { className?: string }) {
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState(projectFilters[0]);
   const { sectionNumber, sectionLabel, heading } = projectsSection;
+  const logosContainerRef = useRef<HTMLDivElement>(null);
+  const [repeatCount, setRepeatCount] = useState(1);
 
   const filteredProjects =
     activeFilter === "All"
@@ -64,11 +68,42 @@ export default function Projects() {
     return clientLogos.filter((logo) => logo.category === activeFilter);
   }, [activeFilter]);
 
-  // Duplicate once so translateX(-50%) loops seamlessly
-  const marqueeLogos = useMemo(
-    () => [...filteredLogos, ...filteredLogos],
-    [filteredLogos],
-  );
+  // If one logo set is narrower than the container, repeat until it fills width
+  useEffect(() => {
+    const container = logosContainerRef.current;
+    if (!container || filteredLogos.length === 0) {
+      setRepeatCount(1);
+      return;
+    }
+
+    const updateRepeatCount = () => {
+      // Matches gap-[18px] / 2xl:gap-[30px] on the track
+      const gap = window.matchMedia("(min-width: 1536px)").matches ? 30 : 18;
+      const setWidth =
+        filteredLogos.length * LOGO_ITEM_WIDTH +
+        Math.max(0, filteredLogos.length - 1) * gap;
+      const containerWidth = container.clientWidth;
+
+      // Fill to at least container width; min 1 set
+      const times =
+        setWidth > 0
+          ? Math.max(1, Math.ceil(containerWidth / setWidth))
+          : 1;
+      setRepeatCount(times);
+    };
+
+    updateRepeatCount();
+    const observer = new ResizeObserver(updateRepeatCount);
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [filteredLogos]);
+
+  // Build a width-filling set, then duplicate once for seamless -50% loop
+  const marqueeLogos = useMemo(() => {
+    if (filteredLogos.length === 0) return [];
+    const filledSet = Array.from({ length: repeatCount }, () => filteredLogos).flat();
+    return [...filledSet, ...filledSet];
+  }, [filteredLogos, repeatCount]);
 
   return (
     <section className="w-full min-w-0 max-w-full overflow-x-hidden bg-[var(--bg-light)] px-5 py-[30px] lg:px-[77px] lg:py-[77px] 2xl:p-[130px]">
@@ -101,8 +136,9 @@ export default function Projects() {
           priorityFirst
         />
 
-        {/* Trusted Client logos — duplicated track for infinite marquee */}
+        {/* Trusted Client logos — fill width if needed, then loop */}
         <div
+          ref={logosContainerRef}
           className="relative w-full overflow-hidden"
           style={{
             maskImage:
