@@ -79,8 +79,8 @@ export default function Contact({
     <section
       className={`w-full ${bgcolor} px-5 py-12 lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]`}
     >
-      <div className="flex w-full flex-col items-start gap-10 lg:items-center lg:gap-10 2xl:flex-row 2xl:items-center 2xl:gap-[231px]">
-        {/* Left — heading + details */}
+      <div className="flex w-full flex-col items-start gap-10 lg:items-center lg:gap-10 2xl:flex-row 2xl:items-start 2xl:gap-[231px]">
+        {/* Left — heading */}
         <div className="flex w-full flex-col items-start gap-6 lg:gap-[29.63px] 2xl:w-[555px] 2xl:shrink-0 2xl:gap-[50px]">
           <div className="flex w-full flex-col items-start gap-3 lg:gap-[17.78px] 2xl:gap-[30px]">
             <div className="flex flex-row items-center gap-3 lg:gap-[9.48px] 2xl:gap-4">
@@ -97,25 +97,6 @@ export default function Contact({
               {heading}
             </h2>
           </div>
-
-          <div className="flex w-full flex-col items-start gap-4 lg:gap-[11.85px] 2xl:gap-5">
-            {details.map((line) => {
-              const Component = line.href ? "a" : "p";
-
-              return (
-                <Component
-                  key={`${line.label}-${line.value}`}
-                  {...(line.href ? { href: line.href } : {})}
-                  className={`w-full text-[15px]  leading-[19px] [font-feature-settings:'liga'_off] lg:text-[13px] lg:font-normal lg:leading-4  2xl:text-lg 2xl:leading-[23px] ${
-                    line.label === "Phone" ? "lg:capitalize" : ""
-                  } `}
-                >
-                  <span className="text-[var(--color-primary)] ">{line.label}: </span> <span> {line.value} </span>
-                 </Component>
-              );
-            })}
-          </div>
-
         </div>
 
         {/* Right — form */}
