@@ -102,7 +102,7 @@ export default function Contact({
         {/* Right — form */}
         <form
           onSubmit={handleSubmit}
-          className="flex w-full flex-col items-start gap-6 lg:gap-7 2xl:w-[682px] 2xl:shrink-0"
+          className="flex w-full flex-col items-start gap-6 lg:gap-7 2xl:w-[682px] 2xl:min-w-0 2xl:shrink 2xl:grow"
         >
           <div className="flex w-full flex-col gap-6 lg:gap-7">
             <div className="grid w-full grid-cols-1 gap-6 lg:grid-cols-2">
