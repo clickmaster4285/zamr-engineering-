@@ -243,7 +243,6 @@ export const clientLogos: ClientLogo[] = [
   { src: "/images/clientlogo/AssetManagementInspection2.png", alt: "Asset Management & Inspection Client 2", category: "Asset Management & Inspection" },
   { src: "/images/clientlogo/AssetManagementInspection3.png", alt: "Asset Management & Inspection Client 3", category: "Asset Management & Inspection" },
   { src: "/images/clientlogo/AssetManagementInspection4.png", alt: "Asset Management & Inspection Client 4", category: "Asset Management & Inspection" },
-  { src: "/images/clientlogo/AssetManagementInspection5.png", alt: "Asset Management & Inspection Client 5", category: "Asset Management & Inspection" },
   { src: "/images/clientlogo/AssetManagementInspection6.png", alt: "Asset Management & Inspection Client 6", category: "Asset Management & Inspection" },
   { src: "/images/clientlogo/BuildingsPropertyEngineering1.png", alt: "Buildings & Property Engineering Client 1", category: "Buildings & Property Engineering" },
   { src: "/images/clientlogo/BuildingsPropertyEngineering2.png", alt: "Buildings & Property Engineering Client 2", category: "Buildings & Property Engineering" },
