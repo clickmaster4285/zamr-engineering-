@@ -179,6 +179,8 @@ type FeaturedProjectsGridProps = {
   showAdditionalGrid?: boolean;
   priorityFirst?: boolean;
   emptyMessage?: string;
+  /** Max number of projects to render (default 6) */
+  limit?: number;
 };
 
 export function FeaturedProjectsGrid({
@@ -186,6 +188,7 @@ export function FeaturedProjectsGrid({
   showAdditionalGrid = false,
   priorityFirst = false,
   emptyMessage = "No projects found in this category.",
+  limit = 6,
 }: FeaturedProjectsGridProps) {
   if (projects.length === 0) {
     return (
@@ -195,8 +198,9 @@ export function FeaturedProjectsGrid({
     );
   }
 
-  const featured = projects.slice(0, 3);
-  const additional = showAdditionalGrid ? projects.slice(3) : [];
+  const visibleProjects = projects.slice(0, limit);
+  const featured = visibleProjects.slice(0, 3);
+  const additional = showAdditionalGrid ? visibleProjects.slice(3) : [];
 
   return (
     <div className="flex w-full min-w-0 flex-col gap-4 lg:gap-[18px] 2xl:gap-[30px]">

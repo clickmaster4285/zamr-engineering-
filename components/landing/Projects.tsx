@@ -5,11 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import {
-  projectFilters,
   clientLogos,
-  projectsFeaturedWork,
   projectsSection,
 } from "@/mockData/landing";
+import {
+  projects,
+  projectFilters,
+  projectFilterCategoryMap,
+} from "@/mockData/projects";
 import {
   FeaturedProjectsGrid,
   ProjectFilterPills,
@@ -18,16 +21,14 @@ import {
 
 const LOGO_ITEM_WIDTH = 157;
 
-function toFeaturedItems(
-  items: typeof projectsFeaturedWork,
-): FeaturedProjectItem[] {
-  return items.map((p) => ({
+function toFeaturedItems(items: typeof projects): FeaturedProjectItem[] {
+  return items.map((p, idx) => ({
     slug: p.slug,
-    index: p.index,
+    index: String(idx + 1).padStart(2, "0"),
     title: p.title,
     category: p.category,
     shortDescription: p.shortDescription,
-    image: p.featuredImage,
+    image: p.heroImage,
   }));
 }
 
@@ -56,10 +57,18 @@ export default function Projects() {
 
   const filteredProjects =
     activeFilter === "All"
-      ? projectsFeaturedWork
-      : projectsFeaturedWork.filter(
-          (p) => p.category.toLowerCase() === activeFilter.toLowerCase(),
-        );
+      ? projects
+      : projects.filter((p) => {
+          const categories =
+            projectFilterCategoryMap[activeFilter.toLowerCase()];
+          return categories?.some(
+            (c) => c.toLowerCase() === p.category.toLowerCase(),
+          );
+        });
+
+  const handleFilterChange = (filter: string) => {
+    setActiveFilter(filter);
+  };
 
   const filteredLogos = useMemo(() => {
     if (activeFilter === "All") {
@@ -128,11 +137,11 @@ export default function Projects() {
         <ProjectFilterPills
           filters={projectFilters}
           activeFilter={activeFilter}
-          onFilterChange={setActiveFilter}
+          onFilterChange={handleFilterChange}
         />
 
         <FeaturedProjectsGrid
-                  projects={toFeaturedItems(projectsFeaturedWork)}
+          projects={toFeaturedItems(filteredProjects)}
           priorityFirst
         />
 

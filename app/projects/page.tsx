@@ -31,9 +31,9 @@ const LOAD_MORE_COUNT = 3;
 function toFeaturedItems(
   items: typeof projects,
 ): FeaturedProjectItem[] {
-  return items.map((p) => ({
+  return items.map((p, idx) => ({
     slug: p.slug,
-    index: p.index,
+    index: String(idx + 1).padStart(2, "0"),
     title: p.title,
     category: p.category,
     shortDescription: p.shortDescription,
@@ -152,8 +152,8 @@ export default function ProjectsPage() {
             />
 
             <FeaturedProjectsGrid
-                          projects={toFeaturedItems(projects)}
-              showAdditionalGrid
+              projects={toFeaturedItems(filteredProjects)}
+              limit={3}
               priorityFirst
             />
           </div>
