@@ -55,16 +55,32 @@ export default function Projects() {
   const logosContainerRef = useRef<HTMLDivElement>(null);
   const [repeatCount, setRepeatCount] = useState(1);
 
-  const filteredProjects =
-    activeFilter === "All"
-      ? projects
-      : projects.filter((p) => {
-          const categories =
-            projectFilterCategoryMap[activeFilter.toLowerCase()];
-          return categories?.some(
-            (c) => c.toLowerCase() === p.category.toLowerCase(),
-          );
-        });
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === "All") {
+      // One project per category so the featured grid shows variety
+      const diverse: typeof projects = [];
+      for (const filter of projectFilters) {
+        if (filter === "All") continue;
+        const categories = projectFilterCategoryMap[filter.toLowerCase()];
+        const match = projects.find(
+          (p) =>
+            categories?.some(
+              (c) => c.toLowerCase() === p.category.toLowerCase(),
+            ) && !diverse.some((d) => d.slug === p.slug),
+        );
+        if (match) diverse.push(match);
+      }
+      return diverse;
+    }
+
+    return projects.filter((p) => {
+      const categories =
+        projectFilterCategoryMap[activeFilter.toLowerCase()];
+      return categories?.some(
+        (c) => c.toLowerCase() === p.category.toLowerCase(),
+      );
+    });
+  }, [activeFilter]);
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);

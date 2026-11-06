@@ -80,7 +80,7 @@ export default function AllProjectsFeaturedWork() {
   const showingLabel =
     total === 0
       ? "Showing 0 of 0 projects"
-      : `Showing ${start + 1} - ${String(end).padStart(2, "0")} of ${total} projects`;
+      : `Showing ${currentPage} - ${String(end).padStart(2, "0")} of ${total} projects`;
 
   return (
     <section className="w-full bg-[var(--bg-section)] px-5 py-5 lg:px-16 lg:py-[72px] 2xl:px-[130px] 2xl:py-[130px]">
