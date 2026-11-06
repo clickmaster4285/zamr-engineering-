@@ -91,6 +91,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Transport for NSW, under the M5 Project, required new shared paths along Campbell Road, St Peters, to connect with newly constructed shared paths and the future Alexandra Canal shared path.",
     location: "Alexandria, NSW",
     challengeParagraphs: [
+      "Transport for NSW, under the M5 Project, required new shared paths along Campbell Road, St Peters, to connect with newly constructed shared paths and the future Alexandra Canal shared path.",
       "The design needed to provide a continuous north-south connection through the existing culvert under Campbell Road Bridge, including drainage, lighting and retaining walls suited to the underpass.",
       "Civil and lighting design was delivered for the 2.5 m and 3.0 m shared paths, two retaining walls and culvert lighting, through to Issued for Construction documentation.",
     ],
@@ -151,6 +152,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Liverpool City Council required staged improvements along approximately 6.1 km of Kurrajong Road, Prestons, a major east/west collector road linking the Hume Highway and Cowpasture Road, as growing traffic flows were causing delays and road safety concerns.",
     location: "Liverpool, NSW",
     challengeParagraphs: [
+      "Liverpool City Council required staged improvements along approximately 6.1 km of Kurrajong Road, Prestons, a major east/west collector road linking the Hume Highway and Cowpasture Road, as growing traffic flows were causing delays and road safety concerns.",
       "The strategic design needed to develop a two-lane configuration in each direction, with supporting treatments to improve safety and access, and to be delivered as short-term, medium-term and long-term improvements.",
       "A 2D strategic design was prepared in consultation with Council, in line with Council standards and the Austroads Guide to Road Design, and submitted in AutoCAD and PDF formats.",
     ],
@@ -212,6 +214,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "The Dunmore Street and Station Street Junction Upgrade, funded under the Black Spot Program and delivered by DM Roads and Cumberland City Council, was initiated after accessibility issues were identified at the junction, including steep pram ramps and a bus stop kerb too low for wheelchair ramp deployment.",
     location: "Wentworthville, NSW",
     challengeParagraphs: [
+      "The Dunmore Street and Station Street Junction Upgrade, funded under the Black Spot Program and delivered by DM Roads and Cumberland City Council, was initiated after accessibility issues were identified at the junction, including steep pram ramps and a bus stop kerb too low for wheelchair ramp deployment.",
       "The design needed to correct crossfalls and levels between pram ramps and provide compliant wheelchair access around the junction and at the bus stop, while minimising impact on existing traffic signal infrastructure and utilities.",
       "Three concept options were prepared for stakeholder consultation, followed by detailed design and Issued for Construction drawings in line with AusSpec, Council and Transport for NSW requirements.",
     ],
@@ -280,6 +283,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Bayside Council's retaining wall renewal program required the replacement of two ageing retaining walls supporting road-verge embankments at King Street, Rockdale and Banksia Street, Pagewood, delivered through Indus Engineering.",
     location: "Rockdale NSW; Pagewood NSW",
     challengeParagraphs: [
+      "Bayside Council's retaining wall renewal program required the replacement of two ageing retaining walls supporting road-verge embankments at King Street, Rockdale and Banksia Street, Pagewood, delivered through Indus Engineering.",
       "The new walls needed to achieve a 100-year design life within established residential streets, close to mature trees, underground services and adjoining properties, with site-specific geotechnical and drainage conditions.",
       "Structural and geotechnical design was prepared for a 63 m masonry/block wall at King Street and a 43.6 m steel H-post and precast sleeper wall at Banksia Street.",
     ],
@@ -349,6 +353,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Transport for NSW delivered Stage 2 of the M4 Smart Motorway, the first in NSW, to reduce congestion and improve safety and incident response on a motorway carrying up to 7,100 vehicles per direction at peak times.",
     location: "Mays Hill, NSW",
     challengeParagraphs: [
+      "Transport for NSW delivered Stage 2 of the M4 Smart Motorway, the first in NSW, to reduce congestion and improve safety and incident response on a motorway carrying up to 7,100 vehicles per direction at peak times.",
       "The works included variable message signs, traffic sensors, CCTV, speed and lane use signs, and widened ramps with new ramp meters, delivered by Seymour Whyte on a live motorway.",
       "Project engineering support was provided to TfNSW, overseeing contractor compliance with contract specifications, safety, environment, quality and traffic requirements.",
     ],
@@ -410,6 +415,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "The Bruce Highway upgrade between Caboolture-Bribie Island Road and Steve Irwin Way, part of the wider Pine River to Caloundra Road program, is funded under the National Partnership Agreement with a $662.5 million commitment to improve capacity, safety and flood immunity.",
     location: "Caboolture, QLD",
     challengeParagraphs: [
+      "The Bruce Highway upgrade between Caboolture-Bribie Island Road and Steve Irwin Way, part of the wider Pine River to Caloundra Road program, is funded under the National Partnership Agreement with a $662.5 million commitment to improve capacity, safety and flood immunity.",
       "The 11 km section is being widened from four to six lanes, with five creek crossings upgraded for flood immunity, requiring early works, property demolition and major contracts to be procured ahead of construction.",
       "Project services were provided to the Department of Transport and Main Roads from preliminary design through to contract award and administration.",
     ],
@@ -471,6 +477,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "The Australian and NSW Governments jointly funded upgrades to the Showground Road intersections at Carrington Road and De Clambe Drive, Castle Hill, to improve bus reliability, ease congestion and improve safety and access to Hills Showground Station.",
     location: "Castle Hill, NSW",
     challengeParagraphs: [
+      "The Australian and NSW Governments jointly funded upgrades to the Showground Road intersections at Carrington Road and De Clambe Drive, Castle Hill, to improve bus reliability, ease congestion and improve safety and access to Hills Showground Station.",
       "The works included road widening, a new westbound left turn lane, a 2.5 m footpath, utility relocation and stormwater drainage upgrades, delivered by BMD Constructions as part of the Fast Alternative Delivery projects.",
       "Project engineering support was provided to Transport for NSW, managing design and construction for compliance with contract, safety, environment, quality and traffic requirements.",
     ],
@@ -532,6 +539,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "As part of the Melrose Park redevelopment, a new Left-In/Left-Out intersection on Victoria Road was delivered under a Works Authorisation Deed to provide safer access to the new development and align with the ultimate road network.",
     location: "Melrose Park, NSW",
     challengeParagraphs: [
+      "As part of the Melrose Park redevelopment, a new Left-In/Left-Out intersection on Victoria Road was delivered under a Works Authorisation Deed to provide safer access to the new development and align with the ultimate road network.",
       "The works included an approximately 150 m westbound slip lane with road widening, a new council road, a 5.8 m high retaining wall, and watermain and stormwater upgrades, constructed by Chrisos Civil Construction.",
       "Contractor management support was provided to ensure delivery in line with Transport for NSW specifications and quality, safety and environmental requirements.",
     ],
@@ -593,6 +601,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Traffic signals and associated road works were installed at five intersections in Kemps Creek, including Mamre Road and Abbotts Road, to TfNSW accepted drawings and requirements, delivered by Robson Civil under a developer-led arrangement.",
     location: "Kemps Creek, NSW",
     challengeParagraphs: [
+      "Traffic signals and associated road works were installed at five intersections in Kemps Creek, including Mamre Road and Abbotts Road, to TfNSW accepted drawings and requirements, delivered by Robson Civil under a developer-led arrangement.",
       "The works included demolition, earthworks, drainage, pavement, concrete works, signage, line marking and traffic control signals, with design and construction both needing to meet TfNSW standards.",
       "Independent project verification was provided for both design and construction, confirming compliance with TfNSW standards, Australian Standards, Austroads guidelines and approvals.",
     ],
@@ -654,6 +663,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Development works at 877 Richmond Road, Marsden Park required an extension of the service road and culvert, with street lighting, stormwater drainage and utility relocation, delivered by J&G Asphalting for developer Isaac Property.",
     location: "Marsden Park, NSW",
     challengeParagraphs: [
+      "Development works at 877 Richmond Road, Marsden Park required an extension of the service road and culvert, with street lighting, stormwater drainage and utility relocation, delivered by J&G Asphalting for developer Isaac Property.",
       "The works needed to meet Transport for NSW requirements, including reinstating any affected TfNSW assets, dedicating land as public road, and creating a culvert easement in favour of Blacktown City Council.",
       "Independent project verification was provided for both design and construction, confirming compliance with TfNSW standards, Australian Standards, Austroads guidelines and approvals.",
     ],
@@ -715,6 +725,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "New traffic signals were installed on the Illawarra Highway at Church Street and Tongarra Road, Albion Park, under development consent 741/2002, delivered by Devcon for Balmoral Parade Pty Ltd.",
     location: "Albion Park, NSW",
     challengeParagraphs: [
+      "New traffic signals were installed on the Illawarra Highway at Church Street and Tongarra Road, Albion Park, under development consent 741/2002, delivered by Devcon for Balmoral Parade Pty Ltd.",
       "The signalised intersection included pavement works, drainage, lighting, signage, line marking, landscaping and service relocations, all designed and constructed to TfNSW requirements on a state highway.",
       "Independent project verification covered both design and construction, confirming compliance with TfNSW standards, Australian Standards, Austroads guidelines and planning approvals.",
     ],
@@ -776,6 +787,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Public domain works at Walter Street, Willoughby, supported an approved residential development of five buildings and 164 units, including the upgrade and relocation of utility services and the reconstruction of the road.",
     location: "Willoughby, NSW",
     challengeParagraphs: [
+      "Public domain works at Walter Street, Willoughby, supported an approved residential development of five buildings and 164 units, including the upgrade and relocation of utility services and the reconstruction of the road.",
       "The works were staged, starting with telecommunications, substation, gas and water main upgrades, followed by kerb and gutter, concrete pavement replacement, asphalting and line marking.",
       "Contractor management support was provided to Chrisos Civil Construction to deliver the works in line with Transport for NSW specifications and quality, safety and environmental requirements.",
     ],
@@ -837,6 +849,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "The Stewardship Maintenance Contract (SMC) was an outsourced model for maintaining Sydney's roads and bridges, using stewardship principles and performance-based metrics to focus on long-term asset condition, durability and customer experience.",
     location: "Western and Northern Region, NSW",
     challengeParagraphs: [
+      "The Stewardship Maintenance Contract (SMC) was an outsourced model for maintaining Sydney's roads and bridges, using stewardship principles and performance-based metrics to focus on long-term asset condition, durability and customer experience.",
       "The contract covered the rebuilding, rehabilitation, strengthening and repainting of bridges, as well as the operation of bridge, tunnel and ferry assets across the North and West Zones of the Sydney Region.",
       "Bridge portfolio management services were provided to DM Roads, covering project and portfolio budgets, design management, procurement support and delivery oversight.",
     ],
@@ -897,6 +910,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Liverpool City Council is investigating the condition of three bridges, Fifteenth Avenue Road Bridge, Spencer Road Footbridge and Eighth Avenue Road Bridge, after earlier visual inspections found cracking, timber decay and missing components.",
     location: "Liverpool, NSW",
     challengeParagraphs: [
+      "Liverpool City Council is investigating the condition of three bridges, Fifteenth Avenue Road Bridge, Spencer Road Footbridge and Eighth Avenue Road Bridge, after earlier visual inspections found cracking, timber decay and missing components.",
       "A detailed engineering assessment was needed to confirm the severity of defects, check structural adequacy and identify suitable repair or rehabilitation options.",
       "Level 3 bridge inspections were provided to Council, covering testing, load capacity assessment, deterioration forecasting, repair recommendations and cost estimates.",
     ],
@@ -957,6 +971,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Temporary access was required within a live creek corridor beneath the Bells Line of Road bridge at North Richmond, including culvert placement and rock fill close to the bridge piers.",
     location: "North Richmond, NSW",
     challengeParagraphs: [
+      "Temporary access was required within a live creek corridor beneath the Bells Line of Road bridge at North Richmond, including culvert placement and rock fill close to the bridge piers.",
       "The works needed a practical, risk-informed engineering approach to support safe construction while protecting the integrity of the existing bridge structure.",
       "Condition assessment, temporary creek crossing design and construction control measures were provided to BMD to support safe delivery of the works.",
     ],
@@ -1017,6 +1032,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Wyong Creek Bridge is a private steel truss bridge with a timber deck, providing the sole vehicular access to a rural property in Wyong Creek and required to carry emergency and fire vehicles.",
     location: "Wyong Creek, NSW",
     challengeParagraphs: [
+      "Wyong Creek Bridge is a private steel truss bridge with a timber deck, providing the sole vehicular access to a rural property in Wyong Creek and required to carry emergency and fire vehicles.",
       "With no design information available and visible deterioration of several structural elements, its condition and load capacity needed to be verified for continued service and bushfire access compliance.",
       "A structural condition assessment and load capacity verification was provided to Metric Engineering to confirm suitability for 23-tonne emergency and fire vehicles.",
     ],
@@ -1078,6 +1094,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "A modern two-storey childcare centre with an underground carpark was developed in Bexley for Charter Hall by Mammoth Projects, designed by Armada Architects to accommodate up to 92 children across 2,200 sqm.",
     location: "Bexley, NSW",
     challengeParagraphs: [
+      "A modern two-storey childcare centre with an underground carpark was developed in Bexley for Charter Hall by Mammoth Projects, designed by Armada Architects to accommodate up to 92 children across 2,200 sqm.",
       "The building uses concrete slabs, AFS walls and lightweight steel framing, with large glazed windows and landscaped play areas on both the ground and first floors.",
       "Civil and structural engineering services were provided to Mammoth Projects, from design development through to construction phase support.",
     ],
@@ -1138,6 +1155,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "The MHE Charging Station Upgrade at the CNHI St Marys depot warehouse was delivered to improve safety, efficiency and storage capacity in the forklift charging area.",
     location: "St Marys, NSW",
     challengeParagraphs: [
+      "The MHE Charging Station Upgrade at the CNHI St Marys depot warehouse was delivered to improve safety, efficiency and storage capacity in the forklift charging area.",
       "The project aimed to reduce the area's risk rating from High to Moderate, increase pallet storage and add a pedestrian walkway behind the racking, with upgraded wall sheeting.",
       "Design and construction of the consolidated charging area was delivered for CNH Industrial, including racking-based charging stations and a new electrical distribution board.",
     ],
@@ -1199,6 +1217,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "A new café and restaurant at Windsor was developed with a commercial kitchen, dining areas, accessible amenities and car parking, in accordance with development consent from Hawkesbury City Council.",
     location: "Windsor, NSW",
     challengeParagraphs: [
+      "A new café and restaurant at Windsor was developed with a commercial kitchen, dining areas, accessible amenities and car parking, in accordance with development consent from Hawkesbury City Council.",
       "The project required civil and structural works including retaining walls, driveway access and site drainage, designed to meet health, safety, accessibility and environmental requirements.",
       "Engineering and technical services were provided to satisfy all Construction Certificate conditions, from structural and civil design through to compliance documentation.",
     ],
@@ -1259,6 +1278,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "A bus depot shed was developed at Morisset for Hunter Valley, with SD Group as principal contractor, as part of a broader operational depot with stormwater management and site servicing.",
     location: "Morisset, NSW",
     challengeParagraphs: [
+      "A bus depot shed was developed at Morisset for Hunter Valley, with SD Group as principal contractor, as part of a broader operational depot with stormwater management and site servicing.",
       "The shed's stormwater system needed to drain effectively, comply with authority requirements and connect to the existing approved stormwater network.",
       "Stormwater drainage design was provided to SD Group for the shed roof catchment and its connection to the existing system, in line with AS 3500.3.2.",
     ],
@@ -1320,6 +1340,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Terra Santa Crypts at Pinegrove Memorial Park, Minchinbury, was initiated to meet growing demand for above-ground burial options in Sydney's western suburbs, offering a dignified and culturally sensitive alternative to in-ground burial.",
     location: "Minchinbury, NSW",
     challengeParagraphs: [
+      "Terra Santa Crypts at Pinegrove Memorial Park, Minchinbury, was initiated to meet growing demand for above-ground burial options in Sydney's western suburbs, offering a dignified and culturally sensitive alternative to in-ground burial.",
       "The crypts sit near the North and West Chapels, and needed a new all-weather access road, parking and landscaped setting, built on ground affected by extensive site irrigation.",
       "Design and construction of the internal road and pavement works were delivered for InvoCare Australia, including drainage, landscaping and finishing works.",
     ],
@@ -1381,6 +1402,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "Safety upgrades were delivered at the CNH Industrial facility to improve the handling and storage of Dangerous Goods, in accordance with Penrith City Council's Notice of Determination and approved plans.",
     location: "St Marys, NSW",
     challengeParagraphs: [
+      "Safety upgrades were delivered at the CNH Industrial facility to improve the handling and storage of Dangerous Goods, in accordance with Penrith City Council's Notice of Determination and approved plans.",
       "The works included a new concrete pad for segregated Dangerous Goods containers, with drainage, lighting, an emergency shower and eye wash station, and a fire hydrant extension, together with road resurfacing and pavement restoration to improve space use, durability and safety.",
       "Design and construction were delivered for CNH Industrial, covering drainage, asphalting, line marking, plumbing and electrical works.",
     ],
@@ -1442,6 +1464,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "The Kelso to Raglan Upgrade is part of Transport for NSW's improvements to the Great Western Highway, east of Bathurst, to reduce congestion during events and holiday periods, improve safety and shorten travel times.",
     location: "Bathurst, NSW",
     challengeParagraphs: [
+      "The Kelso to Raglan Upgrade is part of Transport for NSW's improvements to the Great Western Highway, east of Bathurst, to reduce congestion during events and holiday periods, improve safety and shorten travel times.",
       "The upgrade included additional lanes, safer turning paths, traffic lights at the PJ Moodie intersection and a shared footpath, and required new underground stormwater drainage along the highway.",
       "Stormwater drainage installation was delivered for Transport for NSW, including concrete pipes, headwalls, pits and a box culvert.",
     ],
@@ -1503,6 +1526,7 @@ export const projects: ProjectData[] = [
     aboutDescription: "A new 2.6 m wide shared pathway is being delivered along the western side of Nepean Avenue, Penrith, from Tench Reserve to Memorial Avenue, completing the missing link in the Great River Walk.",
     location: "Penrith, NSW",
     challengeParagraphs: [
+      "A new 2.6 m wide shared pathway is being delivered along the western side of Nepean Avenue, Penrith, from Tench Reserve to Memorial Avenue, completing the missing link in the Great River Walk.",
       "The path responds to growing traffic and pedestrian activity, and a Road Safety Audit that identified pedestrians as high risk, with physical separation from the road, protection of existing shade trees, and attention to sight lines and drainage.",
       "Design and construction of approximately 1,100 m of pathway were provided to Axial Construction, covering civil, stormwater, landscape, electrical and lighting works.",
     ],

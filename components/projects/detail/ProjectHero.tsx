@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Barlow } from "next/font/google";
+import { clientLogos } from "@/mockData/landing";
 import { defaultHeroImage } from "@/mockData/projects";
 
 const barlow = Barlow({
@@ -24,10 +25,6 @@ interface Props {
   stats?: Stat[];
 }
 
-const clientLogos: Record<string, string> = {
-  "transport for nsw": "/images/image15.png",
-};
-
 export default function ProjectHero({
   image = defaultHeroImage,
   title,
@@ -40,8 +37,8 @@ export default function ProjectHero({
   );
   const client = visibleStats.find((stat) => stat.label.toLowerCase() === "client");
   const otherStats = visibleStats.filter((stat) => stat.label.toLowerCase() !== "client");
-  const clientLogo = client
-    ? clientLogos[client.value.trim().toLowerCase()]
+  const clientLogo = category
+    ? clientLogos.find((logo) => logo.category === category)
     : undefined;
 
   return (
@@ -87,8 +84,8 @@ export default function ProjectHero({
                     </span>
                     {clientLogo ? (
                       <Image
-                        src={clientLogo}
-                        alt={client.value}
+                        src={clientLogo.src}
+                        alt={clientLogo.alt}
                         width={150}
                         height={57}
                         className="h-[57px] w-[150px] object-contain object-left"
@@ -125,8 +122,8 @@ export default function ProjectHero({
                     </span>
                     {clientLogo ? (
                       <Image
-                        src={clientLogo}
-                        alt={client.value}
+                        src={clientLogo.src}
+                        alt={clientLogo.alt}
                         width={207}
                         height={79}
                         className="h-[79px] w-[207px] max-w-full object-contain object-left"

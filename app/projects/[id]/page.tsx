@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { getProjectBySlug } from "@/mockData/projects";
+import { getProjectHighlightTerms } from "@/lib/highlightTerms";
 import ProjectHero from "@/components/projects/detail/ProjectHero";
 import Challenge from "@/components/projects/detail/Challenge";
 import Approach from "@/components/projects/detail/Approach";
@@ -21,6 +22,8 @@ export default function ProjectDetailPage() {
     );
   }
 
+  const highlightTermsList = getProjectHighlightTerms(project);
+
   return (
     <main className="w-full flex flex-col items-center">
       <ProjectHero
@@ -34,9 +37,9 @@ export default function ProjectDetailPage() {
       <Challenge
         number={project.aboutNumber}
         heading={project.aboutHeading}
-        description={project.aboutDescription}
         location={project.location}
         paragraphs={project.challengeParagraphs}
+        highlightTermsList={highlightTermsList}
       />
 
       <Approach

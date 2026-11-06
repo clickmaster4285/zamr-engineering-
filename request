@@ -2,479 +2,64 @@ now i want to redesign my @app/projects/[id]/page.tsx
 
 i want exact same pixal to pixal design with my latest global css
 
-first set the hero section with fully responsive  @components/projects/detail/ProjectHero.tsx 
+first set the all section with fully responsive   
 don't change the color
 
 
 figmacss :
 desktop: {
-/* Hero */
+/* ABOUT US */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 130px;
+gap: 10px;
 
 width: 1728px;
-height: 732px;
+height: 501px;
 
-background: linear-gradient(0deg, rgba(15, 32, 71, 0.8), rgba(15, 32, 71, 0.8)), url(IMG_1163.jpg);
-background: linear-gradient(0deg, color(display-p3 0.075 0.125 0.267 / 0.8), color(display-p3 0.075 0.125 0.267 / 0.8)), url(IMG_1163.jpg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Header */
-
-position: absolute;
-width: 1727px;
-height: 100px;
-left: calc(50% - 1727px/2 + 0.5px);
-top: 0px;
-
-
-
-/* Frame 114 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 24px;
-
-position: absolute;
-width: 904px;
-height: 18px;
-left: calc(50% - 904px/2);
-top: calc(50% - 18px/2 + 0.5px);
-
-
-
-/* ABOUT */
-
-width: 48px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* SERVICES */
-
-width: 64px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* PROJECTS */
-
-width: 68px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Why ZAMR Engineering */
-
-width: 170px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* Our Team */
-
-width: 71px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-
-
-/* Trusted & Accredited */
-
-width: 162px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-flex-grow: 0;
-
-
-/* Engineering For Impact */
-
-width: 177px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-flex-grow: 0;
-
-
-/* Frame 115 */
-
-box-sizing: border-box;
+/* Frame 1321318991 */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 16px 25px;
-gap: 10px;
-
-position: absolute;
-width: 133px;
-height: 50px;
-left: 1464px;
-top: calc(50% - 50px/2 + 0.5px);
-
-border: 1px solid #FFFFFF;
-border: 1px solid color(display-p3 1.000 1.000 1.000);
-
-
-/* CONTACT */
-
-width: 83px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-text-align: center;
-letter-spacing: 3px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* ZAMR-transparent@3x 1 [Vectorized] */
-
-position: absolute;
-width: 121px;
-height: 36.88px;
-left: 130px;
-top: calc(50% - 36.88px/2 + 0.5px);
-
-
-
-/* Vector */
-
-position: absolute;
-left: 63.37%;
-right: 19.59%;
-top: 0.31%;
-bottom: 50.43%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.72%;
-right: 63.45%;
-top: 0.28%;
-bottom: 50.35%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Group 1 */
-
-position: absolute;
-width: 23.34px;
-height: 24.59px;
-left: 97.66px;
-top: 0.15px;
-
-
-
-/* Vector */
-
-position: absolute;
-left: 80.71%;
-right: 0%;
-top: 0.4%;
-bottom: 32.9%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 86.51%;
-right: 0%;
-top: 8.03%;
-bottom: 41.59%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 83.71%;
-right: 6.26%;
-top: 4.37%;
-bottom: 37.7%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 38.51%;
-right: 39.39%;
-top: 0%;
-bottom: 50.56%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.37%;
-right: 17.76%;
-top: 60.01%;
-bottom: 32.94%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.83%;
-right: 84.12%;
-top: 0%;
-bottom: 50.57%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* ENGINEERING */
-
-position: absolute;
-left: 0.35%;
-right: 8.15%;
-top: 74.5%;
-bottom: 6.73%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Campbell Street Shared Path Upgrade (M5 Project – Stage 3) */
-
-position: absolute;
-width: 1174px;
-height: 202px;
-left: 130px;
-top: 299px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 80px;
-line-height: 101px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-
-/* Frame 1321319076 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
+align-items: flex-start;
 padding: 0px;
+gap: 135px;
 
-position: absolute;
 width: 1468px;
-height: 147px;
-left: calc(50% - 1468px/2);
-top: 536px;
-
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-gap: 6px;
-
-width: 293.6px;
-height: 147px;
+height: 241px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-flex-grow: 1;
+flex-grow: 0;
 
 
-/* Paragraph */
+/* Frame 120 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
+gap: 30px;
 
-width: 253.6px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* CLIENT */
-
-width: 40px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
+width: 344px;
+height: 241px;
 
 
 /* Inside auto layout */
@@ -483,2702 +68,16 @@ order: 0;
 flex-grow: 0;
 
 
-/* image 17 [Vectorized] */
-
-width: 207px;
-height: 79px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 20.62%;
-right: 66.76%;
-top: 58.4%;
-bottom: 15.63%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.18%;
-right: 87.98%;
-top: 58.43%;
-bottom: 15.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.06%;
-right: 76.38%;
-top: 16.6%;
-bottom: 49.37%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.22%;
-right: 82.87%;
-top: 16.62%;
-bottom: 49.48%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 79.03%;
-right: 7.71%;
-top: 72.71%;
-bottom: 3.46%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.82%;
-right: 86.96%;
-top: 9.37%;
-bottom: 50.51%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 21.91%;
-right: 72.01%;
-top: 9.4%;
-bottom: 50.49%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 12.61%;
-right: 79.49%;
-top: 57.97%;
-bottom: 14.93%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 74.88%;
-right: 18.14%;
-top: 44.74%;
-bottom: 31.73%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 82.58%;
-right: 10.31%;
-top: 44.59%;
-bottom: 36.67%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 47.26%;
-right: 45.63%;
-top: 78.11%;
-bottom: 3.16%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 63.35%;
-right: 28.83%;
-top: 72.74%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 14.21%;
-right: 79.38%;
-top: 2.16%;
-bottom: 69.15%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 24.25%;
-right: 65.99%;
-top: 31.3%;
-bottom: 50.56%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.89%;
-right: 89.35%;
-top: 31.38%;
-bottom: 50.53%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 54.31%;
-right: 39.54%;
-top: 44.87%;
-bottom: 36.85%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 72.07%;
-right: 21.03%;
-top: 72.47%;
-bottom: 3.37%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 61.72%;
-right: 32.18%;
-top: 44.76%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 38.55%;
-right: 60.73%;
-top: 9.61%;
-bottom: 3.11%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 43.13%;
-right: 49.62%;
-top: 39.23%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 68.5%;
-right: 26.12%;
-top: 44.81%;
-bottom: 36.91%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 43.11%;
-right: 52.73%;
-top: 71.68%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 94.91%;
-right: 0.88%;
-top: 40.28%;
-bottom: 36.93%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 55.28%;
-right: 40.73%;
-top: 78.27%;
-bottom: 3.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 50.36%;
-right: 45.68%;
-top: 44.7%;
-bottom: 37.14%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 90.73%;
-right: 5.31%;
-top: 44.72%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.3%;
-right: 93.5%;
-top: 20.87%;
-bottom: 67.79%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 28.42%;
-right: 67.44%;
-top: 20.84%;
-bottom: 68.01%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 19.77%;
-right: 76.35%;
-top: 3.96%;
-bottom: 83.07%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.15%;
-right: 84.98%;
-top: 3.94%;
-bottom: 83.22%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.78%;
-right: 83.13%;
-top: 50.86%;
-bottom: 45.04%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 18.29%;
-right: 72%;
-top: 50.83%;
-bottom: 45.09%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 5.11%;
-right: 91.7%;
-top: 88.1%;
-bottom: 3.49%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 14.38%;
-right: 83.02%;
-top: 88.24%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 20.54%;
-right: 76.44%;
-top: 88.11%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.32%;
-right: 79.98%;
-top: 88.13%;
-bottom: 3.51%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 26.79%;
-right: 70.52%;
-top: 88.14%;
-bottom: 3.51%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 1.91%;
-right: 95.16%;
-top: 88.04%;
-bottom: 3.53%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 24.02%;
-right: 73.65%;
-top: 88.23%;
-bottom: 3.58%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.6%;
-right: 86.07%;
-top: 88.27%;
-bottom: 3.59%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 8.23%;
-right: 88.82%;
-top: 88.14%;
-bottom: 3.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 29.91%;
-right: 67.58%;
-top: 88.26%;
-bottom: 3.56%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 293.6px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 252.6px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* VALUE */
-
-width: 36px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 193.33px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* $ 4.3 Billion */
-
-width: 72px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 293.6px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 252.6px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* DURATION */
-
-width: 56px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 193.33px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Sep 2020 - Jun 2021  */
-
-width: 128px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 293.6px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 252.6px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* LOCATION */
-
-width: 54px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 193.34px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Alexandria, NSW */
-
-width: 104px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 293.6px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 252.6px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* SCOPE */
-
-width: 37px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 193.33px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* civil and lighting design */
-
-width: 145px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319196 */
+/* Frame 118 */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
 align-items: center;
 padding: 0px;
-gap: 14px;
+gap: 16px;
 
-position: absolute;
-width: 454px;
-height: 23px;
-left: 130px;
-top: 246px;
-
-
-
-/* ALL PROJECTS */
-
-width: 156px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-letter-spacing: 3px;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Ellipse 1 */
-
-width: 10px;
-height: 10px;
-
-background: #D9D9D9;
-background: color(display-p3 0.851 0.851 0.851);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Engineering & Design */
-
-width: 260px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-letter-spacing: 3px;
-text-transform: uppercase;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-}
-
-
-tablet :{
-/* Hero */
-
-width: 1024px;
-height: 600px;
-
-background: linear-gradient(0deg, rgba(15, 32, 71, 0.8), rgba(15, 32, 71, 0.8)), url(IMG_1163.jpg), url(image.jpg);
-background: linear-gradient(0deg, color(display-p3 0.075 0.125 0.267 / 0.8), color(display-p3 0.075 0.125 0.267 / 0.8)), url(IMG_1163.jpg), url(image.jpg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Header */
-
-position: absolute;
-width: 1023.41px;
-height: 72px;
-left: calc(50% - 1023.41px/2 + 0.3px);
-top: 0px;
-
-
-
-/* Frame 114 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 10px;
-
-position: absolute;
-width: 656px;
-height: 14px;
-left: calc(50% - 656px/2 - 0.3px);
-top: calc(50% - 14px/2);
-
-
-
-/* ABOUT */
-
-width: 38px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* SERVICES */
-
-width: 50px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* PROJECTS */
-
-width: 53px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Why ZAMR Engineering */
-
-width: 133px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* Our Team */
-
-width: 56px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-
-
-/* Trusted & Accredited */
-
-width: 127px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-flex-grow: 0;
-
-
-/* Engineering For Impact */
-
-width: 139px;
-height: 14px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 11px;
-line-height: 14px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 6;
-flex-grow: 0;
-
-
-/* Frame 115 */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 9.48148px 14.8148px;
-gap: 5.93px;
-
-position: absolute;
-width: 100.63px;
-height: 34.96px;
-left: 867.55px;
-top: calc(50% - 34.96px/2 + 0px);
-
-border: 0.592593px solid #FFFFFF;
-border: 0.592593px solid color(display-p3 1.000 1.000 1.000);
-
-
-/* CONTACT */
-
-width: 71px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-text-align: center;
-letter-spacing: 1.77778px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* ZAMR-transparent@3x 1 [Vectorized] */
-
-position: absolute;
-width: 77.37px;
-height: 23.58px;
-left: 77.04px;
-top: calc(50% - 23.58px/2 - 0px);
-
-
-
-/* Vector */
-
-position: absolute;
-left: 63.37%;
-right: 19.59%;
-top: 0.31%;
-bottom: 50.42%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.72%;
-right: 63.45%;
-top: 0.28%;
-bottom: 50.34%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Group 1 */
-
-position: absolute;
-width: 14.93px;
-height: 15.73px;
-left: 62.44px;
-top: 0.09px;
-
-
-
-/* Vector */
-
-position: absolute;
-left: 80.71%;
-right: 0%;
-top: 0.4%;
-bottom: 32.91%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 86.51%;
-right: 0%;
-top: 8.02%;
-bottom: 41.6%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 83.71%;
-right: 6.26%;
-top: 4.37%;
-bottom: 37.7%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 38.51%;
-right: 39.39%;
-top: 0%;
-bottom: 50.56%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.37%;
-right: 17.76%;
-top: 60%;
-bottom: 32.95%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.84%;
-right: 84.12%;
-top: 0%;
-bottom: 50.57%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* ENGINEERING */
-
-position: absolute;
-left: 0.35%;
-right: 8.15%;
-top: 74.5%;
-bottom: 6.74%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Frame 1321319043 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 11.85px;
-
-position: absolute;
-width: 690px;
-height: 120px;
-left: 77px;
-top: calc(50% - 120px/2 + 20px);
-
-
-
-/* Campbell Street Shared Path Upgrade (M5 Project – Stage 3) */
-
-width: 690px;
-height: 120px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 47.4074px;
-line-height: 60px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319077 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-
-position: absolute;
-width: 892px;
-height: 147px;
-left: calc(50% - 892px/2 + 11px);
-top: 421px;
-
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-gap: 6px;
-
-width: 266px;
-height: 147px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 1;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 226px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* CLIENT */
-
-width: 40px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* image 17 [Vectorized] */
-
-width: 207px;
-height: 79px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 20.62%;
-right: 66.76%;
-top: 58.4%;
-bottom: 15.63%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.18%;
-right: 87.98%;
-top: 58.43%;
-bottom: 15.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.06%;
-right: 76.38%;
-top: 16.6%;
-bottom: 49.37%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.22%;
-right: 82.87%;
-top: 16.62%;
-bottom: 49.48%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 79.03%;
-right: 7.71%;
-top: 72.71%;
-bottom: 3.46%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.81%;
-right: 86.97%;
-top: 9.37%;
-bottom: 50.51%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 21.91%;
-right: 72.01%;
-top: 9.4%;
-bottom: 50.49%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 12.61%;
-right: 79.49%;
-top: 57.97%;
-bottom: 14.93%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 74.88%;
-right: 18.14%;
-top: 44.74%;
-bottom: 31.73%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 82.58%;
-right: 10.31%;
-top: 44.59%;
-bottom: 36.67%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 47.26%;
-right: 45.63%;
-top: 78.11%;
-bottom: 3.16%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 63.35%;
-right: 28.83%;
-top: 72.74%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 14.21%;
-right: 79.38%;
-top: 2.16%;
-bottom: 69.15%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 24.25%;
-right: 65.99%;
-top: 31.3%;
-bottom: 50.56%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.89%;
-right: 89.35%;
-top: 31.38%;
-bottom: 50.53%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 54.31%;
-right: 39.54%;
-top: 44.87%;
-bottom: 36.85%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 72.07%;
-right: 21.03%;
-top: 72.47%;
-bottom: 3.37%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 61.72%;
-right: 32.18%;
-top: 44.76%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 38.55%;
-right: 60.73%;
-top: 9.61%;
-bottom: 3.11%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 43.13%;
-right: 49.62%;
-top: 39.23%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 68.5%;
-right: 26.12%;
-top: 44.81%;
-bottom: 36.91%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 43.11%;
-right: 52.73%;
-top: 71.68%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 94.91%;
-right: 0.88%;
-top: 40.28%;
-bottom: 36.93%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 55.28%;
-right: 40.73%;
-top: 78.27%;
-bottom: 3.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 50.36%;
-right: 45.68%;
-top: 44.7%;
-bottom: 37.14%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 90.73%;
-right: 5.31%;
-top: 44.72%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.3%;
-right: 93.5%;
-top: 20.87%;
-bottom: 67.79%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 28.42%;
-right: 67.44%;
-top: 20.84%;
-bottom: 68.01%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 19.77%;
-right: 76.35%;
-top: 3.96%;
-bottom: 83.07%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.15%;
-right: 84.98%;
-top: 3.94%;
-bottom: 83.22%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.78%;
-right: 83.13%;
-top: 50.86%;
-bottom: 45.04%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 18.29%;
-right: 72%;
-top: 50.83%;
-bottom: 45.09%;
-
-background: #D9002C;
-background: color(display-p3 0.780 0.133 0.204);
-
-
-/* Vector */
-
-position: absolute;
-left: 5.11%;
-right: 91.7%;
-top: 88.1%;
-bottom: 3.49%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 14.38%;
-right: 83.02%;
-top: 88.24%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 20.54%;
-right: 76.44%;
-top: 88.11%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.32%;
-right: 79.98%;
-top: 88.13%;
-bottom: 3.51%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 26.79%;
-right: 70.52%;
-top: 88.14%;
-bottom: 3.51%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 1.91%;
-right: 95.16%;
-top: 88.04%;
-bottom: 3.53%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 24.02%;
-right: 73.65%;
-top: 88.23%;
-bottom: 3.58%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.6%;
-right: 86.07%;
-top: 88.27%;
-bottom: 3.59%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 8.23%;
-right: 88.82%;
-top: 88.14%;
-bottom: 3.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 29.91%;
-right: 67.58%;
-top: 88.26%;
-bottom: 3.56%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 157px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 116px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* VALUE */
-
-width: 36px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 72px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* $ 4.3 Billion */
-
-width: 72px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 156px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 115px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* DURATION */
-
-width: 56px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 128px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Sep 2020 - Jun 2021  */
-
-width: 128px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 157px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 116px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* LOCATION */
-
-width: 54px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 104px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Alexandria, NSW */
-
-width: 104px;
-height: 17px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px 20px;
-
-width: 156px;
-height: 87px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.07);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.07);
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 115px;
-height: 14px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* SCOPE */
-
-width: 37px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.3);
-color: color(display-p3 1.000 1.000 1.000 / 0.3);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Paragraph */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 7px 0px 0px;
-
-width: 115px;
-height: 25px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* civil and lighting design */
-
-width: 115px;
-height: 34px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 14px;
-line-height: 17px;
-
-color: rgba(255, 255, 255, 0.82);
-color: color(display-p3 1.000 1.000 1.000 / 0.82);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319196 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 14px;
-
-position: absolute;
-width: 382px;
-height: 18px;
-left: 77px;
-top: 226px;
-
-
-
-/* ALL PROJECTS */
-
-width: 129px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-letter-spacing: 3px;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Ellipse 1 */
-
-width: 10px;
-height: 10px;
-
-background: #D9D9D9;
-background: color(display-p3 0.851 0.851 0.851);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Engineering & Design */
-
-width: 215px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-letter-spacing: 3px;
-text-transform: uppercase;
-
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-}
-
-
-mobile: {
-/* Hero */
-
-width: 390px;
-height: 866px;
-
-background: linear-gradient(0deg, rgba(15, 32, 71, 0.8), rgba(15, 32, 71, 0.8)), url(IMG_1163.jpg), url(image.jpg);
-background: linear-gradient(0deg, color(display-p3 0.075 0.125 0.267 / 0.8), color(display-p3 0.075 0.125 0.267 / 0.8)), url(IMG_1163.jpg), url(image.jpg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Header */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0px 20px;
-
-position: absolute;
-height: 72px;
-left: -1.5px;
-right: -1.5px;
-top: 0px;
-
-
-
-/* Frame 1321319079 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 236px;
-
-width: 350px;
-height: 36px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* ZAMR-transparent@3x 1 [Vectorized] */
-
-width: 78px;
-height: 24px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 63.37%;
-right: 19.59%;
-top: 0.31%;
-bottom: 50.47%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.72%;
-right: 63.45%;
-top: 0.28%;
-bottom: 50.39%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 80.71%;
-right: 0%;
-top: 0.41%;
-bottom: 32.96%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 86.51%;
-right: 0%;
-top: 8.02%;
-bottom: 41.64%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 83.71%;
-right: 6.26%;
-top: 4.38%;
-bottom: 37.74%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 38.51%;
-right: 39.39%;
-top: 0%;
-bottom: 50.6%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.38%;
-right: 17.76%;
-top: 59.96%;
-bottom: 33%;
-
-background: #C89340;
-background: color(display-p3 0.753 0.584 0.310);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.84%;
-right: 84.12%;
-top: 0%;
-bottom: 50.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* ENGINEERING */
-
-position: absolute;
-left: 0.35%;
-right: 8.15%;
-top: 74.43%;
-bottom: 6.82%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Menu Button */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px;
-
-width: 36px;
-height: 36px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* menu */
-
-width: 20px;
+width: 320px;
 height: 20px;
 
 
@@ -3188,71 +87,76 @@ order: 0;
 flex-grow: 0;
 
 
-/* Vector */
+/* 01 */
 
-position: absolute;
-left: 16.67%;
-right: 16.67%;
-top: 20.82%;
-bottom: 20.84%;
-
-border: 2px solid #C89340;
-border: 2px solid color(display-p3 0.753 0.584 0.310);
-
-
-/* Frame 1321319139 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
-
-position: absolute;
-width: 350px;
-height: 179px;
-left: 20px;
-top: 196px;
-
-
-
-/* Great Western Highway Upgrade — Kelso to Raglan */
-
-width: 350px;
-height: 123px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 115%;
-/* or 41px */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Rebuilding a critical arterial corridor without stopping a city. */
-
-width: 350px;
-height: 40px;
+width: 20px;
+height: 20px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 20px;
+letter-spacing: 3px;
 
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 104px;
+height: 0px;
+
+border: 1px solid #000000;
+border: 1px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* THE CHALLENGE */
+
+width: 164px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Frame 119 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+width: 344px;
+height: 120px;
 
 
 /* Inside auto layout */
@@ -3262,7 +166,83 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* ProjectSpecs */
+/* What needed to be solved. */
+
+width: 344px;
+height: 110px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 55px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 133px;
+height: 0px;
+
+border: 1px solid #CE1A00;
+border: 1px solid color(display-p3 0.741 0.192 0.086);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 12px 16px;
+gap: 12px;
+
+width: 148px;
+height: 41px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border: 1px solid rgba(34, 65, 158, 0.15);
+border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.15);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Container */
+
+width: 6px;
+height: 6px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+border-radius: 3.35544e+07px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
 
 /* Auto layout */
 display: flex;
@@ -3270,14 +250,5659 @@ flex-direction: column;
 align-items: flex-start;
 padding: 0px;
 
-position: absolute;
-height: 451px;
-left: 20px;
-right: 20px;
-bottom: 20px;
+width: 96px;
+height: 15px;
 
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Alexandria, NSW */
+
+width: 96px;
+height: 15px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+letter-spacing: 1.6px;
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321318989 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+width: 989px;
+height: 200px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Transport for NSW, under the M5 Project, required new shared paths along Campbell Road, St Peters, to connect with newly constructed shared paths and the future Alexandra Canal shared path. The design needed to provide a continuous north-south connection through the existing culvert under Campbell Road Bridge, including drainage, lighting and retaining walls suited to the underpass. Civil and lighting design was delivered for the 2.5 m and 3.0 m shared paths, two retaining walls and culvert lighting, through to Issued for Construction documentation. */
+
+width: 989px;
+height: 200px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 25px;
+font-feature-settings: 'liga' off;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* OVERVIEW */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 130px;
+gap: 10px;
+
+width: 1728px;
+height: 744px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319060 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 60px;
+
+width: 1468px;
+height: 484px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321319050 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 28px;
+
+width: 441px;
+height: 103px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 314px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 02 */
+
+width: 23px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 104px;
+height: 0px;
+
+border: 1px solid #FFFFFF;
+border: 1px solid color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* OUR APPROACH */
+
+width: 155px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* How We Delivered It */
+
+width: 441px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 55px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319064 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 1468px;
+height: 321px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319062 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 1468px;
+height: 161px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+
+width: 734px;
+height: 161px;
+
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.08);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 686px;
+height: 112px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 01 */
+
+width: 686px;
+height: 50px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 40px;
+line-height: 50px;
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Survey & Investigation */
+
+width: 686px;
+height: 23px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 686px;
+height: 15px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+
+width: 734px;
+height: 161px;
+
+border-width: 0px 0px 1px 1px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.08);
+border-color: color(display-p3 1.000 1.000 1.000 / 0.08);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 685px;
+height: 112px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 02 */
+
+width: 685px;
+height: 50px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 40px;
+line-height: 50px;
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Shared Path Design */
+
+width: 685px;
+height: 23px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 685px;
+height: 15px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319063 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 1468px;
+height: 160px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+
+width: 734px;
+height: 160px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 686px;
+height: 112px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 03 */
+
+width: 686px;
+height: 50px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 40px;
+line-height: 50px;
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Drainage, Lighting & Structures */
+
+width: 686px;
+height: 23px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 686px;
+height: 15px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+
+width: 734px;
+height: 160px;
+
+border-left: 1px solid rgba(255, 255, 255, 0.08);
+border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.08);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 685px;
+height: 112px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 04 */
+
+width: 685px;
+height: 50px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 40px;
+line-height: 50px;
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Construction Documentation */
+
+width: 685px;
+height: 23px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 685px;
+height: 15px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* CONTACT */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 130px;
+gap: 10px;
+
+width: 1728px;
+height: 719px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Frame 1321319072 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 60px;
+
+width: 1468px;
+height: 459px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 120 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+
+width: 1468px;
+height: 105px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 269px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 03 */
+
+width: 24px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 104px;
+height: 0px;
+
+border: 1px solid #000000;
+border: 1px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* OUTCOMES */
+
+width: 109px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Results & Achievements */
+
+width: 1468px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 55px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319071 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 41px;
+
+width: 1468px;
+height: 294px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319069 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 1468px;
+height: 139px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 30px;
+
+width: 367px;
+height: 139px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+border-width: 1px 1px 0px 0px;
+border-style: solid;
+border-color: rgba(15, 32, 71, 0.1);
+border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 306px;
+height: 55px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 90 m */
+
+width: 101px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 44px;
+line-height: 55px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 0px 0px;
+
+width: 306px;
+height: 23px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* RC Retaining Wall */
+
+width: 306px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+color: #9AA3B0;
+color: color(display-p3 0.612 0.639 0.686);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 30px;
+
+width: 367px;
+height: 139px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border-width: 1px 1px 0px 0px;
+border-style: solid;
+border-color: rgba(15, 32, 71, 0.1);
+border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 306px;
+height: 55px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 3.0 m */
+
+width: 110px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 44px;
+line-height: 55px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 0px 0px;
+
+width: 306px;
+height: 23px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 3New shared path sections */
+
+width: 306px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+color: #9AA3B0;
+color: color(display-p3 0.612 0.639 0.686);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 30px;
+
+width: 367px;
+height: 139px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+border-width: 1px 1px 0px 0px;
+border-style: solid;
+border-color: rgba(15, 32, 71, 0.1);
+border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 306px;
+height: 55px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 9 Months */
+
+width: 180px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 44px;
+line-height: 55px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 0px 0px;
+
+width: 306px;
+height: 23px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Project duration */
+
+width: 306px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+color: #9AA3B0;
+color: color(display-p3 0.612 0.639 0.686);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 30px;
+
+width: 367px;
+height: 139px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border-top: 1px solid rgba(15, 32, 71, 0.1);
+border-top: 1px solid color(display-p3 0.075 0.125 0.267 / 0.1);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 307px;
+height: 55px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 100% */
+
+width: 103px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 44px;
+line-height: 55px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 0px 0px;
+
+width: 307px;
+height: 23px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* IFC documentation */
+
+width: 307px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+color: #9AA3B0;
+color: color(display-p3 0.612 0.639 0.686);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319070 */
+
+width: 1468px;
+height: 114px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 16px 0px;
+gap: 16px;
+
+position: absolute;
+width: 734px;
+height: 57px;
+left: 0px;
+top: 0px;
+
+border-bottom: 1px solid rgba(15, 32, 71, 0.08);
+border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.08);
+
+
+/* Container:transform */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+isolation: isolate;
+
+width: 6px;
+height: 10px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+position: absolute;
+width: 6px;
+height: 6px;
+left: -1.24px;
+top: 2.76px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 712px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Full structural pavement rehabilitation across 7 d */
+
+width: 712px;
+height: 24px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 14.5px;
+line-height: 24px;
+/* identical to box height, or 165% */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 16px 0px;
+gap: 16px;
+
+position: absolute;
+width: 734px;
+height: 57px;
+left: 734px;
+top: 0px;
+
+border-bottom: 1px solid rgba(15, 32, 71, 0.08);
+border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.08);
+
+
+/* Container:transform */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+isolation: isolate;
+
+width: 6px;
+height: 10px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+position: absolute;
+width: 6px;
+height: 6px;
+left: -1.24px;
+top: 2.76px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 712px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Full structural pavement rehabilitation across 7 d */
+
+width: 712px;
+height: 24px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 14.5px;
+line-height: 24px;
+/* identical to box height, or 165% */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 16px 0px;
+gap: 16px;
+
+position: absolute;
+width: 734px;
+height: 57px;
+left: 0px;
+top: 57px;
+
+border-bottom: 1px solid rgba(15, 32, 71, 0.08);
+border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.08);
+
+
+/* Container:transform */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+isolation: isolate;
+
+width: 6px;
+height: 10px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+position: absolute;
+width: 6px;
+height: 6px;
+left: -1.24px;
+top: 2.76px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 712px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Full structural pavement rehabilitation across 7 d */
+
+width: 712px;
+height: 24px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 14.5px;
+line-height: 24px;
+/* identical to box height, or 165% */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 16px 0px;
+gap: 16px;
+
+position: absolute;
+width: 734px;
+height: 57px;
+left: 734px;
+top: 57px;
+
+border-bottom: 1px solid rgba(15, 32, 71, 0.08);
+border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.08);
+
+
+/* Container:transform */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+isolation: isolate;
+
+width: 6px;
+height: 10px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+position: absolute;
+width: 6px;
+height: 6px;
+left: -1.24px;
+top: 2.76px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 712px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Full structural pavement rehabilitation across 7 d */
+
+width: 712px;
+height: 24px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 14.5px;
+line-height: 24px;
+/* identical to box height, or 165% */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* CONTACT */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 130px;
+gap: 10px;
+
+width: 1728px;
+height: 1157px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Frame 1321319072 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 60px;
+
+width: 1468px;
+height: 897px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 120 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+
+width: 1468px;
+height: 105px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 248px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 04 */
+
+width: 24px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 104px;
+height: 0px;
+
+border: 1px solid #000000;
+border: 1px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* GALLERY */
+
+width: 88px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Project Photography */
+
+width: 1468px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 55px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319075 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 1468px;
+height: 732px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319073 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 1468px;
+height: 400px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image (Aerial view of the completed corridor, Western Sydney) */
+
+width: 995.34px;
+height: 400px;
+
+background: url(IMG_4521.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image (Construction staging — maintaining live traffic flow) */
+
+width: 460.66px;
+height: 400px;
+
+background: url(CH 10.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319074 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 1468px;
+height: 320px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image (Pavement investigation — FWD deflection survey) */
+
+width: 460.66px;
+height: 320px;
+
+background: url(CH 40.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image (Drainage infrastructure installation) */
+
+width: 995.34px;
+height: 320px;
+
+background: url(IMG_4523.jpg);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* OVERVIEW */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+padding: 130px;
+gap: 60px;
+
+width: 1728px;
+height: 847px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319067 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 60px;
+
+width: 1468px;
+height: 503px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321319066 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 903px;
+
+width: 1468px;
+height: 103px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319050 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 28px;
+
+width: 441px;
+height: 103px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 257px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 05 */
+
+width: 23px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 104px;
+height: 0px;
+
+border: 1px solid #000000;
+border: 1px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* PROJECTS */
+
+width: 98px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Related Work */
+
+width: 441px;
+height: 55px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 55px;
+
+color: #090D15;
+color: color(display-p3 0.039 0.051 0.078);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319070 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 1468px;
+height: 340px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(367643603_1564651814069588_2366154985172353097_n.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(367643603_1564651814069588_2366154985172353097_n.jpg);
+
+
+/* Kurrajong Rd, Prestons- Staged Improvement Strategic Design */
+
+position: absolute;
+width: 378px;
+height: 46px;
+left: 50px;
+top: 269px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Image (Metropolitan Bridge Rehabilitation) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMG_9432.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(IMG_9432.jpg);
+
+
+/* Dunmore St & Station St Junction Upgrade, Wentworthville */
+
+position: absolute;
+width: 378px;
+height: 46px;
+left: 50.33px;
+top: 269px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Image (Urban Stormwater Management System) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: -0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(unnamed (1).jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(unnamed (1).jpg);
+
+
+/* Design of Retaining Walls at King St & Banksia St- Bayside Council  */
+
+position: absolute;
+width: 378px;
+height: 46px;
+left: 49.67px;
+top: 269px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 147px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ALL PROJECTS */
+
+width: 115px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 24px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 50%;
+bottom: 50%;
+
+border: 1.25px solid #0F2047;
+border: 1.25px solid color(display-p3 0.075 0.125 0.267);
+
+
+/* Vector */
+
+position: absolute;
+left: 50%;
+right: 20.83%;
+top: 20.83%;
+bottom: 20.83%;
+
+border: 1.25px solid #0F2047;
+border: 1.25px solid color(display-p3 0.075 0.125 0.267);
+
+}
+
+
+tablet :{
+/* ABOUT US */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 77.037px;
+gap: 5.93px;
+
+width: 1024px;
+height: 589.96px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321318991 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 32px;
+
+width: 869.93px;
+height: 435.89px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 120 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 17.78px;
+
+width: 869.93px;
+height: 153.89px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 9.48px;
+
+width: 221.59px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 01 */
+
+width: 15px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 61.63px;
+height: 0px;
+
+border: 0.592593px solid #000000;
+border: 0.592593px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* THE CHALLENGE */
+
+width: 126px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Frame 119 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 5.93px;
+
+width: 869.93px;
+height: 71.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* What needed to be solved. */
+
+width: 869.93px;
+height: 66px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 26.0741px;
+line-height: 33px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 78.81px;
+height: 0px;
+
+border: 0.592593px solid #CE1A00;
+border: 0.592593px solid color(display-p3 0.741 0.192 0.086);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 7.11111px 9.48148px;
+gap: 7.11px;
+
+width: 117.81px;
+height: 30.41px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border: 0.592593px solid rgba(34, 65, 158, 0.15);
+border: 0.592593px solid color(display-p3 0.161 0.251 0.596 / 0.15);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Container */
+
+width: 3.56px;
+height: 3.56px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+border-radius: 1.98841e+07px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 87px;
+height: 15px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Alexandria, NSW */
+
+width: 87px;
+height: 15px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 15px;
+/* identical to box height, or 150% */
+letter-spacing: 0.948148px;
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321318989 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 11.85px;
+
+width: 869.93px;
+height: 250px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Transport for NSW, under the M5 Project, required new shared paths along Campbell Road, St Peters, to connect with newly constructed shared paths and the future Alexandra Canal shared path. The design needed to provide a continuous north-south connection through the existing culvert under Campbell Road Bridge, including drainage, lighting and retaining walls suited to the underpass. Civil and lighting design was delivered for the 2.5 m and 3.0 m shared paths, two retaining walls and culvert lighting, through to Issued for Construction documentation. */
+
+width: 869.93px;
+height: 250px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 25px;
+font-feature-settings: 'liga' off;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* OVERVIEW */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 77.037px;
+gap: 5.93px;
+
+width: 1024px;
+height: 459.15px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319060 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 35.56px;
+
+width: 869.93px;
+height: 305.07px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321319050 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16.59px;
+
+width: 261.33px;
+height: 65.59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 9.48px;
+
+width: 216.59px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 02 */
+
+width: 18px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 61.63px;
+height: 0px;
+
+border: 0.592593px solid #FFFFFF;
+border: 0.592593px solid color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* OUR APPROACH */
+
+width: 118px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* How We Delivered It */
+
+width: 261.33px;
+height: 33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 26.0741px;
+line-height: 33px;
+/* identical to box height */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319064 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 869.93px;
+height: 203.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319062 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 869.93px;
+height: 102.26px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 14.2222px;
+
+width: 434.96px;
+height: 102.26px;
+
+border-bottom: 0.592593px solid rgba(255, 255, 255, 0.08);
+border-bottom: 0.592593px solid color(display-p3 1.000 1.000 1.000 / 0.08);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 7.11px;
+
+width: 406.52px;
+height: 73.22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 01 */
+
+width: 406.52px;
+height: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 23.7037px;
+line-height: 30px;
+/* identical to box height */
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Survey & Investigation */
+
+width: 406.52px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 406.52px;
+height: 13px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 14.2222px;
+
+width: 434.96px;
+height: 102.26px;
+
+border-width: 0px 0px 0.592593px 0.592593px;
+border-style: solid;
+border-color: rgba(255, 255, 255, 0.08);
+border-color: color(display-p3 1.000 1.000 1.000 / 0.08);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 7.11px;
+
+width: 405.93px;
+height: 73.22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 02 */
+
+width: 405.93px;
+height: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 23.7037px;
+line-height: 30px;
+/* identical to box height */
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Shared Path Design */
+
+width: 405.93px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 405.93px;
+height: 13px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319063 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+width: 869.93px;
+height: 101.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 14.2222px;
+
+width: 434.96px;
+height: 101.67px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 7.11px;
+
+width: 406.52px;
+height: 73.22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 03 */
+
+width: 406.52px;
+height: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 23.7037px;
+line-height: 30px;
+/* identical to box height */
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Drainage, Lighting & Structures */
+
+width: 406.52px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 406.52px;
+height: 13px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 14.2222px;
+
+width: 434.96px;
+height: 101.67px;
+
+border-left: 0.592593px solid rgba(255, 255, 255, 0.08);
+border-left: 0.592593px solid color(display-p3 1.000 1.000 1.000 / 0.08);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame 1321319061 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 7.11px;
+
+width: 405.93px;
+height: 73.22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 04 */
+
+width: 405.93px;
+height: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 23.7037px;
+line-height: 30px;
+/* identical to box height */
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Construction Documentation */
+
+width: 405.93px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* We engage with your project team to define scope,  */
+
+width: 405.93px;
+height: 13px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* CONTACT */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 77.037px;
+gap: 5.93px;
+
+width: 1024px;
+height: 484.81px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319072 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 35.56px;
+
+width: 869.93px;
+height: 330.74px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 120 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 17.78px;
+
+width: 869.93px;
+height: 66.78px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 9.48px;
+
+width: 182.59px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 03 */
+
+width: 18px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 61.63px;
+height: 0px;
+
+border: 0.592593px solid #000000;
+border: 0.592593px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* OUTCOMES */
+
+width: 84px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Results & Achievements */
+
+width: 869.93px;
+height: 33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 26.0741px;
+line-height: 33px;
+/* identical to box height */
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319071 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24.3px;
+
+width: 869.93px;
+height: 228.41px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319069 */
+
+width: 869.93px;
+height: 100px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 17.7778px;
+
+position: absolute;
+width: 217.48px;
+height: 100px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+border-width: 0.592593px 0.592593px 0px 0px;
+border-style: solid;
+border-color: rgba(15, 32, 71, 0.1);
+border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 181.33px;
+height: 33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 90 m */
+
+width: 60px;
+height: 33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 26.0741px;
+line-height: 33px;
+/* identical to box height */
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4.74074px 0px 0px;
+
+width: 181.33px;
+height: 13.63px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* RC Retaining Wall */
+
+width: 181.33px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+
+color: #9AA3B0;
+color: color(display-p3 0.612 0.639 0.686);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 17.7778px;
+
+position: absolute;
+width: 217.48px;
+height: 100px;
+left: 217.48px;
+top: 0px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border-width: 0.592593px 0.592593px 0px 0px;
+border-style: solid;
+border-color: rgba(15, 32, 71, 0.1);
+border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 181.33px;
+height: 33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 3.0 m */
+
+width: 66px;
+height: 33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 26.0741px;
+line-height: 33px;
+/* identical to box height */
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4.74074px 0px 0px;
+
+width: 181.33px;
+height: 13.63px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 3New shared path sections */
+
+width: 181.33px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+
+color: #9AA3B0;
+color: color(display-p3 0.612 0.639 0.686);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 17.7778px;
+
+position: absolute;
+width: 217.48px;
+height: 100px;
+left: 434.96px;
+top: 0px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+border-width: 0.592593px 0.592593px 0px 0px;
+border-style: solid;
+border-color: rgba(15, 32, 71, 0.1);
+border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 181.33px;
+height: 33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 9 Months */
+
+width: 107px;
+height: 33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 26.0741px;
+line-height: 33px;
+/* identical to box height */
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4.74074px 0px 0px;
+
+width: 181.33px;
+height: 13.63px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Project duration */
+
+width: 181.33px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+
+color: #9AA3B0;
+color: color(display-p3 0.612 0.639 0.686);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 17.7778px;
+
+position: absolute;
+width: 217.48px;
+height: 100px;
+left: 652.45px;
+top: 0px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border-top: 0.592593px solid rgba(15, 32, 71, 0.1);
+border-top: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.1);
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 181.93px;
+height: 33px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 100% */
+
+width: 61px;
+height: 33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 26.0741px;
+line-height: 33px;
+/* identical to box height */
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4.74074px 0px 0px;
+
+width: 181.93px;
+height: 13.63px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* IFC documentation */
+
+width: 181.93px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+
+color: #9AA3B0;
+color: color(display-p3 0.612 0.639 0.686);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319070 */
+
+width: 869.93px;
+height: 104.11px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9.48148px 0px;
+gap: 9.48px;
+
+position: absolute;
+width: 434.96px;
+height: 62.56px;
+left: 0px;
+top: 0px;
+
+border-bottom: 0.592593px solid rgba(15, 32, 71, 0.08);
+border-bottom: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.08);
+
+
+/* Container:transform */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2.37037px 0px 0px;
+isolation: isolate;
+
+width: 3.56px;
+height: 5.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+position: absolute;
+width: 3.56px;
+height: 3.56px;
+left: -0.74px;
+top: 1.63px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 421.93px;
+height: 22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Full structural pavement rehabilitation across 7 d */
+
+width: 421.93px;
+height: 22px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 21px;
+/* identical to box height, or 165% */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9.48148px 0px;
+gap: 9.48px;
+
+position: absolute;
+width: 434.96px;
+height: 62.56px;
+left: 434.96px;
+top: 0px;
+
+border-bottom: 0.592593px solid rgba(15, 32, 71, 0.08);
+border-bottom: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.08);
+
+
+/* Container:transform */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2.37037px 0px 0px;
+isolation: isolate;
+
+width: 3.56px;
+height: 5.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+position: absolute;
+width: 3.56px;
+height: 3.56px;
+left: -0.74px;
+top: 1.63px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 421.93px;
+height: 43px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Full structural pavement rehabilitation across 7 d */
+
+width: 421.93px;
+height: 43px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 21px;
+/* or 165% */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9.48148px 0px;
+gap: 9.48px;
+
+position: absolute;
+width: 434.96px;
+height: 41.56px;
+left: 0px;
+top: 62.55px;
+
+border-bottom: 0.592593px solid rgba(15, 32, 71, 0.08);
+border-bottom: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.08);
+
+
+/* Container:transform */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2.37037px 0px 0px;
+isolation: isolate;
+
+width: 3.56px;
+height: 5.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+position: absolute;
+width: 3.56px;
+height: 3.56px;
+left: -0.74px;
+top: 1.63px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 421.93px;
+height: 22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Full structural pavement rehabilitation across 7 d */
+
+width: 421.93px;
+height: 22px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 21px;
+/* identical to box height, or 165% */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 9.48148px 0px;
+gap: 9.48px;
+
+position: absolute;
+width: 434.96px;
+height: 41.56px;
+left: 434.96px;
+top: 62.55px;
+
+border-bottom: 0.592593px solid rgba(15, 32, 71, 0.08);
+border-bottom: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.08);
+
+
+/* Container:transform */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2.37037px 0px 0px;
+isolation: isolate;
+
+width: 3.56px;
+height: 5.93px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+position: absolute;
+width: 3.56px;
+height: 3.56px;
+left: -0.74px;
+top: 1.63px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 421.93px;
+height: 22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Full structural pavement rehabilitation across 7 d */
+
+width: 421.93px;
+height: 22px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 21px;
+/* identical to box height, or 165% */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* CONTACT */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 77.037px;
+gap: 5.93px;
+
+width: 1024px;
+height: 690.19px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319072 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 35.56px;
+
+width: 869.93px;
+height: 536.11px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 120 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 17.78px;
+
+width: 869.93px;
+height: 66.78px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 9.48px;
+
+width: 167.59px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 04 */
+
+width: 19px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 61.63px;
+height: 0px;
+
+border: 0.592593px solid #000000;
+border: 0.592593px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* GALLERY */
+
+width: 68px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Project Photography */
+
+width: 869.93px;
+height: 33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 26.0741px;
+line-height: 33px;
+/* identical to box height */
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319075 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 7.11px;
+
+width: 869.93px;
+height: 433.78px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319073 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 7.11px;
+
+width: 869.93px;
+height: 237.04px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 431.41px;
+height: 237.04px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Image (Aerial view of the completed corridor, Western Sydney) */
+
+width: 431.41px;
+height: 237.04px;
+
+background: url(IMG_4521.jpg), url(image.jpg);
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 431.41px;
+height: 237.04px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Image (Construction staging — maintaining live traffic flow) */
+
+width: 431.41px;
+height: 237.04px;
+
+background: url(CH 10.jpg), url(image.jpg);
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319074 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 7.11px;
+
+width: 869.93px;
+height: 189.63px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 431.41px;
+height: 189.63px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Image (Pavement investigation — FWD deflection survey) */
+
+width: 431.41px;
+height: 189.63px;
+
+background: url(CH 40.jpg), url(image.jpg);
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 431.41px;
+height: 189.63px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Image (Drainage infrastructure installation) */
+
+width: 431.41px;
+height: 189.63px;
+
+background: url(IMG_4523.jpg), url(image.jpg);
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* OVERVIEW */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+padding: 77.037px;
+gap: 40px;
+
+width: 1024px;
+height: 893.44px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319067 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 35.56px;
+
+width: 869.93px;
+height: 685.15px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321319066 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 535.11px;
+
+width: 869.93px;
+height: 65.59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319050 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16.59px;
+
+width: 261.33px;
+height: 65.59px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 118 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 9.48px;
+
+width: 173.59px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 05 */
+
+width: 18px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector 4 */
+
+width: 61.63px;
+height: 0px;
+
+border: 0.592593px solid #000000;
+border: 0.592593px solid color(display-p3 0.000 0.000 0.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* PROJECTS */
+
+width: 75px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+letter-spacing: 1.77778px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Related Work */
+
+width: 261.33px;
+height: 33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 26.0741px;
+line-height: 33px;
+/* identical to box height */
+
+color: #090D15;
+color: color(display-p3 0.039 0.051 0.078);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319072 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 24px;
+
+width: 869.93px;
+height: 584px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ProjectCard */
+
+width: 422.96px;
+height: 280px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
+
+position: absolute;
+width: 423px;
+height: 280px;
+left: -0.04px;
+top: 0.33px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(367643603_1564651814069588_2366154985172353097_n.jpg), url(image.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.2), color(display-p3 0.000 0.000 0.000 / 0.2)), url(367643603_1564651814069588_2366154985172353097_n.jpg), url(image.jpg);
+
+
+/* Kurrajong Rd, Prestons- Staged Improvement Strategic Design */
+
+position: absolute;
+width: 368px;
+height: 16px;
+left: 29.63px;
+top: 234.33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 422.96px;
+height: 280px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Image (Metropolitan Bridge Rehabilitation) */
+
+position: absolute;
+width: 423px;
+height: 280px;
+left: 0px;
+top: 0.33px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMG_9432.jpg), url(image.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(IMG_9432.jpg), url(image.jpg);
+
+
+/* Dunmore St & Station St Junction Upgrade, Wentworthville */
+
+position: absolute;
+width: 344px;
+height: 16px;
+left: 29.83px;
+top: 234.33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 870px;
+height: 280px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Image (Urban Stormwater Management System) */
+
+position: absolute;
+width: 870px;
+height: 280px;
+left: -0.04px;
+top: 0.33px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(unnamed (1).jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(unnamed (1).jpg);
+
+
+/* Design of Retaining Walls at King St & Banksia St- Bayside Council  */
+
+position: absolute;
+width: 386px;
+height: 16px;
+left: 29.43px;
+top: 234.33px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 4.74px;
+
+width: 103.96px;
+height: 14.22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* ALL PROJECTS */
+
+width: 85px;
+height: 14px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 13px;
+/* identical to box height, or 109% */
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 14.22px;
+height: 14.22px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 49.99%;
+bottom: 50.01%;
+
+border: 0.740741px solid #0F2047;
+border: 0.740741px solid color(display-p3 0.075 0.125 0.267);
+
+
+/* Vector */
+
+position: absolute;
+left: 50%;
+right: 20.83%;
+top: 20.87%;
+bottom: 20.79%;
+
+border: 0.740741px solid #0F2047;
+border: 0.740741px solid color(display-p3 0.075 0.125 0.267);
+
+}
+
+
+mobile: {
+/* Challenge-Section */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+gap: 32px;
+
+width: 390px;
+height: 555px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 350px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 01 */
+
+width: 15px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Line */
+
+box-sizing: border-box;
+
+width: 40px;
+height: 0px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* THE CHALLENGE */
+
+width: 271px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 350px;
+height: 51px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* What needed to be solved. */
+
+width: 350px;
+height: 35px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Line */
+
+box-sizing: border-box;
+
+width: 80px;
+height: 0px;
+
+border: 2px solid #CE1A00;
+border: 2px solid color(display-p3 0.741 0.192 0.086);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 12px;
+gap: 8px;
+
+width: 111px;
+height: 28px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border: 1px solid rgba(15, 32, 71, 0.180392);
+border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 6px;
+height: 6px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Alexandria, NSW */
+
+width: 73px;
+height: 12px;
+
+font-family: 'Barlow';
+font-style: normal;
+font-weight: 600;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Transport for NSW, under the M5 Project, required new shared paths along Campbell Road, St Peters, to connect with newly constructed shared paths and the future Alexandra Canal shared path. The design needed to provide a continuous north-south connection through the existing culvert under Campbell Road Bridge, including drainage, lighting and retaining walls suited to the underpass. Civil and lighting design was delivered for the 2.5 m and 3.0 m shared paths, two retaining walls and culvert lighting, through to Issued for Construction documentation. */
+
+width: 350px;
+height: 322px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 150%;
+/* or 22px */
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Approach-Section */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+gap: 32px;
+
+width: 390px;
+height: 885px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 350px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 02 */
+
+width: 17px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Line */
+
+box-sizing: border-box;
+
+width: 40px;
+height: 0px;
+
+border: 1px solid #FFFFFF;
+border: 1px solid color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* OUR APPROACH */
+
+width: 269px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+text-transform: uppercase;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* How We Delivered It */
+
+width: 350px;
+height: 35px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 20px;
+
+width: 350px;
+height: 728px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
 
 
 /* Frame */
@@ -3292,10 +5917,10 @@ padding: 20px;
 gap: 12px;
 
 width: 350px;
-height: 123px;
+height: 167px;
 
-border-bottom: 1px solid rgba(255, 255, 255, 0.101961);
-border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.101961);
+border-bottom: 1px solid rgba(255, 255, 255, 0.0784314);
+border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.0784314);
 
 /* Inside auto layout */
 flex: none;
@@ -3304,19 +5929,19 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* CLIENT */
+/* 01 */
 
-width: 40px;
-height: 14px;
+width: 35px;
+height: 40px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
+font-weight: 900;
+font-size: 32px;
+line-height: 40px;
 
-color: rgba(255, 255, 255, 0.301961);
-color: color(display-p3 1.000 1.000 1.000 / 0.301961);
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
 
 
 /* Inside auto layout */
@@ -3325,653 +5950,44 @@ order: 0;
 flex-grow: 0;
 
 
-/* TfNSW-Logo */
+/* Survey & Investigation */
 
-width: 150px;
-height: 57px;
+width: 310px;
+height: 23px;
 
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Vector */
-
-position: absolute;
-left: 17.06%;
-right: 76.38%;
-top: 16.6%;
-bottom: 49.37%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.22%;
-right: 82.87%;
-top: 16.62%;
-bottom: 49.48%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.81%;
-right: 86.97%;
-top: 9.37%;
-bottom: 50.5%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 21.91%;
-right: 72.01%;
-top: 9.4%;
-bottom: 50.49%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 14.21%;
-right: 79.38%;
-top: 2.16%;
-bottom: 69.15%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 24.25%;
-right: 65.99%;
-top: 31.3%;
-bottom: 50.56%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 0.89%;
-right: 89.35%;
-top: 31.38%;
-bottom: 50.53%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.3%;
-right: 93.5%;
-top: 20.87%;
-bottom: 67.79%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 28.42%;
-right: 67.44%;
-top: 20.84%;
-bottom: 68.01%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 19.77%;
-right: 76.36%;
-top: 3.96%;
-bottom: 83.07%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.15%;
-right: 84.98%;
-top: 3.94%;
-bottom: 83.22%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 38.55%;
-right: 60.73%;
-top: 9.61%;
-bottom: 3.11%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 54.31%;
-right: 39.54%;
-top: 44.87%;
-bottom: 36.85%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 43.13%;
-right: 49.62%;
-top: 39.23%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 50.36%;
-right: 45.68%;
-top: 44.7%;
-bottom: 37.14%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 94.91%;
-right: 0.88%;
-top: 40.28%;
-bottom: 36.93%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 82.58%;
-right: 10.31%;
-top: 44.59%;
-bottom: 36.67%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 61.72%;
-right: 32.18%;
-top: 44.76%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 68.5%;
-right: 26.12%;
-top: 44.81%;
-bottom: 36.91%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 74.88%;
-right: 18.14%;
-top: 44.74%;
-bottom: 31.73%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 90.73%;
-right: 5.31%;
-top: 44.72%;
-bottom: 37.17%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 6.78%;
-right: 83.13%;
-top: 50.86%;
-bottom: 45.04%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 18.29%;
-right: 72%;
-top: 50.83%;
-bottom: 45.08%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 12.61%;
-right: 79.49%;
-top: 57.96%;
-bottom: 14.93%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.18%;
-right: 87.98%;
-top: 58.43%;
-bottom: 15.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 20.62%;
-right: 66.76%;
-top: 58.4%;
-bottom: 15.63%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 47.26%;
-right: 45.63%;
-top: 78.11%;
-bottom: 3.16%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 43.11%;
-right: 52.73%;
-top: 71.68%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 72.07%;
-right: 21.03%;
-top: 72.47%;
-bottom: 3.37%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 63.35%;
-right: 28.83%;
-top: 72.74%;
-bottom: 3.6%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 79.03%;
-right: 7.71%;
-top: 72.71%;
-bottom: 3.45%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 55.28%;
-right: 40.73%;
-top: 78.27%;
-bottom: 3.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 1.91%;
-right: 95.16%;
-top: 88.05%;
-bottom: 3.53%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 5.11%;
-right: 91.7%;
-top: 88.1%;
-bottom: 3.49%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 8.23%;
-right: 88.82%;
-top: 88.14%;
-bottom: 3.61%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 14.38%;
-right: 83.02%;
-top: 88.24%;
-bottom: 3.59%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 17.32%;
-right: 79.98%;
-top: 88.13%;
-bottom: 3.51%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 2.3%;
-right: 93.5%;
-top: 20.87%;
-bottom: 67.79%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 28.42%;
-right: 67.44%;
-top: 20.84%;
-bottom: 68.01%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 19.77%;
-right: 76.36%;
-top: 3.96%;
-bottom: 83.07%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.15%;
-right: 84.98%;
-top: 3.94%;
-bottom: 83.22%;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-
-/* Vector */
-
-position: absolute;
-left: 20.54%;
-right: 76.44%;
-top: 88.11%;
-bottom: 3.59%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 24.02%;
-right: 73.65%;
-top: 88.23%;
-bottom: 3.58%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 26.79%;
-right: 70.52%;
-top: 88.14%;
-bottom: 3.51%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 11.6%;
-right: 86.07%;
-top: 88.27%;
-bottom: 3.59%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Vector */
-
-position: absolute;
-left: 29.91%;
-right: 67.58%;
-top: 88.26%;
-bottom: 3.56%;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 6px;
-
-width: 350px;
-height: 82px;
-
-border-bottom: 1px solid rgba(255, 255, 255, 0.101961);
-border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.101961);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* VALUE */
-
-width: 36px;
-height: 14px;
-
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.301961);
-color: color(display-p3 1.000 1.000 1.000 / 0.301961);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* $ 4.3 Billion */
-
-width: 92px;
-height: 22px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
 font-size: 18px;
-line-height: 22px;
+line-height: 23px;
 /* identical to box height */
 
-color: rgba(255, 255, 255, 0.819608);
-color: color(display-p3 1.000 1.000 1.000 / 0.819608);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame */
+/* Gap analysis, ground survey and utility identification to define the project area. */
 
-box-sizing: border-box;
+width: 310px;
+height: 40px;
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 6px;
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
 
-width: 350px;
-height: 82px;
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
 
-border-bottom: 1px solid rgba(255, 255, 255, 0.101961);
-border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.101961);
 
 /* Inside auto layout */
 flex: none;
@@ -3980,19 +5996,43 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* DURATION */
+/* Frame */
 
-width: 56px;
-height: 14px;
+box-sizing: border-box;
 
-font-family: 'Barlow';
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+gap: 12px;
+
+width: 350px;
+height: 167px;
+
+border-bottom: 1px solid rgba(255, 255, 255, 0.0784314);
+border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.0784314);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 02 */
+
+width: 41px;
+height: 40px;
+
+font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
+font-weight: 900;
+font-size: 32px;
+line-height: 40px;
 
-color: rgba(255, 255, 255, 0.301961);
-color: color(display-p3 1.000 1.000 1.000 / 0.301961);
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
 
 
 /* Inside auto layout */
@@ -4001,25 +6041,49 @@ order: 0;
 flex-grow: 0;
 
 
-/* Sep 2020 - Jun 2021  */
+/* Shared Path Design */
 
-width: 164px;
-height: 22px;
+width: 310px;
+height: 23px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
-font-weight: 700;
+font-weight: 600;
 font-size: 18px;
-line-height: 22px;
+line-height: 23px;
 /* identical to box height */
 
-color: rgba(255, 255, 255, 0.819608);
-color: color(display-p3 1.000 1.000 1.000 / 0.819608);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Path alignment, pavement design, signposting and delineation to TfNSW standards. */
+
+width: 310px;
+height: 40px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
 flex-grow: 0;
 
 
@@ -4032,13 +6096,100 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 20px;
-gap: 6px;
+gap: 12px;
 
 width: 350px;
-height: 82px;
+height: 167px;
 
-border-bottom: 1px solid rgba(255, 255, 255, 0.101961);
-border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.101961);
+border-bottom: 1px solid rgba(255, 255, 255, 0.0784314);
+border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.0784314);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 03 */
+
+width: 41px;
+height: 40px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+font-size: 32px;
+line-height: 40px;
+
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Drainage, Lighting & Structures */
+
+width: 310px;
+height: 23px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+/* identical to box height */
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Underpass drainage, pedestrian lighting for the culvert and retaining wall design. */
+
+width: 310px;
+height: 40px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+gap: 12px;
+
+width: 350px;
+height: 167px;
+
 
 /* Inside auto layout */
 flex: none;
@@ -4047,19 +6198,19 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* LOCATION */
+/* 04 */
 
-width: 54px;
-height: 14px;
+width: 42px;
+height: 40px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
+font-weight: 900;
+font-size: 32px;
+line-height: 40px;
 
-color: rgba(255, 255, 255, 0.301961);
-color: color(display-p3 1.000 1.000 1.000 / 0.301961);
+color: rgba(255, 255, 255, 0.6);
+color: color(display-p3 1.000 1.000 1.000 / 0.6);
 
 
 /* Inside auto layout */
@@ -4068,25 +6219,173 @@ order: 0;
 flex-grow: 0;
 
 
-/* Alexandria, NSW */
+/* Construction Documentation */
 
-width: 133px;
-height: 22px;
+width: 310px;
+height: 23px;
 
-font-family: 'Barlow';
+font-family: 'Outfit';
 font-style: normal;
-font-weight: 700;
+font-weight: 600;
 font-size: 18px;
-line-height: 22px;
+line-height: 23px;
 /* identical to box height */
 
-color: rgba(255, 255, 255, 0.819608);
-color: color(display-p3 1.000 1.000 1.000 / 0.819608);
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Issued for Construction drawings, specifications and construction guidance. */
+
+width: 310px;
+height: 40px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+color: #B3B3B3;
+color: color(display-p3 0.702 0.702 0.702);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Outcomes-Section */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+gap: 32px;
+
+width: 390px;
+height: 893px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 350px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 03 */
+
+width: 17px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Line */
+
+box-sizing: border-box;
+
+width: 40px;
+height: 0px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* OUTCOMES */
+
+width: 269px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Results & Achievements */
+
+width: 350px;
+height: 35px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
 flex-grow: 0;
 
 
@@ -4096,12 +6395,638 @@ flex-grow: 0;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 20px;
-gap: 6px;
+padding: 0px;
+gap: 16px;
 
 width: 350px;
-height: 82px;
+height: 452px;
 
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+
+width: 350px;
+height: 101px;
+
+border: 1px solid rgba(15, 32, 71, 0.180392);
+border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 90 m */
+
+width: 83px;
+height: 45px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 45px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* RC Retaining Wall */
+
+width: 310px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+
+width: 350px;
+height: 101px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border: 1px solid rgba(15, 32, 71, 0.180392);
+border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 3.0 m */
+
+width: 92px;
+height: 45px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 45px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 3New shared path sections */
+
+width: 310px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+
+width: 350px;
+height: 101px;
+
+border: 1px solid rgba(15, 32, 71, 0.180392);
+border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 9 Months */
+
+width: 151px;
+height: 45px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 45px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Project duration */
+
+width: 310px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+
+width: 350px;
+height: 101px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
+border: 1px solid rgba(15, 32, 71, 0.180392);
+border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 100% */
+
+width: 87px;
+height: 45px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 45px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* IFC documentation */
+
+width: 310px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 16px;
+
+color: #697281;
+color: color(display-p3 0.420 0.447 0.502);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 350px;
+height: 252px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 0px;
+gap: 12px;
+
+width: 350px;
+height: 56px;
+
+border-bottom: 1px solid rgba(15, 32, 71, 0.180392);
+border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+
+width: 8.49px;
+height: 12.49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 6px;
+height: 6px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Designed new shared paths on both sides of Campbell Road. */
+
+width: 329.51px;
+height: 40px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 0px;
+gap: 12px;
+
+width: 350px;
+height: 56px;
+
+border-bottom: 1px solid rgba(15, 32, 71, 0.180392);
+border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+
+width: 8.49px;
+height: 12.49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 6px;
+height: 6px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Provided a continuous connection through the culvert under Campbell Road Bridge. */
+
+width: 329.51px;
+height: 40px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 0px;
+gap: 12px;
+
+width: 350px;
+height: 36px;
+
+border-bottom: 1px solid rgba(15, 32, 71, 0.180392);
+border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+
+width: 8.49px;
+height: 12.49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 6px;
+height: 6px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Pedestrian lighting designed to limit spill lighting. */
+
+width: 329.51px;
+height: 20px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* identical to box height, or 20px */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Frame */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 0px;
+gap: 12px;
+
+width: 350px;
+height: 56px;
+
+border-bottom: 1px solid rgba(15, 32, 71, 0.180392);
+border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 0px 0px;
+
+width: 8.49px;
+height: 12.49px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 6px;
+height: 6px;
+
+background: #CE1A00;
+background: color(display-p3 0.741 0.192 0.086);
+transform: rotate(45deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Underpass drainage designed using the ILSAX model in DRAINS. */
+
+width: 329.51px;
+height: 40px;
+
+font-family: 'Figtree';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+color: #344153;
+color: color(display-p3 0.216 0.255 0.318);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Gallery-Section */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 20px;
+gap: 32px;
+
+width: 390px;
+height: 1085px;
+
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
 
 /* Inside auto layout */
 flex: none;
@@ -4110,80 +7035,40 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* SCOPE */
-
-width: 37px;
-height: 14px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 12px;
-line-height: 14px;
-
-color: rgba(255, 255, 255, 0.301961);
-color: color(display-p3 1.000 1.000 1.000 / 0.301961);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* civil and lighting design */
-
-width: 187px;
-height: 22px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.819608);
-color: color(display-p3 1.000 1.000 1.000 / 0.819608);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame 1321319196 */
+/* Frame */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
 align-items: center;
 padding: 0px;
-gap: 14px;
+gap: 12px;
 
-position: absolute;
-width: 315px;
-height: 15px;
-left: 20px;
-top: 165px;
+width: 350px;
+height: 18px;
 
 
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
 
-/* ALL PROJECTS */
 
-width: 104px;
-height: 15px;
+/* 04 */
+
+width: 18px;
+height: 18px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-letter-spacing: 2px;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
 
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
 
 
 /* Inside auto layout */
@@ -4192,13 +7077,15 @@ order: 0;
 flex-grow: 0;
 
 
-/* Ellipse 1 */
+/* Line */
 
-width: 10px;
-height: 10px;
+box-sizing: border-box;
 
-background: #D9D9D9;
-background: color(display-p3 0.851 0.851 0.851);
+width: 40px;
+height: 0px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
 
 /* Inside auto layout */
 flex: none;
@@ -4206,26 +7093,596 @@ order: 1;
 flex-grow: 0;
 
 
-/* Engineering & Design */
+/* GALLERY */
 
-width: 173px;
-height: 15px;
+width: 268px;
+height: 16px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-letter-spacing: 2px;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
 text-transform: uppercase;
 
-color: #B0B0B0;
-color: color(display-p3 0.690 0.690 0.690);
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
 
 
 /* Inside auto layout */
 flex: none;
 order: 2;
+flex-grow: 1;
+
+
+/* Project Photography */
+
+width: 350px;
+height: 35px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
 flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 350px;
+height: 928px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 350px;
+height: 220px;
+
+background: #08142A;
+background: color(display-p3 0.043 0.078 0.157);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 350px;
+height: 220px;
+
+background: url(IMG_4521.jpg), url(image.jpg);
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 350px;
+height: 220px;
+
+background: #08142A;
+background: color(display-p3 0.043 0.078 0.157);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 350px;
+height: 220px;
+
+background: url(CH 10.jpg), url(image.jpg);
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 350px;
+height: 220px;
+
+background: #08142A;
+background: color(display-p3 0.043 0.078 0.157);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 350px;
+height: 220px;
+
+background: url(CH 40.jpg), url(image.jpg);
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 350px;
+height: 220px;
+
+background: #08142A;
+background: color(display-p3 0.043 0.078 0.157);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+width: 350px;
+height: 220px;
+
+background: url(IMG_4523.jpg), url(image.jpg);
+opacity: 0.9;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Related-Section */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-end;
+padding: 20px;
+gap: 32px;
+
+width: 390px;
+height: 837px;
+
+background: #FFFFFF;
+background: color(display-p3 1.000 1.000 1.000);
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 350px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* 05 */
+
+width: 17px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Line */
+
+box-sizing: border-box;
+
+width: 40px;
+height: 0px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* PROJECTS */
+
+width: 269px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 13px;
+line-height: 16px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 350px;
+height: 35px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Related Work */
+
+width: 350px;
+height: 35px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 35px;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+
+width: 350px;
+height: 632px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ProjectCard */
+
+width: 350px;
+height: 200px;
+
+background: #08142A;
+background: color(display-p3 0.043 0.078 0.157);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(367643603_1564651814069588_2366154985172353097_n.jpg), url(image.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(367643603_1564651814069588_2366154985172353097_n.jpg), url(image.jpg);
+
+
+/* Campbell St Shared Path Upgrade -M5 Project (Stage 3) */
+
+position: absolute;
+width: 310px;
+height: 40px;
+left: 20px;
+bottom: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 350px;
+height: 200px;
+
+background: #08142A;
+background: color(display-p3 0.043 0.078 0.157);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMG_9432.jpg), url(image.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(IMG_9432.jpg), url(image.jpg);
+
+
+/* Dunmore St & Station St Junction Upgrade, Wentworthville */
+
+position: absolute;
+width: 310px;
+height: 40px;
+left: 20px;
+bottom: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 350px;
+height: 200px;
+
+background: #08142A;
+background: color(display-p3 0.043 0.078 0.157);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(unnamed (1).jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(unnamed (1).jpg);
+
+
+/* Design of Retaining Walls at King St & Banksia St- Bayside Council  */
+
+position: absolute;
+width: 310px;
+height: 40px;
+left: 20px;
+bottom: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 109px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* ALL PROJECTS */
+
+width: 85px;
+height: 15px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 16px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Vector */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 50%;
+bottom: 50%;
+
+border: 1.25px solid #0F2047;
+border: 1.25px solid color(display-p3 0.075 0.125 0.267);
+
+
+/* Vector */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 50%;
+right: 20.83%;
+top: 20.85%;
+bottom: 20.81%;
+
+border: 1.25px solid #0F2047;
+border: 1.25px solid color(display-p3 0.075 0.125 0.267);
 
 }

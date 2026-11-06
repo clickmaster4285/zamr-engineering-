@@ -17,44 +17,43 @@ export default function Results({
   achievements,
 }: Props) {
   return (
-    <section className="w-full bg-white px-5 py-14 sm:px-8 md:px-10 md:py-16 xl:px-[130px] xl:py-[130px]">
-      <div className="mx-auto flex w-full max-w-[1468px] flex-col gap-10 md:gap-12 xl:gap-[60px]">
-        <div className="flex flex-col gap-6 xl:gap-[30px]">
-          <div className="flex flex-row items-center gap-4">
-            <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] md:text-base">
+    <section className="w-full bg-white px-5 py-5 lg:px-[77px] lg:py-[77px] 2xl:px-[130px] 2xl:py-[130px]">
+      <div className="mx-auto flex w-full max-w-[1468px] flex-col gap-8 lg:gap-9 2xl:gap-[60px]">
+        <div className="flex flex-col gap-4 2xl:gap-[30px]">
+          <div className="flex flex-row items-center gap-3 lg:gap-[9px] 2xl:gap-4">
+            <span className="text-[14px] font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
               {number}
             </span>
-            <span className="h-px w-16 bg-[var(--text-dark)] md:w-[104px]" />
-            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] md:text-base">
+            <span className="h-px w-10 bg-[var(--color-primary)] lg:w-[104px] lg:bg-[var(--text-dark)]" />
+            <span className="text-[13px] font-semibold uppercase leading-4 text-[var(--text-dark)] lg:font-medium lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
               OUTCOMES
             </span>
           </div>
 
-          <h2 className="text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[40px] sm:leading-[50px] md:text-[48px] md:leading-[58px] xl:text-[56px] xl:leading-[71px]">
+          <h2 className="text-[28px] font-semibold leading-[35px] text-[var(--text-dark)] lg:text-[26px] lg:font-bold lg:leading-[33px] 2xl:text-[44px] 2xl:leading-[55px]">
             {heading}
           </h2>
         </div>
 
-        <div className="flex flex-col gap-8 xl:gap-[41px]">
-          <div
-            className="grid grid-cols-2 gap-px xl:grid-cols-4"
-            style={{
-              background:
-                "color-mix(in srgb, var(--color-blue-header) 10%, transparent)",
-            }}
-          >
+        <div className="flex flex-col gap-4 lg:gap-6 2xl:gap-[41px]">
+          <div className="flex flex-col gap-4 lg:grid lg:grid-cols-4 lg:gap-0">
             {metrics.map((metric, i) => {
-              const isLightBg = i % 2 === 1;
+              const isAlt = i % 2 === 1;
               return (
                 <div
                   key={metric.label}
-                  className="flex min-h-[110px] flex-col justify-start px-4 py-6 sm:px-6 md:min-h-[128px] md:px-[30px] md:py-[30px] xl:min-h-[139px]"
-                  style={{ background: isLightBg ? "var(--bg-light)" : "white" }}
+                  className="flex min-h-[101px] flex-col justify-center border px-5 py-5 lg:min-h-[100px] lg:border-0 lg:px-4 lg:py-4 2xl:min-h-[139px] 2xl:px-[30px] 2xl:py-[30px]"
+                  style={{
+                    background: isAlt ? "var(--bg-section)" : "white",
+                    borderColor: "color-mix(in srgb, var(--color-primary) 18%, transparent)",
+                    boxShadow:
+                      "inset 0 0 0 1px color-mix(in srgb, var(--color-primary) 10%, transparent)",
+                  }}
                 >
-                  <span className="text-[26px] font-medium leading-[32px] text-[var(--color-blue-header)] sm:text-[32px] sm:leading-[40px] md:text-[38px] md:leading-[48px] xl:text-[44px] xl:leading-[55px]">
+                  <span className="text-[36px] font-bold leading-[45px] text-[var(--color-primary)] lg:text-[26px] lg:font-medium lg:leading-8 2xl:text-[44px] 2xl:leading-[55px]">
                     {metric.value}
                   </span>
-                  <span className="pt-2 text-xs font-medium leading-[15px] text-[var(--color-text-label)] md:text-[14px] md:leading-[18px]">
+                  <span className="pt-2 text-[14px] font-medium leading-[18px] text-[var(--color-text-label)]">
                     {metric.label}
                   </span>
                 </div>
@@ -63,18 +62,18 @@ export default function Results({
           </div>
 
           {achievements.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
               {achievements.map((item, i) => (
                 <div
                   key={i}
                   className="flex flex-row items-start gap-4 py-4"
                   style={{
                     borderBottom:
-                      "1px solid color-mix(in srgb, var(--color-blue-header) 8%, transparent)",
+                      "1px solid color-mix(in srgb, var(--color-primary) 8%, transparent)",
                   }}
                 >
                   <span className="mt-[9px] flex h-[6px] w-[6px] shrink-0 rotate-45 bg-[var(--color-secondary)]" />
-                  <span className="text-[14px] leading-[22px] text-[var(--text-paragraph)] md:text-[14.5px] md:leading-[24px]">
+                  <span className="text-[14.5px] leading-6 text-[var(--text-paragraph)]">
                     {item}
                   </span>
                 </div>
