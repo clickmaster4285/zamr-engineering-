@@ -1,4 +1,4 @@
-// mockData/landing.ts  All static data for the landing page
+﻿// mockData/landing.ts  All static data for the landing page
 
 export interface NavLink {
   label: string;
@@ -89,7 +89,7 @@ export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
     category: "Engineering & Design",
     shortDescription: "Civil and lighting design for new shared paths connecting Campbell Road, St Peters, through the culvert under Campbell Road Bridge.",
     heroTitle: "Campbell Street Shared Path Upgrade (M5 Project – Stage 3)",
-    featuredImage: "/images/projects/campbell-street-shared-path-upgrade-m5-project-stage-3/CH%2010.jpg",
+    featuredImage: "/images/projects/campbell-street-shared-path-upgrade-m5-project-stage-3/CH-10.jpg",
   },
   {
     slug: "kurrajong-road-upgrade-prestons-strategic-design",
