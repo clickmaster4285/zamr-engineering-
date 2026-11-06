@@ -44,7 +44,7 @@ function AllProjectsCard({
         {category}
       </span>
 
-      <h3 className="absolute bottom-5 left-5 right-5 text-[16px] font-semibold leading-5 text-white lg:bottom-auto lg:left-5 lg:right-5 lg:top-[260px] lg:text-[16px] lg:leading-5 2xl:left-[50px] 2xl:right-[50px] 2xl:top-[260px] 2xl:text-[20px] 2xl:leading-[25px]">
+      <h3 className="absolute bottom-5 left-5 right-5 text-[16px] font-semibold leading-5 text-white lg:bottom-5 lg:left-5 lg:right-5 lg:text-[16px] lg:leading-5 2xl:bottom-[30px] 2xl:left-[50px] 2xl:right-[50px] 2xl:text-[20px] 2xl:leading-[25px]">
         {title}
       </h3>
     </button>
