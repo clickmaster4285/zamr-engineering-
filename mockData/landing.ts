@@ -83,34 +83,49 @@ export interface ProjectsFeaturedWork {
 
 export const projectsFeaturedWork: ProjectsFeaturedWork[] = [
   {
-    slug: "wad-orange",
+    slug: "campbell-street-shared-path-upgrade-m5-project-stage-3",
     index: "01",
-    title: "WAD Orange ",
-    category: "project verification",
-    shortDescription:
-      "Metropolitan Bridge Rehabilitation involved delivering comprehensive engineering support to restore structural integrity, improve safety, and extend the operational lifespan of critical bridge infrastructure through effective planning, design, and project management.",
-    heroTitle: "WAD Orange",
-    featuredImage: "/images/projects/wad_orange.jpg",
+    title: "Campbell Street Shared Path Upgrade (M5 Project – Stage 3)",
+    category: "Engineering & Design",
+    shortDescription: "Civil and lighting design for new shared paths connecting Campbell Road, St Peters, through the culvert under Campbell Road Bridge.",
+    heroTitle: "Campbell Street Shared Path Upgrade (M5 Project – Stage 3)",
+    featuredImage: "/images/projects/campbell-street-shared-path-upgrade-m5-project-stage-3/CH-10.jpg",
   },
   {
-    slug: "dunmore-st-wentworthville",
+    slug: "kurrajong-road-upgrade-prestons-strategic-design",
     index: "02",
-    title: "Dunmore St Wentworthville",
-    category: "project verification",
-    shortDescription:
-      "Signalised intersection upgrade at Grantham Farm improving traffic flow, safety, and connectivity for the surrounding road network.",
-    heroTitle: "Dunmore St Wentworthville",
-    featuredImage: "/images/projects/dunmore.jpg",
+    title: "Kurrajong Road Upgrade, Prestons – Strategic Design",
+    category: "Engineering & Design",
+    shortDescription: "Strategic design for staged improvements along approximately 6.1 km of Kurrajong Road, Prestons.",
+    heroTitle: "Kurrajong Road Upgrade, Prestons – Strategic Design",
+    featuredImage: "/images/projects/kurrajong-road-upgrade-prestons-strategic-design/image090.jpg",
   },
   {
-    slug: "liverpool-bridge-inspection",
+    slug: "dunmore-st-station-st-junction-upgrade-wentworthville",
     index: "03",
-    title: "Liverpool Bridge Inspection",
-    category: "project verification",
-    shortDescription:
-      "Road infrastructure upgrade improving intersection geometry, drainage, and overall road safety at the Mamre Road and Abbotts Road connection.",
-    heroTitle: "Liverpool Bridge Inspection",
-    featuredImage: "/images/projects/liverpool.png",
+    title: "Dunmore St & Station St Junction Upgrade",
+    category: "Engineering & Design",
+    shortDescription: "Concept and detailed design to improve accessibility at the Dunmore Street and Station Street junction in Wentworthville.",
+    heroTitle: "Dunmore St & Station St Junction Upgrade",
+    featuredImage: "/images/projects/dunmore-st-station-st-junction-upgrade-wentworthville/20220802_231947587_iOS.jpg",
+  },
+  {
+    slug: "king-st-banksia-st-retaining-walls-design-bayside-council",
+    index: "04",
+    title: "King St & Banksia St Retaining Walls Design – Bayside Council",
+    category: "Engineering & Design",
+    shortDescription: "Structural and geotechnical design for two retaining wall replacements at King Street, Rockdale and Banksia Street, Pagewood.",
+    heroTitle: "King St & Banksia St Retaining Walls Design – Bayside Council",
+    featuredImage: "/images/projects/king-st-banksia-st-retaining-walls-design-bayside-council/banksia-street-existing-wall.jpg",
+  },
+  {
+    slug: "m4-smart-motorway-stage-2",
+    index: "05",
+    title: "M4 Smart Motorway Stage 2",
+    category: "Project & Program Management",
+    shortDescription: "Project engineering support for Stage 2 of NSW’s first smart motorway, improving congestion, safety and incident response on the M4.",
+    heroTitle: "M4 Smart Motorway Stage 2",
+    featuredImage: "/images/projects/m4-smart-motorway-stage-2/00_M4SM_Hero-1.jpg",
   },
 ];
 
@@ -221,7 +236,7 @@ export const projectsSection = {
   sectionNumber: "03",
   sectionLabel: "PROJECTS",
   heading: "Featured Work",
-  ctaLabel: "LEARN MORE",
+  ctaLabel: "LOAD MORE",
   logosLabel: "TRUSTED BY",
 };
 
@@ -527,7 +542,7 @@ export const footerMetaItems: FooterMetaItem[] = [
   {
     type: "location",
     value: footerContactInfo.location2,
-    icon: "/icons/maillocation.svg",
+    icon: "/icons/location-mail-pin.svg",
     alt: "Location",
   },
 ];

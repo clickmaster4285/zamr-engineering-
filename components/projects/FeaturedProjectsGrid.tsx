@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import ProjectImage from "@/components/projects/ProjectImage";
 
 export interface FeaturedProjectItem {
   slug: string;
@@ -71,7 +71,7 @@ export function FeaturedProjectCard({
             : "h-[320px] lg:h-[184px] 2xl:h-[311px]"
         }`}
       >
-        <Image
+        <ProjectImage
           src={project.image}
           alt={project.title}
           fill
@@ -89,6 +89,9 @@ export function FeaturedProjectCard({
             {project.index}
           </span>
           <div className="flex flex-col gap-2">
+            <span className="text-[12px] font-light leading-[15px] tracking-[2px] text-white">
+              {project.category}
+            </span>
             <h3 className="text-xl font-semibold leading-[1.3] text-white">
               {project.title}
             </h3>
@@ -110,6 +113,9 @@ export function FeaturedProjectCard({
         </span>
 
         <div className="absolute bottom-[20px] left-[24px] right-[30px] hidden flex-col lg:bottom-[30px] lg:left-[30px] lg:flex 2xl:bottom-[30px] 2xl:left-[50px] 2xl:right-[50px]">
+          <span className="mb-[10px] text-[12px] font-light leading-[15px] tracking-[1.78px] text-white 2xl:mb-[14px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
+            {project.category}
+          </span>
           <h3
             className={`font-semibold text-white transition-[margin] duration-500 [@media(hover:hover)_and_(pointer:fine)]:group-hover:mb-[30px] ${
               isLarge
@@ -179,6 +185,8 @@ type FeaturedProjectsGridProps = {
   showAdditionalGrid?: boolean;
   priorityFirst?: boolean;
   emptyMessage?: string;
+  /** Max number of projects to render (default 6) */
+  limit?: number;
 };
 
 export function FeaturedProjectsGrid({
@@ -186,6 +194,7 @@ export function FeaturedProjectsGrid({
   showAdditionalGrid = false,
   priorityFirst = false,
   emptyMessage = "No projects found in this category.",
+  limit = 6,
 }: FeaturedProjectsGridProps) {
   if (projects.length === 0) {
     return (
@@ -195,8 +204,9 @@ export function FeaturedProjectsGrid({
     );
   }
 
-  const featured = projects.slice(0, 3);
-  const additional = showAdditionalGrid ? projects.slice(3) : [];
+  const visibleProjects = projects.slice(0, limit);
+  const featured = visibleProjects.slice(0, 3);
+  const additional = showAdditionalGrid ? visibleProjects.slice(3) : [];
 
   return (
     <div className="flex w-full min-w-0 flex-col gap-4 lg:gap-[18px] 2xl:gap-[30px]">

@@ -15,6 +15,10 @@ import {
   logoImage,
 } from "@/mockData/landing";
 
+/** Shared 3-column track: tablet equal cols (Figma 290px), desktop 242px gaps. */
+const columnsClass =
+  "grid grid-cols-3 items-start gap-0 xl:gap-[242px]";
+
 function SocialLinks() {
   return (
     <div className="flex items-center gap-4">
@@ -25,7 +29,7 @@ function SocialLinks() {
           aria-label={link.alt}
           target={link.href.startsWith("http") ? "_blank" : undefined}
           rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="flex h-[30px] w-[30px] shrink-0 items-center justify-center transition-opacity hover:opacity-70 2xl:h-10 2xl:w-10"
+          className="flex h-[30px] w-[30px] shrink-0 items-center justify-center transition-opacity hover:opacity-70 xl:h-10 xl:w-10"
         >
           <Image
             src={link.src}
@@ -42,8 +46,8 @@ function SocialLinks() {
 
 function QuickLinksColumn() {
   return (
-    <div className="flex min-w-0 w-full flex-col gap-6">
-      <h3 className="text-[13px] font-bold leading-4 text-white 2xl:text-lg 2xl:leading-[23px]">
+    <div className="flex min-w-0 flex-col gap-6">
+      <h3 className="text-[13px] font-bold leading-4 text-white xl:text-lg xl:leading-[23px]">
         Quick Links
       </h3>
       <ul className="flex flex-col gap-3">
@@ -51,7 +55,7 @@ function QuickLinksColumn() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="block text-[13px] leading-6 capitalize text-white transition-opacity hover:opacity-80 2xl:text-base 2xl:leading-6"
+              className="block text-[13px] leading-6 capitalize text-white transition-opacity hover:opacity-80 xl:text-base"
             >
               {link.label}
             </Link>
@@ -64,8 +68,8 @@ function QuickLinksColumn() {
 
 function ServicesColumn() {
   return (
-    <div className="flex min-w-0 w-full flex-col gap-6">
-      <h3 className="text-[13px] font-bold leading-4 text-white 2xl:text-lg 2xl:leading-[23px]">
+    <div className="flex min-w-0 flex-col gap-6">
+      <h3 className="text-[13px] font-bold leading-4 text-white xl:text-lg xl:leading-[23px]">
         Services
       </h3>
       <ul className="flex flex-col gap-3">
@@ -73,7 +77,7 @@ function ServicesColumn() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="block text-[13px] leading-6 text-white transition-opacity hover:opacity-80 2xl:text-base 2xl:leading-6"
+              className="block text-[13px] leading-6 text-white transition-opacity hover:opacity-80 xl:text-base"
             >
               {link.label}
             </Link>
@@ -92,11 +96,11 @@ function BrandBlock() {
         alt="ZAMR Engineering"
         width={121}
         height={37}
-        className="h-[36.88px] w-[121px] object-contain object-left"
+        className="h-[37px] w-auto object-contain object-left"
         priority
       />
-      <div className="flex w-full flex-col items-start gap-4 lg:gap-[9.48px] 2xl:gap-4">
-        <p className="w-full text-sm leading-[150%] text-white opacity-70 lg:max-w-[197.93px] lg:text-[13px] lg:leading-6 lg:opacity-100 2xl:max-w-[334px] 2xl:text-base 2xl:leading-[29px]">
+      <div className="flex w-full flex-col items-start gap-4">
+        <p className="w-full max-w-[334px] text-sm leading-[22px] text-white lg:text-[13px] lg:leading-5 xl:text-base xl:leading-[29px]">
           {footerDescription}
         </p>
         <SocialLinks />
@@ -105,13 +109,7 @@ function BrandBlock() {
   );
 }
 
-function MetaItem({
-  item,
-  stacked,
-}: {
-  item: (typeof footerMetaItems)[number];
-  stacked?: boolean;
-}) {
+function MetaItem({ item }: { item: (typeof footerMetaItems)[number] }) {
   const content = (
     <>
       <Image
@@ -119,29 +117,20 @@ function MetaItem({
         alt={item.alt}
         width={20}
         height={20}
+        className="mt-0.5 h-5 w-5 shrink-0 lg:mt-0 lg:h-3 lg:w-3 xl:h-5 xl:w-5"
       />
-      <span
-        className={
-          stacked
-            ? "min-w-0 flex-1 text-sm leading-[18px] text-white"
-            : "min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px] items-center"
-        }
-      >
+      <span className="min-w-0 flex-1 text-sm leading-[18px] text-white lg:text-xs lg:leading-[15px] xl:text-base xl:leading-[26px]">
         {item.value}
       </span>
     </>
   );
 
-  const className = stacked
-    ? ` flex w-full flex-row gap-3 items-center `
-    : `flex min-w-0 w-full flex-row gap-[6px] items-center`;
+  const className =
+    "flex min-w-0 items-start gap-3 lg:items-center lg:gap-1.5 xl:gap-3";
 
   if (item.href) {
     return (
-      <a
-        href={item.href}
-        className={`${className} transition-opacity hover:opacity-80`}
-      >
+      <a href={item.href} className={`${className} transition-opacity hover:opacity-80`}>
         {content}
       </a>
     );
@@ -150,30 +139,55 @@ function MetaItem({
   return <div className={className}>{content}</div>;
 }
 
-function LegalRow() {
+function ContactColumns() {
+  const phone = footerMetaItems.find((item) => item.type === "phone");
+  const email = footerMetaItems.find((item) => item.type === "email");
+  const locations = footerMetaItems.filter((item) => item.type === "location");
+
   return (
-    <div className="flex w-full flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
-      <p className="text-xs leading-[150%] text-white opacity-60 lg:text-[13px] lg:leading-4 lg:opacity-100 2xl:text-base 2xl:leading-5">
-        {footerCopyright}
-      </p>
-      <div className="flex flex-row items-center gap-4 lg:gap-3 2xl:gap-5">
-        {footerLegalLinks.map((link) => (
-          <Link
-            key={link.label}
-            href={link.href}
-            className="text-xs leading-[150%] text-white opacity-60 transition-opacity hover:opacity-100 lg:text-right lg:text-[13px] lg:leading-4 lg:opacity-100 2xl:text-base 2xl:leading-5"
-          >
-            {link.label}
-          </Link>
-        ))}
+    <>
+      <div className="flex min-w-0 flex-col gap-3 lg:gap-3 xl:gap-3">
+        {phone && <MetaItem item={phone} />}
+        {email && <MetaItem item={email} />}
       </div>
+      {locations.map((item, index) => (
+        <MetaItem key={`${item.type}-${index}`} item={item} />
+      ))}
+    </>
+  );
+}
+
+function LegalLinks({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex flex-row items-center gap-4 lg:gap-2.5 xl:gap-10 ${className}`}>
+      {footerLegalLinks.map((link) => (
+        <Link
+          key={link.label}
+          href={link.href}
+          className="text-xs leading-[18px] text-white/60 transition-opacity hover:opacity-100 lg:text-[13px] lg:leading-4 lg:text-white xl:text-base xl:font-light xl:leading-5"
+        >
+          {link.label}
+        </Link>
+      ))}
     </div>
   );
 }
 
-export default function Footer() {
+function Divider({ soft = false }: { soft?: boolean }) {
   return (
-    <footer className="relative max-w-full overflow-hidden bg-[var(--bg-hero)] text-white">
+    <div
+      className={`h-px w-full ${soft ? "bg-white/10" : "bg-white"}`}
+    />
+  );
+}
+
+export default function Footer() {
+  const phone = footerMetaItems.find((item) => item.type === "phone");
+  const email = footerMetaItems.find((item) => item.type === "email");
+  const locations = footerMetaItems.filter((item) => item.type === "location");
+
+  return (
+    <footer className="relative w-full overflow-hidden bg-[var(--bg-hero)] text-white">
       <video
         autoPlay
         loop
@@ -184,45 +198,53 @@ export default function Footer() {
         <source src={footerVideoSrc} type="video/mp4" />
       </video>
 
-      <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-hero)] lg:bg-[var(--overlay-image-default)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-      <div className="relative z-10 w-full px-5 py-[30px] lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]">
-        {/* Mobile */}
-        <div className="flex w-full flex-col gap-5 lg:hidden">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1728px] flex-col px-5 py-[30px] lg:px-[77px] lg:py-20 xl:px-[130px] xl:py-[130px]">
+        {/* —— Mobile (< lg) —— */}
+        <div className="flex flex-col gap-5 lg:hidden">
           <BrandBlock />
-          <div className="h-px w-full bg-white opacity-10" />
-          <div className="flex w-full flex-row justify-between gap-7">
+          <Divider soft />
+          <div className="grid grid-cols-2 justify-between gap-0">
             <QuickLinksColumn />
             <ServicesColumn />
           </div>
-          <div className="h-px w-full bg-white opacity-10" />
-          <div className="flex w-full flex-col items-start gap-5">
-            {footerMetaItems.map((item, i) => (
-              <MetaItem key={`${item.type}-${i}`} item={item} stacked />
+          <Divider soft />
+          <div className="flex flex-col gap-5">
+            {phone && <MetaItem item={phone} />}
+            {email && <MetaItem item={email} />}
+            {locations.map((item, index) => (
+              <MetaItem key={`${item.type}-${index}`} item={item} />
             ))}
           </div>
-          <div className="h-px w-full bg-white opacity-10" />
-          <LegalRow />
+          <Divider soft />
+          <div className="flex flex-col items-start gap-4">
+            <p className="text-xs leading-[18px] text-white/60">{footerCopyright}</p>
+            <LegalLinks />
+          </div>
         </div>
 
-        {/* Tablet + Desktop — shared 4-col grid keeps Quick Links↔location1 and Services↔location2 aligned */}
-        <div className="hidden w-full grid-cols-4 gap-x-6 gap-y-[17.78px] lg:grid 2xl:gap-x-12 2xl:gap-y-[30px]">
-          <div className="col-span-2">
+        {/* —— Tablet + Desktop (lg+) —— */}
+        <div className="hidden flex-col gap-6 lg:flex">
+          <div className={columnsClass}>
             <BrandBlock />
+            <QuickLinksColumn />
+            <ServicesColumn />
           </div>
-          <QuickLinksColumn />
-          <ServicesColumn />
 
-          <div className="col-span-4 h-px w-full bg-white opacity-100" />
+          <Divider />
 
-          {footerMetaItems.map((item, i) => (
-            <MetaItem key={`${item.type}-${i}`} item={item} />
-          ))}
+          <div className={`${columnsClass} items-center`}>
+            <ContactColumns />
+          </div>
 
-          <div className="col-span-4 h-px w-full bg-white opacity-100" />
+          <Divider />
 
-          <div className="col-span-4">
-            <LegalRow />
+          <div className={`${columnsClass} items-center`}>
+            <p className="col-span-2 text-[13px] leading-4 text-white xl:text-base xl:font-light xl:leading-5">
+              {footerCopyright}
+            </p>
+            <LegalLinks className="justify-start" />
           </div>
         </div>
       </div>

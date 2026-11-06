@@ -5,11 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import {
-  projectFilters,
   clientLogos,
-  projectsFeaturedWork,
   projectsSection,
 } from "@/mockData/landing";
+import {
+  projects,
+  projectFilters,
+  projectFilterCategoryMap,
+} from "@/mockData/projects";
 import {
   FeaturedProjectsGrid,
   ProjectFilterPills,
@@ -18,16 +21,14 @@ import {
 
 const LOGO_ITEM_WIDTH = 157;
 
-function toFeaturedItems(
-  items: typeof projectsFeaturedWork,
-): FeaturedProjectItem[] {
-  return items.map((p) => ({
+function toFeaturedItems(items: typeof projects): FeaturedProjectItem[] {
+  return items.map((p, idx) => ({
     slug: p.slug,
-    index: p.index,
+    index: String(idx + 1).padStart(2, "0"),
     title: p.title,
     category: p.category,
     shortDescription: p.shortDescription,
-    image: p.featuredImage,
+    image: p.heroImage,
   }));
 }
 
@@ -54,12 +55,36 @@ export default function Projects() {
   const logosContainerRef = useRef<HTMLDivElement>(null);
   const [repeatCount, setRepeatCount] = useState(1);
 
-  const filteredProjects =
-    activeFilter === "All"
-      ? projectsFeaturedWork
-      : projectsFeaturedWork.filter(
-          (p) => p.category.toLowerCase() === activeFilter.toLowerCase(),
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === "All") {
+      // One project per category so the featured grid shows variety
+      const diverse: typeof projects = [];
+      for (const filter of projectFilters) {
+        if (filter === "All") continue;
+        const categories = projectFilterCategoryMap[filter.toLowerCase()];
+        const match = projects.find(
+          (p) =>
+            categories?.some(
+              (c) => c.toLowerCase() === p.category.toLowerCase(),
+            ) && !diverse.some((d) => d.slug === p.slug),
         );
+        if (match) diverse.push(match);
+      }
+      return diverse;
+    }
+
+    return projects.filter((p) => {
+      const categories =
+        projectFilterCategoryMap[activeFilter.toLowerCase()];
+      return categories?.some(
+        (c) => c.toLowerCase() === p.category.toLowerCase(),
+      );
+    });
+  }, [activeFilter]);
+
+  const handleFilterChange = (filter: string) => {
+    setActiveFilter(filter);
+  };
 
   const filteredLogos = useMemo(() => {
     if (activeFilter === "All") {
@@ -128,11 +153,11 @@ export default function Projects() {
         <ProjectFilterPills
           filters={projectFilters}
           activeFilter={activeFilter}
-          onFilterChange={setActiveFilter}
+          onFilterChange={handleFilterChange}
         />
 
         <FeaturedProjectsGrid
-                  projects={toFeaturedItems(projectsFeaturedWork)}
+          projects={toFeaturedItems(filteredProjects)}
           priorityFirst
         />
 

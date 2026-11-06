@@ -17,52 +17,43 @@ export default function Results({
   achievements,
 }: Props) {
   return (
-    <section className="w-full bg-white px-6 py-16 lg:p-[130px]">
-      {/* Frame 1321319072 — inner wrapper (gap: 60px) */}
-      <div className="flex flex-col gap-10 lg:gap-[60px]">
-        {/* Frame 120 — header (gap: 30px) */}
-        <div className="flex flex-col gap-6 lg:gap-[30px]">
-          {/* Frame 118 — section label */}
-          {/* Figma: "03" / 104px line / "OUTCOMES", 16px/500/20px, gap:16px */}
-          <div className="flex flex-row items-center gap-4">
-            <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
+    <section className="w-full bg-white px-5 py-5 lg:px-[77px] lg:py-[77px] 2xl:px-[130px] 2xl:py-[130px]">
+      <div className="mx-auto flex w-full max-w-[1468px] flex-col gap-8 lg:gap-9 2xl:gap-[60px]">
+        <div className="flex flex-col gap-4 2xl:gap-[30px]">
+          <div className="flex flex-row items-center gap-3 lg:gap-[9px] 2xl:gap-4">
+            <span className="text-[14px] font-medium leading-[18px] text-[var(--color-primary)] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
               {number}
             </span>
-            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
-            <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+            <span className="h-px w-10 bg-[var(--color-primary)] lg:w-[104px] lg:bg-[var(--text-dark)]" />
+            <span className="text-[13px] font-semibold uppercase leading-4 text-[var(--text-dark)] lg:font-medium lg:tracking-[1.78px] 2xl:text-base 2xl:leading-5 2xl:tracking-[3px]">
               OUTCOMES
             </span>
           </div>
 
-          {/* Figma: 56px/700/71px, #333333 */}
-          <h2 className="text-[var(--text-dark)] text-[36px] font-bold leading-[44px] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
+          <h2 className="text-[28px] font-semibold leading-[35px] text-[var(--text-dark)] lg:text-[26px] lg:font-bold lg:leading-[33px] 2xl:text-[44px] 2xl:leading-[55px]">
             {heading}
           </h2>
         </div>
 
-        {/* Frame 1321319071 — content area (gap: 41px) */}
-        <div className="flex flex-col gap-8 lg:gap-[41px]">
-          {/* Frame 1321319069 — metric cards row */}
-          {/* Figma: flex row, 4 equal columns, 367×139px each, padding:30px */}
-          <div className="grid grid-cols-2 gap-0 lg:grid-cols-4">
+        <div className="flex flex-col gap-4 lg:gap-6 2xl:gap-[41px]">
+          <div className="flex flex-col gap-4 lg:grid lg:grid-cols-4 lg:gap-0">
             {metrics.map((metric, i) => {
-              const isLightBg = i % 2 === 1; // alternate: white, bg-light, white, bg-light
+              const isAlt = i % 2 === 1;
               return (
                 <div
                   key={metric.label}
-                  className="flex flex-col justify-start px-6 py-8 lg:px-[30px] lg:py-[30px] min-h-[100px] lg:min-h-[139px]"
+                  className="flex min-h-[101px] flex-col justify-center border px-5 py-5 lg:min-h-[100px] lg:border-0 lg:px-4 lg:py-4 2xl:min-h-[139px] 2xl:px-[30px] 2xl:py-[30px]"
                   style={{
-                    background: isLightBg ? "var(--bg-light)" : "white",
-                    borderTop: "1px solid color-mix(in srgb, var(--color-blue-header) 10%, transparent)",
-                    borderRight: i < 3 ? "1px solid color-mix(in srgb, var(--color-blue-header) 10%, transparent)" : "none",
+                    background: isAlt ? "var(--bg-section)" : "white",
+                    borderColor: "color-mix(in srgb, var(--color-primary) 18%, transparent)",
+                    boxShadow:
+                      "inset 0 0 0 1px color-mix(in srgb, var(--color-primary) 10%, transparent)",
                   }}
                 >
-                  {/* Figma: Outfit 500, 44px/55px, #22419E (--color-blue-header) */}
-                  <span className="text-[32px] font-medium leading-[40px] text-[var(--color-blue-header)] sm:text-[38px] sm:leading-[48px] lg:text-[44px] lg:leading-[55px]">
+                  <span className="text-[36px] font-bold leading-[45px] text-[var(--color-primary)] lg:text-[26px] lg:font-medium lg:leading-8 2xl:text-[44px] 2xl:leading-[55px]">
                     {metric.value}
                   </span>
-                  {/* Figma: Outfit 500, 14px/18px, #9AA3B0 (--color-text-label), padding-top:8px */}
-                  <span className="pt-2 text-xs font-medium leading-[15px] text-[var(--color-text-label)] sm:text-sm lg:text-[14px] lg:leading-[18px]">
+                  <span className="pt-2 text-[14px] font-medium leading-[18px] text-[var(--color-text-label)]">
                     {metric.label}
                   </span>
                 </div>
@@ -70,22 +61,19 @@ export default function Results({
             })}
           </div>
 
-          {/* Frame 1321319070 — achievements (2-column grid) */}
-          {/* Figma: 2 columns, each item has red diamond + text, border-bottom */}
           {achievements.length > 0 && (
-            <div className="grid grid-cols-1 gap-0 lg:grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
               {achievements.map((item, i) => (
                 <div
                   key={i}
-                  className="flex flex-row items-start gap-4 px-0 py-4 lg:gap-[16px] lg:px-0 lg:py-[16px]"
+                  className="flex flex-row items-start gap-4 py-4"
                   style={{
-                    borderBottom: "1px solid color-mix(in srgb, var(--color-blue-header) 8%, transparent)",
+                    borderBottom:
+                      "1px solid color-mix(in srgb, var(--color-primary) 8%, transparent)",
                   }}
                 >
-                  {/* Red diamond: 6×6px, rotated 45deg, #CE1A00 → var(--color-secondary) */}
-                  <span className="mt-[9px] flex h-[6px] w-[6px] shrink-0 rotate-45 bg-[var(--color-secondary)] lg:mt-[9px]" />
-                  {/* Figma: 14.5px/24px, #344153 (--text-paragraph) */}
-                  <span className="text-[14px] leading-[22px] text-[var(--text-paragraph)] sm:text-[14.5px] sm:leading-[24px]">
+                  <span className="mt-[9px] flex h-[6px] w-[6px] shrink-0 rotate-45 bg-[var(--color-secondary)]" />
+                  <span className="text-[14.5px] leading-6 text-[var(--text-paragraph)]">
                     {item}
                   </span>
                 </div>
