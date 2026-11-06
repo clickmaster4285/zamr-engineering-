@@ -42,11 +42,11 @@ function SocialLinks() {
 
 function QuickLinksColumn() {
   return (
-    <div className="flex min-w-0 w-full flex-col gap-6">
+    <div className="flex min-w-0 w-full flex-col gap-4 2xl:gap-6">
       <h3 className="text-[13px] font-bold leading-4 text-white 2xl:text-lg 2xl:leading-[23px]">
         Quick Links
       </h3>
-      <ul className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-[2px] 2xl:gap-3">
         {footerQuickLinks.map((link) => (
           <li key={link.href}>
             <Link
@@ -64,11 +64,11 @@ function QuickLinksColumn() {
 
 function ServicesColumn() {
   return (
-    <div className="flex min-w-0 w-full flex-col gap-6">
+    <div className="flex min-w-0 w-full flex-col gap-4 2xl:gap-6">
       <h3 className="text-[13px] font-bold leading-4 text-white 2xl:text-lg 2xl:leading-[23px]">
         Services
       </h3>
-      <ul className="flex flex-col gap-3">
+      <ul className="flex flex-col gap-[2px] 2xl:gap-3">
         {footerServiceLinks.map((link) => (
           <li key={link.href}>
             <Link
@@ -92,7 +92,7 @@ function BrandBlock() {
         alt="ZAMR Engineering"
         width={121}
         height={37}
-        className="h-[36.88px] w-[121px] object-contain object-left"
+        className="h-[36.88px] w-[121px] object-contain object-left lg:h-[27px] lg:w-[89px] 2xl:h-[36.88px] 2xl:w-[121px]"
         priority
       />
       <div className="flex w-full flex-col items-start gap-4 lg:gap-[9.48px] 2xl:gap-4">
@@ -119,12 +119,13 @@ function MetaItem({
         alt={item.alt}
         width={20}
         height={20}
+        className="h-5 w-5 shrink-0 lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"
       />
       <span
         className={
           stacked
             ? "min-w-0 flex-1 text-sm leading-[18px] text-white"
-            : "min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px] items-center"
+            : `min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px] items-center ${item.type === "location" ? item.value.startsWith("30 Smith") ? "max-w-[220px] 2xl:max-w-[270px]" : "max-w-[220px] 2xl:max-w-[334px]" : ""}`
         }
       >
         {item.value}
@@ -133,8 +134,8 @@ function MetaItem({
   );
 
   const className = stacked
-    ? ` flex w-full flex-row gap-3 items-center `
-    : `flex min-w-0 w-full flex-row gap-[6px] items-center`;
+    ? ` flex w-full flex-row gap-4 items-center `
+    : `flex min-w-0 w-full flex-row gap-[10px] items-center lg:gap-4`;
 
   if (item.href) {
     return (
@@ -148,6 +149,24 @@ function MetaItem({
   }
 
   return <div className={className}>{content}</div>;
+}
+
+function ContactDetails() {
+  const phone = footerMetaItems.find((item) => item.type === "phone");
+  const email = footerMetaItems.find((item) => item.type === "email");
+  const locations = footerMetaItems.filter((item) => item.type === "location");
+
+  return (
+    <div className="col-span-3 -mx-[5vw] grid w-[calc(100%+10vw)] grid-cols-[38.2%_37.8%_24%] items-center gap-x-0">
+      <div className="flex min-w-0 flex-col gap-5">
+        {phone && <MetaItem item={phone} />}
+        {email && <MetaItem item={email} />}
+      </div>
+      {locations.map((item, index) => (
+        <MetaItem key={`${item.type}-${index}`} item={item} />
+      ))}
+    </div>
+  );
 }
 
 function LegalRow() {
@@ -186,7 +205,7 @@ export default function Footer() {
 
       <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-hero)] lg:bg-[var(--overlay-image-default)]" />
 
-      <div className="relative z-10 w-full px-5 py-[30px] lg:px-[77.037px] lg:py-[77.037px] 2xl:p-[130px]">
+      <div className="relative z-10 w-full py-[30px] pl-[23.55vw] pr-0 lg:px-[7.55vw] lg:py-[7.55vw] 2xl:px-[7.22vw] 2xl:py-[7.22vw]">
         {/* Mobile */}
         <div className="flex w-full flex-col gap-5 lg:hidden">
           <BrandBlock />
@@ -205,23 +224,21 @@ export default function Footer() {
           <LegalRow />
         </div>
 
-        {/* Tablet + Desktop — shared 4-col grid keeps Quick Links↔location1 and Services↔location2 aligned */}
-        <div className="hidden w-full grid-cols-4 gap-x-6 gap-y-[17.78px] lg:grid 2xl:gap-x-12 2xl:gap-y-[30px]">
-          <div className="col-span-2">
+        {/* Tablet + Desktop */}
+        <div className="hidden w-full grid-cols-[38.8%_38.8%_22.4%] gap-x-0 gap-y-[14px] lg:grid 2xl:gap-y-[30px]">
+          <div>
             <BrandBlock />
           </div>
           <QuickLinksColumn />
           <ServicesColumn />
 
-          <div className="col-span-4 h-px w-full bg-white opacity-100" />
+          <div className="relative col-span-3 -mx-[5vw] h-px w-[calc(100%+10vw)] bg-white opacity-70" />
 
-          {footerMetaItems.map((item, i) => (
-            <MetaItem key={`${item.type}-${i}`} item={item} />
-          ))}
+          <ContactDetails />
 
-          <div className="col-span-4 h-px w-full bg-white opacity-100" />
+          <div className="relative col-span-3 -mx-[5vw] h-px w-[calc(100%+10vw)] bg-white opacity-70" />
 
-          <div className="col-span-4">
+          <div className="col-span-3">
             <LegalRow />
           </div>
         </div>
