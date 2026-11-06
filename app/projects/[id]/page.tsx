@@ -27,6 +27,8 @@ export default function ProjectDetailPage() {
         image={project.heroImage}
         title={project.heroTitle}
         subtitle={project.shortDescription}
+        category={project.category}
+        stats={project.stats}
       />
 
       <Challenge

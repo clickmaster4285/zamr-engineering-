@@ -1,168 +1,156 @@
 "use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import { Barlow } from "next/font/google";
 import { defaultHeroImage } from "@/mockData/projects";
+
 const barlow = Barlow({
   weight: ["600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
+
+interface Stat {
+  label: string;
+  value: string;
+}
+
 interface Props {
   image?: string;
   title: string;
   subtitle: string;
+  category?: string;
+  stats?: Stat[];
 }
-export default function ProjectHero({ image = defaultHeroImage, title, subtitle }: Props) {
-  const stats = [
-    {
-      label: "Client",
-      value: "Transport for NSW",
-    },
-    {
-      label: "Value",
-      value: "$45 Million",
-    },
-    {
-      label: "Duration",
-      value: "March 2022–March 2025",
-    },
-    {
-      label: "Location",
-      value: "Bathurst, NSW",
-    },
-    {
-      label: "Scope",
-      value: "Civil Works",
-    },
-  ];
+
+const clientLogos: Record<string, string> = {
+  "transport for nsw": "/images/image15.png",
+};
+
+export default function ProjectHero({
+  image = defaultHeroImage,
+  title,
+  subtitle,
+  category,
+  stats = [],
+}: Props) {
+  const visibleStats = stats.filter(
+    (stat) => stat.label.toLowerCase() !== "status" && stat.value.trim() !== "",
+  );
+  const client = visibleStats.find((stat) => stat.label.toLowerCase() === "client");
+  const otherStats = visibleStats.filter((stat) => stat.label.toLowerCase() !== "client");
+  const clientLogo = client
+    ? clientLogos[client.value.trim().toLowerCase()]
+    : undefined;
 
   return (
     <section className="relative w-full">
-      {/* Figma: 1728 × 700px hero with overlay rgba(7, 24, 61, 0.8) */}
-      <div className="relative w-full min-h-[500px] sm:min-h-[560px] lg:h-[700px] overflow-hidden flex flex-col">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          priority
-          className="object-cover"
-        />
-        {/* Overlay */}
+      <div className="relative flex min-h-[866px] w-full flex-col overflow-hidden lg:min-h-[600px] 2xl:min-h-[732px]">
+        <Image src={image} alt={title} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-        {/* Mobile/tablet: normal flow flex column so title + stats never overlap.
-            Desktop (lg+): switches back to the exact Figma absolute positions. */}
-        <div className="relative z-10 flex flex-col flex-1 lg:block">
-          {/* Title + subtitle */}
-          <div
-            className="flex-1 flex flex-col justify-center gap-5 px-6 py-14 sm:px-10
-                       lg:absolute lg:flex-none lg:justify-start lg:gap-5 lg:py-0
-                       lg:left-[130px] lg:top-[261px] lg:w-[1200px] lg:px-0"
-          >
-            <h1 className="font-bold text-white
-                           text-[32px] leading-[40px]
-                           sm:text-[48px] sm:leading-[60px]
-                           lg:text-[80px] lg:leading-[101px]">
-              {title}
-            </h1>
-            <p className="font-medium text-[var(--color-text-light-subtle)]
-                          text-[14px] leading-[19px]
-                          sm:text-[16px] sm:leading-[22px]
-                          lg:text-[18px] lg:leading-[23px]">
-              {subtitle}
-            </p>
+        <div className="relative z-10 mx-auto flex w-full max-w-[1728px] flex-1 flex-col px-5 pb-5 pt-[165px] lg:px-[77px] lg:pb-8 lg:pt-[226px] 2xl:px-[130px] 2xl:pb-[49px] 2xl:pt-[246px]">
+          <div className="flex items-center gap-3.5 text-[var(--text-light-subtle)]">
+            <Link
+              href="/projects"
+              className="font-normal text-[12px] leading-[15px] tracking-[2px] lg:text-[14px] lg:leading-[18px] lg:tracking-[3px] 2xl:text-[18px] 2xl:leading-[23px]"
+            >
+              ALL PROJECTS
+            </Link>
+            <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-white/85" />
+            {category && (
+              <span className="font-normal text-[12px] uppercase leading-[15px] tracking-[2px] lg:text-[14px] lg:leading-[18px] lg:tracking-[3px] 2xl:text-[18px] 2xl:leading-[23px]">
+                {category}
+              </span>
+            )}
           </div>
 
-          {stats && (
-            <div
-              className="
-      bg-[var(--bg-project-detail-stats)]
-      lg:absolute lg:left-[130px] lg:top-[536px]
-      lg:w-[82vw]
-    "
-            >
-              {/* Desktop */}
-              <div className="hidden min-h-[147px] lg:flex">
-                {/* Client logo */}
-                <div className="flex w-[294px] flex-col justify-center px-5 ">
-                  <span
-                    className={`${barlow.className} mb-2 text-[12px] font-semibold leading-[14px] text-white/30`}
+          <div className="mt-4 flex max-w-[1174px] flex-col gap-4 2xl:mt-[30px]">
+            <h1 className="font-bold text-white text-[36px] leading-[41px] lg:text-[47px] lg:leading-[60px] 2xl:text-[80px] 2xl:leading-[101px]">
+              {title}
+            </h1>
+            {subtitle && (
+              <p className="font-medium text-[var(--text-light-subtle)] text-[16px] leading-5 lg:hidden">
+                {subtitle}
+              </p>
+            )}
+          </div>
+
+          {visibleStats.length > 0 && (
+            <div className="mt-auto bg-[var(--bg-project-detail-stats)]">
+              <div className="flex flex-col lg:hidden">
+                {client && (
+                  <div className="flex flex-col gap-3 border-b border-white/10 px-5 py-5">
+                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
+                      {client.label.toUpperCase()}
+                    </span>
+                    {clientLogo ? (
+                      <Image
+                        src={clientLogo}
+                        alt={client.value}
+                        width={150}
+                        height={57}
+                        className="h-[57px] w-[150px] object-contain object-left"
+                      />
+                    ) : (
+                      <span className={`${barlow.className} text-[18px] font-bold leading-[22px] text-white/[0.82]`}>
+                        {client.value}
+                      </span>
+                    )}
+                  </div>
+                )}
+                {otherStats.map((stat, index) => (
+                  <div
+                    key={stat.label}
+                    className={`flex min-h-[82px] flex-col justify-center gap-1.5 px-5 py-5 ${
+                      index < otherStats.length - 1 ? "border-b border-white/10" : ""
+                    }`}
                   >
-                    CLIENT
-                  </span>
-
-                  <Image
-                    src="/images/image15.png"
-                    alt="Transport for NSW"
-                    width={210}
-                    height={80}
-                    className="h-auto max-h-[80px] w-auto object-contain object-left"
-                  />
-                </div>
-
-                {/* Other statistics */}
-                {stats
-                  .filter((stat) => stat.label.toLowerCase() !== "client")
-                  .map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="flex flex-1 flex-col justify-center  px-5 my-7.25 border-l border-white/[0.07] "
-                    >
-                      <span
-                        className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}
-                      >
-                        {stat.label}
-                      </span>
-                      <span
-                        className={`${barlow.className} pt-[7px] text-[14px] font-bold leading-[17px] text-white/80`}
-                      >
-                        {stat.value}
-                      </span>
-                    </div>
-                  ))}
+                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
+                      {stat.label.toUpperCase()}
+                    </span>
+                    <span className={`${barlow.className} text-[18px] font-bold leading-[22px] text-white/[0.82]`}>
+                      {stat.value}
+                    </span>
+                  </div>
+                ))}
               </div>
 
-              {/* Mobile and tablet */}
-              <div className="grid grid-cols-3 lg:hidden">
-                {/* Client logo */}
-                <div className="col-span-3 flex min-h-[90px] flex-col justify-center px-4 py-4">
-                  <span
-                    className={`${barlow.className} mb-2 text-[10px] font-semibold leading-[12px] text-white/30`}
+              <div className="hidden h-[147px] items-stretch lg:flex">
+                {client && (
+                  <div className="flex h-full w-[266px] shrink-0 flex-col justify-center gap-1.5 px-5 py-6 2xl:w-auto 2xl:min-w-0 2xl:flex-1 2xl:shrink">
+                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
+                      {client.label.toUpperCase()}
+                    </span>
+                    {clientLogo ? (
+                      <Image
+                        src={clientLogo}
+                        alt={client.value}
+                        width={207}
+                        height={79}
+                        className="h-[79px] w-[207px] max-w-full object-contain object-left"
+                      />
+                    ) : (
+                      <span className={`${barlow.className} text-[14px] font-bold leading-[17px] text-white/[0.82]`}>
+                        {client.value}
+                      </span>
+                    )}
+                  </div>
+                )}
+                {otherStats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex h-full min-w-0 flex-1 flex-col justify-center gap-[7px] border-l border-white/[0.07] px-5 py-6"
                   >
-                    CLIENT
-                  </span>
-
-                  <Image
-                    src="/images/image15.png"
-                    alt="Transport for NSW"
-                    width={207}
-                    height={79}
-                    className="h-auto max-h-[68px] w-auto object-contain object-left"
-                  />
-                </div>
-
-                {/* Other statistics */}
-                {stats
-                  .filter((stat) => stat.label.toLowerCase() !== "client")
-                  .map((stat, i) => (
-                    <div
-                      key={stat.label}
-                      className={`flex min-h-[76px] flex-col justify-center px-3 py-4 ${i % 3 !== 0 ? "border-l border-white/[0.07]" : ""
-                        } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
-                    >
-                      <span
-                        className={`${barlow.className} text-[10px] font-semibold leading-[12px] text-white/30`}
-                      >
-                        {stat.label}
-                      </span>
-
-                      <span
-                        className={`${barlow.className} pt-1 text-[12px] font-bold leading-[15px] text-white/80`}
-                      >
-                        {stat.value}
-                      </span>
-                    </div>
-                  ))}
+                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
+                      {stat.label.toUpperCase()}
+                    </span>
+                    <span className={`${barlow.className} text-[14px] font-bold leading-[17px] text-white/[0.82]`}>
+                      {stat.value}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           )}

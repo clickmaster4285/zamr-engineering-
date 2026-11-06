@@ -12,20 +12,20 @@ interface Props {
 
 export default function Approach({ number, heading, steps }: Props) {
   return (
-    <section className="w-full bg-[var(--bg-hero)] px-6 py-16 text-white lg:p-[130px]">
-      <div className="flex flex-col gap-[60px]">
-        <div className="flex flex-col gap-7">
+    <section className="w-full bg-[var(--bg-hero)] px-5 py-14 text-white sm:px-8 md:px-10 md:py-16 xl:px-[130px] xl:py-[130px]">
+      <div className="mx-auto flex w-full max-w-[1468px] flex-col gap-10 md:gap-12 xl:gap-[60px]">
+        <div className="flex flex-col gap-6 md:gap-7">
           <div className="flex items-center gap-4">
-            <span className="text-[16px] font-medium leading-5 tracking-[3px] text-white">
+            <span className="text-sm font-medium leading-5 tracking-[3px] text-white md:text-[16px]">
               {number}
             </span>
-            <span className="h-px w-[104px] bg-white" />
-            <span className="text-[16px] font-medium leading-5 tracking-[3px] uppercase text-white">
+            <span className="h-px w-16 bg-white md:w-[104px]" />
+            <span className="text-sm font-medium leading-5 tracking-[3px] uppercase text-white md:text-[16px]">
               OUR APPROACH
             </span>
           </div>
 
-          <h2 className="text-[44px] font-bold leading-[55px] text-white">
+          <h2 className="max-w-[900px] text-[32px] font-bold leading-[40px] text-white sm:text-[36px] sm:leading-[44px] md:text-[40px] md:leading-[50px] xl:text-[44px] xl:leading-[55px]">
             {heading}
           </h2>
         </div>
@@ -34,15 +34,15 @@ export default function Approach({ number, heading, steps }: Props) {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex flex-col gap-3 border-b border-l border-white/8 p-6"
+              className="flex flex-col gap-3 border-b border-l border-white/10 p-5 sm:p-6"
             >
-              <span className="text-[40px] font-black leading-[50px] text-white/60">
+              <span className="text-[32px] font-black leading-[40px] text-white/60 md:text-[40px] md:leading-[50px]">
                 {step.number}
               </span>
-              <h3 className="text-[18px] font-semibold leading-[23px] text-white">
+              <h3 className="text-[16px] font-semibold leading-[22px] text-white md:text-[18px] md:leading-[23px]">
                 {step.title}
               </h3>
-              <p className="text-[12px] leading-[15px] text-[var(--color-text-light-subtle)]">
+              <p className="text-[13px] leading-[18px] text-[var(--color-text-light-subtle)] md:text-[12px] md:leading-[15px]">
                 {step.description}
               </p>
             </div>

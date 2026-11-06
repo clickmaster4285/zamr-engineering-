@@ -25,7 +25,7 @@ function SocialLinks() {
           aria-label={link.alt}
           target={link.href.startsWith("http") ? "_blank" : undefined}
           rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="flex h-[30px] w-[30px] shrink-0 items-center justify-center transition-opacity hover:opacity-70 2xl:h-10 2xl:w-10"
+          className="flex h-[30px] w-[30px] shrink-0 items-center justify-center transition-opacity hover:opacity-70 xl:h-10 xl:w-10"
         >
           <Image
             src={link.src}
@@ -42,16 +42,16 @@ function SocialLinks() {
 
 function QuickLinksColumn() {
   return (
-    <div className="flex min-w-0 w-full flex-col gap-4 2xl:gap-6">
-      <h3 className="text-[13px] font-bold leading-4 text-white 2xl:text-lg 2xl:leading-[23px]">
+    <div className="flex min-w-0 flex-col gap-4 xl:gap-6">
+      <h3 className="text-[13px] font-bold leading-4 text-white xl:text-lg xl:leading-[23px]">
         Quick Links
       </h3>
-      <ul className="flex flex-col gap-[2px] 2xl:gap-3">
+      <ul className="flex flex-col gap-1 xl:gap-3">
         {footerQuickLinks.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className="block text-[13px] leading-6 capitalize text-white transition-opacity hover:opacity-80 2xl:text-base 2xl:leading-6"
+              className="block text-[13px] leading-6 capitalize text-white transition-opacity hover:opacity-80 xl:text-base"
             >
               {link.label}
             </Link>
@@ -64,16 +64,16 @@ function QuickLinksColumn() {
 
 function ServicesColumn() {
   return (
-    <div className="flex min-w-0 w-full flex-col gap-4 2xl:gap-6">
-      <h3 className="text-[13px] font-bold leading-4 text-white 2xl:text-lg 2xl:leading-[23px]">
+    <div className="flex min-w-0 flex-col gap-4 xl:gap-6">
+      <h3 className="text-[13px] font-bold leading-4 text-white xl:text-lg xl:leading-[23px]">
         Services
       </h3>
-      <ul className="flex flex-col gap-[2px] 2xl:gap-3">
+      <ul className="flex flex-col gap-1 xl:gap-3">
         {footerServiceLinks.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className="block text-[13px] leading-6 text-white transition-opacity hover:opacity-80 2xl:text-base 2xl:leading-6"
+              className="block text-[13px] leading-6 text-white transition-opacity hover:opacity-80 xl:text-base"
             >
               {link.label}
             </Link>
@@ -92,11 +92,11 @@ function BrandBlock() {
         alt="ZAMR Engineering"
         width={121}
         height={37}
-        className="h-[36.88px] w-[121px] object-contain object-left lg:h-[27px] lg:w-[89px] 2xl:h-[36.88px] 2xl:w-[121px]"
+        className="h-[32px] w-auto object-contain object-left xl:h-[37px]"
         priority
       />
-      <div className="flex w-full flex-col items-start gap-4 lg:gap-[9.48px] 2xl:gap-4">
-        <p className="w-full text-sm leading-[150%] text-white opacity-70 lg:max-w-[197.93px] lg:text-[13px] lg:leading-6 lg:opacity-100 2xl:max-w-[334px] 2xl:text-base 2xl:leading-[29px]">
+      <div className="flex w-full flex-col items-start gap-4">
+        <p className="w-full max-w-[420px] text-sm leading-[22px] text-white/80 xl:max-w-[334px] xl:text-base xl:leading-[29px]">
           {footerDescription}
         </p>
         <SocialLinks />
@@ -105,13 +105,7 @@ function BrandBlock() {
   );
 }
 
-function MetaItem({
-  item,
-  stacked,
-}: {
-  item: (typeof footerMetaItems)[number];
-  stacked?: boolean;
-}) {
+function MetaItem({ item }: { item: (typeof footerMetaItems)[number] }) {
   const content = (
     <>
       <Image
@@ -119,30 +113,19 @@ function MetaItem({
         alt={item.alt}
         width={20}
         height={20}
-        className="h-5 w-5 shrink-0 lg:h-4 lg:w-4 2xl:h-5 2xl:w-5"
+        className="mt-0.5 h-4 w-4 shrink-0 xl:h-5 xl:w-5"
       />
-      <span
-        className={
-          stacked
-            ? "min-w-0 flex-1 text-sm leading-[18px] text-white"
-            : `min-w-0 flex-1 whitespace-pre-line text-xs leading-6 text-white 2xl:text-base 2xl:leading-[26px] items-center ${item.type === "location" ? item.value.startsWith("30 Smith") ? "max-w-[220px] 2xl:max-w-[270px]" : "max-w-[220px] 2xl:max-w-[334px]" : ""}`
-        }
-      >
+      <span className="min-w-0 flex-1 text-[13px] leading-5 text-white xl:text-base xl:leading-[26px]">
         {item.value}
       </span>
     </>
   );
 
-  const className = stacked
-    ? ` flex w-full flex-row gap-4 items-center `
-    : `flex min-w-0 w-full flex-row gap-[10px] items-center lg:gap-4`;
+  const className = "flex min-w-0 items-start gap-3 xl:items-center xl:gap-4";
 
   if (item.href) {
     return (
-      <a
-        href={item.href}
-        className={`${className} transition-opacity hover:opacity-80`}
-      >
+      <a href={item.href} className={`${className} transition-opacity hover:opacity-80`}>
         {content}
       </a>
     );
@@ -151,36 +134,50 @@ function MetaItem({
   return <div className={className}>{content}</div>;
 }
 
-function ContactDetails() {
+function ContactRow() {
   const phone = footerMetaItems.find((item) => item.type === "phone");
   const email = footerMetaItems.find((item) => item.type === "email");
   const locations = footerMetaItems.filter((item) => item.type === "location");
 
   return (
-    <div className="col-span-3 -mx-[5vw] grid w-[calc(100%+10vw)] grid-cols-[38.2%_37.8%_24%] items-center gap-x-0">
-      <div className="flex min-w-0 flex-col gap-5">
-        {phone && <MetaItem item={phone} />}
-        {email && <MetaItem item={email} />}
+    <>
+      <div className="flex flex-col gap-5 xl:hidden">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {phone && <MetaItem item={phone} />}
+          {email && <MetaItem item={email} />}
+        </div>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {locations.map((item, index) => (
+            <MetaItem key={`${item.type}-${index}`} item={item} />
+          ))}
+        </div>
       </div>
-      {locations.map((item, index) => (
-        <MetaItem key={`${item.type}-${index}`} item={item} />
-      ))}
-    </div>
+
+      <div className="hidden xl:grid xl:grid-cols-[1.1fr_1.15fr_0.9fr] xl:items-start xl:gap-8">
+        <div className="flex min-w-0 flex-col gap-5">
+          {phone && <MetaItem item={phone} />}
+          {email && <MetaItem item={email} />}
+        </div>
+        {locations.map((item, index) => (
+          <MetaItem key={`${item.type}-${index}`} item={item} />
+        ))}
+      </div>
+    </>
   );
 }
 
 function LegalRow() {
   return (
-    <div className="flex w-full flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
-      <p className="text-xs leading-[150%] text-white opacity-60 lg:text-[13px] lg:leading-4 lg:opacity-100 2xl:text-base 2xl:leading-5">
+    <div className="flex w-full flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+      <p className="text-xs leading-5 text-white/70 xl:text-base xl:leading-5">
         {footerCopyright}
       </p>
-      <div className="flex flex-row items-center gap-4 lg:gap-3 2xl:gap-5">
+      <div className="flex flex-row items-center gap-4 xl:gap-5">
         {footerLegalLinks.map((link) => (
           <Link
             key={link.label}
             href={link.href}
-            className="text-xs leading-[150%] text-white opacity-60 transition-opacity hover:opacity-100 lg:text-right lg:text-[13px] lg:leading-4 lg:opacity-100 2xl:text-base 2xl:leading-5"
+            className="text-xs leading-5 text-white/70 transition-opacity hover:opacity-100 xl:text-base xl:leading-5"
           >
             {link.label}
           </Link>
@@ -190,9 +187,17 @@ function LegalRow() {
   );
 }
 
+function Divider({ strong = false }: { strong?: boolean }) {
+  return (
+    <div
+      className={`h-px w-full ${strong ? "bg-white/40" : "bg-white/15"}`}
+    />
+  );
+}
+
 export default function Footer() {
   return (
-    <footer className="relative max-w-full overflow-hidden bg-[var(--bg-hero)] text-white">
+    <footer className="relative w-full overflow-hidden bg-[var(--bg-hero)] text-white">
       <video
         autoPlay
         loop
@@ -203,45 +208,21 @@ export default function Footer() {
         <source src={footerVideoSrc} type="video/mp4" />
       </video>
 
-      <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-hero)] lg:bg-[var(--overlay-image-default)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
-      <div className="relative z-10 w-full py-[30px] pl-[23.55vw] pr-0 lg:px-[7.55vw] lg:py-[7.55vw] 2xl:px-[7.22vw] 2xl:py-[7.22vw]">
-        {/* Mobile */}
-        <div className="flex w-full flex-col gap-5 lg:hidden">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1728px] flex-col gap-6 px-5 py-10 sm:px-8 sm:py-12 md:gap-8 md:px-10 md:py-14 xl:gap-8 xl:px-[130px] xl:py-[100px]">
+        <div className="flex flex-col gap-8 xl:grid xl:grid-cols-[1.15fr_1fr_1fr] xl:gap-10">
           <BrandBlock />
-          <div className="h-px w-full bg-white opacity-10" />
-          <div className="flex w-full flex-row justify-between gap-7">
+          <div className="grid grid-cols-2 gap-6 xl:contents">
             <QuickLinksColumn />
             <ServicesColumn />
           </div>
-          <div className="h-px w-full bg-white opacity-10" />
-          <div className="flex w-full flex-col items-start gap-5">
-            {footerMetaItems.map((item, i) => (
-              <MetaItem key={`${item.type}-${i}`} item={item} stacked />
-            ))}
-          </div>
-          <div className="h-px w-full bg-white opacity-10" />
-          <LegalRow />
         </div>
 
-        {/* Tablet + Desktop */}
-        <div className="hidden w-full grid-cols-[38.8%_38.8%_22.4%] gap-x-0 gap-y-[14px] lg:grid 2xl:gap-y-[30px]">
-          <div>
-            <BrandBlock />
-          </div>
-          <QuickLinksColumn />
-          <ServicesColumn />
-
-          <div className="relative col-span-3 -mx-[5vw] h-px w-[calc(100%+10vw)] bg-white opacity-70" />
-
-          <ContactDetails />
-
-          <div className="relative col-span-3 -mx-[5vw] h-px w-[calc(100%+10vw)] bg-white opacity-70" />
-
-          <div className="col-span-3">
-            <LegalRow />
-          </div>
-        </div>
+        <Divider strong />
+        <ContactRow />
+        <Divider strong />
+        <LegalRow />
       </div>
     </footer>
   );

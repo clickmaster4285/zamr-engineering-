@@ -7,105 +7,76 @@ interface Props {
 }
 
 export default function Gallery({ number, heading, images }: Props) {
-  // Use up to 4 images for the Figma layout
   const galleryImages = images.slice(0, 4);
 
   return (
-    <section className="w-full bg-[var(--bg-section)] px-6 py-16 lg:p-[130px]">
-      {/* Frame 1321319072 — inner wrapper (gap: 60px) */}
-      <div className="flex flex-col gap-10 lg:gap-[60px]">
-        {/* Frame 120 — header (gap: 30px) */}
-        <div className="flex flex-col gap-6 lg:gap-[30px]">
-          {/* Frame 118 — section label */}
+    <section className="w-full bg-[var(--bg-section)] px-5 py-14 sm:px-8 md:px-10 md:py-16 xl:px-[130px] xl:py-[130px]">
+      <div className="mx-auto flex w-full max-w-[1468px] flex-col gap-10 md:gap-12 xl:gap-[60px]">
+        <div className="flex flex-col gap-6 xl:gap-[30px]">
           <div className="flex flex-row items-center gap-4">
-            <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
+            <span className="text-sm font-medium tracking-[3px] text-[var(--color-primary)] md:text-base">
               {number}
             </span>
-            <span className="h-px w-[104px] bg-[var(--text-dark)]" />
-            <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
+            <span className="h-px w-16 bg-[var(--text-dark)] md:w-[104px]" />
+            <span className="text-sm font-medium tracking-[3px] uppercase text-[var(--text-dark)] md:text-base">
               GALLERY
             </span>
           </div>
 
-          {/* Figma: 56px/700/71px, #333333 */}
-          <h2 className="text-[var(--text-dark)] text-[36px] font-bold leading-[44px] sm:text-[44px] sm:leading-[52px] lg:text-[56px] lg:leading-[71px]">
+          <h2 className="text-[32px] font-bold leading-[40px] text-[var(--text-dark)] sm:text-[40px] sm:leading-[50px] md:text-[48px] md:leading-[58px] xl:text-[56px] xl:leading-[71px]">
             {heading}
           </h2>
         </div>
 
-        {/* Frame 1321319075 — gallery grid (gap: 12px) */}
         {galleryImages.length > 0 && (
           <div className="flex flex-col gap-3">
-            {/* Row 1: Large left (flex-[2]) + Small right (flex-[1]), 400px tall */}
-            {galleryImages[0] && galleryImages[1] && (
-              <div className="flex flex-col gap-3 lg:flex-row lg:gap-[12px]">
-                <div className="relative w-full h-[280px] overflow-hidden bg-[var(--text-heading)] lg:h-[400px] lg:flex-[2]">
+            {galleryImages[0] && (
+              <div className="flex flex-col gap-3 md:flex-row">
+                <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] sm:h-[280px] md:h-[320px] md:flex-[2] xl:h-[400px]">
                   <Image
                     src={galleryImages[0]}
                     alt="Gallery image 1"
                     fill
-                    className="object-cover opacity-90"
-                  />
-                  {/* Gradient overlay at bottom */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 flex items-end px-5 py-4 h-[47px]"
-                    style={{
-                      background:
-                        "linear-gradient(0deg, rgba(4,13,32,0.75) 0%, transparent 100%)",
-                    }}
+                    className="object-cover"
+                    sizes="(min-width: 768px) 66vw, 100vw"
                   />
                 </div>
-                <div className="relative w-full h-[280px] overflow-hidden bg-[var(--text-heading)] lg:h-[400px] lg:flex-[1]">
-                  <Image
-                    src={galleryImages[1]}
-                    alt="Gallery image 2"
-                    fill
-                    className="object-cover opacity-90"
-                  />
-                  <div
-                    className="absolute bottom-0 left-0 right-0 h-[47px]"
-                    style={{
-                      background:
-                        "linear-gradient(0deg, rgba(4,13,32,0.75) 0%, transparent 100%)",
-                    }}
-                  />
-                </div>
+                {galleryImages[1] && (
+                  <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] sm:h-[280px] md:h-[320px] md:flex-[1] xl:h-[400px]">
+                    <Image
+                      src={galleryImages[1]}
+                      alt="Gallery image 2"
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 768px) 34vw, 100vw"
+                    />
+                  </div>
+                )}
               </div>
             )}
 
-            {/* Row 2: Small left (flex-[1]) + Large right (flex-[2]), 320px tall */}
-            {galleryImages[2] && galleryImages[3] && (
-              <div className="flex flex-col gap-3 lg:flex-row lg:gap-[12px]">
-                <div className="relative w-full h-[240px] overflow-hidden bg-[var(--text-heading)] lg:h-[320px] lg:flex-[1]">
+            {galleryImages[2] && (
+              <div className="flex flex-col gap-3 md:flex-row">
+                <div className="relative h-[200px] w-full overflow-hidden bg-[var(--text-heading)] sm:h-[240px] md:h-[260px] md:flex-[1] xl:h-[320px]">
                   <Image
                     src={galleryImages[2]}
                     alt="Gallery image 3"
                     fill
-                    className="object-cover opacity-90"
-                  />
-                  <div
-                    className="absolute bottom-0 left-0 right-0 flex items-end px-5 py-4 h-[47px]"
-                    style={{
-                      background:
-                        "linear-gradient(0deg, rgba(4,13,32,0.75) 0%, transparent 100%)",
-                    }}
+                    className="object-cover"
+                    sizes="(min-width: 768px) 34vw, 100vw"
                   />
                 </div>
-                <div className="relative w-full h-[240px] overflow-hidden bg-[var(--text-heading)] lg:h-[320px] lg:flex-[2]">
-                  <Image
-                    src={galleryImages[3]}
-                    alt="Gallery image 4"
-                    fill
-                    className="object-cover opacity-90"
-                  />
-                  <div
-                    className="absolute bottom-0 left-0 right-0 h-[47px]"
-                    style={{
-                      background:
-                        "linear-gradient(0deg, rgba(4,13,32,0.75) 0%, transparent 100%)",
-                    }}
-                  />
-                </div>
+                {galleryImages[3] && (
+                  <div className="relative h-[200px] w-full overflow-hidden bg-[var(--text-heading)] sm:h-[240px] md:h-[260px] md:flex-[2] xl:h-[320px]">
+                    <Image
+                      src={galleryImages[3]}
+                      alt="Gallery image 4"
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 768px) 66vw, 100vw"
+                    />
+                  </div>
+                )}
               </div>
             )}
           </div>
