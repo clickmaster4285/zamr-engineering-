@@ -1,51 +1,85 @@
-now i want to redesign my @app/projects/[id]/page.tsx 
-
-i want exact same pixal to pixal design with my latest global css
-
-first set the all section with fully responsive   
-don't change the color
-
-
 figmacss :
 desktop: {
-/* ABOUT US */
+/* PROJECTS */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
+justify-content: center;
 align-items: flex-start;
 padding: 130px;
-gap: 10px;
+gap: 60px;
 
 width: 1728px;
-height: 501px;
+height: 1681px;
 
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321318991 */
+/* Frame 1321319042 */
 
 /* Auto layout */
 display: flex;
-flex-direction: row;
-align-items: flex-start;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-end;
 padding: 0px;
-gap: 135px;
+gap: 60px;
 
 width: 1468px;
-height: 241px;
+height: 1421px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319009 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+
+width: 1468px;
+height: 1311px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 1321319002 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 905px;
+
+width: 1468px;
+height: 121px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
 flex-grow: 0;
 
 
@@ -58,8 +92,8 @@ align-items: flex-start;
 padding: 0px;
 gap: 30px;
 
-width: 344px;
-height: 241px;
+width: 386px;
+height: 121px;
 
 
 /* Inside auto layout */
@@ -77,7 +111,7 @@ align-items: center;
 padding: 0px;
 gap: 16px;
 
-width: 320px;
+width: 254px;
 height: 20px;
 
 
@@ -90,2323 +124,6 @@ flex-grow: 0;
 /* 01 */
 
 width: 20px;
-height: 20px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 104px;
-height: 0px;
-
-border: 1px solid #000000;
-border: 1px solid color(display-p3 0.000 0.000 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* THE CHALLENGE */
-
-width: 164px;
-height: 20px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Frame 119 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 10px;
-
-width: 344px;
-height: 120px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* What needed to be solved. */
-
-width: 344px;
-height: 110px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 44px;
-line-height: 55px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 133px;
-height: 0px;
-
-border: 1px solid #CE1A00;
-border: 1px solid color(display-p3 0.741 0.192 0.086);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px 16px;
-gap: 12px;
-
-width: 148px;
-height: 41px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border: 1px solid rgba(34, 65, 158, 0.15);
-border: 1px solid color(display-p3 0.161 0.251 0.596 / 0.15);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Container */
-
-width: 6px;
-height: 6px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-border-radius: 3.35544e+07px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 96px;
-height: 15px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Alexandria, NSW */
-
-width: 96px;
-height: 15px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 10px;
-line-height: 15px;
-/* identical to box height, or 150% */
-letter-spacing: 1.6px;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321318989 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 20px;
-
-width: 989px;
-height: 200px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Transport for NSW, under the M5 Project, required new shared paths along Campbell Road, St Peters, to connect with newly constructed shared paths and the future Alexandra Canal shared path. The design needed to provide a continuous north-south connection through the existing culvert under Campbell Road Bridge, including drainage, lighting and retaining walls suited to the underpass. Civil and lighting design was delivered for the 2.5 m and 3.0 m shared paths, two retaining walls and culvert lighting, through to Issued for Construction documentation. */
-
-width: 989px;
-height: 200px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 25px;
-font-feature-settings: 'liga' off;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* OVERVIEW */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 130px;
-gap: 10px;
-
-width: 1728px;
-height: 744px;
-
-background: #0F2047;
-background: color(display-p3 0.075 0.125 0.267);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319060 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 60px;
-
-width: 1468px;
-height: 484px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319050 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 28px;
-
-width: 441px;
-height: 103px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 118 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 16px;
-
-width: 314px;
-height: 20px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 02 */
-
-width: 23px;
-height: 20px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 104px;
-height: 0px;
-
-border: 1px solid #FFFFFF;
-border: 1px solid color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* OUR APPROACH */
-
-width: 155px;
-height: 20px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* How We Delivered It */
-
-width: 441px;
-height: 55px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 44px;
-line-height: 55px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319064 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 1468px;
-height: 321px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319062 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-
-width: 1468px;
-height: 161px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px;
-
-width: 734px;
-height: 161px;
-
-border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.08);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 686px;
-height: 112px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 01 */
-
-width: 686px;
-height: 50px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 40px;
-line-height: 50px;
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Survey & Investigation */
-
-width: 686px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 686px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px;
-
-width: 734px;
-height: 161px;
-
-border-width: 0px 0px 1px 1px;
-border-style: solid;
-border-color: rgba(255, 255, 255, 0.08);
-border-color: color(display-p3 1.000 1.000 1.000 / 0.08);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 685px;
-height: 112px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 02 */
-
-width: 685px;
-height: 50px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 40px;
-line-height: 50px;
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Shared Path Design */
-
-width: 685px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 685px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319063 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-
-width: 1468px;
-height: 160px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px;
-
-width: 734px;
-height: 160px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 686px;
-height: 112px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 03 */
-
-width: 686px;
-height: 50px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 40px;
-line-height: 50px;
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Drainage, Lighting & Structures */
-
-width: 686px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 686px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 24px;
-
-width: 734px;
-height: 160px;
-
-border-left: 1px solid rgba(255, 255, 255, 0.08);
-border-left: 1px solid color(display-p3 1.000 1.000 1.000 / 0.08);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 685px;
-height: 112px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 04 */
-
-width: 685px;
-height: 50px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 40px;
-line-height: 50px;
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Construction Documentation */
-
-width: 685px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 685px;
-height: 15px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 15px;
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* CONTACT */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 130px;
-gap: 10px;
-
-width: 1728px;
-height: 719px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 0;
-
-
-/* Frame 1321319072 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 60px;
-
-width: 1468px;
-height: 459px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 120 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
-
-width: 1468px;
-height: 105px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 118 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 16px;
-
-width: 269px;
-height: 20px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 03 */
-
-width: 24px;
-height: 20px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 104px;
-height: 0px;
-
-border: 1px solid #000000;
-border: 1px solid color(display-p3 0.000 0.000 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* OUTCOMES */
-
-width: 109px;
-height: 20px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Results & Achievements */
-
-width: 1468px;
-height: 55px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 44px;
-line-height: 55px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319071 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 41px;
-
-width: 1468px;
-height: 294px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319069 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-
-width: 1468px;
-height: 139px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 30px;
-
-width: 367px;
-height: 139px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border-width: 1px 1px 0px 0px;
-border-style: solid;
-border-color: rgba(15, 32, 71, 0.1);
-border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 1;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 306px;
-height: 55px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 90 m */
-
-width: 101px;
-height: 55px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 44px;
-line-height: 55px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 8px 0px 0px;
-
-width: 306px;
-height: 23px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* RC Retaining Wall */
-
-width: 306px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-
-color: #9AA3B0;
-color: color(display-p3 0.612 0.639 0.686);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 30px;
-
-width: 367px;
-height: 139px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border-width: 1px 1px 0px 0px;
-border-style: solid;
-border-color: rgba(15, 32, 71, 0.1);
-border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 306px;
-height: 55px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 3.0 m */
-
-width: 110px;
-height: 55px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 44px;
-line-height: 55px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 8px 0px 0px;
-
-width: 306px;
-height: 23px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 3New shared path sections */
-
-width: 306px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-
-color: #9AA3B0;
-color: color(display-p3 0.612 0.639 0.686);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 30px;
-
-width: 367px;
-height: 139px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border-width: 1px 1px 0px 0px;
-border-style: solid;
-border-color: rgba(15, 32, 71, 0.1);
-border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 1;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 306px;
-height: 55px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 9 Months */
-
-width: 180px;
-height: 55px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 44px;
-line-height: 55px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 8px 0px 0px;
-
-width: 306px;
-height: 23px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Project duration */
-
-width: 306px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-
-color: #9AA3B0;
-color: color(display-p3 0.612 0.639 0.686);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 30px;
-
-width: 367px;
-height: 139px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border-top: 1px solid rgba(15, 32, 71, 0.1);
-border-top: 1px solid color(display-p3 0.075 0.125 0.267 / 0.1);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-flex-grow: 1;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 307px;
-height: 55px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 100% */
-
-width: 103px;
-height: 55px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 44px;
-line-height: 55px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 8px 0px 0px;
-
-width: 307px;
-height: 23px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* IFC documentation */
-
-width: 307px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-
-color: #9AA3B0;
-color: color(display-p3 0.612 0.639 0.686);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319070 */
-
-width: 1468px;
-height: 114px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 16px 0px;
-gap: 16px;
-
-position: absolute;
-width: 734px;
-height: 57px;
-left: 0px;
-top: 0px;
-
-border-bottom: 1px solid rgba(15, 32, 71, 0.08);
-border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.08);
-
-
-/* Container:transform */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4px 0px 0px;
-isolation: isolate;
-
-width: 6px;
-height: 10px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-position: absolute;
-width: 6px;
-height: 6px;
-left: -1.24px;
-top: 2.76px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 712px;
-height: 24px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Full structural pavement rehabilitation across 7 d */
-
-width: 712px;
-height: 24px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 14.5px;
-line-height: 24px;
-/* identical to box height, or 165% */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 16px 0px;
-gap: 16px;
-
-position: absolute;
-width: 734px;
-height: 57px;
-left: 734px;
-top: 0px;
-
-border-bottom: 1px solid rgba(15, 32, 71, 0.08);
-border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.08);
-
-
-/* Container:transform */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4px 0px 0px;
-isolation: isolate;
-
-width: 6px;
-height: 10px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-position: absolute;
-width: 6px;
-height: 6px;
-left: -1.24px;
-top: 2.76px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 712px;
-height: 24px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Full structural pavement rehabilitation across 7 d */
-
-width: 712px;
-height: 24px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 14.5px;
-line-height: 24px;
-/* identical to box height, or 165% */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 16px 0px;
-gap: 16px;
-
-position: absolute;
-width: 734px;
-height: 57px;
-left: 0px;
-top: 57px;
-
-border-bottom: 1px solid rgba(15, 32, 71, 0.08);
-border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.08);
-
-
-/* Container:transform */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4px 0px 0px;
-isolation: isolate;
-
-width: 6px;
-height: 10px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-position: absolute;
-width: 6px;
-height: 6px;
-left: -1.24px;
-top: 2.76px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 712px;
-height: 24px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Full structural pavement rehabilitation across 7 d */
-
-width: 712px;
-height: 24px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 14.5px;
-line-height: 24px;
-/* identical to box height, or 165% */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 16px 0px;
-gap: 16px;
-
-position: absolute;
-width: 734px;
-height: 57px;
-left: 734px;
-top: 57px;
-
-border-bottom: 1px solid rgba(15, 32, 71, 0.08);
-border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.08);
-
-
-/* Container:transform */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4px 0px 0px;
-isolation: isolate;
-
-width: 6px;
-height: 10px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-position: absolute;
-width: 6px;
-height: 6px;
-left: -1.24px;
-top: 2.76px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 712px;
-height: 24px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Full structural pavement rehabilitation across 7 d */
-
-width: 712px;
-height: 24px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 14.5px;
-line-height: 24px;
-/* identical to box height, or 165% */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* CONTACT */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 130px;
-gap: 10px;
-
-width: 1728px;
-height: 1157px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
-
-
-/* Frame 1321319072 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 60px;
-
-width: 1468px;
-height: 897px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 120 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
-
-width: 1468px;
-height: 105px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 118 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 16px;
-
-width: 248px;
-height: 20px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 04 */
-
-width: 24px;
-height: 20px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 104px;
-height: 0px;
-
-border: 1px solid #000000;
-border: 1px solid color(display-p3 0.000 0.000 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* GALLERY */
-
-width: 88px;
-height: 20px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-letter-spacing: 3px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Project Photography */
-
-width: 1468px;
-height: 55px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 44px;
-line-height: 55px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319075 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 12px;
-
-width: 1468px;
-height: 732px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319073 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 12px;
-
-width: 1468px;
-height: 400px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Image (Aerial view of the completed corridor, Western Sydney) */
-
-width: 995.34px;
-height: 400px;
-
-background: url(IMG_4521.jpg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Image (Construction staging — maintaining live traffic flow) */
-
-width: 460.66px;
-height: 400px;
-
-background: url(CH 10.jpg);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319074 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 12px;
-
-width: 1468px;
-height: 320px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Image (Pavement investigation — FWD deflection survey) */
-
-width: 460.66px;
-height: 320px;
-
-background: url(CH 40.jpg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Image (Drainage infrastructure installation) */
-
-width: 995.34px;
-height: 320px;
-
-background: url(IMG_4523.jpg);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* OVERVIEW */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-padding: 130px;
-gap: 60px;
-
-width: 1728px;
-height: 847px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319067 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 60px;
-
-width: 1468px;
-height: 503px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319066 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0px;
-gap: 903px;
-
-width: 1468px;
-height: 103px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319050 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 28px;
-
-width: 441px;
-height: 103px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 118 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 16px;
-
-width: 257px;
-height: 20px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 05 */
-
-width: 23px;
 height: 20px;
 
 font-family: 'Outfit';
@@ -2463,26 +180,613 @@ order: 2;
 flex-grow: 0;
 
 
-/* Related Work */
+/* Featured Work */
 
-width: 441px;
-height: 55px;
+width: 386px;
+height: 71px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 700;
-font-size: 44px;
-line-height: 55px;
+font-size: 56px;
+line-height: 71px;
+/* identical to box height */
 
-color: #090D15;
-color: color(display-p3 0.039 0.051 0.078);
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
+flex-grow: 0;
+
+
+/* Frame 1321319072 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 2096px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Component 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 73px;
+height: 50px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ALL */
+
+width: 23px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 2 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 240px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 190px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 4 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 333px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 283px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 6 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 339px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 289px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 3 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 334px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 284px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 5 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 347px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 297px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 7 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 334px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 284px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* All Projects */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+
+width: 1468px;
+height: 1080px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Frame 1321319183 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 1468px;
+height: 340px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 align-self: stretch;
 flex-grow: 0;
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(IMG_1163.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(IMG_1163.jpg);
+
+
+/* Campbell Street Shared Path Upgrade (M5 Project – Stage 3) */
+
+position: absolute;
+width: 350px;
+height: 50px;
+left: 50px;
+top: 260px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Engineering & Design */
+
+position: absolute;
+width: 207px;
+height: 20px;
+left: 50px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Image (Metropolitan Bridge Rehabilitation) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(20220802_232028640_iOS.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(20220802_232028640_iOS.jpg);
+
+
+/* Bruce Highway Upgrade - Caboolture- Bribie Island Road to Steve Irwin Way */
+
+position: absolute;
+width: 385px;
+height: 50px;
+left: 50.33px;
+top: 260px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project & Program Management */
+
+position: absolute;
+width: 311px;
+height: 20px;
+left: 50.33px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Image (Urban Stormwater Management System) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: -0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (1).png);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (1).png);
+
+
+/* Showground Rd & Carrington Rd Intersection Upgrade */
+
+position: absolute;
+width: 294px;
+height: 50px;
+left: 50.67px;
+top: 260px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project & Program Management */
+
+position: absolute;
+width: 311px;
+height: 20px;
+left: 49.67px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
 
 
 /* Frame 1321319070 */
@@ -2519,6 +823,18 @@ order: 0;
 flex-grow: 1;
 
 
+/* Project Verification & Assurance 1 */
+
+position: absolute;
+width: 478.67px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+
 /* Image (Hunter Valley Renewable Energy Hub) */
 
 position: absolute;
@@ -2527,23 +843,82 @@ height: 340px;
 left: 0px;
 top: 0px;
 
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(367643603_1564651814069588_2366154985172353097_n.jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(367643603_1564651814069588_2366154985172353097_n.jpg);
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (19) (1).jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (19) (1).jpg);
 
 
-/* Kurrajong Rd, Prestons- Staged Improvement Strategic Design */
+/* Mamre Rd & Abbotts Rd Traffic Signal Installation */
 
 position: absolute;
-width: 378px;
-height: 46px;
+width: 322px;
+height: 50px;
 left: 50px;
-top: 269px;
+top: 260px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 18px;
-line-height: 23px;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project Verification & Assurance */
+
+position: absolute;
+width: 314px;
+height: 20px;
+left: 50px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Richmond Rd Service Road & Culvert Extension */
+
+position: absolute;
+width: 322px;
+height: 50px;
+left: 50px;
+top: 260px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project Verification & Assurance */
+
+position: absolute;
+width: 314px;
+height: 20px;
+left: 50px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
 
 color: #FFFFFF;
 color: color(display-p3 1.000 1.000 1.000);
@@ -2572,23 +947,43 @@ height: 340px;
 left: 0.33px;
 top: 0px;
 
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMG_9432.jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(IMG_9432.jpg);
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (9).png);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (9).png);
 
 
-/* Dunmore St & Station St Junction Upgrade, Wentworthville */
+/* Bridge Portfolio Management – RMS Stewardship Maintenance Contract */
 
 position: absolute;
-width: 378px;
-height: 46px;
+width: 405px;
+height: 50px;
 left: 50.33px;
-top: 269px;
+top: 260px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 18px;
-line-height: 23px;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Asset Management & Inspection */
+
+position: absolute;
+width: 311px;
+height: 20px;
+left: 50.33px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
 
 color: #FFFFFF;
 color: color(display-p3 1.000 1.000 1.000);
@@ -2617,40 +1012,318 @@ height: 340px;
 left: -0.33px;
 top: 0px;
 
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(unnamed (1).jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(unnamed (1).jpg);
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed.png);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed.png);
 
 
-/* Design of Retaining Walls at King St & Banksia St- Bayside Council  */
+/* Geeta Café & Restaurant Development */
 
 position: absolute;
-width: 378px;
-height: 46px;
+width: 351px;
+height: 25px;
 left: 49.67px;
-top: 269px;
+top: 285px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
-font-size: 18px;
-line-height: 23px;
+font-size: 20px;
+line-height: 25px;
 
 color: #FFFFFF;
 color: color(display-p3 1.000 1.000 1.000);
 
 
 
-/* Button */
+/* Buildings & Property Engineering */
+
+position: absolute;
+width: 324px;
+height: 20px;
+left: 49.67px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Frame 1321319185 */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
 align-items: center;
 padding: 0px;
-gap: 8px;
+gap: 16px;
 
-width: 147px;
-height: 24px;
+width: 1468px;
+height: 340px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(5787c6513361776fff575fd48a6b9fd4.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(5787c6513361776fff575fd48a6b9fd4.jpg);
+
+
+/* Dunmore St & Station St Junction Upgrade */
+
+position: absolute;
+width: 322px;
+height: 50px;
+left: 50px;
+top: 260px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Engineering & Design */
+
+position: absolute;
+width: 207px;
+height: 20px;
+left: 50px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Image (Metropolitan Bridge Rehabilitation) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (4).jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (4).jpg);
+
+
+/* Richmond Rd Service Road & Culvert Extension */
+
+position: absolute;
+width: 405px;
+height: 50px;
+left: 50.33px;
+top: 260px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project Verification & Assurance */
+
+position: absolute;
+width: 314px;
+height: 20px;
+left: 50.33px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 478.67px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Image (Urban Stormwater Management System) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: -0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(DJI_20260803131344_0154_D.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(DJI_20260803131344_0154_D.jpg);
+
+
+/* Rickabys Bridge Temporary Creek Crossing */
+
+position: absolute;
+width: 389px;
+height: 25px;
+left: 49.67px;
+top: 285px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Asset Management & Inspection */
+
+position: absolute;
+width: 311px;
+height: 20px;
+left: 49.67px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Frame 1321319195 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 60px;
+
+width: 1468px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Showing 1 - 09 of 24 projects */
+
+width: 1098px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 1321319194 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+width: 310px;
+height: 50px;
 
 
 /* Inside auto layout */
@@ -2659,19 +1332,158 @@ order: 1;
 flex-grow: 0;
 
 
-/* ALL PROJECTS */
+/* Previous */
 
-width: 115px;
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ic:sharp-navigate-next */
+
+width: 20px;
 height: 20px;
+
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 33.25%;
+right: 35.87%;
+top: 25%;
+bottom: 25%;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Frame 1321319193 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+width: 170px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 1 */
+
+width: 5px;
+height: 18px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
-line-height: 20px;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
 text-align: center;
-letter-spacing: 0.03em;
-text-transform: uppercase;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 2 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 2 */
+
+width: 8px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
 
 color: #0F2047;
 color: color(display-p3 0.075 0.125 0.267);
@@ -2683,59 +1495,120 @@ order: 0;
 flex-grow: 0;
 
 
-/* Icon */
+/* 3 */
 
-width: 24px;
-height: 24px;
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* 3 */
+
+width: 8px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
 
 
 /* Inside auto layout */
 flex: none;
-order: 1;
+order: 0;
+flex-grow: 0;
+
+
+/* next */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* ic:sharp-navigate-next */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 0;
 
 
 /* Vector */
 
 position: absolute;
-left: 20.83%;
-right: 20.83%;
-top: 50%;
-bottom: 50%;
+left: 35.88%;
+right: 33.25%;
+top: 25%;
+bottom: 25%;
 
-border: 1.25px solid #0F2047;
-border: 1.25px solid color(display-p3 0.075 0.125 0.267);
-
-
-/* Vector */
-
-position: absolute;
-left: 50%;
-right: 20.83%;
-top: 20.83%;
-bottom: 20.83%;
-
-border: 1.25px solid #0F2047;
-border: 1.25px solid color(display-p3 0.075 0.125 0.267);
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
 
 }
 
 
 tablet :{
-/* ABOUT US */
+/* PROJECTS */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
+justify-content: center;
 align-items: flex-start;
-padding: 77.037px;
-gap: 5.93px;
+padding: 72px 64px;
+gap: 35.56px;
 
 width: 1024px;
-height: 589.96px;
+height: 1472.74px;
 
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
 
 /* Inside auto layout */
 flex: none;
@@ -2744,17 +1617,59 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321318991 */
+/* Frame 1321319042 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-end;
+padding: 0px;
+gap: 40px;
+
+width: 896px;
+height: 1328.74px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319009 */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-gap: 32px;
+gap: 24px;
 
-width: 869.93px;
-height: 435.89px;
+width: 896px;
+height: 1238.74px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319002 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 536.3px;
+
+width: 896px;
+height: 75.78px;
 
 
 /* Inside auto layout */
@@ -2773,14 +1688,13 @@ align-items: flex-start;
 padding: 0px;
 gap: 17.78px;
 
-width: 869.93px;
-height: 153.89px;
+width: 229px;
+height: 75.78px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
-align-self: stretch;
 flex-grow: 0;
 
 
@@ -2793,7 +1707,7 @@ align-items: center;
 padding: 0px;
 gap: 9.48px;
 
-width: 221.59px;
+width: 170.59px;
 height: 16px;
 
 
@@ -2806,2398 +1720,6 @@ flex-grow: 0;
 /* 01 */
 
 width: 15px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-letter-spacing: 1.77778px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 61.63px;
-height: 0px;
-
-border: 0.592593px solid #000000;
-border: 0.592593px solid color(display-p3 0.000 0.000 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* THE CHALLENGE */
-
-width: 126px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-letter-spacing: 1.77778px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Frame 119 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 5.93px;
-
-width: 869.93px;
-height: 71.93px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* What needed to be solved. */
-
-width: 869.93px;
-height: 66px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 26.0741px;
-line-height: 33px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 78.81px;
-height: 0px;
-
-border: 0.592593px solid #CE1A00;
-border: 0.592593px solid color(display-p3 0.741 0.192 0.086);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 7.11111px 9.48148px;
-gap: 7.11px;
-
-width: 117.81px;
-height: 30.41px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border: 0.592593px solid rgba(34, 65, 158, 0.15);
-border: 0.592593px solid color(display-p3 0.161 0.251 0.596 / 0.15);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Container */
-
-width: 3.56px;
-height: 3.56px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-border-radius: 1.98841e+07px;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 87px;
-height: 15px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Alexandria, NSW */
-
-width: 87px;
-height: 15px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 10px;
-line-height: 15px;
-/* identical to box height, or 150% */
-letter-spacing: 0.948148px;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321318989 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 11.85px;
-
-width: 869.93px;
-height: 250px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Transport for NSW, under the M5 Project, required new shared paths along Campbell Road, St Peters, to connect with newly constructed shared paths and the future Alexandra Canal shared path. The design needed to provide a continuous north-south connection through the existing culvert under Campbell Road Bridge, including drainage, lighting and retaining walls suited to the underpass. Civil and lighting design was delivered for the 2.5 m and 3.0 m shared paths, two retaining walls and culvert lighting, through to Issued for Construction documentation. */
-
-width: 869.93px;
-height: 250px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 25px;
-font-feature-settings: 'liga' off;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* OVERVIEW */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 77.037px;
-gap: 5.93px;
-
-width: 1024px;
-height: 459.15px;
-
-background: #0F2047;
-background: color(display-p3 0.075 0.125 0.267);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319060 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 35.56px;
-
-width: 869.93px;
-height: 305.07px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319050 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16.59px;
-
-width: 261.33px;
-height: 65.59px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 118 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 9.48px;
-
-width: 216.59px;
-height: 16px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 02 */
-
-width: 18px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-letter-spacing: 1.77778px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 61.63px;
-height: 0px;
-
-border: 0.592593px solid #FFFFFF;
-border: 0.592593px solid color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* OUR APPROACH */
-
-width: 118px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-letter-spacing: 1.77778px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* How We Delivered It */
-
-width: 261.33px;
-height: 33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 26.0741px;
-line-height: 33px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319064 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 869.93px;
-height: 203.93px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319062 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-
-width: 869.93px;
-height: 102.26px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 14.2222px;
-
-width: 434.96px;
-height: 102.26px;
-
-border-bottom: 0.592593px solid rgba(255, 255, 255, 0.08);
-border-bottom: 0.592593px solid color(display-p3 1.000 1.000 1.000 / 0.08);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 7.11px;
-
-width: 406.52px;
-height: 73.22px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 01 */
-
-width: 406.52px;
-height: 30px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 23.7037px;
-line-height: 30px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Survey & Investigation */
-
-width: 406.52px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 406.52px;
-height: 13px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 13px;
-/* identical to box height */
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 14.2222px;
-
-width: 434.96px;
-height: 102.26px;
-
-border-width: 0px 0px 0.592593px 0.592593px;
-border-style: solid;
-border-color: rgba(255, 255, 255, 0.08);
-border-color: color(display-p3 1.000 1.000 1.000 / 0.08);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 7.11px;
-
-width: 405.93px;
-height: 73.22px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 02 */
-
-width: 405.93px;
-height: 30px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 23.7037px;
-line-height: 30px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Shared Path Design */
-
-width: 405.93px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 405.93px;
-height: 13px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 13px;
-/* identical to box height */
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319063 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-
-width: 869.93px;
-height: 101.67px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 14.2222px;
-
-width: 434.96px;
-height: 101.67px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 7.11px;
-
-width: 406.52px;
-height: 73.22px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 03 */
-
-width: 406.52px;
-height: 30px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 23.7037px;
-line-height: 30px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Drainage, Lighting & Structures */
-
-width: 406.52px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 406.52px;
-height: 13px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 13px;
-/* identical to box height */
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 14.2222px;
-
-width: 434.96px;
-height: 101.67px;
-
-border-left: 0.592593px solid rgba(255, 255, 255, 0.08);
-border-left: 0.592593px solid color(display-p3 1.000 1.000 1.000 / 0.08);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame 1321319061 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 7.11px;
-
-width: 405.93px;
-height: 73.22px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 04 */
-
-width: 405.93px;
-height: 30px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 23.7037px;
-line-height: 30px;
-/* identical to box height */
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Construction Documentation */
-
-width: 405.93px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* We engage with your project team to define scope,  */
-
-width: 405.93px;
-height: 13px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 13px;
-/* identical to box height */
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* CONTACT */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 77.037px;
-gap: 5.93px;
-
-width: 1024px;
-height: 484.81px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319072 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 35.56px;
-
-width: 869.93px;
-height: 330.74px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 120 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 17.78px;
-
-width: 869.93px;
-height: 66.78px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 118 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 9.48px;
-
-width: 182.59px;
-height: 16px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 03 */
-
-width: 18px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-letter-spacing: 1.77778px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 61.63px;
-height: 0px;
-
-border: 0.592593px solid #000000;
-border: 0.592593px solid color(display-p3 0.000 0.000 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* OUTCOMES */
-
-width: 84px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-letter-spacing: 1.77778px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Results & Achievements */
-
-width: 869.93px;
-height: 33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 26.0741px;
-line-height: 33px;
-/* identical to box height */
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319071 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 24.3px;
-
-width: 869.93px;
-height: 228.41px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319069 */
-
-width: 869.93px;
-height: 100px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 17.7778px;
-
-position: absolute;
-width: 217.48px;
-height: 100px;
-left: 0px;
-top: 0px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border-width: 0.592593px 0.592593px 0px 0px;
-border-style: solid;
-border-color: rgba(15, 32, 71, 0.1);
-border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 181.33px;
-height: 33px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 90 m */
-
-width: 60px;
-height: 33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 26.0741px;
-line-height: 33px;
-/* identical to box height */
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4.74074px 0px 0px;
-
-width: 181.33px;
-height: 13.63px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* RC Retaining Wall */
-
-width: 181.33px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-
-color: #9AA3B0;
-color: color(display-p3 0.612 0.639 0.686);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 17.7778px;
-
-position: absolute;
-width: 217.48px;
-height: 100px;
-left: 217.48px;
-top: 0px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border-width: 0.592593px 0.592593px 0px 0px;
-border-style: solid;
-border-color: rgba(15, 32, 71, 0.1);
-border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 181.33px;
-height: 33px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 3.0 m */
-
-width: 66px;
-height: 33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 26.0741px;
-line-height: 33px;
-/* identical to box height */
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4.74074px 0px 0px;
-
-width: 181.33px;
-height: 13.63px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 3New shared path sections */
-
-width: 181.33px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-
-color: #9AA3B0;
-color: color(display-p3 0.612 0.639 0.686);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 17.7778px;
-
-position: absolute;
-width: 217.48px;
-height: 100px;
-left: 434.96px;
-top: 0px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-border-width: 0.592593px 0.592593px 0px 0px;
-border-style: solid;
-border-color: rgba(15, 32, 71, 0.1);
-border-color: color(display-p3 0.075 0.125 0.267 / 0.1);
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 181.33px;
-height: 33px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 9 Months */
-
-width: 107px;
-height: 33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 26.0741px;
-line-height: 33px;
-/* identical to box height */
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4.74074px 0px 0px;
-
-width: 181.33px;
-height: 13.63px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Project duration */
-
-width: 181.33px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-
-color: #9AA3B0;
-color: color(display-p3 0.612 0.639 0.686);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 17.7778px;
-
-position: absolute;
-width: 217.48px;
-height: 100px;
-left: 652.45px;
-top: 0px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border-top: 0.592593px solid rgba(15, 32, 71, 0.1);
-border-top: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.1);
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 181.93px;
-height: 33px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 100% */
-
-width: 61px;
-height: 33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 26.0741px;
-line-height: 33px;
-/* identical to box height */
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4.74074px 0px 0px;
-
-width: 181.93px;
-height: 13.63px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* IFC documentation */
-
-width: 181.93px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-
-color: #9AA3B0;
-color: color(display-p3 0.612 0.639 0.686);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319070 */
-
-width: 869.93px;
-height: 104.11px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 9.48148px 0px;
-gap: 9.48px;
-
-position: absolute;
-width: 434.96px;
-height: 62.56px;
-left: 0px;
-top: 0px;
-
-border-bottom: 0.592593px solid rgba(15, 32, 71, 0.08);
-border-bottom: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.08);
-
-
-/* Container:transform */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 2.37037px 0px 0px;
-isolation: isolate;
-
-width: 3.56px;
-height: 5.93px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-position: absolute;
-width: 3.56px;
-height: 3.56px;
-left: -0.74px;
-top: 1.63px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 421.93px;
-height: 22px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Full structural pavement rehabilitation across 7 d */
-
-width: 421.93px;
-height: 22px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 21px;
-/* identical to box height, or 165% */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 9.48148px 0px;
-gap: 9.48px;
-
-position: absolute;
-width: 434.96px;
-height: 62.56px;
-left: 434.96px;
-top: 0px;
-
-border-bottom: 0.592593px solid rgba(15, 32, 71, 0.08);
-border-bottom: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.08);
-
-
-/* Container:transform */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 2.37037px 0px 0px;
-isolation: isolate;
-
-width: 3.56px;
-height: 5.93px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-position: absolute;
-width: 3.56px;
-height: 3.56px;
-left: -0.74px;
-top: 1.63px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 421.93px;
-height: 43px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Full structural pavement rehabilitation across 7 d */
-
-width: 421.93px;
-height: 43px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 21px;
-/* or 165% */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 9.48148px 0px;
-gap: 9.48px;
-
-position: absolute;
-width: 434.96px;
-height: 41.56px;
-left: 0px;
-top: 62.55px;
-
-border-bottom: 0.592593px solid rgba(15, 32, 71, 0.08);
-border-bottom: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.08);
-
-
-/* Container:transform */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 2.37037px 0px 0px;
-isolation: isolate;
-
-width: 3.56px;
-height: 5.93px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-position: absolute;
-width: 3.56px;
-height: 3.56px;
-left: -0.74px;
-top: 1.63px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 421.93px;
-height: 22px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Full structural pavement rehabilitation across 7 d */
-
-width: 421.93px;
-height: 22px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 21px;
-/* identical to box height, or 165% */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 9.48148px 0px;
-gap: 9.48px;
-
-position: absolute;
-width: 434.96px;
-height: 41.56px;
-left: 434.96px;
-top: 62.55px;
-
-border-bottom: 0.592593px solid rgba(15, 32, 71, 0.08);
-border-bottom: 0.592593px solid color(display-p3 0.075 0.125 0.267 / 0.08);
-
-
-/* Container:transform */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 2.37037px 0px 0px;
-isolation: isolate;
-
-width: 3.56px;
-height: 5.93px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Container */
-
-position: absolute;
-width: 3.56px;
-height: 3.56px;
-left: -0.74px;
-top: 1.63px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-z-index: 0;
-
-
-/* Text */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 421.93px;
-height: 22px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Full structural pavement rehabilitation across 7 d */
-
-width: 421.93px;
-height: 22px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 21px;
-/* identical to box height, or 165% */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* CONTACT */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 77.037px;
-gap: 5.93px;
-
-width: 1024px;
-height: 690.19px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319072 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 35.56px;
-
-width: 869.93px;
-height: 536.11px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 120 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 17.78px;
-
-width: 869.93px;
-height: 66.78px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 118 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 9.48px;
-
-width: 167.59px;
-height: 16px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 04 */
-
-width: 19px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-letter-spacing: 1.77778px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Vector 4 */
-
-width: 61.63px;
-height: 0px;
-
-border: 0.592593px solid #000000;
-border: 0.592593px solid color(display-p3 0.000 0.000 0.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* GALLERY */
-
-width: 68px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 13px;
-line-height: 16px;
-letter-spacing: 1.77778px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Project Photography */
-
-width: 869.93px;
-height: 33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 26.0741px;
-line-height: 33px;
-/* identical to box height */
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319075 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 7.11px;
-
-width: 869.93px;
-height: 433.78px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319073 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 7.11px;
-
-width: 869.93px;
-height: 237.04px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 431.41px;
-height: 237.04px;
-
-background: #090D15;
-background: color(display-p3 0.039 0.051 0.078);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 1;
-
-
-/* Image (Aerial view of the completed corridor, Western Sydney) */
-
-width: 431.41px;
-height: 237.04px;
-
-background: url(IMG_4521.jpg), url(image.jpg);
-opacity: 0.9;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 431.41px;
-height: 237.04px;
-
-background: #090D15;
-background: color(display-p3 0.039 0.051 0.078);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Image (Construction staging — maintaining live traffic flow) */
-
-width: 431.41px;
-height: 237.04px;
-
-background: url(CH 10.jpg), url(image.jpg);
-opacity: 0.9;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319074 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 7.11px;
-
-width: 869.93px;
-height: 189.63px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 431.41px;
-height: 189.63px;
-
-background: #090D15;
-background: color(display-p3 0.039 0.051 0.078);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 1;
-
-
-/* Image (Pavement investigation — FWD deflection survey) */
-
-width: 431.41px;
-height: 189.63px;
-
-background: url(CH 40.jpg), url(image.jpg);
-opacity: 0.9;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Container */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 431.41px;
-height: 189.63px;
-
-background: #090D15;
-background: color(display-p3 0.039 0.051 0.078);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Image (Drainage infrastructure installation) */
-
-width: 431.41px;
-height: 189.63px;
-
-background: url(IMG_4523.jpg), url(image.jpg);
-opacity: 0.9;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* OVERVIEW */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-padding: 77.037px;
-gap: 40px;
-
-width: 1024px;
-height: 893.44px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319067 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 35.56px;
-
-width: 869.93px;
-height: 685.15px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 1321319066 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0px;
-gap: 535.11px;
-
-width: 869.93px;
-height: 65.59px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame 1321319050 */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16.59px;
-
-width: 261.33px;
-height: 65.59px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame 118 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 9.48px;
-
-width: 173.59px;
-height: 16px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 05 */
-
-width: 18px;
 height: 16px;
 
 font-family: 'Outfit';
@@ -5254,58 +1776,62 @@ order: 2;
 flex-grow: 0;
 
 
-/* Related Work */
+/* Featured Work */
 
-width: 261.33px;
-height: 33px;
+width: 229px;
+height: 42px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 700;
-font-size: 26.0741px;
-line-height: 33px;
+font-size: 33.1852px;
+line-height: 42px;
 /* identical to box height */
 
-color: #090D15;
-color: color(display-p3 0.039 0.051 0.078);
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Frame 1321319072 */
+/* Frame 1321319025 */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
-flex-wrap: wrap;
 align-items: center;
-align-content: center;
 padding: 0px;
-gap: 24px;
+gap: 9.48px;
 
-width: 869.93px;
-height: 584px;
+width: 1626.3px;
+height: 34.96px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* ProjectCard */
+/* Component 1 */
 
-width: 422.96px;
-height: 280px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.48148px 14.8148px;
+gap: 5.93px;
 
-background: #090D15;
-background: color(display-p3 0.039 0.051 0.078);
+width: 48.63px;
+height: 34.96px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
 
 /* Inside auto layout */
 flex: none;
@@ -5313,160 +1839,65 @@ order: 0;
 flex-grow: 0;
 
 
-/* Image (Hunter Valley Renewable Energy Hub) */
+/* ALL */
 
-position: absolute;
-width: 423px;
-height: 280px;
-left: -0.04px;
-top: 0.33px;
-
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(367643603_1564651814069588_2366154985172353097_n.jpg), url(image.jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.2), color(display-p3 0.000 0.000 0.000 / 0.2)), url(367643603_1564651814069588_2366154985172353097_n.jpg), url(image.jpg);
-
-
-/* Kurrajong Rd, Prestons- Staged Improvement Strategic Design */
-
-position: absolute;
-width: 368px;
+width: 19px;
 height: 16px;
-left: 29.63px;
-top: 234.33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-
-/* ProjectCard */
-
-width: 422.96px;
-height: 280px;
-
-background: #090D15;
-background: color(display-p3 0.039 0.051 0.078);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Image (Metropolitan Bridge Rehabilitation) */
-
-position: absolute;
-width: 423px;
-height: 280px;
-left: 0px;
-top: 0.33px;
-
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMG_9432.jpg), url(image.jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(IMG_9432.jpg), url(image.jpg);
-
-
-/* Dunmore St & Station St Junction Upgrade, Wentworthville */
-
-position: absolute;
-width: 344px;
-height: 16px;
-left: 29.83px;
-top: 234.33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-
-/* ProjectCard */
-
-width: 870px;
-height: 280px;
-
-background: #090D15;
-background: color(display-p3 0.039 0.051 0.078);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Image (Urban Stormwater Management System) */
-
-position: absolute;
-width: 870px;
-height: 280px;
-left: -0.04px;
-top: 0.33px;
-
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(unnamed (1).jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(unnamed (1).jpg);
-
-
-/* Design of Retaining Walls at King St & Banksia St- Bayside Council  */
-
-position: absolute;
-width: 386px;
-height: 16px;
-left: 29.43px;
-top: 234.33px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-
-/* Button */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 4.74px;
-
-width: 103.96px;
-height: 14.22px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* ALL PROJECTS */
-
-width: 85px;
-height: 14px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 500;
-font-size: 12px;
-line-height: 13px;
-/* identical to box height, or 109% */
+font-size: 13px;
+line-height: 16px;
 text-align: center;
-letter-spacing: 0.02em;
-text-transform: uppercase;
+letter-spacing: 1.77778px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 2 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.48148px 14.8148px;
+gap: 5.93px;
+
+width: 186.63px;
+height: 34.96px;
+
+border: 0.592593px solid #0F2047;
+border: 0.592593px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 157px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 1.77778px;
 
 color: #0F2047;
 color: color(display-p3 0.075 0.125 0.267);
@@ -5478,10 +1909,969 @@ order: 0;
 flex-grow: 0;
 
 
-/* Icon */
+/* Component 4 */
 
-width: 14.22px;
-height: 14.22px;
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.48148px 14.8148px;
+gap: 5.93px;
+
+width: 264.63px;
+height: 34.96px;
+
+border: 0.592593px solid #0F2047;
+border: 0.592593px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 235px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 6 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.48148px 14.8148px;
+gap: 5.93px;
+
+width: 267.63px;
+height: 34.96px;
+
+border: 0.592593px solid #0F2047;
+border: 0.592593px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 238px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 3 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.48148px 14.8148px;
+gap: 5.93px;
+
+width: 264.63px;
+height: 34.96px;
+
+border: 0.592593px solid #0F2047;
+border: 0.592593px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 235px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 5 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.48148px 14.8148px;
+gap: 5.93px;
+
+width: 273.63px;
+height: 34.96px;
+
+border: 0.592593px solid #0F2047;
+border: 0.592593px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 244px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 7 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.48148px 14.8148px;
+gap: 5.93px;
+
+width: 263.63px;
+height: 34.96px;
+
+border: 0.592593px solid #0F2047;
+border: 0.592593px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Urban Infrastructure */
+
+width: 234px;
+height: 16px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 1.77778px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* All Projects */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+
+width: 896px;
+height: 1080px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319183 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 896px;
+height: 340px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(IMG_1163.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(IMG_1163.jpg);
+
+
+/* Campbell Street Shared Path Upgrade (M5 Project – Stage 3) */
+
+position: absolute;
+width: 248px;
+height: 40px;
+left: 20px;
+top: 279.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Engineering & Design */
+
+position: absolute;
+width: 151px;
+height: 13px;
+left: 20px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Image (Metropolitan Bridge Rehabilitation) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(20220802_232028640_iOS.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(20220802_232028640_iOS.jpg);
+
+
+/* Bruce Highway Upgrade - Caboolture-Bribie Island Road to Steve Irwin Way */
+
+position: absolute;
+width: 248px;
+height: 60px;
+left: 20px;
+top: 259.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project & Program Management */
+
+position: absolute;
+width: 225px;
+height: 13px;
+left: 20.33px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Image (Urban Stormwater Management System) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: -0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (1).png);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (1).png);
+
+
+/* Showground Rd & Carrington Rd Intersection Upgrade */
+
+position: absolute;
+width: 235px;
+height: 40px;
+left: 20.67px;
+top: 280px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project & Program Management */
+
+position: absolute;
+width: 225px;
+height: 13px;
+left: 19.67px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Frame 1321319070 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 896px;
+height: 340px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (3).jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (3).jpg);
+
+
+/* Richmond Rd Service Road & Culvert Extension */
+
+position: absolute;
+width: 251px;
+height: 40px;
+left: 20px;
+top: 279.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project Verification & Assurance */
+
+position: absolute;
+width: 230px;
+height: 13px;
+left: 20px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Image (Metropolitan Bridge Rehabilitation) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (9).png);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (9).png);
+
+
+/* Bridge Portfolio Management – RMS Stewardship Maintenance Contract */
+
+position: absolute;
+width: 233px;
+height: 60px;
+left: 20px;
+top: 259.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Asset Management & Inspection */
+
+position: absolute;
+width: 226px;
+height: 13px;
+left: 20.33px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Image (Urban Stormwater Management System) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: -0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed.png);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed.png);
+
+
+/* Geeta Café & Restaurant Development */
+
+position: absolute;
+width: 245px;
+height: 40px;
+left: 20px;
+top: 279.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Buildings & Property Engineering */
+
+position: absolute;
+width: 237px;
+height: 13px;
+left: 19.67px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Frame 1321319185 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+width: 896px;
+height: 340px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(5787c6513361776fff575fd48a6b9fd4.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(5787c6513361776fff575fd48a6b9fd4.jpg);
+
+
+/* Dunmore St & Station St Junction Upgrade */
+
+position: absolute;
+width: 228px;
+height: 40px;
+left: 20px;
+top: 279.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Engineering & Design */
+
+position: absolute;
+width: 151px;
+height: 13px;
+left: 20px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 1;
+
+
+/* Image (Metropolitan Bridge Rehabilitation) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (4).jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (4).jpg);
+
+
+/* Richmond Rd Service Road & Culvert Extension */
+
+position: absolute;
+width: 252px;
+height: 40px;
+left: 20px;
+top: 279.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project Verification & Assurance */
+
+position: absolute;
+width: 230px;
+height: 13px;
+left: 20.33px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 288px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 1;
+
+
+/* Image (Urban Stormwater Management System) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: -0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(DJI_20260803131344_0154_D.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(DJI_20260803131344_0154_D.jpg);
+
+
+/* Rickabys Bridge Temporary Creek Crossing */
+
+position: absolute;
+width: 234px;
+height: 40px;
+left: 20px;
+top: 279.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Asset Management & Inspection */
+
+position: absolute;
+width: 226px;
+height: 13px;
+left: 19.67px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Frame 1321319195 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 60px;
+
+width: 896px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Showing 1 - 09 of 24 projects */
+
+width: 526px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+
+/* Frame 1321319194 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+width: 310px;
+height: 50px;
 
 
 /* Inside auto layout */
@@ -5490,47 +2880,283 @@ order: 1;
 flex-grow: 0;
 
 
+/* Previous */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ic:sharp-navigate-next */
+
+width: 20px;
+height: 20px;
+
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
 /* Vector */
 
 position: absolute;
-left: 20.83%;
-right: 20.83%;
-top: 49.99%;
-bottom: 50.01%;
+left: 33.25%;
+right: 35.88%;
+top: 25%;
+bottom: 25%;
 
-border: 0.740741px solid #0F2047;
-border: 0.740741px solid color(display-p3 0.075 0.125 0.267);
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Frame 1321319193 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 10px;
+
+width: 170px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 1 */
+
+width: 5px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 2 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 2 */
+
+width: 8px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 3 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* 3 */
+
+width: 8px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* next */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* ic:sharp-navigate-next */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
 
 
 /* Vector */
 
 position: absolute;
-left: 50%;
-right: 20.83%;
-top: 20.87%;
-bottom: 20.79%;
+left: 35.88%;
+right: 33.25%;
+top: 25%;
+bottom: 25%;
 
-border: 0.740741px solid #0F2047;
-border: 0.740741px solid color(display-p3 0.075 0.125 0.267);
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
 
 }
 
 
 mobile: {
-/* Challenge-Section */
+/* FeaturedWork */
 
 /* Auto layout */
 display: flex;
 flex-direction: column;
+justify-content: center;
 align-items: flex-start;
 padding: 20px;
 gap: 32px;
 
 width: 390px;
-height: 555px;
+height: 2093px;
 
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
+background: #F6F8FC;
+background: color(display-p3 0.965 0.973 0.988);
 
 /* Inside auto layout */
 flex: none;
@@ -5543,19 +3169,38 @@ flex-grow: 0;
 
 /* Auto layout */
 display: flex;
-flex-direction: row;
-align-items: center;
+flex-direction: column;
+align-items: flex-start;
 padding: 0px;
 gap: 12px;
 
 width: 350px;
-height: 18px;
+height: 65px;
 
 
 /* Inside auto layout */
 flex: none;
 order: 0;
 align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 160px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 0;
 
 
@@ -5588,1793 +3233,8 @@ box-sizing: border-box;
 width: 40px;
 height: 0px;
 
-border: 1px solid #0F2047;
-border: 1px solid color(display-p3 0.075 0.125 0.267);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* THE CHALLENGE */
-
-width: 271px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 1;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
-
-width: 350px;
-height: 51px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* What needed to be solved. */
-
-width: 350px;
-height: 35px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Line */
-
-box-sizing: border-box;
-
-width: 80px;
-height: 0px;
-
-border: 2px solid #CE1A00;
-border: 2px solid color(display-p3 0.741 0.192 0.086);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 8px 12px;
-gap: 8px;
-
-width: 111px;
-height: 28px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border: 1px solid rgba(15, 32, 71, 0.180392);
-border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 6px;
-height: 6px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Alexandria, NSW */
-
-width: 73px;
-height: 12px;
-
-font-family: 'Barlow';
-font-style: normal;
-font-weight: 600;
-font-size: 10px;
-line-height: 12px;
-/* identical to box height */
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* Transport for NSW, under the M5 Project, required new shared paths along Campbell Road, St Peters, to connect with newly constructed shared paths and the future Alexandra Canal shared path. The design needed to provide a continuous north-south connection through the existing culvert under Campbell Road Bridge, including drainage, lighting and retaining walls suited to the underpass. Civil and lighting design was delivered for the 2.5 m and 3.0 m shared paths, two retaining walls and culvert lighting, through to Issued for Construction documentation. */
-
-width: 350px;
-height: 322px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 15px;
-line-height: 150%;
-/* or 22px */
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Approach-Section */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 32px;
-
-width: 390px;
-height: 885px;
-
-background: #0F2047;
-background: color(display-p3 0.075 0.125 0.267);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 12px;
-
-width: 350px;
-height: 18px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 02 */
-
-width: 17px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Line */
-
-box-sizing: border-box;
-
-width: 40px;
-height: 0px;
-
-border: 1px solid #FFFFFF;
-border: 1px solid color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* OUR APPROACH */
-
-width: 269px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-text-transform: uppercase;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 1;
-
-
-/* How We Delivered It */
-
-width: 350px;
-height: 35px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 20px;
-
-width: 350px;
-height: 728px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 12px;
-
-width: 350px;
-height: 167px;
-
-border-bottom: 1px solid rgba(255, 255, 255, 0.0784314);
-border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.0784314);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 01 */
-
-width: 35px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 32px;
-line-height: 40px;
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Survey & Investigation */
-
-width: 310px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Gap analysis, ground survey and utility identification to define the project area. */
-
-width: 310px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* or 20px */
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 12px;
-
-width: 350px;
-height: 167px;
-
-border-bottom: 1px solid rgba(255, 255, 255, 0.0784314);
-border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.0784314);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 02 */
-
-width: 41px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 32px;
-line-height: 40px;
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Shared Path Design */
-
-width: 310px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Path alignment, pavement design, signposting and delineation to TfNSW standards. */
-
-width: 310px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* or 20px */
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 12px;
-
-width: 350px;
-height: 167px;
-
-border-bottom: 1px solid rgba(255, 255, 255, 0.0784314);
-border-bottom: 1px solid color(display-p3 1.000 1.000 1.000 / 0.0784314);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 03 */
-
-width: 41px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 32px;
-line-height: 40px;
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Drainage, Lighting & Structures */
-
-width: 310px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Underpass drainage, pedestrian lighting for the culvert and retaining wall design. */
-
-width: 310px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* or 20px */
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 12px;
-
-width: 350px;
-height: 167px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 04 */
-
-width: 42px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 900;
-font-size: 32px;
-line-height: 40px;
-
-color: rgba(255, 255, 255, 0.6);
-color: color(display-p3 1.000 1.000 1.000 / 0.6);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Construction Documentation */
-
-width: 310px;
-height: 23px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-/* identical to box height */
-
-color: #FFFFFF;
-color: color(display-p3 1.000 1.000 1.000);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Issued for Construction drawings, specifications and construction guidance. */
-
-width: 310px;
-height: 40px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* or 20px */
-
-color: #B3B3B3;
-color: color(display-p3 0.702 0.702 0.702);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Outcomes-Section */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 32px;
-
-width: 390px;
-height: 893px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 12px;
-
-width: 350px;
-height: 18px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 03 */
-
-width: 17px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Line */
-
-box-sizing: border-box;
-
-width: 40px;
-height: 0px;
-
-border: 1px solid #0F2047;
-border: 1px solid color(display-p3 0.075 0.125 0.267);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* OUTCOMES */
-
-width: 269px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 1;
-
-
-/* Results & Achievements */
-
-width: 350px;
-height: 35px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
-
-width: 350px;
-height: 452px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-
-width: 350px;
-height: 101px;
-
-border: 1px solid rgba(15, 32, 71, 0.180392);
-border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 90 m */
-
-width: 83px;
-height: 45px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 45px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* RC Retaining Wall */
-
-width: 310px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 16px;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-
-width: 350px;
-height: 101px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border: 1px solid rgba(15, 32, 71, 0.180392);
-border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 3.0 m */
-
-width: 92px;
-height: 45px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 45px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* 3New shared path sections */
-
-width: 310px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 16px;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-
-width: 350px;
-height: 101px;
-
-border: 1px solid rgba(15, 32, 71, 0.180392);
-border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 9 Months */
-
-width: 151px;
-height: 45px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 45px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Project duration */
-
-width: 310px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 16px;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-
-width: 350px;
-height: 101px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-border: 1px solid rgba(15, 32, 71, 0.180392);
-border: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 100% */
-
-width: 87px;
-height: 45px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 700;
-font-size: 36px;
-line-height: 45px;
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* IFC documentation */
-
-width: 310px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 400;
-font-size: 13px;
-line-height: 16px;
-
-color: #697281;
-color: color(display-p3 0.420 0.447 0.502);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
-
-width: 350px;
-height: 252px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px 0px;
-gap: 12px;
-
-width: 350px;
-height: 56px;
-
-border-bottom: 1px solid rgba(15, 32, 71, 0.180392);
-border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4px 0px 0px;
-
-width: 8.49px;
-height: 12.49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 6px;
-height: 6px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Designed new shared paths on both sides of Campbell Road. */
-
-width: 329.51px;
-height: 40px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* or 20px */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px 0px;
-gap: 12px;
-
-width: 350px;
-height: 56px;
-
-border-bottom: 1px solid rgba(15, 32, 71, 0.180392);
-border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4px 0px 0px;
-
-width: 8.49px;
-height: 12.49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 6px;
-height: 6px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Provided a continuous connection through the culvert under Campbell Road Bridge. */
-
-width: 329.51px;
-height: 40px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* or 20px */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px 0px;
-gap: 12px;
-
-width: 350px;
-height: 36px;
-
-border-bottom: 1px solid rgba(15, 32, 71, 0.180392);
-border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4px 0px 0px;
-
-width: 8.49px;
-height: 12.49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 6px;
-height: 6px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Pedestrian lighting designed to limit spill lighting. */
-
-width: 329.51px;
-height: 20px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* identical to box height, or 20px */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Frame */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 8px 0px;
-gap: 12px;
-
-width: 350px;
-height: 56px;
-
-border-bottom: 1px solid rgba(15, 32, 71, 0.180392);
-border-bottom: 1px solid color(display-p3 0.075 0.125 0.267 / 0.180392);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 4px 0px 0px;
-
-width: 8.49px;
-height: 12.49px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 6px;
-height: 6px;
-
-background: #CE1A00;
-background: color(display-p3 0.741 0.192 0.086);
-transform: rotate(45deg);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Underpass drainage designed using the ILSAX model in DRAINS. */
-
-width: 329.51px;
-height: 40px;
-
-font-family: 'Figtree';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* or 20px */
-
-color: #344153;
-color: color(display-p3 0.216 0.255 0.318);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 1;
-
-
-/* Gallery-Section */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 20px;
-gap: 32px;
-
-width: 390px;
-height: 1085px;
-
-background: #F6F8FC;
-background: color(display-p3 0.965 0.973 0.988);
-
-/* Inside auto layout */
-flex: none;
-order: 4;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 12px;
-
-width: 350px;
-height: 18px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 04 */
-
-width: 18px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Line */
-
-box-sizing: border-box;
-
-width: 40px;
-height: 0px;
-
-border: 1px solid #0F2047;
-border: 1px solid color(display-p3 0.075 0.125 0.267);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-
-/* GALLERY */
-
-width: 268px;
-height: 16px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
-text-transform: uppercase;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 1;
-
-
-/* Project Photography */
-
-width: 350px;
-height: 35px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 35px;
-
-color: #333333;
-color: color(display-p3 0.200 0.200 0.200);
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
-
-width: 350px;
-height: 928px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 350px;
-height: 220px;
-
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 350px;
-height: 220px;
-
-background: url(IMG_4521.jpg), url(image.jpg);
-opacity: 0.9;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 350px;
-height: 220px;
-
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 350px;
-height: 220px;
-
-background: url(CH 10.jpg), url(image.jpg);
-opacity: 0.9;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 350px;
-height: 220px;
-
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
-
-/* Inside auto layout */
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 350px;
-height: 220px;
-
-background: url(CH 40.jpg), url(image.jpg);
-opacity: 0.9;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-width: 350px;
-height: 220px;
-
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
-
-/* Inside auto layout */
-flex: none;
-order: 3;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-width: 350px;
-height: 220px;
-
-background: url(IMG_4523.jpg), url(image.jpg);
-opacity: 0.9;
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-/* Related-Section */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-padding: 20px;
-gap: 32px;
-
-width: 390px;
-height: 837px;
-
-background: #FFFFFF;
-background: color(display-p3 1.000 1.000 1.000);
-
-/* Inside auto layout */
-flex: none;
-order: 5;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 12px;
-
-width: 350px;
-height: 18px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
-
-/* 05 */
-
-width: 17px;
-height: 18px;
-
-font-family: 'Outfit';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 18px;
-/* identical to box height */
-
-color: #0F2047;
-color: color(display-p3 0.075 0.125 0.267);
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-
-/* Line */
-
-box-sizing: border-box;
-
-width: 40px;
-height: 0px;
-
-border: 1px solid #0F2047;
-border: 1px solid color(display-p3 0.075 0.125 0.267);
+border: 1px solid #333333;
+border: 1px solid color(display-p3 0.200 0.200 0.200);
 
 /* Inside auto layout */
 flex: none;
@@ -7384,14 +3244,16 @@ flex-grow: 0;
 
 /* PROJECTS */
 
-width: 269px;
-height: 16px;
+width: 89px;
+height: 18px;
 
 font-family: 'Outfit';
 font-style: normal;
-font-weight: 600;
-font-size: 13px;
-line-height: 16px;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+letter-spacing: 3px;
 text-transform: uppercase;
 
 color: #333333;
@@ -7401,30 +3263,10 @@ color: color(display-p3 0.200 0.200 0.200);
 /* Inside auto layout */
 flex: none;
 order: 2;
-flex-grow: 1;
-
-
-/* Frame */
-
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 16px;
-
-width: 350px;
-height: 35px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
 flex-grow: 0;
 
 
-/* Related Work */
+/* Featured Work */
 
 width: 350px;
 height: 35px;
@@ -7441,8 +3283,364 @@ color: color(display-p3 0.200 0.200 0.200);
 
 /* Inside auto layout */
 flex: none;
-order: 0;
+order: 1;
 align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319081 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+align-content: center;
+padding: 0px;
+gap: 8px;
+
+width: 1285.63px;
+height: 38px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Component 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 4px;
+
+width: 47px;
+height: 38px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+border-radius: 0px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* All */
+
+width: 15px;
+height: 14px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.682292px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 2 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9.48148px 14.8148px;
+gap: 5.93px;
+
+width: 146.63px;
+height: 38px;
+
+border: 0.23px solid #0F2047;
+border: 0.23px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Engineering & Design */
+
+width: 117px;
+height: 14px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.682292px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 4 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 4px;
+
+width: 209px;
+height: 38px;
+
+border: 0.227431px solid #0F2047;
+border: 0.227431px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Project & Program Management */
+
+width: 177px;
+height: 14px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.682292px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 6 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 4px;
+
+width: 209px;
+height: 38px;
+
+border: 0.227431px solid #0F2047;
+border: 0.227431px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* Project Verification & Assurance */
+
+width: 177px;
+height: 14px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.682292px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 3 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 4px;
+
+width: 208px;
+height: 38px;
+
+border: 0.227431px solid #0F2047;
+border: 0.227431px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+
+
+/* Asset Management & Inspection */
+
+width: 176px;
+height: 14px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.682292px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 5 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 4px;
+
+width: 213px;
+height: 38px;
+
+border: 0.227431px solid #0F2047;
+border: 0.227431px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 5;
+flex-grow: 0;
+
+
+/* Buildings & Property Engineering */
+
+width: 181px;
+height: 14px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.682292px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 7 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 4px;
+
+width: 205px;
+height: 38px;
+
+border: 0.227431px solid #0F2047;
+border: 0.227431px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 6;
+flex-grow: 0;
+
+
+/* Construction & Project Delivery */
+
+width: 173px;
+height: 14px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 11px;
+line-height: 14px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.682292px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 0;
 
 
@@ -7456,7 +3654,7 @@ padding: 0px;
 gap: 16px;
 
 width: 350px;
-height: 632px;
+height: 1764px;
 
 
 /* Inside auto layout */
@@ -7466,13 +3664,18 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* ProjectCard */
+/* Frame 1321319192 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
 
 width: 350px;
-height: 200px;
+height: 1052px;
 
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
 
 /* Inside auto layout */
 flex: none;
@@ -7481,25 +3684,40 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Image */
+/* ProjectCard */
+
+width: 350px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
 
 position: absolute;
+width: 479px;
+height: 340px;
 left: 0px;
-right: 0px;
 top: 0px;
-bottom: 0px;
 
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(367643603_1564651814069588_2366154985172353097_n.jpg), url(image.jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(367643603_1564651814069588_2366154985172353097_n.jpg), url(image.jpg);
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(IMG_1163.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(IMG_1163.jpg);
 
 
-/* Campbell St Shared Path Upgrade -M5 Project (Stage 3) */
+/* Campbell Street Shared Path Upgrade (M5 Project – Stage 3) */
 
 position: absolute;
-width: 310px;
+width: 248px;
 height: 40px;
 left: 20px;
-bottom: 20px;
+top: 279.44px;
 
 font-family: 'Outfit';
 font-style: normal;
@@ -7512,13 +3730,34 @@ color: color(display-p3 1.000 1.000 1.000);
 
 
 
+/* Engineering & Design */
+
+position: absolute;
+width: 151px;
+height: 13px;
+left: 20px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
 /* ProjectCard */
 
 width: 350px;
-height: 200px;
+height: 340px;
 
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
 
 /* Inside auto layout */
 flex: none;
@@ -7527,31 +3766,52 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Image */
+/* Image (Metropolitan Bridge Rehabilitation) */
 
 position: absolute;
-left: 0px;
-right: 0px;
+width: 479px;
+height: 340px;
+left: 0.33px;
 top: 0px;
-bottom: 0px;
 
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(IMG_9432.jpg), url(image.jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(IMG_9432.jpg), url(image.jpg);
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(20220802_232028640_iOS.jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(20220802_232028640_iOS.jpg);
 
 
-/* Dunmore St & Station St Junction Upgrade, Wentworthville */
+/* Bruce Highway Upgrade - Caboolture-Bribie Island Road to Steve Irwin Way */
 
 position: absolute;
-width: 310px;
-height: 40px;
+width: 248px;
+height: 60px;
 left: 20px;
-bottom: 20px;
+top: 259.44px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 600;
 font-size: 16px;
 line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project & Program Management */
+
+position: absolute;
+width: 225px;
+height: 13px;
+left: 20.33px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
 
 color: #FFFFFF;
 color: color(display-p3 1.000 1.000 1.000);
@@ -7561,10 +3821,10 @@ color: color(display-p3 1.000 1.000 1.000);
 /* ProjectCard */
 
 width: 350px;
-height: 200px;
+height: 340px;
 
-background: #08142A;
-background: color(display-p3 0.043 0.078 0.157);
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
 
 /* Inside auto layout */
 flex: none;
@@ -7573,25 +3833,25 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Image */
+/* Image (Urban Stormwater Management System) */
 
 position: absolute;
-left: 0px;
-right: 0px;
+width: 479px;
+height: 340px;
+left: -0.33px;
 top: 0px;
-bottom: 0px;
 
-background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(unnamed (1).jpg);
-background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.5), color(display-p3 0.000 0.000 0.000 / 0.5)), url(unnamed (1).jpg);
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (1).png);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (1).png);
 
 
-/* Design of Retaining Walls at King St & Banksia St- Bayside Council  */
+/* Showground Rd & Carrington Rd Intersection Upgrade */
 
 position: absolute;
-width: 310px;
+width: 235px;
 height: 40px;
-left: 20px;
-bottom: 20px;
+left: 20.67px;
+top: 280px;
 
 font-family: 'Outfit';
 font-style: normal;
@@ -7604,37 +3864,379 @@ color: color(display-p3 1.000 1.000 1.000);
 
 
 
-/* Frame */
+/* Project & Program Management */
+
+position: absolute;
+width: 225px;
+height: 13px;
+left: 19.67px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 350px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image (Hunter Valley Renewable Energy Hub) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (3).jpg);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (3).jpg);
+
+
+/* Richmond Rd Service Road & Culvert Extension */
+
+position: absolute;
+width: 251px;
+height: 40px;
+left: 20px;
+top: 279.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Project Verification & Assurance */
+
+position: absolute;
+width: 230px;
+height: 13px;
+left: 20px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* ProjectCard */
+
+width: 350px;
+height: 340px;
+
+background: #090D15;
+background: color(display-p3 0.039 0.051 0.078);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Image (Metropolitan Bridge Rehabilitation) */
+
+position: absolute;
+width: 479px;
+height: 340px;
+left: 0.33px;
+top: 0px;
+
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(unnamed (9).png);
+background: linear-gradient(0deg, color(display-p3 0.000 0.000 0.000 / 0.6), color(display-p3 0.000 0.000 0.000 / 0.6)), url(unnamed (9).png);
+
+
+/* Bridge Portfolio Management – RMS Stewardship Maintenance Contract */
+
+position: absolute;
+width: 233px;
+height: 60px;
+left: 20px;
+top: 259.44px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Asset Management & Inspection */
+
+position: absolute;
+width: 226px;
+height: 13px;
+left: 20.33px;
+top: 30px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+font-size: 10px;
+line-height: 13px;
+/* identical to box height */
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+
+/* Frame 1321319195 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+width: 350px;
+height: 90px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Showing 1 - 09 of 24 projects */
+
+width: 350px;
+height: 20px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+color: #333333;
+color: color(display-p3 0.200 0.200 0.200);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Frame 1321319194 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 20px;
+
+width: 350px;
+height: 50px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Previous */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* ic:sharp-navigate-next */
+
+width: 20px;
+height: 20px;
+
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 33.25%;
+right: 35.88%;
+top: 25%;
+bottom: 25%;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Frame 1321319193 */
 
 /* Auto layout */
 display: flex;
 flex-direction: row;
 align-items: center;
 padding: 0px;
-gap: 8px;
+gap: 3px;
 
-width: 109px;
-height: 16px;
+width: 209px;
+height: 50px;
 
 
 /* Inside auto layout */
 flex: none;
-order: 3;
+order: 1;
 flex-grow: 0;
 
 
-/* ALL PROJECTS */
+/* 1 */
 
-width: 85px;
-height: 15px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 1 */
+
+width: 5px;
+height: 18px;
 
 font-family: 'Outfit';
 font-style: normal;
 font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-letter-spacing: 0.02em;
-text-transform: uppercase;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #FFFFFF;
+color: color(display-p3 1.000 1.000 1.000);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 2 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 2 */
+
+width: 8px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
 
 color: #0F2047;
 color: color(display-p3 0.075 0.125 0.267);
@@ -7646,43 +4248,147 @@ order: 0;
 flex-grow: 0;
 
 
-/* Icon */
+/* 3 */
 
-width: 16px;
-height: 16px;
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* 3 */
+
+width: 8px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
 
 
 /* Inside auto layout */
 flex: none;
-order: 1;
+order: 0;
+flex-grow: 0;
+
+
+/* 4 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+
+
+/* 3 */
+
+width: 8px;
+height: 18px;
+
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 3px;
+
+color: #0F2047;
+color: color(display-p3 0.075 0.125 0.267);
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* next */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 25px;
+gap: 10px;
+
+width: 50px;
+height: 50px;
+
+border: 1px solid #0F2047;
+border: 1px solid color(display-p3 0.075 0.125 0.267);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* ic:sharp-navigate-next */
+
+width: 20px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
 flex-grow: 0;
 
 
 /* Vector */
 
-box-sizing: border-box;
-
 position: absolute;
-left: 20.83%;
-right: 20.83%;
-top: 50%;
-bottom: 50%;
+left: 35.88%;
+right: 33.25%;
+top: 25%;
+bottom: 25%;
 
-border: 1.25px solid #0F2047;
-border: 1.25px solid color(display-p3 0.075 0.125 0.267);
-
-
-/* Vector */
-
-box-sizing: border-box;
-
-position: absolute;
-left: 50%;
-right: 20.83%;
-top: 20.85%;
-bottom: 20.81%;
-
-border: 1.25px solid #0F2047;
-border: 1.25px solid color(display-p3 0.075 0.125 0.267);
+background: #0F2047;
+background: color(display-p3 0.075 0.125 0.267);
 
 }

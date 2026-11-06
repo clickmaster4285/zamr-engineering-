@@ -1,23 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { Barlow } from "next/font/google";
 import {
-  projects,
-  projectFilters,
-  projectFilterCategoryMap,
   projectsHeroStats,
   projectsHowWeDeliver,
 } from "@/mockData/projects";
 import Contacts from "@/components/Contacts";
-import {
-  FeaturedProjectsGrid,
-  ProjectFilterPills,
-  type FeaturedProjectItem,
-} from "@/components/projects/FeaturedProjectsGrid";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import AllProjectsFeaturedWork from "@/components/projects/AllProjectsFeaturedWork";
 
 const barlow = Barlow({
   weight: ["500", "700", "900"],
@@ -25,49 +15,7 @@ const barlow = Barlow({
   display: "swap",
 });
 
-const INITIAL_COUNT = 6;
-const LOAD_MORE_COUNT = 3;
-
-function toFeaturedItems(
-  items: typeof projects,
-): FeaturedProjectItem[] {
-  return items.map((p, idx) => ({
-    slug: p.slug,
-    index: String(idx + 1).padStart(2, "0"),
-    title: p.title,
-    category: p.category,
-    shortDescription: p.shortDescription,
-    image: p.heroImage,
-  }));
-}
-
 export default function ProjectsPage() {
-  const [activeFilter, setActiveFilter] = useState(projectFilters[0]);
-  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
-
-  const filteredProjects =
-    activeFilter === "All"
-      ? projects
-      : projects.filter((p) => {
-          const categories =
-            projectFilterCategoryMap[activeFilter.toLowerCase()];
-          return categories?.some(
-            (c) => c.toLowerCase() === p.category.toLowerCase(),
-          );
-        });
-
-  const displayedProjects = filteredProjects.slice(0, visibleCount);
-  const hasMore = visibleCount < filteredProjects.length;
-
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + LOAD_MORE_COUNT);
-  };
-
-  const handleFilterChange = (filter: string) => {
-    setActiveFilter(filter);
-    setVisibleCount(INITIAL_COUNT);
-  };
-
   return (
     <main className="w-full flex flex-col items-center">
       {/* ──────── HERO ──────── */}
@@ -126,43 +74,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* ──────── PROJECTS SECTION ──────── */}
-      <section className="w-full bg-[var(--bg-light)] px-4 py-12 sm:px-6 lg:px-[77px] lg:py-[77px] 2xl:px-[130px] 2xl:py-[130px]">
-        <div className="flex w-full flex-col gap-10 lg:gap-[60px]">
-          <div className="flex flex-col gap-6 lg:gap-[30px]">
-            <div className="flex flex-col gap-6 lg:gap-[30px]">
-              <div className="flex items-center gap-4">
-                <span className="text-base font-medium tracking-[3px] text-[var(--color-primary)]">
-                  01
-                </span>
-                <span className="h-px w-[104px] bg-[var(--bg-hero)]" />
-                <span className="text-base font-medium tracking-[3px] uppercase text-[var(--text-dark)]">
-                  PROJECTS
-                </span>
-              </div>
-              <h2 className="text-3xl font-bold leading-tight text-[var(--text-dark)] sm:text-4xl md:text-[56px] md:leading-[71px]">
-                Featured Work
-              </h2>
-            </div>
-
-            <ProjectFilterPills
-              filters={projectFilters}
-              activeFilter={activeFilter}
-              onFilterChange={handleFilterChange}
-            />
-
-            <FeaturedProjectsGrid
-              projects={toFeaturedItems(filteredProjects)}
-              limit={3}
-              priorityFirst
-            />
-          </div>
-
-          <div className="flex justify-end">
-            <AllProjectsLink />
-          </div>
-        </div>
-      </section>
+      <AllProjectsFeaturedWork />
 
       {/* ──────── HOW WE DELIVER ──────── */}
       <section className="w-full bg-[var(--bg-hero)] px-4 py-12 sm:px-6 lg:px-[130px] lg:py-[130px]">
@@ -201,21 +113,5 @@ export default function ProjectsPage() {
       </section>
       <Contacts sectionNumber="03" />
     </main>
-  );
-}
-function AllProjectsLink({ className = "" }: { className?: string }) {
-  return (
-    <Link
-      href="/projects"
-      className={`group inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[3px] text-[var(--color-primary)] transition-colors duration-300 hover:text-[var(--color-secondary)] lg:gap-[5px] lg:text-[13px] lg:leading-4 lg:tracking-[1.78px] 2xl:gap-2 2xl:text-base 2xl:leading-5 2xl:tracking-[3px] ${className}`}
-    >
-      Load More
-      <span className="transition-transform duration-300 group-hover:translate-x-[5px]">
-        <ArrowRight
-          className="h-4 w-4 lg:h-[14px] lg:w-[14px] 2xl:h-6 2xl:w-6"
-          strokeWidth={1.25}
-        />
-      </span>
-    </Link>
   );
 }
