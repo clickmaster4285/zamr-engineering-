@@ -103,7 +103,7 @@ export const projects: ProjectData[] = [
       "Underpass drainage designed using the ILSAX model in DRAINS.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/campbell-street-shared-path-upgrade-m5-project-stage-3/CH%2010.jpg",
       "/images/projects/campbell-street-shared-path-upgrade-m5-project-stage-3/CH%2040.jpg",
@@ -181,7 +181,7 @@ export const projects: ProjectData[] = [
       "Aligned with Council standards and Austroads guidelines.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/kurrajong-road-upgrade-prestons-strategic-design/image090.jpg",
       "/images/projects/kurrajong-road-upgrade-prestons-strategic-design/image091.jpg",
@@ -263,7 +263,7 @@ export const projects: ProjectData[] = [
       "Impact on traffic signal infrastructure and utility covers minimised.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/dunmore-st-station-st-junction-upgrade-wentworthville/20220802_231947587_iOS.jpg",
       "/images/projects/dunmore-st-station-st-junction-upgrade-wentworthville/20220802_232017398_iOS.jpg",
@@ -332,7 +332,7 @@ export const projects: ProjectData[] = [
       "Construction verification requirements specified.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/king-st-banksia-st-retaining-walls-design-bayside-council/banksia-street-existing-wall.jpg",
       "/images/projects/king-st-banksia-st-retaining-walls-design-bayside-council/banksia-street-road-verge.jpg",
@@ -402,7 +402,7 @@ export const projects: ProjectData[] = [
       "Emerging program, variation and EOT issues reported to TfNSW.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/m4-smart-motorway-stage-2/00_M4SM_Hero-1.jpg",
       "/images/projects/m4-smart-motorway-stage-2/01_M4SM-845x684.jpg",
@@ -474,7 +474,7 @@ export const projects: ProjectData[] = [
       "Tender review completed for the two major infrastructure contracts.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: ["/images/team/noimage.png"],
     relatedNumber: "05",
     relatedHeading: "Related Work",
@@ -536,7 +536,7 @@ export const projects: ProjectData[] = [
       "Contractor works monitored for contract and safety compliance.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/intersection-upgrade-showground-road-carrington-road-castle-hill/unnamed%20%281%29.png",
       "/images/projects/intersection-upgrade-showground-road-carrington-road-castle-hill/unnamed%20%282%29.png",
@@ -603,7 +603,7 @@ export const projects: ProjectData[] = [
       "Full handover documentation compiled, including as-built drawings and test results.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/a40-victoria-road-kissing-point-road-nsr2-intersection-upgrade-melrose-park/unnamed%20%281%29.jpg",
       "/images/projects/a40-victoria-road-kissing-point-road-nsr2-intersection-upgrade-melrose-park/unnamed%20%2810%29.jpg",
@@ -684,7 +684,7 @@ export const projects: ProjectData[] = [
       "Full certification issued from project plans through to final verification.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/mamre-road-abbotts-road-traffic-signal-installation/unnamed%20%2817%29.jpg",
       "/images/projects/mamre-road-abbotts-road-traffic-signal-installation/unnamed%20%2818%29.jpg",
@@ -754,7 +754,7 @@ export const projects: ProjectData[] = [
       "Certification provided from project plans through to final verification.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/richmond-road-service-road-culvert-extension/unnamed%20%281%29.jpg",
       "/images/projects/richmond-road-service-road-culvert-extension/unnamed%20%282%29.jpg",
@@ -825,7 +825,7 @@ export const projects: ProjectData[] = [
       "Construction independently verified against TfNSW QA specifications.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/tongarra-road-church-street-traffic-signal-installation/20260929_115536.jpg",
       "/images/projects/tongarra-road-church-street-traffic-signal-installation/20260929_120151.jpg",
@@ -895,7 +895,7 @@ export const projects: ProjectData[] = [
       "Full handover documentation compiled, including as-built drawings and test results.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/walter-street-road-reconstruction-utility-upgrade/unnamed%20%281%29.jpg",
       "/images/projects/walter-street-road-reconstruction-utility-upgrade/unnamed%20%282%29.jpg",
@@ -969,7 +969,7 @@ export const projects: ProjectData[] = [
       "Construction delivery overseen, with client funding and variations managed.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/bridge-portfolio-management-rms-stewardship-maintenance-contract/unnamed%20%281%29.png",
       "/images/projects/bridge-portfolio-management-rms-stewardship-maintenance-contract/unnamed%20%282%29.png",
@@ -1041,7 +1041,7 @@ export const projects: ProjectData[] = [
       "Findings compiled into a formal report with photographs, sketches and test results.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/investigation-condition-assessment-renewal-works-program-liverpool-council-bridges/unnamed%20%281%29.jpg",
       "/images/projects/investigation-condition-assessment-renewal-works-program-liverpool-council-bridges/unnamed%20%282%29.jpg",
@@ -1114,7 +1114,7 @@ export const projects: ProjectData[] = [
       "Vibration and movement monitoring recommended, with trigger levels and responses.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/rickabys-bridge-temporary-creek-crossing/DJI_20260803102432_0105_D.webp",
       "/images/projects/rickabys-bridge-temporary-creek-crossing/DJI_20260803130810_0136_D.webp",
@@ -1184,7 +1184,7 @@ export const projects: ProjectData[] = [
       "Report issued on suitability for continued service and bushfire access.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/wyong-creek-bridge-structural-assessment/12.%20Footbridge%20Kurrajong.webp",
       "/images/projects/wyong-creek-bridge-structural-assessment/14.%20Footbridge%20Kurrajong.webp",
@@ -1256,7 +1256,7 @@ export const projects: ProjectData[] = [
       "Construction phase support provided, including site inspections.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/bexley-child-care-centre/12.webp",
       "/images/projects/bexley-child-care-centre/20200313_151323.webp",
@@ -1353,7 +1353,7 @@ export const projects: ProjectData[] = [
       "Pedestrian walkway and upgraded wall sheeting added.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/cnhi-electrical-charging-station-upgrade/unnamed%20%281%29.jpg",
       "/images/projects/cnhi-electrical-charging-station-upgrade/unnamed%20%281%29.png",
@@ -1427,7 +1427,7 @@ export const projects: ProjectData[] = [
       "Documentation coordinated for Construction Certificate approval.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/geeta-cafe-restaurant-development/unnamed%20%281%29.png",
       "/images/projects/geeta-cafe-restaurant-development/unnamed%20%282%29.png",
@@ -1493,7 +1493,7 @@ export const projects: ProjectData[] = [
       "Construction drawings and calculations prepared for approval.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/hunter-valley-bus-depot-stormwater-design/DJI_20240724164500_0013_D.webp",
       "/images/projects/hunter-valley-bus-depot-stormwater-design/unnamed%20%281%29.png",
@@ -1563,7 +1563,7 @@ export const projects: ProjectData[] = [
       "Landscaping, water feature and public artworks completed.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/pinegrove-memorial-park-road-rehabilitation/unnamed%20%281%29.jpg",
       "/images/projects/pinegrove-memorial-park-road-rehabilitation/unnamed%20%281%29.png",
@@ -1634,7 +1634,7 @@ export const projects: ProjectData[] = [
       "Line marking and speed humps completed for safer site movement.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/cnhi-safety-improvement-works/20200327_090842.webp",
       "/images/projects/cnhi-safety-improvement-works/20200401_140625.webp",
@@ -1781,7 +1781,7 @@ export const projects: ProjectData[] = [
       "Drainage inspected by CCTV and reported to TfNSW.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/kelso-to-raglan-stormwater-drainage-culvert-installation/20220907_110123695_iOS.jpg",
       "/images/projects/kelso-to-raglan-stormwater-drainage-culvert-installation/20220907_110516366_iOS.jpg",
@@ -1903,7 +1903,7 @@ export const projects: ProjectData[] = [
       "Existing shade trees protected, with new trees planted.",
     ],
     galleryNumber: "04",
-    galleryHeading: "Project Gallery",
+    galleryHeading: "Project Photography",
     galleryImages: [
       "/images/projects/nepean-avenue-pathway-construction/unnamed%20%281%29.jpg",
       "/images/projects/nepean-avenue-pathway-construction/unnamed%20%282%29.jpg",
