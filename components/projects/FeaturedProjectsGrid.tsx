@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
+import ProjectImage from "@/components/projects/ProjectImage";
 
 export interface FeaturedProjectItem {
   slug: string;
@@ -71,7 +71,7 @@ export function FeaturedProjectCard({
             : "h-[320px] lg:h-[184px] 2xl:h-[311px]"
         }`}
       >
-        <Image
+        <ProjectImage
           src={project.image}
           alt={project.title}
           fill

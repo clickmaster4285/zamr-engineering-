@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -9,6 +8,7 @@ import {
   projectFilters,
   projectFilterCategoryMap,
 } from "@/mockData/projects";
+import ProjectImage from "@/components/projects/ProjectImage";
 
 const PAGE_SIZE = 9;
 
@@ -31,7 +31,7 @@ function AllProjectsCard({
       onClick={() => router.push(`/projects/${slug}`)}
       className="group relative h-[340px] w-full overflow-hidden bg-[var(--text-heading)] text-left"
     >
-      <Image
+      <ProjectImage
         src={image}
         alt={title}
         fill

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Barlow } from "next/font/google";
 import { clientLogos } from "@/mockData/landing";
 import { defaultHeroImage } from "@/mockData/projects";
+import ProjectImage from "@/components/projects/ProjectImage";
 
 const barlow = Barlow({
   weight: ["600", "700"],
@@ -44,7 +45,7 @@ export default function ProjectHero({
   return (
     <section className="relative w-full">
       <div className="relative flex min-h-[866px] w-full flex-col overflow-hidden lg:min-h-[600px] 2xl:min-h-[732px]">
-        <Image src={image} alt={title} fill priority className="object-cover" />
+        <ProjectImage src={image} alt={title} fill priority className="object-cover" />
         <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-[1728px] flex-1 flex-col px-5 pb-5 pt-[165px] lg:px-[77px] lg:pb-8 lg:pt-[226px] 2xl:px-[130px] 2xl:pb-[49px] 2xl:pt-[246px]">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ProjectImage from "@/components/projects/ProjectImage";
 
 interface Props {
   number: string;
@@ -33,7 +33,7 @@ export default function Gallery({ number, heading, images }: Props) {
             <div className="flex flex-col gap-4 lg:flex-row lg:gap-[7px] 2xl:gap-3">
               {galleryImages[0] && (
                 <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] lg:h-[237px] lg:flex-1 2xl:h-[400px] 2xl:flex-[2.16]">
-                  <Image
+                  <ProjectImage
                     src={galleryImages[0]}
                     alt="Gallery image 1"
                     fill
@@ -44,7 +44,7 @@ export default function Gallery({ number, heading, images }: Props) {
               )}
               {galleryImages[1] && (
                 <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] lg:h-[237px] lg:flex-1 2xl:h-[400px]">
-                  <Image
+                  <ProjectImage
                     src={galleryImages[1]}
                     alt="Gallery image 2"
                     fill
@@ -58,7 +58,7 @@ export default function Gallery({ number, heading, images }: Props) {
             {galleryImages[2] && (
               <div className="flex flex-col gap-4 lg:flex-row lg:gap-[7px] 2xl:gap-3">
                 <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] lg:h-[190px] lg:flex-1 2xl:h-[320px]">
-                  <Image
+                  <ProjectImage
                     src={galleryImages[2]}
                     alt="Gallery image 3"
                     fill
@@ -68,7 +68,7 @@ export default function Gallery({ number, heading, images }: Props) {
                 </div>
                 {galleryImages[3] && (
                   <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] lg:h-[190px] lg:flex-1 2xl:h-[320px] 2xl:flex-[2.16]">
-                    <Image
+                    <ProjectImage
                       src={galleryImages[3]}
                       alt="Gallery image 4"
                       fill

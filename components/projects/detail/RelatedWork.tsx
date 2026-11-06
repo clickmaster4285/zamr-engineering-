@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { projects as allProjects, normalizeSlug } from "@/mockData/projects";
+import ProjectImage from "@/components/projects/ProjectImage";
 
 interface Props {
   number: string;
@@ -60,7 +60,7 @@ export default function RelatedWork({ number, heading, projects }: Props) {
                   isAvailable ? "cursor-pointer" : "cursor-default"
                 }`}
               >
-                <Image
+                <ProjectImage
                   src={project.image}
                   alt={project.title}
                   fill
