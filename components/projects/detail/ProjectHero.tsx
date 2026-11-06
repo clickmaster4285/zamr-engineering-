@@ -49,34 +49,36 @@ export default function ProjectHero({
         <div className="absolute inset-0 bg-[var(--overlay-image-hero)]" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-[1728px] flex-1 flex-col px-5 pb-5 pt-[165px] lg:px-[77px] lg:pb-8 lg:pt-[226px] 2xl:px-[130px] 2xl:pb-[49px] 2xl:pt-[246px]">
-          <div className="flex items-center gap-3.5 text-[var(--text-light-subtle)]">
-            <Link
-              href="/projects"
-              className="font-normal text-[12px] leading-[15px] tracking-[2px] lg:text-[14px] lg:leading-[18px] lg:tracking-[3px] 2xl:text-[18px] 2xl:leading-[23px]"
-            >
-              ALL PROJECTS
-            </Link>
-            <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-white/85" />
-            {category && (
-              <span className="font-normal text-[12px] uppercase leading-[15px] tracking-[2px] lg:text-[14px] lg:leading-[18px] lg:tracking-[3px] 2xl:text-[18px] 2xl:leading-[23px]">
-                {category}
-              </span>
-            )}
-          </div>
+          <div className="mt-auto mb-4 flex max-w-[1174px] flex-col 2xl:mb-[30px]">
+            <div className="flex items-center gap-3.5 text-[var(--text-light-subtle)]">
+              <Link
+                href="/projects"
+                className="font-normal text-[12px] leading-[15px] tracking-[2px] lg:text-[14px] lg:leading-[18px] lg:tracking-[3px] 2xl:text-[18px] 2xl:leading-[23px]"
+              >
+                ALL PROJECTS
+              </Link>
+              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-white/85" />
+              {category && (
+                <span className="font-normal text-[12px] uppercase leading-[15px] tracking-[2px] lg:text-[14px] lg:leading-[18px] lg:tracking-[3px] 2xl:text-[18px] 2xl:leading-[23px]">
+                  {category}
+                </span>
+              )}
+            </div>
 
-          <div className="mt-4 flex max-w-[1174px] flex-col gap-4 2xl:mt-[30px]">
-            <h1 className="font-bold text-white text-[36px] leading-[41px] lg:text-[47px] lg:leading-[60px] 2xl:text-[80px] 2xl:leading-[101px]">
-              {title}
-            </h1>
-            {subtitle && (
-              <p className="font-medium text-[var(--text-light-subtle)] text-[16px] leading-5 lg:hidden">
-                {subtitle}
-              </p>
-            )}
+            <div className="mt-4 flex flex-col gap-4 2xl:mt-[30px]">
+              <h1 className="font-bold text-white text-[36px] leading-[41px] lg:text-[47px] lg:leading-[60px] 2xl:text-[80px] 2xl:leading-[101px]">
+                {title}
+              </h1>
+              {subtitle && (
+                <p className="font-medium text-[var(--text-light-subtle)] text-[16px] leading-5 lg:hidden">
+                  {subtitle}
+                </p>
+              )}
+            </div>
           </div>
 
           {visibleStats.length > 0 && (
-            <div className="mt-auto bg-[var(--bg-project-detail-stats)]">
+            <div className="bg-[var(--bg-project-detail-stats)]">
               <div className="flex flex-col lg:hidden">
                 {client && (
                   <div className="flex flex-col gap-3 border-b border-white/10 px-5 py-5">
