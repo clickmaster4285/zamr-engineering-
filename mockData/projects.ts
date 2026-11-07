@@ -287,7 +287,7 @@ export const projects: ProjectData[] = [
   },
 
   // =================================================================
-  // 04 — King St & Banksia St Retaining Walls (EXISTING — unchanged)
+  // 04 — King St & Banksia St Retaining Walls
   // =================================================================
   {
     slug: "king-st-banksia-st-retaining-walls-design-bayside-council",
@@ -299,6 +299,8 @@ export const projects: ProjectData[] = [
     heroImage: "/images/projects/king-st-banksia-st-retaining-walls-design-bayside-council/banksia-street-existing-wall.jpg",
     stats: [
       { label: "CLIENT", value: "Indus Engineering" },
+      { label: "VALUE", value: "---" },
+
       { label: "DURATION", value: "September 2026 - Current" },
       { label: "LOCATION", value: "Rockdale NSW; Pagewood NSW" },
       { label: "SCOPE", value: "Structural and geotechnical design" },
@@ -1019,6 +1021,7 @@ export const projects: ProjectData[] = [
     heroImage: "/images/projects/investigation-condition-assessment-renewal-works-program-liverpool-council-bridges/unnamed-1.jpg",
     stats: [
       { label: "CLIENT", value: "Liverpool City Council" },
+      { label: "VALUE", value: "---" },
       { label: "DURATION", value: "June 2025 - December 2025" },
       { label: "LOCATION", value: "Liverpool, NSW" },
       { label: "SCOPE", value: "Bridge Inspection" },
@@ -1094,6 +1097,7 @@ export const projects: ProjectData[] = [
     heroImage: "/images/projects/rickabys-bridge-temporary-creek-crossing/DJI_20260803102432_0105_D.webp",
     stats: [
       { label: "CLIENT", value: "BMD" },
+      { label: "VALUE", value: "---" },
       { label: "DURATION", value: "May 2026 - Current" },
       { label: "LOCATION", value: "North Richmond, NSW" },
       { label: "SCOPE", value: "Condition assessment" },
@@ -1166,6 +1170,7 @@ export const projects: ProjectData[] = [
     heroImage: "/images/projects/wyong-creek-bridge-structural-assessment/12-Footbridge-Kurrajong.webp",
     stats: [
       { label: "CLIENT", value: "Metric Engineering" },
+      { label: "VALUE", value: "---" },
       { label: "DURATION", value: "May 2026 - Current" },
       { label: "LOCATION", value: "Wyong Creek, NSW" },
       { label: "SCOPE", value: "Structural condition assessment and load capacity verification" },
@@ -1482,6 +1487,7 @@ export const projects: ProjectData[] = [
     heroImage: "/images/projects/hunter-valley-bus-depot-stormwater-design/DJI_20240724164500_0013_D.webp",
     stats: [
       { label: "CLIENT", value: "SD Group" },
+      { label: "VALUE", value: "---" },
       { label: "DURATION", value: "June 2021" },
       { label: "LOCATION", value: "Morisset, NSW" },
       { label: "SCOPE", value: "Stormwater drainage design" },
