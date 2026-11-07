@@ -1,9 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Barlow } from "next/font/google";
-import { clientLogos } from "@/mockData/landing";
 import { defaultHeroImage } from "@/mockData/projects";
 import ProjectImage from "@/components/projects/ProjectImage";
 
@@ -23,6 +21,7 @@ interface Props {
   title: string;
   subtitle: string;
   category?: string;
+  clientLogo?: string;
   stats?: Stat[];
 }
 
@@ -31,6 +30,7 @@ export default function ProjectHero({
   title,
   subtitle,
   category,
+  clientLogo,
   stats = [],
 }: Props) {
   const visibleStats = stats.filter(
@@ -38,10 +38,6 @@ export default function ProjectHero({
   );
   const client = visibleStats.find((stat) => stat.label.toLowerCase() === "client");
   const otherStats = visibleStats.filter((stat) => stat.label.toLowerCase() !== "client");
-  const clientLogo = category
-    ? clientLogos.find((logo) => logo.category === category)
-    : undefined;
-
   return (
     <section className="relative w-full">
       <div className="relative flex min-h-[866px] w-full flex-col overflow-hidden lg:min-h-[600px] 2xl:min-h-[732px]">
@@ -85,19 +81,13 @@ export default function ProjectHero({
                     <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
                       {client.label.toUpperCase()}
                     </span>
-                    {clientLogo ? (
-                      <Image
-                        src={clientLogo.src}
-                        alt={clientLogo.alt}
-                        width={150}
-                        height={57}
-                        className="h-[57px] w-[150px] object-contain object-left"
-                      />
-                    ) : (
-                      <span className={`${barlow.className} text-[18px] font-bold leading-[22px] text-white/[0.82]`}>
-                        {client.value}
-                      </span>
-                    )}
+                    <ProjectImage
+                      src={clientLogo}
+                      alt={`${client.value} logo`}
+                      width={150}
+                      height={57}
+                      className="h-[57px] w-[150px] object-contain object-left"
+                    />
                   </div>
                 )}
                 {otherStats.map((stat, index) => (
@@ -123,19 +113,13 @@ export default function ProjectHero({
                     <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
                       {client.label.toUpperCase()}
                     </span>
-                    {clientLogo ? (
-                      <Image
-                        src={clientLogo.src}
-                        alt={clientLogo.alt}
-                        width={207}
-                        height={79}
-                        className="h-[79px] w-[207px] max-w-full object-contain object-left"
-                      />
-                    ) : (
-                      <span className={`${barlow.className} text-[14px] font-bold leading-[17px] text-white/[0.82]`}>
-                        {client.value}
-                      </span>
-                    )}
+                    <ProjectImage
+                      src={clientLogo}
+                      alt={`${client.value} logo`}
+                      width={207}
+                      height={79}
+                      className="h-[79px] w-[207px] max-w-full object-contain object-left"
+                    />
                   </div>
                 )}
                 {otherStats.map((stat) => (

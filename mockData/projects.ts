@@ -23,6 +23,7 @@ export interface ProjectData {
 
   heroTitle: string;
   heroImage: string;
+  clientLogo?: string;
 
   stats: StatItem[];
 
@@ -233,7 +234,7 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Concept and detailed design" },
       { label: "STATUS", value: "In Progress" },
     ],
-    clientLogo: "/images/clientlogo/EngineeringDesign4",
+    clientLogo: "/images/clientlogo/EngineeringDesign4.png",
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "The Dunmore Street and Station Street Junction Upgrade, funded under the Black Spot Program and delivered by DM Roads and Cumberland City Council, was initiated after accessibility issues were identified at the junction, including steep pram ramps and a bus stop kerb too low for wheelchair ramp deployment.",
@@ -510,7 +511,7 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Project engineering support" },
       { label: "STATUS", value: "In Progress" },
     ],
-    clientLogo: "/images/clientlogo/AssetManagementInspection2.png",
+    clientLogo: "/images/clientlogo/EngineeringDesign1.png",
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "The Australian and NSW Governments jointly funded upgrades to the Showground Road intersections at Carrington Road and De Clambe Drive, Castle Hill, to improve bus reliability, ease congestion and improve safety and access to Hills Showground Station.",
@@ -660,7 +661,7 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Project verification (design & construction)" },
       { label: "STATUS", value: "In Progress" },
     ],
-    clientLogo: "/images/clientlogo/ProjectVerificationAssurance1.png",
+    clientLogo: "/images/team/noimage.png",
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "Traffic signals and associated road works were installed at five intersections in Kemps Creek, including Mamre Road and Abbotts Road, to TfNSW accepted drawings and requirements, delivered by Robson Civil under a developer-led arrangement.",
@@ -872,6 +873,9 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Contractor management support" },
       { label: "STATUS", value: "In Progress" },
     ],
+       clientLogo: "/images/clientlogo/AssetManagementInspection2.png",
+
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "Public domain works at Walter Street, Willoughby, supported an approved residential development of five buildings and 164 units, including the upgrade and relocation of utility services and the reconstruction of the road.",
@@ -946,6 +950,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Bridge Portfolio Management Services" },
       { label: "STATUS", value: "In Progress" },
     ],
+           clientLogo: "/images/clientlogo/EngineeringDesign4.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "The Stewardship Maintenance Contract (SMC) was an outsourced model for maintaining Sydney's roads and bridges, using stewardship principles and performance-based metrics to focus on long-term asset condition, durability and customer experience.",
@@ -1018,6 +1024,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Bridge Inspection" },
       { label: "STATUS", value: "In Progress" },
     ],
+               clientLogo: "/images/clientlogo/AssetManagementInspection1.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "Liverpool City Council is investigating the condition of three bridges, Fifteenth Avenue Road Bridge, Spencer Road Footbridge and Eighth Avenue Road Bridge, after earlier visual inspections found cracking, timber decay and missing components.",
@@ -1091,6 +1099,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Condition assessment" },
       { label: "STATUS", value: "In Progress" },
     ],
+                   clientLogo: "/images/clientlogo/AssetManagementInspection6.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "Temporary access was required within a live creek corridor beneath the Bells Line of Road bridge at North Richmond, including culvert placement and rock fill close to the bridge piers.",
@@ -1161,6 +1171,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Structural condition assessment and load capacity verification" },
       { label: "STATUS", value: "In Progress" },
     ],
+                       clientLogo: "/images/clientlogo/AssetManagementInspection3.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "Wyong Creek Bridge is a private steel truss bridge with a timber deck, providing the sole vehicular access to a rural property in Wyong Creek and required to carry emergency and fire vehicles.",
@@ -1234,6 +1246,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Engineering consultancy services" },
       { label: "STATUS", value: "In Progress" },
     ],
+                           clientLogo: "/images/clientlogo/BuildingsPropertyEngineering6.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "A modern two-storey childcare centre with an underground carpark was developed in Bexley for Charter Hall by Mammoth Projects, designed by Armada Architects to accommodate up to 92 children across 2,200 sqm.",
@@ -1330,6 +1344,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Design and construction" },
       { label: "STATUS", value: "In Progress" },
     ],
+                               clientLogo: "/images/clientlogo/BuildingsPropertyEngineering1.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "The MHE Charging Station Upgrade at the CNHI St Marys depot warehouse was delivered to improve safety, efficiency and storage capacity in the forklift charging area.",
@@ -1404,6 +1420,7 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Engineering and technical services" },
       { label: "STATUS", value: "In Progress" },
     ],
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "A new café and restaurant at Windsor was developed with a commercial kitchen, dining areas, accessible amenities and car parking, in accordance with development consent from Hawkesbury City Council.",
@@ -1470,6 +1487,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Stormwater drainage design" },
       { label: "STATUS", value: "In Progress" },
     ],
+                                       clientLogo: "/images/clientlogo/EngineeringDesign7.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "A bus depot shed was developed at Morisset for Hunter Valley, with SD Group as principal contractor, as part of a broader operational depot with stormwater management and site servicing.",
@@ -1540,6 +1559,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Design and construction" },
       { label: "STATUS", value: "In Progress" },
     ],
+                                           clientLogo: "/images/clientlogo/BuildingsPropertyEngineering2.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "Terra Santa Crypts at Pinegrove Memorial Park, Minchinbury, was initiated to meet growing demand for above-ground burial options in Sydney's western suburbs, offering a dignified and culturally sensitive alternative to in-ground burial.",
@@ -1611,6 +1632,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Design and construction" },
       { label: "STATUS", value: "In Progress" },
     ],
+     clientLogo: "/images/clientlogo/BuildingsPropertyEngineering1.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "Safety upgrades were delivered at the CNH Industrial facility to improve the handling and storage of Dangerous Goods, in accordance with Penrith City Council's Notice of Determination and approved plans.",
@@ -1758,6 +1781,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Construction" },
       { label: "STATUS", value: "In Progress" },
     ],
+         clientLogo: "/images/clientlogo/EngineeringDesign1.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "The Kelso to Raglan Upgrade is part of Transport for NSW's improvements to the Great Western Highway, east of Bathurst, to reduce congestion during events and holiday periods, improve safety and shorten travel times.",
@@ -1880,6 +1905,8 @@ export const projects: ProjectData[] = [
       { label: "SCOPE", value: "Design and construction" },
       { label: "STATUS", value: "In Progress" },
     ],
+             clientLogo: "/images/clientlogo/ConstructionProjectDelivery1.png",
+
     aboutNumber: "01",
     aboutHeading: "What needed to be solved.",
     aboutDescription: "A new 2.6 m wide shared pathway is being delivered along the western side of Nepean Avenue, Penrith, from Tench Reserve to Memorial Avenue, completing the missing link in the Great River Walk.",
@@ -2049,3 +2076,4 @@ export const projectsContactInfo: ProjectsContactInfo = {
   email1: "admin@zamrengineering.com.au",
   email2: "khalid.javed@zamrengineering.com.au",
 };
+  
