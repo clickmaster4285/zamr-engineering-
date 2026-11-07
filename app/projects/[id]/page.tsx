@@ -31,6 +31,7 @@ export default function ProjectDetailPage() {
         title={project.heroTitle}
         subtitle={project.shortDescription}
         category={project.category}
+        clientLogo={project.clientLogo}
         stats={project.stats}
       />
 
