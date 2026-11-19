@@ -1,3 +1,7 @@
+"use client";
+
+import { useCallback, useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProjectImage from "@/components/projects/ProjectImage";
 
 interface Props {
@@ -7,7 +11,39 @@ interface Props {
 }
 
 export default function Gallery({ number, heading, images }: Props) {
-  const galleryImages = images.slice(0, 4);
+  const galleryImages = images.filter((src) => src.trim() !== "");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPortrait, setIsPortrait] = useState(false);
+
+  const count = galleryImages.length;
+  const safeIndex = count > 0 ? Math.min(activeIndex, count - 1) : 0;
+  const activeSrc = galleryImages[safeIndex];
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [images]);
+
+  useEffect(() => {
+    setIsPortrait(false);
+  }, [activeSrc]);
+
+  const goPrev = () => {
+    if (count <= 1) return;
+    setActiveIndex((i) => (i - 1 + count) % count);
+  };
+
+  const goNext = () => {
+    if (count <= 1) return;
+    setActiveIndex((i) => (i + 1) % count);
+  };
+
+  const handleMainLoad = useCallback(
+    (e: React.SyntheticEvent<HTMLImageElement>) => {
+      const img = e.currentTarget;
+      setIsPortrait(img.naturalHeight > img.naturalWidth);
+    },
+    [],
+  );
 
   return (
     <section className="w-full bg-[var(--bg-section)] px-5 py-5 lg:px-[77px] lg:py-[77px] 2xl:px-[130px] 2xl:py-[130px]">
@@ -28,57 +64,69 @@ export default function Gallery({ number, heading, images }: Props) {
           </h2>
         </div>
 
-        {galleryImages.length > 0 && (
-          <div className="flex flex-col gap-4 lg:gap-[7px] 2xl:gap-3">
-            <div className="flex flex-col gap-4 lg:flex-row lg:gap-[7px] 2xl:gap-3">
-              {galleryImages[0] && (
-                <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] lg:h-[237px] lg:flex-1 2xl:h-[400px] 2xl:flex-[2.16]">
-                  <ProjectImage
-                    src={galleryImages[0]}
-                    alt="Gallery image 1"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 1536px) 68vw, (min-width: 1024px) 50vw, 100vw"
-                  />
-                </div>
-              )}
-              {galleryImages[1] && (
-                <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] lg:h-[237px] lg:flex-1 2xl:h-[400px]">
-                  <ProjectImage
-                    src={galleryImages[1]}
-                    alt="Gallery image 2"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 1536px) 32vw, (min-width: 1024px) 50vw, 100vw"
-                  />
-                </div>
+        {count > 0 && (
+          <div className="flex flex-col gap-3 lg:gap-4 2xl:gap-5">
+            <div className="relative aspect-[16/9] w-full overflow-hidden">
+              <ProjectImage
+                key={activeSrc}
+                src={activeSrc}
+                alt={`Gallery image ${safeIndex + 1}`}
+                fill
+                className={`object-center ${isPortrait ? "object-contain" : "object-cover"}`}
+                sizes="(min-width: 1536px) 1468px, (min-width: 1024px) 90vw, 100vw"
+                onLoad={handleMainLoad}
+                priority={safeIndex === 0}
+              />
+
+              {count > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={goPrev}
+                    aria-label="Previous image"
+                    className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[var(--bg-light)] text-[var(--text-dark)] shadow-sm transition-opacity hover:opacity-90 lg:left-4 lg:h-12 lg:w-12 2xl:h-14 2xl:w-14"
+                  >
+                    <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6" strokeWidth={1.5} />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={goNext}
+                    aria-label="Next image"
+                    className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-[var(--color-primary)] text-white shadow-sm transition-opacity hover:opacity-90 lg:right-4 lg:h-12 lg:w-12 2xl:h-14 2xl:w-14"
+                  >
+                    <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6" strokeWidth={1.5} />
+                  </button>
+                </>
               )}
             </div>
 
-            {galleryImages[2] && (
-              <div className="flex flex-col gap-4 lg:flex-row lg:gap-[7px] 2xl:gap-3">
-                <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] lg:h-[190px] lg:flex-1 2xl:h-[320px]">
-                  <ProjectImage
-                    src={galleryImages[2]}
-                    alt="Gallery image 3"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 1536px) 32vw, (min-width: 1024px) 50vw, 100vw"
-                  />
-                </div>
-                {galleryImages[3] && (
-                  <div className="relative h-[220px] w-full overflow-hidden bg-[var(--text-heading)] lg:h-[190px] lg:flex-1 2xl:h-[320px] 2xl:flex-[2.16]">
+            <div className="flex w-full gap-2 overflow-x-auto lg:gap-[7px] 2xl:gap-3">
+              {galleryImages.map((src, index) => {
+                const isActive = index === safeIndex;
+                return (
+                  <button
+                    key={`${src}-${index}`}
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    aria-label={`View gallery image ${index + 1}`}
+                    aria-current={isActive ? "true" : undefined}
+                    className={`relative aspect-[16/9] min-w-[72px] flex-1 overflow-hidden bg-[var(--text-heading)] transition-opacity lg:min-w-0 ${
+                      isActive
+                        ? "ring-2 ring-[var(--color-primary)] ring-offset-1 ring-offset-[var(--bg-section)]"
+                        : "opacity-70 hover:opacity-100"
+                    }`}
+                  >
                     <ProjectImage
-                      src={galleryImages[3]}
-                      alt="Gallery image 4"
+                      src={src}
+                      alt={`Gallery thumbnail ${index + 1}`}
                       fill
-                      className="object-cover"
-                      sizes="(min-width: 1536px) 68vw, (min-width: 1024px) 50vw, 100vw"
+                      className="object-cover object-center"
+                      sizes="(min-width: 1536px) 180px, (min-width: 1024px) 12vw, 72px"
                     />
-                  </div>
-                )}
-              </div>
-            )}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>

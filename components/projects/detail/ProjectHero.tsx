@@ -74,11 +74,11 @@ export default function ProjectHero({
           </div>
 
           {visibleStats.length > 0 && (
-            <div className="bg-[var(--bg-project-detail-stats)]">
+            <div className="bg-[var(--color-secondary)]">
               <div className="flex flex-col lg:hidden">
                 {client && (
                   <div className="flex flex-col gap-3 border-b border-white/10 px-5 py-5">
-                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
+                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/80`}>
                       {client.label.toUpperCase()}
                     </span>
                     <ProjectImage
@@ -110,7 +110,7 @@ export default function ProjectHero({
               <div className="hidden h-[147px] items-stretch lg:flex">
                 {client && (
                   <div className="flex h-full w-[266px] shrink-0 flex-col justify-center gap-1.5 px-5 py-6 2xl:w-auto 2xl:min-w-0 2xl:flex-1 2xl:shrink">
-                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
+                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/80`}>
                       {client.label.toUpperCase()}
                     </span>
                     <ProjectImage
@@ -125,14 +125,16 @@ export default function ProjectHero({
                 {otherStats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex h-full min-w-0 flex-1 flex-col justify-center gap-[7px] border-l border-white/[0.07] px-5 py-6"
+                    className="flex h-full min-w-0 flex-1 flex-col justify-center gap-[7px]"
                   >
-                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/30`}>
+                    <div className="border-l border-white/[0.9] px-5 py-6 flex justify-center flex-col">
+                    <span className={`${barlow.className} text-[12px] font-semibold leading-[14px] text-white/80`}>
                       {stat.label.toUpperCase()}
                     </span>
                     <span className={`${barlow.className} text-[14px] font-bold leading-[17px] text-white/[0.82]`}>
                       {stat.value}
                     </span>
+                    </div>
                   </div>
                 ))}
               </div>
